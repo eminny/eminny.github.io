@@ -36,7 +36,7 @@ gulp.task('copy-fonts', function () {
 });
 
 gulp.task('copy-html', function () {
-    return gulp.src('src/*.html')
+    return gulp.src(['src/*.html', 'src/*.xml'])
         .pipe(minifyHTML())
         .pipe(gulp.dest('build'))
         .pipe(notify({message: 'HTML copied.'}))
@@ -49,6 +49,12 @@ gulp.task('copy-images', function () {
       .pipe(gulp.dest('build/images'))
       .pipe(notify({message: 'Images copied.'}))
       .pipe(browserSync.stream());
+});
+
+gulp.task('copy-favicons', function () {
+    return gulp.src(['src/*.png', 'src/*.ico'])
+        .pipe(gulp.dest('build'))
+        .pipe(notify({message: 'Favicons copied.'}));
 });
 
 gulp.task('sass', function () {
@@ -85,17 +91,14 @@ gulp.task('sass', function () {
 });
 
 gulp.task('scripts', function () {
-    return gulp.src([
-        'src/js/**/*.js',
-        '!src/js/**/*.min.js'
-    ])
-    .pipe(concat('app.js'))
-    .pipe(gulp.dest('build/js'))
-    .pipe(rename('app.min.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest('build/js'))
-    .pipe(notify({message: 'Scripts compiled.'}))
-    .pipe(browserSync.stream());
+    return gulp.src(['src/js/**/*.js', '!src/js/**/*.min.js'])
+        .pipe(concat('app.js'))
+        .pipe(gulp.dest('build/js'))
+        .pipe(rename('app.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('build/js'))
+        .pipe(notify({message: 'Scripts compiled.'}))
+        .pipe(browserSync.stream());
 });
 
 gulp.task('copy-vendor-scripts', function () {
@@ -116,6 +119,7 @@ gulp.task('watch', function () {
 
 // Build a minified, production-ready site to build folder
 gulp.task('build', [
+    'copy-favicons',
     'copy-fonts',
     'copy-html',
     'copy-images',
