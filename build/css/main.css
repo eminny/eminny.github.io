@@ -1,8 +1,655 @@
-body {
-  background-color: #fff;
+/*
+Name: CANDER PARIS
+URI: canderparis.com
+Version: 1.0.0
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
 }
 
-#smoke-container {
+html {
+  font-size: 100%;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  font-weight: normal;
+  text-align: left;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+}
+
+blockquote, q {
+  quotes: "" "";
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:hover,
+a:active {
+  outline: 0;
+}
+
+a img {
+  border: 0;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  color: #000000;
+  font-family: "Brown STD Regular", "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+/* Headings
+---------------------------------------------------------------------- */
+.alpha,
+.beta,
+.gamma,
+.delta,
+.epsilon,
+.zeta {
+  font-family: "Sabon Roman", serif;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  line-height: 1.75;
+  text-rendering: optimizeLegibility;
+  word-wrap: break-word;
+}
+
+.alpha {
+  font-size: 40px;
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.beta {
+  font-size: 32px;
+  font-size: 3.2rem;
+  line-height: 1.3438;
+}
+
+.gamma {
+  font-size: 25px;
+  font-size: 2.5rem;
+  line-height: 1.36;
+}
+
+.delta {
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 1.6667;
+}
+
+.epsilon {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.3125;
+}
+
+.zeta {
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.2857;
+}
+
+.p-alpha,
+.p-beta {
+  font-family: "Sabon Roman", serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.3125;
+  margin-bottom: 1rem;
+}
+.p-alpha:first-child,
+.p-beta:first-child {
+  margin-top: 0;
+}
+.p-alpha:last-child,
+.p-beta:last-child {
+  margin-bottom: 0;
+}
+
+.p-beta {
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.4286;
+}
+
+.label--lg {
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 2;
+}
+
+.label--sm {
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+
+b,
+strong {
+  font-weight: 800;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+sup,
+sub {
+  font-size: 75%;
+  height: 0;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  bottom: 1ex;
+}
+
+sub {
+  top: .5ex;
+}
+
+/* Anchors
+---------------------------------------------------------------------- */
+a {
+  background-color: transparent;
+  color: #000000;
+  word-wrap: break-word;
+}
+a:visited {
+  color: #000000;
+}
+a:hover {
+  color: #c1c1c1;
+}
+a:active {
+  color: #c1c1c1;
+}
+a:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+a:hover, a:active {
+  outline: 0;
+}
+
+/* Text Level Elements
+---------------------------------------------------------------------- */
+nav ul,
+nav ol,
+.nav li,
+.nav ol {
+  list-style: none none;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Brown STD Regular", "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: #ffffff;
+  overflow-y: auto;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+img,
+embed,
+object,
+video {
+  max-width: 100%;
+}
+
+div img {
+  max-width: 100%;
+}
+
+img {
+  border: 0;
+  height: auto;
+  max-width: 100%;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle;
+}
+
+figure {
+  margin: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+hr {
+  background-color: #c1c1c1;
+  border: 0;
+  height: 0.129rem;
+  margin: 2.618rem 0;
+  padding: 0;
+}
+
+table {
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0 0 1.5em;
+  width: 100%;
+}
+
+td {
+  vertical-align: top;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+th {
+  font-weight: bold;
+  text-align: left;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+::-moz-selection {
+  background: #ffffff;
+  color: #c1c1c1;
+}
+
+::selection {
+  background: #ffffff;
+  color: #c1c1c1;
+}
+
+::-moz-selection {
+  background: #ffffff;
+  color: #c1c1c1;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0.618);
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+button {
+  overflow: visible;
+}
+
+button,
+input {
+  line-height: normal;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+input[type="search"]::-webkit-search-decoration {
+  display: none;
+}
+
+input:invalid,
+button:invalid,
+a.button:invalid,
+select:invalid,
+textarea:invalid {
+  box-shadow: none;
+}
+
+input:focus,
+button:focus,
+a.button:focus,
+select:focus,
+textarea:focus {
+  box-shadow: #0066ff 0 0 5px 0;
+  z-index: 1;
+}
+
+input[type="file"]:focus,
+input[type="file"]:active,
+input[type="radio"]:focus,
+input[type="radio"]:active,
+input[type="checkbox"]:focus,
+input[type="checkbox"]:active {
+  box-shadow: none;
+}
+
+button::-moz-focus-inner,
+a.button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+textarea,
+select,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  background-clip: padding-box;
+  border-radius: 0;
+  -webkit-appearance: none;
+  border: 1px solid;
+  border-color: #000000;
+  color: black;
+  outline: 0;
+  margin: 0;
+  padding: 2px 3px;
+  text-align: left;
+  font-size: 0.8rem;
+  height: 1.618rem;
+  vertical-align: top;
+}
+
+textarea[disabled],
+select[disabled],
+input[type="date"][disabled],
+input[type="datetime"][disabled],
+input[type="datetime-local"][disabled],
+input[type="email"][disabled],
+input[type="month"][disabled],
+input[type="number"][disabled],
+input[type="password"][disabled],
+input[type="search"][disabled],
+input[type="tel"][disabled],
+input[type="text"][disabled],
+input[type="time"][disabled],
+input[type="url"][disabled],
+input[type="week"][disabled] {
+  background-color: #eeeeee;
+}
+
+button[disabled],
+input[disabled],
+select[disabled],
+select[disabled] option,
+select[disabled] optgroup,
+textarea[disabled],
+a.button_disabled {
+  box-shadow: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: #888888;
+  cursor: default;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #c1c1c1;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #c1c1c1;
+}
+
+input.placeholder_text,
+textarea.placeholder_text {
+  color: #c1c1c1;
+}
+
+textarea,
+select[size],
+select[multiple] {
+  height: auto;
+}
+
+select[size="0"],
+select[size="1"] {
+  height: 1.618rem;
+}
+
+select {
+  -webkit-appearance: none !important;
+  border: 1px solid #ccc;
+  height: 3rem;
+  font-size: .8rem;
+  border-radius: 0;
+}
+
+select.radius {
+  border-radius: 3px;
+}
+
+select:hover {
+  border-color: #999;
+}
+
+@media (-webkit-min-device-pixel-ratio: 0) {
+  ::-webkit-validation-bubble-message {
+    box-shadow: none;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, red), color-stop(1, black));
+    border: 0;
+    color: white;
+    font: 1rem/1.618rem "Brown STD Regular", "Helvetica Neue", Helvetica, sans-serif;
+    overflow: hidden;
+    padding: 1rem;
+    text-shadow: black 0 0 1px;
+    min-height: 16px;
+  }
+
+  ::-webkit-validation-bubble-arrow,
+  ::-webkit-validation-bubble-top-outer-arrow,
+  ::-webkit-validation-bubble-top-inner-arrow {
+    box-shadow: none;
+    background: red;
+    border-color: red;
+  }
+}
+textarea {
+  min-height: 2.618rem;
+  overflow: auto;
+  resize: vertical;
+  width: 100%;
+}
+
+optgroup {
+  color: black;
+  font-style: normal;
+  font-weight: normal;
+}
+
+optgroup::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.smoke-wrapper {
+  height: 200%;
+  left: -50%;
+  pointer-events: none;
+  position: fixed;
+  top: -50%;
+  width: 200%;
+  z-index: 3000;
+}
+
+.smoke-container {
   z-index: 0;
   width: 100%;
   height: 100%;
@@ -11,4 +658,148 @@ body {
   opacity: 1;
   top: 0;
   left: 0;
+}
+
+/* Helper Classes
+---------------------------------------------------------------------- */
+@-ms-viewport {
+  width: device-width;
+}
+.no-scroll {
+  overflow: hidden !important;
+}
+
+.ir {
+  border: 0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+  background-color: transparent;
+}
+
+.clear {
+  clear: both;
+}
+
+.clearfix:before, .clearfix:after,
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.clearfix:after,
+.group:after {
+  clear: both;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+
+/*
+* Extends the .visuallyhidden class to allow the element to be focusable
+* when navigated to via the keyboard: h5bp.com/p
+*/
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/* ==========================================================================
+  Print styles.
+  Inlined to avoid the additional HTTP request: h5bp.com/r
+  ========================================================================== */
+@media print {
+  * {
+    background: transparent !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+  * Don't show links that are fragment identifiers,
+  * or use the `javascript:` pseudo protocol
+  */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
 }

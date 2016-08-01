@@ -1,0 +1,117 @@
+// Color Scheme
+// =============
+
+// Grayscale Palate
+$color__white                 : #ffffff;
+$color__gray                  : #c1c1c1;
+$color__black                 : #000000;
+
+// Base fonts
+// ==========
+$font__base-line-height       : 1.75 !default;
+$font__base-size              : 16px !default;
+$font__base                   : 16 !default;
+
+// Shorthands
+$base-fs                      : $font__base-size;
+$base-lh                      : $font__base-line-height;
+
+// Plugin Settings
+// ===============
+
+// Settings: Susy Grid
+// @var $susy.columns Include the number of columns in your grid
+// @var $susy.gutters The size of a gutter in relation to a single column
+$susy: (
+  columns                     : 12,
+  gutters                     : 1/4,
+);
+
+// Settings: Modular Scale
+// See: <http://www.thesassway.com/projects/modular-scale>
+$base-size                    : $base-fs;
+$ratio                        : $golden $fourth;
+
+// Breakpoints
+// ===========
+$tablet                       : 32em;
+$tablet-lg                    : 48em;
+$wide                         : 58em;
+$wider                        : 64em;
+$widest                       : 80em;
+
+// Other media-queries
+$wide-and-480-high           : (min-height 30em) (min-width $wide);
+$wide-and-640-high           : (min-height 40em) (min-width $wide);
+$wide-and-768-high           : (min-height 48em) (min-width $wide);
+$wide-and-960-high           : (min-height 60em) (min-width $wide);
+
+$widest-and-480-high         : (min-height 480px) (min-width $widest);
+$widest-and-640-high         : (min-height 40em) (min-width $widest);
+$widest-and-768-high         : (min-height 48em) (min-width $widest);
+$widest-and-960-high         : (min-height 60em) (min-width $widest);
+
+$responsive-table-maxwidth: 767px;
+
+// Container Sizing
+// ================
+$container__tablet            : 29.382em;
+$container__tablet-lg         : 45.382em;
+$container__wide              : 55.244em;
+$container__wider             : 59.764em;
+$container__widest            : 70em; //75.541em;
+
+// Navigation
+// ==========
+$nav-main__height             : ceil(ms(8, $base-size, $ratio));
+$nav-main__element-height     : 2rem;
+$nav-main__padding-sides      : 5%;
+
+// Map Breakpoints to Respective Container Sizing
+// ==============================================
+$list-breakpoints             : (
+  $tablet                     : $container__tablet,
+  $tablet-lg                  : $container__tablet-lg,
+  $wide                       : $container__wide,
+  $wider                      : $container__wider,
+  $widest                     : $container__widest
+);
+
+// Hero images
+$hero--page__height-xs: 15.451rem;
+$hero--page__height-sm: 25.701rem;
+$hero--page__height-md: 29.03rem;
+$hero--page__height-lg: 41.584rem;
+
+// Font Stacks
+// ===========
+$font__family-serif           : "Sabon Roman", serif;
+$font__family-sans            : "Brown STD Regular", "Helvetica Neue", Helvetica, sans-serif;
+$font__family-default         : $font__family-sans !default;
+
+// Font Weights
+// ============
+$font__weight-xlight          : 200;
+$font__weight-light           : 300;
+$font__weight-normal          : 400;
+$font__weight-medium          : 500;
+$font__weight-semibold        : 700;
+$font__weight-bold            : 800;
+$font__weight                 : $font__weight-normal !default;
+
+// Z-index master list
+// ===================
+// Warning: Avoid customizing these values. They're used for a bird's eye view
+// of components dependent on the z-axis and are designed to all work together.
+$zindex-main                  : 100  !default;
+$zindex-footer                : 150  !default;
+$zindex-navbar                : 1000 !default;
+$zindex-dropdown              : 1000 !default;
+$zindex-popover               : 1060 !default;
+$zindex-tooltip               : 1070 !default;
+$zindex-modal-background      : 1040 !default;
+$zindex-modal                 : 1050 !default;
+$zindex-overlay               : 1150 !default;
+$zindex-overlay-sup           : 1200 !default;
+$zindex-navbar-fixed          : 1250 !default;
+$zindex-loader                : 2000 !default;

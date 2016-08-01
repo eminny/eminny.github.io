@@ -1,0 +1,169 @@
+// General
+body,
+button,
+input,
+select,
+textarea {
+  color: $color__black;
+  font-family: $font__family-default;
+  font-size: $base-fs;
+  line-height: $base-lh;
+}
+
+/* Headings
+---------------------------------------------------------------------- */
+.alpha,
+.beta,
+.gamma,
+.delta,
+.epsilon,
+.zeta {
+  font-family: $font__family-serif;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  line-height: 1.75;
+  text-rendering: optimizeLegibility;
+  word-wrap: break-word;
+}
+
+// Heading helpers
+.alpha {
+  font-size: 40px;
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.beta {
+  font-size: 32px;
+  font-size: 3.2rem;
+  line-height: 1.3438;
+}
+
+.gamma {
+  font-size: 25px;
+  font-size: 2.5rem;
+  line-height: 1.36;
+}
+
+.delta {
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 1.6667;
+}
+
+.epsilon {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.3125;
+}
+
+.zeta {
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.2857;
+}
+
+// Copy
+.p-alpha,
+.p-beta {
+  font-family: $font__family-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.3125;
+  margin-bottom: 1rem;
+
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.p-beta {
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.4286;
+}
+
+.label--lg {
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 2;
+}
+
+.label--sm {
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+
+b,
+strong {
+  font-weight: $font__weight-bold;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+sup,
+sub {
+  font-size: 75%;
+  height: 0;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  bottom: 1ex;
+}
+
+sub {
+  top: .5ex;
+}
+
+/* Anchors
+---------------------------------------------------------------------- */
+a {
+  background-color: transparent;
+  color: $color__black;
+  word-wrap: break-word;
+
+  &:visited {
+    color: $color__black;
+  }
+
+  &:hover {
+    color: $color__gray;
+  }
+
+  &:active {
+    color: $color__gray;
+  }
+
+  &:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+  }
+
+  &:hover,
+  &:active {
+    outline: 0;
+  }
+}
+
+/* Text Level Elements
+---------------------------------------------------------------------- */
+
+// Default margins
+nav ul,
+nav ol,
+.nav li,
+.nav ol {
+  list-style: none none;
+  margin: 0;
+  padding: 0;
+}

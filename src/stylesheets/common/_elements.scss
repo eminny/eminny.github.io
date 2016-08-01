@@ -1,0 +1,392 @@
+html {
+  font-family: $font__family-default;
+  font-size: $base-fs;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  background-color: $color__white;
+  overflow-y: auto;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+// Images & media
+
+img,
+embed,
+object,
+video {
+  max-width: 100%;
+}
+
+div img {
+  max-width: 100%;
+}
+
+img {
+  border: 0;
+  height: auto;    // Make sure images are scaled correctly.
+  max-width: 100%; // Adhere to container width.
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle;
+}
+
+figure {
+  margin: 0;
+}
+
+// Correct overflow displayed oddly in IE9
+svg:not(:root) {
+  overflow: hidden;
+}
+
+// Horizontal rule
+
+hr {
+  background-color: $color__gray;
+  border: 0;
+  height: 0.129rem;
+  margin: 2.618rem 0;
+  padding: 0;
+}
+
+// Tables
+
+table {
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0 0 1.5em;
+  width: 100%;
+}
+
+td {
+  vertical-align: top;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+th {
+  font-weight: bold;
+  text-align: left;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+// Indicate that 'label' will shift focus to the associated form element
+label {
+  cursor: pointer;
+}
+
+// Text Selection
+
+::selection {
+  background: $color__white;
+  color: $color__gray;
+}
+::-moz-selection {
+  background: $color__white;
+  color: $color__gray;
+}
+
+// Scrollbar
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  background-color: rgba($color__black, 0.1);
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  background-color: rgba($color__black, 0.618);
+}
+
+// Form elements
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+// 1. Correct font-size not inheriting in all browsers
+// 2. Define consistent vertical alignment display in all browsers
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+button {
+  overflow: visible;
+}
+
+button,
+input {
+  line-height: normal;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+// Remove inner padding and border in FF3/4: h5bp.com/l
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+// 1. Remove default vertical scrollbar in IE6/7/8/9
+// 2. Allow only vertical resizing
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+select::-ms-expand { display: none }
+
+input[type="search"]::-webkit-search-decoration { display: none; }
+
+input:invalid,
+button:invalid,
+a.button:invalid,
+select:invalid,
+textarea:invalid { box-shadow: none; }
+
+input:focus,
+button:focus,
+a.button:focus,
+select:focus,
+textarea:focus {
+  box-shadow: #0066ff 0 0 5px 0;
+  z-index: 1;
+}
+
+input[type="file"]:focus,
+input[type="file"]:active,
+input[type="radio"]:focus,
+input[type="radio"]:active,
+input[type="checkbox"]:focus,
+input[type="checkbox"]:active {
+  box-shadow: none;
+}
+
+button::-moz-focus-inner,
+a.button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+textarea,
+select,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  background-clip: padding-box;
+  border-radius: 0;
+  -webkit-appearance: none;
+  border: 1px solid;
+  border-color: $color__black;
+  color: black;
+  outline: 0;
+  margin: 0;
+  padding: 2px 3px;
+  text-align: left;
+  font-size: 0.8rem;
+  height: 1.618rem;
+  vertical-align: top;
+}
+
+textarea[disabled],
+select[disabled],
+input[type="date"][disabled],
+input[type="datetime"][disabled],
+input[type="datetime-local"][disabled],
+input[type="email"][disabled],
+input[type="month"][disabled],
+input[type="number"][disabled],
+input[type="password"][disabled],
+input[type="search"][disabled],
+input[type="tel"][disabled],
+input[type="text"][disabled],
+input[type="time"][disabled],
+input[type="url"][disabled],
+input[type="week"][disabled] {
+  background-color: #eeeeee;
+}
+
+button[disabled],
+input[disabled],
+select[disabled],
+select[disabled] option,
+select[disabled] optgroup,
+textarea[disabled],
+a.button_disabled {
+  box-shadow: none;
+  user-select: none;
+  color: #888888;
+  cursor: default;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: $color__gray;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: $color__gray;
+}
+
+input.placeholder_text,
+textarea.placeholder_text {
+  color: $color__gray;
+}
+
+textarea,
+select[size],
+select[multiple] {
+  height: auto;
+}
+
+select[size="0"],
+select[size="1"] {
+  height: 1.618rem;
+}
+
+select {
+  -webkit-appearance: none !important;
+  border: 1px solid #ccc;
+  height: 3rem;
+  font-size: .8rem;
+  border-radius: 0;
+}
+
+select.radius {
+  border-radius: 3px;
+}
+
+select:hover {
+  border-color: #999;
+}
+
+@media (-webkit-min-device-pixel-ratio: 0) {
+
+  ::-webkit-validation-bubble-message {
+    box-shadow: none;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, red), color-stop(1, black));
+    border: 0;
+    color: white;
+    font: 1rem/1.618rem $font__family-default;
+    overflow: hidden;
+    padding: 1rem;
+    text-shadow: black 0 0 1px;
+    min-height: 16px;
+  }
+
+  ::-webkit-validation-bubble-arrow,
+  ::-webkit-validation-bubble-top-outer-arrow,
+  ::-webkit-validation-bubble-top-inner-arrow {
+    box-shadow: none;
+    background: red;
+    border-color: red;
+  }
+
+}
+
+textarea {
+  min-height: 2.618rem;
+  overflow: auto;
+  resize: vertical;
+  width: 100%;
+}
+
+optgroup {
+  color: black;
+  font-style: normal;
+  font-weight: normal;
+}
+
+optgroup::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
