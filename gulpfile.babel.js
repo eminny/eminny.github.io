@@ -13,7 +13,6 @@ const path = require('path');
 const postcss = require('gulp-postcss');
 const rename = require('gulp-rename');
 const sass = require('gulp-sass');
-const sourcemaps = require('gulp-sourcemaps');
 const uglify = require('gulp-uglify');
 const util = require('gulp-util');
 const jshint = require('gulp-jshint');
@@ -44,7 +43,7 @@ gulp.task('copy-html', function () {
 });
 
 gulp.task('copy-images', function () {
-  return gulp.src('src/images/**/*.*')
+    return gulp.src('src/images/**/*.*')
       .pipe(imagemin())
       .pipe(gulp.dest('build/images'))
       .pipe(notify({message: 'Images copied.'}))
