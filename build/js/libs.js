@@ -2984,13 +2984,13 @@ var requirejs, require, define;
         t.updateSize = s,
         this.init = C,
         this.start = function () {
-            console.log("STARTING SMOKE"), E.start()
+          console.log("STARTING SMOKE"), E.start()
         },
         this.stop = function () {
-            console.log("STOPPING SMOKE"), E.stop()
+          console.log("STOPPING SMOKE"), E.stop()
         },
         this.restart = function () {
-            console.log("RESTARTING SMOKE"), s(), E.start()
+          console.log("RESTARTING SMOKE"), s(), E.start()
         },
         window.SmokeEffect = this,
         console.log("SMOKE EXISTS")
