@@ -1,0 +1,10 @@
+.icn--scroll-down {
+  @extend .ir;
+  background: url('../images/icon-scroll-down.svg') center center no-repeat;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1.5rem;
+  width: 3.4rem;
+}

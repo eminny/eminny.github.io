@@ -19,6 +19,10 @@ const jshint = require('gulp-jshint');
 const stylish = require('jshint-stylish');
 const minifyCSS = require('gulp-minify-css');
 const minifyHTML = require('gulp-minify-html');
+const webpack = require('webpack');
+const webpackStream = require('webpack-stream');
+
+const webpackConfig = require("./webpack.config.js");
 
 gulp.task('browserSync', function () {
     return browserSync.init({
@@ -27,33 +31,10 @@ gulp.task('browserSync', function () {
     });
 });
 
-gulp.task('copy-fonts', function () {
-    return gulp.src('src/fonts/**/*.*')
-        .pipe(gulp.dest('build/fonts'))
-        .pipe(notify({message: 'Fonts copied.'}))
-        .pipe(browserSync.stream());
-});
-
-gulp.task('copy-html', function () {
-    return gulp.src(['src/*.html', 'src/*.xml'])
-        .pipe(minifyHTML())
-        .pipe(gulp.dest('build'))
-        .pipe(notify({message: 'HTML copied.'}))
-        .pipe(browserSync.stream());
-});
-
-gulp.task('copy-images', function () {
-    return gulp.src('src/images/**/*.*')
-      .pipe(imagemin())
-      .pipe(gulp.dest('build/images'))
-      .pipe(notify({message: 'Images copied.'}))
-      .pipe(browserSync.stream());
-});
-
-gulp.task('copy-favicons', function () {
-    return gulp.src(['src/*.png', 'src/*.ico'])
-        .pipe(gulp.dest('build'))
-        .pipe(notify({message: 'Favicons copied.'}));
+gulp.task('webpack', function () {
+    return gulp.src('./src/js/app.js')
+        .pipe(webpackStream(webpackConfig, webpack))
+        .pipe(gulp.dest('build/js/'));
 });
 
 gulp.task('sass', function () {
@@ -63,7 +44,7 @@ gulp.task('sass', function () {
     ];
 
     const paths = {
-        sass: 'src/scss',
+        sass: 'src/stylesheets',
         targetCSS: 'build/css',
         targetImg: 'build/images'
     };
@@ -89,21 +70,43 @@ gulp.task('sass', function () {
         .pipe(browserSync.stream());
 });
 
-gulp.task('scripts', function () {
-    return gulp.src(['src/js/**/*.js', '!src/js/**/*.min.js'])
-        .pipe(concat('app.js'))
-        .pipe(gulp.dest('build/js'))
-        .pipe(rename('app.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('build/js'))
-        .pipe(notify({message: 'Scripts compiled.'}))
+gulp.task('copy-fonts', function () {
+    return gulp.src('src/fonts/**/*.*')
+        .pipe(gulp.dest('build/fonts'))
+        .pipe(notify({message: 'Fonts copied.'}))
         .pipe(browserSync.stream());
 });
 
-gulp.task('copy-vendor-scripts', function () {
+gulp.task('copy-html', function () {
+    return gulp.src(['src/*.html', 'src/*.xml'])
+        .pipe(minifyHTML())
+        .pipe(gulp.dest('build'))
+        .pipe(notify({message: 'HTML copied.'}))
+        .pipe(browserSync.stream());
+});
+
+gulp.task('copy-images', function () {
+    return gulp.src('src/images/**/*.*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('build/images'))
+        .pipe(notify({message: 'Images copied.'}))
+        .pipe(browserSync.stream());
+});
+
+gulp.task('copy-favicons', function () {
+    return gulp.src(['src/*.png', 'src/*.ico'])
+        .pipe(gulp.dest('build'))
+        .pipe(notify({message: 'Favicons copied.'}));
+});
+
+gulp.task('vendor-scripts', function () {
     return gulp.src('src/js/vendor/*.js')
+        .pipe(concat('libs.js'))
         .pipe(gulp.dest('build/js'))
-        .pipe(notify({message: 'Vendor scripts copied.'}))
+        .pipe(rename('libs.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('build/js'))
+        .pipe(notify({message: 'Vendor scripts done.'}))
         .pipe(browserSync.stream());
 });
 
@@ -111,9 +114,9 @@ gulp.task('copy-vendor-scripts', function () {
 gulp.task('watch', function () {
     gulp.watch('src/*.html', ['copy-html']);
     gulp.watch('src/images/**/*.*', ['copy-images']);
-    gulp.watch('src/js/vendor/*.js', ['copy-vendor-scripts']);
-    gulp.watch('src/scss/**/*.scss', ['sass']);
-    gulp.watch('src/js/**/*.js', ['scripts']);
+    gulp.watch('src/js/vendor/*.js', ['vendor-scripts']);
+    gulp.watch('src/stylesheets/**/*.scss', ['sass']);
+    gulp.watch('src/js/**/*.js', ['webpack']);
 });
 
 // Build a minified, production-ready site to build folder
@@ -122,9 +125,9 @@ gulp.task('build', [
     'copy-fonts',
     'copy-html',
     'copy-images',
-    'copy-vendor-scripts',
+    'vendor-scripts',
     'sass',
-    'scripts'
+    'webpack'
 ]);
 
 // Default Task

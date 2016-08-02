@@ -2995,3 +2995,8 @@ var requirejs, require, define;
         window.SmokeEffect = this,
         console.log("SMOKE EXISTS")
     });
+
+// Vroom
+require(['main']);
+window.SmokeEffect.init();
+window.SmokeEffect.restart();

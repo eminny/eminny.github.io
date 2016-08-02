@@ -25,14 +25,20 @@
     <meta name="application-name" content="CANDER PARIS">
     <meta name="msapplication-TileColor" content="#FFFFFF">
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
   </head>
   <body>
-
+    <main>
+      <div class="slide slide--intro">
+        <img src="/images/logo.svg" alt="CANDER PARIS" class="logo--intro">
+        <a class="icn--scroll-down" href="#slide--one">Scroll Down</a>
+      </div>
+    </main>
     <div id="smoke-wrapper" class="smoke-wrapper">
       <canvas id="smoke-container" class="smoke-container" width="2000" height="1125"></canvas>
     </div>
     <div class="menu-overlay"></div>
-    <script src="js/app.js"></script>
+    <script src="/js/libs.min.js"></script>
+    <script src="/js/app.js"></script>
   </body>
 </html>

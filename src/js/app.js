@@ -1,3 +1,6 @@
-require(['main']);
-window.SmokeEffect.init();
-window.SmokeEffect.restart();
+const _ = require('lodash');
+
+console.log(_.map(['dog', 'cat', 'rat'], function (m) {
+    return m.toUpperCase();
+}));
+

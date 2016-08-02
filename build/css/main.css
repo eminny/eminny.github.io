@@ -100,7 +100,7 @@ select,
 textarea {
   color: #000000;
   font-family: "Brown STD Regular", "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 10px;
   line-height: 1.75;
 }
 
@@ -255,7 +255,7 @@ nav ol,
 
 html {
   font-family: "Brown STD Regular", "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 10px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
@@ -639,6 +639,32 @@ optgroup::-moz-focus-inner {
   padding: 0;
 }
 
+.icn--scroll-down {
+  background: url("../images/icon-scroll-down.svg") center center no-repeat;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1.5rem;
+  width: 3.4rem;
+}
+
+.logo--intro {
+  transform: translateY(-3rem);
+  width: 20rem;
+}
+
+.slide {
+  height: 100vh;
+  width: 100%;
+}
+
+.slide--intro {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
 .smoke-wrapper {
   height: 200%;
   left: -50%;
@@ -646,7 +672,7 @@ optgroup::-moz-focus-inner {
   position: fixed;
   top: -50%;
   width: 200%;
-  z-index: 3000;
+  z-index: -1;
 }
 
 .smoke-container {
@@ -669,7 +695,7 @@ optgroup::-moz-focus-inner {
   overflow: hidden !important;
 }
 
-.ir {
+.ir, .icn--scroll-down {
   border: 0;
   font: 0/0 a;
   text-shadow: none;
