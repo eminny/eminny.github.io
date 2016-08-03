@@ -1,20 +1,22 @@
 @import "../../../stylesheets/variables";
 
 .site-header {
-  background: rgba($color__white, 0.5);
+  background: rgba($color__white, 1.0);
   height: 8rem;
   position: fixed;
   text-align: center;
   width: 100%;
+  transform: translateY(0);
   z-index: 20;
 
   &.fade-transition {
-    transition: opacity $transition-standard;
+    transition: all $transition-standard;
   }
 
   &.fade-enter,
   &.fade-leave {
     opacity: 0;
+    transform: translateY(-10%);
   }
 }
 

@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Routes from './routes'
+import store from './store'
 
 ;(function __canderApp__() {
 
@@ -14,8 +15,9 @@ import Routes from './routes'
   let router = new VueRouter({
     hashbang: true,
   })
-  window.CANDER = window.CANDER || {};
-  window.CANDER.router = router;
+
+  // Add router instance to shared store
+  store.data.router = router;
 
   // Define some routes
   router.map(Routes)

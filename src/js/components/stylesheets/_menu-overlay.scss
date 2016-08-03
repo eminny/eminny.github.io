@@ -23,7 +23,7 @@
 
 .menu-overlay__nav-wrapper,
 .menu-overlay__accent-wrapper {
-  @media screen and (min-width: $tablet-lg) {
+  @media ($large-screens) {
     float: left;
     width: 50%;
   }
@@ -36,7 +36,7 @@
   min-height: 100vh;
   padding: 3.5rem;
 
-  @media screen and (min-width: $tablet-lg) {
+  @media ($large-screens) {
     padding: 6rem;
   }
 }
@@ -46,6 +46,7 @@
   flex-direction: column;
   justify-content: center;
   margin-bottom: 4rem;
+  max-width: 30rem;
 }
 
 .menu-overlay__nav-list__item,
@@ -62,7 +63,7 @@ a.menu-overlay__nav-list__item {
     color: $color__gray;
   }
 
-  @media screen and (min-width: $tablet-lg) {
+  @media ($large-screens) {
     color: $color__gray;
 
     &:hover {
@@ -72,7 +73,7 @@ a.menu-overlay__nav-list__item {
 }
 
 .menu-overlay__nav-social {
-  border-top: 1px solid $color__gray;
+  border-top: 1px solid rgba($color__gray, 0.3334);
   padding-top: 6rem;
 }
 
@@ -95,7 +96,26 @@ a.menu-overlay__nav-social__item {
 }
 
 .menu-overlay__nav-contact {
+  font-family: $font__family-serif;
+  font-size: 1.4rem;
+  line-height: 1.4286;
   margin-top: 4rem;
+  max-width: 30rem;
+
+  p {
+    margin-top: 1rem;
+  }
+
+  a {
+    color: $color__black;
+    letter-spacing: 0.03rem;
+    text-decoration: none;
+    transition: color $transition-standard;
+
+    &:hover {
+      color: $color__gray;
+    }
+  }
 }
 
 .menu-overlay__accent-wrapper {
@@ -103,7 +123,7 @@ a.menu-overlay__nav-social__item {
   max-height: 100%;
   overflow: hidden;
 
-  @media screen and (min-width: $tablet-lg) {
+  @media ($large-screens) {
     display: block;
   }
 }
@@ -111,7 +131,7 @@ a.menu-overlay__nav-social__item {
 .menu-overlay__accent {
   margin: 0 auto;
 
-  @media screen and (min-width: $tablet-lg) {
+  @media ($large-screens) {
     box-sizing: border-box;
     padding: 10rem 6rem 6rem;
   }

@@ -1,34 +1,36 @@
 <template>
+  <!-- SECTION 0: HERO -->
   <div class="slide slide--intro">
-    <div class="logo--intro">
-      <img src="/images/logo.svg" title="CANDER PARIS">
-    </div>
-    <a href="#" @click.prevent="scrollToFold" class="icn--scroll-down">Scroll Down</a>
+    <div class="slide--intro__logo skrollable skrollable-between"
+         data-0="opacity: 1;"
+         data-top-center="opacity: 0;"
+    ><img src="/images/logo.svg" title="CANDER PARIS"></div>
+    <a href="#" @click.prevent="scrollToFold"
+       class="slide--intro__icn-scroll skrollable skrollable-between"
+       data-0="opacity: 1;"
+       data-center-top="opacity: 0;"
+    >Scroll Down</a>
   </div>
-  <div id="the-fold" class="slide" style="background:plum"></div>
-  <div class="slide" style="background:gray"></div>
+
+  <!-- SECTION 1: THE SCENT -->
+  <div id="the-fold" class="slide slide--split">
+    <div class="slide__product-wrapper">
+      <img src="/images/product-vessel.png" alt="Vessel" class="slide__product-image">
+      <h2 class="slide__product-heading">Scent One</h2>
+      <h4 class="slide__product-desc slide__product-desc--primary">Scent One is an exploration of the beginning.</h4>
+      <h4 class="slide__product-desc slide__product-desc--secondary">Scent One est l'exploration du début.</h4>
+    </div>
+    <div class="slide__accent-wrapper">
+      <img src="/images/slide-accent-face.png" alt="Faces" class="slide__accent-image">
+    </div>
+  </div>
+  <div class="slide" style="background:#ededed"></div>
 </template>
 
-<style lang="sass">
-  .logo--intro {
-    transform: translateY(-3rem);
-    user-select: none;
-    width: 20rem;
-  }
-
-  .icn--scroll-down {
-    background: url('/images/icon-scroll-down.svg') center center no-repeat;
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    text-indent: -9999px;
-    transform: translateX(-50%);
-    height: 1.5rem;
-    width: 3.4rem;
-  }
-</style>
+<style lang="sass"></style>
 
 <script>
+  import skrollr from 'skrollr'
   import scroll from 'scroll'
   const page = require('scroll-doc')()
 
@@ -43,6 +45,11 @@
     },
     ready () {
       console.log('Home loaded.')
-    }
+
+      skrollr.init()
+    },
+    destroy () {
+      skrollr.destroy()
+    },
   }
 </script>

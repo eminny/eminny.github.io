@@ -16,6 +16,7 @@ store.data = {
       'contact': '/images/menu-accent-contact.jpg',
     },
   },
+  router: void 0,
 };
 
 export default store;

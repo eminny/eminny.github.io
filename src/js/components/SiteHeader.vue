@@ -21,6 +21,7 @@
       return {
         menuOverlay: store.data.menuOverlay,
         scrollPos: store.data.scrollPos,
+        router: store.data.router,
       }
     },
     computed: {
@@ -64,8 +65,7 @@
           scroll.top(page, 0, { duration: 400 })
           this.closeMenu(300)
         } else {
-          alert('router.go -> home')
-//          return this.router.go({ name: 'home' })
+          if (this.router) return this.router.go({ name: 'home' })
         }
       },
     },
@@ -78,7 +78,13 @@
           removeClass(el, 'header-visible')
         }
       },
-    }
+    },
+    ready () {
+      let el = document.getElementById('cander-app')
+      if (this.$route.name !== 'home') {
+        addClass(el, 'header-visible')
+      }
+    },
   }
 
   // Helper functions

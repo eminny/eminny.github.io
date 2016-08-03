@@ -31,53 +31,25 @@ $base-size                    : $base-fs;
 
 // Breakpoints
 // ===========
-$tablet                       : 32em;
-$tablet-lg                    : 48em;
-$wide                         : 58em;
-$wider                        : 64em;
-$widest                       : 80em;
 
-// Other media-queries
-$wide-and-480-high           : (min-height 30em) (min-width $wide);
-$wide-and-640-high           : (min-height 40em) (min-width $wide);
-$wide-and-768-high           : (min-height 48em) (min-width $wide);
-$wide-and-960-high           : (min-height 60em) (min-width $wide);
+// Screen sizes
+$screen-xs-min: 0; // Most phones in portrait, small phones in both portrait and landscape
+$screen-sm-min: 500px; // Large phones, small tablets
+$screen-md-min: 768px; // Tablets, mostly
+$screen-lg-min: 1152px; // Regular desktops
+$screen-xl-min: 1800px; // Large desktop (design above this resolution does not scale)
+$screen-xxl-min: 2200px; // Super large desktops
 
-$widest-and-480-high         : (min-height 480px) (min-width $widest);
-$widest-and-640-high         : (min-height 40em) (min-width $widest);
-$widest-and-768-high         : (min-height 48em) (min-width $widest);
-$widest-and-960-high         : (min-height 60em) (min-width $widest);
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-sm-max: ($screen-md-min - 1);
+$screen-md-max: ($screen-lg-min - 1);
+$screen-lg-max: ($screen-xl-min - 1);
 
-$responsive-table-maxwidth: 767px;
-
-// Container Sizing
-// ================
-$container__tablet            : 29.382em;
-$container__tablet-lg         : 45.382em;
-$container__wide              : 55.244em;
-$container__wider             : 59.764em;
-$container__widest            : 70em; //75.541em;
-
-// Navigation
-// ==========
-$nav-main__element-height     : 2rem;
-$nav-main__padding-sides      : 5%;
-
-// Map Breakpoints to Respective Container Sizing
-// ==============================================
-$list-breakpoints             : (
-  $tablet                     : $container__tablet,
-  $tablet-lg                  : $container__tablet-lg,
-  $wide                       : $container__wide,
-  $wider                      : $container__wider,
-  $widest                     : $container__widest
-);
-
-// Hero images
-$hero--page__height-xs: 15.451rem;
-$hero--page__height-sm: 25.701rem;
-$hero--page__height-md: 29.03rem;
-$hero--page__height-lg: 41.584rem;
+// Media query shortcuts, e.g. @media ($large-screens)
+$small-screens: 'max-width: #{$screen-sm-max}';
+$large-screens: 'min-width: #{$screen-md-min}';
+$screen-xs: 'max-width: #{$screen-xs-max}';
+$screen-xl: 'min-width: #{$screen-xl-min}';
 
 // Font Stacks
 // ===========

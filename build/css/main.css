@@ -628,7 +628,12 @@ optgroup::-moz-focus-inner {
   padding: 0;
 }
 
-body.header-visible .main-content {
+.cander-wrapper,
+.main-content {
+  min-height: 100%;
+}
+
+.cander-wrapper:not(.page--home) .main-content {
   padding-top: 8rem;
 }
 
@@ -656,6 +661,78 @@ body.header-visible .main-content {
   align-items: center;
   display: flex;
   justify-content: center;
+}
+
+.slide--intro__logo {
+  transform: translateY(-3rem);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 20rem;
+}
+
+.slide--intro__icn-scroll {
+  background: url("/images/icon-scroll-down.svg") center center no-repeat;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  text-indent: -9999px;
+  transform: translateX(-50%);
+  height: 1.5rem;
+  width: 3.4rem;
+}
+
+.slide--split {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .slide--split {
+    flex-direction: row;
+  }
+}
+
+.slide__product-image {
+  width: 30rem;
+}
+
+.slide__product-wrapper,
+.slide__accent-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+
+.slide__product-heading {
+  font-family: "Brown STD Regular", "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.6667;
+  text-transform: uppercase;
+}
+
+.slide__product-desc {
+  font-family: "Sabon Roman", serif;
+  font-size: 1.6rem;
+  line-height: 1.3125;
+}
+
+.slide__product-desc--primary {
+  color: #000000;
+}
+
+.slide__product-desc--secondary {
+  color: #c1c1c1;
+}
+
+@media screen and (min-width: 768px) {
+  .slide__accent-image {
+    width: 35vw;
+  }
 }
 
 .smoke-wrapper {

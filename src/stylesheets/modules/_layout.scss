@@ -1,6 +1,10 @@
-//
-body.header-visible {
-  .main-content {
+.cander-wrapper,
+.main-content {
+  min-height: 100%;
+}
+.main-content {
+
+  .cander-wrapper:not(.page--home) & {
     padding-top: 8rem;
   }
 }

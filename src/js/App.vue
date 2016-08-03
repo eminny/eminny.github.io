@@ -1,5 +1,5 @@
 <template>
-  <div class="cander-wrapper" id="cander-app">
+  <div class="cander-wrapper page--{{ this.$route.name }}" id="cander-app">
     <site-header></site-header>
     <menu-overlay></menu-overlay>
     <main class="main-content">
@@ -8,7 +8,7 @@
   </div>
 </template>
 
-<style>
+<style lang="sass">
   .cander-wrapper {}
 </style>
 
