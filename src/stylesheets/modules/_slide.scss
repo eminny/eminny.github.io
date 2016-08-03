@@ -1,6 +1,14 @@
 .slide {
-  height: 100vh;
-  width: 100%;
+  //height: 100vh;
+  //width: 100%;
+
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:transparent center no-repeat;
+  background-size: cover;
 }
 
 .slide--intro {
@@ -37,8 +45,24 @@
   }
 }
 
+.slide__product-images {
+  left: 0;
+  width: 50%;
+  transform: translate(0, -50%);
+}
+
 .slide__product-image {
-  width: 30rem;
+  height: 300px;
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -25%);
+  width: 300px;
+}
+
+.slide__product-info {
+  margin-top: 25rem;
+  text-align: center;
 }
 
 .slide__product-wrapper,
@@ -50,7 +74,11 @@
   width: 50%;
 }
 
-.slide__product-wrapper {}
+.slide__product-wrapper {
+  height: calc(100% - #{$header-height});
+  margin-top: $header-height;
+  position: relative;
+}
 
 .slide__product-heading {
   font-family: $font__family-sans;

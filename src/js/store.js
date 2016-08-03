@@ -17,6 +17,7 @@ store.data = {
     },
   },
   router: void 0,
+  skrollr: void 0,
 };
 
 export default store;

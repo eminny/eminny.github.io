@@ -1,5 +1,5 @@
 <template>
-  <div class="cander-wrapper page--{{ this.$route.name }}" id="cander-app">
+  <div class="cander-wrapper page--{{ this.$route.name ? this.$route.name : 'default' }}" id="cander-app">
     <site-header></site-header>
     <menu-overlay></menu-overlay>
     <main class="main-content">
@@ -33,7 +33,6 @@
       document.addEventListener("scroll", () => {
         this.scrollPos.top = document.getElementById('cander-app').getBoundingClientRect().top
       }, false);
-
     },
   }
 </script>

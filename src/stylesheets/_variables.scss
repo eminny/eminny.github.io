@@ -51,6 +51,10 @@ $large-screens: 'min-width: #{$screen-md-min}';
 $screen-xs: 'max-width: #{$screen-xs-max}';
 $screen-xl: 'min-width: #{$screen-xl-min}';
 
+//
+
+$header-height: 8rem;
+
 // Font Stacks
 // ===========
 $font__family-serif           : "Sabon Roman", serif;
