@@ -1,7 +1,10 @@
 <template>
-  <div class="cander-wrapper">
+  <div class="cander-wrapper" id="cander-app">
+    <site-header></site-header>
     <menu-overlay></menu-overlay>
-    <router-view></router-view>
+    <main class="main-content">
+      <router-view></router-view>
+    </main>
   </div>
 </template>
 
@@ -9,20 +12,28 @@
   .cander-wrapper {}
 </style>
 
-<script type="text/babel">
+<script>
+  import store from './store'
   import MenuOverlay from './components/MenuOverlay.vue'
+  import SiteHeader from './components/SiteHeader.vue'
 
   export default {
     data () {
       return {
-        msg: 'hellllo worl'
+        scrollPos: store.data.scrollPos,
       }
     },
     components: {
       MenuOverlay,
+      SiteHeader,
     },
+    methods: {},
     ready () {
-      console.log('App.vue loaded...')
+      // Update global scrollPos value
+      document.addEventListener("scroll", () => {
+        this.scrollPos.top = document.getElementById('cander-app').getBoundingClientRect().top
+      }, false);
+
     },
   }
 </script>

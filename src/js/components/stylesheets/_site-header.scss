@@ -1,0 +1,81 @@
+@import "../../../stylesheets/variables";
+
+.site-header {
+  background: rgba($color__white, 0.5);
+  height: 8rem;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  z-index: 20;
+
+  &.fade-transition {
+    transition: opacity $transition-standard;
+  }
+
+  &.fade-enter,
+  &.fade-leave {
+    opacity: 0;
+  }
+}
+
+.logo {
+  width: 12rem;
+  left: 50%;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn-menu {
+  height: 1.3rem;
+  width: 1.6rem;
+  border: 0;
+  display: block;
+  position: absolute;
+  right: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &:after,
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+  }
+
+  &:after {
+    border-bottom: 0.2rem solid $color__black;
+    top: 75%
+  }
+
+  &:before {
+    border-top: 0.2rem solid $color__black;
+    top: 25%;
+  }
+}
+
+.btn-menu--open {
+
+  &:after,
+  &:before {
+    top: 50%;
+
+  }
+
+  &:after {
+    transform: rotate(45deg);
+  }
+
+  &:before {
+    transform: rotate(-45deg);
+  }
+}
+
+.btn-menu--closed,
+.btn-menu--closed:after,
+.btn-menu--closed:before {
+
+}

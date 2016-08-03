@@ -263,6 +263,7 @@ html {
 
 body {
   background-color: #ffffff;
+  overflow-x: hidden;
   overflow-y: auto;
 }
 
@@ -637,6 +638,10 @@ optgroup {
 optgroup::-moz-focus-inner {
   border: 0;
   padding: 0;
+}
+
+body.header-visible .main-content {
+  padding-top: 8rem;
 }
 
 .icn--scroll-down {

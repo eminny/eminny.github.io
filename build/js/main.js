@@ -70,10 +70,15 @@
 	(function __canderApp__() {
 	  _vue2.default.config.debug = true;
 
+	  var Cander = _vue2.default.extend(__webpack_require__(37));
+
 	  _vue2.default.use(_vueRouter2.default);
 
-	  var router = new _vueRouter2.default();
-	  var Cander = _vue2.default.extend(__webpack_require__(33));
+	  var router = new _vueRouter2.default({
+	    hashbang: true
+	  });
+	  window.CANDER = window.CANDER || {};
+	  window.CANDER.router = router;
 
 	  router.map(_routes2.default);
 
@@ -13031,23 +13036,28 @@
 	var SectionAbout = _vue2.default.extend(__webpack_require__(6));
 	var SectionContact = _vue2.default.extend(__webpack_require__(13));
 	var SectionHome = _vue2.default.extend(__webpack_require__(18));
-	var SectionStores = _vue2.default.extend(__webpack_require__(23));
-	var SectionTerms = _vue2.default.extend(__webpack_require__(28));
+	var SectionStores = _vue2.default.extend(__webpack_require__(27));
+	var SectionTerms = _vue2.default.extend(__webpack_require__(32));
 
 	exports.default = {
 	  '/': {
+	    name: 'home',
 	    component: SectionHome
 	  },
 	  '/about': {
+	    name: 'about',
 	    component: SectionAbout
 	  },
 	  '/contact': {
+	    name: 'contact',
 	    component: SectionContact
 	  },
 	  '/stores': {
+	    name: 'stores',
 	    component: SectionStores
 	  },
 	  '/terms': {
+	    name: 'terms',
 	    component: SectionTerms
 	  }
 	};
@@ -13521,7 +13531,7 @@
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/components/SectionHome.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(22)
+	__vue_template__ = __webpack_require__(26)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -13574,21 +13584,38 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n", ""]);
+	exports.push([module.id, ".logo--intro {\n  -webkit-transform: translateY(-3rem);\n      -ms-transform: translateY(-3rem);\n          transform: translateY(-3rem);\n  width: 20rem; }\n\n.icn--scroll-down {\n  background: url(\"/images/icon-scroll-down.svg\") center center no-repeat;\n  position: absolute;\n  bottom: 10%;\n  left: 50%;\n  text-indent: -9999px;\n  -webkit-transform: translateX(-50%);\n      -ms-transform: translateX(-50%);\n          transform: translateX(-50%);\n  height: 1.5rem;\n  width: 3.4rem; }\n", ""]);
 
 	// exports
 
 
 /***/ },
 /* 21 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+
+	var _scroll = __webpack_require__(22);
+
+	var _scroll2 = _interopRequireDefault(_scroll);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var page = __webpack_require__(25)();
+
 	exports.default = {
+	  methods: {
+	    scrollToFold: function scrollToFold() {
+	      var el = document.getElementById('the-fold');
+	      var foldOffset = el.getBoundingClientRect().top + document.body.scrollTop;
+	      console.log(foldOffset);
+	      _scroll2.default.top(page, foldOffset, { duration: 400 });
+	    }
+	  },
 	  ready: function ready() {
 	    console.log('Home loaded.');
 	  }
@@ -13596,22 +13623,180 @@
 
 /***/ },
 /* 22 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n<div>\n  <div>HOME PAGE</div>\n</div>\n";
+	var raf = __webpack_require__(23)
+
+	function scroll (prop, element, to, options, callback) {
+	  var start = +new Date
+	  var from = element[prop]
+	  var cancelled = false
+
+	  var ease = inOutSine
+	  var duration = 350
+
+	  if (typeof options === 'function') {
+	    callback = options
+	  }
+	  else {
+	    options = options || {}
+	    ease = options.ease || ease
+	    duration = options.duration || duration
+	    callback = callback || function () {}
+	  }
+
+	  if (from === to) {
+	    return callback(
+	      new Error('Element already at target scroll position'),
+	      element[prop]
+	    )
+	  }
+
+	  function cancel () {
+	    cancelled = true
+	  }
+
+	  function animate (timestamp) {
+	    if (cancelled) {
+	      return callback(
+	        new Error('Scroll cancelled'),
+	        element[prop]
+	      )
+	    }
+
+	    var now = +new Date
+	    var time = Math.min(1, ((now - start) / duration))
+	    var eased = ease(time)
+
+	    element[prop] = (eased * (to - from)) + from
+
+	    time < 1 ?
+	      raf(animate) :
+	      callback(null, element[prop])
+	  }
+
+	  raf(animate)
+
+	  return cancel
+	}
+
+	function inOutSine (n) {
+	  return .5 * (1 - Math.cos(Math.PI * n));
+	}
+
+	module.exports = {
+	  top: function (element, to, options, callback) {
+	    return scroll('scrollTop', element, to, options, callback)
+	  },
+	  left: function (element, to, options, callback) {
+	    return scroll('scrollLeft', element, to, options, callback)
+	  }
+	}
+
 
 /***/ },
 /* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
+	var global = __webpack_require__(24)
+
+	/**
+	 * `requestAnimationFrame()`
+	 */
+
+	var request = global.requestAnimationFrame
+	  || global.webkitRequestAnimationFrame
+	  || global.mozRequestAnimationFrame
+	  || fallback
+
+	var prev = +new Date
+	function fallback (fn) {
+	  var curr = +new Date
+	  var ms = Math.max(0, 16 - (curr - prev))
+	  var req = setTimeout(fn, ms)
+	  return prev = curr, req
+	}
+
+	/**
+	 * `cancelAnimationFrame()`
+	 */
+
+	var cancel = global.cancelAnimationFrame
+	  || global.webkitCancelAnimationFrame
+	  || global.mozCancelAnimationFrame
+	  || clearTimeout
+
+	if (Function.prototype.bind) {
+	  request = request.bind(global)
+	  cancel = cancel.bind(global)
+	}
+
+	exports = module.exports = request
+	exports.cancel = cancel
+
+
+/***/ },
+/* 24 */
+/***/ function(module, exports) {
+
+	/* WEBPACK VAR INJECTION */(function(global) {if (typeof window !== "undefined") {
+	    module.exports = window;
+	} else if (typeof global !== "undefined") {
+	    module.exports = global;
+	} else if (typeof self !== "undefined"){
+	    module.exports = self;
+	} else {
+	    module.exports = {};
+	}
+
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+
+/***/ },
+/* 25 */
+/***/ function(module, exports) {
+
+	var win = window || {};
+	var doc = document || { documentElement: {} };
+	// IE < 9 & Node
+	var scrollElem = typeof win.pageYOffset === 'undefined' ?
+	  doc.documentElement :
+	  null;
+
+	function detectScrollElem() {
+	  var startScrollTop = window.pageYOffset;
+	  document.documentElement.scrollTop = startScrollTop + 1;
+	  if (window.pageYOffset > startScrollTop) {
+	    document.documentElement.scrollTop = startScrollTop;
+	    // IE > 9 & FF (standard)
+	    return document.documentElement;
+	  }
+	  // Chrome (non-standard)
+	  return document.body;
+	}
+
+	module.exports = function scrollDoc() {
+	  return scrollElem || (scrollElem = detectScrollElem());
+	}
+
+
+/***/ },
+/* 26 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"slide slide--intro\">\n  <div class=\"logo--intro\">\n    <img src=\"/images/logo.svg\" title=\"CANDER PARIS\">\n  </div>\n  <a href=\"#\" @click.prevent=\"scrollToFold\" class=\"icn--scroll-down\">Scroll Down</a>\n</div>\n<div id=\"the-fold\" class=\"slide\" style=\"background:plum\"></div>\n<div class=\"slide\" style=\"background:gray\"></div>\n";
+
+/***/ },
+/* 27 */
+/***/ function(module, exports, __webpack_require__) {
+
 	var __vue_script__, __vue_template__
-	__webpack_require__(24)
-	__vue_script__ = __webpack_require__(26)
+	__webpack_require__(28)
+	__vue_script__ = __webpack_require__(30)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/components/SectionStores.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(27)
+	__vue_template__ = __webpack_require__(31)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -13630,13 +13815,13 @@
 	})()}
 
 /***/ },
-/* 24 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(25);
+	var content = __webpack_require__(29);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(10)(content, {});
@@ -13656,7 +13841,7 @@
 	}
 
 /***/ },
-/* 25 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(9)();
@@ -13670,7 +13855,7 @@
 
 
 /***/ },
-/* 26 */
+/* 30 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -13683,23 +13868,23 @@
 	};
 
 /***/ },
-/* 27 */
+/* 31 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div>\n  <div>STORES PAGE</div>\n</div>\n";
 
 /***/ },
-/* 28 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(29)
-	__vue_script__ = __webpack_require__(31)
+	__webpack_require__(33)
+	__vue_script__ = __webpack_require__(35)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/components/SectionTerms.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(32)
+	__vue_template__ = __webpack_require__(36)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -13718,13 +13903,13 @@
 	})()}
 
 /***/ },
-/* 29 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(30);
+	var content = __webpack_require__(34);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(10)(content, {});
@@ -13744,7 +13929,7 @@
 	}
 
 /***/ },
-/* 30 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(9)();
@@ -13758,7 +13943,7 @@
 
 
 /***/ },
-/* 31 */
+/* 35 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -13769,110 +13954,10 @@
 	exports.default = {};
 
 /***/ },
-/* 32 */
+/* 36 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div>\n  <div>TERMS OF SERVICE PAGE</div>\n</div>\n";
-
-/***/ },
-/* 33 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	__webpack_require__(34)
-	__vue_script__ = __webpack_require__(36)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/js/App.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(42)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
-	}
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-2253c947/App.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 34 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(35);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(10)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./App.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./App.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 35 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(9)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n.cander-wrapper {}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 36 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _MenuOverlay = __webpack_require__(37);
-
-	var _MenuOverlay2 = _interopRequireDefault(_MenuOverlay);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = {
-	  data: function data() {
-	    return {
-	      msg: 'hellllo worl'
-	    };
-	  },
-
-	  components: {
-	    MenuOverlay: _MenuOverlay2.default
-	  },
-	  ready: function ready() {
-	    console.log('App.vue loaded...');
-	  }
-	};
 
 /***/ },
 /* 37 */
@@ -13884,8 +13969,8 @@
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/js/components/MenuOverlay.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(41)
+	  console.warn("[vue-loader] src/js/App.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(53)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -13895,7 +13980,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-53ced9fc/MenuOverlay.vue"
+	  var id = "_v-2253c947/App.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -13919,8 +14004,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./MenuOverlay.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./MenuOverlay.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./App.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./App.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -13938,39 +14023,711 @@
 
 
 	// module
-	exports.push([module.id, ".menu-overlay {\n  background: rgba(0, 0, 0, 0.2); }\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n.cander-wrapper {}\n", ""]);
 
 	// exports
 
 
 /***/ },
 /* 40 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+
+	var _store = __webpack_require__(41);
+
+	var _store2 = _interopRequireDefault(_store);
+
+	var _MenuOverlay = __webpack_require__(43);
+
+	var _MenuOverlay2 = _interopRequireDefault(_MenuOverlay);
+
+	var _SiteHeader = __webpack_require__(47);
+
+	var _SiteHeader2 = _interopRequireDefault(_SiteHeader);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 	exports.default = {
 	  data: function data() {
 	    return {
-	      msg: 'MENU'
+	      scrollPos: _store2.default.data.scrollPos
 	    };
+	  },
+
+	  components: {
+	    MenuOverlay: _MenuOverlay2.default,
+	    SiteHeader: _SiteHeader2.default
+	  },
+	  methods: {},
+	  ready: function ready() {
+	    var _this = this;
+
+	    document.addEventListener("scroll", function () {
+	      _this.scrollPos.top = document.getElementById('cander-app').getBoundingClientRect().top;
+	    }, false);
 	  }
 	};
 
 /***/ },
 /* 41 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n<p>\n  <a v-link=\"{ path: '/about' }\">About</a>\n  <a v-link=\"{ path: '/stores' }\">Stores</a>\n  <a v-link=\"{ path: '/contact' }\">Contact</a>\n</p>\n";
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _events = __webpack_require__(42);
+
+	var store = new _events.EventEmitter();
+
+	store.data = {
+	  scrollPos: {
+	    top: 0,
+	    left: 0
+	  },
+	  menuOverlay: {
+	    visible: false,
+	    navImageMap: {
+	      'default': '/images/menu-accent-about.jpg',
+	      'about': '/images/menu-accent-about.jpg',
+	      'stores': '/images/menu-accent-stores.jpg',
+	      'contact': '/images/menu-accent-contact.jpg'
+	    }
+	  }
+	};
+
+	exports.default = store;
 
 /***/ },
 /* 42 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"cander-wrapper\">\n  <menu-overlay></menu-overlay>\n  <router-view></router-view>\n</div>\n";
+	// Copyright Joyent, Inc. and other Node contributors.
+	//
+	// Permission is hereby granted, free of charge, to any person obtaining a
+	// copy of this software and associated documentation files (the
+	// "Software"), to deal in the Software without restriction, including
+	// without limitation the rights to use, copy, modify, merge, publish,
+	// distribute, sublicense, and/or sell copies of the Software, and to permit
+	// persons to whom the Software is furnished to do so, subject to the
+	// following conditions:
+	//
+	// The above copyright notice and this permission notice shall be included
+	// in all copies or substantial portions of the Software.
+	//
+	// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+	// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+	// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+	// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+	// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+	// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+	// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+	function EventEmitter() {
+	  this._events = this._events || {};
+	  this._maxListeners = this._maxListeners || undefined;
+	}
+	module.exports = EventEmitter;
+
+	// Backwards-compat with node 0.10.x
+	EventEmitter.EventEmitter = EventEmitter;
+
+	EventEmitter.prototype._events = undefined;
+	EventEmitter.prototype._maxListeners = undefined;
+
+	// By default EventEmitters will print a warning if more than 10 listeners are
+	// added to it. This is a useful default which helps finding memory leaks.
+	EventEmitter.defaultMaxListeners = 10;
+
+	// Obviously not all Emitters should be limited to 10. This function allows
+	// that to be increased. Set to zero for unlimited.
+	EventEmitter.prototype.setMaxListeners = function(n) {
+	  if (!isNumber(n) || n < 0 || isNaN(n))
+	    throw TypeError('n must be a positive number');
+	  this._maxListeners = n;
+	  return this;
+	};
+
+	EventEmitter.prototype.emit = function(type) {
+	  var er, handler, len, args, i, listeners;
+
+	  if (!this._events)
+	    this._events = {};
+
+	  // If there is no 'error' event listener then throw.
+	  if (type === 'error') {
+	    if (!this._events.error ||
+	        (isObject(this._events.error) && !this._events.error.length)) {
+	      er = arguments[1];
+	      if (er instanceof Error) {
+	        throw er; // Unhandled 'error' event
+	      } else {
+	        // At least give some kind of context to the user
+	        var err = new Error('Uncaught, unspecified "error" event. (' + er + ')');
+	        err.context = er;
+	        throw err;
+	      }
+	    }
+	  }
+
+	  handler = this._events[type];
+
+	  if (isUndefined(handler))
+	    return false;
+
+	  if (isFunction(handler)) {
+	    switch (arguments.length) {
+	      // fast cases
+	      case 1:
+	        handler.call(this);
+	        break;
+	      case 2:
+	        handler.call(this, arguments[1]);
+	        break;
+	      case 3:
+	        handler.call(this, arguments[1], arguments[2]);
+	        break;
+	      // slower
+	      default:
+	        args = Array.prototype.slice.call(arguments, 1);
+	        handler.apply(this, args);
+	    }
+	  } else if (isObject(handler)) {
+	    args = Array.prototype.slice.call(arguments, 1);
+	    listeners = handler.slice();
+	    len = listeners.length;
+	    for (i = 0; i < len; i++)
+	      listeners[i].apply(this, args);
+	  }
+
+	  return true;
+	};
+
+	EventEmitter.prototype.addListener = function(type, listener) {
+	  var m;
+
+	  if (!isFunction(listener))
+	    throw TypeError('listener must be a function');
+
+	  if (!this._events)
+	    this._events = {};
+
+	  // To avoid recursion in the case that type === "newListener"! Before
+	  // adding it to the listeners, first emit "newListener".
+	  if (this._events.newListener)
+	    this.emit('newListener', type,
+	              isFunction(listener.listener) ?
+	              listener.listener : listener);
+
+	  if (!this._events[type])
+	    // Optimize the case of one listener. Don't need the extra array object.
+	    this._events[type] = listener;
+	  else if (isObject(this._events[type]))
+	    // If we've already got an array, just append.
+	    this._events[type].push(listener);
+	  else
+	    // Adding the second element, need to change to array.
+	    this._events[type] = [this._events[type], listener];
+
+	  // Check for listener leak
+	  if (isObject(this._events[type]) && !this._events[type].warned) {
+	    if (!isUndefined(this._maxListeners)) {
+	      m = this._maxListeners;
+	    } else {
+	      m = EventEmitter.defaultMaxListeners;
+	    }
+
+	    if (m && m > 0 && this._events[type].length > m) {
+	      this._events[type].warned = true;
+	      console.error('(node) warning: possible EventEmitter memory ' +
+	                    'leak detected. %d listeners added. ' +
+	                    'Use emitter.setMaxListeners() to increase limit.',
+	                    this._events[type].length);
+	      if (typeof console.trace === 'function') {
+	        // not supported in IE 10
+	        console.trace();
+	      }
+	    }
+	  }
+
+	  return this;
+	};
+
+	EventEmitter.prototype.on = EventEmitter.prototype.addListener;
+
+	EventEmitter.prototype.once = function(type, listener) {
+	  if (!isFunction(listener))
+	    throw TypeError('listener must be a function');
+
+	  var fired = false;
+
+	  function g() {
+	    this.removeListener(type, g);
+
+	    if (!fired) {
+	      fired = true;
+	      listener.apply(this, arguments);
+	    }
+	  }
+
+	  g.listener = listener;
+	  this.on(type, g);
+
+	  return this;
+	};
+
+	// emits a 'removeListener' event iff the listener was removed
+	EventEmitter.prototype.removeListener = function(type, listener) {
+	  var list, position, length, i;
+
+	  if (!isFunction(listener))
+	    throw TypeError('listener must be a function');
+
+	  if (!this._events || !this._events[type])
+	    return this;
+
+	  list = this._events[type];
+	  length = list.length;
+	  position = -1;
+
+	  if (list === listener ||
+	      (isFunction(list.listener) && list.listener === listener)) {
+	    delete this._events[type];
+	    if (this._events.removeListener)
+	      this.emit('removeListener', type, listener);
+
+	  } else if (isObject(list)) {
+	    for (i = length; i-- > 0;) {
+	      if (list[i] === listener ||
+	          (list[i].listener && list[i].listener === listener)) {
+	        position = i;
+	        break;
+	      }
+	    }
+
+	    if (position < 0)
+	      return this;
+
+	    if (list.length === 1) {
+	      list.length = 0;
+	      delete this._events[type];
+	    } else {
+	      list.splice(position, 1);
+	    }
+
+	    if (this._events.removeListener)
+	      this.emit('removeListener', type, listener);
+	  }
+
+	  return this;
+	};
+
+	EventEmitter.prototype.removeAllListeners = function(type) {
+	  var key, listeners;
+
+	  if (!this._events)
+	    return this;
+
+	  // not listening for removeListener, no need to emit
+	  if (!this._events.removeListener) {
+	    if (arguments.length === 0)
+	      this._events = {};
+	    else if (this._events[type])
+	      delete this._events[type];
+	    return this;
+	  }
+
+	  // emit removeListener for all listeners on all events
+	  if (arguments.length === 0) {
+	    for (key in this._events) {
+	      if (key === 'removeListener') continue;
+	      this.removeAllListeners(key);
+	    }
+	    this.removeAllListeners('removeListener');
+	    this._events = {};
+	    return this;
+	  }
+
+	  listeners = this._events[type];
+
+	  if (isFunction(listeners)) {
+	    this.removeListener(type, listeners);
+	  } else if (listeners) {
+	    // LIFO order
+	    while (listeners.length)
+	      this.removeListener(type, listeners[listeners.length - 1]);
+	  }
+	  delete this._events[type];
+
+	  return this;
+	};
+
+	EventEmitter.prototype.listeners = function(type) {
+	  var ret;
+	  if (!this._events || !this._events[type])
+	    ret = [];
+	  else if (isFunction(this._events[type]))
+	    ret = [this._events[type]];
+	  else
+	    ret = this._events[type].slice();
+	  return ret;
+	};
+
+	EventEmitter.prototype.listenerCount = function(type) {
+	  if (this._events) {
+	    var evlistener = this._events[type];
+
+	    if (isFunction(evlistener))
+	      return 1;
+	    else if (evlistener)
+	      return evlistener.length;
+	  }
+	  return 0;
+	};
+
+	EventEmitter.listenerCount = function(emitter, type) {
+	  return emitter.listenerCount(type);
+	};
+
+	function isFunction(arg) {
+	  return typeof arg === 'function';
+	}
+
+	function isNumber(arg) {
+	  return typeof arg === 'number';
+	}
+
+	function isObject(arg) {
+	  return typeof arg === 'object' && arg !== null;
+	}
+
+	function isUndefined(arg) {
+	  return arg === void 0;
+	}
+
+
+/***/ },
+/* 43 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(44)
+	__vue_script__ = __webpack_require__(46)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/js/components/MenuOverlay.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(52)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "_v-53ced9fc/MenuOverlay.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 44 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(45);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(10)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./MenuOverlay.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./MenuOverlay.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 45 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(9)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".menu-overlay-wrapper {\n  background: #ffffff;\n  height: 100%;\n  left: 0;\n  min-height: 100vh;\n  position: fixed;\n  top: 0;\n  transition: opacity 500ms ease;\n  width: 100%;\n  z-index: 500; }\n  .menu-overlay-wrapper.fade-transition {\n    transition: opacity 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .menu-overlay-wrapper.fade-enter, .menu-overlay-wrapper.fade-leave {\n    opacity: 0; }\n\n@media screen and (min-width: 48em) {\n  .menu-overlay__nav-wrapper,\n  .menu-overlay__accent-wrapper {\n    float: left;\n    width: 50%; } }\n\n.menu-overlay__nav-wrapper {\n  min-height: 100vh;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-flex-direction: column;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-justify-content: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  padding: 3.5rem; }\n\n.menu-overlay__nav-list {\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-flex-direction: column;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-justify-content: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  margin-bottom: 4rem; }\n\n.menu-overlay__nav-list__item,\na.menu-overlay__nav-list__item {\n  font-family: \"Sabon Roman\", serif;\n  font-size: 4rem;\n  font-weight: 300;\n  color: #000000;\n  line-height: 1.333;\n  text-decoration: none;\n  transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .menu-overlay__nav-list__item:hover,\n  a.menu-overlay__nav-list__item:hover {\n    color: #c1c1c1; }\n  @media screen and (min-width: 48em) {\n    .menu-overlay__nav-list__item,\n    a.menu-overlay__nav-list__item {\n      color: #c1c1c1; }\n      .menu-overlay__nav-list__item:hover,\n      a.menu-overlay__nav-list__item:hover {\n        color: #000000; } }\n\n.menu-overlay__accent-wrapper {\n  display: none;\n  max-height: 100%;\n  overflow: hidden; }\n  @media screen and (min-width: 48em) {\n    .menu-overlay__accent-wrapper {\n      display: block; } }\n\n.menu-overlay__accent {\n  margin: 0 auto; }\n  @media screen and (min-width: 48em) {\n    .menu-overlay__accent {\n      box-sizing: border-box;\n      padding: 10rem 6rem 6rem; } }\n\n.menu-overlay__btn-close {\n  cursor: pointer;\n  position: absolute;\n  right: 2rem;\n  top: 2rem; }\n  .menu-overlay__btn-close .menu-icon-close {\n    fill: #000000;\n    height: 1.333rem;\n    opacity: 1;\n    width: 1.333rem;\n    transition: all 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);\n    visibility: visible; }\n  .menu-overlay__btn-close:hover .menu-icon-close {\n    fill: #c1c1c1; }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 46 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _store = __webpack_require__(41);
+
+	var _store2 = _interopRequireDefault(_store);
+
+	var _SiteHeader = __webpack_require__(47);
+
+	var _SiteHeader2 = _interopRequireDefault(_SiteHeader);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
+	  components: {
+	    SiteHeader: _SiteHeader2.default
+	  },
+	  data: function data() {
+	    return {
+	      hoverItem: 'default',
+	      activeItem: '',
+	      menuOverlay: _store2.default.data.menuOverlay
+	    };
+	  },
+
+	  methods: {
+	    setHoverItem: function setHoverItem(hoverItem) {
+	      this.hoverItem = hoverItem;
+	    },
+	    closeMenu: function closeMenu() {
+	      var _this = this;
+
+	      var delay = arguments.length <= 0 || arguments[0] === undefined ? 0 : arguments[0];
+
+	      if (delay > 0) {
+	        setTimeout(function () {
+	          return _this.menuOverlay.visible = false;
+	        }, delay);
+	      } else {
+	        this.menuOverlay.visible = false;
+	      }
+	    }
+	  }
+	};
+
+/***/ },
+/* 47 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(48)
+	__vue_script__ = __webpack_require__(50)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/js/components/SiteHeader.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(51)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "_v-3286419a/SiteHeader.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 48 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(49);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(10)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-3286419a&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SiteHeader.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-3286419a&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SiteHeader.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 49 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(9)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".site-header[_v-3286419a] {\n  background: rgba(255, 255, 255, 0.5);\n  height: 8rem;\n  position: fixed;\n  text-align: center;\n  width: 100%;\n  z-index: 20; }\n  .site-header.fade-transition[_v-3286419a] {\n    transition: opacity 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .site-header.fade-enter[_v-3286419a], .site-header.fade-leave[_v-3286419a] {\n    opacity: 0; }\n\n.logo[_v-3286419a] {\n  width: 12rem;\n  left: 50%;\n  margin: 0 auto;\n  position: absolute;\n  top: 50%;\n  -webkit-transform: translate(-50%, -50%);\n      -ms-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%); }\n\n.btn-menu[_v-3286419a] {\n  height: 1.3rem;\n  width: 1.6rem;\n  border: 0;\n  display: block;\n  position: absolute;\n  right: 3rem;\n  top: 50%;\n  -webkit-transform: translateY(-50%);\n      -ms-transform: translateY(-50%);\n          transform: translateY(-50%); }\n  .btn-menu[_v-3286419a]:after, .btn-menu[_v-3286419a]:before {\n    content: '';\n    display: block;\n    position: absolute;\n    width: 100%;\n    top: 50%; }\n  .btn-menu[_v-3286419a]:after {\n    border-bottom: 0.2rem solid #000000;\n    top: 75%; }\n  .btn-menu[_v-3286419a]:before {\n    border-top: 0.2rem solid #000000;\n    top: 25%; }\n\n.btn-menu--open[_v-3286419a]:after, .btn-menu--open[_v-3286419a]:before {\n  top: 50%; }\n\n.btn-menu--open[_v-3286419a]:after {\n  -webkit-transform: rotate(45deg);\n      -ms-transform: rotate(45deg);\n          transform: rotate(45deg); }\n\n.btn-menu--open[_v-3286419a]:before {\n  -webkit-transform: rotate(-45deg);\n      -ms-transform: rotate(-45deg);\n          transform: rotate(-45deg); }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 50 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _scroll = __webpack_require__(22);
+
+	var _scroll2 = _interopRequireDefault(_scroll);
+
+	var _store = __webpack_require__(41);
+
+	var _store2 = _interopRequireDefault(_store);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var page = __webpack_require__(25)();
+
+	exports.default = {
+	  data: function data() {
+	    return {
+	      menuOverlay: _store2.default.data.menuOverlay,
+	      scrollPos: _store2.default.data.scrollPos
+	    };
+	  },
+
+	  computed: {
+	    isHomePage: function isHomePage() {
+	      if (this.$route.path === '/') {
+	        return true;
+	      } else {
+	        return false;
+	      }
+	    },
+	    headerVisible: function headerVisible() {
+	      if (this.menuOverlay.visible) {
+	        return true;
+	      }
+	      if (this.isHomePage && this.scrollPos.top > -window.innerHeight) {
+	        return false;
+	      }
+	      return true;
+	    },
+	    toggleState: function toggleState() {
+	      if (this.menuOverlay.visible) {
+	        return 'open';
+	      } else {
+	        return 'closed';
+	      }
+	    }
+	  },
+	  methods: {
+	    toggleMenu: function toggleMenu() {
+	      return this.menuOverlay.visible = !this.menuOverlay.visible;
+	    },
+	    closeMenu: function closeMenu() {
+	      var _this = this;
+
+	      var delay = arguments.length <= 0 || arguments[0] === undefined ? 0 : arguments[0];
+
+	      if (delay > 0) {
+	        setTimeout(function () {
+	          return _this.menuOverlay.visible = false;
+	        }, delay);
+	      } else {
+	        this.menuOverlay.visible = false;
+	      }
+	    },
+	    logoClickHandler: function logoClickHandler() {
+	      if (this.isHomePage) {
+	        _scroll2.default.top(page, 0, { duration: 400 });
+	        this.closeMenu(300);
+	      } else {
+	        alert('router.go -> home');
+	      }
+	    }
+	  },
+	  watch: {
+	    'headerVisible': function headerVisible(val) {
+	      var el = document.getElementById('cander-app');
+	      if (val) {
+	        addClass(el, 'header-visible');
+	      } else {
+	        removeClass(el, 'header-visible');
+	      }
+	    }
+	  }
+	};
+
+	function addClass(el, className) {
+	  if (el.classList) {
+	    el.classList.add(className);
+	  } else {
+	    el.className += ' ' + className;
+	  }
+	}
+	function removeClass(el, className) {
+	  if (el.classList) {
+	    el.classList.remove(className);
+	  } else {
+	    el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+	  }
+	}
+
+/***/ },
+/* 51 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<header class=\"site-header\" v-show=\"headerVisible\" transition=\"fade\" _v-3286419a=\"\">\n  <a href=\"/\" @click.prevent=\"logoClickHandler\" class=\"menu-overlay__nav-list__item\" _v-3286419a=\"\">\n    <img src=\"/images/logo.svg\" alt=\"CANDER PARIS\" title=\"CANDER PARIS\" class=\"logo\" _v-3286419a=\"\">\n  </a>\n  <a href=\"/\" @click.prevent=\"toggleMenu()\" class=\"btn-menu btn-menu--{{ toggleState }}\" _v-3286419a=\"\"></a>\n</header>\n";
+
+/***/ },
+/* 52 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"menu-overlay-wrapper\" v-if=\"menuOverlay.visible\" transition=\"fade\">\n  <site-header></site-header>\n  <div class=\"menu-overlay\">\n    <div class=\"menu-overlay__nav-wrapper\">\n      <nav class=\"menu-overlay__nav-list\">\n        <a v-link=\"{ name: 'about' }\"\n           v-on:mouseover=\"setHoverItem('about')\"\n           v-on:click=\"closeMenu(300)\"\n           class=\"menu-overlay__nav-list__item\"\n        >About</a>\n        <a v-link=\"{ name: 'stores' }\"\n           v-on:mouseover=\"setHoverItem('stores')\"\n           v-on:click=\"closeMenu(300)\"\n           class=\"menu-overlay__nav-list__item\"\n        >Stores</a>\n        <a v-link=\"{ name: 'contact' }\"\n           v-on:mouseover=\"setHoverItem('contact')\"\n           v-on:click=\"closeMenu(300)\"\n           class=\"menu-overlay__nav-list__item\"\n        >Contact</a>\n      </nav>\n      <div class=\"menu-overlay__nav-social\">\n        <a class=\"menu-overlay__nav-social__item\" href=\"http://facebook.com\" target=\"_blank\">Facebook</a>\n        <a class=\"menu-overlay__nav-social__item\" href=\"http://instagram.com\" target=\"_blank\">Instagram</a>\n      </div>\n      <div class=\"menu-overlay__nav-contact\">\n        <p>For all general information please contact <a href=\"mailto:info@canderparis.com\">info@canderparis.com</a></p>\n        <p>For press information please contact <a href=\"mailto:press@canderparis.com\">press@canderparis.com</a></p>\n      </div>\n    </div>\n    <div class=\"menu-overlay__accent-wrapper\">\n      <img :src=\"menuOverlay.navImageMap[hoverItem]\" class=\"menu-overlay__accent\" :data-id=\"hoverItem\">\n    </div>\n  </div>\n</div>\n";
+
+/***/ },
+/* 53 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"cander-wrapper\" id=\"cander-app\">\n  <site-header></site-header>\n  <menu-overlay></menu-overlay>\n  <main class=\"main-content\">\n    <router-view></router-view>\n  </main>\n</div>\n";
 
 /***/ }
 /******/ ]);

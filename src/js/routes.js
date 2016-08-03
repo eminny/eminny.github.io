@@ -10,18 +10,23 @@ const SectionTerms = Vue.extend(require('./components/SectionTerms.vue'))
 // Routes
 export default {
   '/': {
-    component: SectionHome
+    name: 'home',
+    component: SectionHome,
   },
   '/about': {
-    component: SectionAbout
+    name: 'about',
+    component: SectionAbout,
   },
   '/contact': {
-    component: SectionContact
+    name: 'contact',
+    component: SectionContact,
   },
   '/stores': {
-    component: SectionStores
+    name: 'stores',
+    component: SectionStores,
   },
   '/terms': {
-    component: SectionTerms
+    name: 'terms',
+    component: SectionTerms,
   }
 }

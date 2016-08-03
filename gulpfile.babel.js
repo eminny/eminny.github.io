@@ -117,8 +117,11 @@ gulp.task('watch', function () {
   gulp.watch('src/images/**/*.*', ['copy-images']);
   gulp.watch('src/js/vendor/*.js', ['vendor-scripts']);
   gulp.watch('src/stylesheets/**/*.scss', ['sass']);
-  gulp.watch('src/js/**/*.js', ['webpack']);
-  gulp.watch('src/js/**/*.vue', ['webpack']);
+  gulp.watch([
+    'src/js/**/*.js',
+    'src/js/**/*.vue',
+    'src/js/**/*.scss'
+  ], ['webpack']);
 });
 
 // Build a minified, production-ready site to build folder

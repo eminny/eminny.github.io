@@ -27,10 +27,7 @@ $susy: (
   gutters                     : 1/4,
 );
 
-// Settings: Modular Scale
-// See: <http://www.thesassway.com/projects/modular-scale>
 $base-size                    : $base-fs;
-$ratio                        : $golden $fourth;
 
 // Breakpoints
 // ===========
@@ -63,7 +60,6 @@ $container__widest            : 70em; //75.541em;
 
 // Navigation
 // ==========
-$nav-main__height             : ceil(ms(8, $base-size, $ratio));
 $nav-main__element-height     : 2rem;
 $nav-main__padding-sides      : 5%;
 
@@ -98,6 +94,21 @@ $font__weight-medium          : 500;
 $font__weight-semibold        : 700;
 $font__weight-bold            : 800;
 $font__weight                 : $font__weight-normal !default;
+
+// Transitions
+// ===========
+$timing-function-easeOutCubic: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+$timing-function-easeInCubic: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+$timing-function-easeInOutQuad: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+$timing-function-easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+$timing-function-easeInOutQuart: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+
+$transition-standard: 300ms $timing-function-easeInOutQuad;
+$transition-sharper: 240ms ease;
+$transition-easeOut: 400ms $timing-function-easeOutCubic;
+$transition-easeIn: 500ms $timing-function-easeInCubic;
+$drawer-transition: $transition-standard;
+$transition-easeInOut: 220ms $timing-function-easeInOutQuart;
 
 // Z-index master list
 // ===================

@@ -7,14 +7,20 @@ import Routes from './routes'
   // Global Vue config
   Vue.config.debug = true
 
+  const Cander = Vue.extend(require('./App.vue'))
+
   Vue.use(VueRouter)
 
-  const router = new VueRouter()
-  const Cander = Vue.extend(require('./App.vue'))
+  let router = new VueRouter({
+    hashbang: true,
+  })
+  window.CANDER = window.CANDER || {};
+  window.CANDER.router = router;
 
   // Define some routes
   router.map(Routes)
 
-  // Initialize app via router
+  // Initialize router-enabled app.
+  // Creates an instance of Cander and mounts it to cander-app.
   router.start(Cander, 'cander-app')
 })();
