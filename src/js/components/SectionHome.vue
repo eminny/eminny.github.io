@@ -12,6 +12,7 @@
 <style lang="sass">
   .logo--intro {
     transform: translateY(-3rem);
+    user-select: none;
     width: 20rem;
   }
 

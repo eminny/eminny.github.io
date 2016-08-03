@@ -109,17 +109,17 @@ label {
 
 // Scrollbar
 
-::-webkit-scrollbar {
-  -webkit-appearance: none;
-  background-color: rgba($color__black, 0.1);
-  width: 0.5rem;
-  height: 0.5rem;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 0;
-  background-color: rgba($color__black, 0.618);
-}
+//::-webkit-scrollbar {
+//  -webkit-appearance: none;
+//  background-color: rgba($color__black, 0.1);
+//  width: 0.5rem;
+//  height: 0.5rem;
+//}
+//
+//::-webkit-scrollbar-thumb {
+//  border-radius: 0;
+//  background-color: rgba($color__black, 0.618);
+//}
 
 // Form elements
 

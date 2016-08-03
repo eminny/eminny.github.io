@@ -30,11 +30,15 @@
 }
 
 .menu-overlay__nav-wrapper {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-height: 100vh;
   padding: 3.5rem;
+
+  @media screen and (min-width: $tablet-lg) {
+    padding: 6rem;
+  }
 }
 
 .menu-overlay__nav-list {
@@ -65,6 +69,33 @@ a.menu-overlay__nav-list__item {
       color: $color__black;
     }
   }
+}
+
+.menu-overlay__nav-social {
+  border-top: 1px solid $color__gray;
+  padding-top: 6rem;
+}
+
+.menu-overlay__nav-social__item,
+a.menu-overlay__nav-social__item {
+  transition: color $transition-standard;
+  text-decoration: none;
+  &:first-of-type {
+    margin-right: 2rem;
+  }
+}
+
+.icon {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.menu-overlay__nav-contact {
+  margin-top: 4rem;
 }
 
 .menu-overlay__accent-wrapper {
