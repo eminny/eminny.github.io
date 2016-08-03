@@ -1,7 +1,7 @@
 <template>
   <div class="slides">
     <!-- SECTION 0: INTRO/HERO -->
-    <div class="slide slide--intro">
+    <div class="slide slide--0 slide--intro">
       <div class="slide--intro__logo"
            data-0="opacity: 1;"
            data-top-center="opacity: 0;"
@@ -16,7 +16,7 @@
     </div>
 
     <!-- SECTION 1: THE CANDLE -->
-    <div class="slide slide--split" id="the-fold"
+    <div class="slide slide--1" id="the-fold"
          data-0="transform: translate(0, 100%);"
          data-100p="transform: translate(0, 0%)"
     >
@@ -73,14 +73,46 @@
     </div>
 
     <!-- SECTION 2: THE SCENT -->
-    <!--<div class="slide" style="background:#ccc"-->
-         <!--data-0="opacity: 0"-->
-         <!--data-500p="opacity: 1"></div>-->
+    <div class="slide slide--2"
+         data-0="opacity: 0"
+         data-600p="opacity: 0; transform: translate(0, 100%);"
+         data-650p="opacity: 0; transform: translate(0, 5%);"
+         data-700p="opacity: 1; transform: translate(0, 0%);"
+         data-850p="opacity: 0; transform: translate(0, -2%);"
+    >
+      <div class="the-scent">
+        <h4 class="the-scent__title">Scent One</h4>
+        <p class="the-scent__desc">Blending woody aromatics like <span class="aromatic" data-id="cypres">cyprés</span>,<br>
+          <span class="aromatic" data-id="cedre">cédre</span>, and <span class="aromatic" data-id="oud">oud</span>, with sensual <span class="aromatic" data-id="rose">rose</span> and<br>
+          <span class="aromatic" data-id="patchouli">patchouli</span>. Adding a hint of mystery<br>
+          with the scent of <span class="aromatic" data-id="cuir">cuir</span>.</p>
+      </div>
+    </div>
+
+    <!-- SECTION 3: DOOR -->
+    <div class="slide slide--3"
+         data-0="opacity: 0"
+         data-840p="opacity: 0; transform: translate(0, 100%);"
+         data-850p="opacity: 0; transform: translate(0, 2%);"
+         data-900p="opacity: 1; transform: translate(0, 0%);"
+    >
+      <div class="translations-wrapper">
+        <ul class="translations-list">
+          <li>Bougie Parfumée</li>
+          <li>Fragranced Candle</li>
+          <li>Candela Profumata</li>
+          <li>Vela Perfumada</li>
+          <li>Duftkerze</li>
+          <li>香味蠟燭</li>
+          <li>香りのろうそく</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>
 
 <style lang="sass" scoped>
-
+  @import "stylesheets/section-home";
 </style>
 
 <script>
@@ -113,7 +145,6 @@
       }
     },
     destroyed () {
-
       // Destroy skrollr instance
       if (this.skrollr) {
         this.skrollr.destroy()

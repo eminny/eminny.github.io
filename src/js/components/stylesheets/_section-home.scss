@@ -1,0 +1,57 @@
+@import "../../../stylesheets/variables";
+
+.the-scent {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  transform: translateY(-5%);
+}
+
+.the-scent__title {
+  font-family: $font__family-sans;
+  font-size: 1.4rem;
+  line-height: 1.2858;
+  margin-bottom: 4rem;
+  text-transform: uppercase;
+}
+
+.the-scent__desc {
+  color: $color__black;
+  font-family: $font__family-serif;
+  font-size: 3.2rem;
+  line-height: 1.34375;
+  text-align: center;
+  transition: color 800ms $timing-function-easeInOutQuad;
+
+  &:hover {
+    color: $color__gray;
+  }
+}
+
+.aromatic {
+  cursor: pointer;
+  font-style: italic;
+  transition: color $transition-standard;
+
+  &:hover {
+    color: $color__black;
+  }
+}
+
+// Slide 3
+.translations-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  transform: translateY(-5%);
+}
+
+.translations-list {
+  line-height: 2.75;
+  text-align: center;
+  text-transform: uppercase;
+}

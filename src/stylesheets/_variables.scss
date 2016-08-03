@@ -52,13 +52,12 @@ $screen-xs: 'max-width: #{$screen-xs-max}';
 $screen-xl: 'min-width: #{$screen-xl-min}';
 
 //
-
 $header-height: 8rem;
 
 // Font Stacks
 // ===========
-$font__family-serif           : "Sabon Roman", serif;
-$font__family-sans            : "Brown STD Regular", "Helvetica Neue", Helvetica, sans-serif;
+$font__family-serif           : "sabon", serif;
+$font__family-sans            : "brown-std", "Helvetica Neue", Helvetica, sans-serif;
 $font__family-default         : $font__family-sans !default;
 
 // Font Weights

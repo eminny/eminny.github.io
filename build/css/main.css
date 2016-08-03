@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Name: CANDER PARIS
 URI: canderparis.com
@@ -93,13 +94,20 @@ a img {
   border: 0;
 }
 
+@font-face {
+  font-family: 'brown-std';
+  src: url("/fonts/BrownStd-Regular.eot");
+  src: local("☺"), url("/fonts/BrownStd-Regular.woff") format("woff"), url("/fonts/BrownStd-Regular.ttf") format("truetype"), url("/fonts/BrownStd-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 body,
 button,
 input,
 select,
 textarea {
   color: #000000;
-  font-family: "Brown STD Regular", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "brown-std", "Helvetica Neue", Helvetica, sans-serif;
   font-size: 10px;
   line-height: 1.75;
 }
@@ -112,7 +120,7 @@ textarea {
 .delta,
 .epsilon,
 .zeta {
-  font-family: "Sabon Roman", serif;
+  font-family: "sabon", serif;
   -webkit-font-smoothing: antialiased;
   font-style: normal;
   line-height: 1.75;
@@ -158,7 +166,7 @@ textarea {
 
 .p-alpha,
 .p-beta {
-  font-family: "Sabon Roman", serif;
+  font-family: "sabon", serif;
   font-size: 16px;
   font-size: 1.6rem;
   line-height: 1.3125;
@@ -254,7 +262,7 @@ nav ol,
 }
 
 html {
-  font-family: "Brown STD Regular", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "brown-std", "Helvetica Neue", Helvetica, sans-serif;
   font-size: 10px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -595,7 +603,7 @@ select:hover {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0, red), color-stop(1, black));
     border: 0;
     color: white;
-    font: 1rem/1.618rem "Brown STD Regular", "Helvetica Neue", Helvetica, sans-serif;
+    font: 1rem/1.618rem "brown-std", "Helvetica Neue", Helvetica, sans-serif;
     overflow: hidden;
     padding: 1rem;
     text-shadow: black 0 0 1px;
@@ -652,6 +660,20 @@ optgroup::-moz-focus-inner {
   width: 20rem;
 }
 
+@keyframes bounce-arrow {
+  0% {
+    transform: translate(-50%, 0);
+  }
+  43% {
+    transform: translate(-50%, -0.666rem);
+  }
+  85% {
+    transform: translate(-50%, 0);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
 .slide {
   position: fixed;
   top: 0;
@@ -678,6 +700,7 @@ optgroup::-moz-focus-inner {
 }
 
 .slide--intro__icn-scroll {
+  animation: bounce-arrow 2000ms cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
   background: url("/images/icon-scroll-down.svg") center center no-repeat;
   position: absolute;
   bottom: 10%;
@@ -688,14 +711,14 @@ optgroup::-moz-focus-inner {
   width: 3.4rem;
 }
 
-.slide--split {
+.slide--1 {
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 @media screen and (min-width: 768px) {
-  .slide--split {
+  .slide--1 {
     flex-direction: row;
   }
 }
@@ -736,14 +759,14 @@ optgroup::-moz-focus-inner {
 }
 
 .slide__product-heading {
-  font-family: "Brown STD Regular", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "brown-std", "Helvetica Neue", Helvetica, sans-serif;
   font-size: 1.8rem;
   line-height: 1.6667;
   text-transform: uppercase;
 }
 
 .slide__product-desc {
-  font-family: "Sabon Roman", serif;
+  font-family: "sabon", serif;
   font-size: 1.6rem;
   line-height: 1.3125;
 }
@@ -760,6 +783,19 @@ optgroup::-moz-focus-inner {
   .slide__accent-image {
     width: 35vw;
   }
+}
+
+.slide--2 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 8rem);
+  justify-content: center;
+  margin-top: 8rem;
+}
+
+.slide--3 {
+  background: #ccc;
 }
 
 .smoke-wrapper {
