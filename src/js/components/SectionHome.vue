@@ -93,7 +93,7 @@
     <div class="slide slide--3"
          data-0="opacity: 0"
          data-840p="opacity: 0; transform: translate(0, 100%);"
-         data-850p="opacity: 0; transform: translate(0, 2%);"
+         data-850p="opacity: 0; transform: translate(0, 30%);"
          data-900p="opacity: 1; transform: translate(0, 0%);"
     >
       <div class="translations-wrapper">

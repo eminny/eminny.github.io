@@ -47,10 +47,11 @@
   flex-direction: column;
   height: 100%;
   justify-content: center;
-  transform: translateY(-5%);
 }
 
 .translations-list {
+  font-family: $font__family-serif;
+  font-size: 1.2rem;
   line-height: 2.75;
   text-align: center;
   text-transform: uppercase;

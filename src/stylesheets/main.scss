@@ -8,7 +8,6 @@ Version: 1.0.0
 @import "compass";
 @import "breakpoint";
 @import "susy";
-@import "modular-scale";
 
 // Variables
 @import "variables";
@@ -16,11 +15,17 @@ Version: 1.0.0
 // Mixins
 @import "mixins/mixins";
 
+// @font-face Declarations
+@import "common/fonts";
+
 // CSS reset
 @import "common/reset";
 
 // Typography
 @import "common/typography";
+
+// Animations
+@import "common/animations";
 
 // Base elements
 @import "common/elements";

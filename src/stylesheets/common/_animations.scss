@@ -1,0 +1,15 @@
+@keyframes bounce-arrow {
+  0% {
+    transform: translate(-50%, 0);
+  }
+  43% {
+    transform: translate(-50%, -0.666rem);
+  }
+  85% {
+    transform: translate(-50%, 0);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+

@@ -22,7 +22,9 @@
         </nav>
         <div class="menu-overlay__nav-social">
           <a class="menu-overlay__nav-social__item" href="http://facebook.com" target="_blank">
-            <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
+            <svg class="icon icon-facebook">
+              <use xlink:href="#icon-facebook"></use>
+            </svg>
           </a>
           <a class="menu-overlay__nav-social__item" href="http://instagram.com" target="_blank">
             <svg class="icon icon-instagram"><use xlink:href="#icon-instagram"></use></svg>
