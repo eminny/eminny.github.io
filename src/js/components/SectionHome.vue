@@ -95,6 +95,8 @@
          data-840p="opacity: 0; transform: translate(0, 100%);"
          data-850p="opacity: 0; transform: translate(0, 30%);"
          data-900p="opacity: 1; transform: translate(0, 0%);"
+         data-1150p="opacity: 1; transform: translate(0, 0%);"
+         data-1250p="transform: translate(0, -100%);"
     >
       <div class="translations-wrapper">
         <ul class="translations-list">
@@ -107,6 +109,36 @@
           <li>香りのろうそく</li>
         </ul>
       </div>
+    </div>
+
+    <!-- SECTION 4: PRODUCT -->
+    <div class="slide slide--4"
+         data-0="opacity: 0"
+         data-1200p="opacity: 0; transform: translate(0, 100%);"
+         data-1225p="opacity: 0; transform: translate(0, 20%);"
+         data-1260p="opacity: 0.3; transform: translate(0, 5%);"
+         data-1270p="opacity: 1; transform: translate(0, 0%);"
+    >
+      <div class="slide--4__inner"
+           data-1270p="transform: translate(0, 0);"
+           data-1300p="transform: translate(0, 0);"
+           data-1400p="transform: translate(0, -200px);"
+      >
+        <h2 class="zeta">Coming soon in stores</h2>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="slide-footer"
+         data-0="opacity: 0"
+         data-1270p="opacity: 0; transform: translate(0, 100%);"
+         data-1275p="opacity: 0; transform: translate(0, 20%);"
+         data-1280p="opacity: 0.3; transform: translate(0, 5%);"
+         data-1290p="opacity: 1; transform: translate(0, 0%);"
+    >
+      <h2>Sign up and stay updated</h2>
+      <pre>PUT FORM HERE</pre>
+      <small class="copyright">&copy; CANDER, 2016. Terms and Conditions</small>
     </div>
   </div>
 </template>
