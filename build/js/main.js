@@ -74,7 +74,7 @@
 	(function __canderApp__() {
 	  _vue2.default.config.debug = true;
 
-	  var Cander = _vue2.default.extend(__webpack_require__(40));
+	  var Cander = _vue2.default.extend(__webpack_require__(45));
 
 	  _vue2.default.use(_vueRouter2.default);
 
@@ -13040,8 +13040,8 @@
 	var SectionAbout = _vue2.default.extend(__webpack_require__(6));
 	var SectionContact = _vue2.default.extend(__webpack_require__(13));
 	var SectionHome = _vue2.default.extend(__webpack_require__(18));
-	var SectionStores = _vue2.default.extend(__webpack_require__(30));
-	var SectionTerms = _vue2.default.extend(__webpack_require__(35));
+	var SectionStores = _vue2.default.extend(__webpack_require__(35));
+	var SectionTerms = _vue2.default.extend(__webpack_require__(40));
 
 	exports.default = {
 	  '/': {
@@ -13535,7 +13535,7 @@
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/components/SectionHome.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(29)
+	__vue_template__ = __webpack_require__(34)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -13615,11 +13615,17 @@
 
 	var _store2 = _interopRequireDefault(_store);
 
+	var _SiteFooter = __webpack_require__(28);
+
+	var _SiteFooter2 = _interopRequireDefault(_SiteFooter);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var page = __webpack_require__(28)();
-
+	var page = __webpack_require__(33)();
 	exports.default = {
+	  components: {
+	    SiteFooter: _SiteFooter2.default
+	  },
 	  data: function data() {
 	    return {
 	      skrollr: _store2.default.data.skrollr
@@ -14130,6 +14136,108 @@
 
 /***/ },
 /* 28 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(29)
+	__vue_script__ = __webpack_require__(31)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/js/components/SiteFooter.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(32)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "_v-74eb097e/SiteFooter.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 29 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(30);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(10)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-74eb097e&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SiteFooter.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-74eb097e&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SiteFooter.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 30 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(9)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "footer[_v-74eb097e] {\n  background: #ffffff;\n  border-top: 1px solid rgba(193, 193, 193, 0.333);\n  height: 20rem; }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 31 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _store = __webpack_require__(26);
+
+	var _store2 = _interopRequireDefault(_store);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
+	  data: function data() {
+	    return {
+	      router: _store2.default.data.router
+	    };
+	  },
+	  ready: function ready() {
+	    console.log('sup');
+	  }
+	};
+
+/***/ },
+/* 32 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<footer _v-74eb097e=\"\">\n  <p _v-74eb097e=\"\">Sign up and stay updated</p>\n  <form _v-74eb097e=\"\">\n\n  </form>\n</footer>\n";
+
+/***/ },
+/* 33 */
 /***/ function(module, exports) {
 
 	var win = window || {};
@@ -14157,98 +14265,10 @@
 
 
 /***/ },
-/* 29 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<div class=\"slides\" _v-0ea87e16=\"\">\n  <!-- SECTION 0: INTRO/HERO -->\n  <div class=\"slide slide--0 slide--intro\" _v-0ea87e16=\"\">\n    <div class=\"slide--intro__logo\" data-0=\"opacity: 1;\" data-top-center=\"opacity: 0;\" _v-0ea87e16=\"\">\n      <img src=\"/images/logo.svg\" title=\"CANDER PARIS\" _v-0ea87e16=\"\">\n    </div>\n    <a href=\"#\" @click.prevent=\"scrollToFold\" class=\"slide--intro__icn-scroll\" data-0=\"opacity: 1;\" data-center-top=\"opacity: 0;\" _v-0ea87e16=\"\">Scroll Down</a>\n  </div>\n\n  <!-- SECTION 1: THE CANDLE -->\n  <div class=\"slide slide--1\" id=\"the-fold\" data-0=\"transform: translate(0, 100%);\" data-100p=\"transform: translate(0, 0%)\" _v-0ea87e16=\"\">\n    <div class=\"slide__product-wrapper\" _v-0ea87e16=\"\">\n      <div class=\"slide__product-images\" _v-0ea87e16=\"\">\n        <img src=\"/images/product-vessel.png\" alt=\"Vessel\" class=\"slide__product-image\" data-0=\"opacity: 0\" data-50p=\"opacity: 1\" data-100p=\"opacity: 1\" data-150p=\"opacity: 0\" _v-0ea87e16=\"\">\n        <img src=\"/images/product-box-front.png\" alt=\"Front\" class=\"slide__product-image\" data-150p=\"opacity: 0\" data-200p=\"opacity: 1\" data-250p=\"opacity: 1\" data-300p=\"opacity: 0\" _v-0ea87e16=\"\">\n        <img src=\"/images/product-box-back.png\" alt=\"Back\" class=\"slide__product-image\" data-300p=\"opacity: 0\" data-350p=\"opacity: 1\" data-400p=\"opacity: 1\" data-450p=\"opacity: 0\" _v-0ea87e16=\"\">\n        <img src=\"/images/product-box-top.png\" alt=\"Top\" class=\"slide__product-image\" data-450p=\"opacity: 0\" data-500p=\"opacity: 1\" data-600p=\"opacity: 1\" data-650p=\"opacity: 0\" _v-0ea87e16=\"\">\n      </div>\n      <div class=\"slide__product-info\" data-0=\"opacity: 0\" data-100p=\"opacity: 1\" data-600p=\"opacity: 1\" data-650p=\"opacity: 0\" _v-0ea87e16=\"\">\n        <h2 class=\"slide__product-heading\" _v-0ea87e16=\"\">Scent One</h2>\n        <h4 class=\"slide__product-desc slide__product-desc--primary\" _v-0ea87e16=\"\">Scent One is an exploration of the beginning.</h4>\n        <h4 class=\"slide__product-desc slide__product-desc--secondary\" _v-0ea87e16=\"\">Scent One est l'exploration du début.</h4>\n      </div>\n    </div>\n    <div class=\"slide__accent-wrapper\" data-0=\"opacity: 0\" data-100p=\"opacity: 1\" data-600p=\"opacity: 1\" data-650p=\"opacity: 0\" _v-0ea87e16=\"\">\n      <img src=\"/images/slide-accent-face.png\" alt=\"Faces\" class=\"slide__accent-image\" _v-0ea87e16=\"\">\n    </div>\n  </div>\n\n  <!-- SECTION 2: THE SCENT -->\n  <div class=\"slide slide--2\" data-0=\"opacity: 0\" data-600p=\"opacity: 0; transform: translate(0, 100%);\" data-650p=\"opacity: 0; transform: translate(0, 5%);\" data-700p=\"opacity: 1; transform: translate(0, 0%);\" data-850p=\"opacity: 0; transform: translate(0, -2%);\" _v-0ea87e16=\"\">\n    <div class=\"the-scent\" _v-0ea87e16=\"\">\n      <h4 class=\"the-scent__title\" _v-0ea87e16=\"\">Scent One</h4>\n      <p class=\"the-scent__desc\" _v-0ea87e16=\"\">Blending woody aromatics like <span class=\"aromatic\" data-id=\"cypres\" _v-0ea87e16=\"\">cyprés</span>,<br _v-0ea87e16=\"\">\n        <span class=\"aromatic\" data-id=\"cedre\" _v-0ea87e16=\"\">cédre</span>, and <span class=\"aromatic\" data-id=\"oud\" _v-0ea87e16=\"\">oud</span>, with sensual <span class=\"aromatic\" data-id=\"rose\" _v-0ea87e16=\"\">rose</span> and<br _v-0ea87e16=\"\">\n        <span class=\"aromatic\" data-id=\"patchouli\" _v-0ea87e16=\"\">patchouli</span>. Adding a hint of mystery<br _v-0ea87e16=\"\">\n        with the scent of <span class=\"aromatic\" data-id=\"cuir\" _v-0ea87e16=\"\">cuir</span>.</p>\n    </div>\n  </div>\n\n  <!-- SECTION 3: DOOR -->\n  <div class=\"slide slide--3\" data-0=\"opacity: 0\" data-840p=\"opacity: 0; transform: translate(0, 100%);\" data-850p=\"opacity: 0; transform: translate(0, 30%);\" data-900p=\"opacity: 1; transform: translate(0, 0%);\" data-1150p=\"opacity: 1; transform: translate(0, 0%);\" data-1250p=\"transform: translate(0, -100%);\" _v-0ea87e16=\"\">\n    <div class=\"translations-wrapper\" _v-0ea87e16=\"\">\n      <ul class=\"translations-list\" _v-0ea87e16=\"\">\n        <li _v-0ea87e16=\"\">Bougie Parfumée</li>\n        <li _v-0ea87e16=\"\">Fragranced Candle</li>\n        <li _v-0ea87e16=\"\">Candela Profumata</li>\n        <li _v-0ea87e16=\"\">Vela Perfumada</li>\n        <li _v-0ea87e16=\"\">Duftkerze</li>\n        <li _v-0ea87e16=\"\">香味蠟燭</li>\n        <li _v-0ea87e16=\"\">香りのろうそく</li>\n      </ul>\n    </div>\n  </div>\n\n  <!-- SECTION 4: PRODUCT -->\n  <div class=\"slide slide--4\" data-0=\"opacity: 0\" data-1200p=\"opacity: 0; transform: translate(0, 100%);\" data-1225p=\"opacity: 0; transform: translate(0, 20%);\" data-1260p=\"opacity: 0.3; transform: translate(0, 5%);\" data-1270p=\"opacity: 1; transform: translate(0, 0%);\" _v-0ea87e16=\"\">\n    <div class=\"slide--4__inner\" data-1270p=\"transform: translate(0, 0);\" data-1300p=\"transform: translate(0, 0);\" data-1400p=\"transform: translate(0, -200px);\" _v-0ea87e16=\"\">\n      <h2 class=\"zeta\" _v-0ea87e16=\"\">Coming soon in stores</h2>\n    </div>\n  </div>\n\n  <!-- FOOTER -->\n  <div class=\"slide-footer\" data-0=\"opacity: 0\" data-1270p=\"opacity: 0; transform: translate(0, 100%);\" data-1275p=\"opacity: 0; transform: translate(0, 20%);\" data-1280p=\"opacity: 0.3; transform: translate(0, 5%);\" data-1290p=\"opacity: 1; transform: translate(0, 0%);\" _v-0ea87e16=\"\">\n    <h2 _v-0ea87e16=\"\">Sign up and stay updated</h2>\n    <pre _v-0ea87e16=\"\">PUT FORM HERE</pre>\n    <small class=\"copyright\" _v-0ea87e16=\"\">© CANDER, 2016. Terms and Conditions</small>\n  </div>\n</div>\n";
-
-/***/ },
-/* 30 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	__webpack_require__(31)
-	__vue_script__ = __webpack_require__(33)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/js/components/SectionStores.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(34)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
-	}
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-837df270/SectionStores.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 31 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(32);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(10)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionStores.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionStores.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 32 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(9)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 33 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.default = {
-	  ready: function ready() {}
-	};
-
-/***/ },
 /* 34 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div>\n  <div>STORES PAGE</div>\n</div>\n";
+	module.exports = "\n<div class=\"slides\" _v-0ea87e16=\"\">\n  <!-- SECTION 0: INTRO/HERO -->\n  <div class=\"slide slide--0 slide--intro\" _v-0ea87e16=\"\">\n    <div class=\"slide--intro__logo\" data-0=\"opacity: 1;\" data-top-center=\"opacity: 0;\" _v-0ea87e16=\"\">\n      <img src=\"/images/logo.svg\" title=\"CANDER PARIS\" _v-0ea87e16=\"\">\n    </div>\n    <a href=\"#\" @click.prevent=\"scrollToFold\" class=\"slide--intro__icn-scroll\" data-0=\"opacity: 1;\" data-center-top=\"opacity: 0;\" _v-0ea87e16=\"\">Scroll Down</a>\n  </div>\n\n  <!-- SECTION 1: THE CANDLE -->\n  <div class=\"slide slide--1\" id=\"the-fold\" data-0=\"transform: translate(0, 100%);\" data-100p=\"transform: translate(0, 0%)\" _v-0ea87e16=\"\">\n    <div class=\"slide__product-wrapper\" _v-0ea87e16=\"\">\n      <div class=\"slide__product-images\" _v-0ea87e16=\"\">\n        <img src=\"/images/product-vessel.png\" alt=\"Vessel\" class=\"slide__product-image\" data-0=\"opacity: 0\" data-50p=\"opacity: 1\" data-100p=\"opacity: 1\" data-150p=\"opacity: 0\" _v-0ea87e16=\"\">\n        <img src=\"/images/product-box-front.png\" alt=\"Front\" class=\"slide__product-image\" data-150p=\"opacity: 0\" data-200p=\"opacity: 1\" data-250p=\"opacity: 1\" data-300p=\"opacity: 0\" _v-0ea87e16=\"\">\n        <img src=\"/images/product-box-back.png\" alt=\"Back\" class=\"slide__product-image\" data-300p=\"opacity: 0\" data-350p=\"opacity: 1\" data-400p=\"opacity: 1\" data-450p=\"opacity: 0\" _v-0ea87e16=\"\">\n        <img src=\"/images/product-box-top.png\" alt=\"Top\" class=\"slide__product-image\" data-450p=\"opacity: 0\" data-500p=\"opacity: 1\" data-600p=\"opacity: 1\" data-650p=\"opacity: 0\" _v-0ea87e16=\"\">\n      </div>\n      <div class=\"slide__product-info\" data-0=\"opacity: 0\" data-100p=\"opacity: 1\" data-600p=\"opacity: 1\" data-650p=\"opacity: 0\" _v-0ea87e16=\"\">\n        <h2 class=\"slide__product-heading\" _v-0ea87e16=\"\">Scent One</h2>\n        <h4 class=\"slide__product-desc slide__product-desc--primary\" _v-0ea87e16=\"\">Scent One is an exploration of the beginning.</h4>\n        <h4 class=\"slide__product-desc slide__product-desc--secondary\" _v-0ea87e16=\"\">Scent One est l'exploration du début.</h4>\n      </div>\n    </div>\n    <div class=\"slide__accent-wrapper\" data-0=\"opacity: 0\" data-100p=\"opacity: 1\" data-600p=\"opacity: 1\" data-650p=\"opacity: 0\" _v-0ea87e16=\"\">\n      <img src=\"/images/slide-accent-face.png\" alt=\"Faces\" class=\"slide__accent-image\" _v-0ea87e16=\"\">\n    </div>\n  </div>\n\n  <!-- SECTION 2: THE SCENT -->\n  <div class=\"slide slide--2\" data-0=\"opacity: 0\" data-600p=\"opacity: 0; transform: translate(0, 100%);\" data-650p=\"opacity: 0; transform: translate(0, 5%);\" data-700p=\"opacity: 1; transform: translate(0, 0%);\" data-850p=\"opacity: 0; transform: translate(0, -2%);\" _v-0ea87e16=\"\">\n    <div class=\"the-scent\" _v-0ea87e16=\"\">\n      <h4 class=\"the-scent__title\" _v-0ea87e16=\"\">Scent One</h4>\n      <p class=\"the-scent__desc\" _v-0ea87e16=\"\">Blending woody aromatics like <span class=\"aromatic\" data-id=\"cypres\" _v-0ea87e16=\"\">cyprés</span>,<br _v-0ea87e16=\"\">\n        <span class=\"aromatic\" data-id=\"cedre\" _v-0ea87e16=\"\">cédre</span>, and <span class=\"aromatic\" data-id=\"oud\" _v-0ea87e16=\"\">oud</span>, with sensual <span class=\"aromatic\" data-id=\"rose\" _v-0ea87e16=\"\">rose</span> and<br _v-0ea87e16=\"\">\n        <span class=\"aromatic\" data-id=\"patchouli\" _v-0ea87e16=\"\">patchouli</span>. Adding a hint of mystery<br _v-0ea87e16=\"\">\n        with the scent of <span class=\"aromatic\" data-id=\"cuir\" _v-0ea87e16=\"\">cuir</span>.</p>\n    </div>\n  </div>\n\n  <!-- SECTION 3: DOOR -->\n  <div class=\"slide slide--3\" data-0=\"opacity: 0\" data-840p=\"opacity: 0; transform: translate(0, 100%);\" data-850p=\"opacity: 0; transform: translate(0, 30%);\" data-900p=\"opacity: 1; transform: translate(0, 0%);\" data-1150p=\"opacity: 1; transform: translate(0, 0%);\" data-1250p=\"transform: translate(0, -100%);\" _v-0ea87e16=\"\">\n    <div class=\"translations-wrapper\" _v-0ea87e16=\"\">\n      <ul class=\"translations-list\" _v-0ea87e16=\"\">\n        <li _v-0ea87e16=\"\">Bougie Parfumée</li>\n        <li _v-0ea87e16=\"\">Fragranced Candle</li>\n        <li _v-0ea87e16=\"\">Candela Profumata</li>\n        <li _v-0ea87e16=\"\">Vela Perfumada</li>\n        <li _v-0ea87e16=\"\">Duftkerze</li>\n        <li _v-0ea87e16=\"\">香味蠟燭</li>\n        <li _v-0ea87e16=\"\">香りのろうそく</li>\n      </ul>\n    </div>\n  </div>\n\n  <!-- SECTION 4: PRODUCT -->\n  <div class=\"slide slide--4\" data-0=\"opacity: 0\" data-1200p=\"opacity: 0; transform: translate(0, 100%);\" data-1225p=\"opacity: 0; transform: translate(0, 20%);\" data-1260p=\"opacity: 0.3; transform: translate(0, 5%);\" data-1270p=\"opacity: 1; transform: translate(0, 0%);\" data-1300p=\"transform: translate(0, 0%);\" data-1390p=\"transform: translate(0, -15%);\" _v-0ea87e16=\"\">\n    <div class=\"slide--4__inner\" _v-0ea87e16=\"\">\n      <h2 class=\"zeta\" _v-0ea87e16=\"\">Coming soon in stores</h2>\n    </div>\n  </div>\n\n  <!-- FOOTER -->\n  <div class=\"slide--footer-wrapper\" data-0=\"opacity: 0\" data-1300p=\"opacity: 0; transform: translate(0, 100%);\" data-1325p=\"opacity: 0; transform: translate(0, 20%);\" data-1360p=\"opacity: 0.3; transform: translate(0, 5%);\" data-1370p=\"opacity: 1; transform: translate(0, 0%);\" _v-0ea87e16=\"\">\n    <site-footer _v-0ea87e16=\"\"></site-footer>\n  </div>\n</div>\n";
 
 /***/ },
 /* 35 */
@@ -14260,7 +14280,7 @@
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/js/components/SectionTerms.vue: named exports in *.vue files are ignored.")}
+	  console.warn("[vue-loader] src/js/components/SectionStores.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(39)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
@@ -14271,7 +14291,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-1b075f61/SectionTerms.vue"
+	  var id = "_v-837df270/SectionStores.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -14295,8 +14315,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionTerms.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionTerms.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionStores.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionStores.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -14328,13 +14348,15 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.default = {};
+	exports.default = {
+	  ready: function ready() {}
+	};
 
 /***/ },
 /* 39 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div>\n  <div>TERMS OF SERVICE PAGE</div>\n</div>\n";
+	module.exports = "\n<div>\n  <div>STORES PAGE</div>\n</div>\n";
 
 /***/ },
 /* 40 */
@@ -14346,8 +14368,8 @@
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/js/App.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(54)
+	  console.warn("[vue-loader] src/js/components/SectionTerms.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(44)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -14357,7 +14379,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-2253c947/App.vue"
+	  var id = "_v-1b075f61/SectionTerms.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -14381,8 +14403,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./App.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./App.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionTerms.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionTerms.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -14400,13 +14422,99 @@
 
 
 	// module
-	exports.push([module.id, "", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n", ""]);
 
 	// exports
 
 
 /***/ },
 /* 43 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = {};
+
+/***/ },
+/* 44 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div>\n  <div>TERMS OF SERVICE PAGE</div>\n</div>\n";
+
+/***/ },
+/* 45 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(46)
+	__vue_script__ = __webpack_require__(48)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/js/App.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(59)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "_v-2253c947/App.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 46 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(47);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(10)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./App.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./App.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 47 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(9)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "", ""]);
+
+	// exports
+
+
+/***/ },
+/* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14419,11 +14527,11 @@
 
 	var _store2 = _interopRequireDefault(_store);
 
-	var _MenuOverlay = __webpack_require__(44);
+	var _MenuOverlay = __webpack_require__(49);
 
 	var _MenuOverlay2 = _interopRequireDefault(_MenuOverlay);
 
-	var _SiteHeader = __webpack_require__(48);
+	var _SiteHeader = __webpack_require__(53);
 
 	var _SiteHeader2 = _interopRequireDefault(_SiteHeader);
 
@@ -14451,17 +14559,17 @@
 	};
 
 /***/ },
-/* 44 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(45)
-	__vue_script__ = __webpack_require__(47)
+	__webpack_require__(50)
+	__vue_script__ = __webpack_require__(52)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/components/MenuOverlay.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(53)
+	__vue_template__ = __webpack_require__(58)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -14480,13 +14588,13 @@
 	})()}
 
 /***/ },
-/* 45 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(46);
+	var content = __webpack_require__(51);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(10)(content, {});
@@ -14506,7 +14614,7 @@
 	}
 
 /***/ },
-/* 46 */
+/* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(9)();
@@ -14520,7 +14628,7 @@
 
 
 /***/ },
-/* 47 */
+/* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14533,7 +14641,7 @@
 
 	var _store2 = _interopRequireDefault(_store);
 
-	var _SiteHeader = __webpack_require__(48);
+	var _SiteHeader = __webpack_require__(53);
 
 	var _SiteHeader2 = _interopRequireDefault(_SiteHeader);
 
@@ -14572,17 +14680,17 @@
 	};
 
 /***/ },
-/* 48 */
+/* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(49)
-	__vue_script__ = __webpack_require__(51)
+	__webpack_require__(54)
+	__vue_script__ = __webpack_require__(56)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/components/SiteHeader.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(52)
+	__vue_template__ = __webpack_require__(57)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -14601,13 +14709,13 @@
 	})()}
 
 /***/ },
-/* 49 */
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(50);
+	var content = __webpack_require__(55);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(10)(content, {});
@@ -14627,7 +14735,7 @@
 	}
 
 /***/ },
-/* 50 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(9)();
@@ -14635,13 +14743,13 @@
 
 
 	// module
-	exports.push([module.id, ".site-header[_v-3286419a] {\n  background: white;\n  height: 8rem;\n  position: fixed;\n  text-align: center;\n  width: 100%;\n  -webkit-transform: translateY(0);\n      -ms-transform: translateY(0);\n          transform: translateY(0);\n  z-index: 20; }\n  .site-header.fade-transition[_v-3286419a] {\n    transition: all 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .site-header.fade-enter[_v-3286419a], .site-header.fade-leave[_v-3286419a] {\n    opacity: 0;\n    -webkit-transform: translateY(-10%);\n        -ms-transform: translateY(-10%);\n            transform: translateY(-10%); }\n\n.logo[_v-3286419a] {\n  width: 12rem;\n  left: 50%;\n  margin: 0 auto;\n  position: absolute;\n  top: 50%;\n  -webkit-transform: translate(-50%, -50%);\n      -ms-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%); }\n\n.btn-menu[_v-3286419a] {\n  height: 1.3rem;\n  width: 1.8rem;\n  border: 0;\n  display: block;\n  position: absolute;\n  right: 3rem;\n  top: 50%;\n  -webkit-transform: translateY(-50%);\n      -ms-transform: translateY(-50%);\n          transform: translateY(-50%); }\n  .btn-menu[_v-3286419a]:after, .btn-menu[_v-3286419a]:before {\n    content: '';\n    display: block;\n    position: absolute;\n    width: 100%;\n    top: 50%; }\n  .btn-menu[_v-3286419a]:after {\n    border-bottom: 0.2rem solid #000000;\n    top: 75%; }\n  .btn-menu[_v-3286419a]:before {\n    border-top: 0.2rem solid #000000;\n    top: 25%; }\n\n.btn-menu--open[_v-3286419a]:after, .btn-menu--open[_v-3286419a]:before {\n  top: 50%; }\n\n.btn-menu--open[_v-3286419a]:after {\n  -webkit-transform: rotate(45deg);\n      -ms-transform: rotate(45deg);\n          transform: rotate(45deg); }\n\n.btn-menu--open[_v-3286419a]:before {\n  -webkit-transform: rotate(-45deg);\n      -ms-transform: rotate(-45deg);\n          transform: rotate(-45deg); }\n", ""]);
+	exports.push([module.id, ".site-header[_v-3286419a] {\n  background: rgba(255, 255, 255, 0);\n  height: 8rem;\n  position: fixed;\n  text-align: center;\n  width: 100%;\n  -webkit-transform: translateY(0);\n      -ms-transform: translateY(0);\n          transform: translateY(0);\n  z-index: 20; }\n  .site-header.fade-transition[_v-3286419a] {\n    transition: all 150ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .site-header.fade-enter[_v-3286419a], .site-header.fade-leave[_v-3286419a] {\n    opacity: 0;\n    -webkit-transform: translateY(-10%);\n        -ms-transform: translateY(-10%);\n            transform: translateY(-10%); }\n\n.logo[_v-3286419a] {\n  width: 12rem;\n  left: 50%;\n  margin: 0 auto;\n  position: absolute;\n  top: 50%;\n  -webkit-transform: translate(-50%, -50%);\n      -ms-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%); }\n\n.btn-menu[_v-3286419a] {\n  height: 1.3rem;\n  width: 1.8rem;\n  border: 0;\n  display: block;\n  position: absolute;\n  right: 3rem;\n  top: 50%;\n  -webkit-transform: translateY(-50%);\n      -ms-transform: translateY(-50%);\n          transform: translateY(-50%); }\n  .btn-menu[_v-3286419a]:after, .btn-menu[_v-3286419a]:before {\n    content: '';\n    display: block;\n    position: absolute;\n    width: 100%;\n    top: 50%; }\n  .btn-menu[_v-3286419a]:after {\n    border-bottom: 0.2rem solid #000000;\n    top: 75%; }\n  .btn-menu[_v-3286419a]:before {\n    border-top: 0.2rem solid #000000;\n    top: 25%; }\n\n.btn-menu--open[_v-3286419a]:after, .btn-menu--open[_v-3286419a]:before {\n  top: 50%; }\n\n.btn-menu--open[_v-3286419a]:after {\n  -webkit-transform: rotate(45deg);\n      -ms-transform: rotate(45deg);\n          transform: rotate(45deg); }\n\n.btn-menu--open[_v-3286419a]:before {\n  -webkit-transform: rotate(-45deg);\n      -ms-transform: rotate(-45deg);\n          transform: rotate(-45deg); }\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 51 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14660,7 +14768,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var page = __webpack_require__(28)();
+	var page = __webpack_require__(33)();
 
 	exports.default = {
 	  data: function data() {
@@ -14756,19 +14864,19 @@
 	}
 
 /***/ },
-/* 52 */
+/* 57 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<header class=\"site-header\" v-show=\"headerVisible\" transition=\"fade\" _v-3286419a=\"\">\n  <a href=\"/\" @click.prevent=\"logoClickHandler\" class=\"menu-overlay__nav-list__item\" _v-3286419a=\"\">\n    <img src=\"/images/logo.svg\" alt=\"CANDER PARIS\" title=\"CANDER PARIS\" class=\"logo\" _v-3286419a=\"\">\n  </a>\n  <a href=\"/\" @click.prevent=\"toggleMenu()\" class=\"btn-menu btn-menu--{{ toggleState }}\" _v-3286419a=\"\"></a>\n</header>\n";
 
 /***/ },
-/* 53 */
+/* 58 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"menu-overlay-wrapper\" v-if=\"menuOverlay.visible\" transition=\"fade\" _v-53ced9fc=\"\">\n  <site-header _v-53ced9fc=\"\"></site-header>\n  <div class=\"menu-overlay\" _v-53ced9fc=\"\">\n    <div class=\"menu-overlay__nav-wrapper\" _v-53ced9fc=\"\">\n      <nav class=\"menu-overlay__nav-list\" _v-53ced9fc=\"\">\n        <a v-link=\"{ name: 'about' }\" v-on:mouseover=\"setHoverItem('about')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-53ced9fc=\"\">About</a>\n        <a v-link=\"{ name: 'stores' }\" v-on:mouseover=\"setHoverItem('stores')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-53ced9fc=\"\">Stores</a>\n        <a v-link=\"{ name: 'contact' }\" v-on:mouseover=\"setHoverItem('contact')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-53ced9fc=\"\">Contact</a>\n      </nav>\n      <div class=\"menu-overlay__nav-social\" _v-53ced9fc=\"\">\n        <a class=\"menu-overlay__nav-social__item\" href=\"http://facebook.com\" target=\"_blank\" _v-53ced9fc=\"\">\n          <svg class=\"icon icon-facebook\" _v-53ced9fc=\"\">\n            <use xlink:href=\"#icon-facebook\" _v-53ced9fc=\"\"></use>\n          </svg>\n        </a>\n        <a class=\"menu-overlay__nav-social__item\" href=\"http://instagram.com\" target=\"_blank\" _v-53ced9fc=\"\">\n          <svg class=\"icon icon-instagram\" _v-53ced9fc=\"\"><use xlink:href=\"#icon-instagram\" _v-53ced9fc=\"\"></use></svg>\n        </a>\n        <svg style=\"position: absolute; width: 0; height: 0; overflow: hidden;\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" _v-53ced9fc=\"\">\n          <defs _v-53ced9fc=\"\">\n            <symbol id=\"icon-instagram\" viewBox=\"0 0 16 16\" _v-53ced9fc=\"\">\n              <title _v-53ced9fc=\"\">Instagram</title>\n              <path class=\"path1\" d=\"M14.5 0h-13c-0.825 0-1.5 0.675-1.5 1.5v13c0 0.825 0.675 1.5 1.5 1.5h13c0.825 0 1.5-0.675 1.5-1.5v-13c0-0.825-0.675-1.5-1.5-1.5zM11 2.5c0-0.275 0.225-0.5 0.5-0.5h2c0.275 0 0.5 0.225 0.5 0.5v2c0 0.275-0.225 0.5-0.5 0.5h-2c-0.275 0-0.5-0.225-0.5-0.5v-2zM8 5c1.656 0 3 1.344 3 3s-1.344 3-3 3c-1.656 0-3-1.344-3-3s1.344-3 3-3zM14 13.5v0c0 0.275-0.225 0.5-0.5 0.5h-11c-0.275 0-0.5-0.225-0.5-0.5v0-6.5h1.1c-0.066 0.322-0.1 0.656-0.1 1 0 2.762 2.237 5 5 5s5-2.238 5-5c0-0.344-0.034-0.678-0.1-1h1.1v6.5z\" _v-53ced9fc=\"\"></path>\n            </symbol>\n            <symbol id=\"icon-facebook\" viewBox=\"0 0 16 16\" _v-53ced9fc=\"\">\n              <title _v-53ced9fc=\"\">Facebook</title>\n              <path class=\"path1\" d=\"M9.5 3h2.5v-3h-2.5c-1.93 0-3.5 1.57-3.5 3.5v1.5h-2v3h2v8h3v-8h2.5l0.5-3h-3v-1.5c0-0.271 0.229-0.5 0.5-0.5z\" _v-53ced9fc=\"\"></path>\n            </symbol>\n          </defs>\n        </svg>\n      </div>\n      <div class=\"menu-overlay__nav-contact\" _v-53ced9fc=\"\">\n        <p _v-53ced9fc=\"\">For all general information please contact <a href=\"mailto:info@canderparis.com\" _v-53ced9fc=\"\">info@canderparis.com</a></p>\n        <p _v-53ced9fc=\"\">For press information please contact <a href=\"mailto:press@canderparis.com\" _v-53ced9fc=\"\">press@canderparis.com</a></p>\n      </div>\n    </div>\n    <div class=\"menu-overlay__accent-wrapper\" _v-53ced9fc=\"\">\n      <img :src=\"menuOverlay.navImageMap[hoverItem]\" class=\"menu-overlay__accent\" :data-id=\"hoverItem\" _v-53ced9fc=\"\">\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
-/* 54 */
+/* 59 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"cander-wrapper page--{{ this.$route.name ? this.$route.name : 'default' }}\" id=\"cander-app\">\n  <site-header></site-header>\n  <menu-overlay></menu-overlay>\n  <main class=\"main-content\">\n    <router-view></router-view>\n  </main>\n</div>\n";

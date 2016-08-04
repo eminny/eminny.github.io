@@ -118,27 +118,23 @@
          data-1225p="opacity: 0; transform: translate(0, 20%);"
          data-1260p="opacity: 0.3; transform: translate(0, 5%);"
          data-1270p="opacity: 1; transform: translate(0, 0%);"
+         data-1300p="transform: translate(0, 0%);"
+         data-1390p="transform: translate(0, -15%);"
     >
-      <div class="slide--4__inner"
-           data-1270p="transform: translate(0, 0);"
-           data-1300p="transform: translate(0, 0);"
-           data-1400p="transform: translate(0, -200px);"
-      >
+      <div class="slide--4__inner">
         <h2 class="zeta">Coming soon in stores</h2>
       </div>
     </div>
 
     <!-- FOOTER -->
-    <div class="slide-footer"
+    <div class="slide--footer-wrapper"
          data-0="opacity: 0"
-         data-1270p="opacity: 0; transform: translate(0, 100%);"
-         data-1275p="opacity: 0; transform: translate(0, 20%);"
-         data-1280p="opacity: 0.3; transform: translate(0, 5%);"
-         data-1290p="opacity: 1; transform: translate(0, 0%);"
+         data-1300p="opacity: 0; transform: translate(0, 100%);"
+         data-1325p="opacity: 0; transform: translate(0, 20%);"
+         data-1360p="opacity: 0.3; transform: translate(0, 5%);"
+         data-1370p="opacity: 1; transform: translate(0, 0%);"
     >
-      <h2>Sign up and stay updated</h2>
-      <pre>PUT FORM HERE</pre>
-      <small class="copyright">&copy; CANDER, 2016. Terms and Conditions</small>
+      <site-footer></site-footer>
     </div>
   </div>
 </template>
@@ -152,8 +148,12 @@
   import scroll from 'scroll'
   import store from '../store'
   const page = require('scroll-doc')()
+  import SiteFooter from './SiteFooter.vue'
 
   export default {
+    components: {
+      SiteFooter,
+    },
     data () {
       return {
         skrollr: store.data.skrollr,

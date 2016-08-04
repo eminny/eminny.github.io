@@ -1,4 +1,4 @@
-<template xmlns:v-on="http://www.w3.org/1999/xhtml">
+<template>
   <div class="menu-overlay-wrapper" v-if="menuOverlay.visible" transition="fade">
     <site-header></site-header>
     <div class="menu-overlay">

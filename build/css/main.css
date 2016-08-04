@@ -863,13 +863,11 @@ optgroup::-moz-focus-inner {
   width: 100%;
 }
 
-.slide-footer {
-  background: #ffffff;
-  border-top: 1px solid #c1c1c1;
-  height: 200px;
+.slide--footer-wrapper {
+  bottom: 0;
+  height: 20rem;
   left: 0;
   position: fixed;
-  bottom: 0;
   width: 100%;
 }
 

@@ -1,7 +1,7 @@
 @import "../../../stylesheets/variables";
 
 .site-header {
-  background: rgba($color__white, 1.0);
+  background: rgba($color__white, 0);
   height: 8rem;
   position: fixed;
   text-align: center;
@@ -10,7 +10,7 @@
   z-index: 20;
 
   &.fade-transition {
-    transition: all $transition-standard;
+    transition: all 150ms $timing-function-easeInOutQuad;
   }
 
   &.fade-enter,
