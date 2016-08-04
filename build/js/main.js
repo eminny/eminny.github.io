@@ -14422,7 +14422,7 @@
 
 
 	// module
-	exports.push([module.id, "section[_v-1b075f61] {\n  margin: 6rem auto;\n  max-width: 50rem;\n  width: 80%; }\n\nh1[_v-1b075f61] {\n  font-size: 1.4rem;\n  text-align: center;\n  text-transform: uppercase; }\n\nh3[_v-1b075f61] {\n  text-transform: uppercase; }\n\nhr[_v-1b075f61] {\n  margin: 4rem auto; }\n", ""]);
+	exports.push([module.id, "section[_v-1b075f61] {\n  margin: 6rem auto;\n  max-width: 50rem;\n  width: 80%; }\n\nh1[_v-1b075f61] {\n  font-size: 1.4rem;\n  text-align: center;\n  text-transform: uppercase; }\n\nh3[_v-1b075f61] {\n  font-size: 1.2rem;\n  line-height: 4;\n  text-transform: uppercase; }\n\np[_v-1b075f61] {\n  font-family: \"sabon\", serif;\n  font-size: 1.2rem;\n  line-height: 1.666;\n  margin-bottom: 1.2rem; }\n\nhr[_v-1b075f61] {\n  margin: 4rem auto; }\n", ""]);
 
 	// exports
 

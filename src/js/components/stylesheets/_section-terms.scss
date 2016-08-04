@@ -1,0 +1,30 @@
+@import "../../../stylesheets/variables";
+
+section {
+  margin: 6rem auto;
+  max-width: 50rem;
+  width: 80%;
+}
+
+h1 {
+  font-size: 1.4rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 1.2rem;
+  line-height: 4;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: $font__family-serif;
+  font-size: 1.2rem;
+  line-height: 1.666;
+  margin-bottom: 1.2rem;
+}
+
+hr {
+  margin: 4rem auto;
+}
