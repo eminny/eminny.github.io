@@ -1,7 +1,31 @@
 @import "../../../stylesheets/variables";
 
-footer {
+.site-footer {
+  align-items: center;
   background: $color__white;
-  border-top: 1px solid rgba($color__gray, 0.333);
+  border-top: 1px solid $color__gray-light;
+  display: flex;
+  flex-direction: column;
   height: $footer-height;
+  justify-content: center;
+  position: relative;
+}
+
+.site-footer__copyright {
+  bottom: 1rem;
+  color: $color__gray;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  a {
+    color: $color__gray;
+    text-decoration: none;
+    transition: color $transition-standard;
+
+    &:hover {
+      color: $color__black;
+    }
+  }
 }

@@ -366,7 +366,7 @@ svg:not(:root) {
 }
 
 hr {
-  background-color: #c1c1c1;
+  background-color: rgba(193, 193, 193, 0.333);
   border: 0;
   height: 0.129rem;
   margin: 2.618rem 0;
@@ -712,6 +712,27 @@ optgroup::-moz-focus-inner {
 .logo--intro {
   transform: translateY(-3rem);
   width: 20rem;
+}
+
+.newsletter__label {
+  display: block;
+  font-family: "sabon", serif;
+  font-size: 1.4rem;
+}
+
+.newsletter__email,
+.newsletter__form__btn-submit {
+  font-family: "brown-std", "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.newsletter__email {
+  font-size: 1.4rem;
+  line-height: 1;
+  padding: 1rem 0.5rem;
+}
+
+.newsletter__form__btn-submit {
+  text-transform: uppercase;
 }
 
 .slide {
