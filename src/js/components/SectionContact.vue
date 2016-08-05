@@ -67,7 +67,6 @@
     max-width: 80%;
     min-height: 40rem;
     width: $content-width-medium;
-    max-width: 80%;
   }
 
   input.contact-form__input--text {
@@ -129,7 +128,8 @@
 </style>
 
 <script>
-  import 'whatwg-fetch';
+  import 'whatwg-fetch'
+  import { compact, endsWith, forEach, map, trim } from 'lodash'
   import SiteFooter from './SiteFooter.vue'
 
   export default {
@@ -137,6 +137,11 @@
       return {
         recipientEmail: 'alex@mister.nyc',
         form: null,
+        requiredFields: [
+          'name',
+          '_replyto',
+          'message',
+        ],
         submitBtn: null,
         formOptions: {},
       }
@@ -145,8 +150,33 @@
       SiteFooter,
     },
     methods: {
+      formValidates (fields = this.requiredFields) {
+        const requiredLength = fields.length
+        const givenLength = compact(map(fields, (field) => trim(document.getElementById(field).value))).length
+        if (givenLength < requiredLength) {
+          return false
+        }
+        return true
+      },
       submitForm () {
-        if (this.submitBtn.disabled) return
+        if (!this.formValidates()) {
+          console.error('Validation failed.')
+          // Append 'REQUIRED' to required fields' placeholders
+          forEach(this.requiredFields, function (field) {
+            let fieldEl = document.getElementById(field)
+            if (trim(fieldEl.value) == '') {
+              if (!endsWith(fieldEl.placeholder, 'REQUIRED')) {
+                fieldEl.placeholder = fieldEl.placeholder + ' REQUIRED'
+              }
+            }
+          })
+          return
+        }
+
+        if (this.submitBtn.disabled) {
+          console.log('Form is submitting')
+          return
+        }
 
         this.formOptions = {
           method: 'POST',
