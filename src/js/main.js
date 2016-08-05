@@ -14,6 +14,8 @@ import store from './store'
 
   let router = new VueRouter({
     hashbang: true,
+    transitionOnLoad: true,
+    // saveScrollPosition: false,
   })
 
   // Add router instance to shared store

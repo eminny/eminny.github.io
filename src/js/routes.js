@@ -6,9 +6,13 @@ const SectionContact = Vue.extend(require('./components/SectionContact.vue'))
 const SectionHome = Vue.extend(require('./components/SectionHome.vue'))
 const SectionStores = Vue.extend(require('./components/SectionStores.vue'))
 const SectionTerms = Vue.extend(require('./components/SectionTerms.vue'))
+const Error404 = Vue.extend(require('./components/Error404.vue'))
 
 // Routes
 export default {
+  '*': {
+    component: Error404,
+  },
   '/': {
     name: 'home',
     component: SectionHome,
