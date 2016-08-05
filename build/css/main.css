@@ -315,6 +315,16 @@ nav ol,
     transform: translate(-50%, 0);
   }
 }
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 html {
   font-family: "brown-std", "Helvetica Neue", Helvetica, sans-serif;
   font-size: 10px;

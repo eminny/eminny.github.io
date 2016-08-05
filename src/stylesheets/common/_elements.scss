@@ -1,3 +1,10 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  user-select: none;
+}
+
 html {
   font-family: $font__family-default;
   font-size: $base-fs;

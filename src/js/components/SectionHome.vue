@@ -95,8 +95,8 @@
          data-840p="opacity: 0; transform: translate(0, 100%);"
          data-850p="opacity: 0; transform: translate(0, 30%);"
          data-900p="opacity: 1; transform: translate(0, 0%);"
-         data-1150p="opacity: 1; transform: translate(0, 0%);"
-         data-1250p="transform: translate(0, -100%);"
+         data-1050p="opacity: 1; transform: translate(0, 0%);"
+         data-1150p="transform: translate(0, -120%);"
     >
       <div class="translations-wrapper">
         <ul class="translations-list">
@@ -114,12 +114,12 @@
     <!-- SECTION 4: PRODUCT -->
     <div class="slide slide--4"
          data-0="opacity: 0"
-         data-1200p="opacity: 0; transform: translate(0, 100%);"
-         data-1225p="opacity: 0; transform: translate(0, 20%);"
-         data-1260p="opacity: 0.3; transform: translate(0, 5%);"
-         data-1270p="opacity: 1; transform: translate(0, 0%);"
-         data-1300p="transform: translate(0, 0%);"
-         data-1390p="transform: translate(0, -15%);"
+         data-1100p="opacity: 0; transform: translate(0, 100%);"
+         data-1125p="opacity: 0; transform: translate(0, 20%);"
+         data-1160p="opacity: 0.3; transform: translate(0, 5%);"
+         data-1170p="opacity: 1; transform: translate(0, 0%);"
+         data-1200p="transform: translate(0, 0%);"
+         data-1290p="transform: translate(0, -15%);"
     >
       <div class="slide--4__inner">
         <h2 class="zeta">Coming soon in stores</h2>
@@ -129,10 +129,10 @@
     <!-- FOOTER -->
     <div class="slide--footer-wrapper"
          data-0="opacity: 0"
-         data-1300p="opacity: 0; transform: translate(0, 100%);"
-         data-1325p="opacity: 0; transform: translate(0, 20%);"
-         data-1360p="opacity: 0.3; transform: translate(0, 5%);"
-         data-1370p="opacity: 1; transform: translate(0, 0%);"
+         data-1200p="opacity: 0; transform: translate(0, 100%);"
+         data-1225p="opacity: 0; transform: translate(0, 20%);"
+         data-1260p="opacity: 0.3; transform: translate(0, 5%);"
+         data-1270p="opacity: 1; transform: translate(0, 0%);"
     >
       <site-footer></site-footer>
     </div>
