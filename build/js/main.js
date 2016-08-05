@@ -14015,21 +14015,16 @@
 	    },
 	    submitForm: function submitForm() {
 	      if (!this.formValidates()) {
-	        console.error('Validation failed.');
-
 	        (0, _lodash.forEach)(this.requiredFields, function (field) {
 	          var fieldEl = document.getElementById(field);
-	          if ((0, _lodash.trim)(fieldEl.value) == '') {
-	            if (!(0, _lodash.endsWith)(fieldEl.placeholder, 'REQUIRED')) {
-	              fieldEl.placeholder = fieldEl.placeholder + ' REQUIRED';
-	            }
+	          if ((0, _lodash.trim)(fieldEl.value) == '' && !(0, _lodash.endsWith)(fieldEl.placeholder, 'REQUIRED')) {
+	            fieldEl.placeholder = fieldEl.placeholder + ' REQUIRED';
 	          }
 	        });
 	        return;
 	      }
 
 	      if (this.submitBtn.disabled) {
-	        console.log('Form is submitting');
 	        return;
 	      }
 
@@ -14048,15 +14043,12 @@
 	        })
 	      };
 
-	      this.submitBtn.value = 'submitting...';
+	      this.submitBtn.value = 'Submitting...';
 	      this.submitBtn.disabled = true;
 
 	      fetch(this.form.action, this.formOptions).then(this.checkStatus).then(function (response) {
 	        return response.json();
-	      }).then(this.displaySuccessMsg).catch(function (error) {
-	        console.log('request failed', error);
-	        this.submitBtn.disabled = false;
-	      });
+	      }).then(this.displaySuccessMsg).catch(this.handleError);
 	    },
 	    checkStatus: function checkStatus(response) {
 	      if (response.status >= 200 && response.status < 300) {
@@ -14068,15 +14060,25 @@
 	      }
 	    },
 	    displaySuccessMsg: function displaySuccessMsg(data) {
-	      var _this = this;
-
 	      this.submitBtn.value = data.success || 'Thank you!';
+	      setTimeout(this.resetForm, 3000);
+	    },
+	    handleError: function handleError(error) {
+	      alert('We apologize for any inconvenience. Please email us.');
+	      console.error('Request failed: ', error);
+	      this.submitBtn.value = 'Error';
+	      setTimeout(this.resetForm, 3000);
+	    },
+	    resetForm: function resetForm() {
+	      (0, _lodash.forEach)(this.requiredFields, function (field) {
+	        var fieldEl = document.getElementById(field);
+	        if ((0, _lodash.endsWith)(fieldEl.placeholder, 'REQUIRED')) {
+	          fieldEl.placeholder = (0, _lodash.replace)(fieldEl.placeholder, 'REQUIRED', '');
+	        }
+	      });
 	      this.submitBtn.disabled = false;
-
-	      setTimeout(function () {
-	        _this.submitBtn.value = 'Submit';
-	        _this.form.reset();
-	      }, 3000);
+	      this.submitBtn.value = 'Submit';
+	      this.form.reset();
 	    }
 	  },
 	  ready: function ready() {

@@ -129,7 +129,7 @@
 
 <script>
   import 'whatwg-fetch'
-  import { compact, endsWith, forEach, map, trim } from 'lodash'
+  import { compact, endsWith, forEach, map, replace, trim } from 'lodash'
   import SiteFooter from './SiteFooter.vue'
 
   export default {
@@ -160,24 +160,22 @@
       },
       submitForm () {
         if (!this.formValidates()) {
-          console.error('Validation failed.')
-          // Append 'REQUIRED' to required fields' placeholders
+          // Validation failed, so append 'REQUIRED' to placeholders of required fields
           forEach(this.requiredFields, function (field) {
             let fieldEl = document.getElementById(field)
-            if (trim(fieldEl.value) == '') {
-              if (!endsWith(fieldEl.placeholder, 'REQUIRED')) {
-                fieldEl.placeholder = fieldEl.placeholder + ' REQUIRED'
-              }
+            if (trim(fieldEl.value) == '' && !endsWith(fieldEl.placeholder, 'REQUIRED')) {
+              fieldEl.placeholder = fieldEl.placeholder + ' REQUIRED'
             }
           })
           return
         }
 
         if (this.submitBtn.disabled) {
-          console.log('Form is submitting')
+          // Form is submitting
           return
         }
 
+        // Set form options
         this.formOptions = {
           method: 'POST',
           headers: {
@@ -194,17 +192,14 @@
         }
 
         // Show that form was submitted
-        this.submitBtn.value = 'submitting...'
+        this.submitBtn.value = 'Submitting...'
         this.submitBtn.disabled = true
 
         fetch(this.form.action, this.formOptions)
           .then(this.checkStatus)
           .then((response) => response.json())
           .then(this.displaySuccessMsg)
-          .catch(function(error) {
-            console.log('request failed', error)
-            this.submitBtn.disabled = false
-          })
+          .catch(this.handleError)
       },
       checkStatus (response) {
         if (response.status >= 200 && response.status < 300) {
@@ -217,12 +212,25 @@
       },
       displaySuccessMsg (data) {
         this.submitBtn.value = data.success || 'Thank you!'
+        setTimeout(this.resetForm, 3000)
+      },
+      handleError (error) {
+        alert('We apologize for any inconvenience. Please email us.')
+        console.error('Request failed: ', error)
+        this.submitBtn.value = 'Error'
+        setTimeout(this.resetForm, 3000)
+      },
+      resetForm () {
+        // Remove 'REQUIRED' from field placeholders
+        forEach(this.requiredFields, function (field) {
+          let fieldEl = document.getElementById(field)
+          if (endsWith(fieldEl.placeholder, 'REQUIRED')) {
+            fieldEl.placeholder = replace(fieldEl.placeholder, 'REQUIRED', '');
+          }
+        })
         this.submitBtn.disabled = false
-
-        setTimeout(() => {
-          this.submitBtn.value = 'Submit'
-          this.form.reset()
-        }, 3000)
+        this.submitBtn.value = 'Submit'
+        this.form.reset()
       },
     },
     ready () {
