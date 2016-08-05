@@ -3,7 +3,7 @@
     <a href="/" @click.prevent="logoClickHandler" class="menu-overlay__nav-list__item">
       <img src="/images/logo.svg" alt="CANDER PARIS" title="CANDER PARIS" class="logo">
     </a>
-    <a href="/" @click.prevent="toggleMenu()" class="btn-menu btn-menu--{{ toggleState }}"></a>
+    <a href="/" @click.prevent="toggleMenu" class="btn-menu btn-menu--{{ toggleState }}"></a>
   </header>
 </template>
 

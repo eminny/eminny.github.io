@@ -416,18 +416,18 @@ label {
 }
 
 ::-moz-selection {
-  background: #ffffff;
-  color: #c1c1c1;
+  background: #000000;
+  color: #ffffff;
 }
 
 ::selection {
-  background: #ffffff;
-  color: #c1c1c1;
+  background: #000000;
+  color: #ffffff;
 }
 
 ::-moz-selection {
-  background: #ffffff;
-  color: #c1c1c1;
+  background: #000000;
+  color: #ffffff;
 }
 
 button,
@@ -743,6 +743,18 @@ optgroup::-moz-focus-inner {
 
 .newsletter__form__btn-submit {
   text-transform: uppercase;
+}
+
+.single-page {
+  min-height: 100%;
+}
+
+.single-page__content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100vh - 28rem);
 }
 
 .slide {

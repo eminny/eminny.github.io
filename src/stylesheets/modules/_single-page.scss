@@ -1,0 +1,11 @@
+.single-page {
+  min-height: 100%;
+}
+
+.single-page__content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100vh - #{$footer-height + $header-height});
+}

@@ -106,12 +106,12 @@ label {
 // Text Selection
 
 ::selection {
-  background: $color__white;
-  color: $color__gray;
+  background: $color__black;
+  color: $color__white;
 }
 ::-moz-selection {
-  background: $color__white;
-  color: $color__gray;
+  background: $color__black;
+  color: $color__white;
 }
 
 // Scrollbar
