@@ -66,12 +66,11 @@
     justify-content: center;
     max-width: 80%;
     min-height: 40rem;
-    width: $content-width-constrained * 1.3;
+    width: $content-width-medium;
     max-width: 80%;
   }
 
-  input.contact-form__input--text,
-  textarea.contact-form__input--textarea {
+  input.contact-form__input--text {
     background-color: transparent;
     border: none;
     border-bottom: 1px solid $color__gray-light;
@@ -79,27 +78,20 @@
     display: block;
     font-size: 1.2rem;
     line-height: 4;
-    width: 100%;
     max-height: 6rem;
+    padding: 4.5rem 0 2rem 0;
     user-select: auto;
+    width: 100%;
+
+    &#name {
+      border-top: 1px solid $color__gray-light;
+    }
 
     &:focus {
       border-color: $color__gray;
       box-shadow: none;
       outline: none;
     }
-  }
-
-  input.contact-form__input--text {
-    padding: 4rem 0 2rem 0;
-    &:first-of-type {
-      border-top: 1px solid $color__gray-light;
-    }
-  }
-
-  textarea.contact-form__input--textarea {
-    line-height: 6;
-    resize: none;
   }
 
   input.contact-form__input--btn,
