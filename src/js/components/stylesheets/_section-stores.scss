@@ -1,0 +1,103 @@
+@import "../../../stylesheets/variables";
+@import "../../../stylesheets/mixins/mixins";
+
+section {
+  margin: 6rem auto;
+  max-width: $content-width-medium;
+  width: 80%;
+}
+
+h1 {
+  font-size: 1.8rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  margin: 3rem 0 2rem 0;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: $font__family-serif;
+  font-size: 1.4rem;
+  line-height: 1.666;
+  margin-bottom: 1.2rem;
+}
+
+a {
+  transition: color $transition-standard;
+}
+
+hr {
+  margin: 4rem auto;
+}
+
+.retailers-list {
+  text-align: center;
+}
+
+.retailer {
+  border-top: 1px solid $color__gray-light;
+  padding: 0 0 3rem 0;
+
+  &:first-of-type {
+    border-top: none;
+  }
+
+  &:last-of-type {
+    padding: 0;
+  }
+}
+
+.retailer__map-btn {
+  color: $color__gray;
+  display: inline-block;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  margin: 2.666rem 0 1.666rem 0;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:after {
+    @include icon-font;
+    background-size: 100% 100%;
+    content: "\e902";
+    display: inline-block;
+    height: 1rem;
+    margin-left: 0.5rem;
+    transition: all $transition-easeInOut;
+    width: 1rem;
+  }
+
+  &.is-active:after {
+    transform: rotate(180deg);
+  }
+}
+
+.retailer__map {
+  transition: all $transition-standard;
+
+  &.fade-transition {
+    transition: opacity $transition-standard;
+  }
+
+  &.fade-enter,
+  &.fade-leave {
+    opacity: 0;
+  }
+}
+
+.retailer__locations {
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+}
+.retailer__website {
+  margin: 0;
+  a {
+    text-decoration: none;
+  }
+}

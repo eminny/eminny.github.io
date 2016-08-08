@@ -60,9 +60,10 @@ $content-width-medium: 65rem;
 
 // Font Stacks
 // ===========
-$font__family-serif           : 'sabon', serif;
+$font__family-serif           : "sabon", serif;
 $font__family-sans            : "brown-std", "Helvetica Neue", Helvetica, sans-serif;
 $font__family-default         : $font__family-sans !default;
+$font__icons                  : "icomoon";
 
 // Font Weights
 // ============
