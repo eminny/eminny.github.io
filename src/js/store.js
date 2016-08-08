@@ -18,6 +18,7 @@ store.data = {
   },
   router: void 0,
   skrollr: void 0,
+  language: 'en',
 };
 
 export default store;

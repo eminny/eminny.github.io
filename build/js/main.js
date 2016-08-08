@@ -13135,7 +13135,7 @@
 
 
 	// module
-	exports.push([module.id, ".section-about__intro[_v-5151c667] {\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-flex-direction: column;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-justify-content: flex-start;\n      -ms-flex-pack: start;\n          justify-content: flex-start; }\n  @media screen and (min-width: 768px) {\n    .section-about__intro[_v-5151c667] {\n      -webkit-align-items: center;\n          -ms-flex-align: center;\n                  -ms-grid-row-align: center;\n              align-items: center;\n      -webkit-flex-direction: row;\n          -ms-flex-direction: row;\n              flex-direction: row;\n      -webkit-justify-content: center;\n          -ms-flex-pack: center;\n              justify-content: center; } }\n\n.section-about__intro__image-wrap[_v-5151c667],\n.section-about__intro__text-wrap[_v-5151c667] {\n  width: 90%; }\n  @media screen and (min-width: 768px) {\n    .section-about__intro__image-wrap[_v-5151c667],\n    .section-about__intro__text-wrap[_v-5151c667] {\n      width: 50%; } }\n", ""]);
+	exports.push([module.id, ".section-about__intro[_v-5151c667] {\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-flex-direction: column;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-justify-content: flex-start;\n      -ms-flex-pack: start;\n          justify-content: flex-start; }\n  @media screen and (min-width: 768px) {\n    .section-about__intro[_v-5151c667] {\n      -webkit-align-items: center;\n          -ms-flex-align: center;\n                  -ms-grid-row-align: center;\n              align-items: center;\n      -webkit-flex-direction: row;\n          -ms-flex-direction: row;\n              flex-direction: row;\n      -webkit-justify-content: center;\n          -ms-flex-pack: center;\n              justify-content: center; } }\n\n.section-about__intro__image-wrap[_v-5151c667],\n.section-about__intro__text-wrap[_v-5151c667] {\n  width: 90%; }\n  @media screen and (min-width: 768px) {\n    .section-about__intro__image-wrap[_v-5151c667],\n    .section-about__intro__text-wrap[_v-5151c667] {\n      padding: 5rem;\n      width: 50%; } }\n\n@media screen and (min-width: 768px) {\n  .section-about__intro__image-wrap[_v-5151c667] {\n    padding-right: 0;\n    -webkit-align-items: flex-end;\n        -ms-flex-align: end;\n                -ms-grid-row-align: flex-end;\n            align-items: flex-end; } }\n\n.section-about__intro__text-wrap[_v-5151c667] {\n  margin-bottom: 2rem; }\n  .section-about__intro__text-wrap h1[_v-5151c667] {\n    margin: 4rem 0 2rem 0; }\n  .section-about__intro__text-wrap h3[_v-5151c667] {\n    margin: 2.5rem 0 2rem 0; }\n\n.section-about__intro__text-wrap__inner[_v-5151c667] {\n  opacity: 1;\n  max-width: 50rem;\n  min-height: 27rem; }\n  @media screen and (min-width: 768px) {\n    .section-about__intro__text-wrap__inner[_v-5151c667] {\n      position: relative; } }\n\n.section-about__intro__language-switch[_v-5151c667] {\n  border-top: 1px solid rgba(193, 193, 193, 0.333);\n  display: inline-block;\n  padding-top: 0.666rem; }\n  .section-about__intro__language-switch a[_v-5151c667] {\n    color: #c1c1c1;\n    letter-spacing: 0.1rem;\n    text-decoration: none;\n    transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n    .section-about__intro__language-switch a[_v-5151c667]:first-of-type {\n      margin-right: 0.666rem; }\n    .section-about__intro__language-switch a.is-active[_v-5151c667], .section-about__intro__language-switch a[_v-5151c667]:active {\n      color: #000000; }\n  @media screen and (min-width: 768px) {\n    .section-about__intro__language-switch[_v-5151c667] {\n      position: absolute; } }\n", ""]);
 
 	// exports
 
@@ -13432,15 +13432,28 @@
 
 	var _SiteFooter2 = _interopRequireDefault(_SiteFooter);
 
+	var _store = __webpack_require__(16);
+
+	var _store2 = _interopRequireDefault(_store);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = {
+	  data: function data() {
+	    return {
+	      language: _store2.default.data.language
+	    };
+	  },
+
 	  components: {
 	    SiteFooter: _SiteFooter2.default
 	  },
-	  ready: function ready() {
-	    console.log('ABOUT section loaded...');
-	  }
+	  methods: {
+	    setLanguage: function setLanguage(lang) {
+	      this.language = lang;
+	    }
+	  },
+	  ready: function ready() {}
 	};
 
 /***/ },
@@ -13568,7 +13581,8 @@
 	    }
 	  },
 	  router: void 0,
-	  skrollr: void 0
+	  skrollr: void 0,
+	  language: 'en'
 	};
 
 	exports.default = store;
@@ -13891,7 +13905,7 @@
 /* 19 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"single-page\" _v-5151c667=\"\">\n  <div class=\"single-page__content\" _v-5151c667=\"\">\n    <div class=\"section-about__intro\" _v-5151c667=\"\">\n      <div class=\"section-about__intro__image-wrap\" _v-5151c667=\"\">\n        <img src=\"/images/about-intro-elizabeth-minett.jpg\" alt=\"BY ELIZABETH MINETT\" _v-5151c667=\"\">\n      </div>\n      <div class=\"section-about__intro__text-wrap\" _v-5151c667=\"\">\n        <h1 _v-5151c667=\"\">by Elizabeth Minett</h1>\n        <h2 _v-5151c667=\"\">Cander candles blends essential oils and fragrances in a soy based candle to create an elevated experience.</h2>\n        <h3 _v-5151c667=\"\">Founded by Elizabeth Minett, each and every candle fragrance is exquisitely crafted. Content about the brand, story, vision, and/or mission of the company. Luxury candles providing and enhancing a refined lifestyle.</h3>\n      </div>\n    </div>\n  </div>\n  <site-footer _v-5151c667=\"\"></site-footer>\n</div>\n";
+	module.exports = "\n<div class=\"single-page\" _v-5151c667=\"\">\n  <div class=\"single-page__content\" _v-5151c667=\"\">\n    <div class=\"section-about__intro\" _v-5151c667=\"\">\n      <div class=\"section-about__intro__image-wrap\" _v-5151c667=\"\">\n        <img src=\"/images/about-intro-elizabeth-minett.jpg\" alt=\"BY ELIZABETH MINETT\" _v-5151c667=\"\">\n      </div>\n      <div class=\"section-about__intro__text-wrap\" _v-5151c667=\"\">\n        <div class=\"section-about__intro__text-wrap__inner\" v-if=\"language === 'en'\" transition=\"fade\" _v-5151c667=\"\">\n          <h1 class=\"zeta\" _v-5151c667=\"\">by Elizabeth Minett</h1>\n          <h2 class=\"gamma\" _v-5151c667=\"\">Cander candles blends essential oils and fragrances in a soy based candle to create an elevated experience.</h2>\n          <h3 class=\"p-beta\" _v-5151c667=\"\">Founded by Elizabeth Minett, each and every candle fragrance is exquisitely crafted. Content about the brand, story, vision, and/or mission of the company. Luxury candles providing and enhancing a refined lifestyle.</h3>\n        </div>\n        <div class=\"section-about__intro__text-wrap__inner\" v-if=\"language === 'fr'\" transition=\"fade\" _v-5151c667=\"\">\n          <h1 class=\"zeta\" _v-5151c667=\"\">par Elizabeth Minett</h1>\n          <h2 class=\"gamma\" _v-5151c667=\"\">Bougies Cander mélanges essentiels parfum des sables bitumineux Sina bougie à base de soja pour créer une expérience de presse élevée.</h2>\n          <h3 class=\"p-beta\" _v-5151c667=\"\">Fondée par Elizabeth Minett, chaque parfum de bougie est délicieusement conçu. Contenu sur la marque, l'histoire, la vision et / ou de la mission de l'entreprise. Bougies de luxe fournir et améliorer un mode de vie raffiné.</h3>\n        </div>\n        <div class=\"section-about__intro__language-switch\" _v-5151c667=\"\">\n          <a href=\"#\" @click.prevent=\"setLanguage('en')\" class=\"{{ language === 'en' ? 'is-active' : '' }}\" _v-5151c667=\"\">EN</a>\n          <a href=\"#\" @click.prevent=\"setLanguage('fr')\" class=\"{{ language === 'fr' ? 'is-active' : '' }}\" _v-5151c667=\"\">FR</a>\n        </div>\n      </div>\n    </div>\n  </div>\n  <site-footer _v-5151c667=\"\"></site-footer>\n</div>\n";
 
 /***/ },
 /* 20 */
