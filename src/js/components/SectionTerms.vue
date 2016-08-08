@@ -90,7 +90,6 @@
     },
     data () {
       return {
-        skrollr: store.data.skrollr,
       }
     },
   }

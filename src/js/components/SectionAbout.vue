@@ -22,6 +22,7 @@
           </div>
         </div>
       </div>
+      <diary></diary>
     </div>
     <site-footer></site-footer>
   </div>
@@ -112,6 +113,7 @@
 </style>
 
 <script>
+  import Diary from './Diary.vue'
   import SiteFooter from './SiteFooter.vue'
   import store from '../store.js'
 
@@ -122,6 +124,7 @@
       }
     },
     components: {
+      Diary,
       SiteFooter,
     },
     methods: {

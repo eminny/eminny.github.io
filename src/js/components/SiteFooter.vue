@@ -25,8 +25,6 @@
         router: store.data.router,
       }
     },
-    ready () {
-      console.log('sup')
-    },
+    ready () {},
   }
 </script>

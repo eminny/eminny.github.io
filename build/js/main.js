@@ -65,7 +65,7 @@
 
 	var _routes2 = _interopRequireDefault(_routes);
 
-	var _store = __webpack_require__(16);
+	var _store = __webpack_require__(40);
 
 	var _store2 = _interopRequireDefault(_store);
 
@@ -74,7 +74,7 @@
 	(function __canderApp__() {
 	  _vue2.default.config.debug = true;
 
-	  var Cander = _vue2.default.extend(__webpack_require__(56));
+	  var Cander = _vue2.default.extend(__webpack_require__(80));
 
 	  _vue2.default.use(_vueRouter2.default);
 
@@ -88,6 +88,10 @@
 	  router.map(_routes2.default);
 
 	  router.start(Cander, 'cander-app');
+
+	  router.afterEach(function () {
+	    document.body.scrollTop = 0;
+	  });
 	})();
 
 /***/ },
@@ -13039,11 +13043,11 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var SectionAbout = _vue2.default.extend(__webpack_require__(6));
-	var SectionContact = _vue2.default.extend(__webpack_require__(20));
-	var SectionHome = _vue2.default.extend(__webpack_require__(31));
-	var SectionStores = _vue2.default.extend(__webpack_require__(41));
-	var SectionTerms = _vue2.default.extend(__webpack_require__(46));
-	var Error404 = _vue2.default.extend(__webpack_require__(51));
+	var SectionContact = _vue2.default.extend(__webpack_require__(44));
+	var SectionHome = _vue2.default.extend(__webpack_require__(55));
+	var SectionStores = _vue2.default.extend(__webpack_require__(65));
+	var SectionTerms = _vue2.default.extend(__webpack_require__(70));
+	var Error404 = _vue2.default.extend(__webpack_require__(75));
 
 	exports.default = {
 	  '*': {
@@ -13082,7 +13086,7 @@
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/components/SectionAbout.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(19)
+	__vue_template__ = __webpack_require__(43)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -13428,11 +13432,15 @@
 	  value: true
 	});
 
-	var _SiteFooter = __webpack_require__(12);
+	var _Diary = __webpack_require__(12);
+
+	var _Diary2 = _interopRequireDefault(_Diary);
+
+	var _SiteFooter = __webpack_require__(36);
 
 	var _SiteFooter2 = _interopRequireDefault(_SiteFooter);
 
-	var _store = __webpack_require__(16);
+	var _store = __webpack_require__(40);
 
 	var _store2 = _interopRequireDefault(_store);
 
@@ -13446,6 +13454,7 @@
 	  },
 
 	  components: {
+	    Diary: _Diary2.default,
 	    SiteFooter: _SiteFooter2.default
 	  },
 	  methods: {
@@ -13466,8 +13475,8 @@
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/js/components/SiteFooter.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(18)
+	  console.warn("[vue-loader] src/js/components/Diary.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(35)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -13477,7 +13486,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-74eb097e/SiteFooter.vue"
+	  var id = "_v-c14842d8/Diary.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -13501,8 +13510,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SiteFooter.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SiteFooter.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-c14842d8&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Diary.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-c14842d8&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Diary.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -13520,7 +13529,7 @@
 
 
 	// module
-	exports.push([module.id, ".site-footer {\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  background: #ffffff;\n  border-top: 1px solid rgba(193, 193, 193, 0.333);\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-flex-direction: column;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  height: 20rem;\n  -webkit-justify-content: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  position: relative; }\n\n.site-footer__copyright {\n  bottom: 1rem;\n  color: #c1c1c1;\n  left: 0;\n  position: absolute;\n  text-align: center;\n  text-transform: uppercase;\n  width: 100%; }\n  .site-footer__copyright a {\n    color: #c1c1c1;\n    text-decoration: none;\n    transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n    .site-footer__copyright a:hover {\n      color: #000000; }\n", ""]);
+	exports.push([module.id, ".diary[_v-c14842d8] {\n  background: #ededed;\n  display: block;\n  width: 100%; }\n\n.diary__heading[_v-c14842d8] {\n  font-family: \"brown-std\", \"Helvetica Neue\", Helvetica, sans-serif;\n  font-size: 16px;\n  font-size: 1.6rem;\n  line-height: 1.3125;\n  text-align: center;\n  text-transform: uppercase; }\n\n.diary-carousel[_v-c14842d8] {\n  height: 30rem; }\n\n.diary-carousel__cell[_v-c14842d8] {\n  background: #8C8;\n  background-position: center center;\n  background-size: cover;\n  border-radius: 5px;\n  display: block;\n  height: 30rem;\n  margin-right: 10px;\n  width: 30rem; }\n", ""]);
 
 	// exports
 
@@ -13535,7 +13544,4497 @@
 	  value: true
 	});
 
-	var _store = __webpack_require__(16);
+	var Flickity = __webpack_require__(16);
+	var Instafeed = __webpack_require__(34);
+
+	exports.default = {
+	  props: ['url-key'],
+	  data: function data() {
+	    return {
+	      flickityInstance: null,
+	      instagramLink: 'https://www.instagram.com/onlinefreund/',
+	      feedOptions: {
+	        get: 'user',
+	        userId: '144360708',
+	        clientId: 'b55ad4edadf844c98ceb2c64205dafc0',
+	        accessToken: '144360708.b55ad4e.5f3e4a6ec30942088355e8f56f095308',
+	        limit: 20,
+	        resolution: 'low_resolution',
+	        target: 'instafeed',
+	        template: '<a class="diary-carousel__cell" href="{{link}}" target="_blank" data-flickity-bg-lazyload="{{image}}"></a>',
+	        after: function after() {
+	          if (!this.options || typeof this.options.target !== 'string') {
+	            throw new Error('Could not initialize: options not found.');
+	          }
+
+	          $data.flickityInstance = new Flickity('.diary-carousel', {
+	            bgLazyLoad: true,
+	            cellAlign: 'left',
+	            pageDots: false,
+	            prevNextButtons: false,
+	            slidesWidth: '300px'
+	          });
+	        }
+	      }
+	    };
+	  },
+	  ready: function ready() {
+	    console.debug('Initialized social widget');
+
+	    var feed = new Instafeed(this.feedOptions);
+
+	    feed.run();
+	  },
+	  destroyed: function destroyed() {
+	    if (window.flkty) {
+	      window.flkty.destroy();
+	    }
+	  }
+	};
+
+/***/ },
+/* 16 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	 * Flickity v2.0.2
+	 * Touch, responsive, flickable carousels
+	 *
+	 * Licensed GPLv3 for open source use
+	 * or Flickity Commercial License for commercial use
+	 *
+	 * http://flickity.metafizzy.co
+	 * Copyright 2016 Metafizzy
+	 */
+
+	( function( window, factory ) {
+	  // universal module definition
+	  /* jshint strict: false */
+	  if ( true ) {
+	    // AMD
+	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	      __webpack_require__(17),
+	      __webpack_require__(25),
+	      __webpack_require__(28),
+	      __webpack_require__(30),
+	      __webpack_require__(31),
+	      __webpack_require__(32),
+	      __webpack_require__(33)
+	    ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	  } else if ( typeof module == 'object' && module.exports ) {
+	    // CommonJS
+	    module.exports = factory(
+	      require('./flickity'),
+	      require('./drag'),
+	      require('./prev-next-button'),
+	      require('./page-dots'),
+	      require('./player'),
+	      require('./add-remove-cell'),
+	      require('./lazyload')
+	    );
+	  }
+
+	})( window, function factory( Flickity ) {
+	  /*jshint strict: false*/
+	  return Flickity;
+	});
+
+
+/***/ },
+/* 17 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// Flickity main
+	( function( window, factory ) {
+	  // universal module definition
+	  /* jshint strict: false */
+	  if ( true ) {
+	    // AMD
+	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	      __webpack_require__(18),
+	      __webpack_require__(19),
+	      __webpack_require__(20),
+	      __webpack_require__(22),
+	      __webpack_require__(23),
+	      __webpack_require__(24)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function( EvEmitter, getSize, utils, Cell, Slide, animatePrototype ) {
+	      return factory( window, EvEmitter, getSize, utils, Cell, Slide, animatePrototype );
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	  } else if ( typeof module == 'object' && module.exports ) {
+	    // CommonJS
+	    module.exports = factory(
+	      window,
+	      require('ev-emitter'),
+	      require('get-size'),
+	      require('fizzy-ui-utils'),
+	      require('./cell'),
+	      require('./slide'),
+	      require('./animate')
+	    );
+	  } else {
+	    // browser global
+	    var _Flickity = window.Flickity;
+
+	    window.Flickity = factory(
+	      window,
+	      window.EvEmitter,
+	      window.getSize,
+	      window.fizzyUIUtils,
+	      _Flickity.Cell,
+	      _Flickity.Slide,
+	      _Flickity.animatePrototype
+	    );
+	  }
+
+	}( window, function factory( window, EvEmitter, getSize,
+	  utils, Cell, Slide, animatePrototype ) {
+
+	'use strict';
+
+	// vars
+	var jQuery = window.jQuery;
+	var getComputedStyle = window.getComputedStyle;
+	var console = window.console;
+
+	function moveElements( elems, toElem ) {
+	  elems = utils.makeArray( elems );
+	  while ( elems.length ) {
+	    toElem.appendChild( elems.shift() );
+	  }
+	}
+
+	// -------------------------- Flickity -------------------------- //
+
+	// globally unique identifiers
+	var GUID = 0;
+	// internal store of all Flickity intances
+	var instances = {};
+
+	function Flickity( element, options ) {
+	  var queryElement = utils.getQueryElement( element );
+	  if ( !queryElement ) {
+	    if ( console ) {
+	      console.error( 'Bad element for Flickity: ' + ( queryElement || element ) );
+	    }
+	    return;
+	  }
+	  this.element = queryElement;
+	  // add jQuery
+	  if ( jQuery ) {
+	    this.$element = jQuery( this.element );
+	  }
+	  // options
+	  this.options = utils.extend( {}, this.constructor.defaults );
+	  this.option( options );
+
+	  // kick things off
+	  this._create();
+	}
+
+	Flickity.defaults = {
+	  accessibility: true,
+	  // adaptiveHeight: false,
+	  cellAlign: 'center',
+	  // cellSelector: undefined,
+	  // contain: false,
+	  freeScrollFriction: 0.075, // friction when free-scrolling
+	  friction: 0.28, // friction when selecting
+	  namespaceJQueryEvents: true,
+	  // initialIndex: 0,
+	  percentPosition: true,
+	  resize: true,
+	  selectedAttraction: 0.025,
+	  setGallerySize: true
+	  // watchCSS: false,
+	  // wrapAround: false
+	};
+
+	// hash of methods triggered on _create()
+	Flickity.createMethods = [];
+
+	var proto = Flickity.prototype;
+	// inherit EventEmitter
+	utils.extend( proto, EvEmitter.prototype );
+
+	proto._create = function() {
+	  // add id for Flickity.data
+	  var id = this.guid = ++GUID;
+	  this.element.flickityGUID = id; // expando
+	  instances[ id ] = this; // associate via id
+	  // initial properties
+	  this.selectedIndex = 0;
+	  // how many frames slider has been in same position
+	  this.restingFrames = 0;
+	  // initial physics properties
+	  this.x = 0;
+	  this.velocity = 0;
+	  this.originSide = this.options.rightToLeft ? 'right' : 'left';
+	  // create viewport & slider
+	  this.viewport = document.createElement('div');
+	  this.viewport.className = 'flickity-viewport';
+	  this._createSlider();
+
+	  if ( this.options.resize || this.options.watchCSS ) {
+	    window.addEventListener( 'resize', this );
+	  }
+
+	  Flickity.createMethods.forEach( function( method ) {
+	    this[ method ]();
+	  }, this );
+
+	  if ( this.options.watchCSS ) {
+	    this.watchCSS();
+	  } else {
+	    this.activate();
+	  }
+
+	};
+
+	/**
+	 * set options
+	 * @param {Object} opts
+	 */
+	proto.option = function( opts ) {
+	  utils.extend( this.options, opts );
+	};
+
+	proto.activate = function() {
+	  if ( this.isActive ) {
+	    return;
+	  }
+	  this.isActive = true;
+	  this.element.classList.add('flickity-enabled');
+	  if ( this.options.rightToLeft ) {
+	    this.element.classList.add('flickity-rtl');
+	  }
+
+	  this.getSize();
+	  // move initial cell elements so they can be loaded as cells
+	  var cellElems = this._filterFindCellElements( this.element.children );
+	  moveElements( cellElems, this.slider );
+	  this.viewport.appendChild( this.slider );
+	  this.element.appendChild( this.viewport );
+	  // get cells from children
+	  this.reloadCells();
+
+	  if ( this.options.accessibility ) {
+	    // allow element to focusable
+	    this.element.tabIndex = 0;
+	    // listen for key presses
+	    this.element.addEventListener( 'keydown', this );
+	  }
+
+	  this.emitEvent('activate');
+
+	  var index;
+	  var initialIndex = this.options.initialIndex;
+	  if ( this.isInitActivated ) {
+	    index = this.selectedIndex;
+	  } else if ( initialIndex !== undefined ) {
+	    index = this.cells[ initialIndex ] ? initialIndex : 0;
+	  } else {
+	    index = 0;
+	  }
+	  // select instantly
+	  this.select( index, false, true );
+	  // flag for initial activation, for using initialIndex
+	  this.isInitActivated = true;
+	};
+
+	// slider positions the cells
+	proto._createSlider = function() {
+	  // slider element does all the positioning
+	  var slider = document.createElement('div');
+	  slider.className = 'flickity-slider';
+	  slider.style[ this.originSide ] = 0;
+	  this.slider = slider;
+	};
+
+	proto._filterFindCellElements = function( elems ) {
+	  return utils.filterFindElements( elems, this.options.cellSelector );
+	};
+
+	// goes through all children
+	proto.reloadCells = function() {
+	  // collection of item elements
+	  this.cells = this._makeCells( this.slider.children );
+	  this.positionCells();
+	  this._getWrapShiftCells();
+	  this.setGallerySize();
+	};
+
+	/**
+	 * turn elements into Flickity.Cells
+	 * @param {Array or NodeList or HTMLElement} elems
+	 * @returns {Array} items - collection of new Flickity Cells
+	 */
+	proto._makeCells = function( elems ) {
+	  var cellElems = this._filterFindCellElements( elems );
+
+	  // create new Flickity for collection
+	  var cells = cellElems.map( function( cellElem ) {
+	    return new Cell( cellElem, this );
+	  }, this );
+
+	  return cells;
+	};
+
+	proto.getLastCell = function() {
+	  return this.cells[ this.cells.length - 1 ];
+	};
+
+	proto.getLastSlide = function() {
+	  return this.slides[ this.slides.length - 1 ];
+	};
+
+	// positions all cells
+	proto.positionCells = function() {
+	  // size all cells
+	  this._sizeCells( this.cells );
+	  // position all cells
+	  this._positionCells( 0 );
+	};
+
+	/**
+	 * position certain cells
+	 * @param {Integer} index - which cell to start with
+	 */
+	proto._positionCells = function( index ) {
+	  index = index || 0;
+	  // also measure maxCellHeight
+	  // start 0 if positioning all cells
+	  this.maxCellHeight = index ? this.maxCellHeight || 0 : 0;
+	  var cellX = 0;
+	  // get cellX
+	  if ( index > 0 ) {
+	    var startCell = this.cells[ index - 1 ];
+	    cellX = startCell.x + startCell.size.outerWidth;
+	  }
+	  var len = this.cells.length;
+	  for ( var i=index; i < len; i++ ) {
+	    var cell = this.cells[i];
+	    cell.setPosition( cellX );
+	    cellX += cell.size.outerWidth;
+	    this.maxCellHeight = Math.max( cell.size.outerHeight, this.maxCellHeight );
+	  }
+	  // keep track of cellX for wrap-around
+	  this.slideableWidth = cellX;
+	  // slides
+	  this.updateSlides();
+	  // contain slides target
+	  this._containSlides();
+	  // update slidesWidth
+	  this.slidesWidth = len ? this.getLastSlide().target - this.slides[0].target : 0;
+	};
+
+	/**
+	 * cell.getSize() on multiple cells
+	 * @param {Array} cells
+	 */
+	proto._sizeCells = function( cells ) {
+	  cells.forEach( function( cell ) {
+	    cell.getSize();
+	  });
+	};
+
+	// --------------------------  -------------------------- //
+
+	proto.updateSlides = function() {
+	  this.slides = [];
+	  if ( !this.cells.length ) {
+	    return;
+	  }
+
+	  var slide = new Slide( this );
+	  this.slides.push( slide );
+	  var isOriginLeft = this.originSide == 'left';
+	  var nextMargin = isOriginLeft ? 'marginRight' : 'marginLeft';
+
+	  var canCellFit = this._getCanCellFit();
+
+	  this.cells.forEach( function( cell, i ) {
+	    // just add cell if first cell in slide
+	    if ( !slide.cells.length ) {
+	      slide.addCell( cell );
+	      return;
+	    }
+
+	    var slideWidth = ( slide.outerWidth - slide.firstMargin ) +
+	      ( cell.size.outerWidth - cell.size[ nextMargin ] );
+
+	    if ( canCellFit.call( this, i, slideWidth ) ) {
+	      slide.addCell( cell );
+	    } else {
+	      // doesn't fit, new slide
+	      slide.updateTarget();
+
+	      slide = new Slide( this );
+	      this.slides.push( slide );
+	      slide.addCell( cell );
+	    }
+	  }, this );
+	  // last slide
+	  slide.updateTarget();
+	  // update .selectedSlide
+	  this.updateSelectedSlide();
+	};
+
+	proto._getCanCellFit = function() {
+	  var groupCells = this.options.groupCells;
+	  if ( !groupCells ) {
+	    return function() {
+	      return false;
+	    };
+	  } else if ( typeof groupCells == 'number' ) {
+	    // group by number. 3 -> [0,1,2], [3,4,5], ...
+	    var number = parseInt( groupCells, 10 );
+	    return function( i ) {
+	      return ( i % number ) !== 0;
+	    };
+	  }
+	  // default, group by width of slide
+	  // parse '75%
+	  var percentMatch = typeof groupCells == 'string' &&
+	    groupCells.match(/^(\d+)%$/);
+	  var percent = percentMatch ? parseInt( percentMatch[1], 10 ) / 100 : 1;
+	  return function( i, slideWidth ) {
+	    return slideWidth <= ( this.size.innerWidth + 1 ) * percent;
+	  };
+	};
+
+	// alias _init for jQuery plugin .flickity()
+	proto._init =
+	proto.reposition = function() {
+	  this.positionCells();
+	  this.positionSliderAtSelected();
+	};
+
+	proto.getSize = function() {
+	  this.size = getSize( this.element );
+	  this.setCellAlign();
+	  this.cursorPosition = this.size.innerWidth * this.cellAlign;
+	};
+
+	var cellAlignShorthands = {
+	  // cell align, then based on origin side
+	  center: {
+	    left: 0.5,
+	    right: 0.5
+	  },
+	  left: {
+	    left: 0,
+	    right: 1
+	  },
+	  right: {
+	    right: 0,
+	    left: 1
+	  }
+	};
+
+	proto.setCellAlign = function() {
+	  var shorthand = cellAlignShorthands[ this.options.cellAlign ];
+	  this.cellAlign = shorthand ? shorthand[ this.originSide ] : this.options.cellAlign;
+	};
+
+	proto.setGallerySize = function() {
+	  if ( this.options.setGallerySize ) {
+	    var height = this.options.adaptiveHeight && this.selectedSlide ?
+	      this.selectedSlide.height : this.maxCellHeight;
+	    this.viewport.style.height = height + 'px';
+	  }
+	};
+
+	proto._getWrapShiftCells = function() {
+	  // only for wrap-around
+	  if ( !this.options.wrapAround ) {
+	    return;
+	  }
+	  // unshift previous cells
+	  this._unshiftCells( this.beforeShiftCells );
+	  this._unshiftCells( this.afterShiftCells );
+	  // get before cells
+	  // initial gap
+	  var gapX = this.cursorPosition;
+	  var cellIndex = this.cells.length - 1;
+	  this.beforeShiftCells = this._getGapCells( gapX, cellIndex, -1 );
+	  // get after cells
+	  // ending gap between last cell and end of gallery viewport
+	  gapX = this.size.innerWidth - this.cursorPosition;
+	  // start cloning at first cell, working forwards
+	  this.afterShiftCells = this._getGapCells( gapX, 0, 1 );
+	};
+
+	proto._getGapCells = function( gapX, cellIndex, increment ) {
+	  // keep adding cells until the cover the initial gap
+	  var cells = [];
+	  while ( gapX > 0 ) {
+	    var cell = this.cells[ cellIndex ];
+	    if ( !cell ) {
+	      break;
+	    }
+	    cells.push( cell );
+	    cellIndex += increment;
+	    gapX -= cell.size.outerWidth;
+	  }
+	  return cells;
+	};
+
+	// ----- contain ----- //
+
+	// contain cell targets so no excess sliding
+	proto._containSlides = function() {
+	  if ( !this.options.contain || this.options.wrapAround || !this.cells.length ) {
+	    return;
+	  }
+	  var isRightToLeft = this.options.rightToLeft;
+	  var beginMargin = isRightToLeft ? 'marginRight' : 'marginLeft';
+	  var endMargin = isRightToLeft ? 'marginLeft' : 'marginRight';
+	  var contentWidth = this.slideableWidth - this.getLastCell().size[ endMargin ];
+	  // content is less than gallery size
+	  var isContentSmaller = contentWidth < this.size.innerWidth;
+	  // bounds
+	  var beginBound = this.cursorPosition + this.cells[0].size[ beginMargin ];
+	  var endBound = contentWidth - this.size.innerWidth * ( 1 - this.cellAlign );
+	  // contain each cell target
+	  this.slides.forEach( function( slide ) {
+	    if ( isContentSmaller ) {
+	      // all cells fit inside gallery
+	      slide.target = contentWidth * this.cellAlign;
+	    } else {
+	      // contain to bounds
+	      slide.target = Math.max( slide.target, beginBound );
+	      slide.target = Math.min( slide.target, endBound );
+	    }
+	  }, this );
+	};
+
+	// -----  ----- //
+
+	/**
+	 * emits events via eventEmitter and jQuery events
+	 * @param {String} type - name of event
+	 * @param {Event} event - original event
+	 * @param {Array} args - extra arguments
+	 */
+	proto.dispatchEvent = function( type, event, args ) {
+	  var emitArgs = event ? [ event ].concat( args ) : args;
+	  this.emitEvent( type, emitArgs );
+
+	  if ( jQuery && this.$element ) {
+	    // default trigger with type if no event
+	    type += this.options.namespaceJQueryEvents ? '.flickity' : '';
+	    var $event = type;
+	    if ( event ) {
+	      // create jQuery event
+	      var jQEvent = jQuery.Event( event );
+	      jQEvent.type = type;
+	      $event = jQEvent;
+	    }
+	    this.$element.trigger( $event, args );
+	  }
+	};
+
+	// -------------------------- select -------------------------- //
+
+	/**
+	 * @param {Integer} index - index of the slide
+	 * @param {Boolean} isWrap - will wrap-around to last/first if at the end
+	 * @param {Boolean} isInstant - will immediately set position at selected cell
+	 */
+	proto.select = function( index, isWrap, isInstant ) {
+	  if ( !this.isActive ) {
+	    return;
+	  }
+	  index = parseInt( index, 10 );
+	  this._wrapSelect( index );
+
+	  if ( this.options.wrapAround || isWrap ) {
+	    index = utils.modulo( index, this.slides.length );
+	  }
+	  // bail if invalid index
+	  if ( !this.slides[ index ] ) {
+	    return;
+	  }
+	  this.selectedIndex = index;
+	  this.updateSelectedSlide();
+	  if ( isInstant ) {
+	    this.positionSliderAtSelected();
+	  } else {
+	    this.startAnimation();
+	  }
+	  if ( this.options.adaptiveHeight ) {
+	    this.setGallerySize();
+	  }
+
+	  this.dispatchEvent('select');
+	  // old v1 event name, remove in v3
+	  this.dispatchEvent('cellSelect');
+	};
+
+	// wraps position for wrapAround, to move to closest slide. #113
+	proto._wrapSelect = function( index ) {
+	  var len = this.slides.length;
+	  var isWrapping = this.options.wrapAround && len > 1;
+	  if ( !isWrapping ) {
+	    return index;
+	  }
+	  var wrapIndex = utils.modulo( index, len );
+	  // go to shortest
+	  var delta = Math.abs( wrapIndex - this.selectedIndex );
+	  var backWrapDelta = Math.abs( ( wrapIndex + len ) - this.selectedIndex );
+	  var forewardWrapDelta = Math.abs( ( wrapIndex - len ) - this.selectedIndex );
+	  if ( !this.isDragSelect && backWrapDelta < delta ) {
+	    index += len;
+	  } else if ( !this.isDragSelect && forewardWrapDelta < delta ) {
+	    index -= len;
+	  }
+	  // wrap position so slider is within normal area
+	  if ( index < 0 ) {
+	    this.x -= this.slideableWidth;
+	  } else if ( index >= len ) {
+	    this.x += this.slideableWidth;
+	  }
+	};
+
+	proto.previous = function( isWrap ) {
+	  this.select( this.selectedIndex - 1, isWrap );
+	};
+
+	proto.next = function( isWrap ) {
+	  this.select( this.selectedIndex + 1, isWrap );
+	};
+
+	proto.updateSelectedSlide = function() {
+	  var slide = this.slides[ this.selectedIndex ];
+	  // selectedIndex could be outside of slides, if triggered before resize()
+	  if ( !slide ) {
+	    return;
+	  }
+	  // unselect previous selected slide
+	  this.unselectSelectedSlide();
+	  // update new selected slide
+	  this.selectedSlide = slide;
+	  slide.select();
+	  this.selectedCells = slide.cells;
+	  this.selectedElements = slide.getCellElements();
+	  // HACK: selectedCell & selectedElement is first cell in slide, backwards compatibility
+	  // Remove in v3?
+	  this.selectedCell = slide.cells[0];
+	  this.selectedElement = this.selectedElements[0];
+	};
+
+	proto.unselectSelectedSlide = function() {
+	  if ( this.selectedSlide ) {
+	    this.selectedSlide.unselect();
+	  }
+	};
+
+	/**
+	 * select slide from number or cell element
+	 * @param {Element or Number} elem
+	 */
+	proto.selectCell = function( value, isWrap, isInstant ) {
+	  // get cell
+	  var cell;
+	  if ( typeof value == 'number' ) {
+	    cell = this.cells[ value ];
+	  } else {
+	    // use string as selector
+	    if ( typeof value == 'string' ) {
+	      value = this.element.querySelector( value );
+	    }
+	    // get cell from element
+	    cell = this.getCell( value );
+	  }
+	  // select slide that has cell
+	  for ( var i=0; cell && i < this.slides.length; i++ ) {
+	    var slide = this.slides[i];
+	    var index = slide.cells.indexOf( cell );
+	    if ( index != -1 ) {
+	      this.select( i, isWrap, isInstant );
+	      return;
+	    }
+	  }
+	};
+
+	// -------------------------- get cells -------------------------- //
+
+	/**
+	 * get Flickity.Cell, given an Element
+	 * @param {Element} elem
+	 * @returns {Flickity.Cell} item
+	 */
+	proto.getCell = function( elem ) {
+	  // loop through cells to get the one that matches
+	  for ( var i=0; i < this.cells.length; i++ ) {
+	    var cell = this.cells[i];
+	    if ( cell.element == elem ) {
+	      return cell;
+	    }
+	  }
+	};
+
+	/**
+	 * get collection of Flickity.Cells, given Elements
+	 * @param {Element, Array, NodeList} elems
+	 * @returns {Array} cells - Flickity.Cells
+	 */
+	proto.getCells = function( elems ) {
+	  elems = utils.makeArray( elems );
+	  var cells = [];
+	  elems.forEach( function( elem ) {
+	    var cell = this.getCell( elem );
+	    if ( cell ) {
+	      cells.push( cell );
+	    }
+	  }, this );
+	  return cells;
+	};
+
+	/**
+	 * get cell elements
+	 * @returns {Array} cellElems
+	 */
+	proto.getCellElements = function() {
+	  return this.cells.map( function( cell ) {
+	    return cell.element;
+	  });
+	};
+
+	/**
+	 * get parent cell from an element
+	 * @param {Element} elem
+	 * @returns {Flickit.Cell} cell
+	 */
+	proto.getParentCell = function( elem ) {
+	  // first check if elem is cell
+	  var cell = this.getCell( elem );
+	  if ( cell ) {
+	    return cell;
+	  }
+	  // try to get parent cell elem
+	  elem = utils.getParent( elem, '.flickity-slider > *' );
+	  return this.getCell( elem );
+	};
+
+	/**
+	 * get cells adjacent to a slide
+	 * @param {Integer} adjCount - number of adjacent slides
+	 * @param {Integer} index - index of slide to start
+	 * @returns {Array} cells - array of Flickity.Cells
+	 */
+	proto.getAdjacentCellElements = function( adjCount, index ) {
+	  if ( !adjCount ) {
+	    return this.selectedSlide.getCellElements();
+	  }
+	  index = index === undefined ? this.selectedIndex : index;
+
+	  var len = this.slides.length;
+	  if ( 1 + ( adjCount * 2 ) >= len ) {
+	    return this.getCellElements();
+	  }
+
+	  var cellElems = [];
+	  for ( var i = index - adjCount; i <= index + adjCount ; i++ ) {
+	    var slideIndex = this.options.wrapAround ? utils.modulo( i, len ) : i;
+	    var slide = this.slides[ slideIndex ];
+	    if ( slide ) {
+	      cellElems = cellElems.concat( slide.getCellElements() );
+	    }
+	  }
+	  return cellElems;
+	};
+
+	// -------------------------- events -------------------------- //
+
+	proto.uiChange = function() {
+	  this.emitEvent('uiChange');
+	};
+
+	proto.childUIPointerDown = function( event ) {
+	  this.emitEvent( 'childUIPointerDown', [ event ] );
+	};
+
+	// ----- resize ----- //
+
+	proto.onresize = function() {
+	  this.watchCSS();
+	  this.resize();
+	};
+
+	utils.debounceMethod( Flickity, 'onresize', 150 );
+
+	proto.resize = function() {
+	  if ( !this.isActive ) {
+	    return;
+	  }
+	  this.getSize();
+	  // wrap values
+	  if ( this.options.wrapAround ) {
+	    this.x = utils.modulo( this.x, this.slideableWidth );
+	  }
+	  this.positionCells();
+	  this._getWrapShiftCells();
+	  this.setGallerySize();
+	  this.emitEvent('resize');
+	  // update selected index for group slides, instant
+	  // TODO: position can be lost between groups of various numbers
+	  var selectedElement = this.selectedElements && this.selectedElements[0];
+	  this.selectCell( selectedElement, false, true );
+	};
+
+	// watches the :after property, activates/deactivates
+	proto.watchCSS = function() {
+	  var watchOption = this.options.watchCSS;
+	  if ( !watchOption ) {
+	    return;
+	  }
+
+	  var afterContent = getComputedStyle( this.element, ':after' ).content;
+	  // activate if :after { content: 'flickity' }
+	  if ( afterContent.indexOf('flickity') != -1 ) {
+	    this.activate();
+	  } else {
+	    this.deactivate();
+	  }
+	};
+
+	// ----- keydown ----- //
+
+	// go previous/next if left/right keys pressed
+	proto.onkeydown = function( event ) {
+	  // only work if element is in focus
+	  if ( !this.options.accessibility ||
+	    ( document.activeElement && document.activeElement != this.element ) ) {
+	    return;
+	  }
+
+	  if ( event.keyCode == 37 ) {
+	    // go left
+	    var leftMethod = this.options.rightToLeft ? 'next' : 'previous';
+	    this.uiChange();
+	    this[ leftMethod ]();
+	  } else if ( event.keyCode == 39 ) {
+	    // go right
+	    var rightMethod = this.options.rightToLeft ? 'previous' : 'next';
+	    this.uiChange();
+	    this[ rightMethod ]();
+	  }
+	};
+
+	// -------------------------- destroy -------------------------- //
+
+	// deactivate all Flickity functionality, but keep stuff available
+	proto.deactivate = function() {
+	  if ( !this.isActive ) {
+	    return;
+	  }
+	  this.element.classList.remove('flickity-enabled');
+	  this.element.classList.remove('flickity-rtl');
+	  // destroy cells
+	  this.cells.forEach( function( cell ) {
+	    cell.destroy();
+	  });
+	  this.unselectSelectedSlide();
+	  this.element.removeChild( this.viewport );
+	  // move child elements back into element
+	  moveElements( this.slider.children, this.element );
+	  if ( this.options.accessibility ) {
+	    this.element.removeAttribute('tabIndex');
+	    this.element.removeEventListener( 'keydown', this );
+	  }
+	  // set flags
+	  this.isActive = false;
+	  this.emitEvent('deactivate');
+	};
+
+	proto.destroy = function() {
+	  this.deactivate();
+	  window.removeEventListener( 'resize', this );
+	  this.emitEvent('destroy');
+	  if ( jQuery && this.$element ) {
+	    jQuery.removeData( this.element, 'flickity' );
+	  }
+	  delete this.element.flickityGUID;
+	  delete instances[ this.guid ];
+	};
+
+	// -------------------------- prototype -------------------------- //
+
+	utils.extend( proto, animatePrototype );
+
+	// -------------------------- extras -------------------------- //
+
+	/**
+	 * get Flickity instance from element
+	 * @param {Element} elem
+	 * @returns {Flickity}
+	 */
+	Flickity.data = function( elem ) {
+	  elem = utils.getQueryElement( elem );
+	  var id = elem && elem.flickityGUID;
+	  return id && instances[ id ];
+	};
+
+	utils.htmlInit( Flickity, 'flickity' );
+
+	if ( jQuery && jQuery.bridget ) {
+	  jQuery.bridget( 'flickity', Flickity );
+	}
+
+	Flickity.Cell = Cell;
+
+	return Flickity;
+
+	}));
+
+
+/***/ },
+/* 18 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
+	 * EvEmitter v1.0.3
+	 * Lil' event emitter
+	 * MIT License
+	 */
+
+	/* jshint unused: true, undef: true, strict: true */
+
+	( function( global, factory ) {
+	  // universal module definition
+	  /* jshint strict: false */ /* globals define, module, window */
+	  if ( true ) {
+	    // AMD - RequireJS
+	    !(__WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	  } else if ( typeof module == 'object' && module.exports ) {
+	    // CommonJS - Browserify, Webpack
+	    module.exports = factory();
+	  } else {
+	    // Browser globals
+	    global.EvEmitter = factory();
+	  }
+
+	}( typeof window != 'undefined' ? window : this, function() {
+
+	"use strict";
+
+	function EvEmitter() {}
+
+	var proto = EvEmitter.prototype;
+
+	proto.on = function( eventName, listener ) {
+	  if ( !eventName || !listener ) {
+	    return;
+	  }
+	  // set events hash
+	  var events = this._events = this._events || {};
+	  // set listeners array
+	  var listeners = events[ eventName ] = events[ eventName ] || [];
+	  // only add once
+	  if ( listeners.indexOf( listener ) == -1 ) {
+	    listeners.push( listener );
+	  }
+
+	  return this;
+	};
+
+	proto.once = function( eventName, listener ) {
+	  if ( !eventName || !listener ) {
+	    return;
+	  }
+	  // add event
+	  this.on( eventName, listener );
+	  // set once flag
+	  // set onceEvents hash
+	  var onceEvents = this._onceEvents = this._onceEvents || {};
+	  // set onceListeners object
+	  var onceListeners = onceEvents[ eventName ] = onceEvents[ eventName ] || {};
+	  // set flag
+	  onceListeners[ listener ] = true;
+
+	  return this;
+	};
+
+	proto.off = function( eventName, listener ) {
+	  var listeners = this._events && this._events[ eventName ];
+	  if ( !listeners || !listeners.length ) {
+	    return;
+	  }
+	  var index = listeners.indexOf( listener );
+	  if ( index != -1 ) {
+	    listeners.splice( index, 1 );
+	  }
+
+	  return this;
+	};
+
+	proto.emitEvent = function( eventName, args ) {
+	  var listeners = this._events && this._events[ eventName ];
+	  if ( !listeners || !listeners.length ) {
+	    return;
+	  }
+	  var i = 0;
+	  var listener = listeners[i];
+	  args = args || [];
+	  // once stuff
+	  var onceListeners = this._onceEvents && this._onceEvents[ eventName ];
+
+	  while ( listener ) {
+	    var isOnce = onceListeners && onceListeners[ listener ];
+	    if ( isOnce ) {
+	      // remove listener
+	      // remove before trigger to prevent recursion
+	      this.off( eventName, listener );
+	      // unset once flag
+	      delete onceListeners[ listener ];
+	    }
+	    // trigger listener
+	    listener.apply( this, args );
+	    // get next listener
+	    i += isOnce ? 0 : 1;
+	    listener = listeners[i];
+	  }
+
+	  return this;
+	};
+
+	return EvEmitter;
+
+	}));
+
+
+/***/ },
+/* 19 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	 * getSize v2.0.2
+	 * measure size of elements
+	 * MIT license
+	 */
+
+	/*jshint browser: true, strict: true, undef: true, unused: true */
+	/*global define: false, module: false, console: false */
+
+	( function( window, factory ) {
+	  'use strict';
+
+	  if ( true ) {
+	    // AMD
+	    !(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
+	      return factory();
+	    }.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	  } else if ( typeof module == 'object' && module.exports ) {
+	    // CommonJS
+	    module.exports = factory();
+	  } else {
+	    // browser global
+	    window.getSize = factory();
+	  }
+
+	})( window, function factory() {
+	'use strict';
+
+	// -------------------------- helpers -------------------------- //
+
+	// get a number from a string, not a percentage
+	function getStyleSize( value ) {
+	  var num = parseFloat( value );
+	  // not a percent like '100%', and a number
+	  var isValid = value.indexOf('%') == -1 && !isNaN( num );
+	  return isValid && num;
+	}
+
+	function noop() {}
+
+	var logError = typeof console == 'undefined' ? noop :
+	  function( message ) {
+	    console.error( message );
+	  };
+
+	// -------------------------- measurements -------------------------- //
+
+	var measurements = [
+	  'paddingLeft',
+	  'paddingRight',
+	  'paddingTop',
+	  'paddingBottom',
+	  'marginLeft',
+	  'marginRight',
+	  'marginTop',
+	  'marginBottom',
+	  'borderLeftWidth',
+	  'borderRightWidth',
+	  'borderTopWidth',
+	  'borderBottomWidth'
+	];
+
+	var measurementsLength = measurements.length;
+
+	function getZeroSize() {
+	  var size = {
+	    width: 0,
+	    height: 0,
+	    innerWidth: 0,
+	    innerHeight: 0,
+	    outerWidth: 0,
+	    outerHeight: 0
+	  };
+	  for ( var i=0; i < measurementsLength; i++ ) {
+	    var measurement = measurements[i];
+	    size[ measurement ] = 0;
+	  }
+	  return size;
+	}
+
+	// -------------------------- getStyle -------------------------- //
+
+	/**
+	 * getStyle, get style of element, check for Firefox bug
+	 * https://bugzilla.mozilla.org/show_bug.cgi?id=548397
+	 */
+	function getStyle( elem ) {
+	  var style = getComputedStyle( elem );
+	  if ( !style ) {
+	    logError( 'Style returned ' + style +
+	      '. Are you running this code in a hidden iframe on Firefox? ' +
+	      'See http://bit.ly/getsizebug1' );
+	  }
+	  return style;
+	}
+
+	// -------------------------- setup -------------------------- //
+
+	var isSetup = false;
+
+	var isBoxSizeOuter;
+
+	/**
+	 * setup
+	 * check isBoxSizerOuter
+	 * do on first getSize() rather than on page load for Firefox bug
+	 */
+	function setup() {
+	  // setup once
+	  if ( isSetup ) {
+	    return;
+	  }
+	  isSetup = true;
+
+	  // -------------------------- box sizing -------------------------- //
+
+	  /**
+	   * WebKit measures the outer-width on style.width on border-box elems
+	   * IE & Firefox<29 measures the inner-width
+	   */
+	  var div = document.createElement('div');
+	  div.style.width = '200px';
+	  div.style.padding = '1px 2px 3px 4px';
+	  div.style.borderStyle = 'solid';
+	  div.style.borderWidth = '1px 2px 3px 4px';
+	  div.style.boxSizing = 'border-box';
+
+	  var body = document.body || document.documentElement;
+	  body.appendChild( div );
+	  var style = getStyle( div );
+
+	  getSize.isBoxSizeOuter = isBoxSizeOuter = getStyleSize( style.width ) == 200;
+	  body.removeChild( div );
+
+	}
+
+	// -------------------------- getSize -------------------------- //
+
+	function getSize( elem ) {
+	  setup();
+
+	  // use querySeletor if elem is string
+	  if ( typeof elem == 'string' ) {
+	    elem = document.querySelector( elem );
+	  }
+
+	  // do not proceed on non-objects
+	  if ( !elem || typeof elem != 'object' || !elem.nodeType ) {
+	    return;
+	  }
+
+	  var style = getStyle( elem );
+
+	  // if hidden, everything is 0
+	  if ( style.display == 'none' ) {
+	    return getZeroSize();
+	  }
+
+	  var size = {};
+	  size.width = elem.offsetWidth;
+	  size.height = elem.offsetHeight;
+
+	  var isBorderBox = size.isBorderBox = style.boxSizing == 'border-box';
+
+	  // get all measurements
+	  for ( var i=0; i < measurementsLength; i++ ) {
+	    var measurement = measurements[i];
+	    var value = style[ measurement ];
+	    var num = parseFloat( value );
+	    // any 'auto', 'medium' value will be 0
+	    size[ measurement ] = !isNaN( num ) ? num : 0;
+	  }
+
+	  var paddingWidth = size.paddingLeft + size.paddingRight;
+	  var paddingHeight = size.paddingTop + size.paddingBottom;
+	  var marginWidth = size.marginLeft + size.marginRight;
+	  var marginHeight = size.marginTop + size.marginBottom;
+	  var borderWidth = size.borderLeftWidth + size.borderRightWidth;
+	  var borderHeight = size.borderTopWidth + size.borderBottomWidth;
+
+	  var isBorderBoxSizeOuter = isBorderBox && isBoxSizeOuter;
+
+	  // overwrite width and height if we can get it from style
+	  var styleWidth = getStyleSize( style.width );
+	  if ( styleWidth !== false ) {
+	    size.width = styleWidth +
+	      // add padding and border unless it's already including it
+	      ( isBorderBoxSizeOuter ? 0 : paddingWidth + borderWidth );
+	  }
+
+	  var styleHeight = getStyleSize( style.height );
+	  if ( styleHeight !== false ) {
+	    size.height = styleHeight +
+	      // add padding and border unless it's already including it
+	      ( isBorderBoxSizeOuter ? 0 : paddingHeight + borderHeight );
+	  }
+
+	  size.innerWidth = size.width - ( paddingWidth + borderWidth );
+	  size.innerHeight = size.height - ( paddingHeight + borderHeight );
+
+	  size.outerWidth = size.width + marginWidth;
+	  size.outerHeight = size.height + marginHeight;
+
+	  return size;
+	}
+
+	return getSize;
+
+	});
+
+
+/***/ },
+/* 20 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
+	 * Fizzy UI utils v2.0.2
+	 * MIT license
+	 */
+
+	/*jshint browser: true, undef: true, unused: true, strict: true */
+
+	( function( window, factory ) {
+	  // universal module definition
+	  /*jshint strict: false */ /*globals define, module, require */
+
+	  if ( true ) {
+	    // AMD
+	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	      __webpack_require__(21)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function( matchesSelector ) {
+	      return factory( window, matchesSelector );
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	  } else if ( typeof module == 'object' && module.exports ) {
+	    // CommonJS
+	    module.exports = factory(
+	      window,
+	      require('desandro-matches-selector')
+	    );
+	  } else {
+	    // browser global
+	    window.fizzyUIUtils = factory(
+	      window,
+	      window.matchesSelector
+	    );
+	  }
+
+	}( window, function factory( window, matchesSelector ) {
+
+	'use strict';
+
+	var utils = {};
+
+	// ----- extend ----- //
+
+	// extends objects
+	utils.extend = function( a, b ) {
+	  for ( var prop in b ) {
+	    a[ prop ] = b[ prop ];
+	  }
+	  return a;
+	};
+
+	// ----- modulo ----- //
+
+	utils.modulo = function( num, div ) {
+	  return ( ( num % div ) + div ) % div;
+	};
+
+	// ----- makeArray ----- //
+
+	// turn element or nodeList into an array
+	utils.makeArray = function( obj ) {
+	  var ary = [];
+	  if ( Array.isArray( obj ) ) {
+	    // use object if already an array
+	    ary = obj;
+	  } else if ( obj && typeof obj.length == 'number' ) {
+	    // convert nodeList to array
+	    for ( var i=0; i < obj.length; i++ ) {
+	      ary.push( obj[i] );
+	    }
+	  } else {
+	    // array of single index
+	    ary.push( obj );
+	  }
+	  return ary;
+	};
+
+	// ----- removeFrom ----- //
+
+	utils.removeFrom = function( ary, obj ) {
+	  var index = ary.indexOf( obj );
+	  if ( index != -1 ) {
+	    ary.splice( index, 1 );
+	  }
+	};
+
+	// ----- getParent ----- //
+
+	utils.getParent = function( elem, selector ) {
+	  while ( elem != document.body ) {
+	    elem = elem.parentNode;
+	    if ( matchesSelector( elem, selector ) ) {
+	      return elem;
+	    }
+	  }
+	};
+
+	// ----- getQueryElement ----- //
+
+	// use element as selector string
+	utils.getQueryElement = function( elem ) {
+	  if ( typeof elem == 'string' ) {
+	    return document.querySelector( elem );
+	  }
+	  return elem;
+	};
+
+	// ----- handleEvent ----- //
+
+	// enable .ontype to trigger from .addEventListener( elem, 'type' )
+	utils.handleEvent = function( event ) {
+	  var method = 'on' + event.type;
+	  if ( this[ method ] ) {
+	    this[ method ]( event );
+	  }
+	};
+
+	// ----- filterFindElements ----- //
+
+	utils.filterFindElements = function( elems, selector ) {
+	  // make array of elems
+	  elems = utils.makeArray( elems );
+	  var ffElems = [];
+
+	  elems.forEach( function( elem ) {
+	    // check that elem is an actual element
+	    if ( !( elem instanceof HTMLElement ) ) {
+	      return;
+	    }
+	    // add elem if no selector
+	    if ( !selector ) {
+	      ffElems.push( elem );
+	      return;
+	    }
+	    // filter & find items if we have a selector
+	    // filter
+	    if ( matchesSelector( elem, selector ) ) {
+	      ffElems.push( elem );
+	    }
+	    // find children
+	    var childElems = elem.querySelectorAll( selector );
+	    // concat childElems to filterFound array
+	    for ( var i=0; i < childElems.length; i++ ) {
+	      ffElems.push( childElems[i] );
+	    }
+	  });
+
+	  return ffElems;
+	};
+
+	// ----- debounceMethod ----- //
+
+	utils.debounceMethod = function( _class, methodName, threshold ) {
+	  // original method
+	  var method = _class.prototype[ methodName ];
+	  var timeoutName = methodName + 'Timeout';
+
+	  _class.prototype[ methodName ] = function() {
+	    var timeout = this[ timeoutName ];
+	    if ( timeout ) {
+	      clearTimeout( timeout );
+	    }
+	    var args = arguments;
+
+	    var _this = this;
+	    this[ timeoutName ] = setTimeout( function() {
+	      method.apply( _this, args );
+	      delete _this[ timeoutName ];
+	    }, threshold || 100 );
+	  };
+	};
+
+	// ----- docReady ----- //
+
+	utils.docReady = function( callback ) {
+	  var readyState = document.readyState;
+	  if ( readyState == 'complete' || readyState == 'interactive' ) {
+	    callback();
+	  } else {
+	    document.addEventListener( 'DOMContentLoaded', callback );
+	  }
+	};
+
+	// ----- htmlInit ----- //
+
+	// http://jamesroberts.name/blog/2010/02/22/string-functions-for-javascript-trim-to-camel-case-to-dashed-and-to-underscore/
+	utils.toDashed = function( str ) {
+	  return str.replace( /(.)([A-Z])/g, function( match, $1, $2 ) {
+	    return $1 + '-' + $2;
+	  }).toLowerCase();
+	};
+
+	var console = window.console;
+	/**
+	 * allow user to initialize classes via [data-namespace] or .js-namespace class
+	 * htmlInit( Widget, 'widgetName' )
+	 * options are parsed from data-namespace-options
+	 */
+	utils.htmlInit = function( WidgetClass, namespace ) {
+	  utils.docReady( function() {
+	    var dashedNamespace = utils.toDashed( namespace );
+	    var dataAttr = 'data-' + dashedNamespace;
+	    var dataAttrElems = document.querySelectorAll( '[' + dataAttr + ']' );
+	    var jsDashElems = document.querySelectorAll( '.js-' + dashedNamespace );
+	    var elems = utils.makeArray( dataAttrElems )
+	      .concat( utils.makeArray( jsDashElems ) );
+	    var dataOptionsAttr = dataAttr + '-options';
+	    var jQuery = window.jQuery;
+
+	    elems.forEach( function( elem ) {
+	      var attr = elem.getAttribute( dataAttr ) ||
+	        elem.getAttribute( dataOptionsAttr );
+	      var options;
+	      try {
+	        options = attr && JSON.parse( attr );
+	      } catch ( error ) {
+	        // log error, do not initialize
+	        if ( console ) {
+	          console.error( 'Error parsing ' + dataAttr + ' on ' + elem.className +
+	          ': ' + error );
+	        }
+	        return;
+	      }
+	      // initialize
+	      var instance = new WidgetClass( elem, options );
+	      // make available via $().data('layoutname')
+	      if ( jQuery ) {
+	        jQuery.data( elem, namespace, instance );
+	      }
+	    });
+
+	  });
+	};
+
+	// -----  ----- //
+
+	return utils;
+
+	}));
+
+
+/***/ },
+/* 21 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
+	 * matchesSelector v2.0.1
+	 * matchesSelector( element, '.selector' )
+	 * MIT license
+	 */
+
+	/*jshint browser: true, strict: true, undef: true, unused: true */
+
+	( function( window, factory ) {
+	  /*global define: false, module: false */
+	  'use strict';
+	  // universal module definition
+	  if ( true ) {
+	    // AMD
+	    !(__WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	  } else if ( typeof module == 'object' && module.exports ) {
+	    // CommonJS
+	    module.exports = factory();
+	  } else {
+	    // browser global
+	    window.matchesSelector = factory();
+	  }
+
+	}( window, function factory() {
+	  'use strict';
+
+	  var matchesMethod = ( function() {
+	    var ElemProto = Element.prototype;
+	    // check for the standard method name first
+	    if ( ElemProto.matches ) {
+	      return 'matches';
+	    }
+	    // check un-prefixed
+	    if ( ElemProto.matchesSelector ) {
+	      return 'matchesSelector';
+	    }
+	    // check vendor prefixes
+	    var prefixes = [ 'webkit', 'moz', 'ms', 'o' ];
+
+	    for ( var i=0; i < prefixes.length; i++ ) {
+	      var prefix = prefixes[i];
+	      var method = prefix + 'MatchesSelector';
+	      if ( ElemProto[ method ] ) {
+	        return method;
+	      }
+	    }
+	  })();
+
+	  return function matchesSelector( elem, selector ) {
+	    return elem[ matchesMethod ]( selector );
+	  };
+
+	}));
+
+
+/***/ },
+/* 22 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// Flickity.Cell
+	( function( window, factory ) {
+	  // universal module definition
+	  /* jshint strict: false */
+	  if ( true ) {
+	    // AMD
+	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	      __webpack_require__(19)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function( getSize ) {
+	      return factory( window, getSize );
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	  } else if ( typeof module == 'object' && module.exports ) {
+	    // CommonJS
+	    module.exports = factory(
+	      window,
+	      require('get-size')
+	    );
+	  } else {
+	    // browser global
+	    window.Flickity = window.Flickity || {};
+	    window.Flickity.Cell = factory(
+	      window,
+	      window.getSize
+	    );
+	  }
+
+	}( window, function factory( window, getSize ) {
+
+	'use strict';
+
+	function Cell( elem, parent ) {
+	  this.element = elem;
+	  this.parent = parent;
+
+	  this.create();
+	}
+
+	var proto = Cell.prototype;
+
+	proto.create = function() {
+	  this.element.style.position = 'absolute';
+	  this.x = 0;
+	  this.shift = 0;
+	};
+
+	proto.destroy = function() {
+	  // reset style
+	  this.element.style.position = '';
+	  var side = this.parent.originSide;
+	  this.element.style[ side ] = '';
+	};
+
+	proto.getSize = function() {
+	  this.size = getSize( this.element );
+	};
+
+	proto.setPosition = function( x ) {
+	  this.x = x;
+	  this.updateTarget();
+	  this.renderPosition( x );
+	};
+
+	// setDefaultTarget v1 method, backwards compatibility, remove in v3
+	proto.updateTarget = proto.setDefaultTarget = function() {
+	  var marginProperty = this.parent.originSide == 'left' ? 'marginLeft' : 'marginRight';
+	  this.target = this.x + this.size[ marginProperty ] +
+	    this.size.width * this.parent.cellAlign;
+	};
+
+	proto.renderPosition = function( x ) {
+	  // render position of cell with in slider
+	  var side = this.parent.originSide;
+	  this.element.style[ side ] = this.parent.getPositionValue( x );
+	};
+
+	/**
+	 * @param {Integer} factor - 0, 1, or -1
+	**/
+	proto.wrapShift = function( shift ) {
+	  this.shift = shift;
+	  this.renderPosition( this.x + this.parent.slideableWidth * shift );
+	};
+
+	proto.remove = function() {
+	  this.element.parentNode.removeChild( this.element );
+	};
+
+	return Cell;
+
+	}));
+
+
+/***/ },
+/* 23 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;// slide
+	( function( window, factory ) {
+	  // universal module definition
+	  /* jshint strict: false */
+	  if ( true ) {
+	    // AMD
+	    !(__WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	  } else if ( typeof module == 'object' && module.exports ) {
+	    // CommonJS
+	    module.exports = factory();
+	  } else {
+	    // browser global
+	    window.Flickity = window.Flickity || {};
+	    window.Flickity.Slide = factory();
+	  }
+
+	}( window, function factory() {
+	'use strict';
+
+	function Slide( parent ) {
+	  this.parent = parent;
+	  this.isOriginLeft = parent.originSide == 'left';
+	  this.cells = [];
+	  this.outerWidth = 0;
+	  this.height = 0;
+	}
+
+	var proto = Slide.prototype;
+
+	proto.addCell = function( cell ) {
+	  this.cells.push( cell );
+	  this.outerWidth += cell.size.outerWidth;
+	  this.height = Math.max( cell.size.outerHeight, this.height );
+	  // first cell stuff
+	  if ( this.cells.length == 1 ) {
+	    this.x = cell.x; // x comes from first cell
+	    var beginMargin = this.isOriginLeft ? 'marginLeft' : 'marginRight';
+	    this.firstMargin = cell.size[ beginMargin ];
+	  }
+	};
+
+	proto.updateTarget = function() {
+	  var endMargin = this.isOriginLeft ? 'marginRight' : 'marginLeft';
+	  var lastCell = this.getLastCell();
+	  var lastMargin = lastCell ? lastCell.size[ endMargin ] : 0;
+	  var slideWidth = this.outerWidth - ( this.firstMargin + lastMargin );
+	  this.target = this.x + this.firstMargin + slideWidth * this.parent.cellAlign;
+	};
+
+	proto.getLastCell = function() {
+	  return this.cells[ this.cells.length - 1 ];
+	};
+
+	proto.select = function() {
+	  this.changeSelectedClass('add');
+	};
+
+	proto.unselect = function() {
+	  this.changeSelectedClass('remove');
+	};
+
+	proto.changeSelectedClass = function( method ) {
+	  this.cells.forEach( function( cell ) {
+	    cell.element.classList[ method ]('is-selected');
+	  });
+	};
+
+	proto.getCellElements = function() {
+	  return this.cells.map( function( cell ) {
+	    return cell.element;
+	  });
+	};
+
+	return Slide;
+
+	}));
+
+
+/***/ },
+/* 24 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// animate
+	( function( window, factory ) {
+	  // universal module definition
+	  /* jshint strict: false */
+	  if ( true ) {
+	    // AMD
+	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	      __webpack_require__(20)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function( utils ) {
+	      return factory( window, utils );
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	  } else if ( typeof module == 'object' && module.exports ) {
+	    // CommonJS
+	    module.exports = factory(
+	      window,
+	      require('fizzy-ui-utils')
+	    );
+	  } else {
+	    // browser global
+	    window.Flickity = window.Flickity || {};
+	    window.Flickity.animatePrototype = factory(
+	      window,
+	      window.fizzyUIUtils
+	    );
+	  }
+
+	}( window, function factory( window, utils ) {
+
+	'use strict';
+
+	// -------------------------- requestAnimationFrame -------------------------- //
+
+	// get rAF, prefixed, if present
+	var requestAnimationFrame = window.requestAnimationFrame ||
+	  window.webkitRequestAnimationFrame;
+
+	// fallback to setTimeout
+	var lastTime = 0;
+	if ( !requestAnimationFrame )  {
+	  requestAnimationFrame = function( callback ) {
+	    var currTime = new Date().getTime();
+	    var timeToCall = Math.max( 0, 16 - ( currTime - lastTime ) );
+	    var id = setTimeout( callback, timeToCall );
+	    lastTime = currTime + timeToCall;
+	    return id;
+	  };
+	}
+
+	// -------------------------- animate -------------------------- //
+
+	var proto = {};
+
+	proto.startAnimation = function() {
+	  if ( this.isAnimating ) {
+	    return;
+	  }
+
+	  this.isAnimating = true;
+	  this.restingFrames = 0;
+	  this.animate();
+	};
+
+	proto.animate = function() {
+	  this.applyDragForce();
+	  this.applySelectedAttraction();
+
+	  var previousX = this.x;
+
+	  this.integratePhysics();
+	  this.positionSlider();
+	  this.settle( previousX );
+	  // animate next frame
+	  if ( this.isAnimating ) {
+	    var _this = this;
+	    requestAnimationFrame( function animateFrame() {
+	      _this.animate();
+	    });
+	  }
+	};
+
+
+	var transformProperty = ( function () {
+	  var style = document.documentElement.style;
+	  if ( typeof style.transform == 'string' ) {
+	    return 'transform';
+	  }
+	  return 'WebkitTransform';
+	})();
+
+	proto.positionSlider = function() {
+	  var x = this.x;
+	  // wrap position around
+	  if ( this.options.wrapAround && this.cells.length > 1 ) {
+	    x = utils.modulo( x, this.slideableWidth );
+	    x = x - this.slideableWidth;
+	    this.shiftWrapCells( x );
+	  }
+
+	  x = x + this.cursorPosition;
+	  // reverse if right-to-left and using transform
+	  x = this.options.rightToLeft && transformProperty ? -x : x;
+	  var value = this.getPositionValue( x );
+	  // use 3D tranforms for hardware acceleration on iOS
+	  // but use 2D when settled, for better font-rendering
+	  this.slider.style[ transformProperty ] = this.isAnimating ?
+	    'translate3d(' + value + ',0,0)' : 'translateX(' + value + ')';
+
+	  // scroll event
+	  var firstSlide = this.slides[0];
+	  if ( firstSlide ) {
+	    var positionX = -this.x - firstSlide.target;
+	    var progress = positionX / this.slidesWidth;
+	    this.dispatchEvent( 'scroll', null, [ progress, positionX ] );
+	  }
+	};
+
+	proto.positionSliderAtSelected = function() {
+	  if ( !this.cells.length ) {
+	    return;
+	  }
+	  this.x = -this.selectedSlide.target;
+	  this.positionSlider();
+	};
+
+	proto.getPositionValue = function( position ) {
+	  if ( this.options.percentPosition ) {
+	    // percent position, round to 2 digits, like 12.34%
+	    return ( Math.round( ( position / this.size.innerWidth ) * 10000 ) * 0.01 )+ '%';
+	  } else {
+	    // pixel positioning
+	    return Math.round( position ) + 'px';
+	  }
+	};
+
+	proto.settle = function( previousX ) {
+	  // keep track of frames where x hasn't moved
+	  if ( !this.isPointerDown && Math.round( this.x * 100 ) == Math.round( previousX * 100 ) ) {
+	    this.restingFrames++;
+	  }
+	  // stop animating if resting for 3 or more frames
+	  if ( this.restingFrames > 2 ) {
+	    this.isAnimating = false;
+	    delete this.isFreeScrolling;
+	    // render position with translateX when settled
+	    this.positionSlider();
+	    this.dispatchEvent('settle');
+	  }
+	};
+
+	proto.shiftWrapCells = function( x ) {
+	  // shift before cells
+	  var beforeGap = this.cursorPosition + x;
+	  this._shiftCells( this.beforeShiftCells, beforeGap, -1 );
+	  // shift after cells
+	  var afterGap = this.size.innerWidth - ( x + this.slideableWidth + this.cursorPosition );
+	  this._shiftCells( this.afterShiftCells, afterGap, 1 );
+	};
+
+	proto._shiftCells = function( cells, gap, shift ) {
+	  for ( var i=0; i < cells.length; i++ ) {
+	    var cell = cells[i];
+	    var cellShift = gap > 0 ? shift : 0;
+	    cell.wrapShift( cellShift );
+	    gap -= cell.size.outerWidth;
+	  }
+	};
+
+	proto._unshiftCells = function( cells ) {
+	  if ( !cells || !cells.length ) {
+	    return;
+	  }
+	  for ( var i=0; i < cells.length; i++ ) {
+	    cells[i].wrapShift( 0 );
+	  }
+	};
+
+	// -------------------------- physics -------------------------- //
+
+	proto.integratePhysics = function() {
+	  this.x += this.velocity;
+	  this.velocity *= this.getFrictionFactor();
+	};
+
+	proto.applyForce = function( force ) {
+	  this.velocity += force;
+	};
+
+	proto.getFrictionFactor = function() {
+	  return 1 - this.options[ this.isFreeScrolling ? 'freeScrollFriction' : 'friction' ];
+	};
+
+	proto.getRestingPosition = function() {
+	  // my thanks to Steven Wittens, who simplified this math greatly
+	  return this.x + this.velocity / ( 1 - this.getFrictionFactor() );
+	};
+
+	proto.applyDragForce = function() {
+	  if ( !this.isPointerDown ) {
+	    return;
+	  }
+	  // change the position to drag position by applying force
+	  var dragVelocity = this.dragX - this.x;
+	  var dragForce = dragVelocity - this.velocity;
+	  this.applyForce( dragForce );
+	};
+
+	proto.applySelectedAttraction = function() {
+	  // do not attract if pointer down or no cells
+	  if ( this.isPointerDown || this.isFreeScrolling || !this.cells.length ) {
+	    return;
+	  }
+	  var distance = this.selectedSlide.target * -1 - this.x;
+	  var force = distance * this.options.selectedAttraction;
+	  this.applyForce( force );
+	};
+
+	return proto;
+
+	}));
+
+
+/***/ },
+/* 25 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// drag
+	( function( window, factory ) {
+	  // universal module definition
+	  /* jshint strict: false */
+	  if ( true ) {
+	    // AMD
+	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	      __webpack_require__(17),
+	      __webpack_require__(26),
+	      __webpack_require__(20)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function( Flickity, Unidragger, utils ) {
+	      return factory( window, Flickity, Unidragger, utils );
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	  } else if ( typeof module == 'object' && module.exports ) {
+	    // CommonJS
+	    module.exports = factory(
+	      window,
+	      require('./flickity'),
+	      require('unidragger'),
+	      require('fizzy-ui-utils')
+	    );
+	  } else {
+	    // browser global
+	    window.Flickity = factory(
+	      window,
+	      window.Flickity,
+	      window.Unidragger,
+	      window.fizzyUIUtils
+	    );
+	  }
+
+	}( window, function factory( window, Flickity, Unidragger, utils ) {
+
+	'use strict';
+
+	// ----- defaults ----- //
+
+	utils.extend( Flickity.defaults, {
+	  draggable: true,
+	  dragThreshold: 3,
+	});
+
+	// ----- create ----- //
+
+	Flickity.createMethods.push('_createDrag');
+
+	// -------------------------- drag prototype -------------------------- //
+
+	var proto = Flickity.prototype;
+	utils.extend( proto, Unidragger.prototype );
+
+	// --------------------------  -------------------------- //
+
+	proto._createDrag = function() {
+	  this.on( 'activate', this.bindDrag );
+	  this.on( 'uiChange', this._uiChangeDrag );
+	  this.on( 'childUIPointerDown', this._childUIPointerDownDrag );
+	  this.on( 'deactivate', this.unbindDrag );
+	};
+
+	proto.bindDrag = function() {
+	  if ( !this.options.draggable || this.isDragBound ) {
+	    return;
+	  }
+	  this.element.classList.add('is-draggable');
+	  this.handles = [ this.viewport ];
+	  this.bindHandles();
+	  this.isDragBound = true;
+	};
+
+	proto.unbindDrag = function() {
+	  if ( !this.isDragBound ) {
+	    return;
+	  }
+	  this.element.classList.remove('is-draggable');
+	  this.unbindHandles();
+	  delete this.isDragBound;
+	};
+
+	proto._uiChangeDrag = function() {
+	  delete this.isFreeScrolling;
+	};
+
+	proto._childUIPointerDownDrag = function( event ) {
+	  event.preventDefault();
+	  this.pointerDownFocus( event );
+	};
+
+	// -------------------------- pointer events -------------------------- //
+
+	// nodes that have text fields
+	var cursorNodes = {
+	  TEXTAREA: true,
+	  INPUT: true,
+	};
+
+	// input types that do not have text fields
+	var clickTypes = {
+	  radio: true,
+	  checkbox: true,
+	  button: true,
+	  submit: true,
+	  image: true,
+	  file: true,
+	};
+
+	proto.pointerDown = function( event, pointer ) {
+	  // dismiss inputs with text fields. #404
+	  var isCursorInput = cursorNodes[ event.target.nodeName ] &&
+	    !clickTypes[ event.target.type ];
+	  if ( isCursorInput ) {
+	    // reset pointerDown logic
+	    this.isPointerDown = false;
+	    delete this.pointerIdentifier;
+	    return;
+	  }
+
+	  this._dragPointerDown( event, pointer );
+
+	  // kludge to blur focused inputs in dragger
+	  var focused = document.activeElement;
+	  if ( focused && focused.blur && focused != this.element &&
+	    // do not blur body for IE9 & 10, #117
+	    focused != document.body ) {
+	    focused.blur();
+	  }
+	  this.pointerDownFocus( event );
+	  // stop if it was moving
+	  this.dragX = this.x;
+	  this.viewport.classList.add('is-pointer-down');
+	  // bind move and end events
+	  this._bindPostStartEvents( event );
+	  // track scrolling
+	  this.pointerDownScroll = getScrollPosition();
+	  window.addEventListener( 'scroll', this );
+
+	  this.dispatchEvent( 'pointerDown', event, [ pointer ] );
+	};
+
+	var touchStartEvents = {
+	  touchstart: true,
+	  MSPointerDown: true
+	};
+
+	var focusNodes = {
+	  INPUT: true,
+	  SELECT: true
+	};
+
+	proto.pointerDownFocus = function( event ) {
+	  // focus element, if not touch, and its not an input or select
+	  if ( !this.options.accessibility || touchStartEvents[ event.type ] ||
+	      focusNodes[ event.target.nodeName ] ) {
+	    return;
+	  }
+	  var prevScrollY = window.pageYOffset;
+	  this.element.focus();
+	  // hack to fix scroll jump after focus, #76
+	  if ( window.pageYOffset != prevScrollY ) {
+	    window.scrollTo( window.pageXOffset, prevScrollY );
+	  }
+	};
+
+	proto.canPreventDefaultOnPointerDown = function( event ) {
+	  // prevent default, unless touchstart or <select>
+	  var isTouchstart = event.type == 'touchstart';
+	  var targetNodeName = event.target.nodeName;
+	  return !isTouchstart && targetNodeName != 'SELECT';
+	};
+
+	// ----- move ----- //
+
+	proto.hasDragStarted = function( moveVector ) {
+	  return Math.abs( moveVector.x ) > this.options.dragThreshold;
+	};
+
+	// ----- up ----- //
+
+	proto.pointerUp = function( event, pointer ) {
+	  delete this.isTouchScrolling;
+	  this.viewport.classList.remove('is-pointer-down');
+	  this.dispatchEvent( 'pointerUp', event, [ pointer ] );
+	  this._dragPointerUp( event, pointer );
+	};
+
+	proto.pointerDone = function() {
+	  window.removeEventListener( 'scroll', this );
+	  delete this.pointerDownScroll;
+	};
+
+	// -------------------------- dragging -------------------------- //
+
+	proto.dragStart = function( event, pointer ) {
+	  this.dragStartPosition = this.x;
+	  this.startAnimation();
+	  this.dispatchEvent( 'dragStart', event, [ pointer ] );
+	};
+
+	proto.pointerMove = function( event, pointer ) {
+	  var moveVector = this._dragPointerMove( event, pointer );
+	  this.dispatchEvent( 'pointerMove', event, [ pointer, moveVector ] );
+	  this._dragMove( event, pointer, moveVector );
+	};
+
+	proto.dragMove = function( event, pointer, moveVector ) {
+	  event.preventDefault();
+
+	  this.previousDragX = this.dragX;
+	  // reverse if right-to-left
+	  var direction = this.options.rightToLeft ? -1 : 1;
+	  var dragX = this.dragStartPosition + moveVector.x * direction;
+
+	  if ( !this.options.wrapAround && this.slides.length ) {
+	    // slow drag
+	    var originBound = Math.max( -this.slides[0].target, this.dragStartPosition );
+	    dragX = dragX > originBound ? ( dragX + originBound ) * 0.5 : dragX;
+	    var endBound = Math.min( -this.getLastSlide().target, this.dragStartPosition );
+	    dragX = dragX < endBound ? ( dragX + endBound ) * 0.5 : dragX;
+	  }
+
+	  this.dragX = dragX;
+
+	  this.dragMoveTime = new Date();
+	  this.dispatchEvent( 'dragMove', event, [ pointer, moveVector ] );
+	};
+
+	proto.dragEnd = function( event, pointer ) {
+	  if ( this.options.freeScroll ) {
+	    this.isFreeScrolling = true;
+	  }
+	  // set selectedIndex based on where flick will end up
+	  var index = this.dragEndRestingSelect();
+
+	  if ( this.options.freeScroll && !this.options.wrapAround ) {
+	    // if free-scroll & not wrap around
+	    // do not free-scroll if going outside of bounding slides
+	    // so bounding slides can attract slider, and keep it in bounds
+	    var restingX = this.getRestingPosition();
+	    this.isFreeScrolling = -restingX > this.slides[0].target &&
+	      -restingX < this.getLastSlide().target;
+	  } else if ( !this.options.freeScroll && index == this.selectedIndex ) {
+	    // boost selection if selected index has not changed
+	    index += this.dragEndBoostSelect();
+	  }
+	  delete this.previousDragX;
+	  // apply selection
+	  // TODO refactor this, selecting here feels weird
+	  // HACK, set flag so dragging stays in correct direction
+	  this.isDragSelect = this.options.wrapAround;
+	  this.select( index );
+	  delete this.isDragSelect;
+	  this.dispatchEvent( 'dragEnd', event, [ pointer ] );
+	};
+
+	proto.dragEndRestingSelect = function() {
+	  var restingX = this.getRestingPosition();
+	  // how far away from selected slide
+	  var distance = Math.abs( this.getSlideDistance( -restingX, this.selectedIndex ) );
+	  // get closet resting going up and going down
+	  var positiveResting = this._getClosestResting( restingX, distance, 1 );
+	  var negativeResting = this._getClosestResting( restingX, distance, -1 );
+	  // use closer resting for wrap-around
+	  var index = positiveResting.distance < negativeResting.distance ?
+	    positiveResting.index : negativeResting.index;
+	  return index;
+	};
+
+	/**
+	 * given resting X and distance to selected cell
+	 * get the distance and index of the closest cell
+	 * @param {Number} restingX - estimated post-flick resting position
+	 * @param {Number} distance - distance to selected cell
+	 * @param {Integer} increment - +1 or -1, going up or down
+	 * @returns {Object} - { distance: {Number}, index: {Integer} }
+	 */
+	proto._getClosestResting = function( restingX, distance, increment ) {
+	  var index = this.selectedIndex;
+	  var minDistance = Infinity;
+	  var condition = this.options.contain && !this.options.wrapAround ?
+	    // if contain, keep going if distance is equal to minDistance
+	    function( d, md ) { return d <= md; } : function( d, md ) { return d < md; };
+	  while ( condition( distance, minDistance ) ) {
+	    // measure distance to next cell
+	    index += increment;
+	    minDistance = distance;
+	    distance = this.getSlideDistance( -restingX, index );
+	    if ( distance === null ) {
+	      break;
+	    }
+	    distance = Math.abs( distance );
+	  }
+	  return {
+	    distance: minDistance,
+	    // selected was previous index
+	    index: index - increment
+	  };
+	};
+
+	/**
+	 * measure distance between x and a slide target
+	 * @param {Number} x
+	 * @param {Integer} index - slide index
+	 */
+	proto.getSlideDistance = function( x, index ) {
+	  var len = this.slides.length;
+	  // wrap around if at least 2 slides
+	  var isWrapAround = this.options.wrapAround && len > 1;
+	  var slideIndex = isWrapAround ? utils.modulo( index, len ) : index;
+	  var slide = this.slides[ slideIndex ];
+	  if ( !slide ) {
+	    return null;
+	  }
+	  // add distance for wrap-around slides
+	  var wrap = isWrapAround ? this.slideableWidth * Math.floor( index / len ) : 0;
+	  return x - ( slide.target + wrap );
+	};
+
+	proto.dragEndBoostSelect = function() {
+	  // do not boost if no previousDragX or dragMoveTime
+	  if ( this.previousDragX === undefined || !this.dragMoveTime ||
+	    // or if drag was held for 100 ms
+	    new Date() - this.dragMoveTime > 100 ) {
+	    return 0;
+	  }
+
+	  var distance = this.getSlideDistance( -this.dragX, this.selectedIndex );
+	  var delta = this.previousDragX - this.dragX;
+	  if ( distance > 0 && delta > 0 ) {
+	    // boost to next if moving towards the right, and positive velocity
+	    return 1;
+	  } else if ( distance < 0 && delta < 0 ) {
+	    // boost to previous if moving towards the left, and negative velocity
+	    return -1;
+	  }
+	  return 0;
+	};
+
+	// ----- staticClick ----- //
+
+	proto.staticClick = function( event, pointer ) {
+	  // get clickedCell, if cell was clicked
+	  var clickedCell = this.getParentCell( event.target );
+	  var cellElem = clickedCell && clickedCell.element;
+	  var cellIndex = clickedCell && this.cells.indexOf( clickedCell );
+	  this.dispatchEvent( 'staticClick', event, [ pointer, cellElem, cellIndex ] );
+	};
+
+	// ----- scroll ----- //
+
+	proto.onscroll = function() {
+	  var scroll = getScrollPosition();
+	  var scrollMoveX = this.pointerDownScroll.x - scroll.x;
+	  var scrollMoveY = this.pointerDownScroll.y - scroll.y;
+	  // cancel click/tap if scroll is too much
+	  if ( Math.abs( scrollMoveX ) > 3 || Math.abs( scrollMoveY ) > 3 ) {
+	    this._pointerDone();
+	  }
+	};
+
+	// ----- utils ----- //
+
+	function getScrollPosition() {
+	  return {
+	    x: window.pageXOffset,
+	    y: window.pageYOffset
+	  };
+	}
+
+	// -----  ----- //
+
+	return Flickity;
+
+	}));
+
+
+/***/ },
+/* 26 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	 * Unidragger v2.1.0
+	 * Draggable base class
+	 * MIT license
+	 */
+
+	/*jshint browser: true, unused: true, undef: true, strict: true */
+
+	( function( window, factory ) {
+	  // universal module definition
+	  /*jshint strict: false */ /*globals define, module, require */
+
+	  if ( true ) {
+	    // AMD
+	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	      __webpack_require__(27)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function( Unipointer ) {
+	      return factory( window, Unipointer );
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	  } else if ( typeof module == 'object' && module.exports ) {
+	    // CommonJS
+	    module.exports = factory(
+	      window,
+	      require('unipointer')
+	    );
+	  } else {
+	    // browser global
+	    window.Unidragger = factory(
+	      window,
+	      window.Unipointer
+	    );
+	  }
+
+	}( window, function factory( window, Unipointer ) {
+
+	'use strict';
+
+	// -----  ----- //
+
+	function noop() {}
+
+	// -------------------------- Unidragger -------------------------- //
+
+	function Unidragger() {}
+
+	// inherit Unipointer & EvEmitter
+	var proto = Unidragger.prototype = Object.create( Unipointer.prototype );
+
+	// ----- bind start ----- //
+
+	proto.bindHandles = function() {
+	  this._bindHandles( true );
+	};
+
+	proto.unbindHandles = function() {
+	  this._bindHandles( false );
+	};
+
+	var navigator = window.navigator;
+	/**
+	 * works as unbinder, as you can .bindHandles( false ) to unbind
+	 * @param {Boolean} isBind - will unbind if falsey
+	 */
+	proto._bindHandles = function( isBind ) {
+	  // munge isBind, default to true
+	  isBind = isBind === undefined ? true : !!isBind;
+	  // extra bind logic
+	  var binderExtra;
+	  if ( navigator.pointerEnabled ) {
+	    binderExtra = function( handle ) {
+	      // disable scrolling on the element
+	      handle.style.touchAction = isBind ? 'none' : '';
+	    };
+	  } else if ( navigator.msPointerEnabled ) {
+	    binderExtra = function( handle ) {
+	      // disable scrolling on the element
+	      handle.style.msTouchAction = isBind ? 'none' : '';
+	    };
+	  } else {
+	    binderExtra = noop;
+	  }
+	  // bind each handle
+	  var bindMethod = isBind ? 'addEventListener' : 'removeEventListener';
+	  for ( var i=0; i < this.handles.length; i++ ) {
+	    var handle = this.handles[i];
+	    this._bindStartEvent( handle, isBind );
+	    binderExtra( handle );
+	    handle[ bindMethod ]( 'click', this );
+	  }
+	};
+
+	// ----- start event ----- //
+
+	/**
+	 * pointer start
+	 * @param {Event} event
+	 * @param {Event or Touch} pointer
+	 */
+	proto.pointerDown = function( event, pointer ) {
+	  // dismiss range sliders
+	  if ( event.target.nodeName == 'INPUT' && event.target.type == 'range' ) {
+	    // reset pointerDown logic
+	    this.isPointerDown = false;
+	    delete this.pointerIdentifier;
+	    return;
+	  }
+
+	  this._dragPointerDown( event, pointer );
+	  // kludge to blur focused inputs in dragger
+	  var focused = document.activeElement;
+	  if ( focused && focused.blur ) {
+	    focused.blur();
+	  }
+	  // bind move and end events
+	  this._bindPostStartEvents( event );
+	  this.emitEvent( 'pointerDown', [ event, pointer ] );
+	};
+
+	// base pointer down logic
+	proto._dragPointerDown = function( event, pointer ) {
+	  // track to see when dragging starts
+	  this.pointerDownPoint = Unipointer.getPointerPoint( pointer );
+
+	  var canPreventDefault = this.canPreventDefaultOnPointerDown( event, pointer );
+	  if ( canPreventDefault ) {
+	    event.preventDefault();
+	  }
+	};
+
+	// overwriteable method so Flickity can prevent for scrolling
+	proto.canPreventDefaultOnPointerDown = function( event ) {
+	  // prevent default, unless touchstart or <select>
+	  return event.target.nodeName != 'SELECT';
+	};
+
+	// ----- move event ----- //
+
+	/**
+	 * drag move
+	 * @param {Event} event
+	 * @param {Event or Touch} pointer
+	 */
+	proto.pointerMove = function( event, pointer ) {
+	  var moveVector = this._dragPointerMove( event, pointer );
+	  this.emitEvent( 'pointerMove', [ event, pointer, moveVector ] );
+	  this._dragMove( event, pointer, moveVector );
+	};
+
+	// base pointer move logic
+	proto._dragPointerMove = function( event, pointer ) {
+	  var movePoint = Unipointer.getPointerPoint( pointer );
+	  var moveVector = {
+	    x: movePoint.x - this.pointerDownPoint.x,
+	    y: movePoint.y - this.pointerDownPoint.y
+	  };
+	  // start drag if pointer has moved far enough to start drag
+	  if ( !this.isDragging && this.hasDragStarted( moveVector ) ) {
+	    this._dragStart( event, pointer );
+	  }
+	  return moveVector;
+	};
+
+	// condition if pointer has moved far enough to start drag
+	proto.hasDragStarted = function( moveVector ) {
+	  return Math.abs( moveVector.x ) > 3 || Math.abs( moveVector.y ) > 3;
+	};
+
+
+	// ----- end event ----- //
+
+	/**
+	 * pointer up
+	 * @param {Event} event
+	 * @param {Event or Touch} pointer
+	 */
+	proto.pointerUp = function( event, pointer ) {
+	  this.emitEvent( 'pointerUp', [ event, pointer ] );
+	  this._dragPointerUp( event, pointer );
+	};
+
+	proto._dragPointerUp = function( event, pointer ) {
+	  if ( this.isDragging ) {
+	    this._dragEnd( event, pointer );
+	  } else {
+	    // pointer didn't move enough for drag to start
+	    this._staticClick( event, pointer );
+	  }
+	};
+
+	// -------------------------- drag -------------------------- //
+
+	// dragStart
+	proto._dragStart = function( event, pointer ) {
+	  this.isDragging = true;
+	  this.dragStartPoint = Unipointer.getPointerPoint( pointer );
+	  // prevent clicks
+	  this.isPreventingClicks = true;
+
+	  this.dragStart( event, pointer );
+	};
+
+	proto.dragStart = function( event, pointer ) {
+	  this.emitEvent( 'dragStart', [ event, pointer ] );
+	};
+
+	// dragMove
+	proto._dragMove = function( event, pointer, moveVector ) {
+	  // do not drag if not dragging yet
+	  if ( !this.isDragging ) {
+	    return;
+	  }
+
+	  this.dragMove( event, pointer, moveVector );
+	};
+
+	proto.dragMove = function( event, pointer, moveVector ) {
+	  event.preventDefault();
+	  this.emitEvent( 'dragMove', [ event, pointer, moveVector ] );
+	};
+
+	// dragEnd
+	proto._dragEnd = function( event, pointer ) {
+	  // set flags
+	  this.isDragging = false;
+	  // re-enable clicking async
+	  setTimeout( function() {
+	    delete this.isPreventingClicks;
+	  }.bind( this ) );
+
+	  this.dragEnd( event, pointer );
+	};
+
+	proto.dragEnd = function( event, pointer ) {
+	  this.emitEvent( 'dragEnd', [ event, pointer ] );
+	};
+
+	// ----- onclick ----- //
+
+	// handle all clicks and prevent clicks when dragging
+	proto.onclick = function( event ) {
+	  if ( this.isPreventingClicks ) {
+	    event.preventDefault();
+	  }
+	};
+
+	// ----- staticClick ----- //
+
+	// triggered after pointer down & up with no/tiny movement
+	proto._staticClick = function( event, pointer ) {
+	  // ignore emulated mouse up clicks
+	  if ( this.isIgnoringMouseUp && event.type == 'mouseup' ) {
+	    return;
+	  }
+
+	  // allow click in <input>s and <textarea>s
+	  var nodeName = event.target.nodeName;
+	  if ( nodeName == 'INPUT' || nodeName == 'TEXTAREA' ) {
+	    event.target.focus();
+	  }
+	  this.staticClick( event, pointer );
+
+	  // set flag for emulated clicks 300ms after touchend
+	  if ( event.type != 'mouseup' ) {
+	    this.isIgnoringMouseUp = true;
+	    // reset flag after 300ms
+	    setTimeout( function() {
+	      delete this.isIgnoringMouseUp;
+	    }.bind( this ), 400 );
+	  }
+	};
+
+	proto.staticClick = function( event, pointer ) {
+	  this.emitEvent( 'staticClick', [ event, pointer ] );
+	};
+
+	// ----- utils ----- //
+
+	Unidragger.getPointerPoint = Unipointer.getPointerPoint;
+
+	// -----  ----- //
+
+	return Unidragger;
+
+	}));
+
+
+/***/ },
+/* 27 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	 * Unipointer v2.1.0
+	 * base class for doing one thing with pointer event
+	 * MIT license
+	 */
+
+	/*jshint browser: true, undef: true, unused: true, strict: true */
+
+	( function( window, factory ) {
+	  // universal module definition
+	  /* jshint strict: false */ /*global define, module, require */
+	  if ( true ) {
+	    // AMD
+	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	      __webpack_require__(18)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function( EvEmitter ) {
+	      return factory( window, EvEmitter );
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	  } else if ( typeof module == 'object' && module.exports ) {
+	    // CommonJS
+	    module.exports = factory(
+	      window,
+	      require('ev-emitter')
+	    );
+	  } else {
+	    // browser global
+	    window.Unipointer = factory(
+	      window,
+	      window.EvEmitter
+	    );
+	  }
+
+	}( window, function factory( window, EvEmitter ) {
+
+	'use strict';
+
+	function noop() {}
+
+	function Unipointer() {}
+
+	// inherit EvEmitter
+	var proto = Unipointer.prototype = Object.create( EvEmitter.prototype );
+
+	proto.bindStartEvent = function( elem ) {
+	  this._bindStartEvent( elem, true );
+	};
+
+	proto.unbindStartEvent = function( elem ) {
+	  this._bindStartEvent( elem, false );
+	};
+
+	/**
+	 * works as unbinder, as you can ._bindStart( false ) to unbind
+	 * @param {Boolean} isBind - will unbind if falsey
+	 */
+	proto._bindStartEvent = function( elem, isBind ) {
+	  // munge isBind, default to true
+	  isBind = isBind === undefined ? true : !!isBind;
+	  var bindMethod = isBind ? 'addEventListener' : 'removeEventListener';
+
+	  if ( window.navigator.pointerEnabled ) {
+	    // W3C Pointer Events, IE11. See https://coderwall.com/p/mfreca
+	    elem[ bindMethod ]( 'pointerdown', this );
+	  } else if ( window.navigator.msPointerEnabled ) {
+	    // IE10 Pointer Events
+	    elem[ bindMethod ]( 'MSPointerDown', this );
+	  } else {
+	    // listen for both, for devices like Chrome Pixel
+	    elem[ bindMethod ]( 'mousedown', this );
+	    elem[ bindMethod ]( 'touchstart', this );
+	  }
+	};
+
+	// trigger handler methods for events
+	proto.handleEvent = function( event ) {
+	  var method = 'on' + event.type;
+	  if ( this[ method ] ) {
+	    this[ method ]( event );
+	  }
+	};
+
+	// returns the touch that we're keeping track of
+	proto.getTouch = function( touches ) {
+	  for ( var i=0; i < touches.length; i++ ) {
+	    var touch = touches[i];
+	    if ( touch.identifier == this.pointerIdentifier ) {
+	      return touch;
+	    }
+	  }
+	};
+
+	// ----- start event ----- //
+
+	proto.onmousedown = function( event ) {
+	  // dismiss clicks from right or middle buttons
+	  var button = event.button;
+	  if ( button && ( button !== 0 && button !== 1 ) ) {
+	    return;
+	  }
+	  this._pointerDown( event, event );
+	};
+
+	proto.ontouchstart = function( event ) {
+	  this._pointerDown( event, event.changedTouches[0] );
+	};
+
+	proto.onMSPointerDown =
+	proto.onpointerdown = function( event ) {
+	  this._pointerDown( event, event );
+	};
+
+	/**
+	 * pointer start
+	 * @param {Event} event
+	 * @param {Event or Touch} pointer
+	 */
+	proto._pointerDown = function( event, pointer ) {
+	  // dismiss other pointers
+	  if ( this.isPointerDown ) {
+	    return;
+	  }
+
+	  this.isPointerDown = true;
+	  // save pointer identifier to match up touch events
+	  this.pointerIdentifier = pointer.pointerId !== undefined ?
+	    // pointerId for pointer events, touch.indentifier for touch events
+	    pointer.pointerId : pointer.identifier;
+
+	  this.pointerDown( event, pointer );
+	};
+
+	proto.pointerDown = function( event, pointer ) {
+	  this._bindPostStartEvents( event );
+	  this.emitEvent( 'pointerDown', [ event, pointer ] );
+	};
+
+	// hash of events to be bound after start event
+	var postStartEvents = {
+	  mousedown: [ 'mousemove', 'mouseup' ],
+	  touchstart: [ 'touchmove', 'touchend', 'touchcancel' ],
+	  pointerdown: [ 'pointermove', 'pointerup', 'pointercancel' ],
+	  MSPointerDown: [ 'MSPointerMove', 'MSPointerUp', 'MSPointerCancel' ]
+	};
+
+	proto._bindPostStartEvents = function( event ) {
+	  if ( !event ) {
+	    return;
+	  }
+	  // get proper events to match start event
+	  var events = postStartEvents[ event.type ];
+	  // bind events to node
+	  events.forEach( function( eventName ) {
+	    window.addEventListener( eventName, this );
+	  }, this );
+	  // save these arguments
+	  this._boundPointerEvents = events;
+	};
+
+	proto._unbindPostStartEvents = function() {
+	  // check for _boundEvents, in case dragEnd triggered twice (old IE8 bug)
+	  if ( !this._boundPointerEvents ) {
+	    return;
+	  }
+	  this._boundPointerEvents.forEach( function( eventName ) {
+	    window.removeEventListener( eventName, this );
+	  }, this );
+
+	  delete this._boundPointerEvents;
+	};
+
+	// ----- move event ----- //
+
+	proto.onmousemove = function( event ) {
+	  this._pointerMove( event, event );
+	};
+
+	proto.onMSPointerMove =
+	proto.onpointermove = function( event ) {
+	  if ( event.pointerId == this.pointerIdentifier ) {
+	    this._pointerMove( event, event );
+	  }
+	};
+
+	proto.ontouchmove = function( event ) {
+	  var touch = this.getTouch( event.changedTouches );
+	  if ( touch ) {
+	    this._pointerMove( event, touch );
+	  }
+	};
+
+	/**
+	 * pointer move
+	 * @param {Event} event
+	 * @param {Event or Touch} pointer
+	 * @private
+	 */
+	proto._pointerMove = function( event, pointer ) {
+	  this.pointerMove( event, pointer );
+	};
+
+	// public
+	proto.pointerMove = function( event, pointer ) {
+	  this.emitEvent( 'pointerMove', [ event, pointer ] );
+	};
+
+	// ----- end event ----- //
+
+
+	proto.onmouseup = function( event ) {
+	  this._pointerUp( event, event );
+	};
+
+	proto.onMSPointerUp =
+	proto.onpointerup = function( event ) {
+	  if ( event.pointerId == this.pointerIdentifier ) {
+	    this._pointerUp( event, event );
+	  }
+	};
+
+	proto.ontouchend = function( event ) {
+	  var touch = this.getTouch( event.changedTouches );
+	  if ( touch ) {
+	    this._pointerUp( event, touch );
+	  }
+	};
+
+	/**
+	 * pointer up
+	 * @param {Event} event
+	 * @param {Event or Touch} pointer
+	 * @private
+	 */
+	proto._pointerUp = function( event, pointer ) {
+	  this._pointerDone();
+	  this.pointerUp( event, pointer );
+	};
+
+	// public
+	proto.pointerUp = function( event, pointer ) {
+	  this.emitEvent( 'pointerUp', [ event, pointer ] );
+	};
+
+	// ----- pointer done ----- //
+
+	// triggered on pointer up & pointer cancel
+	proto._pointerDone = function() {
+	  // reset properties
+	  this.isPointerDown = false;
+	  delete this.pointerIdentifier;
+	  // remove events
+	  this._unbindPostStartEvents();
+	  this.pointerDone();
+	};
+
+	proto.pointerDone = noop;
+
+	// ----- pointer cancel ----- //
+
+	proto.onMSPointerCancel =
+	proto.onpointercancel = function( event ) {
+	  if ( event.pointerId == this.pointerIdentifier ) {
+	    this._pointerCancel( event, event );
+	  }
+	};
+
+	proto.ontouchcancel = function( event ) {
+	  var touch = this.getTouch( event.changedTouches );
+	  if ( touch ) {
+	    this._pointerCancel( event, touch );
+	  }
+	};
+
+	/**
+	 * pointer cancel
+	 * @param {Event} event
+	 * @param {Event or Touch} pointer
+	 * @private
+	 */
+	proto._pointerCancel = function( event, pointer ) {
+	  this._pointerDone();
+	  this.pointerCancel( event, pointer );
+	};
+
+	// public
+	proto.pointerCancel = function( event, pointer ) {
+	  this.emitEvent( 'pointerCancel', [ event, pointer ] );
+	};
+
+	// -----  ----- //
+
+	// utility function for getting x/y coords from event
+	Unipointer.getPointerPoint = function( pointer ) {
+	  return {
+	    x: pointer.pageX,
+	    y: pointer.pageY
+	  };
+	};
+
+	// -----  ----- //
+
+	return Unipointer;
+
+	}));
+
+
+/***/ },
+/* 28 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// prev/next buttons
+	( function( window, factory ) {
+	  // universal module definition
+	  /* jshint strict: false */
+	  if ( true ) {
+	    // AMD
+	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	      __webpack_require__(17),
+	      __webpack_require__(29),
+	      __webpack_require__(20)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function( Flickity, TapListener, utils ) {
+	      return factory( window, Flickity, TapListener, utils );
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	  } else if ( typeof module == 'object' && module.exports ) {
+	    // CommonJS
+	    module.exports = factory(
+	      window,
+	      require('./flickity'),
+	      require('tap-listener'),
+	      require('fizzy-ui-utils')
+	    );
+	  } else {
+	    // browser global
+	    factory(
+	      window,
+	      window.Flickity,
+	      window.TapListener,
+	      window.fizzyUIUtils
+	    );
+	  }
+
+	}( window, function factory( window, Flickity, TapListener, utils ) {
+	'use strict';
+
+	var svgURI = 'http://www.w3.org/2000/svg';
+
+	// -------------------------- PrevNextButton -------------------------- //
+
+	function PrevNextButton( direction, parent ) {
+	  this.direction = direction;
+	  this.parent = parent;
+	  this._create();
+	}
+
+	PrevNextButton.prototype = new TapListener();
+
+	PrevNextButton.prototype._create = function() {
+	  // properties
+	  this.isEnabled = true;
+	  this.isPrevious = this.direction == -1;
+	  var leftDirection = this.parent.options.rightToLeft ? 1 : -1;
+	  this.isLeft = this.direction == leftDirection;
+
+	  var element = this.element = document.createElement('button');
+	  element.className = 'flickity-prev-next-button';
+	  element.className += this.isPrevious ? ' previous' : ' next';
+	  // prevent button from submitting form http://stackoverflow.com/a/10836076/182183
+	  element.setAttribute( 'type', 'button' );
+	  // init as disabled
+	  this.disable();
+
+	  element.setAttribute( 'aria-label', this.isPrevious ? 'previous' : 'next' );
+
+	  // create arrow
+	  var svg = this.createSVG();
+	  element.appendChild( svg );
+	  // update on select
+	  this.parent.on( 'select', function() {
+	    this.update();
+	  }.bind( this ));
+	  // tap
+	  this.on( 'tap', this.onTap );
+	  // pointerDown
+	  this.on( 'pointerDown', function onPointerDown( button, event ) {
+	    this.parent.childUIPointerDown( event );
+	  }.bind( this ));
+	};
+
+	PrevNextButton.prototype.activate = function() {
+	  this.bindTap( this.element );
+	  // click events from keyboard
+	  this.element.addEventListener( 'click', this );
+	  // add to DOM
+	  this.parent.element.appendChild( this.element );
+	};
+
+	PrevNextButton.prototype.deactivate = function() {
+	  // remove from DOM
+	  this.parent.element.removeChild( this.element );
+	  // do regular TapListener destroy
+	  TapListener.prototype.destroy.call( this );
+	  // click events from keyboard
+	  this.element.removeEventListener( 'click', this );
+	};
+
+	PrevNextButton.prototype.createSVG = function() {
+	  var svg = document.createElementNS( svgURI, 'svg');
+	  svg.setAttribute( 'viewBox', '0 0 100 100' );
+	  var path = document.createElementNS( svgURI, 'path');
+	  var pathMovements = getArrowMovements( this.parent.options.arrowShape );
+	  path.setAttribute( 'd', pathMovements );
+	  path.setAttribute( 'class', 'arrow' );
+	  // rotate arrow
+	  if ( !this.isLeft ) {
+	    path.setAttribute( 'transform', 'translate(100, 100) rotate(180) ' );
+	  }
+	  svg.appendChild( path );
+	  return svg;
+	};
+
+	// get SVG path movmement
+	function getArrowMovements( shape ) {
+	  // use shape as movement if string
+	  if ( typeof shape == 'string' ) {
+	    return shape;
+	  }
+	  // create movement string
+	  return 'M ' + shape.x0 + ',50' +
+	    ' L ' + shape.x1 + ',' + ( shape.y1 + 50 ) +
+	    ' L ' + shape.x2 + ',' + ( shape.y2 + 50 ) +
+	    ' L ' + shape.x3 + ',50 ' +
+	    ' L ' + shape.x2 + ',' + ( 50 - shape.y2 ) +
+	    ' L ' + shape.x1 + ',' + ( 50 - shape.y1 ) +
+	    ' Z';
+	}
+
+	PrevNextButton.prototype.onTap = function() {
+	  if ( !this.isEnabled ) {
+	    return;
+	  }
+	  this.parent.uiChange();
+	  var method = this.isPrevious ? 'previous' : 'next';
+	  this.parent[ method ]();
+	};
+
+	PrevNextButton.prototype.handleEvent = utils.handleEvent;
+
+	PrevNextButton.prototype.onclick = function() {
+	  // only allow clicks from keyboard
+	  var focused = document.activeElement;
+	  if ( focused && focused == this.element ) {
+	    this.onTap();
+	  }
+	};
+
+	// -----  ----- //
+
+	PrevNextButton.prototype.enable = function() {
+	  if ( this.isEnabled ) {
+	    return;
+	  }
+	  this.element.disabled = false;
+	  this.isEnabled = true;
+	};
+
+	PrevNextButton.prototype.disable = function() {
+	  if ( !this.isEnabled ) {
+	    return;
+	  }
+	  this.element.disabled = true;
+	  this.isEnabled = false;
+	};
+
+	PrevNextButton.prototype.update = function() {
+	  // index of first or last slide, if previous or next
+	  var slides = this.parent.slides;
+	  // enable is wrapAround and at least 2 slides
+	  if ( this.parent.options.wrapAround && slides.length > 1 ) {
+	    this.enable();
+	    return;
+	  }
+	  var lastIndex = slides.length ? slides.length - 1 : 0;
+	  var boundIndex = this.isPrevious ? 0 : lastIndex;
+	  var method = this.parent.selectedIndex == boundIndex ? 'disable' : 'enable';
+	  this[ method ]();
+	};
+
+	PrevNextButton.prototype.destroy = function() {
+	  this.deactivate();
+	};
+
+	// -------------------------- Flickity prototype -------------------------- //
+
+	utils.extend( Flickity.defaults, {
+	  prevNextButtons: true,
+	  arrowShape: {
+	    x0: 10,
+	    x1: 60, y1: 50,
+	    x2: 70, y2: 40,
+	    x3: 30
+	  }
+	});
+
+	Flickity.createMethods.push('_createPrevNextButtons');
+	var proto = Flickity.prototype;
+
+	proto._createPrevNextButtons = function() {
+	  if ( !this.options.prevNextButtons ) {
+	    return;
+	  }
+
+	  this.prevButton = new PrevNextButton( -1, this );
+	  this.nextButton = new PrevNextButton( 1, this );
+
+	  this.on( 'activate', this.activatePrevNextButtons );
+	};
+
+	proto.activatePrevNextButtons = function() {
+	  this.prevButton.activate();
+	  this.nextButton.activate();
+	  this.on( 'deactivate', this.deactivatePrevNextButtons );
+	};
+
+	proto.deactivatePrevNextButtons = function() {
+	  this.prevButton.deactivate();
+	  this.nextButton.deactivate();
+	  this.off( 'deactivate', this.deactivatePrevNextButtons );
+	};
+
+	// --------------------------  -------------------------- //
+
+	Flickity.PrevNextButton = PrevNextButton;
+
+	return Flickity;
+
+	}));
+
+
+/***/ },
+/* 29 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	 * Tap listener v2.0.0
+	 * listens to taps
+	 * MIT license
+	 */
+
+	/*jshint browser: true, unused: true, undef: true, strict: true */
+
+	( function( window, factory ) {
+	  // universal module definition
+	  /*jshint strict: false*/ /*globals define, module, require */
+
+	  if ( true ) {
+	    // AMD
+	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	      __webpack_require__(27)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function( Unipointer ) {
+	      return factory( window, Unipointer );
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	  } else if ( typeof module == 'object' && module.exports ) {
+	    // CommonJS
+	    module.exports = factory(
+	      window,
+	      require('unipointer')
+	    );
+	  } else {
+	    // browser global
+	    window.TapListener = factory(
+	      window,
+	      window.Unipointer
+	    );
+	  }
+
+	}( window, function factory( window, Unipointer ) {
+
+	'use strict';
+
+	// --------------------------  TapListener -------------------------- //
+
+	function TapListener( elem ) {
+	  this.bindTap( elem );
+	}
+
+	// inherit Unipointer & EventEmitter
+	var proto = TapListener.prototype = Object.create( Unipointer.prototype );
+
+	/**
+	 * bind tap event to element
+	 * @param {Element} elem
+	 */
+	proto.bindTap = function( elem ) {
+	  if ( !elem ) {
+	    return;
+	  }
+	  this.unbindTap();
+	  this.tapElement = elem;
+	  this._bindStartEvent( elem, true );
+	};
+
+	proto.unbindTap = function() {
+	  if ( !this.tapElement ) {
+	    return;
+	  }
+	  this._bindStartEvent( this.tapElement, true );
+	  delete this.tapElement;
+	};
+
+	/**
+	 * pointer up
+	 * @param {Event} event
+	 * @param {Event or Touch} pointer
+	 */
+	proto.pointerUp = function( event, pointer ) {
+	  // ignore emulated mouse up clicks
+	  if ( this.isIgnoringMouseUp && event.type == 'mouseup' ) {
+	    return;
+	  }
+
+	  var pointerPoint = Unipointer.getPointerPoint( pointer );
+	  var boundingRect = this.tapElement.getBoundingClientRect();
+	  var scrollX = window.pageXOffset;
+	  var scrollY = window.pageYOffset;
+	  // calculate if pointer is inside tapElement
+	  var isInside = pointerPoint.x >= boundingRect.left + scrollX &&
+	    pointerPoint.x <= boundingRect.right + scrollX &&
+	    pointerPoint.y >= boundingRect.top + scrollY &&
+	    pointerPoint.y <= boundingRect.bottom + scrollY;
+	  // trigger callback if pointer is inside element
+	  if ( isInside ) {
+	    this.emitEvent( 'tap', [ event, pointer ] );
+	  }
+
+	  // set flag for emulated clicks 300ms after touchend
+	  if ( event.type != 'mouseup' ) {
+	    this.isIgnoringMouseUp = true;
+	    // reset flag after 300ms
+	    var _this = this;
+	    setTimeout( function() {
+	      delete _this.isIgnoringMouseUp;
+	    }, 400 );
+	  }
+	};
+
+	proto.destroy = function() {
+	  this.pointerDone();
+	  this.unbindTap();
+	};
+
+	// -----  ----- //
+
+	return TapListener;
+
+	}));
+
+
+/***/ },
+/* 30 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// page dots
+	( function( window, factory ) {
+	  // universal module definition
+	  /* jshint strict: false */
+	  if ( true ) {
+	    // AMD
+	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	      __webpack_require__(17),
+	      __webpack_require__(29),
+	      __webpack_require__(20)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function( Flickity, TapListener, utils ) {
+	      return factory( window, Flickity, TapListener, utils );
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	  } else if ( typeof module == 'object' && module.exports ) {
+	    // CommonJS
+	    module.exports = factory(
+	      window,
+	      require('./flickity'),
+	      require('tap-listener'),
+	      require('fizzy-ui-utils')
+	    );
+	  } else {
+	    // browser global
+	    factory(
+	      window,
+	      window.Flickity,
+	      window.TapListener,
+	      window.fizzyUIUtils
+	    );
+	  }
+
+	}( window, function factory( window, Flickity, TapListener, utils ) {
+
+	// -------------------------- PageDots -------------------------- //
+
+	'use strict';
+
+	function PageDots( parent ) {
+	  this.parent = parent;
+	  this._create();
+	}
+
+	PageDots.prototype = new TapListener();
+
+	PageDots.prototype._create = function() {
+	  // create holder element
+	  this.holder = document.createElement('ol');
+	  this.holder.className = 'flickity-page-dots';
+	  // create dots, array of elements
+	  this.dots = [];
+	  // tap
+	  this.on( 'tap', this.onTap );
+
+	};
+
+	PageDots.prototype.activate = function() {
+	  this.setDots();
+	  this.bindTap( this.holder );
+	  // add to DOM
+	  this.parent.element.appendChild( this.holder );
+	};
+
+	PageDots.prototype.deactivate = function() {
+	  // remove from DOM
+	  this.parent.element.removeChild( this.holder );
+	  TapListener.prototype.destroy.call( this );
+	};
+
+	PageDots.prototype.setDots = function() {
+	  // get difference between number of slides and number of dots
+	  var delta = this.parent.slides.length - this.dots.length;
+	  if ( delta > 0 ) {
+	    this.addDots( delta );
+	  } else if ( delta < 0 ) {
+	    this.removeDots( -delta );
+	  }
+	};
+
+	PageDots.prototype.addDots = function( count ) {
+	  var fragment = document.createDocumentFragment();
+	  var newDots = [];
+	  while ( count ) {
+	    var dot = document.createElement('li');
+	    dot.className = 'dot';
+	    fragment.appendChild( dot );
+	    newDots.push( dot );
+	    count--;
+	  }
+	  this.holder.appendChild( fragment );
+	  this.dots = this.dots.concat( newDots );
+	};
+
+	PageDots.prototype.removeDots = function( count ) {
+	  // remove from this.dots collection
+	  var removeDots = this.dots.splice( this.dots.length - count, count );
+	  // remove from DOM
+	  removeDots.forEach( function( dot ) {
+	    this.holder.removeChild( dot );
+	  }, this );
+	};
+
+	PageDots.prototype.updateSelected = function() {
+	  // remove selected class on previous
+	  if ( this.selectedDot ) {
+	    this.selectedDot.className = 'dot';
+	  }
+	  // don't proceed if no dots
+	  if ( !this.dots.length ) {
+	    return;
+	  }
+	  this.selectedDot = this.dots[ this.parent.selectedIndex ];
+	  this.selectedDot.className = 'dot is-selected';
+	};
+
+	PageDots.prototype.onTap = function( event ) {
+	  var target = event.target;
+	  // only care about dot clicks
+	  if ( target.nodeName != 'LI' ) {
+	    return;
+	  }
+
+	  this.parent.uiChange();
+	  var index = this.dots.indexOf( target );
+	  this.parent.select( index );
+	};
+
+	PageDots.prototype.destroy = function() {
+	  this.deactivate();
+	};
+
+	Flickity.PageDots = PageDots;
+
+	// -------------------------- Flickity -------------------------- //
+
+	utils.extend( Flickity.defaults, {
+	  pageDots: true
+	});
+
+	Flickity.createMethods.push('_createPageDots');
+
+	var proto = Flickity.prototype;
+
+	proto._createPageDots = function() {
+	  if ( !this.options.pageDots ) {
+	    return;
+	  }
+	  this.pageDots = new PageDots( this );
+	  // events
+	  this.on( 'activate', this.activatePageDots );
+	  this.on( 'select', this.updateSelectedPageDots );
+	  this.on( 'cellChange', this.updatePageDots );
+	  this.on( 'resize', this.updatePageDots );
+	  this.on( 'deactivate', this.deactivatePageDots );
+
+	  this.pageDots.on( 'pointerDown', function( button, event ) {
+	    this.childUIPointerDown( event );
+	  }.bind( this ));
+	};
+
+	proto.activatePageDots = function() {
+	  this.pageDots.activate();
+	};
+
+	proto.updateSelectedPageDots = function() {
+	  this.pageDots.updateSelected();
+	};
+
+	proto.updatePageDots = function() {
+	  this.pageDots.setDots();
+	};
+
+	proto.deactivatePageDots = function() {
+	  this.pageDots.deactivate();
+	};
+
+	// -----  ----- //
+
+	Flickity.PageDots = PageDots;
+
+	return Flickity;
+
+	}));
+
+
+/***/ },
+/* 31 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// player & autoPlay
+	( function( window, factory ) {
+	  // universal module definition
+	  /* jshint strict: false */
+	  if ( true ) {
+	    // AMD
+	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	      __webpack_require__(18),
+	      __webpack_require__(20),
+	      __webpack_require__(17)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function( EvEmitter, utils, Flickity ) {
+	      return factory( EvEmitter, utils, Flickity );
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	  } else if ( typeof module == 'object' && module.exports ) {
+	    // CommonJS
+	    module.exports = factory(
+	      require('ev-emitter'),
+	      require('fizzy-ui-utils'),
+	      require('./flickity')
+	    );
+	  } else {
+	    // browser global
+	    factory(
+	      window.EvEmitter,
+	      window.fizzyUIUtils,
+	      window.Flickity
+	    );
+	  }
+
+	}( window, function factory( EvEmitter, utils, Flickity ) {
+
+	'use strict';
+
+	// -------------------------- Page Visibility -------------------------- //
+	// https://developer.mozilla.org/en-US/docs/Web/Guide/User_experience/Using_the_Page_Visibility_API
+
+	var hiddenProperty, visibilityEvent;
+	if ( 'hidden' in document ) {
+	  hiddenProperty = 'hidden';
+	  visibilityEvent = 'visibilitychange';
+	} else if ( 'webkitHidden' in document ) {
+	  hiddenProperty = 'webkitHidden';
+	  visibilityEvent = 'webkitvisibilitychange';
+	}
+
+	// -------------------------- Player -------------------------- //
+
+	function Player( parent ) {
+	  this.parent = parent;
+	  this.state = 'stopped';
+	  // visibility change event handler
+	  if ( visibilityEvent ) {
+	    this.onVisibilityChange = function() {
+	      this.visibilityChange();
+	    }.bind( this );
+	    this.onVisibilityPlay = function() {
+	      this.visibilityPlay();
+	    }.bind( this );
+	  }
+	}
+
+	Player.prototype = Object.create( EvEmitter.prototype );
+
+	// start play
+	Player.prototype.play = function() {
+	  if ( this.state == 'playing' ) {
+	    return;
+	  }
+	  // do not play if page is hidden, start playing when page is visible
+	  var isPageHidden = document[ hiddenProperty ];
+	  if ( visibilityEvent && isPageHidden ) {
+	    document.addEventListener( visibilityEvent, this.onVisibilityPlay );
+	    return;
+	  }
+
+	  this.state = 'playing';
+	  // listen to visibility change
+	  if ( visibilityEvent ) {
+	    document.addEventListener( visibilityEvent, this.onVisibilityChange );
+	  }
+	  // start ticking
+	  this.tick();
+	};
+
+	Player.prototype.tick = function() {
+	  // do not tick if not playing
+	  if ( this.state != 'playing' ) {
+	    return;
+	  }
+
+	  var time = this.parent.options.autoPlay;
+	  // default to 3 seconds
+	  time = typeof time == 'number' ? time : 3000;
+	  var _this = this;
+	  // HACK: reset ticks if stopped and started within interval
+	  this.clear();
+	  this.timeout = setTimeout( function() {
+	    _this.parent.next( true );
+	    _this.tick();
+	  }, time );
+	};
+
+	Player.prototype.stop = function() {
+	  this.state = 'stopped';
+	  this.clear();
+	  // remove visibility change event
+	  if ( visibilityEvent ) {
+	    document.removeEventListener( visibilityEvent, this.onVisibilityChange );
+	  }
+	};
+
+	Player.prototype.clear = function() {
+	  clearTimeout( this.timeout );
+	};
+
+	Player.prototype.pause = function() {
+	  if ( this.state == 'playing' ) {
+	    this.state = 'paused';
+	    this.clear();
+	  }
+	};
+
+	Player.prototype.unpause = function() {
+	  // re-start play if paused
+	  if ( this.state == 'paused' ) {
+	    this.play();
+	  }
+	};
+
+	// pause if page visibility is hidden, unpause if visible
+	Player.prototype.visibilityChange = function() {
+	  var isPageHidden = document[ hiddenProperty ];
+	  this[ isPageHidden ? 'pause' : 'unpause' ]();
+	};
+
+	Player.prototype.visibilityPlay = function() {
+	  this.play();
+	  document.removeEventListener( visibilityEvent, this.onVisibilityPlay );
+	};
+
+	// -------------------------- Flickity -------------------------- //
+
+	utils.extend( Flickity.defaults, {
+	  pauseAutoPlayOnHover: true
+	});
+
+	Flickity.createMethods.push('_createPlayer');
+	var proto = Flickity.prototype;
+
+	proto._createPlayer = function() {
+	  this.player = new Player( this );
+
+	  this.on( 'activate', this.activatePlayer );
+	  this.on( 'uiChange', this.stopPlayer );
+	  this.on( 'pointerDown', this.stopPlayer );
+	  this.on( 'deactivate', this.deactivatePlayer );
+	};
+
+	proto.activatePlayer = function() {
+	  if ( !this.options.autoPlay ) {
+	    return;
+	  }
+	  this.player.play();
+	  this.element.addEventListener( 'mouseenter', this );
+	};
+
+	// Player API, don't hate the ... thanks I know where the door is
+
+	proto.playPlayer = function() {
+	  this.player.play();
+	};
+
+	proto.stopPlayer = function() {
+	  this.player.stop();
+	};
+
+	proto.pausePlayer = function() {
+	  this.player.pause();
+	};
+
+	proto.unpausePlayer = function() {
+	  this.player.unpause();
+	};
+
+	proto.deactivatePlayer = function() {
+	  this.player.stop();
+	  this.element.removeEventListener( 'mouseenter', this );
+	};
+
+	// ----- mouseenter/leave ----- //
+
+	// pause auto-play on hover
+	proto.onmouseenter = function() {
+	  if ( !this.options.pauseAutoPlayOnHover ) {
+	    return;
+	  }
+	  this.player.pause();
+	  this.element.addEventListener( 'mouseleave', this );
+	};
+
+	// resume auto-play on hover off
+	proto.onmouseleave = function() {
+	  this.player.unpause();
+	  this.element.removeEventListener( 'mouseleave', this );
+	};
+
+	// -----  ----- //
+
+	Flickity.Player = Player;
+
+	return Flickity;
+
+	}));
+
+
+/***/ },
+/* 32 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// add, remove cell
+	( function( window, factory ) {
+	  // universal module definition
+	  /* jshint strict: false */
+	  if ( true ) {
+	    // AMD
+	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	      __webpack_require__(17),
+	      __webpack_require__(20)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function( Flickity, utils ) {
+	      return factory( window, Flickity, utils );
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	  } else if ( typeof module == 'object' && module.exports ) {
+	    // CommonJS
+	    module.exports = factory(
+	      window,
+	      require('./flickity'),
+	      require('fizzy-ui-utils')
+	    );
+	  } else {
+	    // browser global
+	    factory(
+	      window,
+	      window.Flickity,
+	      window.fizzyUIUtils
+	    );
+	  }
+
+	}( window, function factory( window, Flickity, utils ) {
+
+	'use strict';
+
+	// append cells to a document fragment
+	function getCellsFragment( cells ) {
+	  var fragment = document.createDocumentFragment();
+	  cells.forEach( function( cell ) {
+	    fragment.appendChild( cell.element );
+	  });
+	  return fragment;
+	}
+
+	// -------------------------- add/remove cell prototype -------------------------- //
+
+	var proto = Flickity.prototype;
+
+	/**
+	 * Insert, prepend, or append cells
+	 * @param {Element, Array, NodeList} elems
+	 * @param {Integer} index
+	 */
+	proto.insert = function( elems, index ) {
+	  var cells = this._makeCells( elems );
+	  if ( !cells || !cells.length ) {
+	    return;
+	  }
+	  var len = this.cells.length;
+	  // default to append
+	  index = index === undefined ? len : index;
+	  // add cells with document fragment
+	  var fragment = getCellsFragment( cells );
+	  // append to slider
+	  var isAppend = index == len;
+	  if ( isAppend ) {
+	    this.slider.appendChild( fragment );
+	  } else {
+	    var insertCellElement = this.cells[ index ].element;
+	    this.slider.insertBefore( fragment, insertCellElement );
+	  }
+	  // add to this.cells
+	  if ( index === 0 ) {
+	    // prepend, add to start
+	    this.cells = cells.concat( this.cells );
+	  } else if ( isAppend ) {
+	    // append, add to end
+	    this.cells = this.cells.concat( cells );
+	  } else {
+	    // insert in this.cells
+	    var endCells = this.cells.splice( index, len - index );
+	    this.cells = this.cells.concat( cells ).concat( endCells );
+	  }
+
+	  this._sizeCells( cells );
+
+	  var selectedIndexDelta = index > this.selectedIndex ? 0 : cells.length;
+	  this._cellAddedRemoved( index, selectedIndexDelta );
+	};
+
+	proto.append = function( elems ) {
+	  this.insert( elems, this.cells.length );
+	};
+
+	proto.prepend = function( elems ) {
+	  this.insert( elems, 0 );
+	};
+
+	/**
+	 * Remove cells
+	 * @param {Element, Array, NodeList} elems
+	 */
+	proto.remove = function( elems ) {
+	  var cells = this.getCells( elems );
+	  var selectedIndexDelta = 0;
+	  var len = cells.length;
+	  var i, cell;
+	  // calculate selectedIndexDelta, easier if done in seperate loop
+	  for ( i=0; i < len; i++ ) {
+	    cell = cells[i];
+	    var wasBefore = this.cells.indexOf( cell ) < this.selectedIndex;
+	    selectedIndexDelta -= wasBefore ? 1 : 0;
+	  }
+
+	  for ( i=0; i < len; i++ ) {
+	    cell = cells[i];
+	    cell.remove();
+	    // remove item from collection
+	    utils.removeFrom( this.cells, cell );
+	  }
+
+	  if ( cells.length ) {
+	    // update stuff
+	    this._cellAddedRemoved( 0, selectedIndexDelta );
+	  }
+	};
+
+	// updates when cells are added or removed
+	proto._cellAddedRemoved = function( changedCellIndex, selectedIndexDelta ) {
+	  // TODO this math isn't perfect with grouped slides
+	  selectedIndexDelta = selectedIndexDelta || 0;
+	  this.selectedIndex += selectedIndexDelta;
+	  this.selectedIndex = Math.max( 0, Math.min( this.slides.length - 1, this.selectedIndex ) );
+
+	  this.cellChange( changedCellIndex, true );
+	  // backwards compatibility
+	  this.emitEvent( 'cellAddedRemoved', [ changedCellIndex, selectedIndexDelta ] );
+	};
+
+	/**
+	 * logic to be run after a cell's size changes
+	 * @param {Element} elem - cell's element
+	 */
+	proto.cellSizeChange = function( elem ) {
+	  var cell = this.getCell( elem );
+	  if ( !cell ) {
+	    return;
+	  }
+	  cell.getSize();
+
+	  var index = this.cells.indexOf( cell );
+	  this.cellChange( index );
+	};
+
+	/**
+	 * logic any time a cell is changed: added, removed, or size changed
+	 * @param {Integer} changedCellIndex - index of the changed cell, optional
+	 */
+	proto.cellChange = function( changedCellIndex, isPositioningSlider ) {
+	  var prevSlideableWidth = this.slideableWidth;
+	  this._positionCells( changedCellIndex );
+	  this._getWrapShiftCells();
+	  this.setGallerySize();
+	  this.emitEvent( 'cellChange', [ changedCellIndex ] );
+	  // position slider
+	  if ( this.options.freeScroll ) {
+	    // shift x by change in slideableWidth
+	    // TODO fix position shifts when prepending w/ freeScroll
+	    var deltaX = prevSlideableWidth - this.slideableWidth;
+	    this.x += deltaX * this.cellAlign;
+	    this.positionSlider();
+	  } else {
+	    // do not position slider after lazy load
+	    if ( isPositioningSlider ) {
+	      this.positionSliderAtSelected();
+	    }
+	    this.select( this.selectedIndex );
+	  }
+	};
+
+	// -----  ----- //
+
+	return Flickity;
+
+	}));
+
+
+/***/ },
+/* 33 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// lazyload
+	( function( window, factory ) {
+	  // universal module definition
+	  /* jshint strict: false */
+	  if ( true ) {
+	    // AMD
+	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	      __webpack_require__(17),
+	      __webpack_require__(20)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function( Flickity, utils ) {
+	      return factory( window, Flickity, utils );
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	  } else if ( typeof module == 'object' && module.exports ) {
+	    // CommonJS
+	    module.exports = factory(
+	      window,
+	      require('./flickity'),
+	      require('fizzy-ui-utils')
+	    );
+	  } else {
+	    // browser global
+	    factory(
+	      window,
+	      window.Flickity,
+	      window.fizzyUIUtils
+	    );
+	  }
+
+	}( window, function factory( window, Flickity, utils ) {
+	'use strict';
+
+	Flickity.createMethods.push('_createLazyload');
+	var proto = Flickity.prototype;
+
+	proto._createLazyload = function() {
+	  this.on( 'select', this.lazyLoad );
+	};
+
+	proto.lazyLoad = function() {
+	  var lazyLoad = this.options.lazyLoad;
+	  if ( !lazyLoad ) {
+	    return;
+	  }
+	  // get adjacent cells, use lazyLoad option for adjacent count
+	  var adjCount = typeof lazyLoad == 'number' ? lazyLoad : 0;
+	  var cellElems = this.getAdjacentCellElements( adjCount );
+	  // get lazy images in those cells
+	  var lazyImages = [];
+	  cellElems.forEach( function( cellElem ) {
+	    var lazyCellImages = getCellLazyImages( cellElem );
+	    lazyImages = lazyImages.concat( lazyCellImages );
+	  });
+	  // load lazy images
+	  lazyImages.forEach( function( img ) {
+	    new LazyLoader( img, this );
+	  }, this );
+	};
+
+	function getCellLazyImages( cellElem ) {
+	  // check if cell element is lazy image
+	  if ( cellElem.nodeName == 'IMG' &&
+	    cellElem.getAttribute('data-flickity-lazyload') ) {
+	    return [ cellElem ];
+	  }
+	  // select lazy images in cell
+	  var imgs = cellElem.querySelectorAll('img[data-flickity-lazyload]');
+	  return utils.makeArray( imgs );
+	}
+
+	// -------------------------- LazyLoader -------------------------- //
+
+	/**
+	 * class to handle loading images
+	 */
+	function LazyLoader( img, flickity ) {
+	  this.img = img;
+	  this.flickity = flickity;
+	  this.load();
+	}
+
+	LazyLoader.prototype.handleEvent = utils.handleEvent;
+
+	LazyLoader.prototype.load = function() {
+	  this.img.addEventListener( 'load', this );
+	  this.img.addEventListener( 'error', this );
+	  // load image
+	  this.img.src = this.img.getAttribute('data-flickity-lazyload');
+	  // remove attr
+	  this.img.removeAttribute('data-flickity-lazyload');
+	};
+
+	LazyLoader.prototype.onload = function( event ) {
+	  this.complete( event, 'flickity-lazyloaded' );
+	};
+
+	LazyLoader.prototype.onerror = function( event ) {
+	  this.complete( event, 'flickity-lazyerror' );
+	};
+
+	LazyLoader.prototype.complete = function( event, className ) {
+	  // unbind events
+	  this.img.removeEventListener( 'load', this );
+	  this.img.removeEventListener( 'error', this );
+
+	  var cell = this.flickity.getParentCell( this.img );
+	  var cellElem = cell && cell.element;
+	  this.flickity.cellSizeChange( cellElem );
+
+	  this.img.classList.add( className );
+	  this.flickity.dispatchEvent( 'lazyLoad', event, cellElem );
+	};
+
+	// -----  ----- //
+
+	Flickity.LazyLoader = LazyLoader;
+
+	return Flickity;
+
+	}));
+
+
+/***/ },
+/* 34 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// Generated by CoffeeScript 1.9.3
+	(function() {
+	  var Instafeed;
+
+	  Instafeed = (function() {
+	    function Instafeed(params, context) {
+	      var option, value;
+	      this.options = {
+	        target: 'instafeed',
+	        get: 'popular',
+	        resolution: 'thumbnail',
+	        sortBy: 'none',
+	        links: true,
+	        mock: false,
+	        useHttp: false
+	      };
+	      if (typeof params === 'object') {
+	        for (option in params) {
+	          value = params[option];
+	          this.options[option] = value;
+	        }
+	      }
+	      this.context = context != null ? context : this;
+	      this.unique = this._genKey();
+	    }
+
+	    Instafeed.prototype.hasNext = function() {
+	      return typeof this.context.nextUrl === 'string' && this.context.nextUrl.length > 0;
+	    };
+
+	    Instafeed.prototype.next = function() {
+	      if (!this.hasNext()) {
+	        return false;
+	      }
+	      return this.run(this.context.nextUrl);
+	    };
+
+	    Instafeed.prototype.run = function(url) {
+	      var header, instanceName, script;
+	      if (typeof this.options.clientId !== 'string') {
+	        if (typeof this.options.accessToken !== 'string') {
+	          throw new Error("Missing clientId or accessToken.");
+	        }
+	      }
+	      if (typeof this.options.accessToken !== 'string') {
+	        if (typeof this.options.clientId !== 'string') {
+	          throw new Error("Missing clientId or accessToken.");
+	        }
+	      }
+	      if ((this.options.before != null) && typeof this.options.before === 'function') {
+	        this.options.before.call(this);
+	      }
+	      if (typeof document !== "undefined" && document !== null) {
+	        script = document.createElement('script');
+	        script.id = 'instafeed-fetcher';
+	        script.src = url || this._buildUrl();
+	        header = document.getElementsByTagName('head');
+	        header[0].appendChild(script);
+	        instanceName = "instafeedCache" + this.unique;
+	        window[instanceName] = new Instafeed(this.options, this);
+	        window[instanceName].unique = this.unique;
+	      }
+	      return true;
+	    };
+
+	    Instafeed.prototype.parse = function(response) {
+	      var anchor, childNodeCount, childNodeIndex, childNodesArr, e, eMsg, fragment, header, htmlString, httpProtocol, i, image, imageObj, imageString, imageUrl, images, img, imgHeight, imgOrient, imgUrl, imgWidth, instanceName, j, k, len, len1, len2, node, parsedLimit, reverse, sortSettings, targetEl, tmpEl;
+	      if (typeof response !== 'object') {
+	        if ((this.options.error != null) && typeof this.options.error === 'function') {
+	          this.options.error.call(this, 'Invalid JSON data');
+	          return false;
+	        } else {
+	          throw new Error('Invalid JSON response');
+	        }
+	      }
+	      if (response.meta.code !== 200) {
+	        if ((this.options.error != null) && typeof this.options.error === 'function') {
+	          this.options.error.call(this, response.meta.error_message);
+	          return false;
+	        } else {
+	          throw new Error("Error from Instagram: " + response.meta.error_message);
+	        }
+	      }
+	      if (response.data.length === 0) {
+	        if ((this.options.error != null) && typeof this.options.error === 'function') {
+	          this.options.error.call(this, 'No images were returned from Instagram');
+	          return false;
+	        } else {
+	          throw new Error('No images were returned from Instagram');
+	        }
+	      }
+	      if ((this.options.success != null) && typeof this.options.success === 'function') {
+	        this.options.success.call(this, response);
+	      }
+	      this.context.nextUrl = '';
+	      if (response.pagination != null) {
+	        this.context.nextUrl = response.pagination.next_url;
+	      }
+	      if (this.options.sortBy !== 'none') {
+	        if (this.options.sortBy === 'random') {
+	          sortSettings = ['', 'random'];
+	        } else {
+	          sortSettings = this.options.sortBy.split('-');
+	        }
+	        reverse = sortSettings[0] === 'least' ? true : false;
+	        switch (sortSettings[1]) {
+	          case 'random':
+	            response.data.sort(function() {
+	              return 0.5 - Math.random();
+	            });
+	            break;
+	          case 'recent':
+	            response.data = this._sortBy(response.data, 'created_time', reverse);
+	            break;
+	          case 'liked':
+	            response.data = this._sortBy(response.data, 'likes.count', reverse);
+	            break;
+	          case 'commented':
+	            response.data = this._sortBy(response.data, 'comments.count', reverse);
+	            break;
+	          default:
+	            throw new Error("Invalid option for sortBy: '" + this.options.sortBy + "'.");
+	        }
+	      }
+	      if ((typeof document !== "undefined" && document !== null) && this.options.mock === false) {
+	        images = response.data;
+	        parsedLimit = parseInt(this.options.limit, 10);
+	        if ((this.options.limit != null) && images.length > parsedLimit) {
+	          images = images.slice(0, parsedLimit);
+	        }
+	        fragment = document.createDocumentFragment();
+	        if ((this.options.filter != null) && typeof this.options.filter === 'function') {
+	          images = this._filter(images, this.options.filter);
+	        }
+	        if ((this.options.template != null) && typeof this.options.template === 'string') {
+	          htmlString = '';
+	          imageString = '';
+	          imgUrl = '';
+	          tmpEl = document.createElement('div');
+	          for (i = 0, len = images.length; i < len; i++) {
+	            image = images[i];
+	            imageObj = image.images[this.options.resolution];
+	            if (typeof imageObj !== 'object') {
+	              eMsg = "No image found for resolution: " + this.options.resolution + ".";
+	              throw new Error(eMsg);
+	            }
+	            imgWidth = imageObj.width;
+	            imgHeight = imageObj.height;
+	            imgOrient = "square";
+	            if (imgWidth > imgHeight) {
+	              imgOrient = "landscape";
+	            }
+	            if (imgWidth < imgHeight) {
+	              imgOrient = "portrait";
+	            }
+	            imageUrl = imageObj.url;
+	            httpProtocol = window.location.protocol.indexOf("http") >= 0;
+	            if (httpProtocol && !this.options.useHttp) {
+	              imageUrl = imageUrl.replace(/https?:\/\//, '//');
+	            }
+	            imageString = this._makeTemplate(this.options.template, {
+	              model: image,
+	              id: image.id,
+	              link: image.link,
+	              type: image.type,
+	              image: imageUrl,
+	              width: imgWidth,
+	              height: imgHeight,
+	              orientation: imgOrient,
+	              caption: this._getObjectProperty(image, 'caption.text'),
+	              likes: image.likes.count,
+	              comments: image.comments.count,
+	              location: this._getObjectProperty(image, 'location.name')
+	            });
+	            htmlString += imageString;
+	          }
+	          tmpEl.innerHTML = htmlString;
+	          childNodesArr = [];
+	          childNodeIndex = 0;
+	          childNodeCount = tmpEl.childNodes.length;
+	          while (childNodeIndex < childNodeCount) {
+	            childNodesArr.push(tmpEl.childNodes[childNodeIndex]);
+	            childNodeIndex += 1;
+	          }
+	          for (j = 0, len1 = childNodesArr.length; j < len1; j++) {
+	            node = childNodesArr[j];
+	            fragment.appendChild(node);
+	          }
+	        } else {
+	          for (k = 0, len2 = images.length; k < len2; k++) {
+	            image = images[k];
+	            img = document.createElement('img');
+	            imageObj = image.images[this.options.resolution];
+	            if (typeof imageObj !== 'object') {
+	              eMsg = "No image found for resolution: " + this.options.resolution + ".";
+	              throw new Error(eMsg);
+	            }
+	            imageUrl = imageObj.url;
+	            httpProtocol = window.location.protocol.indexOf("http") >= 0;
+	            if (httpProtocol && !this.options.useHttp) {
+	              imageUrl = imageUrl.replace(/https?:\/\//, '//');
+	            }
+	            img.src = imageUrl;
+	            if (this.options.links === true) {
+	              anchor = document.createElement('a');
+	              anchor.href = image.link;
+	              anchor.appendChild(img);
+	              fragment.appendChild(anchor);
+	            } else {
+	              fragment.appendChild(img);
+	            }
+	          }
+	        }
+	        targetEl = this.options.target;
+	        if (typeof targetEl === 'string') {
+	          targetEl = document.getElementById(targetEl);
+	        }
+	        if (targetEl == null) {
+	          eMsg = "No element with id=\"" + this.options.target + "\" on page.";
+	          throw new Error(eMsg);
+	        }
+	        targetEl.appendChild(fragment);
+	        header = document.getElementsByTagName('head')[0];
+	        header.removeChild(document.getElementById('instafeed-fetcher'));
+	        instanceName = "instafeedCache" + this.unique;
+	        window[instanceName] = void 0;
+	        try {
+	          delete window[instanceName];
+	        } catch (_error) {
+	          e = _error;
+	        }
+	      }
+	      if ((this.options.after != null) && typeof this.options.after === 'function') {
+	        this.options.after.call(this);
+	      }
+	      return true;
+	    };
+
+	    Instafeed.prototype._buildUrl = function() {
+	      var base, endpoint, final;
+	      base = "https://api.instagram.com/v1";
+	      switch (this.options.get) {
+	        case "popular":
+	          endpoint = "media/popular";
+	          break;
+	        case "tagged":
+	          if (!this.options.tagName) {
+	            throw new Error("No tag name specified. Use the 'tagName' option.");
+	          }
+	          endpoint = "tags/" + this.options.tagName + "/media/recent";
+	          break;
+	        case "location":
+	          if (!this.options.locationId) {
+	            throw new Error("No location specified. Use the 'locationId' option.");
+	          }
+	          endpoint = "locations/" + this.options.locationId + "/media/recent";
+	          break;
+	        case "user":
+	          if (!this.options.userId) {
+	            throw new Error("No user specified. Use the 'userId' option.");
+	          }
+	          endpoint = "users/" + this.options.userId + "/media/recent";
+	          break;
+	        default:
+	          throw new Error("Invalid option for get: '" + this.options.get + "'.");
+	      }
+	      final = base + "/" + endpoint;
+	      if (this.options.accessToken != null) {
+	        final += "?access_token=" + this.options.accessToken;
+	      } else {
+	        final += "?client_id=" + this.options.clientId;
+	      }
+	      if (this.options.limit != null) {
+	        final += "&count=" + this.options.limit;
+	      }
+	      final += "&callback=instafeedCache" + this.unique + ".parse";
+	      return final;
+	    };
+
+	    Instafeed.prototype._genKey = function() {
+	      var S4;
+	      S4 = function() {
+	        return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
+	      };
+	      return "" + (S4()) + (S4()) + (S4()) + (S4());
+	    };
+
+	    Instafeed.prototype._makeTemplate = function(template, data) {
+	      var output, pattern, ref, varName, varValue;
+	      pattern = /(?:\{{2})([\w\[\]\.]+)(?:\}{2})/;
+	      output = template;
+	      while (pattern.test(output)) {
+	        varName = output.match(pattern)[1];
+	        varValue = (ref = this._getObjectProperty(data, varName)) != null ? ref : '';
+	        output = output.replace(pattern, function() {
+	          return "" + varValue;
+	        });
+	      }
+	      return output;
+	    };
+
+	    Instafeed.prototype._getObjectProperty = function(object, property) {
+	      var piece, pieces;
+	      property = property.replace(/\[(\w+)\]/g, '.$1');
+	      pieces = property.split('.');
+	      while (pieces.length) {
+	        piece = pieces.shift();
+	        if ((object != null) && piece in object) {
+	          object = object[piece];
+	        } else {
+	          return null;
+	        }
+	      }
+	      return object;
+	    };
+
+	    Instafeed.prototype._sortBy = function(data, property, reverse) {
+	      var sorter;
+	      sorter = function(a, b) {
+	        var valueA, valueB;
+	        valueA = this._getObjectProperty(a, property);
+	        valueB = this._getObjectProperty(b, property);
+	        if (reverse) {
+	          if (valueA > valueB) {
+	            return 1;
+	          } else {
+	            return -1;
+	          }
+	        }
+	        if (valueA < valueB) {
+	          return 1;
+	        } else {
+	          return -1;
+	        }
+	      };
+	      data.sort(sorter.bind(this));
+	      return data;
+	    };
+
+	    Instafeed.prototype._filter = function(images, filter) {
+	      var filteredImages, fn, i, image, len;
+	      filteredImages = [];
+	      fn = function(image) {
+	        if (filter(image)) {
+	          return filteredImages.push(image);
+	        }
+	      };
+	      for (i = 0, len = images.length; i < len; i++) {
+	        image = images[i];
+	        fn(image);
+	      }
+	      return filteredImages;
+	    };
+
+	    return Instafeed;
+
+	  })();
+
+	  (function(root, factory) {
+	    if (true) {
+	      return !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	    } else if (typeof module === 'object' && module.exports) {
+	      return module.exports = factory();
+	    } else {
+	      return root.Instafeed = factory();
+	    }
+	  })(this, function() {
+	    return Instafeed;
+	  });
+
+	}).call(this);
+
+
+/***/ },
+/* 35 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"diary\" _v-c14842d8=\"\">\n  <h2 class=\"diary__heading\" _v-c14842d8=\"\">The Diary</h2>\n  <div class=\"diary-carousel-wrapper\" _v-c14842d8=\"\">\n    <div class=\"diary-carousel\" id=\"instafeed\" _v-c14842d8=\"\"></div>\n  </div>\n</div>\n";
+
+/***/ },
+/* 36 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(37)
+	__vue_script__ = __webpack_require__(39)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/js/components/SiteFooter.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(42)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "_v-74eb097e/SiteFooter.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 37 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(38);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(10)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SiteFooter.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SiteFooter.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 38 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(9)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".site-footer {\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  background: #ffffff;\n  border-top: 1px solid rgba(193, 193, 193, 0.333);\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-flex-direction: column;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  height: 20rem;\n  -webkit-justify-content: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  position: relative; }\n\n.site-footer__copyright {\n  bottom: 1rem;\n  color: #c1c1c1;\n  left: 0;\n  position: absolute;\n  text-align: center;\n  text-transform: uppercase;\n  width: 100%; }\n  .site-footer__copyright a {\n    color: #c1c1c1;\n    text-decoration: none;\n    transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n    .site-footer__copyright a:hover {\n      color: #000000; }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 39 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _store = __webpack_require__(40);
 
 	var _store2 = _interopRequireDefault(_store);
 
@@ -13547,13 +18046,11 @@
 	      router: _store2.default.data.router
 	    };
 	  },
-	  ready: function ready() {
-	    console.log('sup');
-	  }
+	  ready: function ready() {}
 	};
 
 /***/ },
-/* 16 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13562,7 +18059,7 @@
 	  value: true
 	});
 
-	var _events = __webpack_require__(17);
+	var _events = __webpack_require__(41);
 
 	var store = new _events.EventEmitter();
 
@@ -13582,13 +18079,34 @@
 	  },
 	  router: void 0,
 	  skrollr: void 0,
-	  language: 'en'
+	  language: 'en',
+	  retailers: [{
+	    name: 'Barneys New York',
+	    locations: ['Madison Avenue Flagship<br>660 Madison Avenue<br>New York, NY 10065'],
+	    website: 'http://barneys.com',
+	    mapUrl: 'https://maps.googleapis.com/maps/api/staticmap?center=660+Madison+Avenue+New+York+10065&size=800x250&zoom=15&style=element:labels|visibility:on&style=element:geometry.stroke|visibility:off&style=feature:landscape|element:geometry|saturation:-100&style=feature:water|saturation:-100|invert_lightness:true&key=AIzaSyAW8Fdjmlu3WTii5RqHlKw6c1hZST2ZHWQ',
+	    mapRevealed: false
+	  }, {
+	    name: 'Colette',
+	    locations: ['213 Rue Saint Honoré<br>75001 Paris, France'],
+	    website: 'http://colette.fr',
+	    mapUrl: 'https://maps.googleapis.com/maps/api/staticmap?center=213+Rue+Saint+Honore+Paris+France&size=800x250&zoom=15&style=element:labels|visibility:on&style=element:geometry.stroke|visibility:off&style=feature:landscape|element:geometry|saturation:-100&style=feature:water|saturation:-100|invert_lightness:true&key=AIzaSyAW8Fdjmlu3WTii5RqHlKw6c1hZST2ZHWQ',
+	    mapRevealed: false
+	  }, {
+	    name: 'Opening Ceremony',
+	    website: 'https://www.openingceremony.com/',
+	    mapUrl: '',
+	    mapRevealed: false
+	  }],
+	  googleMaps: {
+	    apiKey: 'AIzaSyAW8Fdjmlu3WTii5RqHlKw6c1hZST2ZHWQ'
+	  }
 	};
 
 	exports.default = store;
 
 /***/ },
-/* 17 */
+/* 41 */
 /***/ function(module, exports) {
 
 	// Copyright Joyent, Inc. and other Node contributors.
@@ -13896,29 +18414,29 @@
 
 
 /***/ },
-/* 18 */
+/* 42 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<footer class=\"site-footer\">\n  <form id=\"newsletter__form\"\n        action=\"http://xxxxx.us#.list-manage1.com/subscribe/post-json?u=xxxxx&id=xxxx&c=?\"\n        method=\"get\"\n  >\n    <label for=\"newsletter__email\" class=\"newsletter__label\">Sign up and stay updated</label>\n    <input id=\"newsletter__email\" class=\"newsletter__email\" type=\"email\" placeholder=\"EMAIL ADDRESS\">\n    <button class=\"newsletter__form__btn-submit\" type=\"submit\">Submit</button>\n  </form>\n  <p class=\"site-footer__copyright\">&copy; 2016 CANDER PARIS. <a v-link=\"{ name: 'terms' }\">Terms and Conditions</a></p>\n</footer>\n";
 
 /***/ },
-/* 19 */
+/* 43 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"single-page\" _v-5151c667=\"\">\n  <div class=\"single-page__content\" _v-5151c667=\"\">\n    <div class=\"section-about__intro\" _v-5151c667=\"\">\n      <div class=\"section-about__intro__image-wrap\" _v-5151c667=\"\">\n        <img src=\"/images/about-intro-elizabeth-minett.jpg\" alt=\"BY ELIZABETH MINETT\" _v-5151c667=\"\">\n      </div>\n      <div class=\"section-about__intro__text-wrap\" _v-5151c667=\"\">\n        <div class=\"section-about__intro__text-wrap__inner\" v-if=\"language === 'en'\" transition=\"fade\" _v-5151c667=\"\">\n          <h1 class=\"zeta\" _v-5151c667=\"\">by Elizabeth Minett</h1>\n          <h2 class=\"gamma\" _v-5151c667=\"\">Cander candles blends essential oils and fragrances in a soy based candle to create an elevated experience.</h2>\n          <h3 class=\"p-beta\" _v-5151c667=\"\">Founded by Elizabeth Minett, each and every candle fragrance is exquisitely crafted. Content about the brand, story, vision, and/or mission of the company. Luxury candles providing and enhancing a refined lifestyle.</h3>\n        </div>\n        <div class=\"section-about__intro__text-wrap__inner\" v-if=\"language === 'fr'\" transition=\"fade\" _v-5151c667=\"\">\n          <h1 class=\"zeta\" _v-5151c667=\"\">par Elizabeth Minett</h1>\n          <h2 class=\"gamma\" _v-5151c667=\"\">Bougies Cander mélanges essentiels parfum des sables bitumineux Sina bougie à base de soja pour créer une expérience de presse élevée.</h2>\n          <h3 class=\"p-beta\" _v-5151c667=\"\">Fondée par Elizabeth Minett, chaque parfum de bougie est délicieusement conçu. Contenu sur la marque, l'histoire, la vision et / ou de la mission de l'entreprise. Bougies de luxe fournir et améliorer un mode de vie raffiné.</h3>\n        </div>\n        <div class=\"section-about__intro__language-switch\" _v-5151c667=\"\">\n          <a href=\"#\" @click.prevent=\"setLanguage('en')\" class=\"{{ language === 'en' ? 'is-active' : '' }}\" _v-5151c667=\"\">EN</a>\n          <a href=\"#\" @click.prevent=\"setLanguage('fr')\" class=\"{{ language === 'fr' ? 'is-active' : '' }}\" _v-5151c667=\"\">FR</a>\n        </div>\n      </div>\n    </div>\n  </div>\n  <site-footer _v-5151c667=\"\"></site-footer>\n</div>\n";
+	module.exports = "\n<div class=\"single-page\" _v-5151c667=\"\">\n  <div class=\"single-page__content\" _v-5151c667=\"\">\n    <div class=\"section-about__intro\" _v-5151c667=\"\">\n      <div class=\"section-about__intro__image-wrap\" _v-5151c667=\"\">\n        <img src=\"/images/about-intro-elizabeth-minett.jpg\" alt=\"BY ELIZABETH MINETT\" _v-5151c667=\"\">\n      </div>\n      <div class=\"section-about__intro__text-wrap\" _v-5151c667=\"\">\n        <div class=\"section-about__intro__text-wrap__inner\" v-if=\"language === 'en'\" transition=\"fade\" _v-5151c667=\"\">\n          <h1 class=\"zeta\" _v-5151c667=\"\">by Elizabeth Minett</h1>\n          <h2 class=\"gamma\" _v-5151c667=\"\">Cander candles blends essential oils and fragrances in a soy based candle to create an elevated experience.</h2>\n          <h3 class=\"p-beta\" _v-5151c667=\"\">Founded by Elizabeth Minett, each and every candle fragrance is exquisitely crafted. Content about the brand, story, vision, and/or mission of the company. Luxury candles providing and enhancing a refined lifestyle.</h3>\n        </div>\n        <div class=\"section-about__intro__text-wrap__inner\" v-if=\"language === 'fr'\" transition=\"fade\" _v-5151c667=\"\">\n          <h1 class=\"zeta\" _v-5151c667=\"\">par Elizabeth Minett</h1>\n          <h2 class=\"gamma\" _v-5151c667=\"\">Bougies Cander mélanges essentiels parfum des sables bitumineux Sina bougie à base de soja pour créer une expérience de presse élevée.</h2>\n          <h3 class=\"p-beta\" _v-5151c667=\"\">Fondée par Elizabeth Minett, chaque parfum de bougie est délicieusement conçu. Contenu sur la marque, l'histoire, la vision et / ou de la mission de l'entreprise. Bougies de luxe fournir et améliorer un mode de vie raffiné.</h3>\n        </div>\n        <div class=\"section-about__intro__language-switch\" _v-5151c667=\"\">\n          <a href=\"#\" @click.prevent=\"setLanguage('en')\" class=\"{{ language === 'en' ? 'is-active' : '' }}\" _v-5151c667=\"\">EN</a>\n          <a href=\"#\" @click.prevent=\"setLanguage('fr')\" class=\"{{ language === 'fr' ? 'is-active' : '' }}\" _v-5151c667=\"\">FR</a>\n        </div>\n      </div>\n    </div>\n    <diary _v-5151c667=\"\"></diary>\n  </div>\n  <site-footer _v-5151c667=\"\"></site-footer>\n</div>\n";
 
 /***/ },
-/* 20 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(21)
-	__vue_script__ = __webpack_require__(23)
+	__webpack_require__(45)
+	__vue_script__ = __webpack_require__(47)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/components/SectionContact.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(30)
+	__vue_template__ = __webpack_require__(54)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -13937,13 +18455,13 @@
 	})()}
 
 /***/ },
-/* 21 */
+/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(22);
+	var content = __webpack_require__(46);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(10)(content, {});
@@ -13963,7 +18481,7 @@
 	}
 
 /***/ },
-/* 22 */
+/* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(9)();
@@ -13977,7 +18495,7 @@
 
 
 /***/ },
-/* 23 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13986,15 +18504,15 @@
 	  value: true
 	});
 
-	var _stringify = __webpack_require__(24);
+	var _stringify = __webpack_require__(48);
 
 	var _stringify2 = _interopRequireDefault(_stringify);
 
-	__webpack_require__(27);
+	__webpack_require__(51);
 
-	var _lodash = __webpack_require__(28);
+	var _lodash = __webpack_require__(52);
 
-	var _SiteFooter = __webpack_require__(12);
+	var _SiteFooter = __webpack_require__(36);
 
 	var _SiteFooter2 = _interopRequireDefault(_SiteFooter);
 
@@ -14102,30 +18620,30 @@
 	};
 
 /***/ },
-/* 24 */
+/* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = { "default": __webpack_require__(25), __esModule: true };
+	module.exports = { "default": __webpack_require__(49), __esModule: true };
 
 /***/ },
-/* 25 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var core  = __webpack_require__(26)
+	var core  = __webpack_require__(50)
 	  , $JSON = core.JSON || (core.JSON = {stringify: JSON.stringify});
 	module.exports = function stringify(it){ // eslint-disable-line no-unused-vars
 	  return $JSON.stringify.apply($JSON, arguments);
 	};
 
 /***/ },
-/* 26 */
+/* 50 */
 /***/ function(module, exports) {
 
 	var core = module.exports = {version: '2.4.0'};
 	if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
 
 /***/ },
-/* 27 */
+/* 51 */
 /***/ function(module, exports) {
 
 	(function(self) {
@@ -14564,7 +19082,7 @@
 
 
 /***/ },
-/* 28 */
+/* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(global, module) {/**
@@ -31175,10 +35693,10 @@
 	  }
 	}.call(this));
 
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(29)(module)))
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(53)(module)))
 
 /***/ },
-/* 29 */
+/* 53 */
 /***/ function(module, exports) {
 
 	module.exports = function(module) {
@@ -31194,23 +35712,23 @@
 
 
 /***/ },
-/* 30 */
+/* 54 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"single-page\" _v-46769cfa=\"\">\n  <div class=\"single-page__content\" _v-46769cfa=\"\">\n    <form action=\"https://formspree.io/{{ recipientEmail }}\" method=\"POST\" class=\"contact-form\" _v-46769cfa=\"\">\n      <input type=\"hidden\" name=\"_next\" value=\"/contact/thanks\" _v-46769cfa=\"\">\n      <input type=\"hidden\" name=\"_format\" value=\"plain\" _v-46769cfa=\"\">\n      <input class=\"contact-form__input--text\" autocomplete=\"off\" autocapitalize=\"on\" type=\"text\" name=\"name\" id=\"name\" placeholder=\"NAME\" required=\"\" _v-46769cfa=\"\">\n      <input class=\"contact-form__input--text\" autocomplete=\"off\" autocapitalize=\"off\" type=\"email\" name=\"_replyto\" id=\"_replyto\" placeholder=\"EMAIL ADDRESS\" required=\"\" _v-46769cfa=\"\">\n      <input class=\"contact-form__input--text\" autocomplete=\"off\" autocapitalize=\"on\" type=\"text\" name=\"subject\" id=\"subject\" placeholder=\"INQUIRY SUBJECT\" _v-46769cfa=\"\">\n      <input class=\"contact-form__input--text\" autocomplete=\"off\" autocapitalize=\"on\" type=\"text\" name=\"message\" id=\"message\" placeholder=\"MESSAGE\" required=\"\" _v-46769cfa=\"\">\n      <input type=\"text\" name=\"_gotcha\" style=\"display: none;\" _v-46769cfa=\"\">\n      <input id=\"btn-submit\" type=\"submit\" value=\"Submit\" class=\"contact-form__input--btn\" @click.prevent=\"submitForm\" _v-46769cfa=\"\">\n    </form>\n  </div>\n  <site-footer _v-46769cfa=\"\"></site-footer>\n</div>\n";
 
 /***/ },
-/* 31 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(32)
-	__vue_script__ = __webpack_require__(34)
+	__webpack_require__(56)
+	__vue_script__ = __webpack_require__(58)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/components/SectionHome.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(40)
+	__vue_template__ = __webpack_require__(64)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -31229,13 +35747,13 @@
 	})()}
 
 /***/ },
-/* 32 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(33);
+	var content = __webpack_require__(57);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(10)(content, {});
@@ -31255,7 +35773,7 @@
 	}
 
 /***/ },
-/* 33 */
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(9)();
@@ -31269,7 +35787,7 @@
 
 
 /***/ },
-/* 34 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31278,25 +35796,25 @@
 	  value: true
 	});
 
-	var _skrollr = __webpack_require__(35);
+	var _skrollr = __webpack_require__(59);
 
 	var _skrollr2 = _interopRequireDefault(_skrollr);
 
-	var _scroll = __webpack_require__(36);
+	var _scroll = __webpack_require__(60);
 
 	var _scroll2 = _interopRequireDefault(_scroll);
 
-	var _store = __webpack_require__(16);
+	var _store = __webpack_require__(40);
 
 	var _store2 = _interopRequireDefault(_store);
 
-	var _SiteFooter = __webpack_require__(12);
+	var _SiteFooter = __webpack_require__(36);
 
 	var _SiteFooter2 = _interopRequireDefault(_SiteFooter);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var page = __webpack_require__(39)();
+	var page = __webpack_require__(63)();
 	exports.default = {
 	  components: {
 	    SiteFooter: _SiteFooter2.default
@@ -31339,17 +35857,17 @@
 	};
 
 /***/ },
-/* 35 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/*! skrollr 0.6.26 (2014-06-08) | Alexander Prinzhorn - https://github.com/Prinzhorn/skrollr | Free to use under terms of MIT license */
 	(function(e,t,r){"use strict";function n(r){if(o=t.documentElement,a=t.body,K(),it=this,r=r||{},ut=r.constants||{},r.easing)for(var n in r.easing)U[n]=r.easing[n];yt=r.edgeStrategy||"set",ct={beforerender:r.beforerender,render:r.render,keyframe:r.keyframe},ft=r.forceHeight!==!1,ft&&(Vt=r.scale||1),mt=r.mobileDeceleration||x,dt=r.smoothScrolling!==!1,gt=r.smoothScrollingDuration||E,vt={targetTop:it.getScrollTop()},Gt=(r.mobileCheck||function(){return/Android|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent||navigator.vendor||e.opera)})(),Gt?(st=t.getElementById("skrollr-body"),st&&at(),X(),Dt(o,[y,S],[T])):Dt(o,[y,b],[T]),it.refresh(),St(e,"resize orientationchange",function(){var e=o.clientWidth,t=o.clientHeight;(t!==$t||e!==Mt)&&($t=t,Mt=e,_t=!0)});var i=Y();return function l(){Z(),bt=i(l)}(),it}var o,a,i={get:function(){return it},init:function(e){return it||new n(e)},VERSION:"0.6.26"},l=Object.prototype.hasOwnProperty,s=e.Math,c=e.getComputedStyle,f="touchstart",u="touchmove",m="touchcancel",p="touchend",d="skrollable",g=d+"-before",v=d+"-between",h=d+"-after",y="skrollr",T="no-"+y,b=y+"-desktop",S=y+"-mobile",k="linear",w=1e3,x=.004,E=200,A="start",F="end",C="center",D="bottom",H="___skrollable_id",I=/^(?:input|textarea|button|select)$/i,P=/^\s+|\s+$/g,N=/^data(?:-(_\w+))?(?:-?(-?\d*\.?\d+p?))?(?:-?(start|end|top|center|bottom))?(?:-?(top|center|bottom))?$/,O=/\s*(@?[\w\-\[\]]+)\s*:\s*(.+?)\s*(?:;|$)/gi,V=/^(@?[a-z\-]+)\[(\w+)\]$/,z=/-([a-z0-9_])/g,q=function(e,t){return t.toUpperCase()},L=/[\-+]?[\d]*\.?[\d]+/g,M=/\{\?\}/g,$=/rgba?\(\s*-?\d+\s*,\s*-?\d+\s*,\s*-?\d+/g,_=/[a-z\-]+-gradient/g,B="",G="",K=function(){var e=/^(?:O|Moz|webkit|ms)|(?:-(?:o|moz|webkit|ms)-)/;if(c){var t=c(a,null);for(var n in t)if(B=n.match(e)||+n==n&&t[n].match(e))break;if(!B)return B=G="",r;B=B[0],"-"===B.slice(0,1)?(G=B,B={"-webkit-":"webkit","-moz-":"Moz","-ms-":"ms","-o-":"O"}[B]):G="-"+B.toLowerCase()+"-"}},Y=function(){var t=e.requestAnimationFrame||e[B.toLowerCase()+"RequestAnimationFrame"],r=Pt();return(Gt||!t)&&(t=function(t){var n=Pt()-r,o=s.max(0,1e3/60-n);return e.setTimeout(function(){r=Pt(),t()},o)}),t},R=function(){var t=e.cancelAnimationFrame||e[B.toLowerCase()+"CancelAnimationFrame"];return(Gt||!t)&&(t=function(t){return e.clearTimeout(t)}),t},U={begin:function(){return 0},end:function(){return 1},linear:function(e){return e},quadratic:function(e){return e*e},cubic:function(e){return e*e*e},swing:function(e){return-s.cos(e*s.PI)/2+.5},sqrt:function(e){return s.sqrt(e)},outCubic:function(e){return s.pow(e-1,3)+1},bounce:function(e){var t;if(.5083>=e)t=3;else if(.8489>=e)t=9;else if(.96208>=e)t=27;else{if(!(.99981>=e))return 1;t=91}return 1-s.abs(3*s.cos(1.028*e*t)/t)}};n.prototype.refresh=function(e){var n,o,a=!1;for(e===r?(a=!0,lt=[],Bt=0,e=t.getElementsByTagName("*")):e.length===r&&(e=[e]),n=0,o=e.length;o>n;n++){var i=e[n],l=i,s=[],c=dt,f=yt,u=!1;if(a&&H in i&&delete i[H],i.attributes){for(var m=0,p=i.attributes.length;p>m;m++){var g=i.attributes[m];if("data-anchor-target"!==g.name)if("data-smooth-scrolling"!==g.name)if("data-edge-strategy"!==g.name)if("data-emit-events"!==g.name){var v=g.name.match(N);if(null!==v){var h={props:g.value,element:i,eventType:g.name.replace(z,q)};s.push(h);var y=v[1];y&&(h.constant=y.substr(1));var T=v[2];/p$/.test(T)?(h.isPercentage=!0,h.offset=(0|T.slice(0,-1))/100):h.offset=0|T;var b=v[3],S=v[4]||b;b&&b!==A&&b!==F?(h.mode="relative",h.anchors=[b,S]):(h.mode="absolute",b===F?h.isEnd=!0:h.isPercentage||(h.offset=h.offset*Vt))}}else u=!0;else f=g.value;else c="off"!==g.value;else if(l=t.querySelector(g.value),null===l)throw'Unable to find anchor target "'+g.value+'"'}if(s.length){var k,w,x;!a&&H in i?(x=i[H],k=lt[x].styleAttr,w=lt[x].classAttr):(x=i[H]=Bt++,k=i.style.cssText,w=Ct(i)),lt[x]={element:i,styleAttr:k,classAttr:w,anchorTarget:l,keyFrames:s,smoothScrolling:c,edgeStrategy:f,emitEvents:u,lastFrameIndex:-1},Dt(i,[d],[])}}}for(Et(),n=0,o=e.length;o>n;n++){var E=lt[e[n][H]];E!==r&&(J(E),et(E))}return it},n.prototype.relativeToAbsolute=function(e,t,r){var n=o.clientHeight,a=e.getBoundingClientRect(),i=a.top,l=a.bottom-a.top;return t===D?i-=n:t===C&&(i-=n/2),r===D?i+=l:r===C&&(i+=l/2),i+=it.getScrollTop(),0|i+.5},n.prototype.animateTo=function(e,t){t=t||{};var n=Pt(),o=it.getScrollTop();return pt={startTop:o,topDiff:e-o,targetTop:e,duration:t.duration||w,startTime:n,endTime:n+(t.duration||w),easing:U[t.easing||k],done:t.done},pt.topDiff||(pt.done&&pt.done.call(it,!1),pt=r),it},n.prototype.stopAnimateTo=function(){pt&&pt.done&&pt.done.call(it,!0),pt=r},n.prototype.isAnimatingTo=function(){return!!pt},n.prototype.isMobile=function(){return Gt},n.prototype.setScrollTop=function(t,r){return ht=r===!0,Gt?Kt=s.min(s.max(t,0),Ot):e.scrollTo(0,t),it},n.prototype.getScrollTop=function(){return Gt?Kt:e.pageYOffset||o.scrollTop||a.scrollTop||0},n.prototype.getMaxScrollTop=function(){return Ot},n.prototype.on=function(e,t){return ct[e]=t,it},n.prototype.off=function(e){return delete ct[e],it},n.prototype.destroy=function(){var e=R();e(bt),wt(),Dt(o,[T],[y,b,S]);for(var t=0,n=lt.length;n>t;t++)ot(lt[t].element);o.style.overflow=a.style.overflow="",o.style.height=a.style.height="",st&&i.setStyle(st,"transform","none"),it=r,st=r,ct=r,ft=r,Ot=0,Vt=1,ut=r,mt=r,zt="down",qt=-1,Mt=0,$t=0,_t=!1,pt=r,dt=r,gt=r,vt=r,ht=r,Bt=0,yt=r,Gt=!1,Kt=0,Tt=r};var X=function(){var n,i,l,c,d,g,v,h,y,T,b,S;St(o,[f,u,m,p].join(" "),function(e){var o=e.changedTouches[0];for(c=e.target;3===c.nodeType;)c=c.parentNode;switch(d=o.clientY,g=o.clientX,T=e.timeStamp,I.test(c.tagName)||e.preventDefault(),e.type){case f:n&&n.blur(),it.stopAnimateTo(),n=c,i=v=d,l=g,y=T;break;case u:I.test(c.tagName)&&t.activeElement!==c&&e.preventDefault(),h=d-v,S=T-b,it.setScrollTop(Kt-h,!0),v=d,b=T;break;default:case m:case p:var a=i-d,k=l-g,w=k*k+a*a;if(49>w){if(!I.test(n.tagName)){n.focus();var x=t.createEvent("MouseEvents");x.initMouseEvent("click",!0,!0,e.view,1,o.screenX,o.screenY,o.clientX,o.clientY,e.ctrlKey,e.altKey,e.shiftKey,e.metaKey,0,null),n.dispatchEvent(x)}return}n=r;var E=h/S;E=s.max(s.min(E,3),-3);var A=s.abs(E/mt),F=E*A+.5*mt*A*A,C=it.getScrollTop()-F,D=0;C>Ot?(D=(Ot-C)/F,C=Ot):0>C&&(D=-C/F,C=0),A*=1-D,it.animateTo(0|C+.5,{easing:"outCubic",duration:A})}}),e.scrollTo(0,0),o.style.overflow=a.style.overflow="hidden"},j=function(){var e,t,r,n,a,i,l,c,f,u,m,p=o.clientHeight,d=At();for(c=0,f=lt.length;f>c;c++)for(e=lt[c],t=e.element,r=e.anchorTarget,n=e.keyFrames,a=0,i=n.length;i>a;a++)l=n[a],u=l.offset,m=d[l.constant]||0,l.frame=u,l.isPercentage&&(u*=p,l.frame=u),"relative"===l.mode&&(ot(t),l.frame=it.relativeToAbsolute(r,l.anchors[0],l.anchors[1])-u,ot(t,!0)),l.frame+=m,ft&&!l.isEnd&&l.frame>Ot&&(Ot=l.frame);for(Ot=s.max(Ot,Ft()),c=0,f=lt.length;f>c;c++){for(e=lt[c],n=e.keyFrames,a=0,i=n.length;i>a;a++)l=n[a],m=d[l.constant]||0,l.isEnd&&(l.frame=Ot-l.offset+m);e.keyFrames.sort(Nt)}},W=function(e,t){for(var r=0,n=lt.length;n>r;r++){var o,a,s=lt[r],c=s.element,f=s.smoothScrolling?e:t,u=s.keyFrames,m=u.length,p=u[0],y=u[u.length-1],T=p.frame>f,b=f>y.frame,S=T?p:y,k=s.emitEvents,w=s.lastFrameIndex;if(T||b){if(T&&-1===s.edge||b&&1===s.edge)continue;switch(T?(Dt(c,[g],[h,v]),k&&w>-1&&(xt(c,p.eventType,zt),s.lastFrameIndex=-1)):(Dt(c,[h],[g,v]),k&&m>w&&(xt(c,y.eventType,zt),s.lastFrameIndex=m)),s.edge=T?-1:1,s.edgeStrategy){case"reset":ot(c);continue;case"ease":f=S.frame;break;default:case"set":var x=S.props;for(o in x)l.call(x,o)&&(a=nt(x[o].value),0===o.indexOf("@")?c.setAttribute(o.substr(1),a):i.setStyle(c,o,a));continue}}else 0!==s.edge&&(Dt(c,[d,v],[g,h]),s.edge=0);for(var E=0;m-1>E;E++)if(f>=u[E].frame&&u[E+1].frame>=f){var A=u[E],F=u[E+1];for(o in A.props)if(l.call(A.props,o)){var C=(f-A.frame)/(F.frame-A.frame);C=A.props[o].easing(C),a=rt(A.props[o].value,F.props[o].value,C),a=nt(a),0===o.indexOf("@")?c.setAttribute(o.substr(1),a):i.setStyle(c,o,a)}k&&w!==E&&("down"===zt?xt(c,A.eventType,zt):xt(c,F.eventType,zt),s.lastFrameIndex=E);break}}},Z=function(){_t&&(_t=!1,Et());var e,t,n=it.getScrollTop(),o=Pt();if(pt)o>=pt.endTime?(n=pt.targetTop,e=pt.done,pt=r):(t=pt.easing((o-pt.startTime)/pt.duration),n=0|pt.startTop+t*pt.topDiff),it.setScrollTop(n,!0);else if(!ht){var a=vt.targetTop-n;a&&(vt={startTop:qt,topDiff:n-qt,targetTop:n,startTime:Lt,endTime:Lt+gt}),vt.endTime>=o&&(t=U.sqrt((o-vt.startTime)/gt),n=0|vt.startTop+t*vt.topDiff)}if(Gt&&st&&i.setStyle(st,"transform","translate(0, "+-Kt+"px) "+Tt),ht||qt!==n){zt=n>qt?"down":qt>n?"up":zt,ht=!1;var l={curTop:n,lastTop:qt,maxTop:Ot,direction:zt},s=ct.beforerender&&ct.beforerender.call(it,l);s!==!1&&(W(n,it.getScrollTop()),qt=n,ct.render&&ct.render.call(it,l)),e&&e.call(it,!1)}Lt=o},J=function(e){for(var t=0,r=e.keyFrames.length;r>t;t++){for(var n,o,a,i,l=e.keyFrames[t],s={};null!==(i=O.exec(l.props));)a=i[1],o=i[2],n=a.match(V),null!==n?(a=n[1],n=n[2]):n=k,o=o.indexOf("!")?Q(o):[o.slice(1)],s[a]={value:o,easing:U[n]};l.props=s}},Q=function(e){var t=[];return $.lastIndex=0,e=e.replace($,function(e){return e.replace(L,function(e){return 100*(e/255)+"%"})}),G&&(_.lastIndex=0,e=e.replace(_,function(e){return G+e})),e=e.replace(L,function(e){return t.push(+e),"{?}"}),t.unshift(e),t},et=function(e){var t,r,n={};for(t=0,r=e.keyFrames.length;r>t;t++)tt(e.keyFrames[t],n);for(n={},t=e.keyFrames.length-1;t>=0;t--)tt(e.keyFrames[t],n)},tt=function(e,t){var r;for(r in t)l.call(e.props,r)||(e.props[r]=t[r]);for(r in e.props)t[r]=e.props[r]},rt=function(e,t,r){var n,o=e.length;if(o!==t.length)throw"Can't interpolate between \""+e[0]+'" and "'+t[0]+'"';var a=[e[0]];for(n=1;o>n;n++)a[n]=e[n]+(t[n]-e[n])*r;return a},nt=function(e){var t=1;return M.lastIndex=0,e[0].replace(M,function(){return e[t++]})},ot=function(e,t){e=[].concat(e);for(var r,n,o=0,a=e.length;a>o;o++)n=e[o],r=lt[n[H]],r&&(t?(n.style.cssText=r.dirtyStyleAttr,Dt(n,r.dirtyClassAttr)):(r.dirtyStyleAttr=n.style.cssText,r.dirtyClassAttr=Ct(n),n.style.cssText=r.styleAttr,Dt(n,r.classAttr)))},at=function(){Tt="translateZ(0)",i.setStyle(st,"transform",Tt);var e=c(st),t=e.getPropertyValue("transform"),r=e.getPropertyValue(G+"transform"),n=t&&"none"!==t||r&&"none"!==r;n||(Tt="")};i.setStyle=function(e,t,r){var n=e.style;if(t=t.replace(z,q).replace("-",""),"zIndex"===t)n[t]=isNaN(r)?r:""+(0|r);else if("float"===t)n.styleFloat=n.cssFloat=r;else try{B&&(n[B+t.slice(0,1).toUpperCase()+t.slice(1)]=r),n[t]=r}catch(o){}};var it,lt,st,ct,ft,ut,mt,pt,dt,gt,vt,ht,yt,Tt,bt,St=i.addEvent=function(t,r,n){var o=function(t){return t=t||e.event,t.target||(t.target=t.srcElement),t.preventDefault||(t.preventDefault=function(){t.returnValue=!1,t.defaultPrevented=!0}),n.call(this,t)};r=r.split(" ");for(var a,i=0,l=r.length;l>i;i++)a=r[i],t.addEventListener?t.addEventListener(a,n,!1):t.attachEvent("on"+a,o),Yt.push({element:t,name:a,listener:n})},kt=i.removeEvent=function(e,t,r){t=t.split(" ");for(var n=0,o=t.length;o>n;n++)e.removeEventListener?e.removeEventListener(t[n],r,!1):e.detachEvent("on"+t[n],r)},wt=function(){for(var e,t=0,r=Yt.length;r>t;t++)e=Yt[t],kt(e.element,e.name,e.listener);Yt=[]},xt=function(e,t,r){ct.keyframe&&ct.keyframe.call(it,e,t,r)},Et=function(){var e=it.getScrollTop();Ot=0,ft&&!Gt&&(a.style.height=""),j(),ft&&!Gt&&(a.style.height=Ot+o.clientHeight+"px"),Gt?it.setScrollTop(s.min(it.getScrollTop(),Ot)):it.setScrollTop(e,!0),ht=!0},At=function(){var e,t,r=o.clientHeight,n={};for(e in ut)t=ut[e],"function"==typeof t?t=t.call(it):/p$/.test(t)&&(t=t.slice(0,-1)/100*r),n[e]=t;return n},Ft=function(){var e=st&&st.offsetHeight||0,t=s.max(e,a.scrollHeight,a.offsetHeight,o.scrollHeight,o.offsetHeight,o.clientHeight);return t-o.clientHeight},Ct=function(t){var r="className";return e.SVGElement&&t instanceof e.SVGElement&&(t=t[r],r="baseVal"),t[r]},Dt=function(t,n,o){var a="className";if(e.SVGElement&&t instanceof e.SVGElement&&(t=t[a],a="baseVal"),o===r)return t[a]=n,r;for(var i=t[a],l=0,s=o.length;s>l;l++)i=It(i).replace(It(o[l])," ");i=Ht(i);for(var c=0,f=n.length;f>c;c++)-1===It(i).indexOf(It(n[c]))&&(i+=" "+n[c]);t[a]=Ht(i)},Ht=function(e){return e.replace(P,"")},It=function(e){return" "+e+" "},Pt=Date.now||function(){return+new Date},Nt=function(e,t){return e.frame-t.frame},Ot=0,Vt=1,zt="down",qt=-1,Lt=Pt(),Mt=0,$t=0,_t=!1,Bt=0,Gt=!1,Kt=0,Yt=[]; true?!(__WEBPACK_AMD_DEFINE_RESULT__ = function(){return i}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)):"undefined"!=typeof module&&module.exports?module.exports=i:e.skrollr=i})(window,document);
 
 /***/ },
-/* 36 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var raf = __webpack_require__(37)
+	var raf = __webpack_require__(61)
 
 	function scroll (prop, element, to, options, callback) {
 	  var start = +new Date
@@ -31419,10 +35937,10 @@
 
 
 /***/ },
-/* 37 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var global = __webpack_require__(38)
+	var global = __webpack_require__(62)
 
 	/**
 	 * `requestAnimationFrame()`
@@ -31460,7 +35978,7 @@
 
 
 /***/ },
-/* 38 */
+/* 62 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {if (typeof window !== "undefined") {
@@ -31476,7 +35994,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 39 */
+/* 63 */
 /***/ function(module, exports) {
 
 	var win = window || {};
@@ -31504,23 +36022,23 @@
 
 
 /***/ },
-/* 40 */
+/* 64 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"slides\" _v-0ea87e16=\"\">\n  <!-- SECTION 0: INTRO/HERO -->\n  <div class=\"slide slide--0 slide--intro\" _v-0ea87e16=\"\">\n    <div class=\"slide--intro__logo\" data-0=\"opacity: 1;\" data-top-center=\"opacity: 0;\" _v-0ea87e16=\"\">\n      <img src=\"/images/logo.svg\" title=\"CANDER PARIS\" _v-0ea87e16=\"\">\n    </div>\n    <a href=\"#\" @click.prevent=\"scrollToFold\" class=\"slide--intro__icn-scroll\" data-0=\"opacity: 1;\" data-center-top=\"opacity: 0;\" _v-0ea87e16=\"\">Scroll Down</a>\n  </div>\n\n  <!-- SECTION 1: THE CANDLE -->\n  <div class=\"slide slide--1\" id=\"the-fold\" data-0=\"transform: translate(0, 100%);\" data-100p=\"transform: translate(0, 0%)\" _v-0ea87e16=\"\">\n    <div class=\"slide__product-wrapper\" _v-0ea87e16=\"\">\n      <div class=\"slide__product-images\" _v-0ea87e16=\"\">\n        <img src=\"/images/product-vessel.png\" alt=\"Vessel\" class=\"slide__product-image\" data-0=\"opacity: 0\" data-50p=\"opacity: 1\" data-100p=\"opacity: 1\" data-150p=\"opacity: 0\" _v-0ea87e16=\"\">\n        <img src=\"/images/product-box-front.png\" alt=\"Front\" class=\"slide__product-image\" data-150p=\"opacity: 0\" data-200p=\"opacity: 1\" data-250p=\"opacity: 1\" data-300p=\"opacity: 0\" _v-0ea87e16=\"\">\n        <img src=\"/images/product-box-back.png\" alt=\"Back\" class=\"slide__product-image\" data-300p=\"opacity: 0\" data-350p=\"opacity: 1\" data-400p=\"opacity: 1\" data-450p=\"opacity: 0\" _v-0ea87e16=\"\">\n        <img src=\"/images/product-box-top.png\" alt=\"Top\" class=\"slide__product-image\" data-450p=\"opacity: 0\" data-500p=\"opacity: 1\" data-600p=\"opacity: 1\" data-650p=\"opacity: 0\" _v-0ea87e16=\"\">\n      </div>\n      <div class=\"slide__product-info\" data-0=\"opacity: 0\" data-100p=\"opacity: 1\" data-600p=\"opacity: 1\" data-650p=\"opacity: 0\" _v-0ea87e16=\"\">\n        <h2 class=\"slide__product-heading\" _v-0ea87e16=\"\">Scent One</h2>\n        <h4 class=\"slide__product-desc slide__product-desc--primary\" _v-0ea87e16=\"\">Scent One is an exploration of the beginning.</h4>\n        <h4 class=\"slide__product-desc slide__product-desc--secondary\" _v-0ea87e16=\"\">Scent One est l'exploration du début.</h4>\n      </div>\n    </div>\n    <div class=\"slide__accent-wrapper\" data-0=\"opacity: 0\" data-100p=\"opacity: 1\" data-600p=\"opacity: 1\" data-650p=\"opacity: 0\" _v-0ea87e16=\"\">\n      <img src=\"/images/slide-accent-face.png\" alt=\"Faces\" class=\"slide__accent-image\" _v-0ea87e16=\"\">\n    </div>\n  </div>\n\n  <!-- SECTION 2: THE SCENT -->\n  <div class=\"slide slide--2\" data-0=\"opacity: 0\" data-600p=\"opacity: 0; transform: translate(0, 100%);\" data-650p=\"opacity: 0; transform: translate(0, 5%);\" data-700p=\"opacity: 1; transform: translate(0, 0%);\" data-850p=\"opacity: 0; transform: translate(0, -2%);\" _v-0ea87e16=\"\">\n    <div class=\"the-scent\" _v-0ea87e16=\"\">\n      <h4 class=\"the-scent__title\" _v-0ea87e16=\"\">Scent One</h4>\n      <p class=\"the-scent__desc\" _v-0ea87e16=\"\">Blending woody aromatics like <span class=\"aromatic\" data-id=\"cypres\" @mouseover=\"showIngredient\" @mouseout=\"hideIngredient\" _v-0ea87e16=\"\">cyprés</span>,<br _v-0ea87e16=\"\">\n        <span class=\"aromatic\" data-id=\"cedre\" @mouseover=\"showIngredient\" @mouseout=\"hideIngredient\" _v-0ea87e16=\"\">cédre</span>, and <span class=\"aromatic\" data-id=\"oud\" @mouseover=\"showIngredient\" @mouseout=\"hideIngredient\" _v-0ea87e16=\"\">oud</span>, with sensual <span class=\"aromatic\" data-id=\"rose\" @mouseover=\"showIngredient\" @mouseout=\"hideIngredient\" _v-0ea87e16=\"\">rose</span> and<br _v-0ea87e16=\"\">\n        <span class=\"aromatic\" data-id=\"patchouli\" @mouseover=\"showIngredient\" @mouseout=\"hideIngredient\" _v-0ea87e16=\"\">patchouli</span>. Adding a hint of mystery<br _v-0ea87e16=\"\">\n        with the scent of <span class=\"aromatic\" data-id=\"cuir\" @mouseover=\"showIngredient\" @mouseout=\"hideIngredient\" _v-0ea87e16=\"\">cuir</span>.</p>\n    </div>\n    <div class=\"ingredients\" _v-0ea87e16=\"\">\n      <div class=\"ingredient ingredient--cypres\" v-show=\"visibleIngredient == 'cypres'\" transition=\"fade\" _v-0ea87e16=\"\">\n        <img src=\"/images/story-ingredient-cedre.png\" alt=\"cypres\" _v-0ea87e16=\"\">\n      </div>\n      <div class=\"ingredient ingredient--cedre\" v-show=\"visibleIngredient == 'cedre'\" transition=\"fade\" _v-0ea87e16=\"\">\n        <img src=\"/images/story-ingredient-cedre.png\" alt=\"cedre\" _v-0ea87e16=\"\">\n      </div>\n      <div class=\"ingredient ingredient--oud\" v-show=\"visibleIngredient == 'oud'\" transition=\"fade\" _v-0ea87e16=\"\">\n        <img src=\"/images/story-ingredient-cedre.png\" alt=\"oud\" _v-0ea87e16=\"\">\n      </div>\n      <div class=\"ingredient ingredient--rose\" v-show=\"visibleIngredient == 'rose'\" transition=\"fade\" _v-0ea87e16=\"\">\n        <img src=\"/images/story-ingredient-rose.png\" alt=\"rose\" _v-0ea87e16=\"\">\n      </div>\n      <div class=\"ingredient ingredient--patchouli\" v-show=\"visibleIngredient == 'patchouli'\" transition=\"fade\" _v-0ea87e16=\"\">\n        <img src=\"/images/story-ingredient-cedre.png\" alt=\"patchouli\" _v-0ea87e16=\"\">\n      </div>\n      <div class=\"ingredient ingredient--cuir\" v-show=\"visibleIngredient == 'cuir'\" transition=\"fade\" _v-0ea87e16=\"\">\n        <img src=\"/images/story-ingredient-cedre.png\" alt=\"cuir\" _v-0ea87e16=\"\">\n      </div>\n    </div>\n  </div>\n\n  <!-- SECTION 3: DOOR -->\n  <div class=\"slide slide--3\" data-0=\"opacity: 0\" data-840p=\"opacity: 0; transform: translate(0, 100%);\" data-850p=\"opacity: 0; transform: translate(0, 30%);\" data-900p=\"opacity: 1; transform: translate(0, 0%);\" data-1050p=\"opacity: 1; transform: translate(0, 0%);\" data-1150p=\"transform: translate(0, -120%);\" _v-0ea87e16=\"\">\n    <div class=\"translations-wrapper\" _v-0ea87e16=\"\">\n      <ul class=\"translations-list\" _v-0ea87e16=\"\">\n        <li _v-0ea87e16=\"\">Bougie Parfumée</li>\n        <li _v-0ea87e16=\"\">Fragranced Candle</li>\n        <li _v-0ea87e16=\"\">Candela Profumata</li>\n        <li _v-0ea87e16=\"\">Vela Perfumada</li>\n        <li _v-0ea87e16=\"\">Duftkerze</li>\n        <li _v-0ea87e16=\"\">香味蠟燭</li>\n        <li _v-0ea87e16=\"\">香りのろうそく</li>\n      </ul>\n    </div>\n  </div>\n\n  <!-- SECTION 4: PRODUCT -->\n  <div class=\"slide slide--4\" data-0=\"opacity: 0\" data-1100p=\"opacity: 0; transform: translate(0, 100%);\" data-1125p=\"opacity: 0; transform: translate(0, 20%);\" data-1160p=\"opacity: 0.3; transform: translate(0, 5%);\" data-1170p=\"opacity: 1; transform: translate(0, 0%);\" data-1200p=\"transform: translate(0, 0%);\" data-1290p=\"transform: translate(0, -15%);\" _v-0ea87e16=\"\">\n    <div class=\"slide--4__inner\" _v-0ea87e16=\"\">\n      <h2 class=\"zeta\" _v-0ea87e16=\"\">Coming soon in stores</h2>\n    </div>\n  </div>\n\n  <!-- FOOTER -->\n  <div class=\"slide--footer-wrapper\" data-0=\"opacity: 0\" data-1200p=\"opacity: 0; transform: translate(0, 100%);\" data-1225p=\"opacity: 0; transform: translate(0, 20%);\" data-1260p=\"opacity: 0.3; transform: translate(0, 5%);\" data-1270p=\"opacity: 1; transform: translate(0, 0%);\" _v-0ea87e16=\"\">\n    <site-footer _v-0ea87e16=\"\"></site-footer>\n  </div>\n</div>\n";
 
 /***/ },
-/* 41 */
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(42)
-	__vue_script__ = __webpack_require__(44)
+	__webpack_require__(66)
+	__vue_script__ = __webpack_require__(68)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/components/SectionStores.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(45)
+	__vue_template__ = __webpack_require__(69)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -31539,13 +36057,13 @@
 	})()}
 
 /***/ },
-/* 42 */
+/* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(43);
+	var content = __webpack_require__(67);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(10)(content, {});
@@ -31554,8 +36072,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionStores.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionStores.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-837df270&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionStores.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-837df270&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionStores.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -31565,7 +36083,7 @@
 	}
 
 /***/ },
-/* 43 */
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(9)();
@@ -31573,13 +36091,13 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n", ""]);
+	exports.push([module.id, "section[_v-837df270] {\n  margin: 6rem auto;\n  max-width: 65rem;\n  width: 80%; }\n\nh1[_v-837df270] {\n  font-size: 1.8rem;\n  text-align: center;\n  text-transform: uppercase; }\n\nh3[_v-837df270] {\n  font-size: 1.4rem;\n  line-height: 1.8;\n  margin: 3rem 0 2rem 0;\n  text-transform: uppercase; }\n\np[_v-837df270] {\n  font-family: \"sabon\", serif;\n  font-size: 1.4rem;\n  line-height: 1.666;\n  margin-bottom: 1.2rem; }\n\na[_v-837df270] {\n  transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n\nhr[_v-837df270] {\n  margin: 4rem auto; }\n\n.retailers-list[_v-837df270] {\n  text-align: center; }\n\n.retailer[_v-837df270] {\n  border-top: 1px solid rgba(193, 193, 193, 0.333);\n  padding: 0 0 3rem 0; }\n  .retailer[_v-837df270]:first-of-type {\n    border-top: none; }\n  .retailer[_v-837df270]:last-of-type {\n    padding: 0; }\n\n.retailer__map-btn[_v-837df270] {\n  color: #c1c1c1;\n  display: inline-block;\n  font-size: 1rem;\n  letter-spacing: 0.1rem;\n  margin: 2.666rem 0 1.666rem 0;\n  text-decoration: none;\n  text-transform: uppercase; }\n  .retailer__map-btn[_v-837df270]:after {\n    /* use !important to prevent issues with browser extensions that change fonts */\n    font-family: \"icomoon\" !important;\n    speak: none;\n    font-style: normal;\n    font-weight: normal;\n    font-variant: normal;\n    text-transform: none;\n    line-height: 1;\n    /* Better Font Rendering =========== */\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n    background-size: 100% 100%;\n    content: \"\\E902\";\n    display: inline-block;\n    height: 1rem;\n    margin-left: 0.5rem;\n    transition: all 220ms cubic-bezier(0.77, 0, 0.175, 1);\n    width: 1rem; }\n  .retailer__map-btn.is-active[_v-837df270]:after {\n    -webkit-transform: rotate(180deg);\n        -ms-transform: rotate(180deg);\n            transform: rotate(180deg); }\n\n.retailer__map[_v-837df270] {\n  transition: all 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .retailer__map.fade-transition[_v-837df270] {\n    transition: opacity 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .retailer__map.fade-enter[_v-837df270], .retailer__map.fade-leave[_v-837df270] {\n    opacity: 0; }\n\n.retailer__locations p[_v-837df270]:last-of-type {\n  margin-bottom: 0; }\n\n.retailer__website[_v-837df270] {\n  margin: 0; }\n  .retailer__website a[_v-837df270] {\n    text-decoration: none; }\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 44 */
+/* 68 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31588,7 +36106,13 @@
 	  value: true
 	});
 
-	var _SiteFooter = __webpack_require__(12);
+	var _lodash = __webpack_require__(52);
+
+	var _store = __webpack_require__(40);
+
+	var _store2 = _interopRequireDefault(_store);
+
+	var _SiteFooter = __webpack_require__(36);
 
 	var _SiteFooter2 = _interopRequireDefault(_SiteFooter);
 
@@ -31598,27 +36122,48 @@
 	  components: {
 	    SiteFooter: _SiteFooter2.default
 	  },
-	  ready: function ready() {}
+	  methods: {
+	    hasMap: function hasMap(retailer) {
+	      if (!(0, _lodash.isEmpty)(retailer.mapUrl)) {
+	        return true;
+	      }
+	      return false;
+	    },
+	    mapIsVisible: function mapIsVisible(retailer) {
+	      if (retailer.mapRevealed) {
+	        return true;
+	      }
+	      return false;
+	    },
+	    toggleMapRevealed: function toggleMapRevealed(retailer) {
+	      retailer.mapRevealed = !retailer.mapRevealed;
+	    }
+	  },
+	  data: function data() {
+	    return {
+	      retailers: _store2.default.data.retailers
+	    };
+	  }
 	};
 
 /***/ },
-/* 45 */
+/* 69 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div>\n  <div>STORES PAGE</div>\n  <site-footer></site-footer>\n</div>\n";
+	module.exports = "\n<div _v-837df270=\"\">\n  <section _v-837df270=\"\">\n    <h1 class=\"section__heading--alpha\" _v-837df270=\"\">Retailers</h1>\n    <hr _v-837df270=\"\">\n    <ul class=\"retailers-list\" _v-837df270=\"\">\n      <li class=\"retailer\" v-for=\"retailer in retailers\" _v-837df270=\"\">\n        <h3 class=\"retailer__name\" _v-837df270=\"\">{{ retailer.name }}</h3>\n        <div class=\"retailer__locations\" v-if=\"retailer.locations\" _v-837df270=\"\">\n          <p v-for=\"location in retailer.locations\" _v-837df270=\"\">{{{ location }}}</p>\n        </div>\n        <p class=\"retailer__website\" _v-837df270=\"\">\n          <a href=\"{{ retailer.website }}\" target=\"_blank\" title=\"Visit {{ retailer.name }}\" _v-837df270=\"\">{{ retailer.website }}</a>\n        </p>\n        <a href=\"#\" class=\"retailer__map-btn\" :class=\"retailer.mapRevealed ? 'is-active' : ''\" @click.prevent=\"toggleMapRevealed(retailer)\" v-if=\"hasMap(retailer)\" _v-837df270=\"\">View Map</a>\n        <div class=\"retailer__map\" v-if=\"mapIsVisible(retailer)\" transition=\"fade\" _v-837df270=\"\">\n          <img src=\"{{ retailer.mapUrl }}\" alt=\"{{ retailer.name }}\" title=\"{{ retailer.name }}\" _v-837df270=\"\">\n        </div>\n      </li>\n    </ul>\n  </section>\n  <site-footer _v-837df270=\"\"></site-footer>\n</div>\n";
 
 /***/ },
-/* 46 */
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(47)
-	__vue_script__ = __webpack_require__(49)
+	__webpack_require__(71)
+	__vue_script__ = __webpack_require__(73)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/components/SectionTerms.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(50)
+	__vue_template__ = __webpack_require__(74)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -31637,13 +36182,13 @@
 	})()}
 
 /***/ },
-/* 47 */
+/* 71 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(48);
+	var content = __webpack_require__(72);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(10)(content, {});
@@ -31663,7 +36208,7 @@
 	}
 
 /***/ },
-/* 48 */
+/* 72 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(9)();
@@ -31677,7 +36222,7 @@
 
 
 /***/ },
-/* 49 */
+/* 73 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31686,11 +36231,11 @@
 	  value: true
 	});
 
-	var _store = __webpack_require__(16);
+	var _store = __webpack_require__(40);
 
 	var _store2 = _interopRequireDefault(_store);
 
-	var _SiteFooter = __webpack_require__(12);
+	var _SiteFooter = __webpack_require__(36);
 
 	var _SiteFooter2 = _interopRequireDefault(_SiteFooter);
 
@@ -31701,30 +36246,28 @@
 	    SiteFooter: _SiteFooter2.default
 	  },
 	  data: function data() {
-	    return {
-	      skrollr: _store2.default.data.skrollr
-	    };
+	    return {};
 	  }
 	};
 
 /***/ },
-/* 50 */
+/* 74 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div _v-1b075f61=\"\">\n  <section _v-1b075f61=\"\">\n    <h1 class=\"section__heading--alpha\" _v-1b075f61=\"\">Terms and Conditions</h1>\n    <hr _v-1b075f61=\"\">\n    <h3 _v-1b075f61=\"\">OVERVIEW</h3>\n    <p _v-1b075f61=\"\">This website is operated by Cander Paris. Throughout the site, the terms “we”, “us” and “our” refer to Cander. Cander offers this website, including all information, tools and services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies and notices stated here.</p>\n    <p _v-1b075f61=\"\">By visiting our site and/ or purchasing something from us, you engage in our “Service” and agree to be bound by the following terms and conditions (“Terms of Service”, “Terms”), including those additional terms and conditions and policies referenced herein and/or available by hyperlink. These Terms of Service apply  to all users of the site, including without limitation users who are browsers, vendors, customers, merchants, and/ or contributors of content.</p>\n    <p _v-1b075f61=\"\">Please read these Terms of Service carefully before accessing or using our website. By accessing or using any part of the site, you agree to be bound by these Terms of Service. If you do not agree to all the terms and conditions of this agreement, then you may not access the website or use any services. If these Terms of Service are considered an offer, acceptance is expressly limited to these Terms of Service.</p>\n    <p _v-1b075f61=\"\">Any new features or tools which are added to the current store shall also be subject to the Terms of Service. You can review the most current version of the Terms of Service at any time on this page. We reserve the right to update, change or replace any part of these Terms of Service by posting updates and/or changes to our website. It is your responsibility to check this page periodically for changes. Your continued use of or access to the website following the posting of any changes constitutes acceptance of those changes.</p>\n    <h3 _v-1b075f61=\"\">Section 1 - Online Store Terms</h3>\n    <p _v-1b075f61=\"\">By agreeing to these Terms of Service, you represent that you are at least the age of majority in your state or province of residence, or that you are the age of majority in your state or province of residence and you have given us your consent to allow any of your minor dependents to use this site. A breach or violation of any of the Terms will result in an immediate termination of your Services.</p>\n    <h3 _v-1b075f61=\"\">Section 2 - General Conditions</h3>\n    <p _v-1b075f61=\"\">We reserve the right to refuse service to anyone for any reason at any time.</p>\n    <p _v-1b075f61=\"\">You understand that your content (not including credit card information), may be transferred unencrypted and involve (a) transmissions over various networks; and (b) changes to conform and adapt to technical requirements of connecting networks or devices. Credit card information is always encrypted during transfer over networks.</p>\n    <p _v-1b075f61=\"\">You agree not to reproduce, duplicate, copy, sell, resell or exploit any portion of the Service, use of the Service, or access to the Service or any contact on the website through which the service is provided, without express written permission by us.</p>\n    <p _v-1b075f61=\"\">The headings used in this agreement are included for convenience only and will not limit or otherwise affect these Terms.</p>\n    <h3 _v-1b075f61=\"\">Section 3 - Accuracy, Completeness And Timeliness Of Information</h3>\n    <p _v-1b075f61=\"\">We are not responsible if information made available on this site is not accurate, complete or current. The material on this site is provided for general information only and should not be relied upon or used as the sole basis for making decisions without consulting primary, more accurate, more complete or more timely sources of information. Any reliance on the material on this site is at your own risk.</p>\n    <p _v-1b075f61=\"\">This site may contain certain historical information. Historical information, necessarily, is not current and is provided for your reference only. We reserve the right to modify the contents of this site at any time, but we have no obligation to update any information on our site. You agree that it is your responsibility to monitor changes to our site.</p>\n    <h3 _v-1b075f61=\"\">Section 4 - Modifications To The Service And Prices</h3>\n    <p _v-1b075f61=\"\">Prices for our products are subject to change without notice.We reserve the right at any time to modify or discontinue the Service (or any part or content thereof) without notice at any time.We shall not be liable to you or to any third-party for any modification, price change, suspension or discontinuance of the Service.</p>\n    <h3 _v-1b075f61=\"\">Section 5 - Products Or Services (if Applicable)</h3>\n    <p _v-1b075f61=\"\">Certain products or services may be available exclusively online through the website. These products or services may have limited quantities and are subject to return or exchange only according to our Return Policy.</p>\n    <p _v-1b075f61=\"\">We have made every effort to display as accurately as possible the colors and images of our products that appear at the store. We cannot guarantee that your computer monitor's display of any color will be accurate.</p>\n    <p _v-1b075f61=\"\">We reserve the right, but are not obligated, to limit the sales of our products or Services to any person, geographic region or jurisdiction. We may exercise this right on a case-by-case basis. We reserve the right to limit the quantities of any products or services that we offer. All descriptions of products or product pricing are subject to change at anytime without notice, at the sole discretion of us. We reserve the right to discontinue any product at any time. Any offer for any product or service made on this site is void where prohibited.</p>\n    <p _v-1b075f61=\"\">We do not warrant that the quality of any products, services, information, or other material purchased or obtained by you will meet your expectations, or that any errors in the Service will be corrected.</p>\n    <h3 _v-1b075f61=\"\">Section 6 - Accuracy Of Billing And Account Information</h3>\n    <p _v-1b075f61=\"\">We reserve the right to refuse any order you place with us. We may, in our sole discretion, limit or cancel quantities purchased per person, per household or per order. These restrictions may include orders placed by or under the same customer account, the same credit card, and/or orders that use the same billing and/or shipping address. In the event that we make a change to or cancel an order, we may attempt to notify you by contacting the e-mail and/or billing address/phone number provided at the time the order was made. We reserve the right to limit or prohibit orders that, in our sole judgment, appear to be placed by dealers, resellers or distributors.</p>\n    <p _v-1b075f61=\"\">You agree to provide current, complete and accurate purchase and account information for all purchases made at our store. You agree to promptly update your account and other information, including your email address and credit card numbers and expiration dates, so that we can complete your transactions and contact you as needed.</p>\n    <p _v-1b075f61=\"\">For more detail, please review our Returns Policy.</p>\n    <h3 _v-1b075f61=\"\">Section 7 - Optional Tools</h3>\n    <p _v-1b075f61=\"\">We may provide you with access to third-party tools over which we neither monitor nor have any control nor input.</p>\n    <p _v-1b075f61=\"\">You acknowledge and agree that we provide access to such tools ”as is” and “as available” without any warranties, representations or conditions of any kind and without any endorsement. We shall have no liability whatsoever arising from or relating to your use of optional third-party tools.</p>\n    <p _v-1b075f61=\"\">Any use by you of optional tools offered through the site is entirely at your own risk and discretion and you should ensure that you are familiar with and approve of the terms on which tools are provided by the relevant third-party provider(s).</p>\n    <p _v-1b075f61=\"\">We may also, in the future, offer new services and/or features through the website (including, the release of new tools and resources). Such new features and/or services shall also be subject to these Terms of Service.</p>\n    <h3 _v-1b075f61=\"\">Section 8 - Third-party Links</h3>\n    <p _v-1b075f61=\"\">Certain content, products and services available via our Service may include materials from third-parties.</p>\n    <p _v-1b075f61=\"\">Third-party links on this site may direct you to third-party websites that are not affiliated with us. We are not responsible for examining or evaluating the content or accuracy and we do not warrant and will not have any liability or responsibility for any third-party materials or websites, or for any other materials, products, or services of third-parties.</p>\n    <p _v-1b075f61=\"\">We are not liable for any harm or damages related to the purchase or use of goods, services, resources, content, or any other transactions made in connection with any third-party websites. Please review carefully the third-party's policies and practices and make sure you understand them before you engage in any transaction. Complaints, claims, concerns, or questions regarding third-party products should be directed to the third-party.</p>\n    <h3 _v-1b075f61=\"\">Section 9 - User Comments, Feedback And Other Submissions</h3>\n    <p _v-1b075f61=\"\">If, at our request, you send certain specific submissions (for example contest entries) or without a request from us you send creative ideas, suggestions, proposals, plans, or other materials, whether online, by email, by postal mail, or otherwise (collectively, 'comments'), you agree that we may, at any time, without restriction, edit, copy, publish, distribute, translate and otherwise use in any medium any comments that you forward to us. We are and shall be under no obligation (1) to maintain any comments in confidence; (2) to pay compensation for any comments; or (3) to respond to any comments.</p>\n    <p _v-1b075f61=\"\">We may, but have no obligation to, monitor, edit or remove content that we determine in our sole discretion are unlawful, offensive, threatening, libelous, defamatory, pornographic, obscene or otherwise objectionable or violates any party’s intellectual property or these Terms of Service.</p>\n    <p _v-1b075f61=\"\">You agree that your comments will not violate any right of any third-party, including copyright, trademark, privacy, personality or other personal or proprietary right. You further agree that your comments will not contain libelous or otherwise unlawful, abusive or obscene material, or contain any computer virus or other malware that could in any way affect the operation of the Service or any related website. You may not use a false e-mail address, pretend to be someone other than yourself, or otherwise mislead us or third-parties as to the origin of any comments. You are solely responsible for any comments you make and their accuracy. We take no responsibility and assume no liability for any comments posted by you or any third-party.</p>\n    <h3 _v-1b075f61=\"\">Section 10 - Personal Information</h3>\n    <p _v-1b075f61=\"\">Your submission of personal information through the store is governed by our Privacy Policy. To view our Privacy Policy.</p>\n    <h3 _v-1b075f61=\"\">Section 11 - Errors, Inaccuracies And Omissions</h3>\n    <p _v-1b075f61=\"\">Occasionally there may be information on our site or in the Service that contains typographical errors, inaccuracies or omissions that may relate to product descriptions, pricing, promotions, offers, product shipping charges, transit times and availability. We reserve the right to correct any errors, inaccuracies or omissions, and to change or update information or cancel orders if any information in the Service or on any related website is inaccurate at any time without prior notice (including after you have submitted your order).</p>\n    <p _v-1b075f61=\"\">We undertake no obligation to update, amend or clarify information in the Service or on any related website, including without limitation, pricing information, except as required by law. No specified update or refresh date applied in the Service or on any related website, should be taken to indicate that all information in the Service or on any related website has been modified or updated.</p>\n    <h3 _v-1b075f61=\"\">Section 12 - Prohibited Uses</h3>\n    <p _v-1b075f61=\"\">In addition to other prohibitions as set forth in the Terms of Service, you are prohibited from using the site or its content: (a) for any unlawful purpose; (b) to solicit others to perform or participate in any unlawful acts; (c) to violate any international, federal, provincial or state regulations, rules, laws, or local ordinances; (d) to infringe upon or violate our intellectual property rights or the intellectual property rights of others; (e) to harass, abuse, insult, harm, defame, slander, disparage, intimidate, or discriminate based on gender, sexual orientation, religion, ethnicity, race, age, national origin, or disability; (f) to submit false or misleading information; (g) to upload or transmit viruses or any other type of malicious code that will or may be used in any way that will affect the functionality or operation of the Service or of any related website, other websites, or the Internet; (h) to collect or track the personal information of others; (i) to spam, phish, pharm, pretext, spider, crawl, or scrape; (j) for any obscene or immoral purpose; or (k) to interfere with or circumvent the security features of the Service or any related website, other websites, or the Internet. We reserve the right to terminate your use of the Service or any related website for violating any of the prohibited uses.</p>\n    <h3 _v-1b075f61=\"\">Section 13 - Disclaimer Of Warranties; Limitation Of Liability</h3>\n    <p _v-1b075f61=\"\">We do not guarantee, represent or warrant that your use of our service will be uninterrupted, timely, secure or error-free.</p>\n    <p _v-1b075f61=\"\">We do not warrant that the results that may be obtained from the use of the service will be accurate or reliable.</p>\n    <p _v-1b075f61=\"\">You agree that from time to time we may remove the service for indefinite periods of time or cancel the service at any time, without notice to you.</p>\n    <p _v-1b075f61=\"\">You expressly agree that your use of, or inability to use, the service is at your sole risk. The service and all products and services delivered to you through the service are (except as expressly stated by us) provided 'as is' and 'as available' for your use, without any representation, warranties or conditions of any kind, either express or implied, including all implied warranties or conditions of merchantability, merchantable quality, fitness for a particular purpose, durability, title, and non-infringement.</p>\n    <p _v-1b075f61=\"\">In no case shall Cander, our directors, officers, employees, affiliates, agents, contractors, interns, suppliers, service providers or licensors be liable for any injury, loss, claim, or any direct, indirect, incidental, punitive, special, or consequential damages of any kind, including, without limitation lost profits, lost revenue, lost savings, loss of data, replacement costs, or any similar damages, whether based in contract, tort (including negligence), strict liability or otherwise, arising from your use of any of the service or any products procured using the service, or for any other claim related in any way to your use of the service or any product, including, but not limited to, any errors or omissions in any content, or any loss or damage of any kind incurred as a result of the use of the service or any content (or product) posted, transmitted, or otherwise made available via the service, even if advised of their possibility. Because some states or jurisdictions do not allow the exclusion or the limitation of liability for consequential or incidental damages, in such states or jurisdictions, our liability shall be limited to the maximum extent permitted by law.</p>\n    <h3 _v-1b075f61=\"\">Section 14 - Indemnification</h3>\n    <p _v-1b075f61=\"\">You agree to indemnify, defend and hold harmless Cander and our parent, subsidiaries, affiliates, partners, officers, directors, agents, contractors, licensors, service providers, subcontractors, suppliers, interns and employees, harmless from any claim or demand, including reasonable attorneys’ fees, made by any third-party due to or arising out of your breach of these Terms of Service or the documents they incorporate by reference, or your violation of any law or the rights of a third-party.</p>\n    <h3 _v-1b075f61=\"\">Section 15 - Severability</h3>\n    <p _v-1b075f61=\"\">In the event that any provision of these Terms of Service is determined to be unlawful, void or unenforceable, such provision shall nonetheless be enforceable to the fullest extent permitted by applicable law, and the unenforceable portion shall be deemed to be severed from these Terms of Service, such determination shall not affect the validity and enforceability of any other remaining provisions.</p>\n    <h3 _v-1b075f61=\"\">Section 16 - Termination</h3>\n    <p _v-1b075f61=\"\">The obligations and liabilities of the parties incurred prior to the termination date shall survive the termination of this agreement for all purposes. These Terms of Service are effective unless and until terminated by either you or us. You may terminate these Terms of Service at any time by notifying us that you no longer wish to use our Services, or when you cease using our site.</p>\n    <p _v-1b075f61=\"\">If in our sole judgment you fail, or we suspect that you have failed, to comply with any term or provision of these Terms of Service, we also may terminate this agreement at any time without notice and you will remain liable for all amounts due up to and including the date of termination; and/or accordingly may deny you access to our Services (or any part thereof).</p>\n    <h3 _v-1b075f61=\"\">Section 17 - Entire Agreement</h3>\n    <p _v-1b075f61=\"\">The failure of us to exercise or enforce any right or provision of these Terms of Service shall not constitute a waiver of such right or provision.</p>\n    <p _v-1b075f61=\"\">These Terms of Service and any policies or operating rules posted by us on this site or in respect to The Service constitutes the entire agreement and understanding between you and us and govern your use of the Service, superseding any prior or contemporaneous agreements, communications and proposals, whether oral or written, between you and us (including, but not limited to, any prior versions of the Terms of Service).</p>\n    <p _v-1b075f61=\"\">Any ambiguities in the interpretation of these Terms of Service shall not be construed against the drafting party.</p>\n    <h3 _v-1b075f61=\"\">Section 18 - Changes To Terms Of Service</h3>\n    <p _v-1b075f61=\"\">You can review the most current version of the Terms of Service at any time at this page.</p>\n    <p _v-1b075f61=\"\">We reserve the right, at our sole discretion, to update, change or replace any part of these Terms of Service by posting updates and changes to our website. It is your responsibility to check our website periodically for changes. Your continued use of or access to our website or the Service following the posting of any changes to these Terms of Service constitutes acceptance of those changes.</p>\n    <h3 _v-1b075f61=\"\">Section 19 - Contact Information</h3>\n    <p _v-1b075f61=\"\">Questions about the Terms of Service should be sent to us at info@canderparis.com.</p>\n  </section>\n  <site-footer _v-1b075f61=\"\"></site-footer>\n</div>\n";
 
 /***/ },
-/* 51 */
+/* 75 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(52)
-	__vue_script__ = __webpack_require__(54)
+	__webpack_require__(76)
+	__vue_script__ = __webpack_require__(78)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/components/Error404.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(55)
+	__vue_template__ = __webpack_require__(79)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -31743,13 +36286,13 @@
 	})()}
 
 /***/ },
-/* 52 */
+/* 76 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(53);
+	var content = __webpack_require__(77);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(10)(content, {});
@@ -31769,7 +36312,7 @@
 	}
 
 /***/ },
-/* 53 */
+/* 77 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(9)();
@@ -31783,29 +36326,29 @@
 
 
 /***/ },
-/* 54 */
+/* 78 */
 /***/ function(module, exports) {
 
 	"use strict";
 
 /***/ },
-/* 55 */
+/* 79 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"page-404\" _v-6ee08c6f=\"\">\n  <h1 _v-6ee08c6f=\"\">Not Found</h1>\n</div>\n";
 
 /***/ },
-/* 56 */
+/* 80 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(57)
-	__vue_script__ = __webpack_require__(59)
+	__webpack_require__(81)
+	__vue_script__ = __webpack_require__(83)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/App.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(70)
+	__vue_template__ = __webpack_require__(94)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -31824,13 +36367,13 @@
 	})()}
 
 /***/ },
-/* 57 */
+/* 81 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(58);
+	var content = __webpack_require__(82);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(10)(content, {});
@@ -31850,7 +36393,7 @@
 	}
 
 /***/ },
-/* 58 */
+/* 82 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(9)();
@@ -31864,7 +36407,7 @@
 
 
 /***/ },
-/* 59 */
+/* 83 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31873,15 +36416,15 @@
 	  value: true
 	});
 
-	var _store = __webpack_require__(16);
+	var _store = __webpack_require__(40);
 
 	var _store2 = _interopRequireDefault(_store);
 
-	var _MenuOverlay = __webpack_require__(60);
+	var _MenuOverlay = __webpack_require__(84);
 
 	var _MenuOverlay2 = _interopRequireDefault(_MenuOverlay);
 
-	var _SiteHeader = __webpack_require__(64);
+	var _SiteHeader = __webpack_require__(88);
 
 	var _SiteHeader2 = _interopRequireDefault(_SiteHeader);
 
@@ -31909,17 +36452,17 @@
 	};
 
 /***/ },
-/* 60 */
+/* 84 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(61)
-	__vue_script__ = __webpack_require__(63)
+	__webpack_require__(85)
+	__vue_script__ = __webpack_require__(87)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/components/MenuOverlay.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(69)
+	__vue_template__ = __webpack_require__(93)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -31938,13 +36481,13 @@
 	})()}
 
 /***/ },
-/* 61 */
+/* 85 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(62);
+	var content = __webpack_require__(86);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(10)(content, {});
@@ -31964,7 +36507,7 @@
 	}
 
 /***/ },
-/* 62 */
+/* 86 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(9)();
@@ -31978,7 +36521,7 @@
 
 
 /***/ },
-/* 63 */
+/* 87 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31987,11 +36530,11 @@
 	  value: true
 	});
 
-	var _store = __webpack_require__(16);
+	var _store = __webpack_require__(40);
 
 	var _store2 = _interopRequireDefault(_store);
 
-	var _SiteHeader = __webpack_require__(64);
+	var _SiteHeader = __webpack_require__(88);
 
 	var _SiteHeader2 = _interopRequireDefault(_SiteHeader);
 
@@ -32030,17 +36573,17 @@
 	};
 
 /***/ },
-/* 64 */
+/* 88 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(65)
-	__vue_script__ = __webpack_require__(67)
+	__webpack_require__(89)
+	__vue_script__ = __webpack_require__(91)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/components/SiteHeader.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(68)
+	__vue_template__ = __webpack_require__(92)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -32059,13 +36602,13 @@
 	})()}
 
 /***/ },
-/* 65 */
+/* 89 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(66);
+	var content = __webpack_require__(90);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(10)(content, {});
@@ -32085,7 +36628,7 @@
 	}
 
 /***/ },
-/* 66 */
+/* 90 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(9)();
@@ -32099,7 +36642,7 @@
 
 
 /***/ },
-/* 67 */
+/* 91 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32108,17 +36651,17 @@
 	  value: true
 	});
 
-	var _scroll = __webpack_require__(36);
+	var _scroll = __webpack_require__(60);
 
 	var _scroll2 = _interopRequireDefault(_scroll);
 
-	var _store = __webpack_require__(16);
+	var _store = __webpack_require__(40);
 
 	var _store2 = _interopRequireDefault(_store);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var page = __webpack_require__(39)();
+	var page = __webpack_require__(63)();
 
 	exports.default = {
 	  data: function data() {
@@ -32214,19 +36757,19 @@
 	}
 
 /***/ },
-/* 68 */
+/* 92 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<header class=\"site-header\" v-show=\"headerVisible\" transition=\"fade\" _v-3286419a=\"\">\n  <a href=\"/\" @click.prevent=\"logoClickHandler\" class=\"menu-overlay__nav-list__item\" _v-3286419a=\"\">\n    <img src=\"/images/logo.svg\" alt=\"CANDER PARIS\" title=\"CANDER PARIS\" class=\"logo\" _v-3286419a=\"\">\n  </a>\n  <a href=\"/\" @click.prevent=\"toggleMenu\" class=\"btn-menu btn-menu--{{ toggleState }}\" _v-3286419a=\"\"></a>\n</header>\n";
 
 /***/ },
-/* 69 */
+/* 93 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"menu-overlay-wrapper\" v-if=\"menuOverlay.visible\" transition=\"fade\" _v-53ced9fc=\"\">\n  <site-header _v-53ced9fc=\"\"></site-header>\n  <div class=\"menu-overlay\" _v-53ced9fc=\"\">\n    <div class=\"menu-overlay__nav-wrapper\" _v-53ced9fc=\"\">\n      <nav class=\"menu-overlay__nav-list\" _v-53ced9fc=\"\">\n        <a v-link=\"{ name: 'about' }\" v-on:mouseover=\"setHoverItem('about')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-53ced9fc=\"\">About</a>\n        <a v-link=\"{ name: 'stores' }\" v-on:mouseover=\"setHoverItem('stores')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-53ced9fc=\"\">Stores</a>\n        <a v-link=\"{ name: 'contact' }\" v-on:mouseover=\"setHoverItem('contact')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-53ced9fc=\"\">Contact</a>\n      </nav>\n      <div class=\"menu-overlay__nav-social\" _v-53ced9fc=\"\">\n        <a class=\"menu-overlay__nav-social__item\" href=\"http://facebook.com\" target=\"_blank\" _v-53ced9fc=\"\">\n          <svg class=\"icon icon-facebook\" _v-53ced9fc=\"\">\n            <use xlink:href=\"#icon-facebook\" _v-53ced9fc=\"\"></use>\n          </svg>\n        </a>\n        <a class=\"menu-overlay__nav-social__item\" href=\"http://instagram.com\" target=\"_blank\" _v-53ced9fc=\"\">\n          <svg class=\"icon icon-instagram\" _v-53ced9fc=\"\"><use xlink:href=\"#icon-instagram\" _v-53ced9fc=\"\"></use></svg>\n        </a>\n        <svg style=\"position: absolute; width: 0; height: 0; overflow: hidden;\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" _v-53ced9fc=\"\">\n          <defs _v-53ced9fc=\"\">\n            <symbol id=\"icon-instagram\" viewBox=\"0 0 16 16\" _v-53ced9fc=\"\">\n              <title _v-53ced9fc=\"\">Instagram</title>\n              <path class=\"path1\" d=\"M14.5 0h-13c-0.825 0-1.5 0.675-1.5 1.5v13c0 0.825 0.675 1.5 1.5 1.5h13c0.825 0 1.5-0.675 1.5-1.5v-13c0-0.825-0.675-1.5-1.5-1.5zM11 2.5c0-0.275 0.225-0.5 0.5-0.5h2c0.275 0 0.5 0.225 0.5 0.5v2c0 0.275-0.225 0.5-0.5 0.5h-2c-0.275 0-0.5-0.225-0.5-0.5v-2zM8 5c1.656 0 3 1.344 3 3s-1.344 3-3 3c-1.656 0-3-1.344-3-3s1.344-3 3-3zM14 13.5v0c0 0.275-0.225 0.5-0.5 0.5h-11c-0.275 0-0.5-0.225-0.5-0.5v0-6.5h1.1c-0.066 0.322-0.1 0.656-0.1 1 0 2.762 2.237 5 5 5s5-2.238 5-5c0-0.344-0.034-0.678-0.1-1h1.1v6.5z\" _v-53ced9fc=\"\"></path>\n            </symbol>\n            <symbol id=\"icon-facebook\" viewBox=\"0 0 16 16\" _v-53ced9fc=\"\">\n              <title _v-53ced9fc=\"\">Facebook</title>\n              <path class=\"path1\" d=\"M9.5 3h2.5v-3h-2.5c-1.93 0-3.5 1.57-3.5 3.5v1.5h-2v3h2v8h3v-8h2.5l0.5-3h-3v-1.5c0-0.271 0.229-0.5 0.5-0.5z\" _v-53ced9fc=\"\"></path>\n            </symbol>\n          </defs>\n        </svg>\n      </div>\n      <div class=\"menu-overlay__nav-contact\" _v-53ced9fc=\"\">\n        <p _v-53ced9fc=\"\">For all general information please contact <a href=\"mailto:info@canderparis.com\" _v-53ced9fc=\"\">info@canderparis.com</a></p>\n        <p _v-53ced9fc=\"\">For press information please contact <a href=\"mailto:press@canderparis.com\" _v-53ced9fc=\"\">press@canderparis.com</a></p>\n      </div>\n    </div>\n    <div class=\"menu-overlay__accent-wrapper\" _v-53ced9fc=\"\">\n      <img :src=\"menuOverlay.navImageMap[hoverItem]\" class=\"menu-overlay__accent\" :data-id=\"hoverItem\" _v-53ced9fc=\"\">\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
-/* 70 */
+/* 94 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"cander-wrapper page--{{ this.$route.name ? this.$route.name : 'default' }}\" id=\"cander-app\">\n  <site-header></site-header>\n  <menu-overlay></menu-overlay>\n  <main class=\"main-content\">\n    <router-view></router-view>\n  </main>\n</div>\n";
