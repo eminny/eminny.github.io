@@ -115,9 +115,11 @@
 
     &[disabled],
     &.is-disabled {
-      color: $color__gray-light;
+      border-color: $color__gray;
+      color: $color__gray;
       &:hover {
-        border-color: $color__gray-light;
+        border-color: $color__gray;
+        color: $color__gray;
       }
     }
 
