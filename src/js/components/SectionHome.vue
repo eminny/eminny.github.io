@@ -82,10 +82,30 @@
     >
       <div class="the-scent">
         <h4 class="the-scent__title">Scent One</h4>
-        <p class="the-scent__desc">Blending woody aromatics like <span class="aromatic" data-id="cypres">cyprés</span>,<br>
-          <span class="aromatic" data-id="cedre">cédre</span>, and <span class="aromatic" data-id="oud">oud</span>, with sensual <span class="aromatic" data-id="rose">rose</span> and<br>
-          <span class="aromatic" data-id="patchouli">patchouli</span>. Adding a hint of mystery<br>
-          with the scent of <span class="aromatic" data-id="cuir">cuir</span>.</p>
+        <p class="the-scent__desc">Blending woody aromatics like <span class="aromatic" data-id="cypres" @mouseover="showIngredient" @mouseout="hideIngredient">cyprés</span>,<br>
+          <span class="aromatic" data-id="cedre" @mouseover="showIngredient" @mouseout="hideIngredient">cédre</span>, and <span class="aromatic" data-id="oud" @mouseover="showIngredient" @mouseout="hideIngredient">oud</span>, with sensual <span class="aromatic" data-id="rose" @mouseover="showIngredient" @mouseout="hideIngredient">rose</span> and<br>
+          <span class="aromatic" data-id="patchouli" @mouseover="showIngredient" @mouseout="hideIngredient">patchouli</span>. Adding a hint of mystery<br>
+          with the scent of <span class="aromatic" data-id="cuir" @mouseover="showIngredient" @mouseout="hideIngredient">cuir</span>.</p>
+      </div>
+      <div class="ingredients">
+        <div class="ingredient ingredient--cypres" v-show="visibleIngredient == 'cypres'" transition="fade">
+          <img src="/images/story-ingredient-cedre.png" alt="cypres">
+        </div>
+        <div class="ingredient ingredient--cedre" v-show="visibleIngredient == 'cedre'" transition="fade">
+          <img src="/images/story-ingredient-cedre.png" alt="cedre">
+        </div>
+        <div class="ingredient ingredient--oud" v-show="visibleIngredient == 'oud'" transition="fade">
+          <img src="/images/story-ingredient-cedre.png" alt="oud">
+        </div>
+        <div class="ingredient ingredient--rose" v-show="visibleIngredient == 'rose'" transition="fade">
+          <img src="/images/story-ingredient-rose.png" alt="rose">
+        </div>
+        <div class="ingredient ingredient--patchouli" v-show="visibleIngredient == 'patchouli'" transition="fade">
+          <img src="/images/story-ingredient-cedre.png" alt="patchouli">
+        </div>
+        <div class="ingredient ingredient--cuir" v-show="visibleIngredient == 'cuir'" transition="fade">
+          <img src="/images/story-ingredient-cedre.png" alt="cuir">
+        </div>
       </div>
     </div>
 
@@ -157,6 +177,7 @@
     data () {
       return {
         skrollr: store.data.skrollr,
+        visibleIngredient: null,
       }
     },
     methods: {
@@ -165,7 +186,14 @@
         let foldOffset = el.getBoundingClientRect().top + document.body.scrollTop
         console.log(foldOffset)
         scroll.top(page, foldOffset, { duration: 400 })
-      }
+      },
+      showIngredient (event) {
+        let visibleIngredient = event.currentTarget.getAttribute('data-id')
+        this.visibleIngredient = visibleIngredient
+      },
+      hideIngredient (event) {
+        this.visibleIngredient = null
+      },
     },
     ready () {
       console.log('Home loaded.')
