@@ -27,4 +27,10 @@ import store from './store'
   // Initialize router-enabled app.
   // Creates an instance of Cander and mounts it to cander-app.
   router.start(Cander, 'cander-app')
+
+  router.afterEach(function () {
+    // After route change, reset scroll position to top
+    document.body.scrollTop = 0;
+  });
+
 })();
