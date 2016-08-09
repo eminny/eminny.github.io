@@ -80,12 +80,12 @@ hr {
 .retailer__map {
   transition: opacity $transition-standard;
 
-  &.fade-slide-transition {
+  &.fade-transition {
     transition: opacity $transition-standard;
   }
 
-  &.fade-slide-enter,
-  &.fade-slide-leave {
+  &.fade-enter,
+  &.fade-leave {
     opacity: 0;
   }
 }
