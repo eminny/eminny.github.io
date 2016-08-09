@@ -906,7 +906,6 @@ optgroup::-moz-focus-inner {
 }
 
 .slide__product-image {
-  max-height: 300px;
   left: 50%;
   position: fixed;
   top: 50%;
@@ -981,9 +980,10 @@ optgroup::-moz-focus-inner {
 }
 
 .slide--3 {
-  background: #ededed;
-  height: calc(100% - 8rem);
-  margin-top: 8rem;
+  background: #ffffff url("/images/bg-door.jpg") center center no-repeat;
+  background-size: cover;
+  height: 100%;
+  margin-top: 0;
 }
 
 .slide--4 {

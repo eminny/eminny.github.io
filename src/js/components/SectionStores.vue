@@ -13,7 +13,7 @@
             <a href="{{ retailer.website }}" target="_blank" title="Visit {{ retailer.name }}">{{ retailer.website }}</a>
           </p>
           <a href="#" class="retailer__map-btn" :class="retailer.mapRevealed ? 'is-active' : ''" @click.prevent="toggleMapRevealed(retailer)" v-if="hasMap(retailer)">View Map</a>
-          <div class="retailer__map" v-if="mapIsVisible(retailer)" transition="fade">
+          <div class="retailer__map" v-if="mapIsVisible(retailer)" transition="fade-slide">
             <img src="{{ retailer.mapUrl }}" alt="{{ retailer.name }}" title="{{ retailer.name }}">
           </div>
         </li>
