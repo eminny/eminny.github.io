@@ -466,6 +466,19 @@ label {
   color: #ffffff;
 }
 
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 0.125rem;
+  height: 0.125rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0.618);
+  width: 0.125rem;
+}
+
 button,
 input,
 optgroup,
