@@ -973,10 +973,15 @@ input[type=text].newsletter__email:focus,
 
 .slide__product-image {
   left: 50%;
+  max-width: 20rem;
   position: fixed;
   top: 50%;
   transform: translate(-50%, -25%);
-  max-width: 30rem;
+}
+@media screen and (min-width: 768px) {
+  .slide__product-image {
+    max-width: 30rem;
+  }
 }
 
 .slide__product-info {
@@ -1072,8 +1077,13 @@ input[type=text].newsletter__email:focus,
 }
 
 .slide--4__product-image {
-  max-width: 30rem;
   margin-bottom: 5rem;
+  max-width: 20rem;
+}
+@media screen and (min-width: 768px) {
+  .slide--4__product-image {
+    max-width: 30rem;
+  }
 }
 
 .slide--footer-wrapper {
@@ -1110,8 +1120,9 @@ input[type=text].newsletter__email:focus,
 @-ms-viewport {
   width: device-width;
 }
+.overlay-open,
 .no-scroll {
-  overflow: hidden !important;
+  overflow: hidden;
 }
 
 .ir, .icn--scroll-down {

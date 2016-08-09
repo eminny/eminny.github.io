@@ -5,8 +5,9 @@
   width: device-width;
 }
 
+.overlay-open,
 .no-scroll {
-  overflow: hidden !important;
+  overflow: hidden;
 }
 
 // Image replacement

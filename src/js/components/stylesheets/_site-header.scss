@@ -7,7 +7,7 @@
   text-align: center;
   width: 100%;
   transform: translateY(0);
-  z-index: 20;
+  z-index: $zindex-navbar-fixed;
 
   &.fade-transition {
     transition: all 150ms $timing-function-easeInOutQuad;

@@ -1,7 +1,7 @@
 <template>
   <div class="cander-wrapper page--{{ this.$route.name ? this.$route.name : 'default' }}" id="cander-app">
     <site-header></site-header>
-    <menu-overlay></menu-overlay>
+    <menu-overlay v-if="menuOverlay.visible" transition="fade"></menu-overlay>
     <main class="main-content">
       <router-view></router-view>
     </main>
@@ -21,6 +21,7 @@
     data () {
       return {
         scrollPos: store.data.scrollPos,
+        menuOverlay: store.data.menuOverlay,
       }
     },
     components: {

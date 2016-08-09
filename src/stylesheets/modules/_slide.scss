@@ -58,10 +58,14 @@
 
 .slide__product-image {
   left: 50%;
+  max-width: 20rem;
   position: fixed;
   top: 50%;
   transform: translate(-50%, -25%);
-  max-width: 30rem;
+
+  @media screen and ($large-screens) {
+    max-width: 30rem;
+  }
 }
 
 .slide__product-info {
@@ -163,8 +167,12 @@
 }
 
 .slide--4__product-image {
-  max-width: 30rem;
   margin-bottom: 5rem;
+  max-width: 20rem;
+
+  @media screen and ($large-screens) {
+    max-width: 30rem;
+  }
 }
 
 // SLIDE - FOOTER

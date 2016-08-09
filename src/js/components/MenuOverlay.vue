@@ -1,5 +1,5 @@
 <template>
-  <div class="menu-overlay-wrapper" v-if="menuOverlay.visible" transition="fade">
+  <div class="menu-overlay-wrapper">
     <site-header></site-header>
     <div class="menu-overlay">
       <div class="menu-overlay__nav-wrapper">
@@ -84,6 +84,32 @@
           this.menuOverlay.visible = false
         }
       },
+      lockScroll (el) {
+        // When menu opens, add 'overlay-open' class to body
+        let className = 'overlay-open'
+        if (el.classList) {
+          el.classList.add(className)
+        } else {
+          el.className += ' ' + className
+        }
+      },
+      unlockScroll (el) {
+        // When menu closes, remove 'overlay-open' class from body
+        let className = 'overlay-open'
+        if (el.classList) {
+          el.classList.remove(className)
+        } else {
+          el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+        }
+      },
+    },
+    ready () {
+      this.lockScroll(document.body)
+      this.lockScroll(document.querySelector('html'))
+    },
+    destroyed () {
+      this.unlockScroll(document.body)
+      this.unlockScroll(document.querySelector('html'))
     },
   }
 </script>

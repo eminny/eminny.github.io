@@ -2,14 +2,19 @@
 
 .menu-overlay-wrapper {
   background: $color__white;
+  bottom: 0;
+  display: block;
   height: 100%;
   left: 0;
   min-height: 100vh;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   position: fixed;
+  right: 0;
   top: 0;
-  transition: opacity 500ms ease;
   width: 100%;
-  z-index: 500;
+  transition: opacity 500ms ease;
+  z-index: $zindex-overlay;
 
   &.fade-transition {
     transition: opacity $transition-standard;
