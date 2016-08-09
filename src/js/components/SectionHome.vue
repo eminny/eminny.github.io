@@ -142,6 +142,7 @@
          data-1290p="transform: translate(0, -15%);"
     >
       <div class="slide--4__inner">
+        <img src="/images/product-box-front.png" alt="Front" class="slide--4__product-image">
         <h2 class="zeta">Coming soon in stores</h2>
       </div>
     </div>

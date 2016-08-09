@@ -154,11 +154,17 @@
 }
 
 .slide--4__inner {
-  display: flex;
   align-items: center;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   height: 100%;
   width: 100%;
+}
+
+.slide--4__product-image {
+  max-width: 30rem;
+  margin-bottom: 5rem;
 }
 
 // SLIDE - FOOTER
