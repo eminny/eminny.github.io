@@ -13529,7 +13529,7 @@
 
 
 	// module
-	exports.push([module.id, ".diary[_v-c14842d8] {\n  background: #ededed;\n  display: block;\n  width: 100%; }\n\n.diary__heading[_v-c14842d8] {\n  font-family: \"brown-std\", \"Helvetica Neue\", Helvetica, sans-serif;\n  font-size: 16px;\n  font-size: 1.6rem;\n  line-height: 1.3125;\n  text-align: center;\n  text-transform: uppercase; }\n\n.diary-carousel[_v-c14842d8] {\n  height: 30rem; }\n\n.diary-carousel__cell[_v-c14842d8] {\n  background: #8C8;\n  background-position: center center;\n  background-size: cover;\n  border-radius: 5px;\n  display: block;\n  height: 30rem;\n  margin-right: 10px;\n  width: 30rem; }\n", ""]);
+	exports.push([module.id, ".diary[_v-c14842d8] {\n  display: block;\n  width: 100%; }\n\n.diary__heading[_v-c14842d8] {\n  font-family: \"brown-std\", \"Helvetica Neue\", Helvetica, sans-serif;\n  font-size: 16px;\n  font-size: 1.6rem;\n  line-height: 1.3125;\n  text-align: center;\n  text-transform: uppercase; }\n\n.diary-carousel[_v-c14842d8] {\n  height: 30rem; }\n\n.diary-carousel__cell[_v-c14842d8] {\n  background: #8C8;\n  background-position: center center;\n  background-size: cover;\n  border-radius: 5px;\n  display: block;\n  height: 30rem;\n  margin-right: 10px;\n  width: 30rem; }\n", ""]);
 
 	// exports
 
@@ -13567,13 +13567,15 @@
 	            throw new Error('Could not initialize: options not found.');
 	          }
 
-	          $data.flickityInstance = new Flickity('.diary-carousel', {
+	          var flickityInstance = new Flickity('.diary-carousel', {
 	            bgLazyLoad: true,
 	            cellAlign: 'left',
 	            pageDots: false,
 	            prevNextButtons: false,
 	            slidesWidth: '300px'
 	          });
+
+	          window.flkty = flickityInstance;
 	        }
 	      }
 	    };

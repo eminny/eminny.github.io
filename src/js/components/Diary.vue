@@ -11,7 +11,7 @@
   @import "../../stylesheets/variables";
 
   .diary {
-    background: #ededed;
+    //background: #ededed;
     display: block;
     width: 100%;
   }
@@ -72,13 +72,15 @@
               throw new Error('Could not initialize: options not found.');
             }
 
-            $data.flickityInstance = new Flickity('.diary-carousel', {
+            let flickityInstance = new Flickity('.diary-carousel', {
               bgLazyLoad: true,
               cellAlign: 'left',
               pageDots: false,
               prevNextButtons: false,
               slidesWidth: '300px',
             })
+
+            window.flkty = flickityInstance
 
           },
         },
