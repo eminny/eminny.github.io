@@ -61,7 +61,7 @@
   position: fixed;
   top: 50%;
   transform: translate(-50%, -25%);
-  width: 300px;
+  max-width: 30rem;
 }
 
 .slide__product-info {
@@ -94,8 +94,12 @@
 
 .slide__product-desc {
   font-family: $font__family-serif;
-  font-size: 1.6rem;
+  font-size: 1.222rem;
   line-height: 1.666;
+
+  @media screen and ($large-screens) {
+    font-size: 1.6rem;
+  }
 }
 
 .slide__product-desc--primary {

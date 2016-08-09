@@ -7,7 +7,7 @@
     >
       <label for="newsletter__email" class="newsletter__label">Sign up and stay updated</label>
       <div class="newsletter__form__inner">
-        <input id="newsletter__email" class="newsletter__email" type="email" placeholder="EMAIL ADDRESS" autocomplete="off" autocorrect="off">
+        <input id="newsletter__email" class="newsletter__email" type="email" placeholder="EMAIL ADDRESS" autocomplete="off" autocorrect="off" required>
         <button class="newsletter__form__btn-submit" type="submit">Submit</button>
       </div>
     </form>

@@ -976,7 +976,7 @@ input[type=text].newsletter__email:focus,
   position: fixed;
   top: 50%;
   transform: translate(-50%, -25%);
-  width: 300px;
+  max-width: 30rem;
 }
 
 .slide__product-info {
@@ -1009,8 +1009,13 @@ input[type=text].newsletter__email:focus,
 
 .slide__product-desc {
   font-family: "sabon", serif;
-  font-size: 1.6rem;
+  font-size: 1.222rem;
   line-height: 1.666;
+}
+@media screen and (min-width: 768px) {
+  .slide__product-desc {
+    font-size: 1.6rem;
+  }
 }
 
 .slide__product-desc--primary {
