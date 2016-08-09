@@ -1,10 +1,17 @@
 .newsletter__form {
-
+  margin-bottom: 3rem;
 }
+
+.newsletter__form__inner {
+  position: relative;
+}
+
 .newsletter__label {
   display: block;
   font-family: $font__family-serif;
   font-size: 1.4rem;
+  margin-bottom: 1.666rem;
+  text-align: center;
 }
 
 .newsletter__email,
@@ -12,13 +19,61 @@
   font-family: $font__family-sans;
 }
 
+
+input[type=email].newsletter__email,
+input[type=text].newsletter__email,
 .newsletter__email {
-  font-size: 1.4rem;
+  border: 1px solid $color__black;
+  display: inline-block;
+  font-size: 1.2rem;
   line-height: 1;
-  padding: 1rem 0.5rem;
+  padding: 2rem 1.5rem;
+  right: 0;
+  top: 0;
+  width: 30rem;
+
+  &:active,
+  &:focus {
+    box-shadow: none;
+    outline: 0;
+  }
 }
 
 .newsletter__form__btn-submit {
+  background: transparent;
+  border: none;
+  display: inline-block;
+  position: absolute;
+  height: 4.2rem;
+  right: 0;
   text-transform: uppercase;
+  transition: color $transition-standard;
+  width: 4.2rem;
+  text-indent: -9999px;
+  top: 0;
+
+  &:focus {
+    box-shadow: none;
+    color: $color__gray;
+    outline: 0;
+  }
+
+  &:hover:after {
+    color: rgba($color__black, 0.5);
+  }
+
+  &:after {
+    @include icon-font;
+    content: "\e902";
+    display: block;
+    height: 100%;
+    left: 0;
+    line-height: 4.2rem;
+    position: absolute;
+    text-indent: 0;
+    top: 0;
+    transform: rotate(270deg);
+    width: 100%;
+  }
 }
 

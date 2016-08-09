@@ -817,10 +817,20 @@ optgroup::-moz-focus-inner {
   width: 20rem;
 }
 
+.newsletter__form {
+  margin-bottom: 3rem;
+}
+
+.newsletter__form__inner {
+  position: relative;
+}
+
 .newsletter__label {
   display: block;
   font-family: "sabon", serif;
   font-size: 1.4rem;
+  margin-bottom: 1.666rem;
+  text-align: center;
 }
 
 .newsletter__email,
@@ -828,14 +838,70 @@ optgroup::-moz-focus-inner {
   font-family: "brown-std", "Helvetica Neue", Helvetica, sans-serif;
 }
 
+input[type=email].newsletter__email,
+input[type=text].newsletter__email,
 .newsletter__email {
-  font-size: 1.4rem;
+  border: 1px solid #000000;
+  display: inline-block;
+  font-size: 1.2rem;
   line-height: 1;
-  padding: 1rem 0.5rem;
+  padding: 2rem 1.5rem;
+  right: 0;
+  top: 0;
+  width: 30rem;
+}
+input[type=email].newsletter__email:active, input[type=email].newsletter__email:focus,
+input[type=text].newsletter__email:active,
+input[type=text].newsletter__email:focus,
+.newsletter__email:active,
+.newsletter__email:focus {
+  box-shadow: none;
+  outline: 0;
 }
 
 .newsletter__form__btn-submit {
+  background: transparent;
+  border: none;
+  display: inline-block;
+  position: absolute;
+  height: 4.2rem;
+  right: 0;
   text-transform: uppercase;
+  transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  width: 4.2rem;
+  text-indent: -9999px;
+  top: 0;
+}
+.newsletter__form__btn-submit:focus {
+  box-shadow: none;
+  color: #c1c1c1;
+  outline: 0;
+}
+.newsletter__form__btn-submit:hover:after {
+  color: rgba(0, 0, 0, 0.5);
+}
+.newsletter__form__btn-submit:after {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e902";
+  display: block;
+  height: 100%;
+  left: 0;
+  line-height: 4.2rem;
+  position: absolute;
+  text-indent: 0;
+  top: 0;
+  transform: rotate(270deg);
+  width: 100%;
 }
 
 .single-page {

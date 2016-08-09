@@ -1,12 +1,15 @@
 <template>
   <footer class="site-footer">
     <form id="newsletter__form"
+          class="newsletter__form group"
           action="http://xxxxx.us#.list-manage1.com/subscribe/post-json?u=xxxxx&id=xxxx&c=?"
           method="get"
     >
       <label for="newsletter__email" class="newsletter__label">Sign up and stay updated</label>
-      <input id="newsletter__email" class="newsletter__email" type="email" placeholder="EMAIL ADDRESS">
-      <button class="newsletter__form__btn-submit" type="submit">Submit</button>
+      <div class="newsletter__form__inner">
+        <input id="newsletter__email" class="newsletter__email" type="email" placeholder="EMAIL ADDRESS" autocomplete="off" autocorrect="off">
+        <button class="newsletter__form__btn-submit" type="submit">Submit</button>
+      </div>
     </form>
     <p class="site-footer__copyright">&copy; 2016 CANDER PARIS. <a v-link="{ name: 'terms' }">Terms and Conditions</a></p>
   </footer>
