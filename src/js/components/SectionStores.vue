@@ -6,15 +6,15 @@
       <ul class="retailers-list">
         <li class="retailer" v-for="retailer in retailers">
           <h3 class="retailer__name">{{ retailer.name }}</h3>
-          <div class="retailer__locations" v-if="retailer.locations">
+          <div class="retailer__locations" v-if="retailer.locations && retailer.locations.length">
             <p v-for="location in retailer.locations">{{{ location }}}</p>
           </div>
           <p class="retailer__website">
             <a href="{{ retailer.website }}" target="_blank" title="Visit {{ retailer.name }}">{{ retailer.website }}</a>
           </p>
-          <a href="#" class="retailer__map-btn" :class="retailer.mapRevealed ? 'is-active' : ''" @click.prevent="toggleMapRevealed(retailer)" v-if="hasMap(retailer)">View Map</a>
+          <a href="#" class="retailer__map-btn" :class="retailer.mapRevealed ? 'is-active' : ''" @click.prevent="toggleMapRevealed(retailer)" v-if="hasMapLocation(retailer)">View Map</a>
           <div class="retailer__map" v-if="mapIsVisible(retailer)" transition="fade">
-            <img v-bind:src="retailer.mapUrl" alt="{{ retailer.name }}" title="{{ retailer.name }}">
+            <google-map :map-id="$index" :address="retailer.mapAddress"></google-map>
           </div>
         </li>
       </ul>
@@ -30,21 +30,29 @@
 <script>
   import { isEmpty } from 'lodash'
   import store from '../store'
+  import GoogleMapsLoader from 'google-maps'
   import SiteFooter from './SiteFooter.vue'
+  import GoogleMap from './GoogleMap.vue'
 
   export default {
     components: {
       SiteFooter,
+      GoogleMap
+    },
+    data () {
+      return {
+        retailers: store.data.retailers,
+      }
     },
     methods: {
-      hasMap (retailer) {
-        if (!isEmpty(retailer.mapUrl)) {
+      hasMapLocation (retailer) {
+        if (!isEmpty(retailer.mapAddress)) {
           return true
         }
         return false
       },
       mapIsVisible (retailer) {
-        if (retailer.mapRevealed && !isEmpty(retailer.mapUrl)) {
+        if (retailer.mapRevealed && !isEmpty(retailer.mapAddress)) {
           return true
         }
         return false
@@ -53,10 +61,13 @@
         retailer.mapRevealed = !retailer.mapRevealed
       },
     },
-    data () {
-      return {
-        retailers: store.data.retailers,
-      }
+    ready () {
+
+    },
+    destroyed () {
+      GoogleMapsLoader.release(function () {
+        console.log('Destroyed maps.');
+      });
     },
   }
 </script>

@@ -74,7 +74,7 @@
 	(function __canderApp__() {
 	  _vue2.default.config.debug = true;
 
-	  var Cander = _vue2.default.extend(__webpack_require__(80));
+	  var Cander = _vue2.default.extend(__webpack_require__(86));
 
 	  _vue2.default.use(_vueRouter2.default);
 
@@ -13046,8 +13046,8 @@
 	var SectionContact = _vue2.default.extend(__webpack_require__(44));
 	var SectionHome = _vue2.default.extend(__webpack_require__(55));
 	var SectionStores = _vue2.default.extend(__webpack_require__(65));
-	var SectionTerms = _vue2.default.extend(__webpack_require__(70));
-	var Error404 = _vue2.default.extend(__webpack_require__(75));
+	var SectionTerms = _vue2.default.extend(__webpack_require__(76));
+	var Error404 = _vue2.default.extend(__webpack_require__(81));
 
 	exports.default = {
 	  '*': {
@@ -18086,13 +18086,13 @@
 	    name: 'Barneys New York',
 	    locations: ['Madison Avenue Flagship<br>660 Madison Avenue<br>New York, NY 10065'],
 	    website: 'http://barneys.com',
-	    mapUrl: 'https://maps.googleapis.com/maps/api/staticmap?center=660+Madison+Avenue+New+York+10065&size=800x250&zoom=15&style=element:labels|visibility:on&style=element:geometry.stroke|visibility:off&style=feature:landscape|element:geometry|saturation:-100&style=feature:water|saturation:-100|invert_lightness:true&key=AIzaSyDGWEnF8tC8zkdjhfLjEwDAjKVvtTOxORs',
+	    mapAddress: '660+Madison+Avenue+New+York+10065',
 	    mapRevealed: false
 	  }, {
 	    name: 'Colette',
 	    locations: ['213 Rue Saint Honoré<br>75001 Paris, France'],
 	    website: 'http://colette.fr',
-	    mapUrl: 'https://maps.googleapis.com/maps/api/staticmap?center=213+Rue+Saint+Honore+Paris+France&size=800x250&zoom=15&style=element:labels|visibility:on&style=element:geometry.stroke|visibility:off&style=feature:landscape|element:geometry|saturation:-100&style=feature:water|saturation:-100|invert_lightness:true&key=AIzaSyDGWEnF8tC8zkdjhfLjEwDAjKVvtTOxORs',
+	    mapAddress: '213+Rue+Saint+Honore+Paris+France',
 	    mapRevealed: false
 	  }, {
 	    name: 'Opening Ceremony',
@@ -18101,7 +18101,126 @@
 	    mapRevealed: false
 	  }],
 	  googleMaps: {
-	    apiKey: 'AIzaSyDGWEnF8tC8zkdjhfLjEwDAjKVvtTOxORs'
+	    apiKey: 'AIzaSyDGWEnF8tC8zkdjhfLjEwDAjKVvtTOxORs',
+	    styles: [{
+	      "featureType": "all",
+	      "elementType": "labels.text.fill",
+	      "stylers": [{
+	        "saturation": 36
+	      }, {
+	        "color": "#333333"
+	      }, {
+	        "lightness": 40
+	      }]
+	    }, {
+	      "featureType": "all",
+	      "elementType": "labels.text.stroke",
+	      "stylers": [{
+	        "visibility": "on"
+	      }, {
+	        "color": "#ffffff"
+	      }, {
+	        "lightness": 16
+	      }]
+	    }, {
+	      "featureType": "all",
+	      "elementType": "labels.icon",
+	      "stylers": [{
+	        "visibility": "off"
+	      }]
+	    }, {
+	      "featureType": "administrative",
+	      "elementType": "geometry.fill",
+	      "stylers": [{
+	        "color": "#fefefe"
+	      }, {
+	        "lightness": 20
+	      }]
+	    }, {
+	      "featureType": "administrative",
+	      "elementType": "geometry.stroke",
+	      "stylers": [{
+	        "color": "#fefefe"
+	      }, {
+	        "lightness": 17
+	      }, {
+	        "weight": 1.2
+	      }]
+	    }, {
+	      "featureType": "landscape",
+	      "elementType": "geometry",
+	      "stylers": [{
+	        "color": "#f5f5f5"
+	      }, {
+	        "lightness": 20
+	      }]
+	    }, {
+	      "featureType": "poi",
+	      "elementType": "geometry",
+	      "stylers": [{
+	        "color": "#f5f5f5"
+	      }, {
+	        "lightness": 21
+	      }]
+	    }, {
+	      "featureType": "poi.park",
+	      "elementType": "geometry",
+	      "stylers": [{
+	        "color": "#dedede"
+	      }, {
+	        "lightness": 21
+	      }]
+	    }, {
+	      "featureType": "road.highway",
+	      "elementType": "geometry.fill",
+	      "stylers": [{
+	        "color": "#ffffff"
+	      }, {
+	        "lightness": 17
+	      }]
+	    }, {
+	      "featureType": "road.highway",
+	      "elementType": "geometry.stroke",
+	      "stylers": [{
+	        "color": "#ffffff"
+	      }, {
+	        "lightness": 29
+	      }, {
+	        "weight": 0.2
+	      }]
+	    }, {
+	      "featureType": "road.arterial",
+	      "elementType": "geometry",
+	      "stylers": [{
+	        "color": "#ffffff"
+	      }, {
+	        "lightness": 18
+	      }]
+	    }, {
+	      "featureType": "road.local",
+	      "elementType": "geometry",
+	      "stylers": [{
+	        "color": "#ffffff"
+	      }, {
+	        "lightness": 16
+	      }]
+	    }, {
+	      "featureType": "transit",
+	      "elementType": "geometry",
+	      "stylers": [{
+	        "color": "#f2f2f2"
+	      }, {
+	        "lightness": 19
+	      }]
+	    }, {
+	      "featureType": "water",
+	      "elementType": "geometry",
+	      "stylers": [{
+	        "color": "#e9e9e9"
+	      }, {
+	        "lightness": 17
+	      }]
+	    }]
 	  }
 	};
 
@@ -36040,7 +36159,7 @@
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/components/SectionStores.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(69)
+	__vue_template__ = __webpack_require__(75)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -36093,7 +36212,7 @@
 
 
 	// module
-	exports.push([module.id, "section[_v-837df270] {\n  margin: 6rem auto;\n  max-width: 65rem;\n  width: 80%; }\n\nh1[_v-837df270] {\n  font-size: 1.8rem;\n  text-align: center;\n  text-transform: uppercase; }\n\nh3[_v-837df270] {\n  font-size: 1.4rem;\n  line-height: 1.8;\n  margin: 3rem 0 2rem 0;\n  text-transform: uppercase; }\n\np[_v-837df270] {\n  font-family: \"sabon\", serif;\n  font-size: 1.4rem;\n  line-height: 1.666;\n  margin-bottom: 1.2rem; }\n\na[_v-837df270] {\n  transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n\nhr[_v-837df270] {\n  margin: 4rem auto; }\n\n.retailers-list[_v-837df270] {\n  text-align: center; }\n\n.retailer[_v-837df270] {\n  border-top: 1px solid rgba(193, 193, 193, 0.333);\n  padding: 0 0 3rem 0; }\n  .retailer[_v-837df270]:first-of-type {\n    border-top: none; }\n  .retailer[_v-837df270]:last-of-type {\n    padding: 0; }\n\n.retailer__map-btn[_v-837df270] {\n  color: #c1c1c1;\n  display: inline-block;\n  font-size: 1rem;\n  letter-spacing: 0.1rem;\n  margin: 2.666rem 0 1.666rem 0;\n  text-decoration: none;\n  text-transform: uppercase; }\n  .retailer__map-btn[_v-837df270]:after {\n    /* use !important to prevent issues with browser extensions that change fonts */\n    font-family: \"icomoon\" !important;\n    speak: none;\n    font-style: normal;\n    font-weight: normal;\n    font-variant: normal;\n    text-transform: none;\n    line-height: 1;\n    /* Better Font Rendering =========== */\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n    background-size: 100% 100%;\n    content: \"\\E902\";\n    display: inline-block;\n    height: 1rem;\n    margin-left: 0.5rem;\n    transition: all 220ms cubic-bezier(0.77, 0, 0.175, 1);\n    width: 1rem; }\n  .retailer__map-btn.is-active[_v-837df270]:after {\n    -webkit-transform: rotate(180deg);\n        -ms-transform: rotate(180deg);\n            transform: rotate(180deg); }\n\n.retailer__map[_v-837df270] {\n  transition: opacity 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .retailer__map.fade-transition[_v-837df270] {\n    transition: opacity 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .retailer__map.fade-enter[_v-837df270], .retailer__map.fade-leave[_v-837df270] {\n    opacity: 0; }\n\n.retailer__locations p[_v-837df270]:last-of-type {\n  margin-bottom: 0; }\n\n.retailer__website[_v-837df270] {\n  margin: 0; }\n  .retailer__website a[_v-837df270] {\n    text-decoration: none; }\n", ""]);
+	exports.push([module.id, "section[_v-837df270] {\n  margin: 6rem auto;\n  max-width: 65rem;\n  width: 80%; }\n\nh1[_v-837df270] {\n  font-size: 1.8rem;\n  text-align: center;\n  text-transform: uppercase; }\n\nh3[_v-837df270] {\n  font-size: 1.4rem;\n  line-height: 1.8;\n  margin: 3rem 0 2rem 0;\n  text-transform: uppercase; }\n\np[_v-837df270] {\n  font-family: \"sabon\", serif;\n  font-size: 1.4rem;\n  line-height: 1.666;\n  margin-bottom: 1.2rem; }\n\na[_v-837df270] {\n  transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n\nhr[_v-837df270] {\n  margin: 4rem auto; }\n\n.retailers-list[_v-837df270] {\n  text-align: center; }\n\n.retailer[_v-837df270] {\n  border-top: 1px solid rgba(193, 193, 193, 0.333);\n  padding: 0 0 3rem 0; }\n  .retailer[_v-837df270]:first-of-type {\n    border-top: none; }\n  .retailer[_v-837df270]:last-of-type {\n    padding: 0; }\n\n.retailer__map-btn[_v-837df270] {\n  color: #c1c1c1;\n  display: inline-block;\n  font-size: 1rem;\n  letter-spacing: 0.1rem;\n  margin: 2.666rem 0 1.666rem 0;\n  text-decoration: none;\n  text-transform: uppercase; }\n  .retailer__map-btn[_v-837df270]:after {\n    /* use !important to prevent issues with browser extensions that change fonts */\n    font-family: \"icomoon\" !important;\n    speak: none;\n    font-style: normal;\n    font-weight: normal;\n    font-variant: normal;\n    text-transform: none;\n    line-height: 1;\n    /* Better Font Rendering =========== */\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n    background-size: 100% 100%;\n    content: \"\\E902\";\n    display: inline-block;\n    height: 1rem;\n    margin-left: 0.5rem;\n    transition: all 220ms cubic-bezier(0.77, 0, 0.175, 1);\n    width: 1rem; }\n  .retailer__map-btn.is-active[_v-837df270]:after {\n    -webkit-transform: rotate(180deg);\n        -ms-transform: rotate(180deg);\n            transform: rotate(180deg); }\n\n.retailer__map[_v-837df270] {\n  height: 30rem;\n  transition: opacity 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .retailer__map.fade-transition[_v-837df270] {\n    transition: opacity 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .retailer__map.fade-enter[_v-837df270], .retailer__map.fade-leave[_v-837df270] {\n    opacity: 0; }\n\n.retailer__locations p[_v-837df270]:last-of-type {\n  margin-bottom: 0; }\n\n.retailer__website[_v-837df270] {\n  margin: 0; }\n  .retailer__website a[_v-837df270] {\n    text-decoration: none; }\n", ""]);
 
 	// exports
 
@@ -36114,25 +36233,40 @@
 
 	var _store2 = _interopRequireDefault(_store);
 
+	var _googleMaps = __webpack_require__(69);
+
+	var _googleMaps2 = _interopRequireDefault(_googleMaps);
+
 	var _SiteFooter = __webpack_require__(36);
 
 	var _SiteFooter2 = _interopRequireDefault(_SiteFooter);
+
+	var _GoogleMap = __webpack_require__(70);
+
+	var _GoogleMap2 = _interopRequireDefault(_GoogleMap);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = {
 	  components: {
-	    SiteFooter: _SiteFooter2.default
+	    SiteFooter: _SiteFooter2.default,
+	    GoogleMap: _GoogleMap2.default
 	  },
+	  data: function data() {
+	    return {
+	      retailers: _store2.default.data.retailers
+	    };
+	  },
+
 	  methods: {
-	    hasMap: function hasMap(retailer) {
-	      if (!(0, _lodash.isEmpty)(retailer.mapUrl)) {
+	    hasMapLocation: function hasMapLocation(retailer) {
+	      if (!(0, _lodash.isEmpty)(retailer.mapAddress)) {
 	        return true;
 	      }
 	      return false;
 	    },
 	    mapIsVisible: function mapIsVisible(retailer) {
-	      if (retailer.mapRevealed && !(0, _lodash.isEmpty)(retailer.mapUrl)) {
+	      if (retailer.mapRevealed && !(0, _lodash.isEmpty)(retailer.mapAddress)) {
 	        return true;
 	      }
 	      return false;
@@ -36141,18 +36275,238 @@
 	      retailer.mapRevealed = !retailer.mapRevealed;
 	    }
 	  },
-	  data: function data() {
-	    return {
-	      retailers: _store2.default.data.retailers
-	    };
+	  ready: function ready() {},
+	  destroyed: function destroyed() {
+	    _googleMaps2.default.release(function () {
+	      console.log('Destroyed maps.');
+	    });
 	  }
 	};
 
 /***/ },
 /* 69 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n<div _v-837df270=\"\">\n  <section _v-837df270=\"\">\n    <h1 class=\"section__heading--alpha\" _v-837df270=\"\">Retailers</h1>\n    <hr _v-837df270=\"\">\n    <ul class=\"retailers-list\" _v-837df270=\"\">\n      <li class=\"retailer\" v-for=\"retailer in retailers\" _v-837df270=\"\">\n        <h3 class=\"retailer__name\" _v-837df270=\"\">{{ retailer.name }}</h3>\n        <div class=\"retailer__locations\" v-if=\"retailer.locations\" _v-837df270=\"\">\n          <p v-for=\"location in retailer.locations\" _v-837df270=\"\">{{{ location }}}</p>\n        </div>\n        <p class=\"retailer__website\" _v-837df270=\"\">\n          <a href=\"{{ retailer.website }}\" target=\"_blank\" title=\"Visit {{ retailer.name }}\" _v-837df270=\"\">{{ retailer.website }}</a>\n        </p>\n        <a href=\"#\" class=\"retailer__map-btn\" :class=\"retailer.mapRevealed ? 'is-active' : ''\" @click.prevent=\"toggleMapRevealed(retailer)\" v-if=\"hasMap(retailer)\" _v-837df270=\"\">View Map</a>\n        <div class=\"retailer__map\" v-if=\"mapIsVisible(retailer)\" transition=\"fade\" _v-837df270=\"\">\n          <img v-bind:src=\"retailer.mapUrl\" alt=\"{{ retailer.name }}\" title=\"{{ retailer.name }}\" _v-837df270=\"\">\n        </div>\n      </li>\n    </ul>\n  </section>\n  <site-footer _v-837df270=\"\"></site-footer>\n</div>\n";
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;(function(root, factory) {
+
+		if (root === null) {
+			throw new Error('Google-maps package can be used only in browser');
+		}
+
+		if (true) {
+			!(__WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+		} else if (typeof exports === 'object') {
+			module.exports = factory();
+		} else {
+			root.GoogleMapsLoader = factory();
+		}
+
+	})(typeof window !== 'undefined' ? window : null, function() {
+
+
+		'use strict';
+
+
+		var googleVersion = '3.18';
+
+		var script = null;
+
+		var google = null;
+
+		var loading = false;
+
+		var callbacks = [];
+
+		var onLoadEvents = [];
+
+		var originalCreateLoaderMethod = null;
+
+
+		var GoogleMapsLoader = {};
+
+
+		GoogleMapsLoader.URL = 'https://maps.googleapis.com/maps/api/js';
+
+		GoogleMapsLoader.KEY = null;
+
+		GoogleMapsLoader.LIBRARIES = [];
+
+		GoogleMapsLoader.CLIENT = null;
+
+		GoogleMapsLoader.CHANNEL = null;
+
+		GoogleMapsLoader.LANGUAGE = null;
+
+		GoogleMapsLoader.REGION = null;
+
+		GoogleMapsLoader.VERSION = googleVersion;
+
+		GoogleMapsLoader.WINDOW_CALLBACK_NAME = '__google_maps_api_provider_initializator__';
+
+
+		GoogleMapsLoader._googleMockApiObject = {};
+
+
+		GoogleMapsLoader.load = function(fn) {
+			if (google === null) {
+				if (loading === true) {
+					if (fn) {
+						callbacks.push(fn);
+					}
+				} else {
+					loading = true;
+
+					window[GoogleMapsLoader.WINDOW_CALLBACK_NAME] = function() {
+						ready(fn);
+					};
+
+					GoogleMapsLoader.createLoader();
+				}
+			} else if (fn) {
+				fn(google);
+			}
+		};
+
+
+		GoogleMapsLoader.createLoader = function() {
+			script = document.createElement('script');
+			script.type = 'text/javascript';
+			script.src = GoogleMapsLoader.createUrl();
+
+			document.body.appendChild(script);
+		};
+
+
+		GoogleMapsLoader.isLoaded = function() {
+			return google !== null;
+		};
+
+
+		GoogleMapsLoader.createUrl = function() {
+			var url = GoogleMapsLoader.URL;
+
+			url += '?callback=' + GoogleMapsLoader.WINDOW_CALLBACK_NAME;
+
+			if (GoogleMapsLoader.KEY) {
+				url += '&key=' + GoogleMapsLoader.KEY;
+			}
+
+			if (GoogleMapsLoader.LIBRARIES.length > 0) {
+				url += '&libraries=' + GoogleMapsLoader.LIBRARIES.join(',');
+			}
+
+			if (GoogleMapsLoader.CLIENT) {
+				url += '&client=' + GoogleMapsLoader.CLIENT + '&v=' + GoogleMapsLoader.VERSION;
+			}
+
+			if (GoogleMapsLoader.CHANNEL) {
+				url += '&channel=' + GoogleMapsLoader.CHANNEL;
+			}
+
+			if (GoogleMapsLoader.LANGUAGE) {
+				url += '&language=' + GoogleMapsLoader.LANGUAGE;
+			}
+
+			if (GoogleMapsLoader.REGION) {
+				url += '&region=' + GoogleMapsLoader.REGION;
+			}
+
+			return url;
+		};
+
+
+		GoogleMapsLoader.release = function(fn) {
+			var release = function() {
+				GoogleMapsLoader.KEY = null;
+				GoogleMapsLoader.LIBRARIES = [];
+				GoogleMapsLoader.CLIENT = null;
+				GoogleMapsLoader.CHANNEL = null;
+				GoogleMapsLoader.LANGUAGE = null;
+				GoogleMapsLoader.REGION = null;
+				GoogleMapsLoader.VERSION = googleVersion;
+
+				google = null;
+				loading = false;
+				callbacks = [];
+				onLoadEvents = [];
+
+				if (typeof window.google !== 'undefined') {
+					delete window.google;
+				}
+
+				if (typeof window[GoogleMapsLoader.WINDOW_CALLBACK_NAME] !== 'undefined') {
+					delete window[GoogleMapsLoader.WINDOW_CALLBACK_NAME];
+				}
+
+				if (originalCreateLoaderMethod !== null) {
+					GoogleMapsLoader.createLoader = originalCreateLoaderMethod;
+					originalCreateLoaderMethod = null;
+				}
+
+				if (script !== null) {
+					script.parentElement.removeChild(script);
+					script = null;
+				}
+
+				if (fn) {
+					fn();
+				}
+			};
+
+			if (loading) {
+				GoogleMapsLoader.load(function() {
+					release();
+				});
+			} else {
+				release();
+			}
+		};
+
+
+		GoogleMapsLoader.onLoad = function(fn) {
+			onLoadEvents.push(fn);
+		};
+
+
+		GoogleMapsLoader.makeMock = function() {
+			originalCreateLoaderMethod = GoogleMapsLoader.createLoader;
+
+			GoogleMapsLoader.createLoader = function() {
+				window.google = GoogleMapsLoader._googleMockApiObject;
+				window[GoogleMapsLoader.WINDOW_CALLBACK_NAME]();
+			};
+		};
+
+
+		var ready = function(fn) {
+			var i;
+
+			loading = false;
+
+			if (google === null) {
+				google = window.google;
+			}
+
+			for (i = 0; i < onLoadEvents.length; i++) {
+				onLoadEvents[i](google);
+			}
+
+			if (fn) {
+				fn(google);
+			}
+
+			for (i = 0; i < callbacks.length; i++) {
+				callbacks[i](google);
+			}
+
+			callbacks = [];
+		};
+
+
+		return GoogleMapsLoader;
+
+	});
+
 
 /***/ },
 /* 70 */
@@ -36164,7 +36518,7 @@
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/js/components/SectionTerms.vue: named exports in *.vue files are ignored.")}
+	  console.warn("[vue-loader] src/js/components/GoogleMap.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(74)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
@@ -36175,7 +36529,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-1b075f61/SectionTerms.vue"
+	  var id = "_v-edf0c298/GoogleMap.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -36199,8 +36553,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1b075f61&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionTerms.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1b075f61&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionTerms.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./GoogleMap.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./GoogleMap.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -36218,13 +36572,160 @@
 
 
 	// module
-	exports.push([module.id, "section[_v-1b075f61] {\n  margin: 6rem auto;\n  max-width: 50rem;\n  width: 80%; }\n\nh1[_v-1b075f61] {\n  font-size: 1.8rem;\n  text-align: center;\n  text-transform: uppercase; }\n\nh3[_v-1b075f61] {\n  font-size: 1.2rem;\n  line-height: 1.8;\n  margin: 3rem 0 2rem 0;\n  text-transform: uppercase; }\n\np[_v-1b075f61] {\n  font-family: \"sabon\", serif;\n  font-size: 1.2rem;\n  line-height: 1.666;\n  margin-bottom: 1.2rem; }\n\nhr[_v-1b075f61] {\n  margin: 4rem auto; }\n", ""]);
+	exports.push([module.id, ".google-map,\n.google-map > div {\n  height: 100%; }\n\n.gm-style-iw * {\n  display: block;\n  width: 100%; }\n\n.gm-style-iw h4,\n.gm-style-iw p {\n  margin: 0;\n  padding: 0; }\n\n.gm-style-iw a {\n  color: #4272db; }\n\n.gmnoprint,\n.gmnoscreen,\n.gm-style-cc {\n  display: none !important; }\n\n.gm-style > div {\n  display: none; }\n\n.gm-style > div:first-child {\n  display: block; }\n", ""]);
 
 	// exports
 
 
 /***/ },
 /* 73 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _store = __webpack_require__(40);
+
+	var _store2 = _interopRequireDefault(_store);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var GoogleMapsLoader = __webpack_require__(69);
+
+	exports.default = {
+	  props: ['mapId', 'address'],
+	  data: function data() {
+	    return {
+	      googleMaps: _store2.default.data.googleMaps,
+	      language: _store2.default.data.language,
+	      map: null
+	    };
+	  },
+
+	  methods: {},
+	  ready: function ready() {
+	    var _this = this;
+
+	    GoogleMapsLoader.KEY = this.googleMaps.apiKey;
+	    GoogleMapsLoader.LANGUAGE = this.language || 'en';
+	    GoogleMapsLoader.LIBRARIES = ['geometry', 'places'];
+
+	    GoogleMapsLoader.load(function (google) {
+	      var geocoder = new google.maps.Geocoder();
+	      var mapEl = document.getElementById('map-' + _this.mapId);
+
+	      _this.map = new google.maps.Map(mapEl, {
+	        center: new google.maps.LatLng(34.1501469, -118.4491394),
+	        disableDoubleClickZoom: false,
+	        disableDefaultUI: true,
+	        zoomControl: false,
+	        scaleControl: false,
+	        scrollwheel: false,
+	        zoom: 15,
+	        styles: _this.googleMaps.styles
+	      });
+
+	      geocoder.geocode({ 'address': _this.address }, function (results, status) {
+	        if (status == 'OK') {
+	          _this.map.setCenter(results[0].geometry.location);
+	        } else {
+	          alert('Geocode was not successful: ' + status);
+	          return false;
+	        }
+	      });
+	    });
+	  },
+	  destroyed: function destroyed() {
+	    delete this.map;
+	  }
+	};
+
+/***/ },
+/* 74 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"google-map\">\n  <div id=\"map-{{* mapId }}\"></div>\n</div>\n";
+
+/***/ },
+/* 75 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div _v-837df270=\"\">\n  <section _v-837df270=\"\">\n    <h1 class=\"section__heading--alpha\" _v-837df270=\"\">Retailers</h1>\n    <hr _v-837df270=\"\">\n    <ul class=\"retailers-list\" _v-837df270=\"\">\n      <li class=\"retailer\" v-for=\"retailer in retailers\" _v-837df270=\"\">\n        <h3 class=\"retailer__name\" _v-837df270=\"\">{{ retailer.name }}</h3>\n        <div class=\"retailer__locations\" v-if=\"retailer.locations &amp;&amp; retailer.locations.length\" _v-837df270=\"\">\n          <p v-for=\"location in retailer.locations\" _v-837df270=\"\">{{{ location }}}</p>\n        </div>\n        <p class=\"retailer__website\" _v-837df270=\"\">\n          <a href=\"{{ retailer.website }}\" target=\"_blank\" title=\"Visit {{ retailer.name }}\" _v-837df270=\"\">{{ retailer.website }}</a>\n        </p>\n        <a href=\"#\" class=\"retailer__map-btn\" :class=\"retailer.mapRevealed ? 'is-active' : ''\" @click.prevent=\"toggleMapRevealed(retailer)\" v-if=\"hasMapLocation(retailer)\" _v-837df270=\"\">View Map</a>\n        <div class=\"retailer__map\" v-if=\"mapIsVisible(retailer)\" transition=\"fade\" _v-837df270=\"\">\n          <google-map :map-id=\"$index\" :address=\"retailer.mapAddress\" _v-837df270=\"\"></google-map>\n        </div>\n      </li>\n    </ul>\n  </section>\n  <site-footer _v-837df270=\"\"></site-footer>\n</div>\n";
+
+/***/ },
+/* 76 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(77)
+	__vue_script__ = __webpack_require__(79)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/js/components/SectionTerms.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(80)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "_v-1b075f61/SectionTerms.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 77 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(78);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(10)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1b075f61&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionTerms.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1b075f61&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionTerms.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 78 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(9)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "section[_v-1b075f61] {\n  margin: 6rem auto;\n  max-width: 50rem;\n  width: 80%; }\n\nh1[_v-1b075f61] {\n  font-size: 1.8rem;\n  text-align: center;\n  text-transform: uppercase; }\n\nh3[_v-1b075f61] {\n  font-size: 1.2rem;\n  line-height: 1.8;\n  margin: 3rem 0 2rem 0;\n  text-transform: uppercase; }\n\np[_v-1b075f61] {\n  font-family: \"sabon\", serif;\n  font-size: 1.2rem;\n  line-height: 1.666;\n  margin-bottom: 1.2rem; }\n\nhr[_v-1b075f61] {\n  margin: 4rem auto; }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 79 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36253,23 +36754,23 @@
 	};
 
 /***/ },
-/* 74 */
+/* 80 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div _v-1b075f61=\"\">\n  <section _v-1b075f61=\"\">\n    <h1 class=\"section__heading--alpha\" _v-1b075f61=\"\">Terms and Conditions</h1>\n    <hr _v-1b075f61=\"\">\n    <h3 _v-1b075f61=\"\">OVERVIEW</h3>\n    <p _v-1b075f61=\"\">This website is operated by Cander Paris. Throughout the site, the terms “we”, “us” and “our” refer to Cander. Cander offers this website, including all information, tools and services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies and notices stated here.</p>\n    <p _v-1b075f61=\"\">By visiting our site and/ or purchasing something from us, you engage in our “Service” and agree to be bound by the following terms and conditions (“Terms of Service”, “Terms”), including those additional terms and conditions and policies referenced herein and/or available by hyperlink. These Terms of Service apply  to all users of the site, including without limitation users who are browsers, vendors, customers, merchants, and/ or contributors of content.</p>\n    <p _v-1b075f61=\"\">Please read these Terms of Service carefully before accessing or using our website. By accessing or using any part of the site, you agree to be bound by these Terms of Service. If you do not agree to all the terms and conditions of this agreement, then you may not access the website or use any services. If these Terms of Service are considered an offer, acceptance is expressly limited to these Terms of Service.</p>\n    <p _v-1b075f61=\"\">Any new features or tools which are added to the current store shall also be subject to the Terms of Service. You can review the most current version of the Terms of Service at any time on this page. We reserve the right to update, change or replace any part of these Terms of Service by posting updates and/or changes to our website. It is your responsibility to check this page periodically for changes. Your continued use of or access to the website following the posting of any changes constitutes acceptance of those changes.</p>\n    <h3 _v-1b075f61=\"\">Section 1 - Online Store Terms</h3>\n    <p _v-1b075f61=\"\">By agreeing to these Terms of Service, you represent that you are at least the age of majority in your state or province of residence, or that you are the age of majority in your state or province of residence and you have given us your consent to allow any of your minor dependents to use this site. A breach or violation of any of the Terms will result in an immediate termination of your Services.</p>\n    <h3 _v-1b075f61=\"\">Section 2 - General Conditions</h3>\n    <p _v-1b075f61=\"\">We reserve the right to refuse service to anyone for any reason at any time.</p>\n    <p _v-1b075f61=\"\">You understand that your content (not including credit card information), may be transferred unencrypted and involve (a) transmissions over various networks; and (b) changes to conform and adapt to technical requirements of connecting networks or devices. Credit card information is always encrypted during transfer over networks.</p>\n    <p _v-1b075f61=\"\">You agree not to reproduce, duplicate, copy, sell, resell or exploit any portion of the Service, use of the Service, or access to the Service or any contact on the website through which the service is provided, without express written permission by us.</p>\n    <p _v-1b075f61=\"\">The headings used in this agreement are included for convenience only and will not limit or otherwise affect these Terms.</p>\n    <h3 _v-1b075f61=\"\">Section 3 - Accuracy, Completeness And Timeliness Of Information</h3>\n    <p _v-1b075f61=\"\">We are not responsible if information made available on this site is not accurate, complete or current. The material on this site is provided for general information only and should not be relied upon or used as the sole basis for making decisions without consulting primary, more accurate, more complete or more timely sources of information. Any reliance on the material on this site is at your own risk.</p>\n    <p _v-1b075f61=\"\">This site may contain certain historical information. Historical information, necessarily, is not current and is provided for your reference only. We reserve the right to modify the contents of this site at any time, but we have no obligation to update any information on our site. You agree that it is your responsibility to monitor changes to our site.</p>\n    <h3 _v-1b075f61=\"\">Section 4 - Modifications To The Service And Prices</h3>\n    <p _v-1b075f61=\"\">Prices for our products are subject to change without notice.We reserve the right at any time to modify or discontinue the Service (or any part or content thereof) without notice at any time.We shall not be liable to you or to any third-party for any modification, price change, suspension or discontinuance of the Service.</p>\n    <h3 _v-1b075f61=\"\">Section 5 - Products Or Services (if Applicable)</h3>\n    <p _v-1b075f61=\"\">Certain products or services may be available exclusively online through the website. These products or services may have limited quantities and are subject to return or exchange only according to our Return Policy.</p>\n    <p _v-1b075f61=\"\">We have made every effort to display as accurately as possible the colors and images of our products that appear at the store. We cannot guarantee that your computer monitor's display of any color will be accurate.</p>\n    <p _v-1b075f61=\"\">We reserve the right, but are not obligated, to limit the sales of our products or Services to any person, geographic region or jurisdiction. We may exercise this right on a case-by-case basis. We reserve the right to limit the quantities of any products or services that we offer. All descriptions of products or product pricing are subject to change at anytime without notice, at the sole discretion of us. We reserve the right to discontinue any product at any time. Any offer for any product or service made on this site is void where prohibited.</p>\n    <p _v-1b075f61=\"\">We do not warrant that the quality of any products, services, information, or other material purchased or obtained by you will meet your expectations, or that any errors in the Service will be corrected.</p>\n    <h3 _v-1b075f61=\"\">Section 6 - Accuracy Of Billing And Account Information</h3>\n    <p _v-1b075f61=\"\">We reserve the right to refuse any order you place with us. We may, in our sole discretion, limit or cancel quantities purchased per person, per household or per order. These restrictions may include orders placed by or under the same customer account, the same credit card, and/or orders that use the same billing and/or shipping address. In the event that we make a change to or cancel an order, we may attempt to notify you by contacting the e-mail and/or billing address/phone number provided at the time the order was made. We reserve the right to limit or prohibit orders that, in our sole judgment, appear to be placed by dealers, resellers or distributors.</p>\n    <p _v-1b075f61=\"\">You agree to provide current, complete and accurate purchase and account information for all purchases made at our store. You agree to promptly update your account and other information, including your email address and credit card numbers and expiration dates, so that we can complete your transactions and contact you as needed.</p>\n    <p _v-1b075f61=\"\">For more detail, please review our Returns Policy.</p>\n    <h3 _v-1b075f61=\"\">Section 7 - Optional Tools</h3>\n    <p _v-1b075f61=\"\">We may provide you with access to third-party tools over which we neither monitor nor have any control nor input.</p>\n    <p _v-1b075f61=\"\">You acknowledge and agree that we provide access to such tools ”as is” and “as available” without any warranties, representations or conditions of any kind and without any endorsement. We shall have no liability whatsoever arising from or relating to your use of optional third-party tools.</p>\n    <p _v-1b075f61=\"\">Any use by you of optional tools offered through the site is entirely at your own risk and discretion and you should ensure that you are familiar with and approve of the terms on which tools are provided by the relevant third-party provider(s).</p>\n    <p _v-1b075f61=\"\">We may also, in the future, offer new services and/or features through the website (including, the release of new tools and resources). Such new features and/or services shall also be subject to these Terms of Service.</p>\n    <h3 _v-1b075f61=\"\">Section 8 - Third-party Links</h3>\n    <p _v-1b075f61=\"\">Certain content, products and services available via our Service may include materials from third-parties.</p>\n    <p _v-1b075f61=\"\">Third-party links on this site may direct you to third-party websites that are not affiliated with us. We are not responsible for examining or evaluating the content or accuracy and we do not warrant and will not have any liability or responsibility for any third-party materials or websites, or for any other materials, products, or services of third-parties.</p>\n    <p _v-1b075f61=\"\">We are not liable for any harm or damages related to the purchase or use of goods, services, resources, content, or any other transactions made in connection with any third-party websites. Please review carefully the third-party's policies and practices and make sure you understand them before you engage in any transaction. Complaints, claims, concerns, or questions regarding third-party products should be directed to the third-party.</p>\n    <h3 _v-1b075f61=\"\">Section 9 - User Comments, Feedback And Other Submissions</h3>\n    <p _v-1b075f61=\"\">If, at our request, you send certain specific submissions (for example contest entries) or without a request from us you send creative ideas, suggestions, proposals, plans, or other materials, whether online, by email, by postal mail, or otherwise (collectively, 'comments'), you agree that we may, at any time, without restriction, edit, copy, publish, distribute, translate and otherwise use in any medium any comments that you forward to us. We are and shall be under no obligation (1) to maintain any comments in confidence; (2) to pay compensation for any comments; or (3) to respond to any comments.</p>\n    <p _v-1b075f61=\"\">We may, but have no obligation to, monitor, edit or remove content that we determine in our sole discretion are unlawful, offensive, threatening, libelous, defamatory, pornographic, obscene or otherwise objectionable or violates any party’s intellectual property or these Terms of Service.</p>\n    <p _v-1b075f61=\"\">You agree that your comments will not violate any right of any third-party, including copyright, trademark, privacy, personality or other personal or proprietary right. You further agree that your comments will not contain libelous or otherwise unlawful, abusive or obscene material, or contain any computer virus or other malware that could in any way affect the operation of the Service or any related website. You may not use a false e-mail address, pretend to be someone other than yourself, or otherwise mislead us or third-parties as to the origin of any comments. You are solely responsible for any comments you make and their accuracy. We take no responsibility and assume no liability for any comments posted by you or any third-party.</p>\n    <h3 _v-1b075f61=\"\">Section 10 - Personal Information</h3>\n    <p _v-1b075f61=\"\">Your submission of personal information through the store is governed by our Privacy Policy. To view our Privacy Policy.</p>\n    <h3 _v-1b075f61=\"\">Section 11 - Errors, Inaccuracies And Omissions</h3>\n    <p _v-1b075f61=\"\">Occasionally there may be information on our site or in the Service that contains typographical errors, inaccuracies or omissions that may relate to product descriptions, pricing, promotions, offers, product shipping charges, transit times and availability. We reserve the right to correct any errors, inaccuracies or omissions, and to change or update information or cancel orders if any information in the Service or on any related website is inaccurate at any time without prior notice (including after you have submitted your order).</p>\n    <p _v-1b075f61=\"\">We undertake no obligation to update, amend or clarify information in the Service or on any related website, including without limitation, pricing information, except as required by law. No specified update or refresh date applied in the Service or on any related website, should be taken to indicate that all information in the Service or on any related website has been modified or updated.</p>\n    <h3 _v-1b075f61=\"\">Section 12 - Prohibited Uses</h3>\n    <p _v-1b075f61=\"\">In addition to other prohibitions as set forth in the Terms of Service, you are prohibited from using the site or its content: (a) for any unlawful purpose; (b) to solicit others to perform or participate in any unlawful acts; (c) to violate any international, federal, provincial or state regulations, rules, laws, or local ordinances; (d) to infringe upon or violate our intellectual property rights or the intellectual property rights of others; (e) to harass, abuse, insult, harm, defame, slander, disparage, intimidate, or discriminate based on gender, sexual orientation, religion, ethnicity, race, age, national origin, or disability; (f) to submit false or misleading information; (g) to upload or transmit viruses or any other type of malicious code that will or may be used in any way that will affect the functionality or operation of the Service or of any related website, other websites, or the Internet; (h) to collect or track the personal information of others; (i) to spam, phish, pharm, pretext, spider, crawl, or scrape; (j) for any obscene or immoral purpose; or (k) to interfere with or circumvent the security features of the Service or any related website, other websites, or the Internet. We reserve the right to terminate your use of the Service or any related website for violating any of the prohibited uses.</p>\n    <h3 _v-1b075f61=\"\">Section 13 - Disclaimer Of Warranties; Limitation Of Liability</h3>\n    <p _v-1b075f61=\"\">We do not guarantee, represent or warrant that your use of our service will be uninterrupted, timely, secure or error-free.</p>\n    <p _v-1b075f61=\"\">We do not warrant that the results that may be obtained from the use of the service will be accurate or reliable.</p>\n    <p _v-1b075f61=\"\">You agree that from time to time we may remove the service for indefinite periods of time or cancel the service at any time, without notice to you.</p>\n    <p _v-1b075f61=\"\">You expressly agree that your use of, or inability to use, the service is at your sole risk. The service and all products and services delivered to you through the service are (except as expressly stated by us) provided 'as is' and 'as available' for your use, without any representation, warranties or conditions of any kind, either express or implied, including all implied warranties or conditions of merchantability, merchantable quality, fitness for a particular purpose, durability, title, and non-infringement.</p>\n    <p _v-1b075f61=\"\">In no case shall Cander, our directors, officers, employees, affiliates, agents, contractors, interns, suppliers, service providers or licensors be liable for any injury, loss, claim, or any direct, indirect, incidental, punitive, special, or consequential damages of any kind, including, without limitation lost profits, lost revenue, lost savings, loss of data, replacement costs, or any similar damages, whether based in contract, tort (including negligence), strict liability or otherwise, arising from your use of any of the service or any products procured using the service, or for any other claim related in any way to your use of the service or any product, including, but not limited to, any errors or omissions in any content, or any loss or damage of any kind incurred as a result of the use of the service or any content (or product) posted, transmitted, or otherwise made available via the service, even if advised of their possibility. Because some states or jurisdictions do not allow the exclusion or the limitation of liability for consequential or incidental damages, in such states or jurisdictions, our liability shall be limited to the maximum extent permitted by law.</p>\n    <h3 _v-1b075f61=\"\">Section 14 - Indemnification</h3>\n    <p _v-1b075f61=\"\">You agree to indemnify, defend and hold harmless Cander and our parent, subsidiaries, affiliates, partners, officers, directors, agents, contractors, licensors, service providers, subcontractors, suppliers, interns and employees, harmless from any claim or demand, including reasonable attorneys’ fees, made by any third-party due to or arising out of your breach of these Terms of Service or the documents they incorporate by reference, or your violation of any law or the rights of a third-party.</p>\n    <h3 _v-1b075f61=\"\">Section 15 - Severability</h3>\n    <p _v-1b075f61=\"\">In the event that any provision of these Terms of Service is determined to be unlawful, void or unenforceable, such provision shall nonetheless be enforceable to the fullest extent permitted by applicable law, and the unenforceable portion shall be deemed to be severed from these Terms of Service, such determination shall not affect the validity and enforceability of any other remaining provisions.</p>\n    <h3 _v-1b075f61=\"\">Section 16 - Termination</h3>\n    <p _v-1b075f61=\"\">The obligations and liabilities of the parties incurred prior to the termination date shall survive the termination of this agreement for all purposes. These Terms of Service are effective unless and until terminated by either you or us. You may terminate these Terms of Service at any time by notifying us that you no longer wish to use our Services, or when you cease using our site.</p>\n    <p _v-1b075f61=\"\">If in our sole judgment you fail, or we suspect that you have failed, to comply with any term or provision of these Terms of Service, we also may terminate this agreement at any time without notice and you will remain liable for all amounts due up to and including the date of termination; and/or accordingly may deny you access to our Services (or any part thereof).</p>\n    <h3 _v-1b075f61=\"\">Section 17 - Entire Agreement</h3>\n    <p _v-1b075f61=\"\">The failure of us to exercise or enforce any right or provision of these Terms of Service shall not constitute a waiver of such right or provision.</p>\n    <p _v-1b075f61=\"\">These Terms of Service and any policies or operating rules posted by us on this site or in respect to The Service constitutes the entire agreement and understanding between you and us and govern your use of the Service, superseding any prior or contemporaneous agreements, communications and proposals, whether oral or written, between you and us (including, but not limited to, any prior versions of the Terms of Service).</p>\n    <p _v-1b075f61=\"\">Any ambiguities in the interpretation of these Terms of Service shall not be construed against the drafting party.</p>\n    <h3 _v-1b075f61=\"\">Section 18 - Changes To Terms Of Service</h3>\n    <p _v-1b075f61=\"\">You can review the most current version of the Terms of Service at any time at this page.</p>\n    <p _v-1b075f61=\"\">We reserve the right, at our sole discretion, to update, change or replace any part of these Terms of Service by posting updates and changes to our website. It is your responsibility to check our website periodically for changes. Your continued use of or access to our website or the Service following the posting of any changes to these Terms of Service constitutes acceptance of those changes.</p>\n    <h3 _v-1b075f61=\"\">Section 19 - Contact Information</h3>\n    <p _v-1b075f61=\"\">Questions about the Terms of Service should be sent to us at info@canderparis.com.</p>\n  </section>\n  <site-footer _v-1b075f61=\"\"></site-footer>\n</div>\n";
 
 /***/ },
-/* 75 */
+/* 81 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(76)
-	__vue_script__ = __webpack_require__(78)
+	__webpack_require__(82)
+	__vue_script__ = __webpack_require__(84)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/components/Error404.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(79)
+	__vue_template__ = __webpack_require__(85)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -36288,13 +36789,13 @@
 	})()}
 
 /***/ },
-/* 76 */
+/* 82 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(77);
+	var content = __webpack_require__(83);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(10)(content, {});
@@ -36314,7 +36815,7 @@
 	}
 
 /***/ },
-/* 77 */
+/* 83 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(9)();
@@ -36328,29 +36829,29 @@
 
 
 /***/ },
-/* 78 */
+/* 84 */
 /***/ function(module, exports) {
 
 	"use strict";
 
 /***/ },
-/* 79 */
+/* 85 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"page-404\" _v-6ee08c6f=\"\">\n  <h1 _v-6ee08c6f=\"\">Not Found</h1>\n</div>\n";
 
 /***/ },
-/* 80 */
+/* 86 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(81)
-	__vue_script__ = __webpack_require__(83)
+	__webpack_require__(87)
+	__vue_script__ = __webpack_require__(89)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/App.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(94)
+	__vue_template__ = __webpack_require__(100)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -36369,13 +36870,13 @@
 	})()}
 
 /***/ },
-/* 81 */
+/* 87 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(82);
+	var content = __webpack_require__(88);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(10)(content, {});
@@ -36395,7 +36896,7 @@
 	}
 
 /***/ },
-/* 82 */
+/* 88 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(9)();
@@ -36409,7 +36910,7 @@
 
 
 /***/ },
-/* 83 */
+/* 89 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36422,11 +36923,11 @@
 
 	var _store2 = _interopRequireDefault(_store);
 
-	var _MenuOverlay = __webpack_require__(84);
+	var _MenuOverlay = __webpack_require__(90);
 
 	var _MenuOverlay2 = _interopRequireDefault(_MenuOverlay);
 
-	var _SiteHeader = __webpack_require__(88);
+	var _SiteHeader = __webpack_require__(94);
 
 	var _SiteHeader2 = _interopRequireDefault(_SiteHeader);
 
@@ -36454,17 +36955,17 @@
 	};
 
 /***/ },
-/* 84 */
+/* 90 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(85)
-	__vue_script__ = __webpack_require__(87)
+	__webpack_require__(91)
+	__vue_script__ = __webpack_require__(93)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/components/MenuOverlay.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(93)
+	__vue_template__ = __webpack_require__(99)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -36483,13 +36984,13 @@
 	})()}
 
 /***/ },
-/* 85 */
+/* 91 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(86);
+	var content = __webpack_require__(92);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(10)(content, {});
@@ -36509,7 +37010,7 @@
 	}
 
 /***/ },
-/* 86 */
+/* 92 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(9)();
@@ -36523,7 +37024,7 @@
 
 
 /***/ },
-/* 87 */
+/* 93 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36536,7 +37037,7 @@
 
 	var _store2 = _interopRequireDefault(_store);
 
-	var _SiteHeader = __webpack_require__(88);
+	var _SiteHeader = __webpack_require__(94);
 
 	var _SiteHeader2 = _interopRequireDefault(_SiteHeader);
 
@@ -36575,17 +37076,17 @@
 	};
 
 /***/ },
-/* 88 */
+/* 94 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(89)
-	__vue_script__ = __webpack_require__(91)
+	__webpack_require__(95)
+	__vue_script__ = __webpack_require__(97)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/components/SiteHeader.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(92)
+	__vue_template__ = __webpack_require__(98)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -36604,13 +37105,13 @@
 	})()}
 
 /***/ },
-/* 89 */
+/* 95 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(90);
+	var content = __webpack_require__(96);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(10)(content, {});
@@ -36630,7 +37131,7 @@
 	}
 
 /***/ },
-/* 90 */
+/* 96 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(9)();
@@ -36644,7 +37145,7 @@
 
 
 /***/ },
-/* 91 */
+/* 97 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36759,19 +37260,19 @@
 	}
 
 /***/ },
-/* 92 */
+/* 98 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<header class=\"site-header\" v-show=\"headerVisible\" transition=\"fade\" _v-3286419a=\"\">\n  <a href=\"/\" @click.prevent=\"logoClickHandler\" class=\"menu-overlay__nav-list__item\" _v-3286419a=\"\">\n    <img src=\"/images/logo.svg\" alt=\"CANDER PARIS\" title=\"CANDER PARIS\" class=\"logo\" _v-3286419a=\"\">\n  </a>\n  <a href=\"/\" @click.prevent=\"toggleMenu\" class=\"btn-menu btn-menu--{{ toggleState }}\" _v-3286419a=\"\"></a>\n</header>\n";
 
 /***/ },
-/* 93 */
+/* 99 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"menu-overlay-wrapper\" v-if=\"menuOverlay.visible\" transition=\"fade\" _v-53ced9fc=\"\">\n  <site-header _v-53ced9fc=\"\"></site-header>\n  <div class=\"menu-overlay\" _v-53ced9fc=\"\">\n    <div class=\"menu-overlay__nav-wrapper\" _v-53ced9fc=\"\">\n      <nav class=\"menu-overlay__nav-list\" _v-53ced9fc=\"\">\n        <a v-link=\"{ name: 'about' }\" v-on:mouseover=\"setHoverItem('about')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-53ced9fc=\"\">About</a>\n        <a v-link=\"{ name: 'stores' }\" v-on:mouseover=\"setHoverItem('stores')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-53ced9fc=\"\">Stores</a>\n        <a v-link=\"{ name: 'contact' }\" v-on:mouseover=\"setHoverItem('contact')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-53ced9fc=\"\">Contact</a>\n      </nav>\n      <div class=\"menu-overlay__nav-social\" _v-53ced9fc=\"\">\n        <a class=\"menu-overlay__nav-social__item\" href=\"http://facebook.com\" target=\"_blank\" _v-53ced9fc=\"\">\n          <svg class=\"icon icon-facebook\" _v-53ced9fc=\"\">\n            <use xlink:href=\"#icon-facebook\" _v-53ced9fc=\"\"></use>\n          </svg>\n        </a>\n        <a class=\"menu-overlay__nav-social__item\" href=\"http://instagram.com\" target=\"_blank\" _v-53ced9fc=\"\">\n          <svg class=\"icon icon-instagram\" _v-53ced9fc=\"\"><use xlink:href=\"#icon-instagram\" _v-53ced9fc=\"\"></use></svg>\n        </a>\n        <svg style=\"position: absolute; width: 0; height: 0; overflow: hidden;\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" _v-53ced9fc=\"\">\n          <defs _v-53ced9fc=\"\">\n            <symbol id=\"icon-instagram\" viewBox=\"0 0 16 16\" _v-53ced9fc=\"\">\n              <title _v-53ced9fc=\"\">Instagram</title>\n              <path class=\"path1\" d=\"M14.5 0h-13c-0.825 0-1.5 0.675-1.5 1.5v13c0 0.825 0.675 1.5 1.5 1.5h13c0.825 0 1.5-0.675 1.5-1.5v-13c0-0.825-0.675-1.5-1.5-1.5zM11 2.5c0-0.275 0.225-0.5 0.5-0.5h2c0.275 0 0.5 0.225 0.5 0.5v2c0 0.275-0.225 0.5-0.5 0.5h-2c-0.275 0-0.5-0.225-0.5-0.5v-2zM8 5c1.656 0 3 1.344 3 3s-1.344 3-3 3c-1.656 0-3-1.344-3-3s1.344-3 3-3zM14 13.5v0c0 0.275-0.225 0.5-0.5 0.5h-11c-0.275 0-0.5-0.225-0.5-0.5v0-6.5h1.1c-0.066 0.322-0.1 0.656-0.1 1 0 2.762 2.237 5 5 5s5-2.238 5-5c0-0.344-0.034-0.678-0.1-1h1.1v6.5z\" _v-53ced9fc=\"\"></path>\n            </symbol>\n            <symbol id=\"icon-facebook\" viewBox=\"0 0 16 16\" _v-53ced9fc=\"\">\n              <title _v-53ced9fc=\"\">Facebook</title>\n              <path class=\"path1\" d=\"M9.5 3h2.5v-3h-2.5c-1.93 0-3.5 1.57-3.5 3.5v1.5h-2v3h2v8h3v-8h2.5l0.5-3h-3v-1.5c0-0.271 0.229-0.5 0.5-0.5z\" _v-53ced9fc=\"\"></path>\n            </symbol>\n          </defs>\n        </svg>\n      </div>\n      <div class=\"menu-overlay__nav-contact\" _v-53ced9fc=\"\">\n        <p _v-53ced9fc=\"\">For all general information please contact <a href=\"mailto:info@canderparis.com\" _v-53ced9fc=\"\">info@canderparis.com</a></p>\n        <p _v-53ced9fc=\"\">For press information please contact <a href=\"mailto:press@canderparis.com\" _v-53ced9fc=\"\">press@canderparis.com</a></p>\n      </div>\n    </div>\n    <div class=\"menu-overlay__accent-wrapper\" _v-53ced9fc=\"\">\n      <img :src=\"menuOverlay.navImageMap[hoverItem]\" class=\"menu-overlay__accent\" :data-id=\"hoverItem\" _v-53ced9fc=\"\">\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
-/* 94 */
+/* 100 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"cander-wrapper page--{{ this.$route.name ? this.$route.name : 'default' }}\" id=\"cander-app\">\n  <site-header></site-header>\n  <menu-overlay></menu-overlay>\n  <main class=\"main-content\">\n    <router-view></router-view>\n  </main>\n</div>\n";

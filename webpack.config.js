@@ -10,7 +10,7 @@ module.exports = {
         loader: 'babel',
         exclude: /node_modules/,
         presets: ['es2015', 'stage-0']
-      }
+      },
     ]
   },
   // vue-loader config

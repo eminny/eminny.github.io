@@ -78,6 +78,7 @@ hr {
 }
 
 .retailer__map {
+  height: 30rem;
   transition: opacity $transition-standard;
 
   &.fade-transition {
