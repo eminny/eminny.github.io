@@ -57,7 +57,6 @@
 }
 
 .slide__product-image {
-  max-height: 300px;
   left: 50%;
   position: fixed;
   top: 50%;
@@ -136,9 +135,10 @@
 // ----------------------------------------------
 
 .slide--3 {
-  background: #ededed;
-  height: calc(100% - #{$header-height});
-  margin-top: $header-height;
+  background: $color__white url('/images/bg-door.jpg') center center no-repeat;
+  background-size: cover;
+  height: 100%;
+  margin-top: 0;
 }
 
 // SLIDE - SECTION 4: PRODUCT
