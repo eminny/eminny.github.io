@@ -14,7 +14,7 @@
           </p>
           <a href="#" class="retailer__map-btn" :class="retailer.mapRevealed ? 'is-active' : ''" @click.prevent="toggleMapRevealed(retailer)" v-if="hasMapLocation(retailer)">View Map</a>
           <div class="retailer__map" v-if="mapIsVisible(retailer)" transition="fade">
-            <google-map :map-id="$index" :address="retailer.mapAddress"></google-map>
+            <google-map :map-id="$index" :coords="retailer.mapCoords"></google-map>
           </div>
         </li>
       </ul>
@@ -30,7 +30,6 @@
 <script>
   import { isEmpty } from 'lodash'
   import store from '../store'
-  import GoogleMapsLoader from 'google-maps'
   import SiteFooter from './SiteFooter.vue'
   import GoogleMap from './GoogleMap.vue'
 
@@ -46,13 +45,13 @@
     },
     methods: {
       hasMapLocation (retailer) {
-        if (!isEmpty(retailer.mapAddress)) {
+        if (!isEmpty(retailer.mapCoords)) {
           return true
         }
         return false
       },
       mapIsVisible (retailer) {
-        if (retailer.mapRevealed && !isEmpty(retailer.mapAddress)) {
+        if (retailer.mapRevealed && !isEmpty(retailer.mapCoords)) {
           return true
         }
         return false
@@ -60,14 +59,6 @@
       toggleMapRevealed (retailer) {
         retailer.mapRevealed = !retailer.mapRevealed
       },
-    },
-    ready () {
-
-    },
-    destroyed () {
-      GoogleMapsLoader.release(function () {
-        console.log('Destroyed maps.');
-      });
     },
   }
 </script>

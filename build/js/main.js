@@ -18086,13 +18086,19 @@
 	    name: 'Barneys New York',
 	    locations: ['Madison Avenue Flagship<br>660 Madison Avenue<br>New York, NY 10065'],
 	    website: 'http://barneys.com',
-	    mapAddress: '660+Madison+Avenue+New+York+10065',
+	    mapCoords: {
+	      lat: 40.7647180,
+	      lng: -73.9711280
+	    },
 	    mapRevealed: false
 	  }, {
 	    name: 'Colette',
 	    locations: ['213 Rue Saint Honoré<br>75001 Paris, France'],
 	    website: 'http://colette.fr',
-	    mapAddress: '213+Rue+Saint+Honore+Paris+France',
+	    mapCoords: {
+	      lat: 48.8653350,
+	      lng: 2.3308040
+	    },
 	    mapRevealed: false
 	  }, {
 	    name: 'Opening Ceremony',
@@ -36233,15 +36239,11 @@
 
 	var _store2 = _interopRequireDefault(_store);
 
-	var _googleMaps = __webpack_require__(69);
-
-	var _googleMaps2 = _interopRequireDefault(_googleMaps);
-
 	var _SiteFooter = __webpack_require__(36);
 
 	var _SiteFooter2 = _interopRequireDefault(_SiteFooter);
 
-	var _GoogleMap = __webpack_require__(70);
+	var _GoogleMap = __webpack_require__(69);
 
 	var _GoogleMap2 = _interopRequireDefault(_GoogleMap);
 
@@ -36260,13 +36262,13 @@
 
 	  methods: {
 	    hasMapLocation: function hasMapLocation(retailer) {
-	      if (!(0, _lodash.isEmpty)(retailer.mapAddress)) {
+	      if (!(0, _lodash.isEmpty)(retailer.mapCoords)) {
 	        return true;
 	      }
 	      return false;
 	    },
 	    mapIsVisible: function mapIsVisible(retailer) {
-	      if (retailer.mapRevealed && !(0, _lodash.isEmpty)(retailer.mapAddress)) {
+	      if (retailer.mapRevealed && !(0, _lodash.isEmpty)(retailer.mapCoords)) {
 	        return true;
 	      }
 	      return false;
@@ -36274,17 +36276,139 @@
 	    toggleMapRevealed: function toggleMapRevealed(retailer) {
 	      retailer.mapRevealed = !retailer.mapRevealed;
 	    }
-	  },
-	  ready: function ready() {},
-	  destroyed: function destroyed() {
-	    _googleMaps2.default.release(function () {
-	      console.log('Destroyed maps.');
-	    });
 	  }
 	};
 
 /***/ },
 /* 69 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(70)
+	__vue_script__ = __webpack_require__(72)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/js/components/GoogleMap.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(74)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "_v-edf0c298/GoogleMap.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 70 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(71);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(10)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./GoogleMap.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./GoogleMap.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 71 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(9)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".google-map,\n.google-map > div {\n  height: 100%; }\n\n.gm-style-iw * {\n  display: block;\n  width: 100%; }\n\n.gm-style-iw h4,\n.gm-style-iw p {\n  margin: 0;\n  padding: 0; }\n\n.gm-style-iw a {\n  color: #4272db; }\n\n.gmnoprint,\n.gmnoscreen,\n.gm-style-cc {\n  display: none !important; }\n\n.gm-style > div {\n  display: none; }\n\n.gm-style > div:first-child {\n  display: block; }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 72 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _store = __webpack_require__(40);
+
+	var _store2 = _interopRequireDefault(_store);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var GoogleMapsLoader = __webpack_require__(73);
+
+	exports.default = {
+	  props: ['mapId', 'coords'],
+	  data: function data() {
+	    return {
+	      googleMaps: _store2.default.data.googleMaps,
+	      language: _store2.default.data.language,
+	      gmap: null
+	    };
+	  },
+
+	  methods: {},
+	  ready: function ready() {
+	    var _this = this;
+
+	    var vm = this;
+	    var mapCoords = vm.coords;
+	    GoogleMapsLoader.KEY = this.googleMaps.apiKey;
+	    GoogleMapsLoader.LANGUAGE = this.language || 'en';
+	    GoogleMapsLoader.LIBRARIES = ['geometry', 'places'];
+
+	    GoogleMapsLoader.load(function (google) {
+	      vm.geocoder = new google.maps.Geocoder();
+	      var mapEl = document.getElementById('map-' + _this.mapId);
+
+	      vm.gmap = new google.maps.Map(mapEl, {
+	        center: new google.maps.LatLng(mapCoords.lat, mapCoords.lng),
+	        disableDoubleClickZoom: false,
+	        disableDefaultUI: true,
+	        zoomControl: false,
+	        scaleControl: false,
+	        scrollwheel: false,
+	        zoom: 15,
+	        styles: vm.googleMaps.styles
+	      });
+	    });
+	  },
+	  destroyed: function destroyed() {
+	    this.gmap = null;
+	  }
+	};
+
+/***/ },
+/* 73 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;(function(root, factory) {
@@ -36509,141 +36633,6 @@
 
 
 /***/ },
-/* 70 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	__webpack_require__(71)
-	__vue_script__ = __webpack_require__(73)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/js/components/GoogleMap.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(74)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
-	}
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-edf0c298/GoogleMap.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 71 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(72);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(10)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./GoogleMap.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./GoogleMap.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 72 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(9)();
-	// imports
-
-
-	// module
-	exports.push([module.id, ".google-map,\n.google-map > div {\n  height: 100%; }\n\n.gm-style-iw * {\n  display: block;\n  width: 100%; }\n\n.gm-style-iw h4,\n.gm-style-iw p {\n  margin: 0;\n  padding: 0; }\n\n.gm-style-iw a {\n  color: #4272db; }\n\n.gmnoprint,\n.gmnoscreen,\n.gm-style-cc {\n  display: none !important; }\n\n.gm-style > div {\n  display: none; }\n\n.gm-style > div:first-child {\n  display: block; }\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 73 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _store = __webpack_require__(40);
-
-	var _store2 = _interopRequireDefault(_store);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var GoogleMapsLoader = __webpack_require__(69);
-
-	exports.default = {
-	  props: ['mapId', 'address'],
-	  data: function data() {
-	    return {
-	      googleMaps: _store2.default.data.googleMaps,
-	      language: _store2.default.data.language,
-	      map: null
-	    };
-	  },
-
-	  methods: {},
-	  ready: function ready() {
-	    var _this = this;
-
-	    GoogleMapsLoader.KEY = this.googleMaps.apiKey;
-	    GoogleMapsLoader.LANGUAGE = this.language || 'en';
-	    GoogleMapsLoader.LIBRARIES = ['geometry', 'places'];
-
-	    GoogleMapsLoader.load(function (google) {
-	      var geocoder = new google.maps.Geocoder();
-	      var mapEl = document.getElementById('map-' + _this.mapId);
-
-	      _this.map = new google.maps.Map(mapEl, {
-	        center: new google.maps.LatLng(34.1501469, -118.4491394),
-	        disableDoubleClickZoom: false,
-	        disableDefaultUI: true,
-	        zoomControl: false,
-	        scaleControl: false,
-	        scrollwheel: false,
-	        zoom: 15,
-	        styles: _this.googleMaps.styles
-	      });
-
-	      geocoder.geocode({ 'address': _this.address }, function (results, status) {
-	        if (status == 'OK') {
-	          _this.map.setCenter(results[0].geometry.location);
-	        } else {
-	          alert('Geocode was not successful: ' + status);
-	          return false;
-	        }
-	      });
-	    });
-	  },
-	  destroyed: function destroyed() {
-	    delete this.map;
-	  }
-	};
-
-/***/ },
 /* 74 */
 /***/ function(module, exports) {
 
@@ -36653,7 +36642,7 @@
 /* 75 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div _v-837df270=\"\">\n  <section _v-837df270=\"\">\n    <h1 class=\"section__heading--alpha\" _v-837df270=\"\">Retailers</h1>\n    <hr _v-837df270=\"\">\n    <ul class=\"retailers-list\" _v-837df270=\"\">\n      <li class=\"retailer\" v-for=\"retailer in retailers\" _v-837df270=\"\">\n        <h3 class=\"retailer__name\" _v-837df270=\"\">{{ retailer.name }}</h3>\n        <div class=\"retailer__locations\" v-if=\"retailer.locations &amp;&amp; retailer.locations.length\" _v-837df270=\"\">\n          <p v-for=\"location in retailer.locations\" _v-837df270=\"\">{{{ location }}}</p>\n        </div>\n        <p class=\"retailer__website\" _v-837df270=\"\">\n          <a href=\"{{ retailer.website }}\" target=\"_blank\" title=\"Visit {{ retailer.name }}\" _v-837df270=\"\">{{ retailer.website }}</a>\n        </p>\n        <a href=\"#\" class=\"retailer__map-btn\" :class=\"retailer.mapRevealed ? 'is-active' : ''\" @click.prevent=\"toggleMapRevealed(retailer)\" v-if=\"hasMapLocation(retailer)\" _v-837df270=\"\">View Map</a>\n        <div class=\"retailer__map\" v-if=\"mapIsVisible(retailer)\" transition=\"fade\" _v-837df270=\"\">\n          <google-map :map-id=\"$index\" :address=\"retailer.mapAddress\" _v-837df270=\"\"></google-map>\n        </div>\n      </li>\n    </ul>\n  </section>\n  <site-footer _v-837df270=\"\"></site-footer>\n</div>\n";
+	module.exports = "\n<div _v-837df270=\"\">\n  <section _v-837df270=\"\">\n    <h1 class=\"section__heading--alpha\" _v-837df270=\"\">Retailers</h1>\n    <hr _v-837df270=\"\">\n    <ul class=\"retailers-list\" _v-837df270=\"\">\n      <li class=\"retailer\" v-for=\"retailer in retailers\" _v-837df270=\"\">\n        <h3 class=\"retailer__name\" _v-837df270=\"\">{{ retailer.name }}</h3>\n        <div class=\"retailer__locations\" v-if=\"retailer.locations &amp;&amp; retailer.locations.length\" _v-837df270=\"\">\n          <p v-for=\"location in retailer.locations\" _v-837df270=\"\">{{{ location }}}</p>\n        </div>\n        <p class=\"retailer__website\" _v-837df270=\"\">\n          <a href=\"{{ retailer.website }}\" target=\"_blank\" title=\"Visit {{ retailer.name }}\" _v-837df270=\"\">{{ retailer.website }}</a>\n        </p>\n        <a href=\"#\" class=\"retailer__map-btn\" :class=\"retailer.mapRevealed ? 'is-active' : ''\" @click.prevent=\"toggleMapRevealed(retailer)\" v-if=\"hasMapLocation(retailer)\" _v-837df270=\"\">View Map</a>\n        <div class=\"retailer__map\" v-if=\"mapIsVisible(retailer)\" transition=\"fade\" _v-837df270=\"\">\n          <google-map :map-id=\"$index\" :coords=\"retailer.mapCoords\" _v-837df270=\"\"></google-map>\n        </div>\n      </li>\n    </ul>\n  </section>\n  <site-footer _v-837df270=\"\"></site-footer>\n</div>\n";
 
 /***/ },
 /* 76 */

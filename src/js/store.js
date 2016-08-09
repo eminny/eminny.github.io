@@ -26,7 +26,10 @@ store.data = {
         'Madison Avenue Flagship<br>660 Madison Avenue<br>New York, NY 10065',
       ],
       website: 'http://barneys.com',
-      mapAddress: '660+Madison+Avenue+New+York+10065',
+      mapCoords: {
+        lat: 40.7647180,
+        lng: -73.9711280
+      },
       mapRevealed: false,
     },
     {
@@ -35,7 +38,10 @@ store.data = {
         '213 Rue Saint Honoré<br>75001 Paris, France',
       ],
       website: 'http://colette.fr',
-      mapAddress: '213+Rue+Saint+Honore+Paris+France',
+      mapCoords: {
+        lat: 48.8653350,
+        lng: 2.3308040
+      },
       mapRevealed: false,
     },
     {

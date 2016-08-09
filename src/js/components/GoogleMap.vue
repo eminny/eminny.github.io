@@ -47,50 +47,50 @@
   export default {
     props: [
       'mapId',
-      'address',
+      'coords',
     ],
     data () {
       return {
         googleMaps: store.data.googleMaps,
         language: store.data.language,
-        map: null,
+        gmap: null,
       }
     },
     methods: {
+//      geocodeHandler (results, status) {
+//        if (status === 'OK') {
+//          this.gmap.setCenter(results[0].geometry.location)
+//        } else {
+//          console.error('Geocode was not successful: ' + status)
+//          return false
+//        }
+//      },
     },
     ready () {
+      let vm = this;
+      let mapCoords = vm.coords;
       GoogleMapsLoader.KEY = this.googleMaps.apiKey
       GoogleMapsLoader.LANGUAGE = this.language || 'en'
       GoogleMapsLoader.LIBRARIES = ['geometry', 'places']
 
       GoogleMapsLoader.load((google) => {
-        const geocoder = new google.maps.Geocoder()
+        vm.geocoder = new google.maps.Geocoder()
         const mapEl = document.getElementById(`map-${this.mapId}`)
         // create map
-        this.map = new google.maps.Map(mapEl, {
-          center: new google.maps.LatLng(34.1501469, -118.4491394),
+        vm.gmap = new google.maps.Map(mapEl, {
+          center: new google.maps.LatLng(mapCoords.lat, mapCoords.lng),
           disableDoubleClickZoom: false,
           disableDefaultUI: true,
           zoomControl: false,
           scaleControl: false,
           scrollwheel: false,
           zoom: 15,
-          styles: this.googleMaps.styles,
-        })
-
-        // Geocode address to coords
-        geocoder.geocode({ 'address': this.address }, (results, status) => {
-          if (status == 'OK') {
-            this.map.setCenter(results[0].geometry.location);
-          } else {
-            alert('Geocode was not successful: ' + status);
-            return false
-          }
+          styles: vm.googleMaps.styles,
         })
       })
     },
     destroyed () {
-      delete(this.map)
+      this.gmap = null
     },
   };
 </script>
