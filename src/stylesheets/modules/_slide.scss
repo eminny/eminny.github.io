@@ -80,7 +80,7 @@
 
   .is-mobile & {
     left: auto;
-    width: 100%;
+    width: 50%;
     transform: translate(0, 0);
   }
 }
@@ -127,6 +127,7 @@
 
   .is-mobile & {
     height: auto;
+    width: 100%;
   }
 }
 
@@ -140,12 +141,8 @@
 
 .slide__product-desc {
   font-family: $font__family-serif;
-  font-size: 1.222rem;
+  font-size: 1.6rem;
   line-height: 1.666;
-
-  @media screen and ($large-screens) {
-    font-size: 1.6rem;
-  }
 }
 
 .slide__product-desc--primary {

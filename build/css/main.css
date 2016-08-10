@@ -1004,7 +1004,7 @@ input[type=text].newsletter__email:focus,
 }
 .is-mobile .slide__product-images {
   left: auto;
-  width: 100%;
+  width: 50%;
   transform: translate(0, 0);
 }
 
@@ -1050,6 +1050,7 @@ input[type=text].newsletter__email:focus,
 }
 .is-mobile .slide__product-wrapper {
   height: auto;
+  width: 100%;
 }
 
 .slide__product-heading {
@@ -1062,13 +1063,8 @@ input[type=text].newsletter__email:focus,
 
 .slide__product-desc {
   font-family: "sabon", serif;
-  font-size: 1.222rem;
+  font-size: 1.6rem;
   line-height: 1.666;
-}
-@media screen and (min-width: 768px) {
-  .slide__product-desc {
-    font-size: 1.6rem;
-  }
 }
 
 .slide__product-desc--primary {
