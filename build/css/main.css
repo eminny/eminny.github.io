@@ -165,7 +165,7 @@ textarea {
 .delta,
 .epsilon,
 .zeta {
-  font-family: "sabon", serif;
+  font-family: "sabon-roman", serif;
   -webkit-font-smoothing: antialiased;
   font-style: normal;
   line-height: 1.75;
@@ -213,7 +213,7 @@ textarea {
 
 .p-alpha,
 .p-beta {
-  font-family: "sabon", serif;
+  font-family: "sabon-roman", serif;
   font-size: 16px;
   font-size: 1.6rem;
   line-height: 1.3125;
@@ -840,7 +840,7 @@ optgroup::-moz-focus-inner {
 
 .newsletter__label {
   display: block;
-  font-family: "sabon", serif;
+  font-family: "sabon-roman", serif;
   font-size: 1.4rem;
   margin-bottom: 1.666rem;
   text-align: center;
@@ -1073,7 +1073,7 @@ input[type=text].newsletter__email:focus,
 }
 
 .slide__product-desc {
-  font-family: "sabon", serif;
+  font-family: "sabon-roman", serif;
   font-size: 1.6rem;
   line-height: 1.666;
 }
