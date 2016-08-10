@@ -231,6 +231,8 @@
           pageDots: false,
           prevNextButtons: true,
           slidesWidth: '20rem',
+          selectedAttraction: 0.2,
+          friction: 0.8,
           arrowShape: {
             x0: 10,
             x1: 55, y1: 45,
