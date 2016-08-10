@@ -7,11 +7,11 @@
   </div>
 </template>
 
-<style lang="sass" scoped>
+<style lang="sass">
   @import "../../stylesheets/variables";
+  $image-size: 35rem;
 
   .diary {
-    //background: #ededed;
     display: block;
     width: 100%;
   }
@@ -21,33 +21,35 @@
     font-size: 16px;
     font-size: 1.6rem;
     line-height: 1.3125;
+    margin-bottom: 4rem;
     text-align: center;
     text-transform: uppercase;
   }
 
   .diary-wrap {
-    // background: $color__gray-light;
   }
 
   .diary-carousel {
-    height: 30rem;
+    height: $image-size;
   }
 
-  .diary-carousel__cell {
-    background: #8C8;
+  .diary-carousel__cell,
+  a.diary-carousel__cell {
+    background: $color__gray-light;
     background-position: center center;
     background-size: cover;
-    border-radius: 5px;
+    border-radius: 0;
     display: block;
-    height: 30rem;
-    margin-right: 10px;
-    width: 30rem;
+    height: $image-size;
+    margin-right: 4rem;
+    text-decoration: none;
+    width: $image-size;
   }
 
 </style>
 
 <script>
-  const Flickity = require('flickity')
+  const Flickity = require('flickity-bg-lazyload')
   const Instafeed = require("instafeed.js")
 
   export default {
@@ -57,14 +59,14 @@
     data () {
       return {
         flickityInstance: null,
-        instagramLink: 'https://www.instagram.com/onlinefreund/',
+        instagramLink: 'https://www.instagram.com/',
         feedOptions: {
           get: 'user',
-          userId: '144360708',
-          clientId: 'b55ad4edadf844c98ceb2c64205dafc0',
-          accessToken: '144360708.b55ad4e.5f3e4a6ec30942088355e8f56f095308',
+          userId: '901047522',
+          clientId: '71ad22535cb64f8b874db8255e387f1a',
+          accessToken: '901047522.71ad225.e746b7277a5c4df7a8ef2604d05319b8',
           limit: 20,
-          resolution: 'low_resolution',
+          resolution: 'standard_resolution',
           target: `instafeed`,
           template: '<a class="diary-carousel__cell" href="{{link}}" target="_blank" data-flickity-bg-lazyload="{{image}}"></a>',
           after () {
@@ -73,11 +75,11 @@
             }
 
             let flickityInstance = new Flickity('.diary-carousel', {
-              bgLazyLoad: true,
+              bgLazyLoad: 4,
               cellAlign: 'left',
               pageDots: false,
               prevNextButtons: false,
-              slidesWidth: '300px',
+              slidesWidth: '35rem',
             })
 
             window.flkty = flickityInstance

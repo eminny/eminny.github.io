@@ -229,7 +229,7 @@
         forEach(this.requiredFields, function (field) {
           let fieldEl = document.getElementById(field)
           if (endsWith(fieldEl.placeholder, 'REQUIRED')) {
-            fieldEl.placeholder = replace(fieldEl.placeholder, 'REQUIRED', '');
+            fieldEl.placeholder = replace(fieldEl.placeholder, 'REQUIRED', '')
           }
         })
         this.submitBtn.disabled = false
