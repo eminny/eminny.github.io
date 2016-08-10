@@ -79,6 +79,7 @@
     line-height: 4;
     max-height: 6rem;
     padding: 4.5rem 0 2rem 0;
+    transition: all $transition-standard;
     user-select: auto;
     width: 100%;
 
