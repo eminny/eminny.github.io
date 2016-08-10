@@ -12,6 +12,8 @@
          class="slide--intro__icn-scroll"
          data-0="opacity: 1;"
          data-center-top="opacity: 0;"
+         v-show="scrollArrowIsVisible"
+         transition="fade"
       >Scroll Down</a>
     </div>
 
@@ -192,6 +194,7 @@
   const page = require('scroll-doc')()
   import SiteFooter from './SiteFooter.vue'
   const Flickity = require('flickity')
+  import { debounce } from 'lodash'
 
   export default {
     components: {
@@ -199,9 +202,11 @@
     },
     data () {
       return {
+        scrollPos: store.data.scrollPos,
         skrollr: store.data.skrollr,
         visibleIngredient: null,
         aromaticsTextFaded: false,
+        scrollArrowIsVisible: true,
       }
     },
     methods: {
@@ -245,6 +250,7 @@
       },
     },
     ready () {
+
       if (this.isMobile()) {
         addClass(document.body, 'is-mobile')
         this.instantiateFlickity()
@@ -256,6 +262,15 @@
           this.skrollr = skrollr.init(skrollrOpts)
         }
       }
+
+      const debouncedScrollToggler = debounce((pos) => {
+        if (pos < -200) {
+          this.scrollArrowIsVisible = false
+        }
+      }, 10)
+
+      this.$watch('scrollPos.top', debouncedScrollToggler)
+
     },
     destroyed () {
       // Destroy skrollr instance

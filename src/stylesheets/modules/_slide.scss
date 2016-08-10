@@ -45,17 +45,22 @@
   left: 50%;
   text-indent: -9999px;
   transform: translate(-50%, 0);
-  transition: opacity $transition-standard;
   height: 1.5rem;
   width: 3.4rem;
+
+  &.fade-transition {
+    transition: all $transition-standard;
+  }
+
+  &.fade-enter,
+  &.fade-leave {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
 
   .is-mobile & {
     bottom: 10rem;
     left: calc(50%);
-  }
-
-  .is-hidden {
-    opacity: 0;
   }
 }
 
