@@ -469,7 +469,7 @@ label {
 ::-webkit-scrollbar {
   -webkit-appearance: none;
   background-color: rgba(0, 0, 0, 0.1);
-  width: 0.125rem;
+  width: 0.225rem;
   height: 0.125rem;
 }
 

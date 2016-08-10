@@ -88,7 +88,7 @@
     //}
 
     &:focus {
-      border-color: $color__gray;
+      border-color: $color__black;
       box-shadow: none;
       outline: none;
     }
@@ -96,7 +96,7 @@
 
   input.contact-form__input--btn,
   button.contact-form__input--btn {
-    background: $color__white;
+    background: transparent;
     border: 1px solid $color__gray-light;
     border-radius: 0;
     color: $color__black;
@@ -109,7 +109,7 @@
 
     &:hover,
     &:focus {
-      border-color: $color__gray;
+      border-color: $color__black;
       box-shadow: none;
       outline: none;
     }
