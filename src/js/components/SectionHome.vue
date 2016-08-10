@@ -68,7 +68,7 @@
            data-600p="opacity: 1"
            data-650p="opacity: 0"
       >
-        <img src="/images/slide-accent-face.png" alt="Faces" class="slide__accent-image">
+        <img src="/images/slide-accent-face.jpg" alt="Cander Paris" class="slide__accent-image">
       </div>
     </div>
 
