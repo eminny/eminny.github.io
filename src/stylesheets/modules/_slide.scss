@@ -87,13 +87,14 @@
 
 .slide__product-image {
   left: 50%;
-  max-width: 20rem;
+  width: 20rem;
+  max-width: 100%;
   position: fixed;
   top: 50%;
   transform: translate(-50%, -25%);
 
   @media screen and ($large-screens) {
-    max-width: 30rem;
+    width: 30rem;
   }
 
   .is-mobile & {
