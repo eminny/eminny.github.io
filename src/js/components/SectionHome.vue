@@ -223,7 +223,6 @@
         this.aromaticsTextFaded = false
       },
       instantiateFlickity () {
-        console.log('Instantiating Flickity!!!')
 
         let flickityInstance = new Flickity('.slide__product-carousel', {
           cellSelector: '.slide__product-carousel__item',
@@ -232,6 +231,12 @@
           pageDots: false,
           prevNextButtons: true,
           slidesWidth: '20rem',
+          arrowShape: {
+            x0: 10,
+            x1: 55, y1: 45,
+            x2: 60, y2: 40,
+            x3: 20
+          },
         })
 
         window.flkty = flickityInstance

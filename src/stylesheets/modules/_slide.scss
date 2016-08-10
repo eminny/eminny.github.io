@@ -119,6 +119,10 @@ $image-size: 20rem;
   min-height: $image-size;
   display: block;
   width: 100%;
+
+  .flickity-prev-next-button {
+    transform: scale(0.75) translateY(-25%);
+  }
 }
 
 .slide__product-carousel {

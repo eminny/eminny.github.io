@@ -36106,7 +36106,6 @@
 	      this.aromaticsTextFaded = false;
 	    },
 	    instantiateFlickity: function instantiateFlickity() {
-	      console.log('Instantiating Flickity!!!');
 
 	      var flickityInstance = new Flickity('.slide__product-carousel', {
 	        cellSelector: '.slide__product-carousel__item',
@@ -36114,7 +36113,13 @@
 	        contain: true,
 	        pageDots: false,
 	        prevNextButtons: true,
-	        slidesWidth: '20rem'
+	        slidesWidth: '20rem',
+	        arrowShape: {
+	          x0: 10,
+	          x1: 55, y1: 45,
+	          x2: 60, y2: 40,
+	          x3: 20
+	        }
 	      });
 
 	      window.flkty = flickityInstance;
