@@ -77,6 +77,7 @@
             let flickityInstance = new Flickity('.diary-carousel', {
               bgLazyLoad: 4,
               cellAlign: 'left',
+              contain: true,
               pageDots: false,
               prevNextButtons: false,
               slidesWidth: '35rem',

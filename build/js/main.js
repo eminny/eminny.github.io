@@ -13570,6 +13570,7 @@
 	          var flickityInstance = new Flickity('.diary-carousel', {
 	            bgLazyLoad: 4,
 	            cellAlign: 'left',
+	            contain: true,
 	            pageDots: false,
 	            prevNextButtons: false,
 	            slidesWidth: '35rem'
@@ -18146,7 +18147,7 @@
 
 
 	// module
-	exports.push([module.id, ".site-footer {\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  background: #ffffff;\n  border-top: 1px solid rgba(193, 193, 193, 0.333);\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-flex-direction: column;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  height: 20rem;\n  -webkit-justify-content: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  position: relative; }\n\n.site-footer__copyright {\n  bottom: 2rem;\n  color: #c1c1c1;\n  left: 0;\n  position: absolute;\n  text-align: center;\n  text-transform: uppercase;\n  width: 100%; }\n  .site-footer__copyright a {\n    color: #c1c1c1;\n    text-decoration: none;\n    transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n    .site-footer__copyright a:hover {\n      color: #000000; }\n  @media screen and (min-width: 768px) {\n    .site-footer__copyright {\n      bottom: 1rem; } }\n", ""]);
+	exports.push([module.id, ".site-footer {\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  background: transparent;\n  border-top: 1px solid rgba(193, 193, 193, 0.333);\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-flex-direction: column;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  height: 20rem;\n  -webkit-justify-content: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  position: relative; }\n\n.site-footer__copyright {\n  bottom: 2rem;\n  color: #c1c1c1;\n  left: 0;\n  position: absolute;\n  text-align: center;\n  text-transform: uppercase;\n  width: 100%; }\n  .site-footer__copyright a {\n    color: #c1c1c1;\n    text-decoration: none;\n    transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n    .site-footer__copyright a:hover {\n      color: #000000; }\n  @media screen and (min-width: 768px) {\n    .site-footer__copyright {\n      bottom: 1rem; } }\n", ""]);
 
 	// exports
 

@@ -2,7 +2,7 @@
 
 .site-footer {
   align-items: center;
-  background: $color__white;
+  background: transparent;
   border-top: 1px solid $color__gray-light;
   display: flex;
   flex-direction: column;
@@ -19,6 +19,7 @@
   text-align: center;
   text-transform: uppercase;
   width: 100%;
+
   a {
     color: $color__gray;
     text-decoration: none;
