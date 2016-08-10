@@ -1075,19 +1075,19 @@ input[type=text].newsletter__email:focus,
 
 .slide__product-carousel-wrapper {
   position: relative;
-  min-height: 30rem;
+  min-height: 24rem;
   display: block;
   width: 100%;
 }
 
 .slide__product-carousel {
-  height: 30rem;
+  height: 24rem;
   width: 100%;
 }
 
 .slide__product-carousel__item {
   display: block;
-  height: 30rem;
+  height: 24rem;
   margin: 0;
   text-align: center;
   width: 100%;
@@ -1097,7 +1097,7 @@ input[type=text].newsletter__email:focus,
   height: auto;
   margin: 0 auto;
   max-width: 100%;
-  width: 30rem;
+  width: 24rem;
 }
 
 .slide__product-info {
