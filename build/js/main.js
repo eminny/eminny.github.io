@@ -36145,13 +36145,13 @@
 	      }
 	    }
 
-	    var debouncedScrollToggler = (0, _lodash.debounce)(function (pos) {
+	    this.$watch('scrollPos.top', function (pos) {
 	      if (pos < -200) {
 	        _this.scrollArrowIsVisible = false;
+	      } else {
+	        _this.scrollArrowIsVisible = true;
 	      }
-	    }, 10);
-
-	    this.$watch('scrollPos.top', debouncedScrollToggler);
+	    });
 	  },
 	  destroyed: function destroyed() {
 	    if (this.skrollr) {

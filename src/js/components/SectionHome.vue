@@ -263,13 +263,13 @@
         }
       }
 
-      const debouncedScrollToggler = debounce((pos) => {
+      this.$watch('scrollPos.top', (pos) => {
         if (pos < -200) {
           this.scrollArrowIsVisible = false
+        } else {
+          this.scrollArrowIsVisible = true
         }
-      }, 10)
-
-      this.$watch('scrollPos.top', debouncedScrollToggler)
+      })
 
     },
     destroyed () {
