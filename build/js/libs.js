@@ -2996,7 +2996,17 @@ var requirejs, require, define;
         console.log("SMOKE EXISTS")
     });
 
-// Vroom
-require(['main']);
-window.SmokeEffect.init();
-window.SmokeEffect.restart();
+(function () {
+
+  // Vroom
+  if (!isMobile()) {
+    require(['main']);
+    window.SmokeEffect.init();
+    window.SmokeEffect.restart();
+  }
+
+  function isMobile() {
+    return (/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera);
+  }
+
+})()
