@@ -112,18 +112,32 @@
 }
 
 // Product Carousel (mobile only)
-$image-size: 80%;
-.slide__product-carousel-wrapper {}
+$image-size: 30rem;
+
+.slide__product-carousel-wrapper {
+  position: relative;
+  min-height: $image-size;
+  display: block;
+  width: 100%;
+}
+
 .slide__product-carousel {
   height: $image-size;
+  width: 100%;
 }
 
 .slide__product-carousel__item {
-  background: $color__gray-light;
   display: block;
   height: $image-size;
-  margin-right: 4rem;
-  text-decoration: none;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.slide__product-carousel__image {
+  height: auto;
+  margin: 0 auto;
+  max-width: 100%;
   width: $image-size;
 }
 

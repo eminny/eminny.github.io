@@ -36104,27 +36104,26 @@
 	    hideIngredient: function hideIngredient() {
 	      this.visibleIngredient = null;
 	      this.aromaticsTextFaded = false;
-	    }
-	  },
-	  ready: function ready() {
-	    console.log('Home loaded.');
-
-	    if (this.isMobile()) {
-	      addClass(document.body, 'is-mobile');
+	    },
+	    instantiateFlickity: function instantiateFlickity() {
+	      console.log('Instantiating Flickity!!!');
 
 	      var flickityInstance = new Flickity('.slide__product-carousel', {
-	        bgLazyLoad: 4,
+	        cellSelector: '.slide__product-carousel__item',
 	        cellAlign: 'left',
 	        contain: true,
 	        pageDots: false,
-	        percentPosition: false,
-	        prevNextButtons: false,
-	        slidesWidth: '35rem',
-	        wrapAround: true,
-	        freeScroll: true
+	        prevNextButtons: true,
+	        slidesWidth: '20rem'
 	      });
 
 	      window.flkty = flickityInstance;
+	    }
+	  },
+	  ready: function ready() {
+	    if (this.isMobile()) {
+	      addClass(document.body, 'is-mobile');
+	      this.instantiateFlickity();
 	    } else {
 	      addClass(document.body, 'is-not-mobile');
 
@@ -36137,6 +36136,10 @@
 	  destroyed: function destroyed() {
 	    if (this.skrollr) {
 	      this.skrollr.destroy();
+	    }
+
+	    if (window.flkty) {
+	      window.flkty.destroy();
 	    }
 	  }
 	};

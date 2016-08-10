@@ -206,7 +206,7 @@
     },
     methods: {
       isMobile () {
-        return (/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera);
+        return (/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera)
       },
       scrollToFold () {
         let el = document.getElementById('the-fold')
@@ -222,28 +222,25 @@
         this.visibleIngredient = null
         this.aromaticsTextFaded = false
       },
-    },
-    ready () {
-      console.log('Home loaded.')
-
-      if (this.isMobile()) {
-        addClass(document.body, 'is-mobile')
+      instantiateFlickity () {
+        console.log('Instantiating Flickity!!!')
 
         let flickityInstance = new Flickity('.slide__product-carousel', {
-          bgLazyLoad: 4,
+          cellSelector: '.slide__product-carousel__item',
           cellAlign: 'left',
           contain: true,
           pageDots: false,
-          percentPosition: false,
-          prevNextButtons: false,
-          slidesWidth: '35rem',
-          wrapAround: true,
-          freeScroll: true,
+          prevNextButtons: true,
+          slidesWidth: '20rem',
         })
 
         window.flkty = flickityInstance
-
-
+      },
+    },
+    ready () {
+      if (this.isMobile()) {
+        addClass(document.body, 'is-mobile')
+        this.instantiateFlickity()
       } else {
         addClass(document.body, 'is-not-mobile')
         // Initialize skrollr
@@ -257,6 +254,11 @@
       // Destroy skrollr instance
       if (this.skrollr) {
         this.skrollr.destroy()
+      }
+
+      // Destroy skrollr instance
+      if (window.flkty) {
+        window.flkty.destroy()
       }
     },
   }
