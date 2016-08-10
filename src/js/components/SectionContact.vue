@@ -83,9 +83,9 @@
     user-select: auto;
     width: 100%;
 
-    &#name {
-      border-top: 1px solid $color__gray-light;
-    }
+    //&#name {
+    //  border-top: 1px solid $color__gray-light;
+    //}
 
     &:focus {
       border-color: $color__gray;
