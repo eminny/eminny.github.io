@@ -20,7 +20,8 @@
          data-0="transform: translate(0, 100%);"
          data-100p="transform: translate(0, 0%)"
     >
-      <div class="slide__product-wrapper">
+      <!-- Product Images (non-mobile) -->
+      <div class="slide__product-wrapper" v-if="!isMobile()">
         <div class="slide__product-images">
           <img src="/images/product-vessel.png" alt="Vessel"
                class="slide__product-image"
@@ -62,6 +63,24 @@
           <h4 class="slide__product-desc slide__product-desc--secondary">Scent One est l'exploration du début.</h4>
         </div>
       </div>
+      <!-- Product Images (mobile-only) -->
+      <div class="slide__product-carousel-wrapper" v-if="isMobile()">
+        <div class="slide__product-carousel">
+          <div class="slide__product-carousel__item">
+            <img src="/images/product-vessel.png" alt="Vessel" class="slide__product-carousel__image">
+          </div>
+          <div class="slide__product-carousel__item">
+            <img src="/images/product-box-front.png" alt="Front" class="slide__product-carousel__image">
+          </div>
+          <div class="slide__product-carousel__item">
+            <img src="/images/product-box-back.png" alt="Back" class="slide__product-carousel__image">
+          </div>
+          <div class="slide__product-carousel__item">
+            <img src="/images/product-box-top.png" alt="Top" class="slide__product-carousel__image">
+          </div>
+        </div>
+      </div>
+      <!-- Product Accent Photo (non-mobile-only) -->
       <div class="slide__accent-wrapper"
            data-0="opacity: 0"
            data-100p="opacity: 1"
@@ -172,6 +191,7 @@
   import store from '../store'
   const page = require('scroll-doc')()
   import SiteFooter from './SiteFooter.vue'
+  const Flickity = require('flickity')
 
   export default {
     components: {
@@ -209,13 +229,14 @@
       if (this.isMobile()) {
         addClass(document.body, 'is-mobile')
 
-        let flickityInstance = new Flickity('.slide__product-images', {
-          bgLazyLoad: false,
+        let flickityInstance = new Flickity('.slide__product-carousel', {
+          bgLazyLoad: 4,
           cellAlign: 'left',
           contain: true,
           pageDots: false,
-          percentPosition: true,
-          prevNextButtons: true,
+          percentPosition: false,
+          prevNextButtons: false,
+          slidesWidth: '35rem',
           wrapAround: true,
           freeScroll: true,
         })

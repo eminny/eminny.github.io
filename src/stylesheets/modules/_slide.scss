@@ -41,7 +41,7 @@
   animation: bounce-arrow 2000ms cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
   background: url('/images/icon-scroll-down.svg') center center no-repeat;
   position: absolute;
-  bottom: 10%;
+  bottom: 5rem;
   left: 50%;
   text-indent: -9999px;
   transform: translate(-50%, 0);
@@ -109,6 +109,22 @@
     position: relative;
     transform: translate(0, 0);
   }
+}
+
+// Product Carousel (mobile only)
+$image-size: 80%;
+.slide__product-carousel-wrapper {}
+.slide__product-carousel {
+  height: $image-size;
+}
+
+.slide__product-carousel__item {
+  background: $color__gray-light;
+  display: block;
+  height: $image-size;
+  margin-right: 4rem;
+  text-decoration: none;
+  width: $image-size;
 }
 
 .slide__product-info {

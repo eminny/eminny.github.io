@@ -787,42 +787,81 @@ optgroup::-moz-focus-inner {
   transform: translate(-50%, -50%);
   width: 20rem;
 }
-@media screen and (max-width: 767px) {
-  .ingredient {
-    display: none !important;
-  }
-}
 .ingredient.fade-transition {
   transition: opacity 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 .ingredient.fade-enter, .ingredient.fade-leave {
   opacity: 0;
 }
+@media screen and (max-width: 767px) {
+  .ingredient {
+    bottom: 0;
+    height: auto;
+    transform: translate(-50%, -50%);
+    width: 18rem;
+  }
+}
 
 .ingredient--cypres {
   display: none;
+}
+@media screen and (max-width: 767px) {
+  .ingredient--cypres {
+    transform: translate(-50%, -50%);
+    width: 18rem;
+  }
 }
 
 .ingredient--cedre {
   transform: translate(-220%, 90%);
   width: 24rem;
 }
+@media screen and (max-width: 767px) {
+  .ingredient--cedre {
+    transform: translate(-50%, -50%);
+    width: 18rem;
+  }
+}
 
 .ingredient--oud {
   display: none;
+}
+@media screen and (max-width: 767px) {
+  .ingredient--oud {
+    transform: translate(-50%, -50%);
+    width: 18rem;
+  }
 }
 
 .ingredient--rose {
   transform: translate(55%, 90%);
   width: 35rem;
 }
+@media screen and (max-width: 767px) {
+  .ingredient--rose {
+    transform: translate(-50%, -50%);
+    width: 18rem;
+  }
+}
 
 .ingredient--patchouli {
   display: none;
 }
+@media screen and (max-width: 767px) {
+  .ingredient--patchouli {
+    transform: translate(-50%, -50%);
+    width: 18rem;
+  }
+}
 
 .ingredient--cuir {
   display: none;
+}
+@media screen and (max-width: 767px) {
+  .ingredient--cuir {
+    transform: translate(-50%, -50%);
+    width: 18rem;
+  }
 }
 
 .logo--intro {
@@ -969,7 +1008,7 @@ input[type=text].newsletter__email:focus,
   animation: bounce-arrow 2000ms cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
   background: url("/images/icon-scroll-down.svg") center center no-repeat;
   position: absolute;
-  bottom: 10%;
+  bottom: 5rem;
   left: 50%;
   text-indent: -9999px;
   transform: translate(-50%, 0);
@@ -1032,6 +1071,19 @@ input[type=text].newsletter__email:focus,
   margin-top: 10rem;
   position: relative;
   transform: translate(0, 0);
+}
+
+.slide__product-carousel {
+  height: 80%;
+}
+
+.slide__product-carousel__item {
+  background: rgba(193, 193, 193, 0.333);
+  display: block;
+  height: 80%;
+  margin-right: 4rem;
+  text-decoration: none;
+  width: 80%;
 }
 
 .slide__product-info {

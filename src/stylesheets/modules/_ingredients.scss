@@ -17,10 +17,6 @@
   transform: translate(-50%, -50%);
   width: 20rem;
 
-  @media screen and ($small-screens) {
-    display: none !important;
-  }
-
   &.fade-transition {
     transition: opacity $transition-standard;
   }
@@ -29,30 +25,67 @@
   &.fade-leave {
     opacity: 0;
   }
+
+  @media screen and ($small-screens) {
+    bottom: 0;
+    height: auto;
+    transform: translate(-50%, -50%);
+    width: 18rem;
+  }
 }
 
 .ingredient--cypres {
   display: none;
+
+  @media screen and ($small-screens) {
+    transform: translate(-50%, -50%);
+    width: 18rem;
+  }
 }
 
 .ingredient--cedre {
   transform: translate(-220%, 90%);
   width: 24rem;
+
+  @media screen and ($small-screens) {
+    transform: translate(-50%, -50%);
+    width: 18rem;
+  }
 }
 
 .ingredient--oud {
   display: none;
+
+  @media screen and ($small-screens) {
+    transform: translate(-50%, -50%);
+    width: 18rem;
+  }
 }
 
 .ingredient--rose {
   transform: translate(55%, 90%);
   width: 35rem;
+
+  @media screen and ($small-screens) {
+    transform: translate(-50%, -50%);
+    width: 18rem;
+  }
 }
 
 .ingredient--patchouli {
   display: none;
+
+  @media screen and ($small-screens) {
+    transform: translate(-50%, -50%);
+    width: 18rem;
+  }
 }
 
 .ingredient--cuir {
   display: none;
+
+  @media screen and ($small-screens) {
+    transform: translate(-50%, -50%);
+    width: 18rem;
+  }
 }
