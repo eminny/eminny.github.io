@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Routes from './routes'
+import { isFunction } from 'lodash'
 import store from './store'
 
 ;(function __canderApp__() {
@@ -15,11 +16,11 @@ import store from './store'
   let router = new VueRouter({
     hashbang: true,
     transitionOnLoad: true,
-    // saveScrollPosition: false,
+    saveScrollPosition: false,
   })
 
   // Add router instance to shared store
-  store.data.router = router;
+  store.data.router = router
 
   // Define some routes
   router.map(Routes)
@@ -30,7 +31,12 @@ import store from './store'
 
   router.afterEach(function () {
     // After route change, reset scroll position to top
-    document.body.scrollTop = 0;
+    document.body.scrollTop = 0
+
+    // Send GA data
+    if (window.ga && isFunction(window.ga)) {
+      window.ga('send', 'pageview')
+    }
   });
 
 })();

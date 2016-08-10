@@ -65,6 +65,8 @@
 
 	var _routes2 = _interopRequireDefault(_routes);
 
+	var _lodash = __webpack_require__(53);
+
 	var _store = __webpack_require__(41);
 
 	var _store2 = _interopRequireDefault(_store);
@@ -80,7 +82,8 @@
 
 	  var router = new _vueRouter2.default({
 	    hashbang: true,
-	    transitionOnLoad: true
+	    transitionOnLoad: true,
+	    saveScrollPosition: false
 	  });
 
 	  _store2.default.data.router = router;
@@ -91,6 +94,10 @@
 
 	  router.afterEach(function () {
 	    document.body.scrollTop = 0;
+
+	    if (window.ga && (0, _lodash.isFunction)(window.ga)) {
+	      window.ga('send', 'pageview');
+	    }
 	  });
 	})();
 
