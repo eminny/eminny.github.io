@@ -53,7 +53,8 @@
   font-style: italic;
   transition: color $transition-standard;
 
-  &:hover {
+  &:hover,
+  &.is-active {
     color: $color__black;
   }
 }

@@ -108,7 +108,11 @@
           <span class="aromatic" data-id="patchouli" @mouseover="showIngredient" @mouseout="hideIngredient">patchouli</span>. Adding a hint of mystery<br>
           with the scent of <span class="aromatic" data-id="cuir" @mouseover="showIngredient" @mouseout="hideIngredient">cuir</span>.
         </p>
-        <p class="the-scent__discover {{ (aromaticsTextFaded && isMobile()) ? 'transparent' : '' }}">{{ isMobile() ? 'Tap' : 'Roll over' }} to discover.</p>
+        <p class="the-scent__discover {{ (aromaticsTextFaded && isMobile()) ? 'transparent' : '' }}"
+           data-id="cedre"
+           @mouseover="showIngredient"
+           @mouseout="hideIngredient"
+        >{{ isMobile() ? 'Tap' : 'Roll over' }} to discover.</p>
       </div>
       <div class="ingredients">
         <div class="ingredient ingredient--cypres" v-show="visibleIngredient == 'cypres'" transition="fade">
@@ -222,10 +226,17 @@
         let visibleIngredient = event.currentTarget.getAttribute('data-id')
         this.visibleIngredient = visibleIngredient
         this.aromaticsTextFaded = true
+
+        let el = document.querySelector(`.aromatic[data-id="${visibleIngredient}"]`)
+        addClass(el, 'is-active')
       },
-      hideIngredient () {
+      hideIngredient (event) {
+        let visibleIngredient = event.currentTarget.getAttribute('data-id')
         this.visibleIngredient = null
         this.aromaticsTextFaded = false
+
+        let el = document.querySelector(`.aromatic[data-id="${visibleIngredient}"]`)
+        removeClass(el, 'is-active')
       },
       instantiateFlickity () {
 
@@ -290,6 +301,14 @@
       el.classList.add(className)
     } else {
       el.className += ` ${className}`
+    }
+  }
+
+  function removeClass(el, className) {
+    if (el.classList) {
+      el.classList.remove(className);
+    } else {
+      el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
     }
   }
 </script>
