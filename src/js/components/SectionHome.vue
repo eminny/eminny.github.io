@@ -106,7 +106,7 @@
           <span class="aromatic" data-id="patchouli" @mouseover="showIngredient" @mouseout="hideIngredient">patchouli</span>. Adding a hint of mystery<br>
           with the scent of <span class="aromatic" data-id="cuir" @mouseover="showIngredient" @mouseout="hideIngredient">cuir</span>.
         </p>
-        <p class="the-scent__discover {{ aromaticsTextFaded ? 'transparent' : '' }}">Roll over to discover.</p>
+        <p class="the-scent__discover {{ aromaticsTextFaded ? 'transparent' : '' }}">{{ isMobile() ? 'Tap' : 'Roll over' }} to discover.</p>
       </div>
       <div class="ingredients">
         <div class="ingredient ingredient--cypres" v-show="visibleIngredient == 'cypres'" transition="fade">
