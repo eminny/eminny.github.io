@@ -102,7 +102,7 @@
     color: $color__black;
     font-size: 1.4rem;
     height: 5rem;
-    margin-top: 5rem;
+    margin: 5rem auto;
     text-transform: uppercase;
     transition: border-color $transition-standard;
     width: 100%;
@@ -125,6 +125,7 @@
     }
 
     @media screen and ($large-screens) {
+      margin: 5rem auto 0 auto;
       max-width: 20rem;
     }
   }
