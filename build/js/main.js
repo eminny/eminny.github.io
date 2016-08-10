@@ -35908,7 +35908,7 @@
 
 
 	// module
-	exports.push([module.id, ".the-scent[_v-0ea87e16] {\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-flex-direction: column;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  height: 100%;\n  -webkit-justify-content: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-transform: translateY(-5%);\n      -ms-transform: translateY(-5%);\n          transform: translateY(-5%); }\n\n.the-scent__title[_v-0ea87e16] {\n  font-family: \"brown-std\", \"Helvetica Neue\", Helvetica, sans-serif;\n  font-size: 1.4rem;\n  line-height: 1.2858;\n  margin-bottom: 4rem;\n  text-transform: uppercase; }\n\n.the-scent__desc[_v-0ea87e16] {\n  color: #000000;\n  font-family: \"sabon\", serif;\n  font-size: 1.8rem;\n  line-height: 1.34375;\n  text-align: center;\n  transition: color 800ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  @media screen and (min-width: 768px) {\n    .the-scent__desc[_v-0ea87e16] {\n      font-size: 3.2rem; } }\n  .the-scent__desc[_v-0ea87e16]:hover {\n    color: #c1c1c1; }\n\n.aromatic[_v-0ea87e16] {\n  cursor: pointer;\n  font-style: italic;\n  transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .aromatic[_v-0ea87e16]:hover {\n    color: #000000; }\n\n.translations-wrapper[_v-0ea87e16] {\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-flex-direction: column;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  height: 100%;\n  -webkit-justify-content: center;\n      -ms-flex-pack: center;\n          justify-content: center; }\n\n.translations-list[_v-0ea87e16] {\n  font-family: \"sabon\", serif;\n  font-size: 1.2rem;\n  line-height: 2.75;\n  text-align: center;\n  text-transform: uppercase; }\n", ""]);
+	exports.push([module.id, ".the-scent[_v-0ea87e16] {\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-flex-direction: column;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  height: 100%;\n  -webkit-justify-content: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-transform: translateY(-5%);\n      -ms-transform: translateY(-5%);\n          transform: translateY(-5%); }\n  .is-mobile .the-scent[_v-0ea87e16] {\n    height: auto;\n    position: relative;\n    min-height: 100vh; }\n\n.the-scent__title[_v-0ea87e16] {\n  font-family: \"brown-std\", \"Helvetica Neue\", Helvetica, sans-serif;\n  font-size: 1.4rem;\n  line-height: 1.2858;\n  margin-bottom: 4rem;\n  text-transform: uppercase; }\n\n.the-scent__desc[_v-0ea87e16] {\n  color: #000000;\n  font-family: \"sabon\", serif;\n  font-size: 1.8rem;\n  line-height: 1.34375;\n  text-align: center;\n  transition: color 800ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  @media screen and (min-width: 768px) {\n    .the-scent__desc[_v-0ea87e16] {\n      font-size: 3.2rem; } }\n  .the-scent__desc[_v-0ea87e16]:hover {\n    color: #c1c1c1; }\n\n.aromatic[_v-0ea87e16] {\n  cursor: pointer;\n  font-style: italic;\n  transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .aromatic[_v-0ea87e16]:hover {\n    color: #000000; }\n\n.translations-wrapper[_v-0ea87e16] {\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-flex-direction: column;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  height: 100%;\n  -webkit-justify-content: center;\n      -ms-flex-pack: center;\n          justify-content: center; }\n  .is-mobile .translations-wrapper[_v-0ea87e16] {\n    height: 100vh; }\n\n.translations-list[_v-0ea87e16] {\n  font-family: \"sabon\", serif;\n  font-size: 1.2rem;\n  line-height: 2.75;\n  text-align: center;\n  text-transform: uppercase; }\n", ""]);
 
 	// exports
 
@@ -35954,11 +35954,14 @@
 	  },
 
 	  methods: {
+	    isMobile: function isMobile() {
+	      return (/Android|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent || navigator.vendor || window.opera)
+	      );
+	    },
 	    scrollToFold: function scrollToFold() {
 	      var el = document.getElementById('the-fold');
 	      var foldOffset = el.getBoundingClientRect().top + document.body.scrollTop;
-	      console.log(foldOffset);
-	      _scroll2.default.top(page, foldOffset, { duration: 400 });
+	      return _scroll2.default.top(page, Number(foldOffset), { duration: 400 });
 	    },
 	    showIngredient: function showIngredient(event) {
 	      var visibleIngredient = event.currentTarget.getAttribute('data-id');
@@ -35971,9 +35974,15 @@
 	  ready: function ready() {
 	    console.log('Home loaded.');
 
-	    if (!this.skrollr) {
-	      var skrollrOpts = {};
-	      this.skrollr = _skrollr2.default.init(skrollrOpts);
+	    if (this.isMobile()) {
+	      addClass(document.body, 'is-mobile');
+	    } else {
+	      addClass(document.body, 'is-not-mobile');
+
+	      if (!this.skrollr) {
+	        var skrollrOpts = {};
+	        this.skrollr = _skrollr2.default.init(skrollrOpts);
+	      }
 	    }
 	  },
 	  destroyed: function destroyed() {
@@ -35982,6 +35991,15 @@
 	    }
 	  }
 	};
+
+
+	function addClass(el, className) {
+	  if (el.classList) {
+	    el.classList.add(className);
+	  } else {
+	    el.className += ' ' + className;
+	  }
+	}
 
 /***/ },
 /* 59 */

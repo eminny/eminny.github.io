@@ -166,7 +166,7 @@
 
 <script>
   import skrollr from 'skrollr'
-  import scroll from 'scroll'
+  import scrollHelper from 'scroll'
   import store from '../store'
   const page = require('scroll-doc')()
   import SiteFooter from './SiteFooter.vue'
@@ -182,11 +182,13 @@
       }
     },
     methods: {
+      isMobile () {
+        return (/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera);
+      },
       scrollToFold () {
         let el = document.getElementById('the-fold')
         let foldOffset = el.getBoundingClientRect().top + document.body.scrollTop
-        console.log(foldOffset)
-        scroll.top(page, foldOffset, { duration: 400 })
+        return scrollHelper.top(page, Number(foldOffset), { duration: 400 })
       },
       showIngredient (event) {
         let visibleIngredient = event.currentTarget.getAttribute('data-id')
@@ -199,10 +201,15 @@
     ready () {
       console.log('Home loaded.')
 
-      // Initialize skrollr
-      if (! this.skrollr) {
-        const skrollrOpts = {}
-        this.skrollr = skrollr.init(skrollrOpts)
+      if (this.isMobile()) {
+        addClass(document.body, 'is-mobile')
+      } else {
+        addClass(document.body, 'is-not-mobile')
+        // Initialize skrollr
+        if (! this.skrollr) {
+          const skrollrOpts = {}
+          this.skrollr = skrollr.init(skrollrOpts)
+        }
       }
     },
     destroyed () {
@@ -211,5 +218,13 @@
         this.skrollr.destroy()
       }
     },
+  }
+
+  function addClass(el, className) {
+    if (el.classList) {
+      el.classList.add(className)
+    } else {
+      el.className += ` ${className}`
+    }
   }
 </script>

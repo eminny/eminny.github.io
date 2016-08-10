@@ -938,15 +938,25 @@ input[type=text].newsletter__email:focus,
   top: 0;
   width: 100%;
 }
+.is-mobile .slide {
+  position: relative;
+  top: auto;
+  left: auto;
+}
 
 .slide--intro {
   align-items: center;
   display: flex;
   justify-content: center;
 }
+.is-mobile .slide--intro {
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+}
 
 .slide--intro__logo {
-  transform: translateY(-3rem);
+  transform: translate(0, -3rem);
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -961,9 +971,13 @@ input[type=text].newsletter__email:focus,
   bottom: 10%;
   left: 50%;
   text-indent: -9999px;
-  transform: translateX(-50%);
+  transform: translate(-50%, 0);
   height: 1.5rem;
   width: 3.4rem;
+}
+.is-mobile .slide--intro__icn-scroll {
+  bottom: 10rem;
+  left: calc(50%);
 }
 
 .slide--1 {
@@ -977,11 +991,21 @@ input[type=text].newsletter__email:focus,
     flex-direction: row;
   }
 }
+.is-mobile .slide--1 {
+  height: auto;
+  min-height: 100vh;
+  position: relative;
+}
 
 .slide__product-images {
   left: 0;
   width: 50%;
   transform: translate(0, -50%);
+}
+.is-mobile .slide__product-images {
+  left: auto;
+  width: 100%;
+  transform: translate(0, 0);
 }
 
 .slide__product-image {
@@ -995,6 +1019,13 @@ input[type=text].newsletter__email:focus,
   .slide__product-image {
     max-width: 30rem;
   }
+}
+.is-mobile .slide__product-image {
+  left: auto;
+  top: auto;
+  margin-top: 10rem;
+  position: relative;
+  transform: translate(0, 0);
 }
 
 .slide__product-info {
@@ -1015,6 +1046,9 @@ input[type=text].newsletter__email:focus,
   height: calc(100% - 8rem);
   margin-top: 8rem;
   position: relative;
+}
+.is-mobile .slide__product-wrapper {
+  height: auto;
 }
 
 .slide__product-heading {
@@ -1067,6 +1101,12 @@ input[type=text].newsletter__email:focus,
   justify-content: center;
   margin-top: 8rem;
 }
+.is-mobile .slide--2 {
+  height: auto;
+  margin-top: 0;
+  min-height: 100vh;
+  position: relative;
+}
 
 .slide--3 {
   background: #ffffff url("/images/bg-door.jpg") center center no-repeat;
@@ -1074,18 +1114,27 @@ input[type=text].newsletter__email:focus,
   height: 100%;
   margin-top: 0;
 }
+.is-mobile .slide--3 {
+  height: auto;
+  min-height: 100vh;
+  position: relative;
+}
 
 .slide--4 {
   height: calc(100% - 8rem);
   margin-top: 8rem;
+}
+.is-mobile .slide--4 {
+  height: 100vh;
+  position: relative;
 }
 
 .slide--4__inner {
   align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   height: 100%;
+  justify-content: center;
   width: 100%;
 }
 
@@ -1105,6 +1154,9 @@ input[type=text].newsletter__email:focus,
   left: 0;
   position: fixed;
   width: 100%;
+}
+.is-mobile .slide--footer-wrapper {
+  position: relative;
 }
 
 .smoke-wrapper {
@@ -1159,6 +1211,10 @@ input[type=text].newsletter__email:focus,
 .clearfix:after,
 .group:after {
   clear: both;
+}
+
+.hidden {
+  display: none !important;
 }
 
 .visuallyhidden {

@@ -9,6 +9,12 @@
   position: fixed;
   top: 0;
   width: 100%;
+
+  .is-mobile & {
+    position: relative;
+    top: auto;
+    left: auto;
+  }
 }
 
 // SLIDE - SECTION 0: INTRO/HERO
@@ -17,10 +23,16 @@
   align-items: center;
   display: flex;
   justify-content: center;
+
+  .is-mobile & {
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+  }
 }
 
 .slide--intro__logo {
-  transform: translateY(-3rem);
+  transform: translate(0, -3rem);
   user-select: none;
   width: 20rem;
 }
@@ -32,9 +44,14 @@
   bottom: 10%;
   left: 50%;
   text-indent: -9999px;
-  transform: translateX(-50%);
+  transform: translate(-50%, 0);
   height: 1.5rem;
   width: 3.4rem;
+
+  .is-mobile & {
+    bottom: 10rem;
+    left: calc(50%);
+  }
 }
 
 // SLIDE - SECTION 1: THE CANDLE
@@ -48,12 +65,24 @@
   @media screen and ($large-screens) {
     flex-direction: row;
   }
+
+  .is-mobile & {
+    height: auto;
+    min-height: 100vh;
+    position: relative;
+  }
 }
 
 .slide__product-images {
   left: 0;
   width: 50%;
   transform: translate(0, -50%);
+
+  .is-mobile & {
+    left: auto;
+    width: 100%;
+    transform: translate(0, 0);
+  }
 }
 
 .slide__product-image {
@@ -65,6 +94,14 @@
 
   @media screen and ($large-screens) {
     max-width: 30rem;
+  }
+
+  .is-mobile & {
+    left: auto;
+    top: auto;
+    margin-top: 10rem;
+    position: relative;
+    transform: translate(0, 0);
   }
 }
 
@@ -86,6 +123,10 @@
   height: calc(100% - #{$header-height});
   margin-top: $header-height;
   position: relative;
+
+  .is-mobile & {
+    height: auto;
+  }
 }
 
 .slide__product-heading {
@@ -137,6 +178,13 @@
   height: calc(100% - #{$header-height});
   justify-content: center;
   margin-top: $header-height;
+
+  .is-mobile & {
+    height: auto;
+    margin-top: 0;
+    min-height: 100vh;
+    position: relative;
+  }
 }
 
 // SLIDE - SECTION 3: DOOR
@@ -147,6 +195,12 @@
   background-size: cover;
   height: 100%;
   margin-top: 0;
+
+  .is-mobile & {
+    height: auto;
+    min-height: 100vh;
+    position: relative;
+  }
 }
 
 // SLIDE - SECTION 4: PRODUCT
@@ -155,14 +209,19 @@
 .slide--4 {
   height: calc(100% - #{$header-height});
   margin-top: $header-height;
+
+  .is-mobile & {
+    height: 100vh;
+    position: relative;
+  }
 }
 
 .slide--4__inner {
   align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   height: 100%;
+  justify-content: center;
   width: 100%;
 }
 
@@ -184,4 +243,8 @@
   left: 0;
   position: fixed;
   width: 100%;
+
+  .is-mobile & {
+    position: relative;
+  }
 }
