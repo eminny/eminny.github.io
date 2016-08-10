@@ -12,7 +12,7 @@
 }
 
 .site-footer__copyright {
-  bottom: 1rem;
+  bottom: 2rem;
   color: $color__gray;
   left: 0;
   position: absolute;
@@ -27,5 +27,9 @@
     &:hover {
       color: $color__black;
     }
+  }
+
+  @media screen and ($large-screens) {
+    bottom: 1rem;
   }
 }
