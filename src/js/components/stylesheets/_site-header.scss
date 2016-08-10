@@ -6,7 +6,7 @@
   position: fixed;
   text-align: center;
   width: 100%;
-  transform: translateY(0);
+  transform: translate3d(0, 0, 0);
   z-index: $zindex-navbar-fixed;
 
   &.fade-transition {
@@ -16,7 +16,7 @@
   &.fade-enter,
   &.fade-leave {
     opacity: 0;
-    transform: translateY(-10%);
+    transform: translate3d(0, -10%, 0);
   }
 }
 

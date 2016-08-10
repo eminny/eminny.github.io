@@ -9,7 +9,9 @@
 </template>
 
 <style lang="sass">
-  .cander-wrapper {}
+  .cander-wrapper {
+    overflow: hidden;
+  }
 </style>
 
 <script>
