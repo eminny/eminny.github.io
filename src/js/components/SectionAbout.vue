@@ -100,7 +100,8 @@
         margin-right: 0.666rem;
       }
       &.is-active,
-      &:active {
+      &:active,
+      &:hover {
         color: $color__black;
       }
     }

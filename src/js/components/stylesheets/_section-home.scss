@@ -29,15 +29,22 @@
   font-size: 1.8rem;
   line-height: 1.34375;
   text-align: center;
-  transition: color 800ms $timing-function-easeInOutQuad;
+  transition: color $transition-standard;
 
   @media screen and ($large-screens) {
     font-size: 3.2rem;
   }
 
-  &:hover {
+  &.is-faded {
     color: $color__gray;
+    transition: color $transition-standard;
   }
+}
+
+.the-scent__discover {
+  font-size: 1rem;
+  margin-top: 2rem;
+  text-transform: uppercase;
 }
 
 .aromatic {

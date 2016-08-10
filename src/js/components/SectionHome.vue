@@ -82,10 +82,12 @@
     >
       <div class="the-scent">
         <h4 class="the-scent__title">Scent One</h4>
-        <p class="the-scent__desc">Blending woody aromatics like <span class="aromatic" data-id="cypres" @mouseover="showIngredient" @mouseout="hideIngredient">cyprés</span>,<br>
+        <p class="the-scent__desc {{ aromaticsTextFaded ? 'is-faded' : 'is-opaque' }}">Blending woody aromatics like <span class="aromatic" data-id="cypres" @mouseover="showIngredient" @mouseout="hideIngredient">cyprés</span>,<br>
           <span class="aromatic" data-id="cedre" @mouseover="showIngredient" @mouseout="hideIngredient">cédre</span>, and <span class="aromatic" data-id="oud" @mouseover="showIngredient" @mouseout="hideIngredient">oud</span>, with sensual <span class="aromatic" data-id="rose" @mouseover="showIngredient" @mouseout="hideIngredient">rose</span> and<br>
           <span class="aromatic" data-id="patchouli" @mouseover="showIngredient" @mouseout="hideIngredient">patchouli</span>. Adding a hint of mystery<br>
-          with the scent of <span class="aromatic" data-id="cuir" @mouseover="showIngredient" @mouseout="hideIngredient">cuir</span>.</p>
+          with the scent of <span class="aromatic" data-id="cuir" @mouseover="showIngredient" @mouseout="hideIngredient">cuir</span>.
+        </p>
+        <p class="the-scent__discover">Roll over to discover.</p>
       </div>
       <div class="ingredients">
         <div class="ingredient ingredient--cypres" v-show="visibleIngredient == 'cypres'" transition="fade">
@@ -179,6 +181,7 @@
       return {
         skrollr: store.data.skrollr,
         visibleIngredient: null,
+        aromaticsTextFaded: false,
       }
     },
     methods: {
@@ -193,9 +196,11 @@
       showIngredient (event) {
         let visibleIngredient = event.currentTarget.getAttribute('data-id')
         this.visibleIngredient = visibleIngredient
+        this.aromaticsTextFaded = true
       },
-      hideIngredient (event) {
+      hideIngredient () {
         this.visibleIngredient = null
+        this.aromaticsTextFaded = false
       },
     },
     ready () {
@@ -203,6 +208,21 @@
 
       if (this.isMobile()) {
         addClass(document.body, 'is-mobile')
+
+        let flickityInstance = new Flickity('.slide__product-images', {
+          bgLazyLoad: false,
+          cellAlign: 'left',
+          contain: true,
+          pageDots: false,
+          percentPosition: true,
+          prevNextButtons: true,
+          wrapAround: true,
+          freeScroll: true,
+        })
+
+        window.flkty = flickityInstance
+
+
       } else {
         addClass(document.body, 'is-not-mobile')
         // Initialize skrollr

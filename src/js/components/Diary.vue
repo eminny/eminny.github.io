@@ -79,8 +79,11 @@
               cellAlign: 'left',
               contain: true,
               pageDots: false,
+              percentPosition: false,
               prevNextButtons: false,
               slidesWidth: '35rem',
+              wrapAround: true,
+              freeScroll: true,
             })
 
             window.flkty = flickityInstance
