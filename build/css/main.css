@@ -1337,6 +1337,10 @@ input[type=text].newsletter__email:focus,
   width: auto;
 }
 
+.transparent {
+  opacity: 0;
+}
+
 /* ==========================================================================
   Print styles.
   Inlined to avoid the additional HTTP request: h5bp.com/r
