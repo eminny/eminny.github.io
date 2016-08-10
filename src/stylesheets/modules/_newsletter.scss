@@ -23,6 +23,7 @@
 input[type=email].newsletter__email,
 input[type=text].newsletter__email,
 .newsletter__email {
+  background: transparent;
   border: 1px solid $color__black;
   display: inline-block;
   font-size: 1.2rem;

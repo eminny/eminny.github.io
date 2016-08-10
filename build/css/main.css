@@ -469,7 +469,7 @@ label {
 ::-webkit-scrollbar {
   -webkit-appearance: none;
   background-color: rgba(0, 0, 0, 0.1);
-  width: 0.225rem;
+  width: 0.25rem;
   height: 0.125rem;
 }
 
@@ -854,6 +854,7 @@ optgroup::-moz-focus-inner {
 input[type=email].newsletter__email,
 input[type=text].newsletter__email,
 .newsletter__email {
+  background: transparent;
   border: 1px solid #000000;
   display: inline-block;
   font-size: 1.2rem;
