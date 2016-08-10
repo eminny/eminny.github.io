@@ -1080,7 +1080,7 @@ input[type=text].newsletter__email:focus,
   width: 100%;
 }
 .slide__product-carousel-wrapper .flickity-prev-next-button {
-  transform: scale(0.75) translateY(-25%);
+  transform: scale(0.75) translateY(-50%);
 }
 
 .slide__product-carousel {
