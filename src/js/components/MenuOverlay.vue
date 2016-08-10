@@ -1,6 +1,5 @@
 <template>
   <div class="menu-overlay-wrapper">
-    <site-header></site-header>
     <div class="menu-overlay">
       <div class="menu-overlay__nav-wrapper">
         <nav class="menu-overlay__nav-list">
