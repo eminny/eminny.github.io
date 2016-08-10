@@ -1020,7 +1020,6 @@ input[type=text].newsletter__email:focus,
 }
 .slide--intro__icn-scroll.fade-enter, .slide--intro__icn-scroll.fade-leave {
   opacity: 0;
-  transform: translateY(-10%);
 }
 .is-mobile .slide--intro__icn-scroll {
   bottom: 10rem;

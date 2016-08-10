@@ -55,7 +55,6 @@
   &.fade-enter,
   &.fade-leave {
     opacity: 0;
-    transform: translateY(-10%);
   }
 
   .is-mobile & {
