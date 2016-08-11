@@ -81,6 +81,11 @@
             <img src="/images/product-box-top.png" alt="Top" class="slide__product-carousel__image">
           </div>
         </div>
+        <div class="slide__product-info">
+          <h2 class="slide__product-heading">Scent One</h2>
+          <h4 class="slide__product-desc slide__product-desc--primary">Scent One is an exploration of the beginning.</h4>
+          <h4 class="slide__product-desc slide__product-desc--secondary">Scent One est l'exploration du début.</h4>
+        </div>
       </div>
       <!-- Product Accent Photo (non-mobile-only) -->
       <div class="slide__accent-wrapper"

@@ -55,6 +55,7 @@
   &.fade-enter,
   &.fade-leave {
     opacity: 0;
+
   }
 
   .is-mobile & {
@@ -152,6 +153,10 @@ $image-size: 20rem;
 .slide__product-info {
   margin-top: 25rem;
   text-align: center;
+
+  .is-mobile & {
+    margin-top: 5rem;
+  }
 }
 
 .slide__product-wrapper,
