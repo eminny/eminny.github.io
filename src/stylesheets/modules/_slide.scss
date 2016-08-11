@@ -204,6 +204,16 @@ $image-size: 20rem;
   color: $color__gray;
 }
 
+.slide__product__btn-buy,
+a.slide__product__btn-buy {
+  @include btn;
+  margin: 2rem auto;
+
+  @media screen and ($large-screens) {
+    margin: 3rem auto 0 auto;
+  }
+}
+
 .slide__accent-wrapper {
   align-items: flex-start;
 }

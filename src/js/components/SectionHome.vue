@@ -63,6 +63,7 @@
           <h2 class="slide__product-heading">Scent One</h2>
           <h4 class="slide__product-desc slide__product-desc--primary">Scent One is an exploration of the beginning.</h4>
           <h4 class="slide__product-desc slide__product-desc--secondary">Scent One est l'exploration du début.</h4>
+          <div><a class="slide__product__btn-buy" href="#">Buy now</a></div>
         </div>
       </div>
       <!-- Product Images (mobile-only) -->
@@ -85,6 +86,7 @@
           <h2 class="slide__product-heading">Scent One</h2>
           <h4 class="slide__product-desc slide__product-desc--primary">Scent One is an exploration of the beginning.</h4>
           <h4 class="slide__product-desc slide__product-desc--secondary">Scent One est l'exploration du début.</h4>
+          <div><a class="slide__product__btn-buy" href="#">Buy now</a></div>
         </div>
       </div>
       <!-- Product Accent Photo (non-mobile-only) -->

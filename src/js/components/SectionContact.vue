@@ -94,6 +94,12 @@
   input.contact-form__input--btn,
   button.contact-form__input--btn {
     @include btn;
+    margin: 5rem auto;
+
+    @media screen and ($large-screens) {
+      margin: 5rem auto 0 auto;
+      max-width: 20rem;
+    }
   }
 </style>
 
