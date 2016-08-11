@@ -76,7 +76,7 @@
 	(function __canderApp__() {
 	  _vue2.default.config.debug = true;
 
-	  var Cander = _vue2.default.extend(__webpack_require__(87));
+	  var Cander = _vue2.default.extend(__webpack_require__(88));
 
 	  _vue2.default.use(_vueRouter2.default);
 
@@ -13053,9 +13053,9 @@
 	var SectionAbout = _vue2.default.extend(__webpack_require__(6));
 	var SectionContact = _vue2.default.extend(__webpack_require__(45));
 	var SectionHome = _vue2.default.extend(__webpack_require__(56));
-	var SectionStores = _vue2.default.extend(__webpack_require__(66));
-	var SectionTerms = _vue2.default.extend(__webpack_require__(77));
-	var Error404 = _vue2.default.extend(__webpack_require__(82));
+	var SectionStores = _vue2.default.extend(__webpack_require__(67));
+	var SectionTerms = _vue2.default.extend(__webpack_require__(78));
+	var Error404 = _vue2.default.extend(__webpack_require__(83));
 
 	exports.default = {
 	  '*': {
@@ -35992,7 +35992,7 @@
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/components/SectionHome.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(65)
+	__vue_template__ = __webpack_require__(66)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -36078,9 +36078,11 @@
 
 	var _lodash = __webpack_require__(53);
 
+	var _helpers = __webpack_require__(64);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var page = __webpack_require__(64)();
+	var page = __webpack_require__(65)();
 
 	var Flickity = __webpack_require__(17);
 	exports.default = {
@@ -36094,7 +36096,8 @@
 	      visibleIngredient: null,
 	      aromaticsTextFaded: false,
 	      scrollArrowIsVisible: true,
-	      aromaticBackground: false,
+	      aromaticBackgroundUrl: '',
+	      aromaticBackgroundIsVisible: false,
 	      shadeLookup: {
 	        cypres: 'light',
 	        cedre: 'dark',
@@ -36108,40 +36111,46 @@
 
 	  methods: {
 	    isMobile: function isMobile() {
-	      return (/Android|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent || navigator.vendor || window.opera)
-	      );
+	      return (0, _helpers.isMobile)();
 	    },
 	    scrollToFold: function scrollToFold() {
 	      var el = document.getElementById('the-fold');
 	      var foldOffset = el.getBoundingClientRect().top + document.body.scrollTop;
 	      return _scroll2.default.top(page, Number(foldOffset), { duration: 400 });
 	    },
-	    showIngredient: function showIngredient(event) {
+	    showAromaticBg: function showAromaticBg(event) {
+	      this.aromaticBackgroundIsVisible = true;
+
 	      var visibleIngredient = event.currentTarget.getAttribute('data-id');
 	      this.visibleIngredient = visibleIngredient;
 
 	      var el = document.querySelector('.aromatic[data-id="' + visibleIngredient + '"]');
-	      addClass(el, 'is-active');
+	      (0, _helpers.addClass)(el, 'is-active');
 
-	      this.aromaticBackground = '/images/bg-aromatic-' + visibleIngredient + '.jpg';
+	      this.aromaticBackgroundUrl = '/images/bg-aromatic-' + visibleIngredient + '.jpg';
 
 	      var shade = this.shadeLookup[visibleIngredient];
-	      addClass(document.body, 'shade--' + shade);
+	      (0, _helpers.addClass)(document.body, 'shade--' + shade);
 	    },
-	    hideIngredient: function hideIngredient(event) {
+	    hideAromaticBg: function hideAromaticBg(event) {
+	      var _this = this;
+
+	      this.aromaticBackgroundIsVisible = false;
+
 	      var visibleIngredient = event.currentTarget.getAttribute('data-id');
 	      this.visibleIngredient = null;
 
 	      var el = document.querySelector('.aromatic[data-id="' + visibleIngredient + '"]');
-	      removeClass(el, 'is-active');
+	      (0, _helpers.removeClass)(el, 'is-active');
 
-	      this.aromaticBackground = false;
+	      setTimeout(function () {
+	        _this.aromaticBackgroundUrl = '';
+	      }, 5000);
 
 	      var shade = this.shadeLookup[visibleIngredient];
-	      removeClass(document.body, 'shade--' + shade);
+	      (0, _helpers.removeClass)(document.body, 'shade--' + shade);
 	    },
 	    instantiateFlickity: function instantiateFlickity() {
-
 	      var flickityInstance = new Flickity('.slide__product-carousel', {
 	        cellSelector: '.slide__product-carousel__item',
 	        cellAlign: 'left',
@@ -36163,13 +36172,13 @@
 	    }
 	  },
 	  ready: function ready() {
-	    var _this = this;
+	    var _this2 = this;
 
-	    if (this.isMobile()) {
-	      addClass(document.body, 'is-mobile');
+	    if ((0, _helpers.isMobile)()) {
+	      (0, _helpers.addClass)(document.body, 'is-mobile');
 	      this.instantiateFlickity();
 	    } else {
-	      addClass(document.body, 'is-not-mobile');
+	      (0, _helpers.addClass)(document.body, 'is-not-mobile');
 
 	      if (!this.skrollr) {
 	        var skrollrOpts = {};
@@ -36179,9 +36188,9 @@
 
 	    this.$watch('scrollPos.top', function (pos) {
 	      if (pos < -200) {
-	        _this.scrollArrowIsVisible = false;
+	        _this2.scrollArrowIsVisible = false;
 	      } else {
-	        _this.scrollArrowIsVisible = true;
+	        _this2.scrollArrowIsVisible = true;
 	      }
 	    });
 	  },
@@ -36195,23 +36204,6 @@
 	    }
 	  }
 	};
-
-
-	function addClass(el, className) {
-	  if (el.classList) {
-	    el.classList.add(className);
-	  } else {
-	    el.className += ' ' + className;
-	  }
-	}
-
-	function removeClass(el, className) {
-	  if (el.classList) {
-	    el.classList.remove(className);
-	  } else {
-	    el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
-	  }
-	}
 
 /***/ },
 /* 60 */
@@ -36354,6 +36346,39 @@
 /* 64 */
 /***/ function(module, exports) {
 
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.addClass = addClass;
+	exports.removeClass = removeClass;
+	exports.isMobile = isMobile;
+	function addClass(el, className) {
+	  if (el.classList) {
+	    el.classList.add(className);
+	  } else {
+	    el.className += ' ' + className;
+	  }
+	}
+
+	function removeClass(el, className) {
+	  if (el.classList) {
+	    el.classList.remove(className);
+	  } else {
+	    el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+	  }
+	}
+
+	function isMobile() {
+	  return (/Android|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent || navigator.vendor || window.opera)
+	  );
+	}
+
+/***/ },
+/* 65 */
+/***/ function(module, exports) {
+
 	var win = window || {};
 	var doc = document || { documentElement: {} };
 	// IE < 9 & Node
@@ -36379,23 +36404,23 @@
 
 
 /***/ },
-/* 65 */
+/* 66 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"slides\" _v-0ea87e16=\"\">\n  <!-- SECTION 0: INTRO/HERO -->\n  <div class=\"slide slide--0 slide--intro\" _v-0ea87e16=\"\">\n    <div class=\"slide--intro__logo\" data-0=\"opacity: 1;\" data-top-center=\"opacity: 0;\" _v-0ea87e16=\"\">\n      <img src=\"/images/logo.svg\" title=\"CANDER PARIS\" _v-0ea87e16=\"\">\n    </div>\n    <a href=\"#\" @click.prevent=\"scrollToFold\" class=\"slide--intro__icn-scroll\" data-0=\"opacity: 1;\" data-center-top=\"opacity: 0;\" v-show=\"scrollArrowIsVisible\" transition=\"fade\" _v-0ea87e16=\"\">Scroll Down</a>\n  </div>\n\n  <!-- SECTION 1: THE CANDLE -->\n  <div class=\"slide slide--1\" id=\"the-fold\" data-0=\"transform: translate(0, 100%);\" data-100p=\"transform: translate(0, 0%)\" _v-0ea87e16=\"\">\n    <!-- Product Images (non-mobile) -->\n    <div class=\"slide__product-wrapper\" v-if=\"!isMobile()\" _v-0ea87e16=\"\">\n      <div class=\"slide__product-images\" _v-0ea87e16=\"\">\n        <img src=\"/images/product-vessel.png\" alt=\"Vessel\" class=\"slide__product-image\" data-0=\"opacity: 0\" data-50p=\"opacity: 1\" data-100p=\"opacity: 1\" data-150p=\"opacity: 0\" _v-0ea87e16=\"\">\n        <img src=\"/images/product-box-front.png\" alt=\"Front\" class=\"slide__product-image\" data-150p=\"opacity: 0\" data-200p=\"opacity: 1\" data-250p=\"opacity: 1\" data-300p=\"opacity: 0\" _v-0ea87e16=\"\">\n        <img src=\"/images/product-box-back.png\" alt=\"Back\" class=\"slide__product-image\" data-300p=\"opacity: 0\" data-350p=\"opacity: 1\" data-400p=\"opacity: 1\" data-450p=\"opacity: 0\" _v-0ea87e16=\"\">\n        <img src=\"/images/product-box-top.png\" alt=\"Top\" class=\"slide__product-image\" data-450p=\"opacity: 0\" data-500p=\"opacity: 1\" data-600p=\"opacity: 1\" data-650p=\"opacity: 0\" _v-0ea87e16=\"\">\n      </div>\n      <div class=\"slide__product-info\" data-0=\"opacity: 0\" data-100p=\"opacity: 1\" data-600p=\"opacity: 1\" data-650p=\"opacity: 0\" _v-0ea87e16=\"\">\n        <h2 class=\"slide__product-heading\" _v-0ea87e16=\"\">Scent One</h2>\n        <h4 class=\"slide__product-desc slide__product-desc--primary\" _v-0ea87e16=\"\">Scent One is an exploration of the beginning.</h4>\n        <h4 class=\"slide__product-desc slide__product-desc--secondary\" _v-0ea87e16=\"\">Scent One est l'exploration du début.</h4>\n      </div>\n    </div>\n    <!-- Product Images (mobile-only) -->\n    <div class=\"slide__product-carousel-wrapper\" v-if=\"isMobile()\" _v-0ea87e16=\"\">\n      <div class=\"slide__product-carousel\" _v-0ea87e16=\"\">\n        <div class=\"slide__product-carousel__item\" _v-0ea87e16=\"\">\n          <img src=\"/images/product-vessel.png\" alt=\"Vessel\" class=\"slide__product-carousel__image\" _v-0ea87e16=\"\">\n        </div>\n        <div class=\"slide__product-carousel__item\" _v-0ea87e16=\"\">\n          <img src=\"/images/product-box-front.png\" alt=\"Front\" class=\"slide__product-carousel__image\" _v-0ea87e16=\"\">\n        </div>\n        <div class=\"slide__product-carousel__item\" _v-0ea87e16=\"\">\n          <img src=\"/images/product-box-back.png\" alt=\"Back\" class=\"slide__product-carousel__image\" _v-0ea87e16=\"\">\n        </div>\n        <div class=\"slide__product-carousel__item\" _v-0ea87e16=\"\">\n          <img src=\"/images/product-box-top.png\" alt=\"Top\" class=\"slide__product-carousel__image\" _v-0ea87e16=\"\">\n        </div>\n      </div>\n      <div class=\"slide__product-info\" _v-0ea87e16=\"\">\n        <h2 class=\"slide__product-heading\" _v-0ea87e16=\"\">Scent One</h2>\n        <h4 class=\"slide__product-desc slide__product-desc--primary\" _v-0ea87e16=\"\">Scent One is an exploration of the beginning.</h4>\n        <h4 class=\"slide__product-desc slide__product-desc--secondary\" _v-0ea87e16=\"\">Scent One est l'exploration du début.</h4>\n      </div>\n    </div>\n    <!-- Product Accent Photo (non-mobile-only) -->\n    <div class=\"slide__accent-wrapper\" data-0=\"opacity: 0\" data-100p=\"opacity: 1\" data-600p=\"opacity: 1\" data-650p=\"opacity: 0\" _v-0ea87e16=\"\">\n      <img src=\"/images/slide-accent-face.jpg\" alt=\"Cander Paris\" class=\"slide__accent-image\" _v-0ea87e16=\"\">\n    </div>\n  </div>\n\n  <!-- SECTION 2: THE SCENT -->\n  <div class=\"slide slide--2\" data-0=\"opacity: 0\" data-600p=\"opacity: 0; transform: translate(0, 100%);\" data-650p=\"opacity: 0; transform: translate(0, 5%);\" data-700p=\"opacity: 1; transform: translate(0, 0%);\" data-850p=\"opacity: 0; transform: translate(0, -2%);\" style=\"background-image: url({{ aromaticBackground ? aromaticBackground : '' }})\" _v-0ea87e16=\"\">\n    <div class=\"the-scent\" _v-0ea87e16=\"\">\n      <h4 class=\"the-scent__title\" _v-0ea87e16=\"\">Scent One</h4>\n      <p class=\"the-scent__desc {{ aromaticsTextFaded ? 'is-faded' : 'is-opaque' }}\" _v-0ea87e16=\"\">Blending woody aromatics like <span class=\"aromatic\" data-id=\"cypres\" @mouseover=\"showIngredient\" @mouseout=\"hideIngredient\" _v-0ea87e16=\"\">cyprés</span>,<br _v-0ea87e16=\"\">\n        <span class=\"aromatic\" data-id=\"cedre\" @mouseover=\"showIngredient\" @mouseout=\"hideIngredient\" _v-0ea87e16=\"\">cédre</span>, and <span class=\"aromatic\" data-id=\"oud\" @mouseover=\"showIngredient\" @mouseout=\"hideIngredient\" _v-0ea87e16=\"\">oud</span>, with sensual <span class=\"aromatic\" data-id=\"rose\" @mouseover=\"showIngredient\" @mouseout=\"hideIngredient\" _v-0ea87e16=\"\">rose</span> and<br _v-0ea87e16=\"\">\n        <span class=\"aromatic\" data-id=\"patchouli\" @mouseover=\"showIngredient\" @mouseout=\"hideIngredient\" _v-0ea87e16=\"\">patchouli</span>. Adding a hint of mystery<br _v-0ea87e16=\"\">\n        with the scent of <span class=\"aromatic\" data-id=\"cuir\" @mouseover=\"showIngredient\" @mouseout=\"hideIngredient\" _v-0ea87e16=\"\">cuir</span>.\n      </p>\n      <p class=\"the-scent__discover {{ (aromaticsTextFaded &amp;&amp; isMobile()) ? 'transparent' : '' }}\" data-id=\"cypres\" @mouseover=\"showIngredient\" @mouseout=\"hideIngredient\" _v-0ea87e16=\"\">{{ isMobile() ? 'Tap' : 'Roll over' }} to discover.</p>\n    </div>\n  </div>\n\n  <!-- SECTION 3: DOOR -->\n  <div class=\"slide slide--3\" data-0=\"opacity: 0\" data-840p=\"opacity: 0; transform: translate(0, 100%);\" data-850p=\"opacity: 0; transform: translate(0, 30%);\" data-900p=\"opacity: 1; transform: translate(0, 0%);\" data-1050p=\"opacity: 1; transform: translate(0, 0%);\" data-1150p=\"transform: translate(0, -120%);\" _v-0ea87e16=\"\">\n    <div class=\"translations-wrapper\" _v-0ea87e16=\"\">\n      <ul class=\"translations-list\" _v-0ea87e16=\"\">\n        <li _v-0ea87e16=\"\">Bougie Parfumée</li>\n        <li _v-0ea87e16=\"\">Fragranced Candle</li>\n        <li _v-0ea87e16=\"\">Candela Profumata</li>\n        <li _v-0ea87e16=\"\">Vela Perfumada</li>\n        <li _v-0ea87e16=\"\">Duftkerze</li>\n        <li _v-0ea87e16=\"\">香味蠟燭</li>\n        <li _v-0ea87e16=\"\">香りのろうそく</li>\n      </ul>\n    </div>\n  </div>\n\n  <!-- SECTION 4: PRODUCT -->\n  <div class=\"slide slide--4\" data-0=\"opacity: 0\" data-1100p=\"opacity: 0; transform: translate(0, 100%);\" data-1125p=\"opacity: 0; transform: translate(0, 20%);\" data-1160p=\"opacity: 0.3; transform: translate(0, 5%);\" data-1170p=\"opacity: 1; transform: translate(0, 0%);\" data-1200p=\"transform: translate(0, 0%);\" data-1290p=\"transform: translate(0, -15%);\" _v-0ea87e16=\"\">\n    <div class=\"slide--4__inner\" _v-0ea87e16=\"\">\n      <img src=\"/images/product-box-front.png\" alt=\"Front\" class=\"slide--4__product-image\" _v-0ea87e16=\"\">\n      <h2 class=\"zeta\" _v-0ea87e16=\"\">Coming soon in stores</h2>\n    </div>\n  </div>\n\n  <!-- FOOTER -->\n  <div class=\"slide--footer-wrapper\" data-0=\"opacity: 0\" data-1200p=\"opacity: 0; transform: translate(0, 100%);\" data-1225p=\"opacity: 0; transform: translate(0, 20%);\" data-1260p=\"opacity: 0.3; transform: translate(0, 5%);\" data-1270p=\"opacity: 1; transform: translate(0, 0%);\" _v-0ea87e16=\"\">\n    <site-footer _v-0ea87e16=\"\"></site-footer>\n  </div>\n</div>\n";
+	module.exports = "\n<div class=\"slides\" _v-0ea87e16=\"\">\n  <!-- SECTION 0: INTRO/HERO -->\n  <div class=\"slide slide--0 slide--intro\" _v-0ea87e16=\"\">\n    <div class=\"slide--intro__logo\" data-0=\"opacity: 1;\" data-top-center=\"opacity: 0;\" _v-0ea87e16=\"\">\n      <img src=\"/images/logo.svg\" title=\"CANDER PARIS\" _v-0ea87e16=\"\">\n    </div>\n    <a href=\"#\" @click.prevent=\"scrollToFold\" class=\"slide--intro__icn-scroll\" data-0=\"opacity: 1;\" data-center-top=\"opacity: 0;\" v-show=\"scrollArrowIsVisible\" transition=\"fade\" _v-0ea87e16=\"\">Scroll Down</a>\n  </div>\n\n  <!-- SECTION 1: THE CANDLE -->\n  <div class=\"slide slide--1\" id=\"the-fold\" data-0=\"transform: translate(0, 100%);\" data-100p=\"transform: translate(0, 0%)\" _v-0ea87e16=\"\">\n    <!-- Product Images (non-mobile) -->\n    <div class=\"slide__product-wrapper\" v-if=\"!isMobile()\" _v-0ea87e16=\"\">\n      <div class=\"slide__product-images\" _v-0ea87e16=\"\">\n        <img src=\"/images/product-vessel.png\" alt=\"Vessel\" class=\"slide__product-image\" data-0=\"opacity: 0\" data-50p=\"opacity: 1\" data-100p=\"opacity: 1\" data-150p=\"opacity: 0\" _v-0ea87e16=\"\">\n        <img src=\"/images/product-box-front.png\" alt=\"Front\" class=\"slide__product-image\" data-150p=\"opacity: 0\" data-200p=\"opacity: 1\" data-250p=\"opacity: 1\" data-300p=\"opacity: 0\" _v-0ea87e16=\"\">\n        <img src=\"/images/product-box-back.png\" alt=\"Back\" class=\"slide__product-image\" data-300p=\"opacity: 0\" data-350p=\"opacity: 1\" data-400p=\"opacity: 1\" data-450p=\"opacity: 0\" _v-0ea87e16=\"\">\n        <img src=\"/images/product-box-top.png\" alt=\"Top\" class=\"slide__product-image\" data-450p=\"opacity: 0\" data-500p=\"opacity: 1\" data-600p=\"opacity: 1\" data-650p=\"opacity: 0\" _v-0ea87e16=\"\">\n      </div>\n      <div class=\"slide__product-info\" data-0=\"opacity: 0\" data-100p=\"opacity: 1\" data-600p=\"opacity: 1\" data-650p=\"opacity: 0\" _v-0ea87e16=\"\">\n        <h2 class=\"slide__product-heading\" _v-0ea87e16=\"\">Scent One</h2>\n        <h4 class=\"slide__product-desc slide__product-desc--primary\" _v-0ea87e16=\"\">Scent One is an exploration of the beginning.</h4>\n        <h4 class=\"slide__product-desc slide__product-desc--secondary\" _v-0ea87e16=\"\">Scent One est l'exploration du début.</h4>\n      </div>\n    </div>\n    <!-- Product Images (mobile-only) -->\n    <div class=\"slide__product-carousel-wrapper\" v-if=\"isMobile()\" _v-0ea87e16=\"\">\n      <div class=\"slide__product-carousel\" _v-0ea87e16=\"\">\n        <div class=\"slide__product-carousel__item\" _v-0ea87e16=\"\">\n          <img src=\"/images/product-vessel.png\" alt=\"Vessel\" class=\"slide__product-carousel__image\" _v-0ea87e16=\"\">\n        </div>\n        <div class=\"slide__product-carousel__item\" _v-0ea87e16=\"\">\n          <img src=\"/images/product-box-front.png\" alt=\"Front\" class=\"slide__product-carousel__image\" _v-0ea87e16=\"\">\n        </div>\n        <div class=\"slide__product-carousel__item\" _v-0ea87e16=\"\">\n          <img src=\"/images/product-box-back.png\" alt=\"Back\" class=\"slide__product-carousel__image\" _v-0ea87e16=\"\">\n        </div>\n        <div class=\"slide__product-carousel__item\" _v-0ea87e16=\"\">\n          <img src=\"/images/product-box-top.png\" alt=\"Top\" class=\"slide__product-carousel__image\" _v-0ea87e16=\"\">\n        </div>\n      </div>\n      <div class=\"slide__product-info\" _v-0ea87e16=\"\">\n        <h2 class=\"slide__product-heading\" _v-0ea87e16=\"\">Scent One</h2>\n        <h4 class=\"slide__product-desc slide__product-desc--primary\" _v-0ea87e16=\"\">Scent One is an exploration of the beginning.</h4>\n        <h4 class=\"slide__product-desc slide__product-desc--secondary\" _v-0ea87e16=\"\">Scent One est l'exploration du début.</h4>\n      </div>\n    </div>\n    <!-- Product Accent Photo (non-mobile-only) -->\n    <div class=\"slide__accent-wrapper\" data-0=\"opacity: 0\" data-100p=\"opacity: 1\" data-600p=\"opacity: 1\" data-650p=\"opacity: 0\" _v-0ea87e16=\"\">\n      <img src=\"/images/slide-accent-face.jpg\" alt=\"Cander Paris\" class=\"slide__accent-image\" _v-0ea87e16=\"\">\n    </div>\n  </div>\n\n  <!-- SECTION 2: THE SCENT -->\n  <div class=\"slide slide--2\" data-0=\"opacity: 0\" data-600p=\"opacity: 0; transform: translate(0, 100%);\" data-650p=\"opacity: 0; transform: translate(0, 5%);\" data-700p=\"opacity: 1; transform: translate(0, 0%);\" data-850p=\"opacity: 0; transform: translate(0, -2%);\" _v-0ea87e16=\"\">\n    <div class=\"slide--2__bg\" v-bind:style=\"{ backgroundImage: `url(${aromaticBackgroundUrl})` }\" v-show=\"aromaticBackgroundIsVisible\" transition=\"fade\" _v-0ea87e16=\"\"></div>\n    <div class=\"the-scent\" _v-0ea87e16=\"\">\n      <h4 class=\"the-scent__title\" _v-0ea87e16=\"\">Scent One</h4>\n      <p class=\"the-scent__desc {{ aromaticsTextFaded ? 'is-faded' : 'is-opaque' }}\" _v-0ea87e16=\"\">Blending woody aromatics like <span class=\"aromatic\" data-id=\"cypres\" @mouseover=\"showAromaticBg\" @mouseout=\"hideAromaticBg\" _v-0ea87e16=\"\">cyprés</span>,<br _v-0ea87e16=\"\">\n        <span class=\"aromatic\" data-id=\"cedre\" @mouseover=\"showAromaticBg\" @mouseout=\"hideAromaticBg\" _v-0ea87e16=\"\">cédre</span>, and <span class=\"aromatic\" data-id=\"oud\" @mouseover=\"showAromaticBg\" @mouseout=\"hideAromaticBg\" _v-0ea87e16=\"\">oud</span>, with sensual <span class=\"aromatic\" data-id=\"rose\" @mouseover=\"showAromaticBg\" @mouseout=\"hideAromaticBg\" _v-0ea87e16=\"\">rose</span> and<br _v-0ea87e16=\"\">\n        <span class=\"aromatic\" data-id=\"patchouli\" @mouseover=\"showAromaticBg\" @mouseout=\"hideAromaticBg\" _v-0ea87e16=\"\">patchouli</span>. Adding a hint of mystery<br _v-0ea87e16=\"\">\n        with the scent of <span class=\"aromatic\" data-id=\"cuir\" @mouseover=\"showAromaticBg\" @mouseout=\"hideAromaticBg\" _v-0ea87e16=\"\">cuir</span>.\n      </p>\n      <p class=\"the-scent__discover {{ (aromaticsTextFaded &amp;&amp; isMobile()) ? 'transparent' : '' }}\" data-id=\"cypres\" @mouseover=\"showAromaticBg\" @mouseout=\"hideAromaticBg\" _v-0ea87e16=\"\">{{ isMobile() ? 'Tap' : 'Roll over' }} to discover.</p>\n    </div>\n  </div>\n\n  <!-- SECTION 3: DOOR -->\n  <div class=\"slide slide--3\" data-0=\"opacity: 0\" data-840p=\"opacity: 0; transform: translate(0, 100%);\" data-850p=\"opacity: 0; transform: translate(0, 30%);\" data-900p=\"opacity: 1; transform: translate(0, 0%);\" data-1050p=\"opacity: 1; transform: translate(0, 0%);\" data-1150p=\"transform: translate(0, -120%);\" _v-0ea87e16=\"\">\n    <div class=\"translations-wrapper\" _v-0ea87e16=\"\">\n      <ul class=\"translations-list\" _v-0ea87e16=\"\">\n        <li _v-0ea87e16=\"\">Bougie Parfumée</li>\n        <li _v-0ea87e16=\"\">Fragranced Candle</li>\n        <li _v-0ea87e16=\"\">Candela Profumata</li>\n        <li _v-0ea87e16=\"\">Vela Perfumada</li>\n        <li _v-0ea87e16=\"\">Duftkerze</li>\n        <li _v-0ea87e16=\"\">香味蠟燭</li>\n        <li _v-0ea87e16=\"\">香りのろうそく</li>\n      </ul>\n    </div>\n  </div>\n\n  <!-- SECTION 4: PRODUCT -->\n  <div class=\"slide slide--4\" data-0=\"opacity: 0\" data-1100p=\"opacity: 0; transform: translate(0, 100%);\" data-1125p=\"opacity: 0; transform: translate(0, 20%);\" data-1160p=\"opacity: 0.3; transform: translate(0, 5%);\" data-1170p=\"opacity: 1; transform: translate(0, 0%);\" data-1200p=\"transform: translate(0, 0%);\" data-1290p=\"transform: translate(0, -15%);\" _v-0ea87e16=\"\">\n    <div class=\"slide--4__inner\" _v-0ea87e16=\"\">\n      <img src=\"/images/product-box-front.png\" alt=\"Front\" class=\"slide--4__product-image\" _v-0ea87e16=\"\">\n      <h2 class=\"zeta\" _v-0ea87e16=\"\">Coming soon in stores</h2>\n    </div>\n  </div>\n\n  <!-- FOOTER -->\n  <div class=\"slide--footer-wrapper\" data-0=\"opacity: 0\" data-1200p=\"opacity: 0; transform: translate(0, 100%);\" data-1225p=\"opacity: 0; transform: translate(0, 20%);\" data-1260p=\"opacity: 0.3; transform: translate(0, 5%);\" data-1270p=\"opacity: 1; transform: translate(0, 0%);\" _v-0ea87e16=\"\">\n    <site-footer _v-0ea87e16=\"\"></site-footer>\n  </div>\n</div>\n";
 
 /***/ },
-/* 66 */
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(67)
-	__vue_script__ = __webpack_require__(69)
+	__webpack_require__(68)
+	__vue_script__ = __webpack_require__(70)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/components/SectionStores.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(76)
+	__vue_template__ = __webpack_require__(77)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -36414,13 +36439,13 @@
 	})()}
 
 /***/ },
-/* 67 */
+/* 68 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(68);
+	var content = __webpack_require__(69);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(10)(content, {});
@@ -36440,7 +36465,7 @@
 	}
 
 /***/ },
-/* 68 */
+/* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(9)();
@@ -36454,7 +36479,7 @@
 
 
 /***/ },
-/* 69 */
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36473,7 +36498,7 @@
 
 	var _SiteFooter2 = _interopRequireDefault(_SiteFooter);
 
-	var _GoogleMap = __webpack_require__(70);
+	var _GoogleMap = __webpack_require__(71);
 
 	var _GoogleMap2 = _interopRequireDefault(_GoogleMap);
 
@@ -36510,17 +36535,17 @@
 	};
 
 /***/ },
-/* 70 */
+/* 71 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(71)
-	__vue_script__ = __webpack_require__(73)
+	__webpack_require__(72)
+	__vue_script__ = __webpack_require__(74)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/components/GoogleMap.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(75)
+	__vue_template__ = __webpack_require__(76)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -36539,13 +36564,13 @@
 	})()}
 
 /***/ },
-/* 71 */
+/* 72 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(72);
+	var content = __webpack_require__(73);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(10)(content, {});
@@ -36565,7 +36590,7 @@
 	}
 
 /***/ },
-/* 72 */
+/* 73 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(9)();
@@ -36579,7 +36604,7 @@
 
 
 /***/ },
-/* 73 */
+/* 74 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36594,7 +36619,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var GoogleMapsLoader = __webpack_require__(74);
+	var GoogleMapsLoader = __webpack_require__(75);
 
 	exports.default = {
 	  props: ['mapId', 'coords'],
@@ -36638,7 +36663,7 @@
 	};
 
 /***/ },
-/* 74 */
+/* 75 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;(function(root, factory) {
@@ -36863,29 +36888,29 @@
 
 
 /***/ },
-/* 75 */
+/* 76 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"google-map\">\n  <div id=\"map-{{* mapId }}\"></div>\n</div>\n";
 
 /***/ },
-/* 76 */
+/* 77 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div _v-837df270=\"\">\n  <section _v-837df270=\"\">\n    <h1 class=\"section__heading--alpha\" _v-837df270=\"\">Retailers</h1>\n    <hr _v-837df270=\"\">\n    <ul class=\"retailers-list\" _v-837df270=\"\">\n      <li class=\"retailer\" v-for=\"retailer in retailers\" _v-837df270=\"\">\n        <h3 class=\"retailer__name\" _v-837df270=\"\">{{ retailer.name }}</h3>\n        <div class=\"retailer__locations\" v-if=\"retailer.locations &amp;&amp; retailer.locations.length\" _v-837df270=\"\">\n          <p v-for=\"location in retailer.locations\" _v-837df270=\"\">{{{ location }}}</p>\n        </div>\n        <p class=\"retailer__website\" _v-837df270=\"\">\n          <a href=\"{{ retailer.website }}\" target=\"_blank\" title=\"Visit {{ retailer.name }}\" _v-837df270=\"\">{{ retailer.website }}</a>\n        </p>\n        <a href=\"#\" class=\"retailer__map-btn\" :class=\"retailer.mapRevealed ? 'is-active' : ''\" @click.prevent=\"toggleMapRevealed(retailer)\" v-if=\"hasMapLocation(retailer)\" _v-837df270=\"\">View Map</a>\n        <div class=\"retailer__map\" v-if=\"mapIsVisible(retailer)\" transition=\"fade\" _v-837df270=\"\">\n          <google-map :map-id=\"$index\" :coords=\"retailer.mapCoords\" _v-837df270=\"\"></google-map>\n        </div>\n      </li>\n    </ul>\n  </section>\n  <site-footer _v-837df270=\"\"></site-footer>\n</div>\n";
 
 /***/ },
-/* 77 */
+/* 78 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(78)
-	__vue_script__ = __webpack_require__(80)
+	__webpack_require__(79)
+	__vue_script__ = __webpack_require__(81)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/components/SectionTerms.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(81)
+	__vue_template__ = __webpack_require__(82)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -36904,13 +36929,13 @@
 	})()}
 
 /***/ },
-/* 78 */
+/* 79 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(79);
+	var content = __webpack_require__(80);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(10)(content, {});
@@ -36930,7 +36955,7 @@
 	}
 
 /***/ },
-/* 79 */
+/* 80 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(9)();
@@ -36944,7 +36969,7 @@
 
 
 /***/ },
-/* 80 */
+/* 81 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36973,23 +36998,23 @@
 	};
 
 /***/ },
-/* 81 */
+/* 82 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div _v-1b075f61=\"\">\n  <section _v-1b075f61=\"\">\n    <h1 class=\"section__heading--alpha\" _v-1b075f61=\"\">Terms and Conditions</h1>\n    <hr _v-1b075f61=\"\">\n    <h3 _v-1b075f61=\"\">OVERVIEW</h3>\n    <p _v-1b075f61=\"\">This website is operated by Cander Paris. Throughout the site, the terms “we”, “us” and “our” refer to Cander. Cander offers this website, including all information, tools and services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies and notices stated here.</p>\n    <p _v-1b075f61=\"\">By visiting our site and/ or purchasing something from us, you engage in our “Service” and agree to be bound by the following terms and conditions (“Terms of Service”, “Terms”), including those additional terms and conditions and policies referenced herein and/or available by hyperlink. These Terms of Service apply  to all users of the site, including without limitation users who are browsers, vendors, customers, merchants, and/ or contributors of content.</p>\n    <p _v-1b075f61=\"\">Please read these Terms of Service carefully before accessing or using our website. By accessing or using any part of the site, you agree to be bound by these Terms of Service. If you do not agree to all the terms and conditions of this agreement, then you may not access the website or use any services. If these Terms of Service are considered an offer, acceptance is expressly limited to these Terms of Service.</p>\n    <p _v-1b075f61=\"\">Any new features or tools which are added to the current store shall also be subject to the Terms of Service. You can review the most current version of the Terms of Service at any time on this page. We reserve the right to update, change or replace any part of these Terms of Service by posting updates and/or changes to our website. It is your responsibility to check this page periodically for changes. Your continued use of or access to the website following the posting of any changes constitutes acceptance of those changes.</p>\n    <h3 _v-1b075f61=\"\">Section 1 - Online Store Terms</h3>\n    <p _v-1b075f61=\"\">By agreeing to these Terms of Service, you represent that you are at least the age of majority in your state or province of residence, or that you are the age of majority in your state or province of residence and you have given us your consent to allow any of your minor dependents to use this site. A breach or violation of any of the Terms will result in an immediate termination of your Services.</p>\n    <h3 _v-1b075f61=\"\">Section 2 - General Conditions</h3>\n    <p _v-1b075f61=\"\">We reserve the right to refuse service to anyone for any reason at any time.</p>\n    <p _v-1b075f61=\"\">You understand that your content (not including credit card information), may be transferred unencrypted and involve (a) transmissions over various networks; and (b) changes to conform and adapt to technical requirements of connecting networks or devices. Credit card information is always encrypted during transfer over networks.</p>\n    <p _v-1b075f61=\"\">You agree not to reproduce, duplicate, copy, sell, resell or exploit any portion of the Service, use of the Service, or access to the Service or any contact on the website through which the service is provided, without express written permission by us.</p>\n    <p _v-1b075f61=\"\">The headings used in this agreement are included for convenience only and will not limit or otherwise affect these Terms.</p>\n    <h3 _v-1b075f61=\"\">Section 3 - Accuracy, Completeness And Timeliness Of Information</h3>\n    <p _v-1b075f61=\"\">We are not responsible if information made available on this site is not accurate, complete or current. The material on this site is provided for general information only and should not be relied upon or used as the sole basis for making decisions without consulting primary, more accurate, more complete or more timely sources of information. Any reliance on the material on this site is at your own risk.</p>\n    <p _v-1b075f61=\"\">This site may contain certain historical information. Historical information, necessarily, is not current and is provided for your reference only. We reserve the right to modify the contents of this site at any time, but we have no obligation to update any information on our site. You agree that it is your responsibility to monitor changes to our site.</p>\n    <h3 _v-1b075f61=\"\">Section 4 - Modifications To The Service And Prices</h3>\n    <p _v-1b075f61=\"\">Prices for our products are subject to change without notice.We reserve the right at any time to modify or discontinue the Service (or any part or content thereof) without notice at any time.We shall not be liable to you or to any third-party for any modification, price change, suspension or discontinuance of the Service.</p>\n    <h3 _v-1b075f61=\"\">Section 5 - Products Or Services (if Applicable)</h3>\n    <p _v-1b075f61=\"\">Certain products or services may be available exclusively online through the website. These products or services may have limited quantities and are subject to return or exchange only according to our Return Policy.</p>\n    <p _v-1b075f61=\"\">We have made every effort to display as accurately as possible the colors and images of our products that appear at the store. We cannot guarantee that your computer monitor's display of any color will be accurate.</p>\n    <p _v-1b075f61=\"\">We reserve the right, but are not obligated, to limit the sales of our products or Services to any person, geographic region or jurisdiction. We may exercise this right on a case-by-case basis. We reserve the right to limit the quantities of any products or services that we offer. All descriptions of products or product pricing are subject to change at anytime without notice, at the sole discretion of us. We reserve the right to discontinue any product at any time. Any offer for any product or service made on this site is void where prohibited.</p>\n    <p _v-1b075f61=\"\">We do not warrant that the quality of any products, services, information, or other material purchased or obtained by you will meet your expectations, or that any errors in the Service will be corrected.</p>\n    <h3 _v-1b075f61=\"\">Section 6 - Accuracy Of Billing And Account Information</h3>\n    <p _v-1b075f61=\"\">We reserve the right to refuse any order you place with us. We may, in our sole discretion, limit or cancel quantities purchased per person, per household or per order. These restrictions may include orders placed by or under the same customer account, the same credit card, and/or orders that use the same billing and/or shipping address. In the event that we make a change to or cancel an order, we may attempt to notify you by contacting the e-mail and/or billing address/phone number provided at the time the order was made. We reserve the right to limit or prohibit orders that, in our sole judgment, appear to be placed by dealers, resellers or distributors.</p>\n    <p _v-1b075f61=\"\">You agree to provide current, complete and accurate purchase and account information for all purchases made at our store. You agree to promptly update your account and other information, including your email address and credit card numbers and expiration dates, so that we can complete your transactions and contact you as needed.</p>\n    <p _v-1b075f61=\"\">For more detail, please review our Returns Policy.</p>\n    <h3 _v-1b075f61=\"\">Section 7 - Optional Tools</h3>\n    <p _v-1b075f61=\"\">We may provide you with access to third-party tools over which we neither monitor nor have any control nor input.</p>\n    <p _v-1b075f61=\"\">You acknowledge and agree that we provide access to such tools ”as is” and “as available” without any warranties, representations or conditions of any kind and without any endorsement. We shall have no liability whatsoever arising from or relating to your use of optional third-party tools.</p>\n    <p _v-1b075f61=\"\">Any use by you of optional tools offered through the site is entirely at your own risk and discretion and you should ensure that you are familiar with and approve of the terms on which tools are provided by the relevant third-party provider(s).</p>\n    <p _v-1b075f61=\"\">We may also, in the future, offer new services and/or features through the website (including, the release of new tools and resources). Such new features and/or services shall also be subject to these Terms of Service.</p>\n    <h3 _v-1b075f61=\"\">Section 8 - Third-party Links</h3>\n    <p _v-1b075f61=\"\">Certain content, products and services available via our Service may include materials from third-parties.</p>\n    <p _v-1b075f61=\"\">Third-party links on this site may direct you to third-party websites that are not affiliated with us. We are not responsible for examining or evaluating the content or accuracy and we do not warrant and will not have any liability or responsibility for any third-party materials or websites, or for any other materials, products, or services of third-parties.</p>\n    <p _v-1b075f61=\"\">We are not liable for any harm or damages related to the purchase or use of goods, services, resources, content, or any other transactions made in connection with any third-party websites. Please review carefully the third-party's policies and practices and make sure you understand them before you engage in any transaction. Complaints, claims, concerns, or questions regarding third-party products should be directed to the third-party.</p>\n    <h3 _v-1b075f61=\"\">Section 9 - User Comments, Feedback And Other Submissions</h3>\n    <p _v-1b075f61=\"\">If, at our request, you send certain specific submissions (for example contest entries) or without a request from us you send creative ideas, suggestions, proposals, plans, or other materials, whether online, by email, by postal mail, or otherwise (collectively, 'comments'), you agree that we may, at any time, without restriction, edit, copy, publish, distribute, translate and otherwise use in any medium any comments that you forward to us. We are and shall be under no obligation (1) to maintain any comments in confidence; (2) to pay compensation for any comments; or (3) to respond to any comments.</p>\n    <p _v-1b075f61=\"\">We may, but have no obligation to, monitor, edit or remove content that we determine in our sole discretion are unlawful, offensive, threatening, libelous, defamatory, pornographic, obscene or otherwise objectionable or violates any party’s intellectual property or these Terms of Service.</p>\n    <p _v-1b075f61=\"\">You agree that your comments will not violate any right of any third-party, including copyright, trademark, privacy, personality or other personal or proprietary right. You further agree that your comments will not contain libelous or otherwise unlawful, abusive or obscene material, or contain any computer virus or other malware that could in any way affect the operation of the Service or any related website. You may not use a false e-mail address, pretend to be someone other than yourself, or otherwise mislead us or third-parties as to the origin of any comments. You are solely responsible for any comments you make and their accuracy. We take no responsibility and assume no liability for any comments posted by you or any third-party.</p>\n    <h3 _v-1b075f61=\"\">Section 10 - Personal Information</h3>\n    <p _v-1b075f61=\"\">Your submission of personal information through the store is governed by our Privacy Policy. To view our Privacy Policy.</p>\n    <h3 _v-1b075f61=\"\">Section 11 - Errors, Inaccuracies And Omissions</h3>\n    <p _v-1b075f61=\"\">Occasionally there may be information on our site or in the Service that contains typographical errors, inaccuracies or omissions that may relate to product descriptions, pricing, promotions, offers, product shipping charges, transit times and availability. We reserve the right to correct any errors, inaccuracies or omissions, and to change or update information or cancel orders if any information in the Service or on any related website is inaccurate at any time without prior notice (including after you have submitted your order).</p>\n    <p _v-1b075f61=\"\">We undertake no obligation to update, amend or clarify information in the Service or on any related website, including without limitation, pricing information, except as required by law. No specified update or refresh date applied in the Service or on any related website, should be taken to indicate that all information in the Service or on any related website has been modified or updated.</p>\n    <h3 _v-1b075f61=\"\">Section 12 - Prohibited Uses</h3>\n    <p _v-1b075f61=\"\">In addition to other prohibitions as set forth in the Terms of Service, you are prohibited from using the site or its content: (a) for any unlawful purpose; (b) to solicit others to perform or participate in any unlawful acts; (c) to violate any international, federal, provincial or state regulations, rules, laws, or local ordinances; (d) to infringe upon or violate our intellectual property rights or the intellectual property rights of others; (e) to harass, abuse, insult, harm, defame, slander, disparage, intimidate, or discriminate based on gender, sexual orientation, religion, ethnicity, race, age, national origin, or disability; (f) to submit false or misleading information; (g) to upload or transmit viruses or any other type of malicious code that will or may be used in any way that will affect the functionality or operation of the Service or of any related website, other websites, or the Internet; (h) to collect or track the personal information of others; (i) to spam, phish, pharm, pretext, spider, crawl, or scrape; (j) for any obscene or immoral purpose; or (k) to interfere with or circumvent the security features of the Service or any related website, other websites, or the Internet. We reserve the right to terminate your use of the Service or any related website for violating any of the prohibited uses.</p>\n    <h3 _v-1b075f61=\"\">Section 13 - Disclaimer Of Warranties; Limitation Of Liability</h3>\n    <p _v-1b075f61=\"\">We do not guarantee, represent or warrant that your use of our service will be uninterrupted, timely, secure or error-free.</p>\n    <p _v-1b075f61=\"\">We do not warrant that the results that may be obtained from the use of the service will be accurate or reliable.</p>\n    <p _v-1b075f61=\"\">You agree that from time to time we may remove the service for indefinite periods of time or cancel the service at any time, without notice to you.</p>\n    <p _v-1b075f61=\"\">You expressly agree that your use of, or inability to use, the service is at your sole risk. The service and all products and services delivered to you through the service are (except as expressly stated by us) provided 'as is' and 'as available' for your use, without any representation, warranties or conditions of any kind, either express or implied, including all implied warranties or conditions of merchantability, merchantable quality, fitness for a particular purpose, durability, title, and non-infringement.</p>\n    <p _v-1b075f61=\"\">In no case shall Cander, our directors, officers, employees, affiliates, agents, contractors, interns, suppliers, service providers or licensors be liable for any injury, loss, claim, or any direct, indirect, incidental, punitive, special, or consequential damages of any kind, including, without limitation lost profits, lost revenue, lost savings, loss of data, replacement costs, or any similar damages, whether based in contract, tort (including negligence), strict liability or otherwise, arising from your use of any of the service or any products procured using the service, or for any other claim related in any way to your use of the service or any product, including, but not limited to, any errors or omissions in any content, or any loss or damage of any kind incurred as a result of the use of the service or any content (or product) posted, transmitted, or otherwise made available via the service, even if advised of their possibility. Because some states or jurisdictions do not allow the exclusion or the limitation of liability for consequential or incidental damages, in such states or jurisdictions, our liability shall be limited to the maximum extent permitted by law.</p>\n    <h3 _v-1b075f61=\"\">Section 14 - Indemnification</h3>\n    <p _v-1b075f61=\"\">You agree to indemnify, defend and hold harmless Cander and our parent, subsidiaries, affiliates, partners, officers, directors, agents, contractors, licensors, service providers, subcontractors, suppliers, interns and employees, harmless from any claim or demand, including reasonable attorneys’ fees, made by any third-party due to or arising out of your breach of these Terms of Service or the documents they incorporate by reference, or your violation of any law or the rights of a third-party.</p>\n    <h3 _v-1b075f61=\"\">Section 15 - Severability</h3>\n    <p _v-1b075f61=\"\">In the event that any provision of these Terms of Service is determined to be unlawful, void or unenforceable, such provision shall nonetheless be enforceable to the fullest extent permitted by applicable law, and the unenforceable portion shall be deemed to be severed from these Terms of Service, such determination shall not affect the validity and enforceability of any other remaining provisions.</p>\n    <h3 _v-1b075f61=\"\">Section 16 - Termination</h3>\n    <p _v-1b075f61=\"\">The obligations and liabilities of the parties incurred prior to the termination date shall survive the termination of this agreement for all purposes. These Terms of Service are effective unless and until terminated by either you or us. You may terminate these Terms of Service at any time by notifying us that you no longer wish to use our Services, or when you cease using our site.</p>\n    <p _v-1b075f61=\"\">If in our sole judgment you fail, or we suspect that you have failed, to comply with any term or provision of these Terms of Service, we also may terminate this agreement at any time without notice and you will remain liable for all amounts due up to and including the date of termination; and/or accordingly may deny you access to our Services (or any part thereof).</p>\n    <h3 _v-1b075f61=\"\">Section 17 - Entire Agreement</h3>\n    <p _v-1b075f61=\"\">The failure of us to exercise or enforce any right or provision of these Terms of Service shall not constitute a waiver of such right or provision.</p>\n    <p _v-1b075f61=\"\">These Terms of Service and any policies or operating rules posted by us on this site or in respect to The Service constitutes the entire agreement and understanding between you and us and govern your use of the Service, superseding any prior or contemporaneous agreements, communications and proposals, whether oral or written, between you and us (including, but not limited to, any prior versions of the Terms of Service).</p>\n    <p _v-1b075f61=\"\">Any ambiguities in the interpretation of these Terms of Service shall not be construed against the drafting party.</p>\n    <h3 _v-1b075f61=\"\">Section 18 - Changes To Terms Of Service</h3>\n    <p _v-1b075f61=\"\">You can review the most current version of the Terms of Service at any time at this page.</p>\n    <p _v-1b075f61=\"\">We reserve the right, at our sole discretion, to update, change or replace any part of these Terms of Service by posting updates and changes to our website. It is your responsibility to check our website periodically for changes. Your continued use of or access to our website or the Service following the posting of any changes to these Terms of Service constitutes acceptance of those changes.</p>\n    <h3 _v-1b075f61=\"\">Section 19 - Contact Information</h3>\n    <p _v-1b075f61=\"\">Questions about the Terms of Service should be sent to us at info@canderparis.com.</p>\n  </section>\n  <site-footer _v-1b075f61=\"\"></site-footer>\n</div>\n";
 
 /***/ },
-/* 82 */
+/* 83 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(83)
-	__vue_script__ = __webpack_require__(85)
+	__webpack_require__(84)
+	__vue_script__ = __webpack_require__(86)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/components/Error404.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(86)
+	__vue_template__ = __webpack_require__(87)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -37008,13 +37033,13 @@
 	})()}
 
 /***/ },
-/* 83 */
+/* 84 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(84);
+	var content = __webpack_require__(85);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(10)(content, {});
@@ -37034,7 +37059,7 @@
 	}
 
 /***/ },
-/* 84 */
+/* 85 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(9)();
@@ -37048,29 +37073,29 @@
 
 
 /***/ },
-/* 85 */
+/* 86 */
 /***/ function(module, exports) {
 
 	"use strict";
 
 /***/ },
-/* 86 */
+/* 87 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"page-404\" _v-6ee08c6f=\"\">\n  <h1 _v-6ee08c6f=\"\">Not Found</h1>\n</div>\n";
 
 /***/ },
-/* 87 */
+/* 88 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(88)
-	__vue_script__ = __webpack_require__(90)
+	__webpack_require__(89)
+	__vue_script__ = __webpack_require__(91)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/App.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(101)
+	__vue_template__ = __webpack_require__(102)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -37089,13 +37114,13 @@
 	})()}
 
 /***/ },
-/* 88 */
+/* 89 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(89);
+	var content = __webpack_require__(90);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(10)(content, {});
@@ -37115,7 +37140,7 @@
 	}
 
 /***/ },
-/* 89 */
+/* 90 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(9)();
@@ -37129,7 +37154,7 @@
 
 
 /***/ },
-/* 90 */
+/* 91 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37142,11 +37167,11 @@
 
 	var _store2 = _interopRequireDefault(_store);
 
-	var _MenuOverlay = __webpack_require__(91);
+	var _MenuOverlay = __webpack_require__(92);
 
 	var _MenuOverlay2 = _interopRequireDefault(_MenuOverlay);
 
-	var _SiteHeader = __webpack_require__(95);
+	var _SiteHeader = __webpack_require__(96);
 
 	var _SiteHeader2 = _interopRequireDefault(_SiteHeader);
 
@@ -37175,17 +37200,17 @@
 	};
 
 /***/ },
-/* 91 */
+/* 92 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(92)
-	__vue_script__ = __webpack_require__(94)
+	__webpack_require__(93)
+	__vue_script__ = __webpack_require__(95)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/components/MenuOverlay.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(100)
+	__vue_template__ = __webpack_require__(101)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -37204,13 +37229,13 @@
 	})()}
 
 /***/ },
-/* 92 */
+/* 93 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(93);
+	var content = __webpack_require__(94);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(10)(content, {});
@@ -37230,7 +37255,7 @@
 	}
 
 /***/ },
-/* 93 */
+/* 94 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(9)();
@@ -37244,7 +37269,7 @@
 
 
 /***/ },
-/* 94 */
+/* 95 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37257,7 +37282,7 @@
 
 	var _store2 = _interopRequireDefault(_store);
 
-	var _SiteHeader = __webpack_require__(95);
+	var _SiteHeader = __webpack_require__(96);
 
 	var _SiteHeader2 = _interopRequireDefault(_SiteHeader);
 
@@ -37320,17 +37345,17 @@
 	};
 
 /***/ },
-/* 95 */
+/* 96 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(96)
-	__vue_script__ = __webpack_require__(98)
+	__webpack_require__(97)
+	__vue_script__ = __webpack_require__(99)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/components/SiteHeader.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(99)
+	__vue_template__ = __webpack_require__(100)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -37349,13 +37374,13 @@
 	})()}
 
 /***/ },
-/* 96 */
+/* 97 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(97);
+	var content = __webpack_require__(98);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(10)(content, {});
@@ -37375,7 +37400,7 @@
 	}
 
 /***/ },
-/* 97 */
+/* 98 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(9)();
@@ -37389,7 +37414,7 @@
 
 
 /***/ },
-/* 98 */
+/* 99 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37406,9 +37431,11 @@
 
 	var _store2 = _interopRequireDefault(_store);
 
+	var _helpers = __webpack_require__(64);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var page = __webpack_require__(64)();
+	var page = __webpack_require__(65)();
 
 	exports.default = {
 	  data: function data() {
@@ -37474,49 +37501,34 @@
 	    'headerVisible': function headerVisible(val) {
 	      var el = document.getElementById('cander-app');
 	      if (val) {
-	        addClass(el, 'header-visible');
+	        (0, _helpers.addClass)(el, 'header-visible');
 	      } else {
-	        removeClass(el, 'header-visible');
+	        (0, _helpers.removeClass)(el, 'header-visible');
 	      }
 	    }
 	  },
 	  ready: function ready() {
 	    var el = document.getElementById('cander-app');
 	    if (this.$route.name !== 'home') {
-	      addClass(el, 'header-visible');
+	      (0, _helpers.addClass)(el, 'header-visible');
 	    }
 	  }
 	};
-
-	function addClass(el, className) {
-	  if (el.classList) {
-	    el.classList.add(className);
-	  } else {
-	    el.className += ' ' + className;
-	  }
-	}
-	function removeClass(el, className) {
-	  if (el.classList) {
-	    el.classList.remove(className);
-	  } else {
-	    el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
-	  }
-	}
-
-/***/ },
-/* 99 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<header class=\"site-header\" v-show=\"headerVisible\" transition=\"fade\" _v-3286419a=\"\">\n  <a href=\"/\" @click.prevent=\"logoClickHandler\" class=\"menu-overlay__nav-list__item\" _v-3286419a=\"\">\n    <img src=\"/images/logo.svg\" alt=\"CANDER PARIS\" title=\"CANDER PARIS\" class=\"logo\" _v-3286419a=\"\">\n  </a>\n  <a href=\"/\" @click.prevent=\"toggleMenu\" class=\"btn-menu btn-menu--{{ toggleState }}\" _v-3286419a=\"\"></a>\n</header>\n";
 
 /***/ },
 /* 100 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"menu-overlay-wrapper\" _v-53ced9fc=\"\">\n  <div class=\"menu-overlay\" _v-53ced9fc=\"\">\n    <div class=\"menu-overlay__nav-wrapper\" _v-53ced9fc=\"\">\n      <nav class=\"menu-overlay__nav-list\" _v-53ced9fc=\"\">\n        <a v-link=\"{ name: 'about' }\" v-on:mouseover=\"setHoverItem('about')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-53ced9fc=\"\">About</a>\n        <a v-link=\"{ name: 'stores' }\" v-on:mouseover=\"setHoverItem('stores')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-53ced9fc=\"\">Stores</a>\n        <a v-link=\"{ name: 'contact' }\" v-on:mouseover=\"setHoverItem('contact')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-53ced9fc=\"\">Contact</a>\n      </nav>\n      <div class=\"menu-overlay__nav-social\" _v-53ced9fc=\"\">\n        <a class=\"menu-overlay__nav-social__item\" href=\"http://facebook.com\" target=\"_blank\" _v-53ced9fc=\"\">\n          <svg class=\"icon icon-facebook\" _v-53ced9fc=\"\">\n            <use xlink:href=\"#icon-facebook\" _v-53ced9fc=\"\"></use>\n          </svg>\n        </a>\n        <a class=\"menu-overlay__nav-social__item\" href=\"http://instagram.com\" target=\"_blank\" _v-53ced9fc=\"\">\n          <svg class=\"icon icon-instagram\" _v-53ced9fc=\"\"><use xlink:href=\"#icon-instagram\" _v-53ced9fc=\"\"></use></svg>\n        </a>\n        <svg style=\"position: absolute; width: 0; height: 0; overflow: hidden;\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" _v-53ced9fc=\"\">\n          <defs _v-53ced9fc=\"\">\n            <symbol id=\"icon-instagram\" viewBox=\"0 0 16 16\" _v-53ced9fc=\"\">\n              <title _v-53ced9fc=\"\">Instagram</title>\n              <path class=\"path1\" d=\"M14.5 0h-13c-0.825 0-1.5 0.675-1.5 1.5v13c0 0.825 0.675 1.5 1.5 1.5h13c0.825 0 1.5-0.675 1.5-1.5v-13c0-0.825-0.675-1.5-1.5-1.5zM11 2.5c0-0.275 0.225-0.5 0.5-0.5h2c0.275 0 0.5 0.225 0.5 0.5v2c0 0.275-0.225 0.5-0.5 0.5h-2c-0.275 0-0.5-0.225-0.5-0.5v-2zM8 5c1.656 0 3 1.344 3 3s-1.344 3-3 3c-1.656 0-3-1.344-3-3s1.344-3 3-3zM14 13.5v0c0 0.275-0.225 0.5-0.5 0.5h-11c-0.275 0-0.5-0.225-0.5-0.5v0-6.5h1.1c-0.066 0.322-0.1 0.656-0.1 1 0 2.762 2.237 5 5 5s5-2.238 5-5c0-0.344-0.034-0.678-0.1-1h1.1v6.5z\" _v-53ced9fc=\"\"></path>\n            </symbol>\n            <symbol id=\"icon-facebook\" viewBox=\"0 0 16 16\" _v-53ced9fc=\"\">\n              <title _v-53ced9fc=\"\">Facebook</title>\n              <path class=\"path1\" d=\"M9.5 3h2.5v-3h-2.5c-1.93 0-3.5 1.57-3.5 3.5v1.5h-2v3h2v8h3v-8h2.5l0.5-3h-3v-1.5c0-0.271 0.229-0.5 0.5-0.5z\" _v-53ced9fc=\"\"></path>\n            </symbol>\n          </defs>\n        </svg>\n      </div>\n      <div class=\"menu-overlay__nav-contact\" _v-53ced9fc=\"\">\n        <p _v-53ced9fc=\"\">For all general information please contact <a href=\"mailto:info@canderparis.com\" _v-53ced9fc=\"\">info@canderparis.com</a></p>\n        <p _v-53ced9fc=\"\">For press information please contact <a href=\"mailto:press@canderparis.com\" _v-53ced9fc=\"\">press@canderparis.com</a></p>\n      </div>\n    </div>\n    <div class=\"menu-overlay__accent-wrapper\" _v-53ced9fc=\"\">\n      <img :src=\"menuOverlay.navImageMap[hoverItem]\" class=\"menu-overlay__accent\" :data-id=\"hoverItem\" _v-53ced9fc=\"\">\n    </div>\n  </div>\n</div>\n";
+	module.exports = "\n<header class=\"site-header\" v-show=\"headerVisible\" transition=\"fade\" _v-3286419a=\"\">\n  <a href=\"/\" @click.prevent=\"logoClickHandler\" class=\"menu-overlay__nav-list__item\" _v-3286419a=\"\">\n    <img src=\"/images/logo.svg\" alt=\"CANDER PARIS\" title=\"CANDER PARIS\" class=\"logo\" _v-3286419a=\"\">\n  </a>\n  <a href=\"/\" @click.prevent=\"toggleMenu\" class=\"btn-menu btn-menu--{{ toggleState }}\" _v-3286419a=\"\"></a>\n</header>\n";
 
 /***/ },
 /* 101 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"menu-overlay-wrapper\" _v-53ced9fc=\"\">\n  <div class=\"menu-overlay\" _v-53ced9fc=\"\">\n    <div class=\"menu-overlay__nav-wrapper\" _v-53ced9fc=\"\">\n      <nav class=\"menu-overlay__nav-list\" _v-53ced9fc=\"\">\n        <a v-link=\"{ name: 'about' }\" v-on:mouseover=\"setHoverItem('about')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-53ced9fc=\"\">About</a>\n        <a v-link=\"{ name: 'stores' }\" v-on:mouseover=\"setHoverItem('stores')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-53ced9fc=\"\">Stores</a>\n        <a v-link=\"{ name: 'contact' }\" v-on:mouseover=\"setHoverItem('contact')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-53ced9fc=\"\">Contact</a>\n      </nav>\n      <div class=\"menu-overlay__nav-social\" _v-53ced9fc=\"\">\n        <a class=\"menu-overlay__nav-social__item\" href=\"http://facebook.com\" target=\"_blank\" _v-53ced9fc=\"\">\n          <svg class=\"icon icon-facebook\" _v-53ced9fc=\"\">\n            <use xlink:href=\"#icon-facebook\" _v-53ced9fc=\"\"></use>\n          </svg>\n        </a>\n        <a class=\"menu-overlay__nav-social__item\" href=\"http://instagram.com\" target=\"_blank\" _v-53ced9fc=\"\">\n          <svg class=\"icon icon-instagram\" _v-53ced9fc=\"\"><use xlink:href=\"#icon-instagram\" _v-53ced9fc=\"\"></use></svg>\n        </a>\n        <svg style=\"position: absolute; width: 0; height: 0; overflow: hidden;\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" _v-53ced9fc=\"\">\n          <defs _v-53ced9fc=\"\">\n            <symbol id=\"icon-instagram\" viewBox=\"0 0 16 16\" _v-53ced9fc=\"\">\n              <title _v-53ced9fc=\"\">Instagram</title>\n              <path class=\"path1\" d=\"M14.5 0h-13c-0.825 0-1.5 0.675-1.5 1.5v13c0 0.825 0.675 1.5 1.5 1.5h13c0.825 0 1.5-0.675 1.5-1.5v-13c0-0.825-0.675-1.5-1.5-1.5zM11 2.5c0-0.275 0.225-0.5 0.5-0.5h2c0.275 0 0.5 0.225 0.5 0.5v2c0 0.275-0.225 0.5-0.5 0.5h-2c-0.275 0-0.5-0.225-0.5-0.5v-2zM8 5c1.656 0 3 1.344 3 3s-1.344 3-3 3c-1.656 0-3-1.344-3-3s1.344-3 3-3zM14 13.5v0c0 0.275-0.225 0.5-0.5 0.5h-11c-0.275 0-0.5-0.225-0.5-0.5v0-6.5h1.1c-0.066 0.322-0.1 0.656-0.1 1 0 2.762 2.237 5 5 5s5-2.238 5-5c0-0.344-0.034-0.678-0.1-1h1.1v6.5z\" _v-53ced9fc=\"\"></path>\n            </symbol>\n            <symbol id=\"icon-facebook\" viewBox=\"0 0 16 16\" _v-53ced9fc=\"\">\n              <title _v-53ced9fc=\"\">Facebook</title>\n              <path class=\"path1\" d=\"M9.5 3h2.5v-3h-2.5c-1.93 0-3.5 1.57-3.5 3.5v1.5h-2v3h2v8h3v-8h2.5l0.5-3h-3v-1.5c0-0.271 0.229-0.5 0.5-0.5z\" _v-53ced9fc=\"\"></path>\n            </symbol>\n          </defs>\n        </svg>\n      </div>\n      <div class=\"menu-overlay__nav-contact\" _v-53ced9fc=\"\">\n        <p _v-53ced9fc=\"\">For all general information please contact <a href=\"mailto:info@canderparis.com\" _v-53ced9fc=\"\">info@canderparis.com</a></p>\n        <p _v-53ced9fc=\"\">For press information please contact <a href=\"mailto:press@canderparis.com\" _v-53ced9fc=\"\">press@canderparis.com</a></p>\n      </div>\n    </div>\n    <div class=\"menu-overlay__accent-wrapper\" _v-53ced9fc=\"\">\n      <img :src=\"menuOverlay.navImageMap[hoverItem]\" class=\"menu-overlay__accent\" :data-id=\"hoverItem\" _v-53ced9fc=\"\">\n    </div>\n  </div>\n</div>\n";
+
+/***/ },
+/* 102 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"cander-wrapper page--{{ this.$route.name ? this.$route.name : 'default' }}\" id=\"cander-app\">\n  <site-header></site-header>\n  <menu-overlay v-if=\"menuOverlay.visible\" transition=\"fade\"></menu-overlay>\n  <main class=\"main-content\">\n    <router-view></router-view>\n  </main>\n</div>\n";

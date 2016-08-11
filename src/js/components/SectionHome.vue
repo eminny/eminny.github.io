@@ -105,19 +105,23 @@
          data-650p="opacity: 0; transform: translate(0, 5%);"
          data-700p="opacity: 1; transform: translate(0, 0%);"
          data-850p="opacity: 0; transform: translate(0, -2%);"
-         style="background-image: url({{ aromaticBackground ? aromaticBackground : '' }})"
     >
+      <div class="slide--2__bg"
+           v-bind:style="{ backgroundImage: `url(${aromaticBackgroundUrl})` }"
+           v-show="aromaticBackgroundIsVisible"
+           transition="fade"
+      ></div>
       <div class="the-scent">
         <h4 class="the-scent__title">Scent One</h4>
-        <p class="the-scent__desc {{ aromaticsTextFaded ? 'is-faded' : 'is-opaque' }}">Blending woody aromatics like <span class="aromatic" data-id="cypres" @mouseover="showIngredient" @mouseout="hideIngredient">cyprés</span>,<br>
-          <span class="aromatic" data-id="cedre" @mouseover="showIngredient" @mouseout="hideIngredient">cédre</span>, and <span class="aromatic" data-id="oud" @mouseover="showIngredient" @mouseout="hideIngredient">oud</span>, with sensual <span class="aromatic" data-id="rose" @mouseover="showIngredient" @mouseout="hideIngredient">rose</span> and<br>
-          <span class="aromatic" data-id="patchouli" @mouseover="showIngredient" @mouseout="hideIngredient">patchouli</span>. Adding a hint of mystery<br>
-          with the scent of <span class="aromatic" data-id="cuir" @mouseover="showIngredient" @mouseout="hideIngredient">cuir</span>.
+        <p class="the-scent__desc {{ aromaticsTextFaded ? 'is-faded' : 'is-opaque' }}">Blending woody aromatics like <span class="aromatic" data-id="cypres" @mouseover="showAromaticBg" @mouseout="hideAromaticBg">cyprés</span>,<br>
+          <span class="aromatic" data-id="cedre" @mouseover="showAromaticBg" @mouseout="hideAromaticBg">cédre</span>, and <span class="aromatic" data-id="oud" @mouseover="showAromaticBg" @mouseout="hideAromaticBg">oud</span>, with sensual <span class="aromatic" data-id="rose" @mouseover="showAromaticBg" @mouseout="hideAromaticBg">rose</span> and<br>
+          <span class="aromatic" data-id="patchouli" @mouseover="showAromaticBg" @mouseout="hideAromaticBg">patchouli</span>. Adding a hint of mystery<br>
+          with the scent of <span class="aromatic" data-id="cuir" @mouseover="showAromaticBg" @mouseout="hideAromaticBg">cuir</span>.
         </p>
         <p class="the-scent__discover {{ (aromaticsTextFaded && isMobile()) ? 'transparent' : '' }}"
            data-id="cypres"
-           @mouseover="showIngredient"
-           @mouseout="hideIngredient"
+           @mouseover="showAromaticBg"
+           @mouseout="hideAromaticBg"
         >{{ isMobile() ? 'Tap' : 'Roll over' }} to discover.</p>
       </div>
     </div>
@@ -185,6 +189,7 @@
   import SiteFooter from './SiteFooter.vue'
   const Flickity = require('flickity')
   import { debounce } from 'lodash'
+  import { addClass, removeClass, isMobile } from '../helpers'
 
   export default {
     components: {
@@ -197,7 +202,8 @@
         visibleIngredient: null,
         aromaticsTextFaded: false,
         scrollArrowIsVisible: true,
-        aromaticBackground: false,
+        aromaticBackgroundUrl: '',
+        aromaticBackgroundIsVisible: false,
         shadeLookup: {
           cypres: 'light',
           cedre: 'dark',
@@ -210,14 +216,17 @@
     },
     methods: {
       isMobile () {
-        return (/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera)
+        return isMobile()
       },
       scrollToFold () {
         let el = document.getElementById('the-fold')
         let foldOffset = el.getBoundingClientRect().top + document.body.scrollTop
         return scrollHelper.top(page, Number(foldOffset), { duration: 400 })
       },
-      showIngredient (event) {
+      showAromaticBg (event) {
+        // Set visibility
+        this.aromaticBackgroundIsVisible = true
+
         // Get the current ingredient
         let visibleIngredient = event.currentTarget.getAttribute('data-id')
         this.visibleIngredient = visibleIngredient
@@ -227,13 +236,16 @@
         addClass(el, 'is-active')
 
         // Set the background
-        this.aromaticBackground = `/images/bg-aromatic-${visibleIngredient}.jpg`
+        this.aromaticBackgroundUrl = `/images/bg-aromatic-${visibleIngredient}.jpg`
 
         // Is the background light or dark?
         const shade = this.shadeLookup[visibleIngredient]
         addClass(document.body, `shade--${shade}`)
       },
-      hideIngredient (event) {
+      hideAromaticBg (event) {
+        // Set visibility
+        this.aromaticBackgroundIsVisible = false
+
         // Get the current ingredient (and unset it)
         let visibleIngredient = event.currentTarget.getAttribute('data-id')
         this.visibleIngredient = null
@@ -243,15 +255,15 @@
         removeClass(el, 'is-active')
 
         // Unset the background
-        this.aromaticBackground = false
-        // this.aromaticsTextFaded = false
+        setTimeout(() => {
+          this.aromaticBackgroundUrl = ''
+        }, 5000)
 
         // Is the background light or dark?
         const shade = this.shadeLookup[visibleIngredient]
         removeClass(document.body, `shade--${shade}`)
       },
       instantiateFlickity () {
-
         let flickityInstance = new Flickity('.slide__product-carousel', {
           cellSelector: '.slide__product-carousel__item',
           cellAlign: 'left',
@@ -274,7 +286,7 @@
     },
     ready () {
 
-      if (this.isMobile()) {
+      if (isMobile()) {
         addClass(document.body, 'is-mobile')
         this.instantiateFlickity()
       } else {
@@ -306,21 +318,5 @@
         window.flkty.destroy()
       }
     },
-  }
-
-  function addClass(el, className) {
-    if (el.classList) {
-      el.classList.add(className)
-    } else {
-      el.className += ` ${className}`
-    }
-  }
-
-  function removeClass(el, className) {
-    if (el.classList) {
-      el.classList.remove(className);
-    } else {
-      el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
-    }
   }
 </script>
