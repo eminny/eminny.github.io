@@ -75,10 +75,19 @@
   cursor: pointer;
   font-family: $font__family-serif-italic;
   font-style: italic;
-  transition: color $transition-standard;
 
   &:hover,
   &.is-active {
+    color: $color__black;
+  }
+
+  .shade--dark &:hover,
+  .shade--dark &.is-active {
+    color: $color__white;
+  }
+
+  .shade--light &:hover,
+  .shade--light &.is-active {
     color: $color__black;
   }
 }
