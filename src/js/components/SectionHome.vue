@@ -206,10 +206,10 @@
         aromaticBackgroundUrl: '',
         aromaticBackgroundIsVisible: false,
         shadeLookup: {
-          bouleau: 'light',
-          firBalsam: 'dark',
-          santal: 'dark',
-          agrumes: 'light',
+          bouleau: 'dark',
+          firBalsam: 'light',
+          santal: 'light',
+          agrumes: 'dark',
           patchouli: 'dark',
         },
       }
@@ -253,11 +253,6 @@
         // Set active state on the tapped/hovered item
         let el = document.querySelector(`.aromatic[data-id="${visibleIngredient}"]`)
         removeClass(el, 'is-active')
-
-        // Unset the background
-        setTimeout(() => {
-          this.aromaticBackgroundUrl = ''
-        }, 5000)
 
         // Is the background light or dark?
         const shade = this.shadeLookup[visibleIngredient]
