@@ -115,13 +115,12 @@
       ></div>
       <div class="the-scent">
         <h4 class="the-scent__title">Scent One</h4>
-        <p class="the-scent__desc {{ aromaticsTextFaded ? 'is-faded' : 'is-opaque' }}">Blending woody aromatics like <span class="aromatic" data-id="cypres" @mouseover="showAromaticBg" @mouseout="hideAromaticBg">cyprés</span>,<br>
-          <span class="aromatic" data-id="cedre" @mouseover="showAromaticBg" @mouseout="hideAromaticBg">cédre</span>, and <span class="aromatic" data-id="oud" @mouseover="showAromaticBg" @mouseout="hideAromaticBg">oud</span>, with sensual <span class="aromatic" data-id="rose" @mouseover="showAromaticBg" @mouseout="hideAromaticBg">rose</span> and<br>
-          <span class="aromatic" data-id="patchouli" @mouseover="showAromaticBg" @mouseout="hideAromaticBg">patchouli</span>. Adding a hint of mystery<br>
-          with the scent of <span class="aromatic" data-id="cuir" @mouseover="showAromaticBg" @mouseout="hideAromaticBg">cuir</span>.
+        <p class="the-scent__desc {{ aromaticsTextFaded ? 'is-faded' : 'is-opaque' }}">Blending woody aromatics like <span class="aromatic" data-id="bouleau" @mouseover="showAromaticBg" @mouseout="hideAromaticBg">bouleau</span>,<br>
+          <span class="aromatic" data-id="firBalsam" @mouseover="showAromaticBg" @mouseout="hideAromaticBg">fir balsam</span>, <span class="aromatic" data-id="santal" @mouseover="showAromaticBg" @mouseout="hideAromaticBg">santal</span>, and <span class="aromatic" data-id="agrumes" @mouseover="showAromaticBg" @mouseout="hideAromaticBg">agrumes</span>.
+          <br>Adding a hint of mystery with<br> the scent of <span class="aromatic" data-id="patchouli" @mouseover="showAromaticBg" @mouseout="hideAromaticBg">patchouli</span>.
         </p>
         <p class="the-scent__discover {{ (aromaticsTextFaded && isMobile()) ? 'transparent' : '' }}"
-           data-id="cypres"
+           data-id="bouleau"
            @mouseover="showAromaticBg"
            @mouseout="hideAromaticBg"
         >{{ isMobile() ? 'Tap' : 'Roll over' }} to discover.</p>
@@ -207,12 +206,11 @@
         aromaticBackgroundUrl: '',
         aromaticBackgroundIsVisible: false,
         shadeLookup: {
-          cypres: 'light',
-          cedre: 'dark',
-          oud: 'dark',
-          rose: 'light',
+          bouleau: 'light',
+          firBalsam: 'dark',
+          santal: 'dark',
+          agrumes: 'light',
           patchouli: 'dark',
-          cuir: 'light',
         },
       }
     },
