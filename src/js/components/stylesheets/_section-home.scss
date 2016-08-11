@@ -6,7 +6,7 @@
   flex-direction: column;
   height: 100%;
   justify-content: center;
-  transform: translateY(-5%);
+  transform: translateY(5%);
 
   .is-mobile & {
     height: auto;
@@ -21,6 +21,14 @@
   line-height: 1.2858;
   margin-bottom: 4rem;
   text-transform: uppercase;
+
+  .shade--dark & {
+    color: $color__white;
+  }
+
+  .shade--light & {
+    color: $color__black;
+  }
 }
 
 .the-scent__desc {
@@ -29,10 +37,18 @@
   font-size: 1.8rem;
   line-height: 1.34375;
   text-align: center;
-  transition: color $transition-standard;
+  //transition: color $transition-standard;
 
   @media screen and ($large-screens) {
     font-size: 3.2rem;
+  }
+
+  .shade--dark & {
+    color: $color__white;
+  }
+
+  .shade--light & {
+    color: $color__black;
   }
 
   &.is-faded {
@@ -45,6 +61,14 @@
   font-size: 1rem;
   margin-top: 2rem;
   text-transform: uppercase;
+
+  .shade--dark & {
+    color: $color__white;
+  }
+
+  .shade--light & {
+    color: $color__black;
+  }
 }
 
 .aromatic {

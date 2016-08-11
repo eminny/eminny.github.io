@@ -1,12 +1,12 @@
 @import "../../../stylesheets/variables";
 
 .site-header {
-  background: rgba($color__white, 0);
-  height: 8rem;
+  background: transparent;
+  height: $header-height;
   position: fixed;
   text-align: center;
-  width: 100%;
   transform: translate3d(0, 0, 0);
+  width: 100%;
   z-index: $zindex-navbar-fixed;
 
   &.fade-transition {
@@ -56,6 +56,16 @@
   &:before {
     border-top: 0.2rem solid $color__black;
     top: 25%;
+  }
+
+  .shade--dark &:after,
+  .shade--dark &:before {
+    border-color: $color__white;
+  }
+
+  .shade--light &:after,
+  .shade--light &:before {
+    border-color: $color__black;
   }
 }
 

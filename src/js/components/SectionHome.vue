@@ -105,6 +105,7 @@
          data-650p="opacity: 0; transform: translate(0, 5%);"
          data-700p="opacity: 1; transform: translate(0, 0%);"
          data-850p="opacity: 0; transform: translate(0, -2%);"
+         style="background-image: url({{ aromaticBackground ? aromaticBackground : '' }})"
     >
       <div class="the-scent">
         <h4 class="the-scent__title">Scent One</h4>
@@ -114,30 +115,10 @@
           with the scent of <span class="aromatic" data-id="cuir" @mouseover="showIngredient" @mouseout="hideIngredient">cuir</span>.
         </p>
         <p class="the-scent__discover {{ (aromaticsTextFaded && isMobile()) ? 'transparent' : '' }}"
-           data-id="cedre"
+           data-id="cypres"
            @mouseover="showIngredient"
            @mouseout="hideIngredient"
         >{{ isMobile() ? 'Tap' : 'Roll over' }} to discover.</p>
-      </div>
-      <div class="ingredients">
-        <div class="ingredient ingredient--cypres" v-show="visibleIngredient == 'cypres'" transition="fade">
-          <img src="/images/story-ingredient-cedre.png" alt="cypres">
-        </div>
-        <div class="ingredient ingredient--cedre" v-show="visibleIngredient == 'cedre'" transition="fade">
-          <img src="/images/story-ingredient-cedre.png" alt="cedre">
-        </div>
-        <div class="ingredient ingredient--oud" v-show="visibleIngredient == 'oud'" transition="fade">
-          <img src="/images/story-ingredient-cedre.png" alt="oud">
-        </div>
-        <div class="ingredient ingredient--rose" v-show="visibleIngredient == 'rose'" transition="fade">
-          <img src="/images/story-ingredient-rose.png" alt="rose">
-        </div>
-        <div class="ingredient ingredient--patchouli" v-show="visibleIngredient == 'patchouli'" transition="fade">
-          <img src="/images/story-ingredient-cedre.png" alt="patchouli">
-        </div>
-        <div class="ingredient ingredient--cuir" v-show="visibleIngredient == 'cuir'" transition="fade">
-          <img src="/images/story-ingredient-cedre.png" alt="cuir">
-        </div>
       </div>
     </div>
 
@@ -216,6 +197,15 @@
         visibleIngredient: null,
         aromaticsTextFaded: false,
         scrollArrowIsVisible: true,
+        aromaticBackground: false,
+        shadeLookup: {
+          cypres: 'light',
+          cedre: 'dark',
+          oud: 'dark',
+          rose: 'light',
+          patchouli: 'dark',
+          cuir: 'light',
+        },
       }
     },
     methods: {
@@ -228,20 +218,37 @@
         return scrollHelper.top(page, Number(foldOffset), { duration: 400 })
       },
       showIngredient (event) {
+        // Get the current ingredient
         let visibleIngredient = event.currentTarget.getAttribute('data-id')
         this.visibleIngredient = visibleIngredient
-        this.aromaticsTextFaded = true
 
+        // Set active state on the tapped/hovered item
         let el = document.querySelector(`.aromatic[data-id="${visibleIngredient}"]`)
         addClass(el, 'is-active')
+
+        // Set the background
+        this.aromaticBackground = `/images/bg-aromatic-${visibleIngredient}.jpg`
+
+        // Is the background light or dark?
+        const shade = this.shadeLookup[visibleIngredient]
+        addClass(document.body, `shade--${shade}`)
       },
       hideIngredient (event) {
+        // Get the current ingredient (and unset it)
         let visibleIngredient = event.currentTarget.getAttribute('data-id')
         this.visibleIngredient = null
-        this.aromaticsTextFaded = false
 
+        // Set active state on the tapped/hovered item
         let el = document.querySelector(`.aromatic[data-id="${visibleIngredient}"]`)
         removeClass(el, 'is-active')
+
+        // Unset the background
+        this.aromaticBackground = false
+        // this.aromaticsTextFaded = false
+
+        // Is the background light or dark?
+        const shade = this.shadeLookup[visibleIngredient]
+        removeClass(document.body, `shade--${shade}`)
       },
       instantiateFlickity () {
 

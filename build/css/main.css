@@ -1056,11 +1056,11 @@ input[type=text].newsletter__email:focus,
 
 .slide__product-image {
   left: 50%;
-  width: 20rem;
   max-width: 100%;
   position: fixed;
   top: 50%;
   transform: translate(-50%, -25%);
+  width: 20rem;
 }
 @media screen and (min-width: 768px) {
   .slide__product-image {
@@ -1179,9 +1179,11 @@ input[type=text].newsletter__email:focus,
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: calc(100% - 8rem);
+  height: 100%;
   justify-content: center;
-  margin-top: 8rem;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .is-mobile .slide--2 {
   height: auto;
