@@ -36100,8 +36100,8 @@
 	      aromaticBackgroundIsVisible: false,
 	      shadeLookup: {
 	        bouleau: 'dark',
-	        firBalsam: 'light',
-	        santal: 'light',
+	        firBalsam: 'dark',
+	        santal: 'dark',
 	        agrumes: 'dark',
 	        patchouli: 'dark'
 	      }
@@ -36162,10 +36162,18 @@
 	      });
 
 	      window.flkty = flickityInstance;
+	    },
+	    preloadImages: function preloadImages() {
+	      var aromatics = ['bouleau', 'firBalsam', 'santal', 'agrumes', 'patchouli'];
+	      (0, _lodash.forEach)(aromatics, function (aromatic) {
+	        new Image().src = '/images/bg-aromatic-' + aromatic + '.jpg';
+	      });
 	    }
 	  },
 	  ready: function ready() {
 	    var _this = this;
+
+	    this.preloadImages();
 
 	    if ((0, _helpers.isMobile)()) {
 	      (0, _helpers.addClass)(document.body, 'is-mobile');

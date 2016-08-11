@@ -189,7 +189,7 @@
   const page = require('scroll-doc')()
   import SiteFooter from './SiteFooter.vue'
   const Flickity = require('flickity')
-  import { debounce } from 'lodash'
+  import { forEach } from 'lodash'
   import { addClass, removeClass, isMobile } from '../helpers'
 
   export default {
@@ -207,8 +207,8 @@
         aromaticBackgroundIsVisible: false,
         shadeLookup: {
           bouleau: 'dark',
-          firBalsam: 'light',
-          santal: 'light',
+          firBalsam: 'dark',
+          santal: 'dark',
           agrumes: 'dark',
           patchouli: 'dark',
         },
@@ -278,8 +278,15 @@
 
         window.flkty = flickityInstance
       },
+      preloadImages () {
+        const aromatics = ['bouleau', 'firBalsam', 'santal', 'agrumes', 'patchouli']
+        forEach(aromatics, function (aromatic) {
+          (new Image()).src = `/images/bg-aromatic-${aromatic}.jpg`
+        })
+      },
     },
     ready () {
+      this.preloadImages()
 
       if (isMobile()) {
         addClass(document.body, 'is-mobile')
