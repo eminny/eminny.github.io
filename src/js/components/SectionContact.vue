@@ -58,6 +58,7 @@
 
 <style lang="sass" scoped>
   @import "../../stylesheets/variables";
+  @import "../../stylesheets/mixins/mixins";
 
   .contact-form {
     align-items: center;
@@ -83,10 +84,6 @@
     user-select: auto;
     width: 100%;
 
-    //&#name {
-    //  border-top: 1px solid $color__gray-light;
-    //}
-
     &:focus {
       border-color: $color__black;
       box-shadow: none;
@@ -96,38 +93,7 @@
 
   input.contact-form__input--btn,
   button.contact-form__input--btn {
-    background: transparent;
-    border: 1px solid $color__gray-light;
-    border-radius: 0;
-    color: $color__black;
-    font-size: 1.4rem;
-    height: 5rem;
-    margin: 5rem auto;
-    text-transform: uppercase;
-    transition: border-color $transition-standard;
-    width: 100%;
-
-    &:hover,
-    &:focus {
-      border-color: $color__black;
-      box-shadow: none;
-      outline: none;
-    }
-
-    &[disabled],
-    &.is-disabled {
-      border-color: $color__gray;
-      color: $color__gray;
-      &:hover {
-        border-color: $color__gray;
-        color: $color__gray;
-      }
-    }
-
-    @media screen and ($large-screens) {
-      margin: 5rem auto 0 auto;
-      max-width: 20rem;
-    }
+    @include btn;
   }
 </style>
 

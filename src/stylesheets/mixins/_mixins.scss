@@ -16,3 +16,39 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
+@mixin btn {
+  background: transparent;
+  border: 1px solid $color__gray-light;
+  border-radius: 0;
+  color: $color__black;
+  font-size: 1.4rem;
+  height: 5rem;
+  margin: 5rem auto;
+  text-transform: uppercase;
+  transition: border-color $transition-standard;
+  width: 100%;
+
+  &:hover,
+  &:focus {
+    border-color: $color__black;
+    box-shadow: none;
+    outline: none;
+  }
+
+  &[disabled],
+  &.is-disabled {
+    border-color: $color__gray;
+    color: $color__gray;
+    &:hover {
+      border-color: $color__gray;
+      color: $color__gray;
+    }
+  }
+
+  @media screen and ($large-screens) {
+    margin: 5rem auto 0 auto;
+    max-width: 20rem;
+  }
+}
