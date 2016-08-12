@@ -36116,10 +36116,17 @@
 	      return (0, _helpers.isMobile)();
 	    },
 	    enableDarkMode: function enableDarkMode() {
+	      var shade = this.shadeLookup[this.currentAromatic];
+	      (0, _helpers.addClass)(document.body, 'shade--' + shade);
+	      console.log('adding shade', shade);
 	      this.darkMode = true;
 	      this.$dispatch('updateDarkMode', true);
 	    },
 	    disableDarkMode: function disableDarkMode() {
+	      var shade = this.shadeLookup[this.currentAromatic];
+	      (0, _helpers.removeClass)(document.body, 'shade--' + shade);
+	      console.log('removing shade', shade);
+
 	      this.darkMode = false;
 	      this.$dispatch('updateDarkMode', false);
 	    },
@@ -36133,23 +36140,18 @@
 
 	      this.aromaticBackgroundIsVisible = true;
 
-	      var currentAromatic = event.currentTarget.getAttribute('data-id');
-	      this.currentAromatic = currentAromatic;
+	      this.currentAromatic = event.currentTarget.getAttribute('data-id');
 
 	      var els = document.querySelectorAll('.aromatic');
 	      (0, _lodash.forEach)(els, function (el) {
 	        (0, _helpers.removeClass)(el, 'is-active');
 	      });
-	      var el = document.querySelector('.aromatic[data-id="' + currentAromatic + '"]');
+	      var el = document.querySelector('.aromatic[data-id="' + this.currentAromatic + '"]');
 	      (0, _helpers.addClass)(el, 'is-active');
 
-	      this.aromaticBackgroundUrl = '/images/bg-aromatic-' + currentAromatic + '.jpg';
+	      this.aromaticBackgroundUrl = '/images/bg-aromatic-' + this.currentAromatic + '.jpg';
 
-	      var shade = this.shadeLookup[currentAromatic];
-
-	      (0, _helpers.addClass)(document.body, 'shade--' + shade);
-
-	      if (shade === 'dark') {
+	      if (this.shadeLookup[this.currentAromatic] === 'dark') {
 	        this.enableDarkMode();
 	      } else {
 	        this.disableDarkMode();
@@ -36158,21 +36160,19 @@
 	    hideAromaticBg: function hideAromaticBg(event) {
 	      var _this = this;
 
-	      var currentAromatic = event.currentTarget.getAttribute('data-id');
+	      this.currentAromatic = event.currentTarget.getAttribute('data-id');
 
 	      this.bgTimeoutId = window.setTimeout(function () {
 	        _this.aromaticBackgroundIsVisible = false;
 
-	        _this.currentAromatic = null;
+	        _this.disableDarkMode();
 
-	        var el = document.querySelector('.aromatic[data-id="' + currentAromatic + '"]');
+	        var el = document.querySelector('.aromatic[data-id="' + _this.currentAromatic + '"]');
 	        (0, _helpers.removeClass)(el, 'is-active');
 
-	        _this.aromaticBackgroundUrl = '';
+	        _this.currentAromatic = null;
 
-	        var shade = _this.shadeLookup[currentAromatic];
-	        (0, _helpers.removeClass)(document.body, 'shade--' + shade);
-	        _this.disableDarkMode();
+	        _this.aromaticBackgroundUrl = '';
 	      }, 2000);
 	    },
 	    instantiateFlickity: function instantiateFlickity() {

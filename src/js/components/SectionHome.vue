@@ -217,10 +217,17 @@
         return isMobile()
       },
       enableDarkMode () {
+        let shade = this.shadeLookup[this.currentAromatic]
+        addClass(document.body, `shade--${shade}`)
+        console.log('adding shade', shade)
         this.darkMode = true
         this.$dispatch('updateDarkMode', true)
       },
       disableDarkMode () {
+        let shade = this.shadeLookup[this.currentAromatic]
+        removeClass(document.body, `shade--${shade}`)
+        console.log('removing shade', shade)
+
         this.darkMode = false
         this.$dispatch('updateDarkMode', false)
       },
@@ -237,49 +244,42 @@
         this.aromaticBackgroundIsVisible = true
 
         // Get the current ingredient
-        let currentAromatic = event.currentTarget.getAttribute('data-id')
-        this.currentAromatic = currentAromatic
+        this.currentAromatic = event.currentTarget.getAttribute('data-id')
 
         // Set active state on the tapped/hovered item, clearing any existing ones first
         let els = document.querySelectorAll('.aromatic')
         forEach(els, function (el) { removeClass(el, 'is-active') })
-        let el = document.querySelector(`.aromatic[data-id="${currentAromatic}"]`)
+        let el = document.querySelector(`.aromatic[data-id="${this.currentAromatic}"]`)
         addClass(el, 'is-active')
 
         // Set the background
-        this.aromaticBackgroundUrl = `/images/bg-aromatic-${currentAromatic}.jpg`
+        this.aromaticBackgroundUrl = `/images/bg-aromatic-${this.currentAromatic}.jpg`
 
-        // Is the background light or dark?
-        const shade = this.shadeLookup[currentAromatic]
-
-        // Add modifier class to body
-        addClass(document.body, `shade--${shade}`)
-
-        if (shade === 'dark') {
+        // Trigger darkmode
+        if (this.shadeLookup[this.currentAromatic] === 'dark') {
           this.enableDarkMode()
         } else {
           this.disableDarkMode()
         }
       },
       hideAromaticBg (event) {
-        let currentAromatic = event.currentTarget.getAttribute('data-id')
+        this.currentAromatic = event.currentTarget.getAttribute('data-id')
 
         this.bgTimeoutId = window.setTimeout(() => {
           // Set visibility
           this.aromaticBackgroundIsVisible = false
 
+          // Disable darkmode
+          this.disableDarkMode()
+
+          // Set active state on the tapped/hovered item
+          let el = document.querySelector(`.aromatic[data-id="${this.currentAromatic}"]`)
+          removeClass(el, 'is-active')
+
           // Get the current ingredient (and unset it)
           this.currentAromatic = null
 
-          // Set active state on the tapped/hovered item
-          let el = document.querySelector(`.aromatic[data-id="${currentAromatic}"]`)
-          removeClass(el, 'is-active')
-
           this.aromaticBackgroundUrl = ''
-
-          const shade = this.shadeLookup[currentAromatic]
-          removeClass(document.body, `shade--${shade}`)
-          this.disableDarkMode()
         }, 2000)
       },
       instantiateFlickity () {
