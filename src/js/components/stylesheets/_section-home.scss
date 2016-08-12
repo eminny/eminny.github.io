@@ -32,42 +32,22 @@
 }
 
 .the-scent__desc {
-  color: $color__black;
   font-family: $font__family-serif;
   font-size: 1.8rem;
   line-height: 1.34375;
   text-align: center;
-  //transition: color $transition-standard;
+  transition: color $transition-standard;
+
+  .shade--dark & {
+    color: $color__white;
+  }
+
+  .shade--light & {
+    color: $color__black;
+  }
 
   @media screen and ($large-screens) {
     font-size: 3.2rem;
-  }
-
-  .shade--dark & {
-    color: $color__white;
-  }
-
-  .shade--light & {
-    color: $color__black;
-  }
-
-  &.is-faded {
-    color: $color__gray;
-    transition: color $transition-standard;
-  }
-}
-
-.the-scent__discover {
-  font-size: 1rem;
-  margin-top: 2rem;
-  text-transform: uppercase;
-
-  .shade--dark & {
-    color: $color__white;
-  }
-
-  .shade--light & {
-    color: $color__black;
   }
 }
 
@@ -75,20 +55,21 @@
   cursor: pointer;
   font-family: $font__family-serif-italic;
   font-style: italic;
+  transition: color $transition-standard;
 
   &:hover,
   &.is-active {
-    color: $color__black;
+    color: rgba($color__black, 0.75);
   }
 
   .shade--dark &:hover,
   .shade--dark &.is-active {
-    color: $color__white;
+    color: rgba($color__white, 0.75);
   }
 
   .shade--light &:hover,
   .shade--light &.is-active {
-    color: $color__black;
+    color: rgba($color__black, 0.75);
   }
 }
 

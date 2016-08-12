@@ -18216,6 +18216,7 @@
 	      'contact': '/images/menu-accent-contact.jpg'
 	    }
 	  },
+	  darkMode: false,
 	  router: void 0,
 	  skrollr: void 0,
 	  language: 'en',
@@ -36045,7 +36046,7 @@
 
 
 	// module
-	exports.push([module.id, ".the-scent[_v-0ea87e16] {\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-flex-direction: column;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  height: 100%;\n  -webkit-justify-content: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-transform: translateY(5%);\n      -ms-transform: translateY(5%);\n          transform: translateY(5%); }\n  .is-mobile .the-scent[_v-0ea87e16] {\n    height: auto;\n    position: relative;\n    min-height: 100vh; }\n\n.the-scent__title[_v-0ea87e16] {\n  font-family: \"brown-std\", \"Helvetica Neue\", Helvetica, sans-serif;\n  font-size: 1.4rem;\n  line-height: 1.2858;\n  margin-bottom: 4rem;\n  text-transform: uppercase; }\n  .shade--dark .the-scent__title[_v-0ea87e16] {\n    color: #ffffff; }\n  .shade--light .the-scent__title[_v-0ea87e16] {\n    color: #000000; }\n\n.the-scent__desc[_v-0ea87e16] {\n  color: #000000;\n  font-family: \"sabon-roman\", serif;\n  font-size: 1.8rem;\n  line-height: 1.34375;\n  text-align: center; }\n  @media screen and (min-width: 768px) {\n    .the-scent__desc[_v-0ea87e16] {\n      font-size: 3.2rem; } }\n  .shade--dark .the-scent__desc[_v-0ea87e16] {\n    color: #ffffff; }\n  .shade--light .the-scent__desc[_v-0ea87e16] {\n    color: #000000; }\n  .the-scent__desc.is-faded[_v-0ea87e16] {\n    color: #c1c1c1;\n    transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n\n.the-scent__discover[_v-0ea87e16] {\n  font-size: 1rem;\n  margin-top: 2rem;\n  text-transform: uppercase; }\n  .shade--dark .the-scent__discover[_v-0ea87e16] {\n    color: #ffffff; }\n  .shade--light .the-scent__discover[_v-0ea87e16] {\n    color: #000000; }\n\n.aromatic[_v-0ea87e16] {\n  cursor: pointer;\n  font-family: \"sabon-italic\", serif;\n  font-style: italic; }\n  .aromatic[_v-0ea87e16]:hover, .aromatic.is-active[_v-0ea87e16] {\n    color: #000000; }\n  .shade--dark .aromatic[_v-0ea87e16]:hover,\n  .shade--dark .aromatic.is-active[_v-0ea87e16] {\n    color: #ffffff; }\n  .shade--light .aromatic[_v-0ea87e16]:hover,\n  .shade--light .aromatic.is-active[_v-0ea87e16] {\n    color: #000000; }\n\n.translations-wrapper[_v-0ea87e16] {\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-flex-direction: column;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  height: 100%;\n  -webkit-justify-content: center;\n      -ms-flex-pack: center;\n          justify-content: center; }\n  .is-mobile .translations-wrapper[_v-0ea87e16] {\n    height: 100vh; }\n\n.translations-list[_v-0ea87e16] {\n  font-family: \"sabon-roman\", serif;\n  font-size: 1.2rem;\n  line-height: 2.75;\n  text-align: center;\n  text-transform: uppercase; }\n", ""]);
+	exports.push([module.id, ".the-scent[_v-0ea87e16] {\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-flex-direction: column;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  height: 100%;\n  -webkit-justify-content: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-transform: translateY(5%);\n      -ms-transform: translateY(5%);\n          transform: translateY(5%); }\n  .is-mobile .the-scent[_v-0ea87e16] {\n    height: auto;\n    position: relative;\n    min-height: 100vh; }\n\n.the-scent__title[_v-0ea87e16] {\n  font-family: \"brown-std\", \"Helvetica Neue\", Helvetica, sans-serif;\n  font-size: 1.4rem;\n  line-height: 1.2858;\n  margin-bottom: 4rem;\n  text-transform: uppercase; }\n  .shade--dark .the-scent__title[_v-0ea87e16] {\n    color: #ffffff; }\n  .shade--light .the-scent__title[_v-0ea87e16] {\n    color: #000000; }\n\n.the-scent__desc[_v-0ea87e16] {\n  font-family: \"sabon-roman\", serif;\n  font-size: 1.8rem;\n  line-height: 1.34375;\n  text-align: center;\n  transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .shade--dark .the-scent__desc[_v-0ea87e16] {\n    color: #ffffff; }\n  .shade--light .the-scent__desc[_v-0ea87e16] {\n    color: #000000; }\n  @media screen and (min-width: 768px) {\n    .the-scent__desc[_v-0ea87e16] {\n      font-size: 3.2rem; } }\n\n.aromatic[_v-0ea87e16] {\n  cursor: pointer;\n  font-family: \"sabon-italic\", serif;\n  font-style: italic;\n  transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .aromatic[_v-0ea87e16]:hover, .aromatic.is-active[_v-0ea87e16] {\n    color: rgba(0, 0, 0, 0.75); }\n  .shade--dark .aromatic[_v-0ea87e16]:hover,\n  .shade--dark .aromatic.is-active[_v-0ea87e16] {\n    color: rgba(255, 255, 255, 0.75); }\n  .shade--light .aromatic[_v-0ea87e16]:hover,\n  .shade--light .aromatic.is-active[_v-0ea87e16] {\n    color: rgba(0, 0, 0, 0.75); }\n\n.translations-wrapper[_v-0ea87e16] {\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-flex-direction: column;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  height: 100%;\n  -webkit-justify-content: center;\n      -ms-flex-pack: center;\n          justify-content: center; }\n  .is-mobile .translations-wrapper[_v-0ea87e16] {\n    height: 100vh; }\n\n.translations-list[_v-0ea87e16] {\n  font-family: \"sabon-roman\", serif;\n  font-size: 1.2rem;\n  line-height: 2.75;\n  text-align: center;\n  text-transform: uppercase; }\n", ""]);
 
 	// exports
 
@@ -36091,9 +36092,10 @@
 	  },
 	  data: function data() {
 	    return {
+	      darkMode: _store2.default.data.darkMode,
 	      scrollPos: _store2.default.data.scrollPos,
 	      skrollr: _store2.default.data.skrollr,
-	      visibleIngredient: null,
+	      currentAromatic: null,
 	      aromaticsTextFaded: false,
 	      scrollArrowIsVisible: true,
 	      aromaticBackgroundUrl: '',
@@ -36104,7 +36106,8 @@
 	        santal: 'dark',
 	        agrumes: 'dark',
 	        patchouli: 'dark'
-	      }
+	      },
+	      bgTimeoutId: null
 	    };
 	  },
 
@@ -36118,30 +36121,54 @@
 	      return _scroll2.default.top(page, Number(foldOffset), { duration: 400 });
 	    },
 	    showAromaticBg: function showAromaticBg(event) {
+	      window.clearTimeout(this.bgTimeoutId);
+
 	      this.aromaticBackgroundIsVisible = true;
 
-	      var visibleIngredient = event.currentTarget.getAttribute('data-id');
-	      this.visibleIngredient = visibleIngredient;
+	      var currentAromatic = event.currentTarget.getAttribute('data-id');
+	      this.currentAromatic = currentAromatic;
 
-	      var el = document.querySelector('.aromatic[data-id="' + visibleIngredient + '"]');
+	      var els = document.querySelectorAll('.aromatic');
+	      (0, _lodash.forEach)(els, function (el) {
+	        (0, _helpers.removeClass)(el, 'is-active');
+	      });
+	      var el = document.querySelector('.aromatic[data-id="' + currentAromatic + '"]');
 	      (0, _helpers.addClass)(el, 'is-active');
 
-	      this.aromaticBackgroundUrl = '/images/bg-aromatic-' + visibleIngredient + '.jpg';
+	      this.aromaticBackgroundUrl = '/images/bg-aromatic-' + currentAromatic + '.jpg';
 
-	      var shade = this.shadeLookup[visibleIngredient];
+	      var shade = this.shadeLookup[currentAromatic];
+
 	      (0, _helpers.addClass)(document.body, 'shade--' + shade);
+
+	      if (shade === 'dark') {
+	        this.darkMode = true;
+	        this.$dispatch('updateDarkMode', true);
+	      } else {
+	        this.darkMode = false;
+	        this.$dispatch('updateDarkMode', false);
+	      }
 	    },
 	    hideAromaticBg: function hideAromaticBg(event) {
-	      this.aromaticBackgroundIsVisible = false;
+	      var _this = this;
 
-	      var visibleIngredient = event.currentTarget.getAttribute('data-id');
-	      this.visibleIngredient = null;
+	      var currentAromatic = event.currentTarget.getAttribute('data-id');
 
-	      var el = document.querySelector('.aromatic[data-id="' + visibleIngredient + '"]');
-	      (0, _helpers.removeClass)(el, 'is-active');
+	      this.bgTimeoutId = window.setTimeout(function () {
+	        _this.aromaticBackgroundIsVisible = false;
 
-	      var shade = this.shadeLookup[visibleIngredient];
-	      (0, _helpers.removeClass)(document.body, 'shade--' + shade);
+	        _this.currentAromatic = null;
+
+	        var el = document.querySelector('.aromatic[data-id="' + currentAromatic + '"]');
+	        (0, _helpers.removeClass)(el, 'is-active');
+
+	        _this.aromaticBackgroundUrl = '';
+
+	        var shade = _this.shadeLookup[currentAromatic];
+	        (0, _helpers.removeClass)(document.body, 'shade--' + shade);
+	        _this.darkMode = false;
+	        _this.$dispatch('updateDarkMode', false);
+	      }, 2000);
 	    },
 	    instantiateFlickity: function instantiateFlickity() {
 	      var flickityInstance = new Flickity('.slide__product-carousel', {
@@ -36171,7 +36198,7 @@
 	    }
 	  },
 	  ready: function ready() {
-	    var _this = this;
+	    var _this2 = this;
 
 	    this.preloadImages();
 
@@ -36189,9 +36216,9 @@
 
 	    this.$watch('scrollPos.top', function (pos) {
 	      if (pos < -200) {
-	        _this.scrollArrowIsVisible = false;
+	        _this2.scrollArrowIsVisible = false;
 	      } else {
-	        _this.scrollArrowIsVisible = true;
+	        _this2.scrollArrowIsVisible = true;
 	      }
 	    });
 	  },
@@ -36354,6 +36381,7 @@
 	});
 	exports.addClass = addClass;
 	exports.removeClass = removeClass;
+	exports.hasClass = hasClass;
 	exports.isMobile = isMobile;
 	function addClass(el, className) {
 	  if (el.classList) {
@@ -36368,6 +36396,14 @@
 	    el.classList.remove(className);
 	  } else {
 	    el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+	  }
+	}
+
+	function hasClass(el, className) {
+	  if (el.classList) {
+	    el.classList.contains(className);
+	  } else {
+	    new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className);
 	  }
 	}
 
@@ -36408,7 +36444,7 @@
 /* 66 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"slides\" _v-0ea87e16=\"\">\n  <!-- SECTION 0: INTRO/HERO -->\n  <div class=\"slide slide--0 slide--intro\" _v-0ea87e16=\"\">\n    <div class=\"slide--intro__logo\" data-0=\"opacity: 1;\" data-top-center=\"opacity: 0;\" _v-0ea87e16=\"\">\n      <img src=\"/images/logo.svg\" title=\"CANDER PARIS\" _v-0ea87e16=\"\">\n    </div>\n    <a href=\"#\" @click.prevent=\"scrollToFold\" class=\"slide--intro__icn-scroll\" data-0=\"opacity: 1;\" data-center-top=\"opacity: 0;\" v-show=\"scrollArrowIsVisible\" transition=\"fade\" _v-0ea87e16=\"\">Scroll Down</a>\n  </div>\n\n  <!-- SECTION 1: THE CANDLE -->\n  <div class=\"slide slide--1\" id=\"the-fold\" data-0=\"transform: translate(0, 100%);\" data-100p=\"transform: translate(0, 0%)\" _v-0ea87e16=\"\">\n    <!-- Product Images (non-mobile) -->\n    <div class=\"slide__product-wrapper\" v-if=\"!isMobile()\" _v-0ea87e16=\"\">\n      <div class=\"slide__product-images\" _v-0ea87e16=\"\">\n        <img src=\"/images/product-vessel.png\" alt=\"Vessel\" class=\"slide__product-image\" data-0=\"opacity: 0\" data-50p=\"opacity: 1\" data-100p=\"opacity: 1\" data-150p=\"opacity: 0\" _v-0ea87e16=\"\">\n        <img src=\"/images/product-box-front.png\" alt=\"Front\" class=\"slide__product-image\" data-150p=\"opacity: 0\" data-200p=\"opacity: 1\" data-250p=\"opacity: 1\" data-300p=\"opacity: 0\" _v-0ea87e16=\"\">\n        <img src=\"/images/product-box-back.png\" alt=\"Back\" class=\"slide__product-image\" data-300p=\"opacity: 0\" data-350p=\"opacity: 1\" data-400p=\"opacity: 1\" data-450p=\"opacity: 0\" _v-0ea87e16=\"\">\n        <img src=\"/images/product-box-top.png\" alt=\"Top\" class=\"slide__product-image\" data-450p=\"opacity: 0\" data-500p=\"opacity: 1\" data-600p=\"opacity: 1\" data-650p=\"opacity: 0\" _v-0ea87e16=\"\">\n      </div>\n      <div class=\"slide__product-info\" data-0=\"opacity: 0\" data-100p=\"opacity: 1\" data-600p=\"opacity: 1\" data-650p=\"opacity: 0\" _v-0ea87e16=\"\">\n        <h2 class=\"slide__product-heading\" _v-0ea87e16=\"\">Scent One</h2>\n        <h4 class=\"slide__product-desc slide__product-desc--primary\" _v-0ea87e16=\"\">Scent One is an exploration of the beginning.</h4>\n        <h4 class=\"slide__product-desc slide__product-desc--secondary\" _v-0ea87e16=\"\">Scent One est l'exploration du début.</h4>\n        <div _v-0ea87e16=\"\"><a class=\"slide__product__btn-buy\" href=\"#\" _v-0ea87e16=\"\">Buy now</a></div>\n      </div>\n    </div>\n    <!-- Product Images (mobile-only) -->\n    <div class=\"slide__product-carousel-wrapper\" v-if=\"isMobile()\" _v-0ea87e16=\"\">\n      <div class=\"slide__product-carousel\" _v-0ea87e16=\"\">\n        <div class=\"slide__product-carousel__item\" _v-0ea87e16=\"\">\n          <img src=\"/images/product-vessel.png\" alt=\"Vessel\" class=\"slide__product-carousel__image\" _v-0ea87e16=\"\">\n        </div>\n        <div class=\"slide__product-carousel__item\" _v-0ea87e16=\"\">\n          <img src=\"/images/product-box-front.png\" alt=\"Front\" class=\"slide__product-carousel__image\" _v-0ea87e16=\"\">\n        </div>\n        <div class=\"slide__product-carousel__item\" _v-0ea87e16=\"\">\n          <img src=\"/images/product-box-back.png\" alt=\"Back\" class=\"slide__product-carousel__image\" _v-0ea87e16=\"\">\n        </div>\n        <div class=\"slide__product-carousel__item\" _v-0ea87e16=\"\">\n          <img src=\"/images/product-box-top.png\" alt=\"Top\" class=\"slide__product-carousel__image\" _v-0ea87e16=\"\">\n        </div>\n      </div>\n      <div class=\"slide__product-info\" _v-0ea87e16=\"\">\n        <h2 class=\"slide__product-heading\" _v-0ea87e16=\"\">Scent One</h2>\n        <h4 class=\"slide__product-desc slide__product-desc--primary\" _v-0ea87e16=\"\">Scent One is an exploration of the beginning.</h4>\n        <h4 class=\"slide__product-desc slide__product-desc--secondary\" _v-0ea87e16=\"\">Scent One est l'exploration du début.</h4>\n        <div _v-0ea87e16=\"\"><a class=\"slide__product__btn-buy\" href=\"#\" _v-0ea87e16=\"\">Buy now</a></div>\n      </div>\n    </div>\n    <!-- Product Accent Photo (non-mobile-only) -->\n    <div class=\"slide__accent-wrapper\" data-0=\"opacity: 0\" data-100p=\"opacity: 1\" data-600p=\"opacity: 1\" data-650p=\"opacity: 0\" _v-0ea87e16=\"\">\n      <img src=\"/images/slide-accent-face.jpg\" alt=\"Cander Paris\" class=\"slide__accent-image\" _v-0ea87e16=\"\">\n    </div>\n  </div>\n\n  <!-- SECTION 2: THE SCENT -->\n  <div class=\"slide slide--2\" data-0=\"opacity: 0\" data-600p=\"opacity: 0; transform: translate(0, 100%);\" data-650p=\"opacity: 0; transform: translate(0, 5%);\" data-700p=\"opacity: 1; transform: translate(0, 0%);\" data-850p=\"opacity: 0; transform: translate(0, -2%);\" _v-0ea87e16=\"\">\n    <div class=\"slide--2__bg\" v-bind:style=\"{ backgroundImage: `url(${aromaticBackgroundUrl})` }\" v-show=\"aromaticBackgroundIsVisible\" transition=\"fade\" _v-0ea87e16=\"\"></div>\n    <div class=\"the-scent\" _v-0ea87e16=\"\">\n      <h4 class=\"the-scent__title\" _v-0ea87e16=\"\">Scent One</h4>\n      <p class=\"the-scent__desc {{ aromaticsTextFaded ? 'is-faded' : 'is-opaque' }}\" _v-0ea87e16=\"\">Blending woody aromatics like <span class=\"aromatic\" data-id=\"bouleau\" @mouseover=\"showAromaticBg\" @mouseout=\"hideAromaticBg\" _v-0ea87e16=\"\">bouleau</span>,<br _v-0ea87e16=\"\">\n        <span class=\"aromatic\" data-id=\"firBalsam\" @mouseover=\"showAromaticBg\" @mouseout=\"hideAromaticBg\" _v-0ea87e16=\"\">fir balsam</span>, <span class=\"aromatic\" data-id=\"santal\" @mouseover=\"showAromaticBg\" @mouseout=\"hideAromaticBg\" _v-0ea87e16=\"\">santal</span>, and <span class=\"aromatic\" data-id=\"agrumes\" @mouseover=\"showAromaticBg\" @mouseout=\"hideAromaticBg\" _v-0ea87e16=\"\">agrumes</span>.\n        <br _v-0ea87e16=\"\">Adding a hint of mystery with<br _v-0ea87e16=\"\"> the scent of <span class=\"aromatic\" data-id=\"patchouli\" @mouseover=\"showAromaticBg\" @mouseout=\"hideAromaticBg\" _v-0ea87e16=\"\">patchouli</span>.\n      </p>\n      <p class=\"the-scent__discover {{ (aromaticsTextFaded &amp;&amp; isMobile()) ? 'transparent' : '' }}\" data-id=\"bouleau\" @mouseover=\"showAromaticBg\" @mouseout=\"hideAromaticBg\" _v-0ea87e16=\"\">{{ isMobile() ? 'Tap' : 'Roll over' }} to discover.</p>\n    </div>\n  </div>\n\n  <!-- SECTION 3: DOOR -->\n  <div class=\"slide slide--3\" data-0=\"opacity: 0\" data-840p=\"opacity: 0; transform: translate(0, 100%);\" data-850p=\"opacity: 0; transform: translate(0, 30%);\" data-900p=\"opacity: 1; transform: translate(0, 0%);\" data-1050p=\"opacity: 1; transform: translate(0, 0%);\" data-1150p=\"transform: translate(0, -120%);\" _v-0ea87e16=\"\">\n    <div class=\"translations-wrapper\" _v-0ea87e16=\"\">\n      <ul class=\"translations-list\" _v-0ea87e16=\"\">\n        <li _v-0ea87e16=\"\">Bougie Parfumée</li>\n        <li _v-0ea87e16=\"\">Fragranced Candle</li>\n        <li _v-0ea87e16=\"\">Candela Profumata</li>\n        <li _v-0ea87e16=\"\">Vela Perfumada</li>\n        <li _v-0ea87e16=\"\">Duftkerze</li>\n        <li _v-0ea87e16=\"\">香味蠟燭</li>\n        <li _v-0ea87e16=\"\">香りのろうそく</li>\n      </ul>\n    </div>\n  </div>\n\n  <!-- SECTION 4: PRODUCT -->\n  <div class=\"slide slide--4\" data-0=\"opacity: 0\" data-1100p=\"opacity: 0; transform: translate(0, 100%);\" data-1125p=\"opacity: 0; transform: translate(0, 20%);\" data-1160p=\"opacity: 0.3; transform: translate(0, 5%);\" data-1170p=\"opacity: 1; transform: translate(0, 0%);\" data-1200p=\"transform: translate(0, 0%);\" data-1290p=\"transform: translate(0, -15%);\" _v-0ea87e16=\"\">\n    <div class=\"slide--4__inner\" _v-0ea87e16=\"\">\n      <img src=\"/images/product-box-front.png\" alt=\"Front\" class=\"slide--4__product-image\" _v-0ea87e16=\"\">\n      <h2 class=\"zeta\" _v-0ea87e16=\"\">Coming soon in stores</h2>\n    </div>\n  </div>\n\n  <!-- FOOTER -->\n  <div class=\"slide--footer-wrapper\" data-0=\"opacity: 0\" data-1200p=\"opacity: 0; transform: translate(0, 100%);\" data-1225p=\"opacity: 0; transform: translate(0, 20%);\" data-1260p=\"opacity: 0.3; transform: translate(0, 5%);\" data-1270p=\"opacity: 1; transform: translate(0, 0%);\" _v-0ea87e16=\"\">\n    <site-footer _v-0ea87e16=\"\"></site-footer>\n  </div>\n</div>\n";
+	module.exports = "\n<div class=\"slides\" _v-0ea87e16=\"\">\n  <!-- SECTION 0: INTRO/HERO -->\n  <div class=\"slide slide--0 slide--intro\" _v-0ea87e16=\"\">\n    <div class=\"slide--intro__logo\" data-0=\"opacity: 1;\" data-top-center=\"opacity: 0;\" _v-0ea87e16=\"\">\n      <img src=\"/images/logo.svg\" title=\"CANDER PARIS\" _v-0ea87e16=\"\">\n    </div>\n    <a href=\"#\" @click.prevent=\"scrollToFold\" class=\"slide--intro__icn-scroll\" data-0=\"opacity: 1;\" data-center-top=\"opacity: 0;\" v-show=\"scrollArrowIsVisible\" transition=\"fade\" _v-0ea87e16=\"\">Scroll Down</a>\n  </div>\n\n  <!-- SECTION 1: THE CANDLE -->\n  <div class=\"slide slide--1\" id=\"the-fold\" data-0=\"transform: translate(0, 100%);\" data-100p=\"transform: translate(0, 0%)\" _v-0ea87e16=\"\">\n    <!-- Product Images (non-mobile) -->\n    <div class=\"slide__product-wrapper\" v-if=\"!isMobile()\" _v-0ea87e16=\"\">\n      <div class=\"slide__product-images\" _v-0ea87e16=\"\">\n        <img src=\"/images/product-vessel.png\" alt=\"Vessel\" class=\"slide__product-image\" data-0=\"opacity: 0\" data-50p=\"opacity: 1\" data-100p=\"opacity: 1\" data-150p=\"opacity: 0\" _v-0ea87e16=\"\">\n        <img src=\"/images/product-box-front.png\" alt=\"Front\" class=\"slide__product-image\" data-150p=\"opacity: 0\" data-200p=\"opacity: 1\" data-250p=\"opacity: 1\" data-300p=\"opacity: 0\" _v-0ea87e16=\"\">\n        <img src=\"/images/product-box-back.png\" alt=\"Back\" class=\"slide__product-image\" data-300p=\"opacity: 0\" data-350p=\"opacity: 1\" data-400p=\"opacity: 1\" data-450p=\"opacity: 0\" _v-0ea87e16=\"\">\n        <img src=\"/images/product-box-top.png\" alt=\"Top\" class=\"slide__product-image\" data-450p=\"opacity: 0\" data-500p=\"opacity: 1\" data-600p=\"opacity: 1\" data-650p=\"opacity: 0\" _v-0ea87e16=\"\">\n      </div>\n      <div class=\"slide__product-info\" data-0=\"opacity: 0\" data-100p=\"opacity: 1\" data-600p=\"opacity: 1\" data-650p=\"opacity: 0\" _v-0ea87e16=\"\">\n        <h2 class=\"slide__product-heading\" _v-0ea87e16=\"\">Scent One</h2>\n        <h4 class=\"slide__product-desc slide__product-desc--primary\" _v-0ea87e16=\"\">Scent One is an exploration of the beginning.</h4>\n        <h4 class=\"slide__product-desc slide__product-desc--secondary\" _v-0ea87e16=\"\">Scent One est l'exploration du début.</h4>\n        <div _v-0ea87e16=\"\"><a class=\"slide__product__btn-buy\" href=\"#\" _v-0ea87e16=\"\">Buy now</a></div>\n      </div>\n    </div>\n    <!-- Product Images (mobile-only) -->\n    <div class=\"slide__product-carousel-wrapper\" v-if=\"isMobile()\" _v-0ea87e16=\"\">\n      <div class=\"slide__product-carousel\" _v-0ea87e16=\"\">\n        <div class=\"slide__product-carousel__item\" _v-0ea87e16=\"\">\n          <img src=\"/images/product-vessel.png\" alt=\"Vessel\" class=\"slide__product-carousel__image\" _v-0ea87e16=\"\">\n        </div>\n        <div class=\"slide__product-carousel__item\" _v-0ea87e16=\"\">\n          <img src=\"/images/product-box-front.png\" alt=\"Front\" class=\"slide__product-carousel__image\" _v-0ea87e16=\"\">\n        </div>\n        <div class=\"slide__product-carousel__item\" _v-0ea87e16=\"\">\n          <img src=\"/images/product-box-back.png\" alt=\"Back\" class=\"slide__product-carousel__image\" _v-0ea87e16=\"\">\n        </div>\n        <div class=\"slide__product-carousel__item\" _v-0ea87e16=\"\">\n          <img src=\"/images/product-box-top.png\" alt=\"Top\" class=\"slide__product-carousel__image\" _v-0ea87e16=\"\">\n        </div>\n      </div>\n      <div class=\"slide__product-info\" _v-0ea87e16=\"\">\n        <h2 class=\"slide__product-heading\" _v-0ea87e16=\"\">Scent One</h2>\n        <h4 class=\"slide__product-desc slide__product-desc--primary\" _v-0ea87e16=\"\">Scent One is an exploration of the beginning.</h4>\n        <h4 class=\"slide__product-desc slide__product-desc--secondary\" _v-0ea87e16=\"\">Scent One est l'exploration du début.</h4>\n        <div _v-0ea87e16=\"\"><a class=\"slide__product__btn-buy\" href=\"#\" _v-0ea87e16=\"\">Buy now</a></div>\n      </div>\n    </div>\n    <!-- Product Accent Photo (non-mobile-only) -->\n    <div class=\"slide__accent-wrapper\" data-0=\"opacity: 0\" data-100p=\"opacity: 1\" data-600p=\"opacity: 1\" data-650p=\"opacity: 0\" _v-0ea87e16=\"\">\n      <img src=\"/images/slide-accent-face.jpg\" alt=\"Cander Paris\" class=\"slide__accent-image\" _v-0ea87e16=\"\">\n    </div>\n  </div>\n\n  <!-- SECTION 2: THE SCENT -->\n  <div class=\"slide slide--2\" data-0=\"opacity: 0\" data-600p=\"opacity: 0; transform: translate(0, 100%);\" data-650p=\"opacity: 0; transform: translate(0, 5%);\" data-700p=\"opacity: 1; transform: translate(0, 0%);\" data-850p=\"opacity: 0; transform: translate(0, -2%);\" _v-0ea87e16=\"\">\n    <div class=\"slide--2__bg\" :class=\"darkMode ? 'is-dark' : 'is-light'\" :style=\"{ backgroundImage: `url(${aromaticBackgroundUrl})` }\" v-if=\"aromaticBackgroundIsVisible\" transition=\"fade\" _v-0ea87e16=\"\"></div>\n    <div class=\"the-scent\" _v-0ea87e16=\"\">\n      <h4 class=\"the-scent__title\" _v-0ea87e16=\"\">Scent One</h4>\n      <p class=\"the-scent__desc\" _v-0ea87e16=\"\">Blending woody aromatics like <span class=\"aromatic\" data-id=\"bouleau\" @mouseover=\"showAromaticBg\" @mouseout=\"hideAromaticBg\" _v-0ea87e16=\"\">bouleau</span>,<br _v-0ea87e16=\"\">\n        <span class=\"aromatic\" data-id=\"firBalsam\" @mouseover=\"showAromaticBg\" @mouseout=\"hideAromaticBg\" _v-0ea87e16=\"\">fir balsam</span>, <span class=\"aromatic\" data-id=\"santal\" @mouseover=\"showAromaticBg\" @mouseout=\"hideAromaticBg\" _v-0ea87e16=\"\">santal</span>, and <span class=\"aromatic\" data-id=\"agrumes\" @mouseover=\"showAromaticBg\" @mouseout=\"hideAromaticBg\" _v-0ea87e16=\"\">agrumes</span>.\n        <br _v-0ea87e16=\"\">Adding a hint of mystery with<br _v-0ea87e16=\"\"> the scent of <span class=\"aromatic\" data-id=\"patchouli\" @mouseover=\"showAromaticBg\" @mouseout=\"hideAromaticBg\" _v-0ea87e16=\"\">patchouli</span>.\n      </p>\n    </div>\n  </div>\n\n  <!-- SECTION 3: DOOR -->\n  <div class=\"slide slide--3\" data-0=\"opacity: 0\" data-840p=\"opacity: 0; transform: translate(0, 100%);\" data-850p=\"opacity: 0; transform: translate(0, 30%);\" data-900p=\"opacity: 1; transform: translate(0, 0%);\" data-1050p=\"opacity: 1; transform: translate(0, 0%);\" data-1150p=\"transform: translate(0, -120%);\" _v-0ea87e16=\"\">\n    <div class=\"translations-wrapper\" _v-0ea87e16=\"\">\n      <ul class=\"translations-list\" _v-0ea87e16=\"\">\n        <li _v-0ea87e16=\"\">Bougie Parfumée</li>\n        <li _v-0ea87e16=\"\">Fragranced Candle</li>\n        <li _v-0ea87e16=\"\">Candela Profumata</li>\n        <li _v-0ea87e16=\"\">Vela Perfumada</li>\n        <li _v-0ea87e16=\"\">Duftkerze</li>\n        <li _v-0ea87e16=\"\">香味蠟燭</li>\n        <li _v-0ea87e16=\"\">香りのろうそく</li>\n      </ul>\n    </div>\n  </div>\n\n  <!-- SECTION 4: PRODUCT -->\n  <div class=\"slide slide--4\" data-0=\"opacity: 0\" data-1100p=\"opacity: 0; transform: translate(0, 100%);\" data-1125p=\"opacity: 0; transform: translate(0, 20%);\" data-1160p=\"opacity: 0.3; transform: translate(0, 5%);\" data-1170p=\"opacity: 1; transform: translate(0, 0%);\" data-1200p=\"transform: translate(0, 0%);\" data-1290p=\"transform: translate(0, -15%);\" _v-0ea87e16=\"\">\n    <div class=\"slide--4__inner\" _v-0ea87e16=\"\">\n      <img src=\"/images/product-box-front.png\" alt=\"Front\" class=\"slide--4__product-image\" _v-0ea87e16=\"\">\n      <h2 class=\"zeta\" _v-0ea87e16=\"\">Coming soon in stores</h2>\n    </div>\n  </div>\n\n  <!-- FOOTER -->\n  <div class=\"slide--footer-wrapper\" data-0=\"opacity: 0\" data-1200p=\"opacity: 0; transform: translate(0, 100%);\" data-1225p=\"opacity: 0; transform: translate(0, 20%);\" data-1260p=\"opacity: 0.3; transform: translate(0, 5%);\" data-1270p=\"opacity: 1; transform: translate(0, 0%);\" _v-0ea87e16=\"\">\n    <site-footer _v-0ea87e16=\"\"></site-footer>\n  </div>\n</div>\n";
 
 /***/ },
 /* 67 */
@@ -37172,7 +37208,7 @@
 
 	var _MenuOverlay2 = _interopRequireDefault(_MenuOverlay);
 
-	var _SiteHeader = __webpack_require__(96);
+	var _SiteHeader = __webpack_require__(97);
 
 	var _SiteHeader2 = _interopRequireDefault(_SiteHeader);
 
@@ -37182,7 +37218,8 @@
 	  data: function data() {
 	    return {
 	      scrollPos: _store2.default.data.scrollPos,
-	      menuOverlay: _store2.default.data.menuOverlay
+	      menuOverlay: _store2.default.data.menuOverlay,
+	      darkMode: _store2.default.data.darkMode
 	    };
 	  },
 
@@ -37197,6 +37234,10 @@
 	    document.addEventListener("scroll", function () {
 	      _this.scrollPos.top = document.getElementById('cander-app').getBoundingClientRect().top;
 	    }, false);
+
+	    this.$on('updateDarkMode', function (val) {
+	      _this.darkMode = Boolean(val);
+	    });
 	  }
 	};
 
@@ -37211,7 +37252,7 @@
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/components/MenuOverlay.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(101)
+	__vue_template__ = __webpack_require__(96)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -37283,16 +37324,9 @@
 
 	var _store2 = _interopRequireDefault(_store);
 
-	var _SiteHeader = __webpack_require__(96);
-
-	var _SiteHeader2 = _interopRequireDefault(_SiteHeader);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = {
-	  components: {
-	    SiteHeader: _SiteHeader2.default
-	  },
 	  data: function data() {
 	    return {
 	      hoverItem: 'default',
@@ -37347,16 +37381,22 @@
 
 /***/ },
 /* 96 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"menu-overlay-wrapper\" _v-53ced9fc=\"\">\n  <div class=\"menu-overlay\" _v-53ced9fc=\"\">\n    <div class=\"menu-overlay__nav-wrapper\" _v-53ced9fc=\"\">\n      <nav class=\"menu-overlay__nav-list\" _v-53ced9fc=\"\">\n        <a v-link=\"{ name: 'about' }\" v-on:mouseover=\"setHoverItem('about')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-53ced9fc=\"\">About</a>\n        <a v-link=\"{ name: 'stores' }\" v-on:mouseover=\"setHoverItem('stores')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-53ced9fc=\"\">Stores</a>\n        <a v-link=\"{ name: 'contact' }\" v-on:mouseover=\"setHoverItem('contact')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-53ced9fc=\"\">Contact</a>\n      </nav>\n      <div class=\"menu-overlay__nav-social\" _v-53ced9fc=\"\">\n        <a class=\"menu-overlay__nav-social__item\" href=\"http://facebook.com\" target=\"_blank\" _v-53ced9fc=\"\">\n          <svg class=\"icon icon-facebook\" _v-53ced9fc=\"\">\n            <use xlink:href=\"#icon-facebook\" _v-53ced9fc=\"\"></use>\n          </svg>\n        </a>\n        <a class=\"menu-overlay__nav-social__item\" href=\"http://instagram.com\" target=\"_blank\" _v-53ced9fc=\"\">\n          <svg class=\"icon icon-instagram\" _v-53ced9fc=\"\"><use xlink:href=\"#icon-instagram\" _v-53ced9fc=\"\"></use></svg>\n        </a>\n        <svg style=\"position: absolute; width: 0; height: 0; overflow: hidden;\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" _v-53ced9fc=\"\">\n          <defs _v-53ced9fc=\"\">\n            <symbol id=\"icon-instagram\" viewBox=\"0 0 16 16\" _v-53ced9fc=\"\">\n              <title _v-53ced9fc=\"\">Instagram</title>\n              <path class=\"path1\" d=\"M14.5 0h-13c-0.825 0-1.5 0.675-1.5 1.5v13c0 0.825 0.675 1.5 1.5 1.5h13c0.825 0 1.5-0.675 1.5-1.5v-13c0-0.825-0.675-1.5-1.5-1.5zM11 2.5c0-0.275 0.225-0.5 0.5-0.5h2c0.275 0 0.5 0.225 0.5 0.5v2c0 0.275-0.225 0.5-0.5 0.5h-2c-0.275 0-0.5-0.225-0.5-0.5v-2zM8 5c1.656 0 3 1.344 3 3s-1.344 3-3 3c-1.656 0-3-1.344-3-3s1.344-3 3-3zM14 13.5v0c0 0.275-0.225 0.5-0.5 0.5h-11c-0.275 0-0.5-0.225-0.5-0.5v0-6.5h1.1c-0.066 0.322-0.1 0.656-0.1 1 0 2.762 2.237 5 5 5s5-2.238 5-5c0-0.344-0.034-0.678-0.1-1h1.1v6.5z\" _v-53ced9fc=\"\"></path>\n            </symbol>\n            <symbol id=\"icon-facebook\" viewBox=\"0 0 16 16\" _v-53ced9fc=\"\">\n              <title _v-53ced9fc=\"\">Facebook</title>\n              <path class=\"path1\" d=\"M9.5 3h2.5v-3h-2.5c-1.93 0-3.5 1.57-3.5 3.5v1.5h-2v3h2v8h3v-8h2.5l0.5-3h-3v-1.5c0-0.271 0.229-0.5 0.5-0.5z\" _v-53ced9fc=\"\"></path>\n            </symbol>\n          </defs>\n        </svg>\n      </div>\n      <div class=\"menu-overlay__nav-contact\" _v-53ced9fc=\"\">\n        <p _v-53ced9fc=\"\">For all general information please contact <a href=\"mailto:info@canderparis.com\" _v-53ced9fc=\"\">info@canderparis.com</a></p>\n        <p _v-53ced9fc=\"\">For press information please contact <a href=\"mailto:press@canderparis.com\" _v-53ced9fc=\"\">press@canderparis.com</a></p>\n      </div>\n    </div>\n    <div class=\"menu-overlay__accent-wrapper\" _v-53ced9fc=\"\">\n      <img :src=\"menuOverlay.navImageMap[hoverItem]\" class=\"menu-overlay__accent\" :data-id=\"hoverItem\" _v-53ced9fc=\"\">\n    </div>\n  </div>\n</div>\n";
+
+/***/ },
+/* 97 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(97)
-	__vue_script__ = __webpack_require__(99)
+	__webpack_require__(98)
+	__vue_script__ = __webpack_require__(100)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/components/SiteHeader.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(100)
+	__vue_template__ = __webpack_require__(101)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -37375,13 +37415,13 @@
 	})()}
 
 /***/ },
-/* 97 */
+/* 98 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(98);
+	var content = __webpack_require__(99);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(10)(content, {});
@@ -37401,7 +37441,7 @@
 	}
 
 /***/ },
-/* 98 */
+/* 99 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(9)();
@@ -37409,13 +37449,13 @@
 
 
 	// module
-	exports.push([module.id, ".site-header[_v-3286419a] {\n  background: transparent;\n  height: 8rem;\n  position: fixed;\n  text-align: center;\n  -webkit-transform: translate3d(0, 0, 0);\n          transform: translate3d(0, 0, 0);\n  width: 100%;\n  z-index: 1250; }\n  .site-header.fade-transition[_v-3286419a] {\n    transition: all 150ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .site-header.fade-enter[_v-3286419a], .site-header.fade-leave[_v-3286419a] {\n    opacity: 0;\n    -webkit-transform: translate3d(0, -10%, 0);\n            transform: translate3d(0, -10%, 0); }\n\n.logo[_v-3286419a] {\n  width: 12rem;\n  left: 50%;\n  margin: 0 auto;\n  position: absolute;\n  top: 50%;\n  -webkit-transform: translate(-50%, -50%);\n      -ms-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%); }\n\n.btn-menu[_v-3286419a] {\n  height: 1.3rem;\n  width: 1.8rem;\n  border: 0;\n  display: block;\n  position: absolute;\n  right: 3rem;\n  top: 50%;\n  -webkit-transform: translateY(-50%);\n      -ms-transform: translateY(-50%);\n          transform: translateY(-50%); }\n  .btn-menu[_v-3286419a]:after, .btn-menu[_v-3286419a]:before {\n    content: '';\n    display: block;\n    position: absolute;\n    width: 100%;\n    top: 50%; }\n  .btn-menu[_v-3286419a]:after {\n    border-bottom: 0.2rem solid #000000;\n    top: 75%; }\n  .btn-menu[_v-3286419a]:before {\n    border-top: 0.2rem solid #000000;\n    top: 25%; }\n  .shade--dark .btn-menu[_v-3286419a]:after,\n  .shade--dark .btn-menu[_v-3286419a]:before {\n    border-color: #ffffff; }\n  .shade--light .btn-menu[_v-3286419a]:after,\n  .shade--light .btn-menu[_v-3286419a]:before {\n    border-color: #000000; }\n\n.btn-menu--open[_v-3286419a]:after, .btn-menu--open[_v-3286419a]:before {\n  top: 50%; }\n\n.btn-menu--open[_v-3286419a]:after {\n  -webkit-transform: rotate(45deg);\n      -ms-transform: rotate(45deg);\n          transform: rotate(45deg); }\n\n.btn-menu--open[_v-3286419a]:before {\n  -webkit-transform: rotate(-45deg);\n      -ms-transform: rotate(-45deg);\n          transform: rotate(-45deg); }\n", ""]);
+	exports.push([module.id, ".site-header[_v-3286419a] {\n  background: transparent;\n  height: 8rem;\n  position: fixed;\n  text-align: center;\n  -webkit-transform: translate3d(0, 0, 0);\n          transform: translate3d(0, 0, 0);\n  width: 100%;\n  z-index: 1250; }\n  .site-header.fade-transition[_v-3286419a] {\n    transition: all 150ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .site-header.fade-enter[_v-3286419a], .site-header.fade-leave[_v-3286419a] {\n    opacity: 0;\n    -webkit-transform: translate3d(0, -10%, 0);\n            transform: translate3d(0, -10%, 0); }\n\n.logo[_v-3286419a] {\n  width: 12rem;\n  left: 50%;\n  margin: 0 auto;\n  position: absolute;\n  top: 50%;\n  -webkit-transform: translate(-50%, -50%);\n      -ms-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%); }\n\n.btn-menu[_v-3286419a] {\n  height: 1.3rem;\n  width: 1.8rem;\n  border: 0;\n  display: block;\n  position: absolute;\n  right: 3rem;\n  top: 50%;\n  -webkit-transform: translateY(-50%);\n      -ms-transform: translateY(-50%);\n          transform: translateY(-50%);\n  transition: border-color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .btn-menu[_v-3286419a]:after, .btn-menu[_v-3286419a]:before {\n    content: '';\n    display: block;\n    position: absolute;\n    width: 100%;\n    top: 50%; }\n  .btn-menu[_v-3286419a]:after {\n    border-bottom: 0.2rem solid #000000;\n    top: 75%; }\n  .btn-menu[_v-3286419a]:before {\n    border-top: 0.2rem solid #000000;\n    top: 25%; }\n  .shade--dark .btn-menu[_v-3286419a]:after,\n  .shade--dark .btn-menu[_v-3286419a]:before {\n    border-color: #ffffff; }\n  .shade--light .btn-menu[_v-3286419a]:after,\n  .shade--light .btn-menu[_v-3286419a]:before {\n    border-color: #000000; }\n\n.btn-menu--open[_v-3286419a]:after, .btn-menu--open[_v-3286419a]:before {\n  top: 50%; }\n\n.btn-menu--open[_v-3286419a]:after {\n  -webkit-transform: rotate(45deg);\n      -ms-transform: rotate(45deg);\n          transform: rotate(45deg); }\n\n.btn-menu--open[_v-3286419a]:before {\n  -webkit-transform: rotate(-45deg);\n      -ms-transform: rotate(-45deg);\n          transform: rotate(-45deg); }\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 99 */
+/* 100 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37439,6 +37479,7 @@
 	var page = __webpack_require__(65)();
 
 	exports.default = {
+	  props: ['dark-mode'],
 	  data: function data() {
 	    return {
 	      menuOverlay: _store2.default.data.menuOverlay,
@@ -37448,6 +37489,13 @@
 	  },
 
 	  computed: {
+	    logoUrl: function logoUrl() {
+	      if (this.darkMode) {
+	        return '/images/logo-white.svg';
+	      } else {
+	        return '/images/logo.svg';
+	      }
+	    },
 	    isHomePage: function isHomePage() {
 	      if (this.$route.path === '/') {
 	        return true;
@@ -37513,26 +37561,24 @@
 	    if (this.$route.name !== 'home') {
 	      (0, _helpers.addClass)(el, 'header-visible');
 	    }
+
+	    this.$on('test', function (msg) {
+	      console.log(msg);
+	    });
 	  }
 	};
-
-/***/ },
-/* 100 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<header class=\"site-header\" v-show=\"headerVisible\" transition=\"fade\" _v-3286419a=\"\">\n  <a href=\"/\" @click.prevent=\"logoClickHandler\" class=\"menu-overlay__nav-list__item\" _v-3286419a=\"\">\n    <img src=\"/images/logo.svg\" alt=\"CANDER PARIS\" title=\"CANDER PARIS\" class=\"logo\" _v-3286419a=\"\">\n  </a>\n  <a href=\"/\" @click.prevent=\"toggleMenu\" class=\"btn-menu btn-menu--{{ toggleState }}\" _v-3286419a=\"\"></a>\n</header>\n";
 
 /***/ },
 /* 101 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"menu-overlay-wrapper\" _v-53ced9fc=\"\">\n  <div class=\"menu-overlay\" _v-53ced9fc=\"\">\n    <div class=\"menu-overlay__nav-wrapper\" _v-53ced9fc=\"\">\n      <nav class=\"menu-overlay__nav-list\" _v-53ced9fc=\"\">\n        <a v-link=\"{ name: 'about' }\" v-on:mouseover=\"setHoverItem('about')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-53ced9fc=\"\">About</a>\n        <a v-link=\"{ name: 'stores' }\" v-on:mouseover=\"setHoverItem('stores')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-53ced9fc=\"\">Stores</a>\n        <a v-link=\"{ name: 'contact' }\" v-on:mouseover=\"setHoverItem('contact')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-53ced9fc=\"\">Contact</a>\n      </nav>\n      <div class=\"menu-overlay__nav-social\" _v-53ced9fc=\"\">\n        <a class=\"menu-overlay__nav-social__item\" href=\"http://facebook.com\" target=\"_blank\" _v-53ced9fc=\"\">\n          <svg class=\"icon icon-facebook\" _v-53ced9fc=\"\">\n            <use xlink:href=\"#icon-facebook\" _v-53ced9fc=\"\"></use>\n          </svg>\n        </a>\n        <a class=\"menu-overlay__nav-social__item\" href=\"http://instagram.com\" target=\"_blank\" _v-53ced9fc=\"\">\n          <svg class=\"icon icon-instagram\" _v-53ced9fc=\"\"><use xlink:href=\"#icon-instagram\" _v-53ced9fc=\"\"></use></svg>\n        </a>\n        <svg style=\"position: absolute; width: 0; height: 0; overflow: hidden;\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" _v-53ced9fc=\"\">\n          <defs _v-53ced9fc=\"\">\n            <symbol id=\"icon-instagram\" viewBox=\"0 0 16 16\" _v-53ced9fc=\"\">\n              <title _v-53ced9fc=\"\">Instagram</title>\n              <path class=\"path1\" d=\"M14.5 0h-13c-0.825 0-1.5 0.675-1.5 1.5v13c0 0.825 0.675 1.5 1.5 1.5h13c0.825 0 1.5-0.675 1.5-1.5v-13c0-0.825-0.675-1.5-1.5-1.5zM11 2.5c0-0.275 0.225-0.5 0.5-0.5h2c0.275 0 0.5 0.225 0.5 0.5v2c0 0.275-0.225 0.5-0.5 0.5h-2c-0.275 0-0.5-0.225-0.5-0.5v-2zM8 5c1.656 0 3 1.344 3 3s-1.344 3-3 3c-1.656 0-3-1.344-3-3s1.344-3 3-3zM14 13.5v0c0 0.275-0.225 0.5-0.5 0.5h-11c-0.275 0-0.5-0.225-0.5-0.5v0-6.5h1.1c-0.066 0.322-0.1 0.656-0.1 1 0 2.762 2.237 5 5 5s5-2.238 5-5c0-0.344-0.034-0.678-0.1-1h1.1v6.5z\" _v-53ced9fc=\"\"></path>\n            </symbol>\n            <symbol id=\"icon-facebook\" viewBox=\"0 0 16 16\" _v-53ced9fc=\"\">\n              <title _v-53ced9fc=\"\">Facebook</title>\n              <path class=\"path1\" d=\"M9.5 3h2.5v-3h-2.5c-1.93 0-3.5 1.57-3.5 3.5v1.5h-2v3h2v8h3v-8h2.5l0.5-3h-3v-1.5c0-0.271 0.229-0.5 0.5-0.5z\" _v-53ced9fc=\"\"></path>\n            </symbol>\n          </defs>\n        </svg>\n      </div>\n      <div class=\"menu-overlay__nav-contact\" _v-53ced9fc=\"\">\n        <p _v-53ced9fc=\"\">For all general information please contact <a href=\"mailto:info@canderparis.com\" _v-53ced9fc=\"\">info@canderparis.com</a></p>\n        <p _v-53ced9fc=\"\">For press information please contact <a href=\"mailto:press@canderparis.com\" _v-53ced9fc=\"\">press@canderparis.com</a></p>\n      </div>\n    </div>\n    <div class=\"menu-overlay__accent-wrapper\" _v-53ced9fc=\"\">\n      <img :src=\"menuOverlay.navImageMap[hoverItem]\" class=\"menu-overlay__accent\" :data-id=\"hoverItem\" _v-53ced9fc=\"\">\n    </div>\n  </div>\n</div>\n";
+	module.exports = "\n<header class=\"site-header\" v-show=\"headerVisible\" transition=\"fade\" _v-3286419a=\"\">\n  <a href=\"/\" @click.prevent=\"logoClickHandler\" class=\"menu-overlay__nav-list__item\" _v-3286419a=\"\">\n    <img v-bind:src=\"logoUrl\" alt=\"CANDER PARIS\" title=\"CANDER PARIS\" class=\"logo\" _v-3286419a=\"\">\n  </a>\n  <a href=\"/\" @click.prevent=\"toggleMenu\" class=\"btn-menu btn-menu--{{ toggleState }}\" _v-3286419a=\"\"></a>\n</header>\n";
 
 /***/ },
 /* 102 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"cander-wrapper page--{{ this.$route.name ? this.$route.name : 'default' }}\" id=\"cander-app\">\n  <site-header></site-header>\n  <menu-overlay v-if=\"menuOverlay.visible\" transition=\"fade\"></menu-overlay>\n  <main class=\"main-content\">\n    <router-view></router-view>\n  </main>\n</div>\n";
+	module.exports = "\n<div class=\"cander-wrapper page--{{ this.$route.name ? this.$route.name : 'default' }}\" id=\"cander-app\">\n  <site-header :dark-mode=\"darkMode\"></site-header>\n  <menu-overlay v-if=\"menuOverlay.visible\" transition=\"fade\"></menu-overlay>\n  <main class=\"main-content\">\n    <router-view></router-view>\n  </main>\n</div>\n";
 
 /***/ }
 /******/ ]);

@@ -59,12 +59,8 @@
 
 <script>
   import store from '../store'
-  import SiteHeader from './SiteHeader.vue'
 
   export default {
-    components: {
-      SiteHeader,
-    },
     data () {
       return {
         hoverItem: 'default',

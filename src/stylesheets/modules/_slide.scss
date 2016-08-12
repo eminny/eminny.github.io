@@ -256,7 +256,7 @@ a.slide__product__btn-buy {
   top: 0;
 
   &.fade-transition {
-    transition: opacity 1s ease;
+    transition: opacity $transition-standard;
   }
 
   &.fade-enter,

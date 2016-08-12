@@ -109,21 +109,17 @@
          data-850p="opacity: 0; transform: translate(0, -2%);"
     >
       <div class="slide--2__bg"
-           v-bind:style="{ backgroundImage: `url(${aromaticBackgroundUrl})` }"
-           v-show="aromaticBackgroundIsVisible"
+           :class="darkMode ? 'is-dark' : 'is-light'"
+           :style="{ backgroundImage: `url(${aromaticBackgroundUrl})` }"
+           v-if="aromaticBackgroundIsVisible"
            transition="fade"
       ></div>
       <div class="the-scent">
         <h4 class="the-scent__title">Scent One</h4>
-        <p class="the-scent__desc {{ aromaticsTextFaded ? 'is-faded' : 'is-opaque' }}">Blending woody aromatics like <span class="aromatic" data-id="bouleau" @mouseover="showAromaticBg" @mouseout="hideAromaticBg">bouleau</span>,<br>
+        <p class="the-scent__desc">Blending woody aromatics like <span class="aromatic" data-id="bouleau" @mouseover="showAromaticBg" @mouseout="hideAromaticBg">bouleau</span>,<br>
           <span class="aromatic" data-id="firBalsam" @mouseover="showAromaticBg" @mouseout="hideAromaticBg">fir balsam</span>, <span class="aromatic" data-id="santal" @mouseover="showAromaticBg" @mouseout="hideAromaticBg">santal</span>, and <span class="aromatic" data-id="agrumes" @mouseover="showAromaticBg" @mouseout="hideAromaticBg">agrumes</span>.
           <br>Adding a hint of mystery with<br> the scent of <span class="aromatic" data-id="patchouli" @mouseover="showAromaticBg" @mouseout="hideAromaticBg">patchouli</span>.
         </p>
-        <p class="the-scent__discover {{ (aromaticsTextFaded && isMobile()) ? 'transparent' : '' }}"
-           data-id="bouleau"
-           @mouseover="showAromaticBg"
-           @mouseout="hideAromaticBg"
-        >{{ isMobile() ? 'Tap' : 'Roll over' }} to discover.</p>
       </div>
     </div>
 
@@ -198,9 +194,10 @@
     },
     data () {
       return {
+        darkMode: store.data.darkMode,
         scrollPos: store.data.scrollPos,
         skrollr: store.data.skrollr,
-        visibleIngredient: null,
+        currentAromatic: null,
         aromaticsTextFaded: false,
         scrollArrowIsVisible: true,
         aromaticBackgroundUrl: '',
@@ -212,6 +209,7 @@
           agrumes: 'dark',
           patchouli: 'dark',
         },
+        bgTimeoutId: null,
       }
     },
     methods: {
@@ -224,39 +222,60 @@
         return scrollHelper.top(page, Number(foldOffset), { duration: 400 })
       },
       showAromaticBg (event) {
+        // Reset any timeout set by hideAromaticBg()
+        window.clearTimeout(this.bgTimeoutId)
+
         // Set visibility
         this.aromaticBackgroundIsVisible = true
 
         // Get the current ingredient
-        let visibleIngredient = event.currentTarget.getAttribute('data-id')
-        this.visibleIngredient = visibleIngredient
+        let currentAromatic = event.currentTarget.getAttribute('data-id')
+        this.currentAromatic = currentAromatic
 
-        // Set active state on the tapped/hovered item
-        let el = document.querySelector(`.aromatic[data-id="${visibleIngredient}"]`)
+        // Set active state on the tapped/hovered item, clearing any existing ones first
+        let els = document.querySelectorAll('.aromatic')
+        forEach(els, function (el) { removeClass(el, 'is-active') })
+        let el = document.querySelector(`.aromatic[data-id="${currentAromatic}"]`)
         addClass(el, 'is-active')
 
         // Set the background
-        this.aromaticBackgroundUrl = `/images/bg-aromatic-${visibleIngredient}.jpg`
+        this.aromaticBackgroundUrl = `/images/bg-aromatic-${currentAromatic}.jpg`
 
         // Is the background light or dark?
-        const shade = this.shadeLookup[visibleIngredient]
+        const shade = this.shadeLookup[currentAromatic]
+
+        // Add modifier class to body
         addClass(document.body, `shade--${shade}`)
+
+        if (shade === 'dark') {
+          this.darkMode = true
+          this.$dispatch('updateDarkMode', true)
+        } else {
+          this.darkMode = false
+          this.$dispatch('updateDarkMode', false)
+        }
       },
       hideAromaticBg (event) {
-        // Set visibility
-        this.aromaticBackgroundIsVisible = false
+        let currentAromatic = event.currentTarget.getAttribute('data-id')
 
-        // Get the current ingredient (and unset it)
-        let visibleIngredient = event.currentTarget.getAttribute('data-id')
-        this.visibleIngredient = null
+        this.bgTimeoutId = window.setTimeout(() => {
+          // Set visibility
+          this.aromaticBackgroundIsVisible = false
 
-        // Set active state on the tapped/hovered item
-        let el = document.querySelector(`.aromatic[data-id="${visibleIngredient}"]`)
-        removeClass(el, 'is-active')
+          // Get the current ingredient (and unset it)
+          this.currentAromatic = null
 
-        // Is the background light or dark?
-        const shade = this.shadeLookup[visibleIngredient]
-        removeClass(document.body, `shade--${shade}`)
+          // Set active state on the tapped/hovered item
+          let el = document.querySelector(`.aromatic[data-id="${currentAromatic}"]`)
+          removeClass(el, 'is-active')
+
+          this.aromaticBackgroundUrl = ''
+
+          const shade = this.shadeLookup[currentAromatic]
+          removeClass(document.body, `shade--${shade}`)
+          this.darkMode = false
+          this.$dispatch('updateDarkMode', false)
+        }, 2000)
       },
       instantiateFlickity () {
         let flickityInstance = new Flickity('.slide__product-carousel', {
@@ -315,7 +334,7 @@
         this.skrollr.destroy()
       }
 
-      // Destroy skrollr instance
+      // Destroy flickity instance
       if (window.flkty) {
         window.flkty.destroy()
       }

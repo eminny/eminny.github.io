@@ -38,6 +38,7 @@
   right: 3rem;
   top: 50%;
   transform: translateY(-50%);
+  transition: border-color $transition-standard;
 
   &:after,
   &:before {

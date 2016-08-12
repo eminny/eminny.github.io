@@ -14,6 +14,14 @@ export function removeClass(el, className) {
   }
 }
 
+export function hasClass (el, className) {
+  if (el.classList) {
+    el.classList.contains(className)
+  } else {
+    new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className)
+  }
+}
+
 export function isMobile () {
   return (/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera)
 }

@@ -1250,7 +1250,7 @@ a.slide__product__btn-buy.is-disabled:hover {
   top: 0;
 }
 .slide--2__bg.fade-transition {
-  transition: opacity 1s ease;
+  transition: opacity 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 .slide--2__bg.fade-enter, .slide--2__bg.fade-leave {
   opacity: 0;

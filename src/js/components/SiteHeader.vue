@@ -1,7 +1,7 @@
 <template>
   <header class="site-header" v-show="headerVisible" transition="fade">
     <a href="/" @click.prevent="logoClickHandler" class="menu-overlay__nav-list__item">
-      <img src="/images/logo.svg" alt="CANDER PARIS" title="CANDER PARIS" class="logo">
+      <img v-bind:src="logoUrl" alt="CANDER PARIS" title="CANDER PARIS" class="logo">
     </a>
     <a href="/" @click.prevent="toggleMenu" class="btn-menu btn-menu--{{ toggleState }}"></a>
   </header>
@@ -14,10 +14,13 @@
 <script>
   import scroll from 'scroll'
   import store from '../store'
-  import { addClass, removeClass } from '../helpers'
+  import { addClass, removeClass, hasClass } from '../helpers'
   const page = require('scroll-doc')()
 
   export default {
+    props: [
+      'dark-mode',
+    ],
     data () {
       return {
         menuOverlay: store.data.menuOverlay,
@@ -26,6 +29,13 @@
       }
     },
     computed: {
+      logoUrl () {
+        if (this.darkMode) {
+          return '/images/logo-white.svg'
+        } else {
+          return '/images/logo.svg'
+        }
+      },
       isHomePage () {
         if (this.$route.path === '/') {
           return true
@@ -85,6 +95,10 @@
       if (this.$route.name !== 'home') {
         addClass(el, 'header-visible')
       }
+
+      this.$on('test', function (msg) {
+        console.log(msg)
+      })
     },
   }
 </script>
