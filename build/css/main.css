@@ -1249,6 +1249,12 @@ a.slide__product__btn-buy.is-disabled:hover {
   right: 0;
   top: 0;
 }
+.slide--2__bg.is-dark {
+  background-color: #000000;
+}
+.slide--2__bg.is-light {
+  background-color: #ffffff;
+}
 .slide--2__bg.fade-transition {
   transition: opacity 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }

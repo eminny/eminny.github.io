@@ -255,6 +255,14 @@ a.slide__product__btn-buy {
   right: 0;
   top: 0;
 
+  &.is-dark {
+    background-color: $color__black;
+  }
+
+  &.is-light {
+    background-color: $color__white;
+  }
+
   &.fade-transition {
     transition: opacity $transition-standard;
   }
