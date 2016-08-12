@@ -36136,6 +36136,8 @@
 	      return _scroll2.default.top(page, Number(foldOffset), { duration: 400 });
 	    },
 	    showAromaticBg: function showAromaticBg(event) {
+	      console.log('event.type', event.type);
+
 	      window.clearTimeout(this.bgTimeoutId);
 
 	      this.aromaticBackgroundIsVisible = true;
@@ -36162,7 +36164,6 @@
 
 	      var timeoutDuration = arguments.length <= 0 || arguments[0] === undefined ? 2000 : arguments[0];
 
-	      console.log(timeoutDuration);
 	      this.bgTimeoutId = window.setTimeout(function () {
 	        _this.aromaticBackgroundIsVisible = false;
 

@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import VueTouch from 'vue-touch'
 import Routes from './routes'
 import { isFunction } from 'lodash'
 import store from './store'
@@ -11,6 +12,8 @@ import store from './store'
 
   const Cander = Vue.extend(require('./App.vue'))
 
+  // Use plugins
+  Vue.use(VueTouch)
   Vue.use(VueRouter)
 
   let router = new VueRouter({
@@ -27,17 +30,17 @@ import store from './store'
   router.map(Routes)
 
   // Initialize router-enabled app.
-  // Creates an instance of Cander and mounts it to cander-app.
+  // Creates an instance of Cander and mounts it to the 'cander-app' element
   router.start(Cander, 'cander-app')
 
   router.afterEach(function () {
-    // After route change, reset scroll position to top
+    // Reset scroll position
     document.body.scrollTop = 0
 
     // Send GA data
     if (window.ga && isFunction(window.ga)) {
       window.ga('send', 'pageview')
     }
-  });
+  })
 
 })();

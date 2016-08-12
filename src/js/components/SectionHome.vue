@@ -263,7 +263,6 @@
         }
       },
       hideAromaticBg (timeoutDuration = 2000) {
-        console.log(timeoutDuration)
         this.bgTimeoutId = window.setTimeout(() => {
           // Set visibility
           this.aromaticBackgroundIsVisible = false
