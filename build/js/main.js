@@ -36093,6 +36093,7 @@
 	  data: function data() {
 	    return {
 	      darkMode: _store2.default.data.darkMode,
+	      menuOverlay: _store2.default.data.menuOverlay,
 	      scrollPos: _store2.default.data.scrollPos,
 	      skrollr: _store2.default.data.skrollr,
 	      currentAromatic: null,
@@ -36227,6 +36228,12 @@
 	        _this2.scrollArrowIsVisible = false;
 	      } else {
 	        _this2.scrollArrowIsVisible = true;
+	      }
+	    });
+
+	    this.$watch('menuOverlay.visible', function (isVisible) {
+	      if (isVisible) {
+	        this.disableDarkMode();
 	      }
 	    });
 	  },

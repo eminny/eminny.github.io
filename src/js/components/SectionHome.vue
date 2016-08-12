@@ -195,6 +195,7 @@
     data () {
       return {
         darkMode: store.data.darkMode,
+        menuOverlay: store.data.menuOverlay,
         scrollPos: store.data.scrollPos,
         skrollr: store.data.skrollr,
         currentAromatic: null,
@@ -332,6 +333,12 @@
           this.scrollArrowIsVisible = false
         } else {
           this.scrollArrowIsVisible = true
+        }
+      })
+
+      this.$watch('menuOverlay.visible', function (isVisible) {
+        if (isVisible) {
+          this.disableDarkMode()
         }
       })
 
