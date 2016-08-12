@@ -116,9 +116,9 @@
       ></div>
       <div class="the-scent">
         <h4 class="the-scent__title">Scent One</h4>
-        <p class="the-scent__desc">Blending woody aromatics like <span class="aromatic" data-id="bouleau" @mouseover="showAromaticBg" @mouseout="hideAromaticBg(5000)">bouleau</span>,<br>
-          <span class="aromatic" data-id="firBalsam" @mouseover="showAromaticBg" @mouseout="hideAromaticBg(5000)">fir balsam</span>, <span class="aromatic" data-id="santal" @mouseover="showAromaticBg" @mouseout="hideAromaticBg(5000)">santal</span>, and <span class="aromatic" data-id="agrumes" @mouseover="showAromaticBg" @mouseout="hideAromaticBg(5000)">agrumes</span>.
-          <br>Adding a hint of mystery with<br> the scent of <span class="aromatic" data-id="patchouli" @mouseover="showAromaticBg" @mouseout="hideAromaticBg(5000)">patchouli</span>.
+        <p class="the-scent__desc">Blending woody aromatics like <span class="aromatic" data-id="bouleau" @mouseover="showAromaticBg" v-touch:tap="showAromaticBg" @mouseout="hideAromaticBg(5000)">bouleau</span>,<br>
+          <span class="aromatic" data-id="firBalsam" @mouseover="showAromaticBg" v-touch:tap="showAromaticBg" @mouseout="hideAromaticBg(5000)">fir balsam</span>, <span class="aromatic" data-id="santal" @mouseover="showAromaticBg" v-touch:tap="showAromaticBg" @mouseout="hideAromaticBg(5000)">santal</span>, and <span class="aromatic" data-id="agrumes" @mouseover="showAromaticBg" v-touch:tap="showAromaticBg" @mouseout="hideAromaticBg(5000)">agrumes</span>.
+          <br>Adding a hint of mystery with<br> the scent of <span class="aromatic" data-id="patchouli" @mouseover="showAromaticBg" v-touch:tap="showAromaticBg" @mouseout="hideAromaticBg(5000)">patchouli</span>.
         </p>
       </div>
     </div>
@@ -237,14 +237,33 @@
         return scrollHelper.top(page, Number(foldOffset), { duration: 400 })
       },
       showAromaticBg (event) {
-        // Reset any timeout set by hideAromaticBg()
-        window.clearTimeout(this.bgTimeoutId)
+        let wasMobileTap= (this.isMobile() && event && event.pointerType)
+
+        // If it was touch-tapped, start timer to auto-hide
+        if (wasMobileTap) {
+          let timeoutDuration = 4000
+          // Reset any previous timeout set
+          window.clearTimeout(this.bgTimeoutId)
+          this.bgTimeoutId = window.setTimeout(() => {
+            this.hideAromaticBg(0)
+          }, timeoutDuration)
+        } else {
+          // return to prevent conflicting mouseover event
+          if (this.isMobile()) return false;
+        }
+
+        if (!wasMobileTap) {
+          // Reset any previous timeout set
+          window.clearTimeout(this.bgTimeoutId)
+        }
+
+        // Get the current ingredient
+        if (event && event.target) {
+          this.currentAromatic = event.target.getAttribute('data-id')
+        }
 
         // Set visibility
         this.aromaticBackgroundIsVisible = true
-
-        // Get the current ingredient
-        this.currentAromatic = event.currentTarget.getAttribute('data-id')
 
         // Set active state on the tapped/hovered item, clearing any existing ones first
         let els = document.querySelectorAll('.aromatic')
@@ -263,6 +282,7 @@
         }
       },
       hideAromaticBg (timeoutDuration = 2000) {
+        window.clearTimeout(this.bgTimeoutId)
         this.bgTimeoutId = window.setTimeout(() => {
           // Set visibility
           this.aromaticBackgroundIsVisible = false
