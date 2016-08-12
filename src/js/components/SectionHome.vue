@@ -216,6 +216,14 @@
       isMobile () {
         return isMobile()
       },
+      enableDarkMode () {
+        this.darkMode = true
+        this.$dispatch('updateDarkMode', true)
+      },
+      disableDarkMode () {
+        this.darkMode = false
+        this.$dispatch('updateDarkMode', false)
+      },
       scrollToFold () {
         let el = document.getElementById('the-fold')
         let foldOffset = el.getBoundingClientRect().top + document.body.scrollTop
@@ -248,11 +256,9 @@
         addClass(document.body, `shade--${shade}`)
 
         if (shade === 'dark') {
-          this.darkMode = true
-          this.$dispatch('updateDarkMode', true)
+          this.enableDarkMode()
         } else {
-          this.darkMode = false
-          this.$dispatch('updateDarkMode', false)
+          this.disableDarkMode()
         }
       },
       hideAromaticBg (event) {
@@ -273,8 +279,7 @@
 
           const shade = this.shadeLookup[currentAromatic]
           removeClass(document.body, `shade--${shade}`)
-          this.darkMode = false
-          this.$dispatch('updateDarkMode', false)
+          this.disableDarkMode()
         }, 2000)
       },
       instantiateFlickity () {
@@ -319,7 +324,10 @@
         }
       }
 
-      this.$watch('scrollPos.top', (pos) => {
+      this.$watch('scrollPos.top', (pos, oldPos) => {
+        if (Math.abs(pos - oldPos) > 40) {
+          this.disableDarkMode()
+        }
         if (pos < -200) {
           this.scrollArrowIsVisible = false
         } else {

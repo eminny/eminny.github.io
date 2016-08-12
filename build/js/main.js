@@ -36115,6 +36115,14 @@
 	    isMobile: function isMobile() {
 	      return (0, _helpers.isMobile)();
 	    },
+	    enableDarkMode: function enableDarkMode() {
+	      this.darkMode = true;
+	      this.$dispatch('updateDarkMode', true);
+	    },
+	    disableDarkMode: function disableDarkMode() {
+	      this.darkMode = false;
+	      this.$dispatch('updateDarkMode', false);
+	    },
 	    scrollToFold: function scrollToFold() {
 	      var el = document.getElementById('the-fold');
 	      var foldOffset = el.getBoundingClientRect().top + document.body.scrollTop;
@@ -36142,11 +36150,9 @@
 	      (0, _helpers.addClass)(document.body, 'shade--' + shade);
 
 	      if (shade === 'dark') {
-	        this.darkMode = true;
-	        this.$dispatch('updateDarkMode', true);
+	        this.enableDarkMode();
 	      } else {
-	        this.darkMode = false;
-	        this.$dispatch('updateDarkMode', false);
+	        this.disableDarkMode();
 	      }
 	    },
 	    hideAromaticBg: function hideAromaticBg(event) {
@@ -36166,8 +36172,7 @@
 
 	        var shade = _this.shadeLookup[currentAromatic];
 	        (0, _helpers.removeClass)(document.body, 'shade--' + shade);
-	        _this.darkMode = false;
-	        _this.$dispatch('updateDarkMode', false);
+	        _this.disableDarkMode();
 	      }, 2000);
 	    },
 	    instantiateFlickity: function instantiateFlickity() {
@@ -36214,7 +36219,10 @@
 	      }
 	    }
 
-	    this.$watch('scrollPos.top', function (pos) {
+	    this.$watch('scrollPos.top', function (pos, oldPos) {
+	      if (Math.abs(pos - oldPos) > 40) {
+	        _this2.disableDarkMode();
+	      }
 	      if (pos < -200) {
 	        _this2.scrollArrowIsVisible = false;
 	      } else {
