@@ -116,9 +116,9 @@
       ></div>
       <div class="the-scent">
         <h4 class="the-scent__title">Scent One</h4>
-        <p class="the-scent__desc">Blending woody aromatics like <span class="aromatic" data-id="bouleau" @mouseover="showAromaticBg" @mouseout="hideAromaticBg">bouleau</span>,<br>
-          <span class="aromatic" data-id="firBalsam" @mouseover="showAromaticBg" @mouseout="hideAromaticBg">fir balsam</span>, <span class="aromatic" data-id="santal" @mouseover="showAromaticBg" @mouseout="hideAromaticBg">santal</span>, and <span class="aromatic" data-id="agrumes" @mouseover="showAromaticBg" @mouseout="hideAromaticBg">agrumes</span>.
-          <br>Adding a hint of mystery with<br> the scent of <span class="aromatic" data-id="patchouli" @mouseover="showAromaticBg" @mouseout="hideAromaticBg">patchouli</span>.
+        <p class="the-scent__desc">Blending woody aromatics like <span class="aromatic" data-id="bouleau" @mouseover="showAromaticBg" @mouseout="hideAromaticBg(5000)">bouleau</span>,<br>
+          <span class="aromatic" data-id="firBalsam" @mouseover="showAromaticBg" @mouseout="hideAromaticBg(5000)">fir balsam</span>, <span class="aromatic" data-id="santal" @mouseover="showAromaticBg" @mouseout="hideAromaticBg(5000)">santal</span>, and <span class="aromatic" data-id="agrumes" @mouseover="showAromaticBg" @mouseout="hideAromaticBg(5000)">agrumes</span>.
+          <br>Adding a hint of mystery with<br> the scent of <span class="aromatic" data-id="patchouli" @mouseover="showAromaticBg" @mouseout="hideAromaticBg(5000)">patchouli</span>.
         </p>
       </div>
     </div>
@@ -220,14 +220,13 @@
       enableDarkMode () {
         let shade = this.shadeLookup[this.currentAromatic]
         addClass(document.body, `shade--${shade}`)
-        console.log('adding shade', shade)
+
         this.darkMode = true
         this.$dispatch('updateDarkMode', true)
       },
       disableDarkMode () {
         let shade = this.shadeLookup[this.currentAromatic]
         removeClass(document.body, `shade--${shade}`)
-        console.log('removing shade', shade)
 
         this.darkMode = false
         this.$dispatch('updateDarkMode', false)
@@ -263,9 +262,8 @@
           this.disableDarkMode()
         }
       },
-      hideAromaticBg (event) {
-        this.currentAromatic = event.currentTarget.getAttribute('data-id')
-
+      hideAromaticBg (timeoutDuration = 2000) {
+        console.log(timeoutDuration)
         this.bgTimeoutId = window.setTimeout(() => {
           // Set visibility
           this.aromaticBackgroundIsVisible = false
@@ -273,15 +271,15 @@
           // Disable darkmode
           this.disableDarkMode()
 
-          // Set active state on the tapped/hovered item
-          let el = document.querySelector(`.aromatic[data-id="${this.currentAromatic}"]`)
-          removeClass(el, 'is-active')
+          // Remove active state(s)
+          let els = document.querySelectorAll('.aromatic')
+          forEach(els, function (el) { removeClass(el, 'is-active') })
 
           // Get the current ingredient (and unset it)
           this.currentAromatic = null
 
           this.aromaticBackgroundUrl = ''
-        }, 2000)
+        }, timeoutDuration)
       },
       instantiateFlickity () {
         let flickityInstance = new Flickity('.slide__product-carousel', {
@@ -328,6 +326,7 @@
       this.$watch('scrollPos.top', (pos, oldPos) => {
         if (Math.abs(pos - oldPos) > 40) {
           this.disableDarkMode()
+          this.hideAromaticBg(0)
         }
         if (pos < -200) {
           this.scrollArrowIsVisible = false
@@ -339,6 +338,7 @@
       this.$watch('menuOverlay.visible', function (isVisible) {
         if (isVisible) {
           this.disableDarkMode()
+          this.hideAromaticBg(0)
         }
       })
 
