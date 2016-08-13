@@ -6,7 +6,7 @@
   flex-direction: column;
   height: 100%;
   justify-content: center;
-  transform: translateY(5%);
+  transform: translateY(1%);
 
   .is-mobile & {
     height: auto;
@@ -54,20 +54,30 @@
 .aromatic {
   cursor: pointer;
   font-family: $font__family-serif-italic;
+  color: rgba($color__black, 0.55);
+
+  .shade--dark & {
+    color: rgba($color__white, 0.55);
+  }
+
+  .shade--white & {
+    color: rgba($color__black, 0.55);
+  }
 
   &:hover,
   &.is-active {
-    color: rgba($color__black, 0.75);
+    color: rgba($color__black, 0.8);
+    transition: color $transition-standard;
   }
 
   .shade--dark &:hover,
   .shade--dark &.is-active {
-    color: rgba($color__white, 0.75);
+    color: rgba($color__white, 0.8);
   }
 
   .shade--light &:hover,
   .shade--light &.is-active {
-    color: rgba($color__black, 0.75);
+    color: rgba($color__black, 0.8);
   }
 }
 
