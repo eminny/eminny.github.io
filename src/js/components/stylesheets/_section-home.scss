@@ -54,14 +54,14 @@
 .aromatic {
   cursor: pointer;
   font-family: $font__family-serif-italic;
-  color: rgba($color__black, 0.55);
+  color: rgba($color__black, 0.5);
 
   .shade--dark & {
-    color: rgba($color__white, 0.55);
+    color: rgba($color__white, 0.5);
   }
 
   .shade--white & {
-    color: rgba($color__black, 0.55);
+    color: rgba($color__black, 0.5);
   }
 
   &:hover,
