@@ -95,10 +95,6 @@
       if (this.$route.name !== 'home') {
         addClass(el, 'header-visible')
       }
-
-      this.$on('test', function (msg) {
-        console.log(msg)
-      })
     },
   }
 </script>
