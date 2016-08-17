@@ -211,6 +211,7 @@
           patchouli: 'dark',
         },
         bgTimeoutId: null,
+        bodyHeight: null,
       }
     },
     methods: {
@@ -328,6 +329,11 @@
       },
     },
     ready () {
+      setTimeout(() => this.bodyHeight = document.body.offsetHeight, 0)
+      window.addEventListener('resize', () => {
+        this.bodyHeight = document.body.offsetHeight
+      }, true)
+
       this.preloadImages()
 
       if (isMobile()) {
@@ -354,13 +360,16 @@
         }
       })
 
+      this.$watch('bodyHeight', function (val) {
+        console.log('val=', val)
+      })
+
       this.$watch('menuOverlay.visible', function (isVisible) {
         if (isVisible) {
           this.disableDarkMode()
           this.hideAromaticBg(0)
         }
       })
-
     },
     destroyed () {
       // Destroy skrollr instance
