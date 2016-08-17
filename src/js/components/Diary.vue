@@ -26,11 +26,18 @@
     text-transform: uppercase;
   }
 
-  .diary-wrap {
-  }
-
   .diary-carousel {
     height: $image-size;
+
+    &.is-empty {
+      height: 10rem;
+    }
+  }
+
+  .diary-carousel__message {
+    font-size: 1.2rem;
+    text-align: center;
+    text-transform: uppercase;
   }
 
   .diary-carousel__cell,
@@ -49,6 +56,7 @@
 </style>
 
 <script>
+  import { addClass } from '../helpers'
   const Flickity = require('flickity-bg-lazyload')
   const Instafeed = require("instafeed.js")
 
@@ -59,12 +67,12 @@
     data () {
       return {
         flickityInstance: null,
-        instagramLink: 'https://www.instagram.com/',
+        instagramLink: 'https://www.instagram.com/canderparis',
         feedOptions: {
           get: 'user',
-          userId: '901047522',
-          clientId: '71ad22535cb64f8b874db8255e387f1a',
-          accessToken: '901047522.71ad225.e746b7277a5c4df7a8ef2604d05319b8',
+          userId: '3217141691',
+          clientId: '6bcc0d93f5e14265ac5eab12fdc92aef',
+          accessToken: '3217141691.6bcc0d9.9311844160314842b383c32220cd9c47',
           limit: 20,
           resolution: 'standard_resolution',
           target: `instafeed`,
@@ -89,15 +97,29 @@
             window.flkty = flickityInstance
 
           },
+          error (msg = '') {
+            const numberOfPosts = document.querySelectorAll('.diary-carousel__cell').length
+
+            if (!msg.length) {
+              msg = 'No posts found.'
+            }
+
+            console.log('error', msg)
+
+            if (!numberOfPosts) {
+              let el = document.getElementById('instafeed')
+              addClass(el, 'is-empty')
+              el.innerHTML = `<h2 class="diary-carousel__message">${msg}</h2>`
+              return
+            }
+          },
         },
       };
     },
     ready () {
-      console.debug('Initialized social widget');
-
-      const feed = new Instafeed(this.feedOptions);
-
-      feed.run();
+      console.log('Initialized social widget')
+      const feed = new Instafeed(this.feedOptions)
+      feed.run()
     },
     destroyed () {
       // Destroy skrollr instance
