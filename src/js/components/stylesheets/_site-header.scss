@@ -1,16 +1,20 @@
 @import "../../../stylesheets/variables";
 
 .site-header {
-  background: transparent;
+  display: block;
   height: $header-height;
+  left: 0;
+  opacity: 1;
   position: fixed;
+  right: 0;
   text-align: center;
+  top: 0;
   transform: translate3d(0, 0, 0);
   width: 100%;
   z-index: $zindex-navbar-fixed;
 
   &.fade-transition {
-    transition: all 150ms $timing-function-easeInOutQuad;
+    transition: opacity 500ms $timing-function-easeInOutQuad, transform 500ms $timing-function-easeInOutQuad;
   }
 
   &.fade-enter,
