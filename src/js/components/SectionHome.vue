@@ -1,16 +1,17 @@
 <template>
   <div class="slides">
     <!-- SCROLL ARROW ICON -->
-    <a href="#" @click.prevent="scrollToFold"
-       class="slide__icn-scroll"
-       v-show="scrollArrowIsVisible"
-       transition="fade"
-       data-start="opacity: 1;"
-       data-850-end="opacity: 1;"
-       data-800-end="opacity: 0.5;"
-       data-700-end="opacity: 0;"
-       data-end="opacity: 0;"
-    >Scroll Down</a>
+    <span @click="scrollToFold"
+          class="slide__icn-scroll"
+          v-bind:class="scrollArrowIsActive ? 'is-active' : 'is-inactive'"
+          v-show="scrollArrowIsVisible"
+          transition="fade"
+          data-start="opacity: 1;"
+          data-850-end="opacity: 1;"
+          data-800-end="opacity: 0.5;"
+          data-700-end="opacity: 0;"
+          data-end="opacity: 0;"
+    >Scroll Down</span>
 
     <!-- SECTION 0: INTRO/HERO -->
       <div class="slide slide--0 slide--intro">
@@ -187,6 +188,7 @@
         currentAromatic: null,
         aromaticsTextFaded: false,
         scrollArrowIsVisible: true,
+        scrollArrowIsActive: true,
         aromaticBackgroundUrl: '',
         aromaticBackgroundIsVisible: false,
         shadeLookup: {
@@ -317,10 +319,9 @@
           cellAlign: 'center',
           contain: true,
           draggable: false,
-//          friction: 0.8,
+          friction: 0.7,
           pageDots: false,
           prevNextButtons: false,
-//          selectedAttraction: 0.2,
           slidesWidth: '30rem',
           wrapAround: true,
         })
@@ -351,6 +352,7 @@
       }
 
       this.$watch('scrollPos.top', (pos, oldPos) => {
+        console.log('pos', pos)
         if (Math.abs(pos - oldPos) > 40) {
           this.disableDarkMode()
           this.hideAromaticBg(0)
@@ -358,6 +360,11 @@
         if (pos < -window.innerHeight && !(pos < -2 * window.innerHeight)) {
           // Got to first slide
           window.flkty.playPlayer()
+        }
+        if (pos < -window.innerHeight) {
+          this.scrollArrowIsActive = false
+        } else {
+          this.scrollArrowIsActive = true
         }
       })
 

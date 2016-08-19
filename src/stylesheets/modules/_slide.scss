@@ -21,6 +21,7 @@
 .slide__icn-scroll {
   animation: bounce-arrow 2000ms cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
   background: url('/images/icon-scroll-down.svg') center center no-repeat;
+  cursor: pointer;
   position: fixed;
   bottom: 3rem;
   left: 50%;
@@ -29,6 +30,14 @@
   height: 1.5rem;
   width: 3.4rem;
   z-index: $zindex-tooltip;
+
+  .shade--dark & {
+    background: url('/images/icon-scroll-down-white.svg') center center no-repeat;
+  }
+
+  &.is-inactive {
+    cursor: auto;
+  }
 
   &.fade-transition {
     transition: all $transition-standard;
