@@ -39124,7 +39124,6 @@
 	    }
 
 	    this.$watch('scrollPos.top', function (pos, oldPos) {
-	      console.log('pos', pos);
 	      if (Math.abs(pos - oldPos) > 40) {
 	        _this3.disableDarkMode();
 	        _this3.hideAromaticBg(0);
