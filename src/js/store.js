@@ -21,36 +21,18 @@ store.data = {
   skrollr: void 0,
   language: 'en',
   retailers: [
-    {
-      name: 'Barneys New York',
-      locations: [
-        'Madison Avenue Flagship<br>660 Madison Avenue<br>New York, NY 10065',
-      ],
-      website: 'http://barneys.com',
-      mapCoords: {
-        lat: 40.7647180,
-        lng: -73.9711280
-      },
-      mapRevealed: false,
-    },
-    {
-      name: 'Colette',
-      locations: [
-        '213 Rue Saint Honoré<br>75001 Paris, France',
-      ],
-      website: 'http://colette.fr',
-      mapCoords: {
-        lat: 48.8653350,
-        lng: 2.3308040
-      },
-      mapRevealed: false,
-    },
-    {
-      name: 'Opening Ceremony',
-      website: 'https://www.openingceremony.com/',
-      mapUrl: '',
-      mapRevealed: false,
-    },
+    // {
+    //   name: 'Barneys New York',
+    //   locations: [
+    //     'Madison Avenue Flagship<br>660 Madison Avenue<br>New York, NY 10065',
+    //   ],
+    //   website: 'http://barneys.com',
+    //   mapCoords: {
+    //     lat: 40.7647180,
+    //     lng: -73.9711280
+    //   },
+    //   mapRevealed: false,
+    // },
   ],
   googleMaps: {
     apiKey: 'AIzaSyDGWEnF8tC8zkdjhfLjEwDAjKVvtTOxORs',

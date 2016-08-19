@@ -319,7 +319,6 @@
           cellAlign: 'center',
           contain: true,
           draggable: false,
-          friction: 0.7,
           pageDots: false,
           prevNextButtons: false,
           slidesWidth: '30rem',
@@ -361,7 +360,7 @@
           // Got to first slide
           window.flkty.playPlayer()
         }
-        if (pos < -window.innerHeight) {
+        if (pos < -window.innerHeight + 5) {
           this.scrollArrowIsActive = false
         } else {
           this.scrollArrowIsActive = true

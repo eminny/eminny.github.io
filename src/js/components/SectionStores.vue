@@ -3,7 +3,7 @@
     <section>
       <h1 class="section__heading--alpha">Retailers</h1>
       <hr>
-      <ul class="retailers-list">
+      <ul class="retailers-list" v-if="retailers.length">
         <li class="retailer" v-for="retailer in retailers">
           <h3 class="retailer__name">{{ retailer.name }}</h3>
           <div class="retailer__locations" v-if="retailer.locations && retailer.locations.length">
@@ -18,6 +18,7 @@
           </div>
         </li>
       </ul>
+      <p v-if="!retailers.length" class="retailers__empty-state-message">Coming Soon</p>
     </section>
     <site-footer></site-footer>
   </div>

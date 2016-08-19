@@ -21104,30 +21104,7 @@
 	  router: void 0,
 	  skrollr: void 0,
 	  language: 'en',
-	  retailers: [{
-	    name: 'Barneys New York',
-	    locations: ['Madison Avenue Flagship<br>660 Madison Avenue<br>New York, NY 10065'],
-	    website: 'http://barneys.com',
-	    mapCoords: {
-	      lat: 40.7647180,
-	      lng: -73.9711280
-	    },
-	    mapRevealed: false
-	  }, {
-	    name: 'Colette',
-	    locations: ['213 Rue Saint Honoré<br>75001 Paris, France'],
-	    website: 'http://colette.fr',
-	    mapCoords: {
-	      lat: 48.8653350,
-	      lng: 2.3308040
-	    },
-	    mapRevealed: false
-	  }, {
-	    name: 'Opening Ceremony',
-	    website: 'https://www.openingceremony.com/',
-	    mapUrl: '',
-	    mapRevealed: false
-	  }],
+	  retailers: [],
 	  googleMaps: {
 	    apiKey: 'AIzaSyDGWEnF8tC8zkdjhfLjEwDAjKVvtTOxORs',
 	    styles: [{
@@ -39113,7 +39090,6 @@
 	        cellAlign: 'center',
 	        contain: true,
 	        draggable: false,
-	        friction: 0.7,
 	        pageDots: false,
 	        prevNextButtons: false,
 	        slidesWidth: '30rem',
@@ -39156,7 +39132,7 @@
 	      if (pos < -window.innerHeight && !(pos < -2 * window.innerHeight)) {
 	        window.flkty.playPlayer();
 	      }
-	      if (pos < -window.innerHeight) {
+	      if (pos < -window.innerHeight + 5) {
 	        _this3.scrollArrowIsActive = false;
 	      } else {
 	        _this3.scrollArrowIsActive = true;
@@ -39416,7 +39392,7 @@
 
 
 	// module
-	exports.push([module.id, "section[_v-837df270] {\n  margin: 6rem auto;\n  max-width: 65rem;\n  width: 80%; }\n\nh1[_v-837df270] {\n  font-size: 1.8rem;\n  text-align: center;\n  text-transform: uppercase; }\n\nh3[_v-837df270] {\n  font-size: 1.4rem;\n  line-height: 1.8;\n  margin: 3rem 0 2rem 0;\n  text-transform: uppercase; }\n\np[_v-837df270] {\n  font-family: \"sabon-roman\", serif;\n  font-size: 1.4rem;\n  line-height: 1.666;\n  margin-bottom: 1.2rem; }\n\na[_v-837df270] {\n  transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n\nhr[_v-837df270] {\n  margin: 4rem auto; }\n\n.retailers-list[_v-837df270] {\n  text-align: center; }\n\n.retailer[_v-837df270] {\n  border-top: 1px solid rgba(193, 193, 193, 0.333);\n  padding: 0 0 3rem 0; }\n  .retailer[_v-837df270]:first-of-type {\n    border-top: none; }\n  .retailer[_v-837df270]:last-of-type {\n    padding: 0; }\n\n.retailer__map-btn[_v-837df270] {\n  color: #c1c1c1;\n  display: inline-block;\n  font-size: 1rem;\n  letter-spacing: 0.1rem;\n  margin: 2.666rem 0 1.666rem 0;\n  text-decoration: none;\n  text-transform: uppercase; }\n  .retailer__map-btn[_v-837df270]:after {\n    /* use !important to prevent issues with browser extensions that change fonts */\n    font-family: \"icomoon\" !important;\n    speak: none;\n    font-style: normal;\n    font-weight: normal;\n    font-variant: normal;\n    text-transform: none;\n    line-height: 1;\n    /* Better Font Rendering =========== */\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n    background-size: 100% 100%;\n    content: \"\\E902\";\n    display: inline-block;\n    height: 1rem;\n    margin-left: 0.5rem;\n    transition: all 220ms cubic-bezier(0.77, 0, 0.175, 1);\n    width: 1rem; }\n  .retailer__map-btn.is-active[_v-837df270]:after {\n    -webkit-transform: rotate(180deg);\n        -ms-transform: rotate(180deg);\n            transform: rotate(180deg); }\n\n.retailer__map[_v-837df270] {\n  height: 30rem;\n  transition: opacity 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .retailer__map.fade-transition[_v-837df270] {\n    transition: opacity 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .retailer__map.fade-enter[_v-837df270], .retailer__map.fade-leave[_v-837df270] {\n    opacity: 0; }\n\n.retailer__locations p[_v-837df270]:last-of-type {\n  margin-bottom: 0; }\n\n.retailer__website[_v-837df270] {\n  margin: 0; }\n  .retailer__website a[_v-837df270] {\n    text-decoration: none; }\n", ""]);
+	exports.push([module.id, "section[_v-837df270] {\n  margin: 6rem auto;\n  max-width: 65rem;\n  width: 80%;\n  min-height: calc(100vh - 36rem);\n  margin-bottom: 2rem; }\n\nh1[_v-837df270] {\n  font-size: 1.8rem;\n  text-align: center;\n  text-transform: uppercase; }\n\nh3[_v-837df270] {\n  font-size: 1.4rem;\n  line-height: 1.8;\n  margin: 3rem 0 2rem 0;\n  text-transform: uppercase; }\n\np[_v-837df270] {\n  font-family: \"sabon-roman\", serif;\n  font-size: 1.4rem;\n  line-height: 1.666;\n  margin-bottom: 1.2rem; }\n\na[_v-837df270] {\n  transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n\nhr[_v-837df270] {\n  margin: 4rem auto; }\n\n.retailers-list[_v-837df270] {\n  text-align: center; }\n\n.retailers__empty-state-message[_v-837df270] {\n  font-family: \"brown-std\", \"Helvetica Neue\", Helvetica, sans-serif;\n  font-size: 1.4rem;\n  margin-top: 5rem;\n  text-align: center;\n  text-transform: uppercase; }\n\n.retailer[_v-837df270] {\n  border-top: 1px solid rgba(193, 193, 193, 0.333);\n  padding: 0 0 3rem 0; }\n  .retailer[_v-837df270]:first-of-type {\n    border-top: none; }\n  .retailer[_v-837df270]:last-of-type {\n    padding: 0; }\n\n.retailer__map-btn[_v-837df270] {\n  color: #c1c1c1;\n  display: inline-block;\n  font-size: 1rem;\n  letter-spacing: 0.1rem;\n  margin: 2.666rem 0 1.666rem 0;\n  text-decoration: none;\n  text-transform: uppercase; }\n  .retailer__map-btn[_v-837df270]:after {\n    /* use !important to prevent issues with browser extensions that change fonts */\n    font-family: \"icomoon\" !important;\n    speak: none;\n    font-style: normal;\n    font-weight: normal;\n    font-variant: normal;\n    text-transform: none;\n    line-height: 1;\n    /* Better Font Rendering =========== */\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n    background-size: 100% 100%;\n    content: \"\\E902\";\n    display: inline-block;\n    height: 1rem;\n    margin-left: 0.5rem;\n    transition: all 220ms cubic-bezier(0.77, 0, 0.175, 1);\n    width: 1rem; }\n  .retailer__map-btn.is-active[_v-837df270]:after {\n    -webkit-transform: rotate(180deg);\n        -ms-transform: rotate(180deg);\n            transform: rotate(180deg); }\n\n.retailer__map[_v-837df270] {\n  height: 30rem;\n  transition: opacity 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .retailer__map.fade-transition[_v-837df270] {\n    transition: opacity 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .retailer__map.fade-enter[_v-837df270], .retailer__map.fade-leave[_v-837df270] {\n    opacity: 0; }\n\n.retailer__locations p[_v-837df270]:last-of-type {\n  margin-bottom: 0; }\n\n.retailer__website[_v-837df270] {\n  margin: 0; }\n  .retailer__website a[_v-837df270] {\n    text-decoration: none; }\n", ""]);
 
 	// exports
 
@@ -39840,7 +39816,7 @@
 /* 79 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div _v-837df270=\"\">\n  <section _v-837df270=\"\">\n    <h1 class=\"section__heading--alpha\" _v-837df270=\"\">Retailers</h1>\n    <hr _v-837df270=\"\">\n    <ul class=\"retailers-list\" _v-837df270=\"\">\n      <li class=\"retailer\" v-for=\"retailer in retailers\" _v-837df270=\"\">\n        <h3 class=\"retailer__name\" _v-837df270=\"\">{{ retailer.name }}</h3>\n        <div class=\"retailer__locations\" v-if=\"retailer.locations &amp;&amp; retailer.locations.length\" _v-837df270=\"\">\n          <p v-for=\"location in retailer.locations\" _v-837df270=\"\">{{{ location }}}</p>\n        </div>\n        <p class=\"retailer__website\" _v-837df270=\"\">\n          <a href=\"{{ retailer.website }}\" target=\"_blank\" title=\"Visit {{ retailer.name }}\" _v-837df270=\"\">{{ retailer.website }}</a>\n        </p>\n        <a href=\"#\" class=\"retailer__map-btn\" :class=\"retailer.mapRevealed ? 'is-active' : ''\" @click.prevent=\"toggleMapRevealed(retailer)\" v-if=\"hasMapLocation(retailer)\" _v-837df270=\"\">View Map</a>\n        <div class=\"retailer__map\" v-if=\"mapIsVisible(retailer)\" transition=\"fade\" _v-837df270=\"\">\n          <google-map :map-id=\"$index\" :coords=\"retailer.mapCoords\" _v-837df270=\"\"></google-map>\n        </div>\n      </li>\n    </ul>\n  </section>\n  <site-footer _v-837df270=\"\"></site-footer>\n</div>\n";
+	module.exports = "\n<div _v-837df270=\"\">\n  <section _v-837df270=\"\">\n    <h1 class=\"section__heading--alpha\" _v-837df270=\"\">Retailers</h1>\n    <hr _v-837df270=\"\">\n    <ul class=\"retailers-list\" v-if=\"retailers.length\" _v-837df270=\"\">\n      <li class=\"retailer\" v-for=\"retailer in retailers\" _v-837df270=\"\">\n        <h3 class=\"retailer__name\" _v-837df270=\"\">{{ retailer.name }}</h3>\n        <div class=\"retailer__locations\" v-if=\"retailer.locations &amp;&amp; retailer.locations.length\" _v-837df270=\"\">\n          <p v-for=\"location in retailer.locations\" _v-837df270=\"\">{{{ location }}}</p>\n        </div>\n        <p class=\"retailer__website\" _v-837df270=\"\">\n          <a href=\"{{ retailer.website }}\" target=\"_blank\" title=\"Visit {{ retailer.name }}\" _v-837df270=\"\">{{ retailer.website }}</a>\n        </p>\n        <a href=\"#\" class=\"retailer__map-btn\" :class=\"retailer.mapRevealed ? 'is-active' : ''\" @click.prevent=\"toggleMapRevealed(retailer)\" v-if=\"hasMapLocation(retailer)\" _v-837df270=\"\">View Map</a>\n        <div class=\"retailer__map\" v-if=\"mapIsVisible(retailer)\" transition=\"fade\" _v-837df270=\"\">\n          <google-map :map-id=\"$index\" :coords=\"retailer.mapCoords\" _v-837df270=\"\"></google-map>\n        </div>\n      </li>\n    </ul>\n    <p v-if=\"!retailers.length\" class=\"retailers__empty-state-message\" _v-837df270=\"\">Coming Soon</p>\n  </section>\n  <site-footer _v-837df270=\"\"></site-footer>\n</div>\n";
 
 /***/ },
 /* 80 */

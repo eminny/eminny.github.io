@@ -2,9 +2,14 @@
 @import "../../../stylesheets/mixins/mixins";
 
 section {
-  margin: 6rem auto;
+  $padding: 6rem;
+  $bottom-margin: 2rem;
+  margin: $padding auto;
   max-width: $content-width-medium;
   width: 80%;
+
+  min-height: calc(100vh - #{$header-height + $footer-height + $padding + $bottom-margin});
+  margin-bottom: $bottom-margin;
 }
 
 h1 {
@@ -37,6 +42,14 @@ hr {
 
 .retailers-list {
   text-align: center;
+}
+
+.retailers__empty-state-message {
+  font-family: $font__family-sans;
+  font-size: 1.4rem;
+  margin-top: 5rem;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .retailer {
