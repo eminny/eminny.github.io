@@ -22,6 +22,18 @@
     opacity: 0;
     transform: translate3d(0, -10%, 0);
   }
+  &:after {
+    background: white;
+    display: block;
+    content: "";
+    width: 100%;
+    height: $header-height;
+    position: absolute;
+    z-index: -2;
+  }
+  .shade--dark &:after {
+    background: transparent;
+  }
 }
 
 .logo {

@@ -1,20 +1,25 @@
 <template>
   <div class="slides">
+    <!-- SCROLL ARROW ICON -->
+    <a href="#" @click.prevent="scrollToFold"
+       class="slide__icn-scroll"
+       v-show="scrollArrowIsVisible"
+       transition="fade"
+       data-start="opacity: 1;"
+       data-850-end="opacity: 1;"
+       data-800-end="opacity: 0.5;"
+       data-700-end="opacity: 0;"
+       data-end="opacity: 0;"
+    >Scroll Down</a>
+
     <!-- SECTION 0: INTRO/HERO -->
-    <div class="slide slide--0 slide--intro">
+      <div class="slide slide--0 slide--intro">
       <div class="slide--intro__logo"
            data-0="opacity: 1;"
-           data-top-center="opacity: 0;"
+           data-50p="opacity: 0;"
       >
         <img src="/images/logo.svg" title="CANDER PARIS">
       </div>
-      <a href="#" @click.prevent="scrollToFold"
-         class="slide--intro__icn-scroll"
-         data-0="opacity: 1;"
-         data-center-top="opacity: 0;"
-         v-show="scrollArrowIsVisible"
-         transition="fade"
-      >Scroll Down</a>
     </div>
 
     <!-- SECTION 1: THE CANDLE -->
@@ -23,46 +28,29 @@
          data-100p="transform: translate(0, 0%)"
     >
       <!-- Product Images (non-mobile) -->
-      <div class="slide__product-wrapper" v-if="!isMobile()">
+      <div class="slide__product-wrapper"
+           v-if="!isMobile()"
+           data-0="opacity: 0"
+           data-100p="opacity: 1"
+           data-200p="opacity: 1"
+           data-250p="opacity: 0"
+      >
         <div class="slide__product-images">
-          <img src="/images/product-vessel.png" alt="Vessel"
-               class="slide__product-image"
-               data-0="opacity: 0"
-               data-50p="opacity: 1"
-               data-100p="opacity: 1"
-               data-150p="opacity: 0"
-          >
-          <img src="/images/product-box-front.png" alt="Front"
-               class="slide__product-image"
-               data-150p="opacity: 0"
-               data-200p="opacity: 1"
-               data-250p="opacity: 1"
-               data-300p="opacity: 0"
-          >
-          <img src="/images/product-box-back.png" alt="Back"
-               class="slide__product-image"
-               data-300p="opacity: 0"
-               data-350p="opacity: 1"
-               data-400p="opacity: 1"
-               data-450p="opacity: 0"
-          >
-          <img src="/images/product-box-top.png" alt="Top"
-               class="slide__product-image"
-               data-450p="opacity: 0"
-               data-500p="opacity: 1"
-               data-600p="opacity: 1"
-               data-650p="opacity: 0"
-          >
+          <div class="slide__product-images__item">
+            <img src="/images/product-vessel.png" alt="Vessel" class="slide__product-image">
+          </div>
+          <div class="slide__product-images__item">
+            <img src="/images/product-box-front.png" alt="Front" class="slide__product-image">
+          </div>
+          <div class="slide__product-images__item">
+            <img src="/images/product-box-back.png" alt="Back" class="slide__product-image">
+          </div>
+          <div class="slide__product-images__item">
+            <img src="/images/product-box-top.png" alt="Top" class="slide__product-image">
+          </div>
         </div>
-        <div class="slide__product-info"
-             data-0="opacity: 0"
-             data-100p="opacity: 1"
-             data-600p="opacity: 1"
-             data-650p="opacity: 0"
-        >
+        <div class="slide__product-info">
           <h2 class="slide__product-heading">Scent One</h2>
-          <h4 class="slide__product-desc slide__product-desc--primary">Scent One is an exploration of the beginning.</h4>
-          <h4 class="slide__product-desc slide__product-desc--secondary">Scent One est l'exploration du début.</h4>
           <div><a class="slide__product__btn-buy" href="#">Buy now</a></div>
         </div>
       </div>
@@ -84,8 +72,6 @@
         </div>
         <div class="slide__product-info">
           <h2 class="slide__product-heading">Scent One</h2>
-          <h4 class="slide__product-desc slide__product-desc--primary">Scent One is an exploration of the beginning.</h4>
-          <h4 class="slide__product-desc slide__product-desc--secondary">Scent One est l'exploration du début.</h4>
           <div><a class="slide__product__btn-buy" href="#">Buy now</a></div>
         </div>
       </div>
@@ -93,8 +79,8 @@
       <div class="slide__accent-wrapper"
            data-0="opacity: 0"
            data-100p="opacity: 1"
-           data-600p="opacity: 1"
-           data-650p="opacity: 0"
+           data-200p="opacity: 1"
+           data-250p="opacity: 0"
       >
         <img src="/images/slide-accent-face.jpg" alt="Cander Paris" class="slide__accent-image">
       </div>
@@ -103,10 +89,10 @@
     <!-- SECTION 2: THE SCENT -->
     <div class="slide slide--2"
          data-0="opacity: 0"
-         data-600p="opacity: 0; transform: translate(0, 100%);"
-         data-650p="opacity: 0; transform: translate(0, 5%);"
-         data-700p="opacity: 1; transform: translate(0, 0%);"
-         data-850p="opacity: 0; transform: translate(0, -2%);"
+         data-200p="opacity: 0; transform: translate(0, 100%);"
+         data-250p="opacity: 0; transform: translate(0, 5%);"
+         data-300p="opacity: 1; transform: translate(0, 0%);"
+         data-450p="opacity: 0; transform: translate(0, -2%);"
     >
       <div class="slide--2__bg"
            :class="darkMode ? 'is-dark' : 'is-light'"
@@ -126,11 +112,11 @@
     <!-- SECTION 3: DOOR -->
     <div class="slide slide--3"
          data-0="opacity: 0"
-         data-840p="opacity: 0; transform: translate(0, 100%);"
-         data-850p="opacity: 0; transform: translate(0, 30%);"
-         data-900p="opacity: 1; transform: translate(0, 0%);"
-         data-1050p="opacity: 1; transform: translate(0, 0%);"
-         data-1150p="transform: translate(0, -120%);"
+         data-300p="opacity: 0; transform: translate(0, 100%);"
+         data-450p="opacity: 0; transform: translate(0, 30%);"
+         data-500p="opacity: 1; transform: translate(0, 0%);"
+         data-650p="opacity: 1; transform: translate(0, 0%);"
+         data-750p="transform: translate(0, -120%);"
     >
       <div class="translations-wrapper">
         <ul class="translations-list">
@@ -148,12 +134,12 @@
     <!-- SECTION 4: PRODUCT -->
     <div class="slide slide--4"
          data-0="opacity: 0"
-         data-1100p="opacity: 0; transform: translate(0, 100%);"
-         data-1125p="opacity: 0; transform: translate(0, 20%);"
-         data-1160p="opacity: 0.3; transform: translate(0, 5%);"
-         data-1170p="opacity: 1; transform: translate(0, 0%);"
-         data-1200p="transform: translate(0, 0%);"
-         data-1290p="transform: translate(0, -15%);"
+         data-700p="opacity: 0; transform: translate(0, 100%);"
+         data-725p="opacity: 0; transform: translate(0, 20%);"
+         data-760p="opacity: 0.3; transform: translate(0, 5%);"
+         data-770p="opacity: 1; transform: translate(0, 0%);"
+         data-800p="transform: translate(0, 0%);"
+         data-890p="transform: translate(0, -15%);"
     >
       <div class="slide--4__inner">
         <img src="/images/product-box-front.png" alt="Front" class="slide--4__product-image">
@@ -164,10 +150,10 @@
     <!-- FOOTER -->
     <div class="slide--footer-wrapper"
          data-0="opacity: 0"
-         data-1200p="opacity: 0; transform: translate(0, 100%);"
-         data-1225p="opacity: 0; transform: translate(0, 20%);"
-         data-1260p="opacity: 0.3; transform: translate(0, 5%);"
-         data-1270p="opacity: 1; transform: translate(0, 0%);"
+         data-800p="opacity: 0; transform: translate(0, 100%);"
+         data-825p="opacity: 0; transform: translate(0, 20%);"
+         data-860p="opacity: 0.3; transform: translate(0, 5%);"
+         data-870p="opacity: 1; transform: translate(0, 0%);"
     >
       <site-footer></site-footer>
     </div>
@@ -211,7 +197,6 @@
           patchouli: 'dark',
         },
         bgTimeoutId: null,
-        bodyHeight: null,
       }
     },
     methods: {
@@ -235,7 +220,12 @@
       scrollToFold () {
         let el = document.getElementById('the-fold')
         let foldOffset = el.getBoundingClientRect().top + document.body.scrollTop
-        return scrollHelper.top(page, Number(foldOffset), { duration: 400 })
+        if (window.flkty) {
+          window.flkty.playPlayer()
+        }
+
+        scrollHelper.top(page, Number(foldOffset), { duration: 400 })
+        return
       },
       showAromaticBg (event) {
         let wasMobileTap= (this.isMobile() && event && event.pointerType)
@@ -301,7 +291,7 @@
           this.aromaticBackgroundUrl = ''
         }, timeoutDuration)
       },
-      instantiateFlickity () {
+      instantiateMobileFlickity () {
         let flickityInstance = new Flickity('.slide__product-carousel', {
           cellSelector: '.slide__product-carousel__item',
           cellAlign: 'left',
@@ -321,6 +311,22 @@
 
         window.flkty = flickityInstance
       },
+      instantiateDesktopFlickity () {
+        let flickityInstance = new Flickity('.slide__product-images', {
+          cellSelector: '.slide__product-images__item',
+          cellAlign: 'center',
+          contain: true,
+          draggable: false,
+//          friction: 0.8,
+          pageDots: false,
+          prevNextButtons: false,
+//          selectedAttraction: 0.2,
+          slidesWidth: '30rem',
+          wrapAround: true,
+        })
+
+        window.flkty = flickityInstance
+      },
       preloadImages () {
         const aromatics = ['bouleau', 'firBalsam', 'santal', 'agrumes', 'patchouli']
         forEach(aromatics, function (aromatic) {
@@ -329,18 +335,14 @@
       },
     },
     ready () {
-      setTimeout(() => this.bodyHeight = document.body.offsetHeight, 0)
-      window.addEventListener('resize', () => {
-        this.bodyHeight = document.body.offsetHeight
-      }, true)
-
       this.preloadImages()
 
       if (isMobile()) {
         addClass(document.body, 'is-mobile')
-        this.instantiateFlickity()
+        this.instantiateMobileFlickity()
       } else {
         addClass(document.body, 'is-not-mobile')
+        this.instantiateDesktopFlickity()
         // Initialize skrollr
         if (! this.skrollr) {
           const skrollrOpts = {}
@@ -353,15 +355,10 @@
           this.disableDarkMode()
           this.hideAromaticBg(0)
         }
-        if (pos < -200) {
-          this.scrollArrowIsVisible = false
-        } else {
-          this.scrollArrowIsVisible = true
+        if (pos < -window.innerHeight && !(pos < -2 * window.innerHeight)) {
+          // Got to first slide
+          window.flkty.playPlayer()
         }
-      })
-
-      this.$watch('bodyHeight', function (val) {
-        console.log('val=', val)
       })
 
       this.$watch('menuOverlay.visible', function (isVisible) {
