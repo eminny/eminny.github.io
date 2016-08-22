@@ -39124,6 +39124,8 @@
 	    }
 
 	    this.$watch('scrollPos.top', function (pos, oldPos) {
+	      var isMobile = _this3.isMobile();
+
 	      if (Math.abs(pos - oldPos) > 40) {
 	        _this3.disableDarkMode();
 	        _this3.hideAromaticBg(0);
@@ -39135,6 +39137,11 @@
 	        _this3.scrollArrowIsActive = false;
 	      } else {
 	        _this3.scrollArrowIsActive = true;
+	      }
+	      if (isMobile && pos < -200) {
+	        _this3.scrollArrowIsVisible = false;
+	      } else {
+	        _this3.scrollArrowIsVisible = true;
 	      }
 	    });
 

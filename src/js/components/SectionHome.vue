@@ -351,6 +351,8 @@
       }
 
       this.$watch('scrollPos.top', (pos, oldPos) => {
+        const isMobile = this.isMobile()
+
         if (Math.abs(pos - oldPos) > 40) {
           this.disableDarkMode()
           this.hideAromaticBg(0)
@@ -363,6 +365,11 @@
           this.scrollArrowIsActive = false
         } else {
           this.scrollArrowIsActive = true
+        }
+        if (isMobile && pos < -200) {
+          this.scrollArrowIsVisible = false
+        } else {
+          this.scrollArrowIsVisible = true
         }
       })
 
