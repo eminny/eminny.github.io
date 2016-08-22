@@ -39108,9 +39108,10 @@
 	  ready: function ready() {
 	    var _this3 = this;
 
+	    var isMobile = this.isMobile();
 	    this.preloadImages();
 
-	    if ((0, _helpers.isMobile)()) {
+	    if (isMobile) {
 	      (0, _helpers.addClass)(document.body, 'is-mobile');
 	      this.instantiateMobileFlickity();
 	    } else {
@@ -39124,20 +39125,22 @@
 	    }
 
 	    this.$watch('scrollPos.top', function (pos, oldPos) {
-	      var isMobile = _this3.isMobile();
 
 	      if (Math.abs(pos - oldPos) > 40) {
 	        _this3.disableDarkMode();
 	        _this3.hideAromaticBg(0);
 	      }
+
 	      if (pos < -window.innerHeight && !(pos < -2 * window.innerHeight)) {
 	        window.flkty.playPlayer();
 	      }
+
 	      if (pos < -window.innerHeight + 5) {
 	        _this3.scrollArrowIsActive = false;
 	      } else {
 	        _this3.scrollArrowIsActive = true;
 	      }
+
 	      if (isMobile && pos < -200) {
 	        _this3.scrollArrowIsVisible = false;
 	      } else {

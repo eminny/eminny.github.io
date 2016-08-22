@@ -335,9 +335,10 @@
       },
     },
     ready () {
+      const isMobile = this.isMobile()
       this.preloadImages()
 
-      if (isMobile()) {
+      if (isMobile) {
         addClass(document.body, 'is-mobile')
         this.instantiateMobileFlickity()
       } else {
@@ -351,21 +352,23 @@
       }
 
       this.$watch('scrollPos.top', (pos, oldPos) => {
-        const isMobile = this.isMobile()
 
         if (Math.abs(pos - oldPos) > 40) {
           this.disableDarkMode()
           this.hideAromaticBg(0)
         }
+
         if (pos < -window.innerHeight && !(pos < -2 * window.innerHeight)) {
           // Got to first slide
           window.flkty.playPlayer()
         }
+
         if (pos < -window.innerHeight + 5) {
           this.scrollArrowIsActive = false
         } else {
           this.scrollArrowIsActive = true
         }
+
         if (isMobile && pos < -200) {
           this.scrollArrowIsVisible = false
         } else {
