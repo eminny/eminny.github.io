@@ -1,12 +1,14 @@
 # CANDER PARIS
 
-### Get up and running
+### Development setup
 
 Run `npm install` to pull in dependencies. (Note: [npm](https://www.npmjs.com/) must be installed.)
 
 For local development and testing, you must have a local server setup with [canderparis.dev](http://canderparis.dev/) resolving from the `build/` directory.
 
 Once the local server is set up, run `gulp` to watch for live file changes to files in `src/` and compile the new build on the fly. Gulp should have been installed when you ran `npm install`, but if it is not found, just run `npm install -g gulp`.
+
+Run `gulp build` to compile and build all production ready files. View `gulpfile.babel.js` to see each step of the build process.
 
 **Important:** You will only want to alter files in the `src/` directory. Do not alter files in `build/`, as these will get overwritten in a subsequent build.
 
