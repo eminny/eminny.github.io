@@ -12,7 +12,7 @@
         <button class="newsletter__form__btn-submit" type="submit">Submit</button>
       </div>
     </form>
-    <p class="site-footer__copyright">&copy; 2016 CANDER PARIS. <a v-link="{ name: 'terms' }">Terms and Conditions</a> | <a v-link="{ path: 'thanks/contacting' }">Thanks</a></p>
+    <p class="site-footer__copyright">&copy; 2016 CANDER PARIS. <a v-link="{ name: 'terms' }">Terms and Conditions</a></p>
   </footer>
 </template>
 

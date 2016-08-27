@@ -21548,7 +21548,7 @@
 /* 46 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<footer class=\"site-footer\">\n  <form id=\"newsletter__form\"\n        class=\"newsletter__form group\"\n        action=\"http://hauteappetite.createsend.com/t/i/s/npiud/\"\n        method=\"post\"\n        id=\"subForm\"\n  >\n    <label for=\"newsletter__email\" class=\"newsletter__label\">Sign up and stay updated</label>\n    <div class=\"newsletter__form__inner\">\n      <input id=\"fieldEmail\" name=\"cm-npiud-npiud\" class=\"newsletter__email\" type=\"email\" placeholder=\"EMAIL ADDRESS\" autocomplete=\"off\" autocorrect=\"off\" required>\n      <button class=\"newsletter__form__btn-submit\" type=\"submit\">Submit</button>\n    </div>\n  </form>\n  <p class=\"site-footer__copyright\">&copy; 2016 CANDER PARIS. <a v-link=\"{ name: 'terms' }\">Terms and Conditions</a> | <a v-link=\"{ path: 'thanks/contacting' }\">Thanks</a></p>\n</footer>\n";
+	module.exports = "\n<footer class=\"site-footer\">\n  <form id=\"newsletter__form\"\n        class=\"newsletter__form group\"\n        action=\"http://hauteappetite.createsend.com/t/i/s/npiud/\"\n        method=\"post\"\n        id=\"subForm\"\n  >\n    <label for=\"newsletter__email\" class=\"newsletter__label\">Sign up and stay updated</label>\n    <div class=\"newsletter__form__inner\">\n      <input id=\"fieldEmail\" name=\"cm-npiud-npiud\" class=\"newsletter__email\" type=\"email\" placeholder=\"EMAIL ADDRESS\" autocomplete=\"off\" autocorrect=\"off\" required>\n      <button class=\"newsletter__form__btn-submit\" type=\"submit\">Submit</button>\n    </div>\n  </form>\n  <p class=\"site-footer__copyright\">&copy; 2016 CANDER PARIS. <a v-link=\"{ name: 'terms' }\">Terms and Conditions</a></p>\n</footer>\n";
 
 /***/ },
 /* 47 */
