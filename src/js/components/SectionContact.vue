@@ -100,6 +100,8 @@
 
     @media screen and ($large-screens) {
       margin: 5rem auto 0 auto;
+      max-width: 100%;
+      width:  100%;
     }
   }
 </style>
