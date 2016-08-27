@@ -80,7 +80,7 @@
 	(function __canderApp__() {
 	  _vue2.default.config.debug = true;
 
-	  var Cander = _vue2.default.extend(__webpack_require__(90));
+	  var Cander = _vue2.default.extend(__webpack_require__(95));
 
 	  _vue2.default.use(_vueTouch2.default);
 	  _vue2.default.use(_vueRouter2.default);
@@ -15879,7 +15879,8 @@
 	var SectionHome = _vue2.default.extend(__webpack_require__(59));
 	var SectionStores = _vue2.default.extend(__webpack_require__(69));
 	var SectionTerms = _vue2.default.extend(__webpack_require__(80));
-	var Error404 = _vue2.default.extend(__webpack_require__(85));
+	var SectionThanks = _vue2.default.extend(__webpack_require__(85));
+	var Error404 = _vue2.default.extend(__webpack_require__(90));
 
 	exports.default = {
 	  '*': {
@@ -15904,6 +15905,10 @@
 	  '/terms': {
 	    name: 'terms',
 	    component: SectionTerms
+	  },
+	  '/thanks/:forWhat': {
+	    name: 'thanks',
+	    component: SectionThanks
 	  }
 	};
 
@@ -21543,7 +21548,7 @@
 /* 46 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<footer class=\"site-footer\">\n  <form id=\"newsletter__form\"\n        class=\"newsletter__form group\"\n        action=\"http://xxxxx.us#.list-manage1.com/subscribe/post-json?u=xxxxx&id=xxxx&c=?\"\n        method=\"get\"\n  >\n    <label for=\"newsletter__email\" class=\"newsletter__label\">Sign up and stay updated</label>\n    <div class=\"newsletter__form__inner\">\n      <input id=\"newsletter__email\" class=\"newsletter__email\" type=\"email\" placeholder=\"EMAIL ADDRESS\" autocomplete=\"off\" autocorrect=\"off\" required>\n      <button class=\"newsletter__form__btn-submit\" type=\"submit\">Submit</button>\n    </div>\n  </form>\n  <p class=\"site-footer__copyright\">&copy; 2016 CANDER PARIS. <a v-link=\"{ name: 'terms' }\">Terms and Conditions</a></p>\n</footer>\n";
+	module.exports = "\n<footer class=\"site-footer\">\n  <form id=\"newsletter__form\"\n        class=\"newsletter__form group\"\n        action=\"http://hauteappetite.createsend.com/t/i/s/npiud/\"\n        method=\"post\"\n        id=\"subForm\"\n  >\n    <label for=\"newsletter__email\" class=\"newsletter__label\">Sign up and stay updated</label>\n    <div class=\"newsletter__form__inner\">\n      <input id=\"fieldEmail\" name=\"cm-npiud-npiud\" class=\"newsletter__email\" type=\"email\" placeholder=\"EMAIL ADDRESS\" autocomplete=\"off\" autocorrect=\"off\" required>\n      <button class=\"newsletter__form__btn-submit\" type=\"submit\">Submit</button>\n    </div>\n  </form>\n  <p class=\"site-footer__copyright\">&copy; 2016 CANDER PARIS. <a v-link=\"{ name: 'terms' }\">Terms and Conditions</a> | <a v-link=\"{ path: 'thanks/contacting' }\">Thanks</a></p>\n</footer>\n";
 
 /***/ },
 /* 47 */
@@ -39941,7 +39946,7 @@
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/js/components/Error404.vue: named exports in *.vue files are ignored.")}
+	  console.warn("[vue-loader] src/js/components/SectionThanks.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(89)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
@@ -39952,7 +39957,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-6ee08c6f/Error404.vue"
+	  var id = "_v-47a8f65f/SectionThanks.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -39976,8 +39981,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6ee08c6f&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Error404.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6ee08c6f&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Error404.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-47a8f65f&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionThanks.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-47a8f65f&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionThanks.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -39995,7 +40000,7 @@
 
 
 	// module
-	exports.push([module.id, ".page-404[_v-6ee08c6f] {\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  height: calc(100vh - 8rem);\n  -webkit-justify-content: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-transform: translateY(-2rem);\n      -ms-transform: translateY(-2rem);\n          transform: translateY(-2rem); }\n\nh1[_v-6ee08c6f] {\n  font-size: 1.8rem;\n  text-transform: uppercase; }\n", ""]);
+	exports.push([module.id, ".page[_v-47a8f65f] {\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  height: calc(100vh - 8rem);\n  -webkit-justify-content: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-transform: translateY(-2rem);\n      -ms-transform: translateY(-2rem);\n          transform: translateY(-2rem); }\n\nh1[_v-47a8f65f] {\n  font-size: 1.8rem;\n  text-transform: uppercase; }\n", ""]);
 
 	// exports
 
@@ -40004,13 +40009,29 @@
 /* 88 */
 /***/ function(module, exports) {
 
-	"use strict";
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = {
+	  computed: {
+	    forWhat: function forWhat() {
+	      if (this.$route.params.forWhat == 'subscribing') {
+	        return 'for subscribing!';
+	      }
+	      if (this.$route.params.forWhat == 'contacting') {
+	        return 'for contacting us! We will get back to you shortly.';
+	      }
+	    }
+	  }
+	};
 
 /***/ },
 /* 89 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"page-404\" _v-6ee08c6f=\"\">\n  <h1 _v-6ee08c6f=\"\">Not Found</h1>\n</div>\n";
+	module.exports = "\n<div class=\"page\" _v-47a8f65f=\"\">\n  <h1 _v-47a8f65f=\"\">Thanks {{ forWhat }}</h1>\n</div>\n";
 
 /***/ },
 /* 90 */
@@ -40022,8 +40043,8 @@
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/js/App.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(104)
+	  console.warn("[vue-loader] src/js/components/Error404.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(94)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -40033,7 +40054,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-2253c947/App.vue"
+	  var id = "_v-6ee08c6f/Error404.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -40057,8 +40078,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./App.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./App.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6ee08c6f&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Error404.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6ee08c6f&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Error404.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -40076,13 +40097,94 @@
 
 
 	// module
-	exports.push([module.id, ".cander-wrapper {\n  overflow: hidden; }\n", ""]);
+	exports.push([module.id, ".page-404[_v-6ee08c6f] {\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  height: calc(100vh - 8rem);\n  -webkit-justify-content: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-transform: translateY(-2rem);\n      -ms-transform: translateY(-2rem);\n          transform: translateY(-2rem); }\n\nh1[_v-6ee08c6f] {\n  font-size: 1.8rem;\n  text-transform: uppercase; }\n", ""]);
 
 	// exports
 
 
 /***/ },
 /* 93 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+/***/ },
+/* 94 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"page-404\" _v-6ee08c6f=\"\">\n  <h1 _v-6ee08c6f=\"\">Not Found</h1>\n</div>\n";
+
+/***/ },
+/* 95 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(96)
+	__vue_script__ = __webpack_require__(98)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/js/App.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(109)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "_v-2253c947/App.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 96 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(97);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(12)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./App.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./App.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 97 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(11)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".cander-wrapper {\n  overflow: hidden; }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 98 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40095,11 +40197,11 @@
 
 	var _store2 = _interopRequireDefault(_store);
 
-	var _MenuOverlay = __webpack_require__(94);
+	var _MenuOverlay = __webpack_require__(99);
 
 	var _MenuOverlay2 = _interopRequireDefault(_MenuOverlay);
 
-	var _SiteHeader = __webpack_require__(99);
+	var _SiteHeader = __webpack_require__(104);
 
 	var _SiteHeader2 = _interopRequireDefault(_SiteHeader);
 
@@ -40133,17 +40235,17 @@
 	};
 
 /***/ },
-/* 94 */
+/* 99 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(95)
-	__vue_script__ = __webpack_require__(97)
+	__webpack_require__(100)
+	__vue_script__ = __webpack_require__(102)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/components/MenuOverlay.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(98)
+	__vue_template__ = __webpack_require__(103)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -40162,13 +40264,13 @@
 	})()}
 
 /***/ },
-/* 95 */
+/* 100 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(96);
+	var content = __webpack_require__(101);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(12)(content, {});
@@ -40188,7 +40290,7 @@
 	}
 
 /***/ },
-/* 96 */
+/* 101 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(11)();
@@ -40202,7 +40304,7 @@
 
 
 /***/ },
-/* 97 */
+/* 102 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40271,23 +40373,23 @@
 	};
 
 /***/ },
-/* 98 */
+/* 103 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"menu-overlay-wrapper\" _v-53ced9fc=\"\">\n  <div class=\"menu-overlay\" _v-53ced9fc=\"\">\n    <div class=\"menu-overlay__nav-wrapper\" _v-53ced9fc=\"\">\n      <nav class=\"menu-overlay__nav-list\" _v-53ced9fc=\"\">\n        <a v-link=\"{ name: 'about' }\" v-on:mouseover=\"setHoverItem('about')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-53ced9fc=\"\">About</a>\n        <a v-link=\"{ name: 'stores' }\" v-on:mouseover=\"setHoverItem('stores')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-53ced9fc=\"\">Stores</a>\n        <a v-link=\"{ name: 'contact' }\" v-on:mouseover=\"setHoverItem('contact')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-53ced9fc=\"\">Contact</a>\n      </nav>\n      <div class=\"menu-overlay__nav-social\" _v-53ced9fc=\"\">\n        <a class=\"menu-overlay__nav-social__item\" href=\"http://facebook.com\" target=\"_blank\" _v-53ced9fc=\"\">\n          <svg class=\"icon icon-facebook\" _v-53ced9fc=\"\">\n            <use xlink:href=\"#icon-facebook\" _v-53ced9fc=\"\"></use>\n          </svg>\n        </a>\n        <a class=\"menu-overlay__nav-social__item\" href=\"http://instagram.com\" target=\"_blank\" _v-53ced9fc=\"\">\n          <svg class=\"icon icon-instagram\" _v-53ced9fc=\"\"><use xlink:href=\"#icon-instagram\" _v-53ced9fc=\"\"></use></svg>\n        </a>\n        <svg style=\"position: absolute; width: 0; height: 0; overflow: hidden;\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" _v-53ced9fc=\"\">\n          <defs _v-53ced9fc=\"\">\n            <symbol id=\"icon-instagram\" viewBox=\"0 0 16 16\" _v-53ced9fc=\"\">\n              <title _v-53ced9fc=\"\">Instagram</title>\n              <path class=\"path1\" d=\"M14.5 0h-13c-0.825 0-1.5 0.675-1.5 1.5v13c0 0.825 0.675 1.5 1.5 1.5h13c0.825 0 1.5-0.675 1.5-1.5v-13c0-0.825-0.675-1.5-1.5-1.5zM11 2.5c0-0.275 0.225-0.5 0.5-0.5h2c0.275 0 0.5 0.225 0.5 0.5v2c0 0.275-0.225 0.5-0.5 0.5h-2c-0.275 0-0.5-0.225-0.5-0.5v-2zM8 5c1.656 0 3 1.344 3 3s-1.344 3-3 3c-1.656 0-3-1.344-3-3s1.344-3 3-3zM14 13.5v0c0 0.275-0.225 0.5-0.5 0.5h-11c-0.275 0-0.5-0.225-0.5-0.5v0-6.5h1.1c-0.066 0.322-0.1 0.656-0.1 1 0 2.762 2.237 5 5 5s5-2.238 5-5c0-0.344-0.034-0.678-0.1-1h1.1v6.5z\" _v-53ced9fc=\"\"></path>\n            </symbol>\n            <symbol id=\"icon-facebook\" viewBox=\"0 0 16 16\" _v-53ced9fc=\"\">\n              <title _v-53ced9fc=\"\">Facebook</title>\n              <path class=\"path1\" d=\"M9.5 3h2.5v-3h-2.5c-1.93 0-3.5 1.57-3.5 3.5v1.5h-2v3h2v8h3v-8h2.5l0.5-3h-3v-1.5c0-0.271 0.229-0.5 0.5-0.5z\" _v-53ced9fc=\"\"></path>\n            </symbol>\n          </defs>\n        </svg>\n      </div>\n      <div class=\"menu-overlay__nav-contact\" _v-53ced9fc=\"\">\n        <p _v-53ced9fc=\"\">For all general information please contact <a href=\"mailto:info@canderparis.com\" _v-53ced9fc=\"\">info@canderparis.com</a></p>\n        <p _v-53ced9fc=\"\">For press information please contact <a href=\"mailto:press@canderparis.com\" _v-53ced9fc=\"\">press@canderparis.com</a></p>\n      </div>\n    </div>\n    <div class=\"menu-overlay__accent-wrapper\" _v-53ced9fc=\"\">\n      <img :src=\"menuOverlay.navImageMap[hoverItem]\" class=\"menu-overlay__accent\" :data-id=\"hoverItem\" _v-53ced9fc=\"\">\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
-/* 99 */
+/* 104 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(100)
-	__vue_script__ = __webpack_require__(102)
+	__webpack_require__(105)
+	__vue_script__ = __webpack_require__(107)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/components/SiteHeader.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(103)
+	__vue_template__ = __webpack_require__(108)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -40306,13 +40408,13 @@
 	})()}
 
 /***/ },
-/* 100 */
+/* 105 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(101);
+	var content = __webpack_require__(106);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(12)(content, {});
@@ -40332,7 +40434,7 @@
 	}
 
 /***/ },
-/* 101 */
+/* 106 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(11)();
@@ -40346,7 +40448,7 @@
 
 
 /***/ },
-/* 102 */
+/* 107 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40456,13 +40558,13 @@
 	};
 
 /***/ },
-/* 103 */
+/* 108 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<header class=\"site-header\" v-show=\"headerVisible\" transition=\"fade\" _v-3286419a=\"\">\n  <a href=\"/\" @click.prevent=\"logoClickHandler\" class=\"menu-overlay__nav-list__item\" _v-3286419a=\"\">\n    <img v-bind:src=\"logoUrl\" alt=\"CANDER PARIS\" title=\"CANDER PARIS\" class=\"logo\" _v-3286419a=\"\">\n  </a>\n  <a href=\"/\" @click.prevent=\"toggleMenu\" class=\"btn-menu btn-menu--{{ toggleState }}\" _v-3286419a=\"\"></a>\n</header>\n";
 
 /***/ },
-/* 104 */
+/* 109 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"cander-wrapper page--{{ this.$route.name ? this.$route.name : 'default' }}\" id=\"cander-app\">\n  <site-header :dark-mode=\"darkMode\"></site-header>\n  <menu-overlay v-if=\"menuOverlay.visible\" transition=\"fade\"></menu-overlay>\n  <main class=\"main-content\">\n    <router-view></router-view>\n  </main>\n</div>\n";
