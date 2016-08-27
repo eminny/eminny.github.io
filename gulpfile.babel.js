@@ -35,6 +35,11 @@ gulp.task('webpack', function () {
     .pipe(webpackStream(webpackConfig, webpack))
     .pipe(rename('main.js')) // rename back to main.js
     .pipe(gulp.dest('build/js/'))
+    .pipe(rename('main.min.js'))
+    .pipe(uglify({
+      mangle: true
+    }))
+    .pipe(gulp.dest('build/js'))
     .pipe(browserSync.stream());
 });
 

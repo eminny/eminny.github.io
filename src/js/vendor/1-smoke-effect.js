@@ -2992,8 +2992,7 @@ var requirejs, require, define;
         this.restart = function () {
           console.log("RESTARTING SMOKE"), s(), E.start()
         },
-        window.SmokeEffect = this,
-        console.log("SMOKE EXISTS")
+        window.SmokeEffect = this
     });
 
 (function () {
