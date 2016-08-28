@@ -114,7 +114,7 @@
   export default {
     data () {
       return {
-        recipientEmail: 'alex@mister.nyc',
+        recipientEmail: 'info@canderparis.com',
         form: null,
         requiredFields: [
           'name',
