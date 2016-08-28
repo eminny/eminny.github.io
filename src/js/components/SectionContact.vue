@@ -89,6 +89,14 @@
       box-shadow: none;
       outline: none;
     }
+
+    &.validation-failed::-webkit-input-placeholder {
+      color: $color__black;
+    }
+
+    &.validation-failed:-moz-placeholder {
+      color: $color__black;
+    }
   }
 
   input.contact-form__input--btn,
@@ -109,6 +117,7 @@
 <script>
   import 'whatwg-fetch'
   import { compact, endsWith, forEach, map, replace, trim } from 'lodash'
+  import { addClass, removeClass } from '../helpers'
   import SiteFooter from './SiteFooter.vue'
 
   export default {
@@ -142,6 +151,7 @@
           // Validation failed, so append 'REQUIRED' to placeholders of required fields
           forEach(this.requiredFields, function (field) {
             let fieldEl = document.getElementById(field)
+            addClass(fieldEl, 'validation-failed')
             if (trim(fieldEl.value) == '' && !endsWith(fieldEl.placeholder, 'REQUIRED')) {
               fieldEl.placeholder = fieldEl.placeholder + ' REQUIRED'
             }
@@ -203,6 +213,7 @@
         // Remove 'REQUIRED' from field placeholders
         forEach(this.requiredFields, function (field) {
           let fieldEl = document.getElementById(field)
+          removeClass(fieldEl, 'validation-failed')
           if (endsWith(fieldEl.placeholder, 'REQUIRED')) {
             fieldEl.placeholder = replace(fieldEl.placeholder, 'REQUIRED', '')
           }
