@@ -20,12 +20,12 @@
           >Contact</a>
         </nav>
         <div class="menu-overlay__nav-social">
-          <a class="menu-overlay__nav-social__item" href="http://facebook.com" target="_blank">
+          <a class="menu-overlay__nav-social__item" href="https://facebook.com/CanderParis" target="_blank">
             <svg class="icon icon-facebook">
               <use xlink:href="#icon-facebook"></use>
             </svg>
           </a>
-          <a class="menu-overlay__nav-social__item" href="http://instagram.com" target="_blank">
+          <a class="menu-overlay__nav-social__item" href="https://instagram.com/CanderParis" target="_blank">
             <svg class="icon icon-instagram"><use xlink:href="#icon-instagram"></use></svg>
           </a>
           <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
