@@ -18,8 +18,11 @@
           </div>
         </li>
       </ul>
-      <p v-if="!retailers.length" class="retailers__empty-state-message">Coming Soon</p>
-    </section>
+      <div v-if="!retailers.length">
+        <p class="retailers__empty-state-message">Coming Soon</p>
+        <img src="/images/product-photo1.jpg" alt="CANDER PARIS">
+      </div>
+  </section>
     <site-footer></site-footer>
   </div>
 </template>
