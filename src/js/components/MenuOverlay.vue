@@ -59,6 +59,7 @@
 
 <script>
   import store from '../store'
+  import { addClass, removeClass } from '../helpers'
 
   export default {
     data () {
@@ -80,22 +81,10 @@
         }
       },
       lockScroll (el) {
-        // When menu opens, add 'overlay-open' class to body
-        let className = 'overlay-open'
-        if (el.classList) {
-          el.classList.add(className)
-        } else {
-          el.className += ' ' + className
-        }
+        addClass(el, 'overlay-open')
       },
       unlockScroll (el) {
-        // When menu closes, remove 'overlay-open' class from body
-        let className = 'overlay-open'
-        if (el.classList) {
-          el.classList.remove(className)
-        } else {
-          el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
-        }
+        removeClass(el, 'overlay-open')
       },
     },
     ready () {
