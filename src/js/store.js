@@ -13,7 +13,7 @@ store.data = {
       'default': '/images/menu-accent-about.jpg',
       'about': '/images/menu-accent-about.jpg',
       'stores': '/images/menu-accent-stores.jpg',
-      'contact': '/images/menu-accent-contact.jpg',
+      'contact': '/images/menu-accent-contact.png',
     },
   },
   darkMode: false,
