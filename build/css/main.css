@@ -157,6 +157,24 @@ textarea {
   line-height: 1.75;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label,
+img,
+li,
+a,
+nav {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 /* Headings
 ---------------------------------------------------------------------- */
 .alpha,
@@ -355,10 +373,6 @@ nav ol,
 *:before,
 *:after {
   box-sizing: border-box;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
 }
 
 html {
