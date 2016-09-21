@@ -1,7 +1,7 @@
 <template>
   <div class="single-page">
     <div class="single-page__content">
-      <form action="https://formspree.io/{{ recipientEmail }}"
+      <form action="//formspree.io/{{ recipientEmail }}"
             method="POST"
             class="contact-form"
       >
@@ -165,12 +165,15 @@
         }
 
         // Set form options
+        let formHeaders = {
+          'Accept': 'application/json',
+        }
+        // prevent fuckery with magical getters/setters being added by Vue
+        Object.freeze(formHeaders)
+
         this.formOptions = {
           method: 'POST',
-          headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-          },
+          headers: formHeaders,
           body: JSON.stringify({
             _format: 'plain',
             _replyto: document.getElementById('_replyto').value,
@@ -183,6 +186,8 @@
         // Show that form was submitted
         this.submitBtn.value = 'Submitting...'
         this.submitBtn.disabled = true
+
+        console.log('this.formOptions:', this.formOptions)
 
         fetch(this.form.action, this.formOptions)
           .then(this.checkStatus)
