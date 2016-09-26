@@ -6,6 +6,7 @@ const SectionContact = Vue.extend(require('./components/SectionContact.vue'))
 const SectionHome = Vue.extend(require('./components/SectionHome.vue'))
 const SectionStores = Vue.extend(require('./components/SectionStores.vue'))
 const SectionTerms = Vue.extend(require('./components/SectionTerms.vue'))
+const SectionPrivacy = Vue.extend(require('./components/SectionPrivacy.vue'))
 const SectionThanks = Vue.extend(require('./components/SectionThanks.vue'))
 const Error404 = Vue.extend(require('./components/Error404.vue'))
 
@@ -33,6 +34,10 @@ export default {
   '/terms': {
     name: 'terms',
     component: SectionTerms,
+  },
+  '/privacy': {
+    name: 'privacy',
+    component: SectionPrivacy,
   },
   '/thanks/:forWhat': {
     name: 'thanks',
