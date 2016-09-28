@@ -77,9 +77,10 @@
     color: $color__black;
     display: block;
     font-size: 1.2rem;
-    line-height: 4;
-    max-height: 6rem;
-    padding: 4.5rem 0 2rem 0;
+    height: 4rem;
+    line-height: 1;
+    margin-top: 2.5rem;
+    padding: 0;
     transition: all $transition-standard;
     user-select: auto;
     width: 100%;
