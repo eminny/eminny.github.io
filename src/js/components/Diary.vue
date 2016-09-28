@@ -104,8 +104,6 @@
               msg = 'No posts found.'
             }
 
-            console.log('error', msg)
-
             if (!numberOfPosts) {
               let el = document.getElementById('instafeed')
               addClass(el, 'is-empty')
@@ -117,7 +115,6 @@
       };
     },
     ready () {
-      console.log('Initialized social widget')
       const feed = new Instafeed(this.feedOptions)
       feed.run()
     },

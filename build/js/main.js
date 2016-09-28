@@ -33673,8 +33673,6 @@
 	            msg = 'No posts found.';
 	          }
 
-	          console.log('error', msg);
-
 	          if (!numberOfPosts) {
 	            var el = document.getElementById('instafeed');
 	            (0, _helpers.addClass)(el, 'is-empty');
@@ -33686,7 +33684,6 @@
 	    };
 	  },
 	  ready: function ready() {
-	    console.log('Initialized social widget');
 	    var feed = new Instafeed(this.feedOptions);
 	    feed.run();
 	  },
@@ -38523,8 +38520,6 @@
 
 	      this.submitBtn.value = 'Submitting...';
 	      this.submitBtn.disabled = true;
-
-	      console.log('this.formOptions:', this.formOptions);
 
 	      fetch(this.form.action, this.formOptions).then(this.checkStatus).then(function (response) {
 	        return response.json();

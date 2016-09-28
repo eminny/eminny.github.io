@@ -187,8 +187,6 @@
         this.submitBtn.value = 'Submitting...'
         this.submitBtn.disabled = true
 
-        console.log('this.formOptions:', this.formOptions)
-
         fetch(this.form.action, this.formOptions)
           .then(this.checkStatus)
           .then((response) => response.json())
