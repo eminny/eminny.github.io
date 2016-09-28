@@ -2,7 +2,7 @@
   <footer class="site-footer">
     <form id="newsletter__form"
           class="newsletter__form group"
-          action="http://hauteappetite.createsend.com/t/i/s/npiud/"
+          action="//hauteappetite.createsend.com/t/i/s/npiud/"
           method="post"
           id="subForm"
     >
