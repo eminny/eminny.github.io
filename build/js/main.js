@@ -38460,7 +38460,7 @@
 	exports.default = {
 	  data: function data() {
 	    return {
-	      recipientEmail: 'info@canderparis.com',
+	      recipientEmail: 'alex@mister.nyc',
 	      form: null,
 	      requiredFields: ['name', '_replyto', 'message'],
 	      submitBtn: null,
