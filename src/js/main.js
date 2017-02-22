@@ -8,7 +8,7 @@ import store from './store'
 ;(function __canderApp__() {
 
   // Global Vue config
-  Vue.config.debug = true
+  Vue.config.debug = false
 
   const Cander = Vue.extend(require('./App.vue'))
 
