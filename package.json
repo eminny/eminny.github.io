@@ -1,5 +1,5 @@
 {
-  "name": "npm",
+  "name": "cander",
   "version": "1.0.0",
   "description": "CANDER PARIS website",
   "main": "src/js/main.js",
@@ -63,5 +63,8 @@
   },
   "author": "Alex Salisbury | MISTER.NYC",
   "license": "ISC",
-  "repository": ""
+  "repository": {
+    "url": "git@github.com:MISTERGITHUB/cander.git",
+    "type": "git"
+  }
 }
