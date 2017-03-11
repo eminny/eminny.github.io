@@ -1,7 +1,7 @@
 <template>
     <div class="slides">
         <!-- SCROLL ARROW ICON -->
-    <span @click="scrollToFold"
+        <span @click="scrollToFold"
           class="slide__icn-scroll"
           v-bind:class="scrollArrowIsActive ? 'is-active' : 'is-inactive'"
           v-show="scrollArrowIsVisible"
@@ -21,98 +21,6 @@
                 <img src="/images/logo.svg" title="CANDER PARIS">
             </div>
         </div>
-
-
-        <!-- .cart-tab start -->
-        <button class="btn btn--cart-tab js-prevent-cart-listener">
-            <span class="btn__counter"></span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon-cart icon-cart--side" viewBox="0 0 25 25"
-                 enable-background="new 0 0 25 25">
-                <g fill="#0d0101">
-                    <path d="M24.6 3.6c-.3-.4-.8-.6-1.3-.6h-18.4l-.1-.5c-.3-1.5-1.7-1.5-2.5-1.5h-1.3c-.6 0-1 .4-1 1s.4 1 1 1h1.8l3 13.6c.2 1.2 1.3 2.4 2.5 2.4h12.7c.6 0 1-.4 1-1s-.4-1-1-1h-12.7c-.2 0-.5-.4-.6-.8l-.2-1.2h12.6c1.3 0 2.3-1.4 2.5-2.4l2.4-7.4v-.2c.1-.5-.1-1-.4-1.4zm-4 8.5v.2c-.1.3-.4.8-.5.8h-13l-1.8-8.1h17.6l-2.3 7.1z"></path>
-                    <circle cx="9" cy="22" r="2"></circle>
-                    <circle cx="19" cy="22" r="2"></circle>
-                </g>
-            </svg>
-        </button>
-        <!-- .cart-tab end -->
-
-        <!-- .cart begin -->
-        <div class="cart">
-
-            <!-- .cart-section begin // cart header -->
-            <div class="cart-section cart-section--top">
-                <h2 class="cart-title">Your cart</h2>
-                <button class="btn--close">
-                    <span aria-role="hidden">×</span>
-                    <span class="visuallyhidden">Close</span>
-                </button>
-            </div>
-            <!-- .cart-section end -->
-
-            <!-- .cart-form begin // cart body -->
-            <div class="cart-form">
-                <div class="cart-item-container cart-section">
-
-                </div>
-
-                <!-- .cart-bottom begin -->
-                <div class="cart-bottom">
-                    <div class="cart-info clearfix cart-section">
-                        <div class="type--caps cart-info__total cart-info__small">Total</div>
-                        <div class="cart-info__pricing">
-                            <span class="cart-info__small cart-info__total">USD</span>
-                            <span class="pricing pricing--no-padding"></span>
-                        </div>
-                    </div>
-                    <div class="cart-actions-container cart-section type--center">
-                        <!--<div class="cart-discount-notice cart-info__small">Shipping and discount codes are added at checkout.</div>-->
-                        <input type="submit" class="btn--cart-checkout slide__product__btn-buy" id="checkout"
-                               name="checkout" value="Checkout">
-                    </div>
-                </div>
-                <!-- .cart-bottom end -->
-
-            </div>
-            <!-- .cart-form end -->
-
-        </div>
-        <!-- .cart end -->
-
-        <script id="CartItemTemplate" type="text/template">
-    <div class="cart-item">
-      <div class="cart-item__img cart-item__content-row"></div>
-                    <span class="cart-item__title"></span>
-
-
-
-        <div class="cart-item__content-row">
-          <div class="cart-item__quantity-container">
-            <button class="btn--seamless quantity-decrement" type="button"><span>-</span><span class="visuallyhidden">Decrement</span></button>
-            <input class="cart-item__quantity" type="number" min="0" aria-label="Quantity">
-            <button class="btn--seamless quantity-increment" type="button"><span>+</span><span class="visuallyhidden">Increment</span></button>
-          </div>
-          <span class="cart-item__price"></span>
-        </div>
-
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        </script>
-
 
         <!-- SECTION 1: THE CANDLE -->
         <div class="slide slide--1" id="the-fold"
@@ -145,7 +53,6 @@
                     <h2 class="slide__product-heading">Scent One</h2>
                     <div>
                         <button class="slide__product__btn-buy buy-button js-prevent-cart-listener">Buy now</button>
-                        <!--<a class="slide__product__btn-buy buy-button js-prevent-cart-listener">Buy now</a>-->
                     </div>
                 </div>
             </div>
@@ -169,7 +76,6 @@
                     <h2 class="slide__product-heading">Scent One</h2>
                     <div>
                         <button class="slide__product__btn-buy buy-button js-prevent-cart-listener">Buy now</button>
-                        <!--<a class="slide__product__btn-buy buy-button js-prevent-cart-listener">Buy now</a>-->
                     </div>
                 </div>
             </div>
@@ -200,28 +106,7 @@
             ></div>
             <div class="the-scent">
                 <h4 class="the-scent__title">Scent One</h4>
-
-<!--                <p class="the-scent__desc">Blending woody aromatics like <span class="aromatic" data-id="bouleau"
-                                                                               @mouseover="showAromaticBg"
-                                                                               v-touch:tap="showAromaticBg"
-                                                                               @mouseout="hideAromaticBg(5000)">bouleau</span>,<br>
-                    <span class="aromatic" data-id="firBalsam" @mouseover="showAromaticBg" v-touch:tap="showAromaticBg"
-                          @mouseout="hideAromaticBg(5000)">fir balsam</span>, <span class="aromatic" data-id="santal"
-                                                                                    @mouseover="showAromaticBg"
-                                                                                    v-touch:tap="showAromaticBg"
-                                                                                    @mouseout="hideAromaticBg(5000)">santal</span>,
-                    and <span class="aromatic" data-id="agrumes" @mouseover="showAromaticBg"
-                              v-touch:tap="showAromaticBg" @mouseout="hideAromaticBg(5000)">agrumes</span>.
-                    <br>Adding a hint of mystery with<br> the scent of <span class="aromatic" data-id="patchouli"
-                                                                             @mouseover="showAromaticBg"
-                                                                             v-touch:tap="showAromaticBg"
-                                                                             @mouseout="hideAromaticBg(5000)">patchouli</span>.
-                </p>-->
-
-
-
                 <p class="the-scent__desc">Refined fragrances created in Paris by elite French perfumers</p>
-
             </div>
         </div>
 
@@ -273,6 +158,72 @@
         >
             <site-footer></site-footer>
         </div>
+
+        <!-- CART -->
+        <button class="btn btn--cart-tab js-prevent-cart-listener">
+            <span class="btn__counter"></span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon-cart icon-cart--side" viewBox="0 0 25 25"
+                 enable-background="new 0 0 25 25">
+                <g fill="#0d0101">
+                    <path d="M24.6 3.6c-.3-.4-.8-.6-1.3-.6h-18.4l-.1-.5c-.3-1.5-1.7-1.5-2.5-1.5h-1.3c-.6 0-1 .4-1 1s.4 1 1 1h1.8l3 13.6c.2 1.2 1.3 2.4 2.5 2.4h12.7c.6 0 1-.4 1-1s-.4-1-1-1h-12.7c-.2 0-.5-.4-.6-.8l-.2-1.2h12.6c1.3 0 2.3-1.4 2.5-2.4l2.4-7.4v-.2c.1-.5-.1-1-.4-1.4zm-4 8.5v.2c-.1.3-.4.8-.5.8h-13l-1.8-8.1h17.6l-2.3 7.1z"></path>
+                    <circle cx="9" cy="22" r="2"></circle>
+                    <circle cx="19" cy="22" r="2"></circle>
+                </g>
+            </svg>
+        </button>
+
+        <div class="cart">
+            <!-- .cart-section begin // cart header -->
+            <div class="cart-section cart-section--top">
+                <h2 class="cart-title">Your cart</h2>
+                <button class="btn--close">
+                    <span aria-role="hidden">×</span>
+                    <span class="visuallyhidden">Close</span>
+                </button>
+            </div>
+            <!-- .cart-section end -->
+
+            <!-- .cart-form begin // cart body -->
+            <div class="cart-form">
+                <div class="cart-item-container cart-section">
+
+                </div>
+
+                <!-- .cart-bottom begin -->
+                <div class="cart-bottom">
+                    <div class="cart-info clearfix cart-section">
+                        <div class="type--caps cart-info__total cart-info__small">Total</div>
+                        <div class="cart-info__pricing">
+                            <span class="cart-info__small cart-info__total">USD</span>
+                            <span class="pricing pricing--no-padding"></span>
+                        </div>
+                    </div>
+                    <div class="cart-actions-container cart-section type--center">
+                        <!--<div class="cart-discount-notice cart-info__small">Shipping and discount codes are added at checkout.</div>-->
+                        <input type="submit" class="btn--cart-checkout slide__product__btn-buy" id="checkout"
+                               name="checkout" value="Checkout">
+                    </div>
+                </div>
+                <!-- .cart-bottom end -->
+
+            </div>
+            <!-- .cart-form end -->
+        </div>
+
+        <script id="CartItemTemplate" type="text/template">
+          <div class="cart-item">
+            <div class="cart-item__img cart-item__content-row"></div>
+              <span class="cart-item__title"></span>
+              <div class="cart-item__content-row">
+                <div class="cart-item__quantity-container">
+                  <button class="btn--seamless quantity-decrement" type="button"><span>-</span><span class="visuallyhidden">Decrement</span></button>
+                  <input class="cart-item__quantity" type="number" min="0" aria-label="Quantity">
+                  <button class="btn--seamless quantity-increment" type="button"><span>+</span><span class="visuallyhidden">Increment</span></button>
+                </div>
+                <span class="cart-item__price"></span>
+              </div>
+          </div>
+        </script>
     </div>
 </template>
 
