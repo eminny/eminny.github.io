@@ -25,8 +25,9 @@ const webpackConfig = require("./webpack.config.js");
 
 gulp.task('browserSync', function () {
   return browserSync.init({
-    "proxy": "canderparis.dev",
-    "port": 8080
+    server: {
+      baseDir: './build',
+    },
   });
 });
 
@@ -52,7 +53,7 @@ gulp.task('sass', function () {
   const paths = {
     sass: 'src/stylesheets',
     targetCSS: 'build/css',
-    targetImg: 'build/images'
+    targetImg: 'build/images',
   };
 
   return gulp.src(paths.sass + "/**/*.scss")
@@ -68,7 +69,7 @@ gulp.task('sass', function () {
     .pipe(rename({
       basename: 'main',
       suffix: '.min',
-      extname: '.css'
+      extname: '.css',
     }))
     .pipe(minifyCSS())
     .pipe(gulp.dest(paths.targetCSS)).on("error", notify.onError("Error: <%= error.message %>"))
@@ -125,7 +126,7 @@ gulp.task('watch', function () {
   gulp.watch([
     'src/js/**/*.js',
     'src/js/**/*.vue',
-    'src/js/**/*.scss'
+    'src/js/**/*.scss',
   ], ['webpack']);
 });
 
@@ -137,12 +138,12 @@ gulp.task('build', [
   'copy-images',
   'vendor-scripts',
   'sass',
-  'webpack'
+  'webpack',
 ]);
 
 // Default Task
 gulp.task('default', [
   'build',
   'browserSync',
-  'watch'
+  'watch',
 ]);

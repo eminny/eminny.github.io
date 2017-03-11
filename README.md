@@ -2,11 +2,9 @@
 
 ### Development setup
 
-Run `npm install` to pull in dependencies. (Note: [npm](https://www.npmjs.com/) must be installed.)
+Run `yarn install` to pull in dependencies.
 
-For local development and testing, you must have a local server setup with [canderparis.dev](http://canderparis.dev/) resolving from the `build/` directory.
-
-Once the local server is set up, run `gulp` to watch for live file changes to files in `src/` and compile the new build on the fly. Gulp should have been installed when you ran `npm install`, but if it is not found, just run `npm install -g gulp`.
+Next, run `gulp` to watch for live file changes to files in `src/` and compile the new build on the fly. Gulp should have been installed when you ran `npm install`, but if it is not found, just run `npm install -g gulp`.
 
 Run `gulp build` to compile and build all production ready files. View `gulpfile.babel.js` to see each step of the build process.
 
@@ -14,7 +12,7 @@ Run `gulp build` to compile and build all production ready files. View `gulpfile
 
 ### Front end overview
 
-The core functionality is built on [Vue.js](https://vuejs.org/), which handles the Single-Page-App-style routing and views. jQuery is not used since the majority of DOM updates are made through Vue.js. However, `src/helpers.js` contains some [jQuery-like helper functions](http://youmightnotneedjquery.com/).
+The core functionality is built on [Vue.js](https://vuejs.org/), which handles the Single-Page-App-style routing and views. jQuery is not used since the majority of DOM updates are made through Vue.js. However, `src/helpers.js` contains some DOM manipulation helper functions.
 
 ### Structure
 
@@ -22,7 +20,7 @@ The structure is similar to that of any typical Vue.js app: `src/main.js` initia
 
 ### Browsersync
 
-[Browsersync](https://www.browsersync.io/) is used for browser testing. Whenever you run the default `gulp` command, Browsersync will be automatically invoked. A a new Chrome tab will open to `localhost` (port `8080` if it's free), and this maps to the already-running `canderparis.dev` server.
+[Browsersync](https://www.browsersync.io/) provides the local server with user-event syncing between devices. Whenever you run the default `gulp` command, Browsersync will be automatically invoked. A a new Chrome tab will open to `localhost` (port `3000` if it's free).
 
 ### Deployment
 
