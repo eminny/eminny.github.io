@@ -120,7 +120,6 @@
 </style>
 
 <script>
-  import { map } from 'lodash'
   import scroll from 'scroll'
   import store from '../store'
   import Diary from './Diary.vue'
