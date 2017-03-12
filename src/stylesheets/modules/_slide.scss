@@ -184,10 +184,10 @@ $image-size: 20rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 80%;
+  width: 90%;
 
   @media screen and ($large-screens) {
-    width: 50%;
+    width: 90%;
   }
 }
 

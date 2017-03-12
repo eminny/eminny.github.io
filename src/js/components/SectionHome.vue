@@ -35,75 +35,20 @@
            data-200p="opacity: 1"
            data-250p="opacity: 0"
       >
-        <div class="slide__product-images">
-          <div class="slide__product-images__item">
-            <img src="/images/product-vessel.png" alt="Vessel" class="slide__product-image">
-          </div>
-          <div class="slide__product-images__item">
-            <img src="/images/product-box-front.png" alt="Front" class="slide__product-image">
-          </div>
-          <div class="slide__product-images__item">
-            <img src="/images/product-box-back.png" alt="Back" class="slide__product-image">
-          </div>
-          <div class="slide__product-images__item">
-            <img src="/images/product-box-top.png" alt="Top" class="slide__product-image">
-          </div>
-        </div>
-        <div class="slide__product-info">
-          <h2 class="slide__product-heading">Scent One</h2>
-          <div>
-            <button class="slide__product__btn-buy buy-button js-prevent-cart-listener">Buy now</button>
-          </div>
-        </div>
-      </div>
-      <!-- Product Images (mobile-only) -->
-      <div class="slide__product-carousel-wrapper" v-if="isMobile()">
-        <div class="slide__product-carousel">
-          <div class="slide__product-carousel__item">
-            <img src="/images/product-vessel.png" alt="Vessel" class="slide__product-carousel__image">
-          </div>
-          <div class="slide__product-carousel__item">
-            <img src="/images/product-box-front.png" alt="Front" class="slide__product-carousel__image">
-          </div>
-          <div class="slide__product-carousel__item">
-            <img src="/images/product-box-back.png" alt="Back" class="slide__product-carousel__image">
-          </div>
-          <div class="slide__product-carousel__item">
-            <img src="/images/product-box-top.png" alt="Top" class="slide__product-carousel__image">
-          </div>
-        </div>
-        <div class="slide__product-info">
-          <h2 class="slide__product-heading">Scent One</h2>
-          <div>
-            <button class="slide__product__btn-buy buy-button js-prevent-cart-listener">Buy now</button>
-          </div>
-        </div>
-      </div>
-      <!-- Product Accent Photo (non-mobile-only) -->
-      <div class="slide__accent-wrapper"
-           data-0="opacity: 0"
-           data-100p="opacity: 1"
-           data-200p="opacity: 1"
-           data-250p="opacity: 0"
-      >
-        <img src="/images/slide-accent-face.jpg" alt="Cander Paris" class="slide__accent-image">
+        <img src="/images/cander-spring-2017.jpg" alt="Coming Spring 2017">
+        <h2 class="the-scent__desc">Collection launching Spring 2017</h2>
       </div>
     </div>
 
     <!-- SECTION 2: THE SCENT -->
-    <div class="slide slide--2"
+    <div class="slide slide--2 shade--dark"
          data-0="opacity: 0"
          data-200p="opacity: 0; transform: translate(0, 100%);"
          data-250p="opacity: 0; transform: translate(0, 5%);"
          data-300p="opacity: 1; transform: translate(0, 0%);"
          data-450p="opacity: 0; transform: translate(0, -2%);"
     >
-      <div class="slide--2__bg"
-           :class="darkMode ? 'is-dark' : 'is-light'"
-           :style="{ backgroundImage: `url(${aromaticBackgroundUrl})` }"
-           v-if="aromaticBackgroundIsVisible"
-           transition="fade"
-      ></div>
+      <div class="slide--2__bg is-dark" style="background-image: url('/images/bg-aromatic-santal.jpg');"></div>
       <div class="the-scent">
         <h4 class="the-scent__title">Scent One</h4>
         <p class="the-scent__desc">Refined fragrances created in Paris by elite French perfumers</p>
@@ -158,62 +103,6 @@
     >
       <site-footer></site-footer>
     </div>
-
-    <!-- CART -->
-    <div class="cart">
-      <button class="btn btn--cart-tab js-prevent-cart-listener">
-        <span class="btn__counter"></span>
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon-cart icon-cart--side" viewBox="0 0 25 25" enable-background="new 0 0 25 25">
-          <g fill="#0d0101">
-            <path d="M24.6 3.6c-.3-.4-.8-.6-1.3-.6h-18.4l-.1-.5c-.3-1.5-1.7-1.5-2.5-1.5h-1.3c-.6 0-1 .4-1 1s.4 1 1 1h1.8l3 13.6c.2 1.2 1.3 2.4 2.5 2.4h12.7c.6 0 1-.4 1-1s-.4-1-1-1h-12.7c-.2 0-.5-.4-.6-.8l-.2-1.2h12.6c1.3 0 2.3-1.4 2.5-2.4l2.4-7.4v-.2c.1-.5-.1-1-.4-1.4zm-4 8.5v.2c-.1.3-.4.8-.5.8h-13l-1.8-8.1h17.6l-2.3 7.1z"></path>
-            <circle cx="9" cy="22" r="2"></circle>
-            <circle cx="19" cy="22" r="2"></circle>
-          </g>
-        </svg>
-      </button>
-      <div class="cart">
-        <div class="cart-section cart-section--top">
-          <h2 class="cart-title">Your cart</h2>
-          <button class="btn--close">
-            <span aria-role="hidden">×</span>
-            <span class="visuallyhidden">Close</span>
-          </button>
-        </div>
-        <div class="cart-form">
-          <div class="cart-item-container cart-section"></div>
-          <div class="cart-bottom">
-            <div class="cart-info clearfix cart-section">
-              <div class="type--caps cart-info__total cart-info__small">Total</div>
-              <div class="cart-info__pricing">
-                <span class="cart-info__small cart-info__total">USD</span>
-                <span class="pricing pricing--no-padding"></span>
-              </div>
-            </div>
-            <div class="cart-actions-container cart-section type--center">
-              <input type="submit" class="btn--cart-checkout slide__product__btn-buy" id="checkout" name="checkout" value="Checkout">
-            </div>
-          </div>
-        </div>
-      </div>
-      <script id="CartItemTemplate" type="text/template">
-        <div class="cart-item">
-          <div class="cart-item__img cart-item__content-row"></div>
-            <span class="cart-item__title"></span>
-            <div class="cart-item__content-row">
-              <div class="cart-item__quantity-container">
-                <button class="btn--seamless quantity-decrement" type="button">
-                  <span>-</span><span class="visuallyhidden">Decrement</span>
-                </button>
-                <input class="cart-item__quantity" type="number" min="0" aria-label="Quantity">
-                <button class="btn--seamless quantity-increment" type="button">
-                  <span>+</span><span class="visuallyhidden">Increment</span>
-                </button>
-              </div>
-              <span class="cart-item__price"></span>
-            </div>
-        </div>
-      </script>
-    </div>
   </div>
 </template>
 
@@ -227,7 +116,6 @@
   import store from '../store'
   const page = require('scroll-doc')()
   import SiteFooter from './SiteFooter.vue'
-  const Flickity = require('flickity')
   import { forEach } from 'lodash'
   import { addClass, removeClass, isMobile } from '../helpers'
 
@@ -245,8 +133,8 @@
         aromaticsTextFaded: false,
         scrollArrowIsVisible: true,
         scrollArrowIsActive: true,
-        aromaticBackgroundUrl: '',
-        aromaticBackgroundIsVisible: false,
+        aromaticBackgroundUrl: '/images/bg-aromatic-santal.jpg',
+        aromaticBackgroundIsVisible: true,
         shadeLookup: {
           bouleau: 'dark',
           firBalsam: 'dark',
@@ -278,9 +166,6 @@
       scrollToFold () {
         let el = document.getElementById('the-fold')
         let foldOffset = el.getBoundingClientRect().top + document.body.scrollTop
-        if (window.flkty) {
-          window.flkty.playPlayer()
-        }
 
         scrollHelper.top(page, Number(foldOffset), { duration: 400 })
         return
@@ -331,6 +216,7 @@
         }
       },
       hideAromaticBg (timeoutDuration = 2000) {
+        return;
         window.clearTimeout(this.bgTimeoutId)
         this.bgTimeoutId = window.setTimeout(() => {
           // Set visibility
@@ -349,57 +235,14 @@
           this.aromaticBackgroundUrl = ''
         }, timeoutDuration)
       },
-      instantiateMobileFlickity () {
-        let flickityInstance = new Flickity('.slide__product-carousel', {
-          cellSelector: '.slide__product-carousel__item',
-          cellAlign: 'left',
-          contain: true,
-          pageDots: false,
-          prevNextButtons: true,
-          slidesWidth: '20rem',
-          selectedAttraction: 0.2,
-          friction: 0.8,
-          arrowShape: {
-            x0: 10,
-            x1: 55, y1: 45,
-            x2: 60, y2: 40,
-            x3: 20
-          },
-        })
-
-        window.flkty = flickityInstance
-      },
-      instantiateDesktopFlickity () {
-        let flickityInstance = new Flickity('.slide__product-images', {
-          cellSelector: '.slide__product-images__item',
-          cellAlign: 'center',
-          contain: true,
-          draggable: false,
-          pageDots: false,
-          prevNextButtons: false,
-          slidesWidth: '30rem',
-          wrapAround: true,
-        })
-
-        window.flkty = flickityInstance
-      },
-      preloadImages () {
-        const aromatics = ['bouleau', 'firBalsam', 'santal', 'agrumes', 'patchouli']
-        forEach(aromatics, function (aromatic) {
-          (new Image()).src = `/images/bg-aromatic-${aromatic}.jpg`
-        })
-      },
     },
     ready () {
       const isMobile = this.isMobile()
-      this.preloadImages()
 
       if (isMobile) {
         addClass(document.body, 'is-mobile')
-        this.instantiateMobileFlickity()
       } else {
         addClass(document.body, 'is-not-mobile')
-        this.instantiateDesktopFlickity()
         // Initialize skrollr
         if (! this.skrollr) {
           const skrollrOpts = {}
@@ -408,15 +251,11 @@
       }
 
       this.$watch('scrollPos.top', (pos, oldPos) => {
+        console.log('scrollPos.top', this.scrollPos.top)
 
         if (Math.abs(pos - oldPos) > 40) {
           this.disableDarkMode()
           this.hideAromaticBg(0)
-        }
-
-        if (pos < -window.innerHeight && !(pos < -2 * window.innerHeight)) {
-          // Got to first slide
-          window.flkty.playPlayer()
         }
 
         if (pos < -window.innerHeight + 5) {
@@ -443,11 +282,6 @@
       // Destroy skrollr instance
       if (this.skrollr) {
         this.skrollr.destroy()
-      }
-
-      // Destroy flickity instance
-      if (window.flkty) {
-        window.flkty.destroy()
       }
     },
   }

@@ -2755,7 +2755,8 @@ var requirejs, require, define;
         }
 
         function C() {
-            console.log("INITING SMOKE"), y = document.getElementById("smoke-container"), b = d.initialize(y, {
+            // console.log("INITING SMOKE");
+            y = document.getElementById("smoke-container"), b = d.initialize(y, {
                 context: {
                     depth: !1
                 },
@@ -2764,7 +2765,8 @@ var requirejs, require, define;
                     texture_float: !0
                 }
             }, T), E = new u(y), w = new a(y), S = new l(b, resources), window.gl = b, w.mouseUp = function (e, t) {
-                console.log("CLICKING SMOKE..."), A(e, t)
+                // console.log("CLICKING SMOKE...");
+                A(e, t)
             }, b.getExtension("OES_texture_float_linear"), i = N() ? b.LUMINANCE : b.RGBA, onresize, window.addEventListener("resize", f(s, 250)), typeof SMOKE_DEBUG != "undefined" && SMOKE_DEBUG == 1 && L(), s()
         }
 
@@ -2984,20 +2986,21 @@ var requirejs, require, define;
         t.updateSize = s,
         this.init = C,
         this.start = function () {
-          console.log("STARTING SMOKE"), E.start()
+          // console.log("STARTING SMOKE");
+          E.start()
         },
         this.stop = function () {
-          console.log("STOPPING SMOKE"), E.stop()
+          // console.log("STOPPING SMOKE");
+          E.stop()
         },
         this.restart = function () {
-          console.log("RESTARTING SMOKE"), s(), E.start()
+          // console.log("RESTARTING SMOKE");
+          s(), E.start()
         },
         window.SmokeEffect = this
     });
 
 (function () {
-
-  // Vroom
   if (!isMobile()) {
     require(['main']);
     window.SmokeEffect.init();
@@ -3007,5 +3010,4 @@ var requirejs, require, define;
   function isMobile() {
     return (/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera);
   }
-
-})()
+})();

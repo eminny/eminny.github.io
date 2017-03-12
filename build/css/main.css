@@ -1653,12 +1653,12 @@ input[type=number]::-webkit-outer-spin-button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 80%;
+  width: 90%;
 }
 @media screen and (min-width: 768px) {
   .slide__product-wrapper,
   .slide__accent-wrapper {
-    width: 50%;
+    width: 90%;
   }
 }
 
@@ -1744,8 +1744,7 @@ a.slide__product__btn-buy.is-disabled:hover {
 }
 
 .slide__accent-wrapper {
-  -ms-grid-row-align: flex-start;
-      align-items: flex-start;
+  align-items: flex-start;
 }
 
 .slide__accent-image {
