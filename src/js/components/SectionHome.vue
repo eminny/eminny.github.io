@@ -29,7 +29,6 @@
     >
       <!-- Product Images (non-mobile) -->
       <div class="slide__product-wrapper"
-           v-if="!isMobile()"
            data-0="opacity: 0"
            data-100p="opacity: 1"
            data-200p="opacity: 1"
