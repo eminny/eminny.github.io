@@ -255,7 +255,6 @@
       }
 
       this.$watch('scrollPos.top', (pos, oldPos) => {
-        console.log('scrollPos.top', this.scrollPos.top)
 
         if (Math.abs(pos - oldPos) > 40) {
           this.disableDarkMode()
