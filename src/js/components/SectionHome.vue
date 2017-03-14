@@ -34,7 +34,12 @@
            data-200p="opacity: 1"
            data-250p="opacity: 0"
       >
-        <img src="/images/cander-spring-2017.jpg" alt="Coming Spring 2017">
+        <div class="slide__product--desktop">
+          <img src="/images/cander-spring-2017.jpg" alt="Collection launching Spring 2017">
+        </div>
+        <div class="slide__product--mobile">
+          <img src="/images/cander-spring-2017--mobile.jpg" alt="Collection launching Spring 2017">
+        </div>
         <h2 class="the-scent__desc">Collection launching Spring 2017</h2>
       </div>
     </div>
