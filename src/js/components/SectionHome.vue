@@ -54,8 +54,7 @@
     >
       <div class="slide--2__bg is-dark" style="background-image: url('/images/bg-aromatic-santal.jpg');"></div>
       <div class="the-scent">
-        <h4 class="the-scent__title">Scent One</h4>
-        <p class="the-scent__desc">Refined fragrances created in Paris by elite French perfumers</p>
+        <p class="the-scent__desc" style="font-style: italic;">Refined fragrances created in Paris by elite French perfumers</p>
       </div>
     </div>
 
