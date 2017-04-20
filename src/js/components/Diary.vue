@@ -72,10 +72,10 @@
           get: 'user',
           userId: '3217141691',
           clientId: '6bcc0d93f5e14265ac5eab12fdc92aef',
-          accessToken: '3217141691.6bcc0d9.e6e658bd426f48f295fbe49762da4a8d',
+          accessToken: '3217141691.6bcc0d9.c10a1c87199e4f808aaa60efeb9748e1',
           limit: 20,
           resolution: 'standard_resolution',
-          target: `instafeed`,
+          target: 'instafeed',
           template: '<a class="diary-carousel__cell" href="{{link}}" target="_blank" data-flickity-bg-lazyload="{{image}}"></a>',
           after () {
             if (!this.options || typeof this.options.target !== 'string') {
