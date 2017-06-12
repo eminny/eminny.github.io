@@ -35,19 +35,19 @@
            data-250p="opacity: 0"
       >
         <div class="slide__products">
-          <div class="slide__product" data-product-id="Scent 01" @click="showProductBuyModal">
+          <div class="slide__product" data-product-title="Scent 01" @click="showProductBuyModal">
             <img src="/images/candle-1.png" alt="Collection launching Spring 2017">
             <button class="slide__product__btn">Buy Now</button>
           </div>
-          <div class="slide__product" data-product-id="Our Youth" @click="showProductBuyModal">
+          <div class="slide__product" data-product-title="Our Youth" @click="showProductBuyModal">
             <img src="/images/candle-2.png" alt="Collection launching Spring 2017">
             <button class="slide__product__btn">Buy Now</button>
           </div>
-          <div class="slide__product" data-product-id="Rue Vertbois" @click="showProductBuyModal">
+          <div class="slide__product" data-product-title="Rue Vertbois" @click="showProductBuyModal">
             <img src="/images/candle-3.png" alt="Collection launching Spring 2017">
             <button class="slide__product__btn">Buy Now</button>
           </div>
-          <div class="slide__product" data-product-id="Rose" @click="showProductBuyModal">
+          <div class="slide__product" data-product-title="Rose" @click="showProductBuyModal">
             <img src="/images/candle-4.png" alt="Collection launching Spring 2017">
             <button class="slide__product__btn">Buy Now</button>
           </div>
@@ -138,7 +138,7 @@
     components: {
       SiteFooter,
     },
-    data () {
+    data() {
       return {
         darkMode: store.data.darkMode,
         menuOverlay: store.data.menuOverlay,
@@ -162,33 +162,36 @@
       }
     },
     methods: {
-      isMobile () {
+      isMobile() {
         return isMobile()
       },
-      enableDarkMode () {
+      enableDarkMode() {
         let shade = this.shadeLookup[this.currentAromatic]
         addClass(document.body, `shade--${shade}`)
 
         this.darkMode = true
         this.$dispatch('updateDarkMode', true)
       },
-      disableDarkMode () {
+      disableDarkMode() {
         let shade = this.shadeLookup[this.currentAromatic]
         removeClass(document.body, `shade--${shade}`)
 
         this.darkMode = false
         this.$dispatch('updateDarkMode', false)
       },
-      scrollToFold () {
+      scrollToFold() {
         let el = document.getElementById('the-fold')
         let foldOffset = el.getBoundingClientRect().top + document.body.scrollTop
 
         scrollHelper.top(page, Number(foldOffset), { duration: 400 })
       },
-      showProductBuyModal () {
+      showProductBuyModal(event) {
         this.modal.visible = true;
+        this.modal.productOfInterest = event.currentTarget.dataset.productTitle;
+        this.modal.title = 'Unavailable';
+        this.modal.body = `Unfortunately, this item is currently sold out. When the item is back in stock we will notify you by email.`;
       },
-      showAromaticBg (event) {
+      showAromaticBg(event) {
         let wasMobileTap= (this.isMobile() && event && event.pointerType)
 
         // If it was touch-tapped, start timer to auto-hide
@@ -233,7 +236,7 @@
           this.disableDarkMode()
         }
       },
-      hideAromaticBg (timeoutDuration = 2000) {
+      hideAromaticBg(timeoutDuration = 2000) {
         return;
         window.clearTimeout(this.bgTimeoutId)
         this.bgTimeoutId = window.setTimeout(() => {
@@ -254,7 +257,7 @@
         }, timeoutDuration)
       },
     },
-    ready () {
+    ready() {
       const isMobile = this.isMobile()
 
       if (isMobile) {
@@ -295,7 +298,7 @@
         }
       })
     },
-    destroyed () {
+    destroyed() {
       // Destroy skrollr instance
       if (this.skrollr) {
         this.skrollr.destroy()

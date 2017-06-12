@@ -20,19 +20,21 @@
 
   &.fade-transition {
     transition: opacity $transition-standard;
-
-    .modal {
-      transition: transform $transition-standard, opacity $transition-standard;
-    }
   }
 
   &.fade-enter,
   &.fade-leave {
     opacity: 0;
-    .modal {
-      opacity: 0;
-      transform: translateY(20px);
-    }
+  }
+
+  &.fade-transition > .modal {
+    transition: transform $transition-standard, opacity $transition-standard;
+  }
+
+  &.fade-enter > .modal,
+  &.fade-leave > .modal {
+    opacity: 0;
+    transform: translateY(20px);
   }
 }
 
@@ -41,18 +43,15 @@
   align-items: flex-start;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   margin-top: $header-height;
+  padding: 3rem;
   position: relative;
   width: 100%;
-  min-height: 300px;
+  min-height: 15rem;
 
-  @media screen and (min-width: 500px) {
-    max-width: 500px;
-  }
-
-  @media screen and ($large-screens) {
-
+  @media screen and (min-width: 400px) {
+    max-width: 400px;
   }
 }
 
@@ -85,11 +84,6 @@
   &:before {
     border-top: 0.2rem solid $color__black;
     transform: rotate(-45deg);
-  }
-
-  &:hover:before,
-  &:hover:after {
-    border-color: $color__gray;
   }
 
   &:active,

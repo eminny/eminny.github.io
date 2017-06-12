@@ -75,10 +75,6 @@
     h3 {
       margin: 2.5rem 0 2rem 0;
     }
-
-    @media screen and ($large-screens) {
-
-    }
   }
 
   .section-about__intro__text-wrap__inner {
