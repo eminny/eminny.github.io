@@ -43,6 +43,7 @@
   flex-direction: column;
   justify-content: flex-start;
   margin-top: $header-height;
+  position: relative;
   width: 100%;
   min-height: 300px;
 
@@ -56,15 +57,16 @@
 }
 
 .btn-close {
-  height: 1.3rem;
-  width: 1.8rem;
-  border: 0;
+  appearance: none;
+  background: transparent;
+  border: none;
   display: block;
+  height: 1.3rem;
   position: absolute;
-  right: 3rem;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: border-color $transition-standard;
+  right: 1.4rem;
+  top: 1.2rem;
+  width: 2rem;
+  text-indent: -9999px;
 
   &:after,
   &:before {
@@ -72,7 +74,7 @@
     display: block;
     position: absolute;
     width: 100%;
-    top: 50%;
+    transition: border-color $transition-standard;
   }
 
   &:after {
@@ -85,13 +87,14 @@
     transform: rotate(-45deg);
   }
 
-  .shade--dark &:after,
-  .shade--dark &:before {
-    border-color: $color__white;
+  &:hover:before,
+  &:hover:after {
+    border-color: $color__gray;
   }
 
-  .shade--light &:after,
-  .shade--light &:before {
-    border-color: $color__black;
+  &:active,
+  &:focus {
+    outline: none;
+    box-shadow: none;
   }
 }

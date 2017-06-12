@@ -1,7 +1,7 @@
 <template>
   <div class="modal-wrap" @click="closeModal">
     <div class="modal">
-      <span @click="closeModal" class="btn-menu btn-menu--open"></span>
+      <button @click="closeModal" class="btn-close"></button>
       <h1>Sold Out</h1>
       <p>Unfortunately, this item is currently sold out.</p>
     </div>
