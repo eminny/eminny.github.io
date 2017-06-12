@@ -16692,6 +16692,9 @@
 	      'contact': '/images/menu-accent-contact.png'
 	    }
 	  },
+	  modal: {
+	    visible: false
+	  },
 	  darkMode: false,
 	  router: void 0,
 	  skrollr: void 0,
@@ -40201,7 +40204,7 @@
 
 
 	// module
-	exports.push([module.id, ".the-scent[_v-1acc85c0] {\n  -ms-flex-align: center;\n      align-items: center;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  height: 100%;\n  -ms-flex-pack: center;\n      justify-content: center;\n  -ms-transform: translateY(1%);\n      transform: translateY(1%); }\n  .is-mobile .the-scent[_v-1acc85c0] {\n    height: auto;\n    position: relative;\n    min-height: 100vh; }\n\n.the-scent__title[_v-1acc85c0] {\n  font-family: \"brown-std\", \"Helvetica Neue\", Helvetica, sans-serif;\n  font-size: 1.4rem;\n  line-height: 1.2858;\n  margin-bottom: 4rem;\n  text-transform: uppercase; }\n  .shade--dark .the-scent__title[_v-1acc85c0] {\n    color: #ffffff; }\n  .shade--light .the-scent__title[_v-1acc85c0] {\n    color: #000000; }\n\n.the-scent__desc[_v-1acc85c0] {\n  font-family: \"sabon-roman\", serif;\n  font-size: 1.8rem;\n  line-height: 1.34375;\n  text-align: center;\n  transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .shade--dark .the-scent__desc[_v-1acc85c0] {\n    color: #ffffff; }\n  .shade--light .the-scent__desc[_v-1acc85c0] {\n    color: #000000; }\n  @media screen and (min-width: 768px) {\n    .the-scent__desc[_v-1acc85c0] {\n      font-size: 3.2rem; } }\n\n.aromatic[_v-1acc85c0] {\n  cursor: pointer;\n  font-family: \"sabon-italic\", serif;\n  color: rgba(0, 0, 0, 0.5); }\n  .shade--dark .aromatic[_v-1acc85c0] {\n    color: rgba(255, 255, 255, 0.5); }\n  .shade--white .aromatic[_v-1acc85c0] {\n    color: rgba(0, 0, 0, 0.5); }\n  .aromatic[_v-1acc85c0]:hover, .aromatic.is-active[_v-1acc85c0] {\n    color: rgba(0, 0, 0, 0.8);\n    transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .shade--dark .aromatic[_v-1acc85c0]:hover,\n  .shade--dark .aromatic.is-active[_v-1acc85c0] {\n    color: rgba(255, 255, 255, 0.8); }\n  .shade--light .aromatic[_v-1acc85c0]:hover,\n  .shade--light .aromatic.is-active[_v-1acc85c0] {\n    color: rgba(0, 0, 0, 0.8); }\n\n.translations-wrapper[_v-1acc85c0] {\n  -ms-flex-align: center;\n      align-items: center;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  height: 100%;\n  -ms-flex-pack: center;\n      justify-content: center; }\n  .is-mobile .translations-wrapper[_v-1acc85c0] {\n    height: 100vh; }\n\n.translations-list[_v-1acc85c0] {\n  font-family: \"sabon-roman\", serif;\n  font-size: 1.2rem;\n  line-height: 2.75;\n  text-align: center;\n  text-transform: uppercase; }\n\n.slide__product__btn-buy[_v-1acc85c0], a.slide__product__btn-buy[_v-1acc85c0] {\n  margin: 0 auto 0; }\n", ""]);
+	exports.push([module.id, ".the-scent[_v-1acc85c0] {\n  -ms-flex-align: center;\n      align-items: center;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  height: 100%;\n  -ms-flex-pack: center;\n      justify-content: center;\n  -ms-transform: translateY(1%);\n      transform: translateY(1%); }\n  .is-mobile .the-scent[_v-1acc85c0] {\n    height: auto;\n    position: relative;\n    min-height: 100vh; }\n\n.the-scent__title[_v-1acc85c0] {\n  font-family: \"brown-std\", \"Helvetica Neue\", Helvetica, sans-serif;\n  font-size: 1.4rem;\n  line-height: 1.2858;\n  margin-bottom: 4rem;\n  text-transform: uppercase; }\n  .shade--dark .the-scent__title[_v-1acc85c0] {\n    color: #ffffff; }\n  .shade--light .the-scent__title[_v-1acc85c0] {\n    color: #000000; }\n\n.the-scent__desc[_v-1acc85c0] {\n  font-family: \"sabon-roman\", serif;\n  font-size: 1.8rem;\n  line-height: 1.34375;\n  text-align: center;\n  transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .shade--dark .the-scent__desc[_v-1acc85c0] {\n    color: #ffffff; }\n  .shade--light .the-scent__desc[_v-1acc85c0] {\n    color: #000000; }\n  @media screen and (min-width: 768px) {\n    .the-scent__desc[_v-1acc85c0] {\n      font-size: 3.2rem; } }\n\n.aromatic[_v-1acc85c0] {\n  cursor: pointer;\n  font-family: \"sabon-italic\", serif;\n  color: rgba(0, 0, 0, 0.5); }\n  .shade--dark .aromatic[_v-1acc85c0] {\n    color: rgba(255, 255, 255, 0.5); }\n  .shade--white .aromatic[_v-1acc85c0] {\n    color: rgba(0, 0, 0, 0.5); }\n  .aromatic[_v-1acc85c0]:hover, .aromatic.is-active[_v-1acc85c0] {\n    color: rgba(0, 0, 0, 0.8);\n    transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .shade--dark .aromatic[_v-1acc85c0]:hover,\n  .shade--dark .aromatic.is-active[_v-1acc85c0] {\n    color: rgba(255, 255, 255, 0.8); }\n  .shade--light .aromatic[_v-1acc85c0]:hover,\n  .shade--light .aromatic.is-active[_v-1acc85c0] {\n    color: rgba(0, 0, 0, 0.8); }\n\n.translations-wrapper[_v-1acc85c0] {\n  -ms-flex-align: center;\n      align-items: center;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  height: 100%;\n  -ms-flex-pack: center;\n      justify-content: center; }\n  .is-mobile .translations-wrapper[_v-1acc85c0] {\n    height: 100vh; }\n\n.translations-list[_v-1acc85c0] {\n  font-family: \"sabon-roman\", serif;\n  font-size: 1.2rem;\n  line-height: 2.75;\n  text-align: center;\n  text-transform: uppercase; }\n\n.slide__products[_v-1acc85c0] {\n  -ms-flex-align: center;\n      align-items: center;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n  -ms-flex-pack: center;\n      justify-content: center;\n  margin-bottom: 2.5rem; }\n\n.slide__product[_v-1acc85c0] {\n  cursor: pointer;\n  width: 50%;\n  padding: 1.5rem; }\n  .slide__product img + .slide__product__btn[_v-1acc85c0] {\n    margin-top: 1rem; }\n  @media screen and (min-width: 620px) {\n    .slide__product[_v-1acc85c0] {\n      padding: 6rem; } }\n  @media screen and (min-width: 768px) {\n    .slide__product[_v-1acc85c0] {\n      padding: 1rem;\n      width: 25%; } }\n\n.slide__product__btn[_v-1acc85c0] {\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n  background: #ffffff;\n  border: 1px solid #c1c1c1;\n  box-shadow: none;\n  display: block;\n  font-size: 1.2rem;\n  margin: 0 auto;\n  padding: 1rem;\n  text-transform: uppercase;\n  transition: border-color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  width: 80%; }\n  .slide__product__btn[_v-1acc85c0]:hover, .slide__product__btn[_v-1acc85c0]:focus {\n    outline: none; }\n  .slide__product:hover > .slide__product__btn[_v-1acc85c0] {\n    border-color: #000000; }\n  @media screen and (min-width: 768px) {\n    .slide__product__btn[_v-1acc85c0] {\n      font-size: 1.4rem; } }\n\n.slide__product__btn-buy[_v-1acc85c0], a.slide__product__btn-buy[_v-1acc85c0] {\n  margin: 0 auto 0; }\n", ""]);
 
 	// exports
 
@@ -40247,6 +40250,7 @@
 	    return {
 	      darkMode: _store2.default.data.darkMode,
 	      menuOverlay: _store2.default.data.menuOverlay,
+	      modal: _store2.default.data.modal,
 	      scrollPos: _store2.default.data.scrollPos,
 	      skrollr: _store2.default.data.skrollr,
 	      currentAromatic: null,
@@ -40289,7 +40293,9 @@
 	      var foldOffset = el.getBoundingClientRect().top + document.body.scrollTop;
 
 	      _scroll2.default.top(page, Number(foldOffset), { duration: 400 });
-	      return;
+	    },
+	    showProductBuyModal: function showProductBuyModal() {
+	      this.modal.visible = true;
 	    },
 	    showAromaticBg: function showAromaticBg(event) {
 	      var _this = this;
@@ -40416,7 +40422,7 @@
 /* 89 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"slides\" _v-1acc85c0=\"\">\n  <!-- SCROLL ARROW ICON -->\n  <span @click=\"scrollToFold\" class=\"slide__icn-scroll\" v-bind:class=\"scrollArrowIsActive ? 'is-active' : 'is-inactive'\" v-show=\"scrollArrowIsVisible\" transition=\"fade\" data-start=\"opacity: 1;\" data-850-end=\"opacity: 1;\" data-800-end=\"opacity: 0.5;\" data-700-end=\"opacity: 0;\" data-end=\"opacity: 0;\" _v-1acc85c0=\"\">Scroll Down</span>\n\n  <!-- SECTION 0: INTRO/HERO -->\n  <div class=\"slide slide--0 slide--intro\" _v-1acc85c0=\"\">\n    <div class=\"slide--intro__logo\" data-0=\"opacity: 1;\" data-50p=\"opacity: 0;\" _v-1acc85c0=\"\">\n      <img src=\"/images/logo.svg\" title=\"CANDER PARIS\" _v-1acc85c0=\"\">\n    </div>\n  </div>\n\n  <!-- SECTION 1: THE CANDLE -->\n  <div class=\"slide slide--1\" id=\"the-fold\" data-0=\"transform: translate(0, 100%);\" data-100p=\"transform: translate(0, 0%)\" _v-1acc85c0=\"\">\n    <!-- Product Images (non-mobile) -->\n    <div class=\"slide__product-wrapper\" data-0=\"opacity: 0\" data-100p=\"opacity: 1\" data-200p=\"opacity: 1\" data-250p=\"opacity: 0\" _v-1acc85c0=\"\">\n      <div class=\"slide__product--desktop\" _v-1acc85c0=\"\">\n        <img src=\"/images/cander-spring-2017.jpg\" alt=\"Collection launching Spring 2017\" _v-1acc85c0=\"\">\n      </div>\n      <div class=\"slide__product--mobile\" _v-1acc85c0=\"\">\n        <img src=\"/images/cander-spring-2017--mobile.jpg\" alt=\"Collection launching Spring 2017\" _v-1acc85c0=\"\">\n      </div>\n      <h2 class=\"the-scent__desc\" _v-1acc85c0=\"\">Collection launching Spring 2017</h2>\n    </div>\n  </div>\n\n  <!-- SECTION 2: THE SCENT -->\n  <div class=\"slide slide--2 shade--dark\" data-0=\"opacity: 0\" data-200p=\"opacity: 0; transform: translate(0, 100%);\" data-250p=\"opacity: 0; transform: translate(0, 5%);\" data-300p=\"opacity: 1; transform: translate(0, 0%);\" data-450p=\"opacity: 0; transform: translate(0, -2%);\" _v-1acc85c0=\"\">\n    <div class=\"slide--2__bg is-dark\" style=\"background-image: url('/images/bg-aromatic-santal.jpg');\" _v-1acc85c0=\"\"></div>\n    <div class=\"the-scent\" _v-1acc85c0=\"\">\n      <p class=\"the-scent__desc\" style=\"font-style: italic;\" _v-1acc85c0=\"\">Refined fragrances created in Paris by elite French perfumers</p>\n    </div>\n  </div>\n\n  <!-- SECTION 3: DOOR -->\n  <div class=\"slide slide--3\" data-0=\"opacity: 0\" data-300p=\"opacity: 0; transform: translate(0, 100%);\" data-450p=\"opacity: 0; transform: translate(0, 30%);\" data-500p=\"opacity: 1; transform: translate(0, 0%);\" data-650p=\"opacity: 1; transform: translate(0, 0%);\" data-750p=\"transform: translate(0, -120%);\" _v-1acc85c0=\"\">\n    <div class=\"translations-wrapper\" _v-1acc85c0=\"\">\n      <ul class=\"translations-list\" _v-1acc85c0=\"\">\n        <li _v-1acc85c0=\"\">Bougie Parfumée</li>\n        <li _v-1acc85c0=\"\">Fragranced Candle</li>\n        <li _v-1acc85c0=\"\">Candela Profumata</li>\n        <li _v-1acc85c0=\"\">Vela Perfumada</li>\n        <li _v-1acc85c0=\"\">Duftkerze</li>\n        <li _v-1acc85c0=\"\">香味蠟燭</li>\n        <li _v-1acc85c0=\"\">香りのろうそく</li>\n      </ul>\n    </div>\n  </div>\n\n  <!-- SECTION 4: PRODUCT -->\n  <div class=\"slide slide--4\" data-0=\"opacity: 0\" data-700p=\"opacity: 0; transform: translate(0, 100%);\" data-725p=\"opacity: 0; transform: translate(0, 20%);\" data-760p=\"opacity: 0.3; transform: translate(0, 5%);\" data-770p=\"opacity: 1; transform: translate(0, 0%);\" data-800p=\"transform: translate(0, 0%);\" data-890p=\"transform: translate(0, -15%);\" _v-1acc85c0=\"\">\n    <div class=\"slide--4__inner\" _v-1acc85c0=\"\">\n      <img src=\"/images/product-box-front.png\" alt=\"Front\" class=\"slide--4__product-image\" _v-1acc85c0=\"\">\n      <h2 class=\"zeta\" _v-1acc85c0=\"\">Coming soon in stores Spring 2017</h2>\n    </div>\n  </div>\n\n  <!-- FOOTER -->\n  <div class=\"slide--footer-wrapper\" data-0=\"opacity: 0\" data-800p=\"opacity: 0; transform: translate(0, 100%);\" data-825p=\"opacity: 0; transform: translate(0, 20%);\" data-860p=\"opacity: 0.3; transform: translate(0, 5%);\" data-870p=\"opacity: 1; transform: translate(0, 0%);\" _v-1acc85c0=\"\">\n    <site-footer _v-1acc85c0=\"\"></site-footer>\n  </div>\n</div>\n";
+	module.exports = "\n<div class=\"slides\" _v-1acc85c0=\"\">\n  <!-- SCROLL ARROW ICON -->\n  <span @click=\"scrollToFold\" class=\"slide__icn-scroll\" v-bind:class=\"scrollArrowIsActive ? 'is-active' : 'is-inactive'\" v-show=\"scrollArrowIsVisible\" transition=\"fade\" data-start=\"opacity: 1;\" data-850-end=\"opacity: 1;\" data-800-end=\"opacity: 0.5;\" data-700-end=\"opacity: 0;\" data-end=\"opacity: 0;\" _v-1acc85c0=\"\">Scroll Down</span>\n\n  <!-- SECTION 0: INTRO/HERO -->\n  <div class=\"slide slide--0 slide--intro\" _v-1acc85c0=\"\">\n    <div class=\"slide--intro__logo\" data-0=\"opacity: 1;\" data-50p=\"opacity: 0;\" _v-1acc85c0=\"\">\n      <img src=\"/images/logo.svg\" title=\"CANDER PARIS\" _v-1acc85c0=\"\">\n    </div>\n  </div>\n\n  <!-- SECTION 1: THE CANDLE -->\n  <div class=\"slide slide--1\" id=\"the-fold\" data-0=\"transform: translate(0, 100%);\" data-100p=\"transform: translate(0, 0%)\" _v-1acc85c0=\"\">\n    <!-- Product Images (non-mobile) -->\n    <div class=\"slide__product-wrapper\" data-0=\"opacity: 0\" data-100p=\"opacity: 1\" data-200p=\"opacity: 1\" data-250p=\"opacity: 0\" _v-1acc85c0=\"\">\n      <div class=\"slide__products\" _v-1acc85c0=\"\">\n        <div class=\"slide__product\" data-product-id=\"Scent 01\" @click=\"showProductBuyModal\" _v-1acc85c0=\"\">\n          <img src=\"/images/candle-1.png\" alt=\"Collection launching Spring 2017\" _v-1acc85c0=\"\">\n          <button class=\"slide__product__btn\" _v-1acc85c0=\"\">Buy Now</button>\n        </div>\n        <div class=\"slide__product\" data-product-id=\"Our Youth\" @click=\"showProductBuyModal\" _v-1acc85c0=\"\">\n          <img src=\"/images/candle-2.png\" alt=\"Collection launching Spring 2017\" _v-1acc85c0=\"\">\n          <button class=\"slide__product__btn\" _v-1acc85c0=\"\">Buy Now</button>\n        </div>\n        <div class=\"slide__product\" data-product-id=\"Rue Vertbois\" @click=\"showProductBuyModal\" _v-1acc85c0=\"\">\n          <img src=\"/images/candle-3.png\" alt=\"Collection launching Spring 2017\" _v-1acc85c0=\"\">\n          <button class=\"slide__product__btn\" _v-1acc85c0=\"\">Buy Now</button>\n        </div>\n        <div class=\"slide__product\" data-product-id=\"Rose\" @click=\"showProductBuyModal\" _v-1acc85c0=\"\">\n          <img src=\"/images/candle-4.png\" alt=\"Collection launching Spring 2017\" _v-1acc85c0=\"\">\n          <button class=\"slide__product__btn\" _v-1acc85c0=\"\">Buy Now</button>\n        </div>\n      </div>\n      <h2 class=\"the-scent__desc\" _v-1acc85c0=\"\">Collection launching Spring 2017</h2>\n    </div>\n  </div>\n\n  <!-- SECTION 2: THE SCENT -->\n  <div class=\"slide slide--2 shade--dark\" data-0=\"opacity: 0\" data-200p=\"opacity: 0; transform: translate(0, 100%);\" data-250p=\"opacity: 0; transform: translate(0, 5%);\" data-300p=\"opacity: 1; transform: translate(0, 0%);\" data-450p=\"opacity: 0; transform: translate(0, -2%);\" _v-1acc85c0=\"\">\n    <div class=\"slide--2__bg is-dark\" style=\"background-image: url('/images/bg-aromatic-santal.jpg');\" _v-1acc85c0=\"\"></div>\n    <div class=\"the-scent\" _v-1acc85c0=\"\">\n      <p class=\"the-scent__desc\" style=\"font-style: italic;\" _v-1acc85c0=\"\">Refined fragrances created in Paris by elite French perfumers</p>\n    </div>\n  </div>\n\n  <!-- SECTION 3: DOOR -->\n  <div class=\"slide slide--3\" data-0=\"opacity: 0\" data-300p=\"opacity: 0; transform: translate(0, 100%);\" data-450p=\"opacity: 0; transform: translate(0, 30%);\" data-500p=\"opacity: 1; transform: translate(0, 0%);\" data-650p=\"opacity: 1; transform: translate(0, 0%);\" data-750p=\"transform: translate(0, -120%);\" _v-1acc85c0=\"\">\n    <div class=\"translations-wrapper\" _v-1acc85c0=\"\">\n      <ul class=\"translations-list\" _v-1acc85c0=\"\">\n        <li _v-1acc85c0=\"\">Bougie Parfumée</li>\n        <li _v-1acc85c0=\"\">Fragranced Candle</li>\n        <li _v-1acc85c0=\"\">Candela Profumata</li>\n        <li _v-1acc85c0=\"\">Vela Perfumada</li>\n        <li _v-1acc85c0=\"\">Duftkerze</li>\n        <li _v-1acc85c0=\"\">香味蠟燭</li>\n        <li _v-1acc85c0=\"\">香りのろうそく</li>\n      </ul>\n    </div>\n  </div>\n\n  <!-- SECTION 4: PRODUCT -->\n  <div class=\"slide slide--4\" data-0=\"opacity: 0\" data-700p=\"opacity: 0; transform: translate(0, 100%);\" data-725p=\"opacity: 0; transform: translate(0, 20%);\" data-760p=\"opacity: 0.3; transform: translate(0, 5%);\" data-770p=\"opacity: 1; transform: translate(0, 0%);\" data-800p=\"transform: translate(0, 0%);\" data-890p=\"transform: translate(0, -15%);\" _v-1acc85c0=\"\">\n    <div class=\"slide--4__inner\" _v-1acc85c0=\"\">\n      <img src=\"/images/product-box-front.png\" alt=\"Front\" class=\"slide--4__product-image\" _v-1acc85c0=\"\">\n      <h2 class=\"zeta\" _v-1acc85c0=\"\">Coming soon in stores Spring 2017</h2>\n    </div>\n  </div>\n\n  <!-- FOOTER -->\n  <div class=\"slide--footer-wrapper\" data-0=\"opacity: 0\" data-800p=\"opacity: 0; transform: translate(0, 100%);\" data-825p=\"opacity: 0; transform: translate(0, 20%);\" data-860p=\"opacity: 0.3; transform: translate(0, 5%);\" data-870p=\"opacity: 1; transform: translate(0, 0%);\" _v-1acc85c0=\"\">\n    <site-footer _v-1acc85c0=\"\"></site-footer>\n  </div>\n</div>\n";
 
 /***/ },
 /* 90 */
@@ -41334,7 +41340,7 @@
 	__vue_script__ = __webpack_require__(124)
 	if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
 	  console.warn("[vue-loader] src/js/App.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(135)
+	__vue_template__ = __webpack_require__(140)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -41416,7 +41422,11 @@
 
 	var _MenuOverlay2 = _interopRequireDefault(_MenuOverlay);
 
-	var _SiteHeader = __webpack_require__(130);
+	var _Modal = __webpack_require__(130);
+
+	var _Modal2 = _interopRequireDefault(_Modal);
+
+	var _SiteHeader = __webpack_require__(135);
 
 	var _SiteHeader2 = _interopRequireDefault(_SiteHeader);
 
@@ -41427,12 +41437,14 @@
 	    return {
 	      scrollPos: _store2.default.data.scrollPos,
 	      menuOverlay: _store2.default.data.menuOverlay,
+	      modal: _store2.default.data.modal,
 	      darkMode: _store2.default.data.darkMode
 	    };
 	  },
 
 	  components: {
 	    MenuOverlay: _MenuOverlay2.default,
+	    Modal: _Modal2.default,
 	    SiteHeader: _SiteHeader2.default
 	  },
 	  methods: {},
@@ -41599,8 +41611,147 @@
 	__webpack_require__(131)
 	__vue_script__ = __webpack_require__(133)
 	if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
-	  console.warn("[vue-loader] src/js/components/SiteHeader.vue: named exports in *.vue files are ignored.")}
+	  console.warn("[vue-loader] src/js/components/Modal.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(134)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
+	if (__vue_template__) {
+	__vue_options__.template = __vue_template__
+	}
+	if (!__vue_options__.computed) __vue_options__.computed = {}
+	Object.keys(__vue_styles__).forEach(function (key) {
+	var module = __vue_styles__[key]
+	__vue_options__.computed[key] = function () { return module }
+	})
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "_v-4efdae2e/Modal.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 131 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(132);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(12)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-4efdae2e&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Modal.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-4efdae2e&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Modal.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 132 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(11)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".modal-wrap[_v-4efdae2e] {\n  background: rgba(0, 0, 0, 0.2);\n  bottom: 0;\n  display: block;\n  height: 100%;\n  left: 0;\n  min-height: 100vh;\n  position: fixed;\n  right: 0;\n  top: 0;\n  width: 100%;\n  transition: opacity 500ms ease;\n  z-index: 1050;\n  -ms-flex-align: center;\n      align-items: center;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: center;\n      justify-content: center; }\n  .modal-wrap.fade-transition[_v-4efdae2e] {\n    transition: opacity 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n    .modal-wrap.fade-transition .modal[_v-4efdae2e] {\n      transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955), opacity 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .modal-wrap.fade-enter[_v-4efdae2e], .modal-wrap.fade-leave[_v-4efdae2e] {\n    opacity: 0; }\n    .modal-wrap.fade-enter .modal[_v-4efdae2e], .modal-wrap.fade-leave .modal[_v-4efdae2e] {\n      opacity: 0;\n      -ms-transform: translateY(20px);\n          transform: translateY(20px); }\n\n.modal[_v-4efdae2e] {\n  background: #ffffff;\n  -ms-flex-align: start;\n      align-items: flex-start;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  -ms-flex-pack: start;\n      justify-content: flex-start;\n  margin-top: 8rem;\n  width: 100%;\n  min-height: 300px; }\n  @media screen and (min-width: 500px) {\n    .modal[_v-4efdae2e] {\n      max-width: 500px; } }\n\n.btn-close[_v-4efdae2e] {\n  height: 1.3rem;\n  width: 1.8rem;\n  border: 0;\n  display: block;\n  position: absolute;\n  right: 3rem;\n  top: 50%;\n  -ms-transform: translateY(-50%);\n      transform: translateY(-50%);\n  transition: border-color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .btn-close[_v-4efdae2e]:after, .btn-close[_v-4efdae2e]:before {\n    content: '';\n    display: block;\n    position: absolute;\n    width: 100%;\n    top: 50%; }\n  .btn-close[_v-4efdae2e]:after {\n    border-bottom: 0.2rem solid #000000;\n    -ms-transform: rotate(45deg);\n        transform: rotate(45deg); }\n  .btn-close[_v-4efdae2e]:before {\n    border-top: 0.2rem solid #000000;\n    -ms-transform: rotate(-45deg);\n        transform: rotate(-45deg); }\n  .shade--dark .btn-close[_v-4efdae2e]:after,\n  .shade--dark .btn-close[_v-4efdae2e]:before {\n    border-color: #ffffff; }\n  .shade--light .btn-close[_v-4efdae2e]:after,\n  .shade--light .btn-close[_v-4efdae2e]:before {\n    border-color: #000000; }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 133 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _store = __webpack_require__(17);
+
+	var _store2 = _interopRequireDefault(_store);
+
+	var _helpers = __webpack_require__(23);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var KEYCODE_ESC = 27;
+
+	exports.default = {
+	  data: function data() {
+	    return {
+	      modal: _store2.default.data.modal
+	    };
+	  },
+
+	  methods: {
+	    closeModal: function closeModal(event) {
+	      if (event && event.target !== event.currentTarget) {
+	        return;
+	      }
+
+	      this.modal.visible = false;
+	    },
+	    lockScroll: function lockScroll(el) {
+	      (0, _helpers.addClass)(el, 'overlay-open');
+	    },
+	    unlockScroll: function unlockScroll(el) {
+	      (0, _helpers.removeClass)(el, 'overlay-open');
+	    }
+	  },
+	  ready: function ready() {
+	    var _this = this;
+
+	    this.lockScroll(document.body);
+	    this.lockScroll(document.querySelector('html'));
+	    window.addEventListener('keydown', function (event) {
+	      if (event.keyCode === KEYCODE_ESC) {
+	        _this.closeModal();
+	      }
+	    });
+	  },
+	  destroyed: function destroyed() {
+	    this.unlockScroll(document.body);
+	    this.unlockScroll(document.querySelector('html'));
+	  }
+	};
+
+/***/ },
+/* 134 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"modal-wrap\" @click=\"closeModal\" _v-4efdae2e=\"\">\n  <div class=\"modal\" _v-4efdae2e=\"\">\n    <span @click=\"closeModal\" class=\"btn-menu btn-menu--open\" _v-4efdae2e=\"\"></span>\n    <h1 _v-4efdae2e=\"\">Sold Out</h1>\n    <p _v-4efdae2e=\"\">Unfortunately, this item is currently sold out.</p>\n  </div>\n</div>\n";
+
+/***/ },
+/* 135 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	var __vue_styles__ = {}
+	__webpack_require__(136)
+	__vue_script__ = __webpack_require__(138)
+	if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
+	  console.warn("[vue-loader] src/js/components/SiteHeader.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(139)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -41625,13 +41776,13 @@
 	})()}
 
 /***/ },
-/* 131 */
+/* 136 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(132);
+	var content = __webpack_require__(137);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(12)(content, {});
@@ -41651,7 +41802,7 @@
 	}
 
 /***/ },
-/* 132 */
+/* 137 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(11)();
@@ -41665,7 +41816,7 @@
 
 
 /***/ },
-/* 133 */
+/* 138 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41775,16 +41926,16 @@
 	};
 
 /***/ },
-/* 134 */
+/* 139 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<header class=\"site-header\" v-show=\"headerVisible\" transition=\"fade\" _v-205931a8=\"\">\n  <a href=\"/\" @click.prevent=\"logoClickHandler\" class=\"menu-overlay__nav-list__item\" _v-205931a8=\"\">\n    <img v-bind:src=\"logoUrl\" alt=\"CANDER PARIS\" title=\"CANDER PARIS\" class=\"logo\" _v-205931a8=\"\">\n  </a>\n  <a href=\"/\" @click.prevent=\"toggleMenu\" class=\"btn-menu btn-menu--{{ toggleState }}\" _v-205931a8=\"\"></a>\n</header>\n";
 
 /***/ },
-/* 135 */
+/* 140 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"cander-wrapper page--{{ this.$route.name ? this.$route.name : 'default' }}\" id=\"cander-app\">\n  <site-header :dark-mode=\"darkMode\"></site-header>\n  <menu-overlay v-if=\"menuOverlay.visible\" transition=\"fade\"></menu-overlay>\n  <main class=\"main-content\">\n    <router-view></router-view>\n  </main>\n</div>\n";
+	module.exports = "\n<div class=\"cander-wrapper page--{{ this.$route.name ? this.$route.name : 'default' }}\" id=\"cander-app\">\n  <site-header :dark-mode=\"darkMode\"></site-header>\n  <menu-overlay v-if=\"menuOverlay.visible\" transition=\"fade\"></menu-overlay>\n  <modal v-if=\"modal.visible\" transition=\"fade\"></modal>\n  <main class=\"main-content\">\n    <router-view></router-view>\n  </main>\n</div>\n";
 
 /***/ }
 /******/ ]);

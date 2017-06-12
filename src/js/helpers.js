@@ -14,7 +14,7 @@ export function removeClass(el, className) {
   }
 }
 
-export function hasClass (el, className) {
+export function hasClass(el, className) {
   if (el.classList) {
     el.classList.contains(className)
   } else {
@@ -22,6 +22,6 @@ export function hasClass (el, className) {
   }
 }
 
-export function isMobile () {
+export function isMobile() {
   return (/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera)
 }

@@ -2,6 +2,7 @@
   <div class="cander-wrapper page--{{ this.$route.name ? this.$route.name : 'default' }}" id="cander-app">
     <site-header :dark-mode="darkMode"></site-header>
     <menu-overlay v-if="menuOverlay.visible" transition="fade"></menu-overlay>
+    <modal v-if="modal.visible" transition="fade"></modal>
     <main class="main-content">
       <router-view></router-view>
     </main>
@@ -17,6 +18,7 @@
 <script>
   import store from './store'
   import MenuOverlay from './components/MenuOverlay.vue'
+  import Modal from './components/Modal.vue'
   import SiteHeader from './components/SiteHeader.vue'
 
   export default {
@@ -24,11 +26,13 @@
       return {
         scrollPos: store.data.scrollPos,
         menuOverlay: store.data.menuOverlay,
+        modal: store.data.modal,
         darkMode: store.data.darkMode,
       }
     },
     components: {
       MenuOverlay,
+      Modal,
       SiteHeader,
     },
     methods: {},

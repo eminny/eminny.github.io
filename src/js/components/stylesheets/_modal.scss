@@ -1,0 +1,97 @@
+@import "../../../stylesheets/variables";
+
+.modal-wrap {
+  background: rgba($color__black, 0.2);
+  bottom: 0;
+  display: block;
+  height: 100%;
+  left: 0;
+  min-height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  transition: opacity 500ms ease;
+  z-index: $zindex-modal;
+
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  &.fade-transition {
+    transition: opacity $transition-standard;
+
+    .modal {
+      transition: transform $transition-standard, opacity $transition-standard;
+    }
+  }
+
+  &.fade-enter,
+  &.fade-leave {
+    opacity: 0;
+    .modal {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  }
+}
+
+.modal {
+  background: $color__white;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: $header-height;
+  width: 100%;
+  min-height: 300px;
+
+  @media screen and (min-width: 500px) {
+    max-width: 500px;
+  }
+
+  @media screen and ($large-screens) {
+
+  }
+}
+
+.btn-close {
+  height: 1.3rem;
+  width: 1.8rem;
+  border: 0;
+  display: block;
+  position: absolute;
+  right: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: border-color $transition-standard;
+
+  &:after,
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+  }
+
+  &:after {
+    border-bottom: 0.2rem solid $color__black;
+    transform: rotate(45deg);
+  }
+
+  &:before {
+    border-top: 0.2rem solid $color__black;
+    transform: rotate(-45deg);
+  }
+
+  .shade--dark &:after,
+  .shade--dark &:before {
+    border-color: $color__white;
+  }
+
+  .shade--light &:after,
+  .shade--light &:before {
+    border-color: $color__black;
+  }
+}

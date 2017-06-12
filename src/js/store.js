@@ -16,6 +16,9 @@ store.data = {
       'contact': '/images/menu-accent-contact.png',
     },
   },
+  modal: {
+    visible: false,
+  },
   darkMode: false,
   router: void 0,
   skrollr: void 0,
