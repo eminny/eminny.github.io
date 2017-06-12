@@ -103,9 +103,60 @@
 }
 
 // shopify cart
+.slide__products {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.slide__product {
+  cursor: pointer;
+  width: 50%;
+  padding: 1.5rem;
+
+  img + .slide__product__btn {
+    margin-top: 1rem;
+  }
+
+  @media screen and (min-width: 620px) {
+    padding: 6rem;
+  }
+
+  @media screen and ($large-screens) {
+    padding: 1rem;
+    width: 25%;
+  }
+}
+
+.slide__product__btn {
+  appearance:  none;
+  background: $color__white;
+  border: 1px solid $color__gray;
+  box-shadow: none;
+  display: block;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  padding: 1rem;
+  text-transform: uppercase;
+  transition:  border-color $transition-standard;
+  user-select: none;
+  width: 80%;
+
+  &:hover, &:focus {
+    outline: none;
+  }
+
+  .slide__product:hover > & {
+    border-color: $color__black;
+  }
+
+  @media screen and ($large-screens) {
+    font-size: 1.4rem;
+  }
+}
 
 .slide__product__btn-buy, a.slide__product__btn-buy{
   margin: 0 auto 0;
 }
-
-

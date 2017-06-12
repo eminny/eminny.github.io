@@ -34,11 +34,23 @@
            data-200p="opacity: 1"
            data-250p="opacity: 0"
       >
-        <div class="slide__product--desktop">
-          <img src="/images/cander-spring-2017.jpg" alt="Collection launching Spring 2017">
-        </div>
-        <div class="slide__product--mobile">
-          <img src="/images/cander-spring-2017--mobile.jpg" alt="Collection launching Spring 2017">
+        <div class="slide__products">
+          <div class="slide__product" data-product-id="Scent 01" @click="showProductBuyModal">
+            <img src="/images/candle-1.png" alt="Collection launching Spring 2017">
+            <button class="slide__product__btn">Buy Now</button>
+          </div>
+          <div class="slide__product" data-product-id="Our Youth" @click="showProductBuyModal">
+            <img src="/images/candle-2.png" alt="Collection launching Spring 2017">
+            <button class="slide__product__btn">Buy Now</button>
+          </div>
+          <div class="slide__product" data-product-id="Rue Vertbois" @click="showProductBuyModal">
+            <img src="/images/candle-3.png" alt="Collection launching Spring 2017">
+            <button class="slide__product__btn">Buy Now</button>
+          </div>
+          <div class="slide__product" data-product-id="Rose" @click="showProductBuyModal">
+            <img src="/images/candle-4.png" alt="Collection launching Spring 2017">
+            <button class="slide__product__btn">Buy Now</button>
+          </div>
         </div>
         <h2 class="the-scent__desc">Collection launching Spring 2017</h2>
       </div>
@@ -130,6 +142,7 @@
       return {
         darkMode: store.data.darkMode,
         menuOverlay: store.data.menuOverlay,
+        modal: store.data.modal,
         scrollPos: store.data.scrollPos,
         skrollr: store.data.skrollr,
         currentAromatic: null,
@@ -171,7 +184,9 @@
         let foldOffset = el.getBoundingClientRect().top + document.body.scrollTop
 
         scrollHelper.top(page, Number(foldOffset), { duration: 400 })
-        return
+      },
+      showProductBuyModal () {
+        this.modal.visible = true;
       },
       showAromaticBg (event) {
         let wasMobileTap= (this.isMobile() && event && event.pointerType)
