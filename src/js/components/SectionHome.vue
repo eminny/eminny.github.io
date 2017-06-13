@@ -188,8 +188,6 @@
       showProductBuyModal(event) {
         this.modal.visible = true;
         this.modal.productOfInterest = event.currentTarget.dataset.productTitle;
-        this.modal.title = 'Unavailable';
-        this.modal.body = `Unfortunately, this item is currently sold out. When the item is back in stock we will notify you by email.`;
       },
       showAromaticBg(event) {
         let wasMobileTap= (this.isMobile() && event && event.pointerType)

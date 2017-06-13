@@ -16693,7 +16693,9 @@
 	    }
 	  },
 	  modal: {
-	    visible: false
+	    visible: false,
+	    title: 'Unavailable',
+	    body: 'Unfortunately, this item is currently sold out. When the item is back in stock we will notify you by email.'
 	  },
 	  darkMode: false,
 	  router: void 0,
@@ -40297,8 +40299,6 @@
 	    showProductBuyModal: function showProductBuyModal(event) {
 	      this.modal.visible = true;
 	      this.modal.productOfInterest = event.currentTarget.dataset.productTitle;
-	      this.modal.title = 'Unavailable';
-	      this.modal.body = 'Unfortunately, this item is currently sold out. When the item is back in stock we will notify you by email.';
 	    },
 	    showAromaticBg: function showAromaticBg(event) {
 	      var _this = this;
@@ -41689,6 +41689,14 @@
 	  value: true
 	});
 
+	var _freeze = __webpack_require__(59);
+
+	var _freeze2 = _interopRequireDefault(_freeze);
+
+	__webpack_require__(80);
+
+	var _lodash = __webpack_require__(81);
+
 	var _store = __webpack_require__(17);
 
 	var _store2 = _interopRequireDefault(_store);
@@ -41702,7 +41710,10 @@
 	exports.default = {
 	  data: function data() {
 	    return {
-	      modal: _store2.default.data.modal
+	      modal: _store2.default.data.modal,
+	      showForm: true,
+	      form: null,
+	      submitBtn: null
 	    };
 	  },
 
@@ -41714,6 +41725,87 @@
 
 	      this.modal.visible = false;
 	    },
+	    emailIsValid: function emailIsValid() {
+	      var isValidEmail = Boolean(/\S+@\S+\.\S+/.test(this.modal.userEmail));
+	      if (isValidEmail) {
+	        return true;
+	      }
+	      return false;
+	    },
+	    submitForm: function submitForm() {
+	      if (!this.emailIsValid()) {
+	        var fieldEl = document.getElementById('user-email');
+
+	        if (fieldEl.value.trim() === '' && !(0, _lodash.endsWith)(fieldEl.placeholder, 'REQUIRED')) {
+	          fieldEl.placeholder = fieldEl.placeholder + ' REQUIRED';
+	        }
+
+	        (0, _helpers.addClass)(fieldEl, 'validation-failed');
+	        return;
+	      }
+
+	      if (this.submitBtn.disabled) {
+	        return;
+	      }
+
+	      var formHeaders = {
+	        'accept': 'application/javascript'
+	      };
+
+	      (0, _freeze2.default)(formHeaders);
+
+	      var formOptions = {
+	        method: 'POST',
+	        headers: formHeaders,
+	        body: new FormData(this.form)
+	      };
+
+	      this.submitBtn.disabled = true;
+
+	      fetch(this.form.action, formOptions).then(this.checkStatus).then(function (response) {
+	        return response.json();
+	      }).then(this.displaySuccessMsg).catch(this.handleError);
+	    },
+	    checkStatus: function checkStatus(response) {
+	      if (response.status >= 200 && response.status < 300) {
+	        return response;
+	      } else {
+	        var error = new Error(response.statusText);
+	        error.response = response;
+	        throw error;
+	      }
+	    },
+	    displaySuccessMsg: function displaySuccessMsg(data) {
+	      var _this = this;
+
+	      this.showForm = false;
+
+	      this.modal.originalTitle = this.modal.title;
+	      this.modal.originalBody = this.modal.body;
+
+	      this.modal.title = 'Thank you';
+	      this.modal.body = 'We will reach out to you when this item becomes available.';
+
+	      setTimeout(function () {
+	        _this.closeModal();
+	        _this.resetForm();
+	        _this.modal.title = _this.modal.originalTitle;
+	        _this.modal.body = _this.modal.originalBody;
+	      }, 3500);
+	    },
+	    handleError: function handleError(error) {
+	      var _this2 = this;
+
+	      console.error('Request failed: ', error);
+	      setTimeout(function () {
+	        return _this2.resetForm();
+	      }, 3000);
+	    },
+	    resetForm: function resetForm() {
+	      this.showForm = true;
+	      this.submitBtn.disabled = false;
+	      this.form.reset();
+	    },
 	    lockScroll: function lockScroll(el) {
 	      (0, _helpers.addClass)(el, 'overlay-open');
 	    },
@@ -41722,13 +41814,17 @@
 	    }
 	  },
 	  ready: function ready() {
-	    var _this = this;
+	    var _this3 = this;
+
+	    this.form = this.$el.querySelector('#sold_out_form');
+	    this.submitBtn = this.$el.querySelector('#btn-submit');
 
 	    this.lockScroll(document.body);
 	    this.lockScroll(document.querySelector('html'));
+
 	    window.addEventListener('keydown', function (event) {
 	      if (event.keyCode === KEYCODE_ESC) {
-	        _this.closeModal();
+	        _this3.closeModal();
 	      }
 	    });
 	  },
@@ -41742,7 +41838,7 @@
 /* 134 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"modal-wrap\" @click=\"closeModal\" _v-4efdae2e=\"\">\n  <div class=\"modal\" _v-4efdae2e=\"\">\n    <button @click=\"closeModal\" class=\"btn-close\" _v-4efdae2e=\"\"></button>\n    <h1 class=\"modal-title gamma\" v-if=\"modal.title\" _v-4efdae2e=\"\">{{ modal.title }}</h1>\n    <p class=\"modal-body p-beta\" v-if=\"modal.body\" _v-4efdae2e=\"\">{{ modal.body }}</p>\n    <form id=\"sold_out_form\" class=\"newsletter__form newsletter__form--in-modal group\" action=\"https://www.enformed.io/sgttqhhh\" method=\"post\" _v-4efdae2e=\"\">\n      <!-- <label for=\"getEmail\" class=\"newsletter__label\">Enter your email</label> -->\n      <div class=\"newsletter__form__inner\" _v-4efdae2e=\"\">\n        <input id=\"getEmail\" name=\"user-email\" class=\"newsletter__email\" type=\"email\" placeholder=\"EMAIL ADDRESS\" autocomplete=\"off\" autocorrect=\"off\" required=\"\" _v-4efdae2e=\"\">\n        <input v-if=\"modal.productOfInterest\" type=\"hidden\" name=\"product-of-interest\" value=\"{{ modal.productOfInterest }}\" _v-4efdae2e=\"\">\n        <button class=\"newsletter__form__btn-submit\" type=\"submit\" _v-4efdae2e=\"\">Submit</button>\n      </div>\n    </form>\n  </div>\n</div>\n";
+	module.exports = "\n\n<div class=\"modal-wrap\" @click=\"closeModal\" _v-4efdae2e=\"\">\n  <div class=\"modal\" _v-4efdae2e=\"\">\n    <button @click=\"closeModal\" class=\"btn-close\" _v-4efdae2e=\"\"></button>\n    <h1 class=\"modal-title gamma\" v-if=\"modal.title\" _v-4efdae2e=\"\">{{ modal.title }}</h1>\n    <p class=\"modal-body p-beta\" v-if=\"modal.body\" _v-4efdae2e=\"\">{{ modal.body }}</p>\n    <form id=\"sold_out_form\" class=\"newsletter__form newsletter__form--in-modal group\" action=\"https://www.enformed.io/sgttqhhh\" method=\"post\" v-show=\"showForm\" _v-4efdae2e=\"\">\n      <!-- <label for=\"user-email\" class=\"newsletter__label\">Enter your email</label> -->\n      <div class=\"newsletter__form__inner\" _v-4efdae2e=\"\">\n        <input v-model=\"modal.userEmail\" id=\"user-email\" name=\"user-email\" class=\"newsletter__email\" type=\"email\" placeholder=\"EMAIL ADDRESS\" autocomplete=\"off\" autocorrect=\"off\" _v-4efdae2e=\"\">\n        <input v-if=\"modal.productOfInterest\" type=\"hidden\" name=\"product-of-interest\" value=\"{{ modal.productOfInterest }}\" _v-4efdae2e=\"\">\n        <input type=\"hidden\" name=\"*formname\" value=\"Product Interest Form\" _v-4efdae2e=\"\">\n        <input type=\"hidden\" name=\"*honeypot\" _v-4efdae2e=\"\">\n        <button id=\"btn-submit\" class=\"newsletter__form__btn-submit\" type=\"submit\" @click.prevent=\"submitForm\" _v-4efdae2e=\"\">Submit</button>\n      </div>\n    </form>\n  </div>\n</div>\n";
 
 /***/ },
 /* 135 */

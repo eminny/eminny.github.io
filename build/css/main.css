@@ -1067,6 +1067,16 @@ input[type=text].newsletter__email,
   top: 0;
   min-width: 30rem;
 }
+input[type=email].newsletter__email.validation-failed::-webkit-input-placeholder,
+input[type=text].newsletter__email.validation-failed::-webkit-input-placeholder,
+.newsletter__email.validation-failed::-webkit-input-placeholder {
+  color: #000000;
+}
+input[type=email].newsletter__email.validation-failed:-moz-placeholder,
+input[type=text].newsletter__email.validation-failed:-moz-placeholder,
+.newsletter__email.validation-failed:-moz-placeholder {
+  color: #000000;
+}
 input[type=email].newsletter__email:active, input[type=email].newsletter__email:focus,
 input[type=text].newsletter__email:active,
 input[type=text].newsletter__email:focus,

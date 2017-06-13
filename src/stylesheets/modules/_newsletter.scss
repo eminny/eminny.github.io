@@ -44,6 +44,14 @@ input[type=text].newsletter__email,
   top: 0;
   min-width: 30rem;
 
+  &.validation-failed::-webkit-input-placeholder {
+    color: $color__black;
+  }
+
+  &.validation-failed:-moz-placeholder {
+    color: $color__black;
+  }
+
   &:active,
   &:focus {
     box-shadow: none;
