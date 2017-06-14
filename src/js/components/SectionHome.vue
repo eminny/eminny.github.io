@@ -52,7 +52,6 @@
             <button class="slide__product__btn">Buy Now</button>
           </div>
         </div>
-        <h2 class="the-scent__desc">Collection launching Summer 2017</h2>
       </div>
     </div>
 

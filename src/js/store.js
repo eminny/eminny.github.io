@@ -18,7 +18,7 @@ store.data = {
   },
   modal: {
     visible: false,
-    title: 'Unavailable',
+    title: 'Sold out',
     body: 'Unfortunately, this item is currently sold out. When the item is back in stock we will notify you by email.',
   },
   darkMode: false,
