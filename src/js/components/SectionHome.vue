@@ -36,23 +36,23 @@
       >
         <div class="slide__products">
           <div class="slide__product" data-product-title="Scent 01" @click="showProductBuyModal">
-            <img src="/images/candle-1.png" alt="Collection launching Spring 2017">
+            <img src="/images/candle-1.png" alt="Collection launching Summer 2017">
             <button class="slide__product__btn">Buy Now</button>
           </div>
           <div class="slide__product" data-product-title="Our Youth" @click="showProductBuyModal">
-            <img src="/images/candle-2.png" alt="Collection launching Spring 2017">
+            <img src="/images/candle-2.png" alt="Collection launching Summer 2017">
             <button class="slide__product__btn">Buy Now</button>
           </div>
           <div class="slide__product" data-product-title="Rue Vertbois" @click="showProductBuyModal">
-            <img src="/images/candle-3.png" alt="Collection launching Spring 2017">
+            <img src="/images/candle-3.png" alt="Collection launching Summer 2017">
             <button class="slide__product__btn">Buy Now</button>
           </div>
           <div class="slide__product" data-product-title="Rose" @click="showProductBuyModal">
-            <img src="/images/candle-4.png" alt="Collection launching Spring 2017">
+            <img src="/images/candle-4.png" alt="Collection launching Summer 2017">
             <button class="slide__product__btn">Buy Now</button>
           </div>
         </div>
-        <h2 class="the-scent__desc">Collection launching Spring 2017</h2>
+        <h2 class="the-scent__desc">Collection launching Summer 2017</h2>
       </div>
     </div>
 
@@ -104,7 +104,7 @@
     >
       <div class="slide--4__inner">
         <img src="/images/product-box-front.png" alt="Front" class="slide--4__product-image">
-        <h2 class="zeta">Coming soon in stores Spring 2017</h2>
+        <h2 class="zeta">Coming soon in stores Summer 2017</h2>
       </div>
     </div>
 
