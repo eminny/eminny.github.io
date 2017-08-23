@@ -103,7 +103,7 @@
     >
       <div class="slide--4__inner">
         <img src="/images/product-box-front.png" alt="Front" class="slide--4__product-image">
-        <h2 class="zeta">Coming soon in stores Summer 2017</h2>
+        <h2 class="zeta">Coming soon in stores Autumn 2017</h2>
       </div>
     </div>
 

@@ -1279,8 +1279,7 @@ input[type=text].newsletter__email:focus,
 .cart-item {
   margin-bottom: 20px;
   overflow: hidden;
-  -webkit-backface-visibility: visible;
-          backface-visibility: visible;
+  backface-visibility: visible;
   min-height: 65px;
   position: relative;
   opacity: 1;
