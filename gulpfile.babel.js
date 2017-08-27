@@ -53,7 +53,7 @@ gulp.task('sass', function () {
   const paths = {
     sass: 'src/stylesheets',
     targetCSS: 'build/css',
-    targetImg: 'build/images',
+    targetImg: 'images',
   };
 
   return gulp.src(paths.sass + "/**/*.scss")
@@ -79,7 +79,7 @@ gulp.task('sass', function () {
 
 gulp.task('copy-fonts', function () {
   return gulp.src('src/fonts/**/*.*')
-    .pipe(gulp.dest('build/fonts'))
+    .pipe(gulp.dest('fonts'))
     .pipe(notify({message: 'Fonts copied.'}))
     .pipe(browserSync.stream());
 });
@@ -95,7 +95,7 @@ gulp.task('copy-html', function () {
 gulp.task('copy-images', function () {
   return gulp.src('src/images/**/*.*')
     .pipe(imagemin())
-    .pipe(gulp.dest('build/images'))
+    .pipe(gulp.dest('images'))
     .pipe(notify({message: 'Images copied.'}))
     .pipe(browserSync.stream());
 });
