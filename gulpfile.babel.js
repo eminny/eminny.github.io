@@ -87,7 +87,7 @@ gulp.task('copy-fonts', function () {
 gulp.task('copy-html', function () {
   return gulp.src(['src/*.html', 'src/*.xml'])
     .pipe(minifyHTML())
-    .pipe(gulp.dest('build'))
+    .pipe(gulp.dest('./'))
     .pipe(notify({message: 'HTML copied.'}))
     .pipe(browserSync.stream());
 });
