@@ -24,6 +24,4 @@ The structure is similar to that of any typical Vue.js app: `src/main.js` initia
 
 ### Deployment
 
-To deploy to staging, add `[deploy: staging]` flag to the end of the commit message. Please only use the staging deploy flag when the current branch is `staging`.
-
-To deploy to production, add `[deploy: production]`. Please only use the production deploy flag when the current branch is `master`.
+Push to master on the [GH Pages repo](https://github.com/eminny/eminny.github.io) will deploy changes. 
