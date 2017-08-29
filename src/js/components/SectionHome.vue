@@ -18,7 +18,7 @@
            data-0="opacity: 1;"
            data-50p="opacity: 0;"
       >
-        <img src="/images/logo.svg" title="CANDER PARIS">
+        <img src="/images/woman_logo.jpg" title="CANDER PARIS">
       </div>
     </div>
 
