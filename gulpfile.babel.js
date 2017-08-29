@@ -26,7 +26,7 @@ const webpackConfig = require("./webpack.config.js");
 gulp.task('browserSync', function () {
   return browserSync.init({
     server: {
-      baseDir: './build',
+      baseDir: './',
     },
   });
 });
