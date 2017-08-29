@@ -1,0 +1,23 @@
+
+https://github.com/eminny , password userlogeminny1
+
+Vuejs
+Scope of work canderparis.com (please see attached for details): 
+- change image on STORE page to attached "FIRST PAGE" image of woman 
+- change image at bottom of home page to attached "hand" symbol 
+- add social media buttons on home page 
+- adjust text on bottom of home page
+- connect buy buttons with Shopify product pages
+
+@@@@@@@@@@@@@@@@@@@@@@@
+shopify store: https://cander-paris.myshopify.com 
+( email : awsangulardev116@gmail.com pw: onlinedev)
+
+- add products to cart home page 
+- remove paypal button from product cart page (see attached) 
+- is it possible to make font in cart and checkout the same as branded font on website?
+
+https://cander-paris.myshopify.com/products/our-youth ,
+ https://cander-paris.myshopify.com/products/rose , 
+https://cander-paris.myshopify.com/products/rue-vertbois , 
+https://cander-paris.myshopify.com/products/scent-01
