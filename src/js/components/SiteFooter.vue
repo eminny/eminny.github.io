@@ -1,5 +1,8 @@
 <template>
   <footer class="site-footer">
+    <div class="site-footer__social-icons-wrapper">
+      <social-links></social-links>
+    </div>
     <form id="newsletter__form"
           class="newsletter__form group"
           action="//hauteappetite.createsend.com/t/i/s/npiud/"
@@ -22,12 +25,16 @@
 
 <script>
   import store from '../store'
+  import SocialLinks from './SocialLinks.vue'
 
   export default {
     data () {
       return {
         router: store.data.router,
       }
+    },
+    components: {
+      SocialLinks
     },
     ready () {},
   }

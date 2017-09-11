@@ -18,7 +18,7 @@
            data-0="opacity: 1;"
            data-50p="opacity: 0;"
       >
-        <img src="/images/woman_logo.jpg" title="CANDER PARIS">
+        <img src="/images/logo.svg" title="CANDER PARIS">
       </div>
     </div>
 
@@ -102,7 +102,7 @@
          data-890p="transform: translate(0, -15%);"
     >
       <div class="slide--4__inner">
-        <img src="/images/product-box-front.png" alt="Front" class="slide--4__product-image">
+        <img src="/images/menu-accent-contact-transparent.png" alt="Front" class="slide--4__product-image">
         <h2 class="zeta">Coming soon in stores Autumn 2017</h2>
       </div>
     </div>

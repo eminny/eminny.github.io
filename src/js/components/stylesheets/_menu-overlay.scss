@@ -94,24 +94,6 @@ a.menu-overlay__nav-list__item {
   padding-top: 6rem;
 }
 
-.menu-overlay__nav-social__item,
-a.menu-overlay__nav-social__item {
-  transition: color $transition-standard;
-  text-decoration: none;
-  &:first-of-type {
-    margin-right: 2rem;
-  }
-}
-
-.icon {
-  display: inline-block;
-  width: 1.5rem;
-  height: 1.5rem;
-  stroke-width: 0;
-  stroke: currentColor;
-  fill: currentColor;
-}
-
 .menu-overlay__nav-contact {
   font-family: $font__family-serif;
   font-size: 1.4rem;
@@ -178,4 +160,9 @@ a.menu-overlay__nav-social__item {
       fill: $color__gray;
     }
   }
+}
+
+.menu-overlay__nav-social-links-wrapper {
+  border-top: 1px solid $color__gray-light;
+  padding-top: 6rem;
 }
