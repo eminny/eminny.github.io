@@ -16696,7 +16696,7 @@
 	    navImageMap: {
 	      'default': '/images/menu-accent-about.jpg',
 	      'about': '/images/menu-accent-about.jpg',
-	      'stores': '/images/menu-accent-stores.jpg',
+	      'stores': '/images/menu-accent-stores-1.jpg',
 	      'contact': '/images/menu-accent-contact.png'
 	    }
 	  },
