@@ -1,8 +1,7 @@
 <template>
   <div class="slides">
     <!-- SCROLL ARROW ICON -->
-    <span @click="scrollToFold"
-      class="slide__icn-scroll"
+    <spanclass="slide__icn-scroll"
       v-bind:class="scrollArrowIsActive ? 'is-active' : 'is-inactive'"
       v-show="scrollArrowIsVisible"
       transition="fade"
@@ -35,21 +34,21 @@
            data-250p="opacity: 0"
       >
         <div class="slide__products">
-          <div class="slide__product" data-product-title="Scent 01" @click="showProductBuyModal">
-            <img src="/images/candle-1.png" alt="Collection launching Summer 2017">
-            <button class="slide__product__btn">Buy Now</button>
+          <div class="slide__product" data-product-title="Scent 01">
+            <img src="/images/candle-1.png" alt="Scent 01">
+            <a href="https://cander-paris.myshopify.com/products/scent-01" class="slide__product__btn">Buy Now</a>
           </div>
-          <div class="slide__product" data-product-title="Our Youth" @click="showProductBuyModal">
-            <img src="/images/candle-2.png" alt="Collection launching Summer 2017">
-            <button class="slide__product__btn">Buy Now</button>
+          <div class="slide__product" data-product-title="Our Youth">
+            <img src="/images/candle-2.png" alt="Our Youth">
+            <a href="https://cander-paris.myshopify.com/products/our-youth" class="slide__product__btn">Buy Now</a>
           </div>
-          <div class="slide__product" data-product-title="Rue Vertbois" @click="showProductBuyModal">
-            <img src="/images/candle-3.png" alt="Collection launching Summer 2017">
-            <button class="slide__product__btn">Buy Now</button>
+          <div class="slide__product" data-product-title="Rue Vertbois">
+            <img src="/images/candle-3.png" alt="Rue Vertbois">
+            <a href="https://cander-paris.myshopify.com/products/rue-vertbois" class="slide__product__btn">Buy Now</a>
           </div>
-          <div class="slide__product" data-product-title="Rose" @click="showProductBuyModal">
-            <img src="/images/candle-4.png" alt="Collection launching Summer 2017">
-            <button class="slide__product__btn">Buy Now</button>
+          <div class="slide__product" data-product-title="Rose">
+            <img src="/images/candle-4.png" alt="Rose">
+            <a href="https://cander-paris.myshopify.com/products/rose" class="slide__product__btn">Buy Now</a>
           </div>
         </div>
       </div>

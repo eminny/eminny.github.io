@@ -143,6 +143,7 @@
   transition:  border-color $transition-standard;
   user-select: none;
   width: 80%;
+  text-align: center;
 
   &:hover, &:focus {
     outline: none;
