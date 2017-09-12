@@ -1,7 +1,7 @@
 <template>
   <div class="slides">
     <!-- SCROLL ARROW ICON -->
-    <spanclass="slide__icn-scroll"
+    <span class="slide__icn-scroll"
       v-bind:class="scrollArrowIsActive ? 'is-active' : 'is-inactive'"
       v-show="scrollArrowIsVisible"
       transition="fade"
