@@ -87,7 +87,6 @@
 
 	  var router = new _vueRouter2.default({
 	    hashbang: true,
-	    history: true,
 	    transitionOnLoad: true,
 	    saveScrollPosition: false
 	  });

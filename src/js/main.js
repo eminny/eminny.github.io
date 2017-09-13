@@ -18,7 +18,6 @@ import store from './store'
 
   let router = new VueRouter({
     hashbang: true,
-    history: true,
     transitionOnLoad: true,
     saveScrollPosition: false,
   })
