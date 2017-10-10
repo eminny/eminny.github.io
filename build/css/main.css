@@ -170,7 +170,6 @@ li,
 a,
 nav {
   -webkit-user-select: none;
-     -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
@@ -465,11 +464,6 @@ label {
   cursor: pointer;
 }
 
-::-moz-selection {
-  background: #000000;
-  color: #ffffff;
-}
-
 ::selection {
   background: #000000;
   color: #ffffff;
@@ -675,7 +669,6 @@ textarea[disabled],
 a.button_disabled {
   box-shadow: none;
   -webkit-user-select: none;
-     -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   color: #888888;
@@ -800,7 +793,6 @@ http://flickity.metafizzy.co
   -webkit-tap-highlight-color: transparent;
   tap-highlight-color: transparent;
   -webkit-user-select: none;
-  -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
@@ -1279,7 +1271,8 @@ input[type=text].newsletter__email:focus,
 .cart-item {
   margin-bottom: 20px;
   overflow: hidden;
-  backface-visibility: visible;
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible;
   min-height: 65px;
   position: relative;
   opacity: 1;
@@ -1567,7 +1560,6 @@ input[type=number]::-webkit-outer-spin-button {
 .slide--intro__logo {
   transform: translate(0, -3rem);
   -webkit-user-select: none;
-     -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   width: 20rem;
