@@ -26,6 +26,18 @@ store.data = {
   skrollr: void 0,
   language: 'en',
   retailers: [
+    {
+      name: 'Kirna Zabête',
+      locations: [
+        '477 Broome Street<br>New York, NY 10013<br>USA',
+      ],
+      website: 'http://www.kirnazabete.com',
+      // mapCoords: {
+      //   lat: 40.722699,
+      //   lng: -74.002094
+      // },
+      // mapRevealed: false,
+    },
     // {
     //   name: 'Barneys New York',
     //   locations: [

@@ -16708,7 +16708,11 @@
 	  router: void 0,
 	  skrollr: void 0,
 	  language: 'en',
-	  retailers: [],
+	  retailers: [{
+	    name: 'Kirna Zabête',
+	    locations: ['477 Broome Street<br>New York, NY 10013<br>USA'],
+	    website: 'http://www.kirnazabete.com'
+	  }],
 	  googleMaps: {
 	    apiKey: 'AIzaSyDGWEnF8tC8zkdjhfLjEwDAjKVvtTOxORs',
 	    styles: [{
