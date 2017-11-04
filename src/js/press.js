@@ -30,13 +30,13 @@ press.data = {
     {
       name: 'New York Observer',
       subtitle: ' ',
-      image: '/images/Observer_Press_Clipping_Final.JPG',
+      image: '/images/Observer_Press_Clipping_Final.jpg',
       website: 'http://observer.com/2017/10/elizabeth-minett-interview-cander-paris-home/',
     },
     {
       name: 'South Florida Luxury Guide',
       subtitle: 'Miami Art Basel Edition',
-      image: '/images/South_Florida_Luxury_Guide.JPG'
+      image: '/images/South_Florida_Luxury_Guide.jpg'
     }
     // {
     //   name: 'Barneys New York',
