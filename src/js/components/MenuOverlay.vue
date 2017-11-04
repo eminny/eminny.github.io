@@ -3,6 +3,11 @@
     <div class="menu-overlay">
       <div class="menu-overlay__nav-wrapper">
         <nav class="menu-overlay__nav-list">
+          <a v-link="{ name: 'home' }"
+             v-on:mouseover="setHoverItem('home')"
+             v-on:click="closeMenu(300)"
+             class="menu-overlay__nav-list__item"
+          >Home</a>
           <a v-link="{ name: 'about' }"
              v-on:mouseover="setHoverItem('about')"
              v-on:click="closeMenu(300)"
@@ -13,6 +18,11 @@
              v-on:click="closeMenu(300)"
              class="menu-overlay__nav-list__item"
           >Stores</a>
+          <a v-link="{ name: 'press' }"
+             v-on:mouseover="setHoverItem('press')"
+             v-on:click="closeMenu(300)"
+             class="menu-overlay__nav-list__item"
+          >Press</a>
           <a v-link="{ name: 'contact' }"
              v-on:mouseover="setHoverItem('contact')"
              v-on:click="closeMenu(300)"

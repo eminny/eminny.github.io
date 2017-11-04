@@ -10,9 +10,10 @@ store.data = {
   menuOverlay: {
     visible: false,
     navImageMap: {
-      'default': '/images/menu-accent-about.jpg',
+      'home': '',
       'about': '/images/menu-accent-about.jpg',
       'stores': '/images/menu-accent-stores-1.jpg',
+      'press': '/images/press-image.jpg',
       'contact': '/images/menu-accent-contact.png',
     },
   },
@@ -31,7 +32,7 @@ store.data = {
       locations: [
         '477 Broome Street<br>New York, NY 10013<br>USA',
       ],
-      website: 'http://www.kirnazabete.com',
+      website: 'http://kirnazabete.com',
       // mapCoords: {
       //   lat: 40.722699,
       //   lng: -74.002094
