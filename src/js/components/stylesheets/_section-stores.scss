@@ -18,12 +18,12 @@ h1 {
   text-transform: uppercase;
 }
 
-h3 {
-  font-size: 1.4rem;
-  line-height: 1.8;
-  margin: 3rem 0 2rem 0;
-  text-transform: uppercase;
-}
+// h3 {
+//   font-size: 1.4rem;
+//   line-height: 1.8;
+//   margin: 3rem 0 2rem 0;
+//   text-transform: uppercase;
+// }
 
 p {
   font-family: $font__family-serif;
@@ -103,6 +103,14 @@ hr {
   &.fade-leave {
     opacity: 0;
   }
+}
+
+.retailer__name {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  margin: 3rem 0 2rem 0;
+  text-transform: uppercase;
+  header: 25px;
 }
 
 .retailer__locations {
