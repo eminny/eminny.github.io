@@ -52,6 +52,11 @@ press.data = {
       name: 'US Weekly',
       subtitle: ' ',
       image: '/images/press/us-weekly-press-clip.jpg'
+    },
+    {
+      name: 'Esquire',
+      subtitle: ' ',
+      image: '/images/press/esquire-press-clip.jpg'
     }
     // {
     //   name: 'Barneys New York',
