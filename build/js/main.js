@@ -41202,7 +41202,8 @@
 	  }, {
 	    name: 'Esquire',
 	    subtitle: ' ',
-	    image: '/images/press/esquire-press-clip.jpg'
+	    image: '/images/press/esquire-press-clip.jpg',
+	    website: 'http://www.esquire.com/style/mens-accessories/g13818132/best-candles-apartment-home/'
 	  }]
 	};
 
