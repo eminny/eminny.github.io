@@ -1,6 +1,6 @@
 <template>
   <div class="articles-container">
-    <section>
+    <section class="wider">
       <h1 class="section__heading--alpha">Press</h1>
       <hr>
       <ul class="articles-list" v-if="articles.length">

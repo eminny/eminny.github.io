@@ -12,6 +12,10 @@ section {
   margin-bottom: $bottom-margin;
 }
 
+section.wider {
+  max-width: $content-width-large;
+}
+
 h1 {
   font-size: 1.8rem;
   text-align: center;
@@ -65,7 +69,7 @@ hr {
 .article {
   float: left;
   width: 300px;
-  margin: 0 8.5px;
+  margin: 0 16.6666667px;
 
   &:first-of-type {
     border-top: none;
@@ -77,10 +81,7 @@ hr {
 }
 
 .article__website {
-  margin: 0;
-  // a {
-  //   text-transform: uppercase;
-  // }
+
 }
 
 .article__subtitle {
