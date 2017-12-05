@@ -41196,6 +41196,10 @@
 	    subtitle: ' ',
 	    image: '/images/press/coveteur-press-clip.jpg'
 	  }, {
+	    name: 'The Coveteur',
+	    subtitle: ' ',
+	    image: '/images/press/coveteur-press-clip-2.jpg'
+	  }, {
 	    name: 'US Weekly',
 	    subtitle: ' ',
 	    image: '/images/press/us-weekly-press-clip.jpg'
