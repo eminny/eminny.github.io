@@ -51,7 +51,8 @@ press.data = {
     {
       name: 'The Coveteur',
       subtitle: ' ',
-      image: '/images/press/coveteur-press-clip-2.jpg'
+      image: '/images/press/coveteur-press-clip-2.jpg',
+      website: 'http://coveteur.com/2017/12/01/luxurious-candles-holiday-gift-guide/'
     },
     {
       name: 'US Weekly',
