@@ -41209,6 +41209,16 @@
 	    subtitle: ' ',
 	    image: '/images/press/esquire-press-clip.jpg',
 	    website: 'http://www.esquire.com/style/mens-accessories/g13818132/best-candles-apartment-home/'
+	  }, {
+	    name: 'Glamour',
+	    subtitle: ' ',
+	    image: '/images/press/glamour-press-clip.jpg',
+	    website: 'https://www.glamour.com/gallery/best-candles-to-gift-for-holiday-2017#6'
+	  }, {
+	    name: 'Into the Gloss',
+	    subtitle: ' ',
+	    image: '/images/press/into-the-gloss-press-clip.jpg',
+	    website: 'https://intothegloss.com/2017/11/best-holiday-candles-2017/'
 	  }]
 	};
 
