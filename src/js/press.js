@@ -76,6 +76,24 @@ press.data = {
         subtitle: ' ',
         image: '/images/press/into-the-gloss-press-clip.jpg',
         website: 'https://intothegloss.com/2017/11/best-holiday-candles-2017/'
+      },
+      {
+        name: 'Forbes',
+        subtitle: ' ',
+        image: '/images/press/forbes-press-clip.jpg',
+        website: 'https://www.forbes.com/sites/abinlot/2017/12/16/the-gift-guide-for-the-discerning-creative/'
+      },
+      {
+        name: 'W Magazine',
+        subtitle: ' ',
+        image: '/images/press/w-press-clip.jpg',
+        website: 'https://www.wmagazine.com/gallery/editor-approved-last-minute-holiday-beauty-gifts'
+      },
+      {
+        name: 'Brides Online',
+        subtitle: ' ',
+        image: '/images/press/brides-press-clip.jpg',
+        website: 'https://www.brides.com/gallery/last-minute-holiday-gift-ideas-for-busy-brides'
       }
     // {
     //   name: 'Barneys New York',
