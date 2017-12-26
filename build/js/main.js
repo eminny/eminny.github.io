@@ -41234,6 +41234,11 @@
 	    subtitle: ' ',
 	    image: '/images/press/brides-press-clip.jpg',
 	    website: 'https://www.brides.com/gallery/last-minute-holiday-gift-ideas-for-busy-brides'
+	  }, {
+	    name: 'GQ',
+	    subtitle: ' ',
+	    image: 'images/press/gq-press-clip.jpg',
+	    website: 'https://www.gq.com/story/the-best-holiday-candles'
 	  }]
 	};
 
