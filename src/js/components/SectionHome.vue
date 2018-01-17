@@ -35,19 +35,19 @@
       >
         <div class="slide__products">
           <div class="slide__product" data-product-title="Scent 01">
-            <img src="/images/candle-1.png" alt="Scent 01">
+            <img src="/images/updated-candles/01162017/scent01.jpg" alt="Scent 01">
             <a href="https://cander-paris.myshopify.com/products/scent-01" class="slide__product__btn">Buy Now</a>
           </div>
           <div class="slide__product" data-product-title="Our Youth">
-            <img src="/images/candle-2.png" alt="Our Youth">
+            <img src="/images/updated-candles/01162017/ouryouth.jpg" alt="Our Youth">
             <a href="https://cander-paris.myshopify.com/products/our-youth" class="slide__product__btn">Buy Now</a>
           </div>
           <div class="slide__product" data-product-title="Rue Vertbois">
-            <img src="/images/candle-3.png" alt="Rue Vertbois">
+            <img src="/images/updated-candles/01162017/ruevertbois.jpg" alt="Rue Vertbois">
             <a href="https://cander-paris.myshopify.com/products/rue-vertbois" class="slide__product__btn">Buy Now</a>
           </div>
           <div class="slide__product" data-product-title="Rose">
-            <img src="/images/candle-4.png" alt="Rose">
+            <img src="/images/updated-candles/01162017/rose.jpg" alt="Rose">
             <a href="https://cander-paris.myshopify.com/products/rose" class="slide__product__btn">Buy Now</a>
           </div>
         </div>

@@ -22023,7 +22023,7 @@
 /* 53 */
 /***/ (function(module, exports) {
 
-	module.exports = "\n<footer class=\"site-footer\">\n  <div class=\"site-footer__social-icons-wrapper\">\n    <social-links></social-links>\n  </div>\n  <form id=\"newsletter__form\"\n        class=\"newsletter__form group\"\n        action=\"//hauteappetite.createsend.com/t/i/s/npiud/\"\n        method=\"post\"\n        id=\"subForm\"\n  >\n    <label for=\"fieldEmail\" class=\"newsletter__label\">Sign up and stay updated</label>\n    <div class=\"newsletter__form__inner\">\n      <input id=\"fieldEmail\" name=\"cm-npiud-npiud\" class=\"newsletter__email\" type=\"email\" placeholder=\"EMAIL ADDRESS\" autocomplete=\"off\" autocorrect=\"off\" required>\n      <button class=\"newsletter__form__btn-submit\" type=\"submit\">Submit</button>\n    </div>\n  </form>\n  <p class=\"site-footer__copyright\">&copy; 2017 CANDER PARIS. <a v-link=\"{ name: 'privacy' }\">Privacy</a> / <a v-link=\"{ name: 'terms' }\">Terms.</a></p>\n</footer>\n";
+	module.exports = "\n<footer class=\"site-footer\">\n  <div class=\"site-footer__social-icons-wrapper\">\n    <social-links></social-links>\n  </div>\n  <form id=\"newsletter__form\"\n        class=\"newsletter__form group\"\n        action=\"//hauteappetite.createsend.com/t/i/s/npiud/\"\n        method=\"post\"\n        id=\"subForm\"\n  >\n    <label for=\"fieldEmail\" class=\"newsletter__label\">Sign up and stay updated</label>\n    <div class=\"newsletter__form__inner\">\n      <input id=\"fieldEmail\" name=\"cm-npiud-npiud\" class=\"newsletter__email\" type=\"email\" placeholder=\"EMAIL ADDRESS\" autocomplete=\"off\" autocorrect=\"off\" required>\n      <button class=\"newsletter__form__btn-submit\" type=\"submit\">Submit</button>\n    </div>\n  </form>\n  <p class=\"site-footer__copyright\">&copy; 2018 CANDER PARIS. <a v-link=\"{ name: 'privacy' }\">Privacy</a> / <a v-link=\"{ name: 'terms' }\">Terms.</a></p>\n</footer>\n";
 
 /***/ }),
 /* 54 */
@@ -40540,7 +40540,7 @@
 /* 93 */
 /***/ (function(module, exports) {
 
-	module.exports = "\n<div class=\"slides\" _v-34eb1e72=\"\">\n  <!-- SCROLL ARROW ICON -->\n  <span class=\"slide__icn-scroll\" v-bind:class=\"scrollArrowIsActive ? 'is-active' : 'is-inactive'\" v-show=\"scrollArrowIsVisible\" transition=\"fade\" data-start=\"opacity: 1;\" data-850-end=\"opacity: 1;\" data-800-end=\"opacity: 0.5;\" data-700-end=\"opacity: 0;\" data-end=\"opacity: 0;\" _v-34eb1e72=\"\">Scroll Down</span>\n\n  <!-- SECTION 0: INTRO/HERO -->\n  <div class=\"slide slide--0 slide--intro\" _v-34eb1e72=\"\">\n    <div class=\"slide--intro__logo\" data-0=\"opacity: 1;\" data-50p=\"opacity: 0;\" _v-34eb1e72=\"\">\n      <img src=\"/images/logo.svg\" title=\"CANDER PARIS\" _v-34eb1e72=\"\">\n    </div>\n  </div>\n\n  <!-- SECTION 1: THE CANDLE -->\n  <div class=\"slide slide--1\" id=\"the-fold\" data-0=\"transform: translate(0, 100%);\" data-100p=\"transform: translate(0, 0%)\" _v-34eb1e72=\"\">\n    <!-- Product Images (non-mobile) -->\n    <div class=\"slide__product-wrapper\" data-0=\"opacity: 0\" data-100p=\"opacity: 1\" data-200p=\"opacity: 1\" data-250p=\"opacity: 0\" _v-34eb1e72=\"\">\n      <div class=\"slide__products\" _v-34eb1e72=\"\">\n        <div class=\"slide__product\" data-product-title=\"Scent 01\" _v-34eb1e72=\"\">\n          <img src=\"/images/candle-1.png\" alt=\"Scent 01\" _v-34eb1e72=\"\">\n          <a href=\"https://cander-paris.myshopify.com/products/scent-01\" class=\"slide__product__btn\" _v-34eb1e72=\"\">Buy Now</a>\n        </div>\n        <div class=\"slide__product\" data-product-title=\"Our Youth\" _v-34eb1e72=\"\">\n          <img src=\"/images/candle-2.png\" alt=\"Our Youth\" _v-34eb1e72=\"\">\n          <a href=\"https://cander-paris.myshopify.com/products/our-youth\" class=\"slide__product__btn\" _v-34eb1e72=\"\">Buy Now</a>\n        </div>\n        <div class=\"slide__product\" data-product-title=\"Rue Vertbois\" _v-34eb1e72=\"\">\n          <img src=\"/images/candle-3.png\" alt=\"Rue Vertbois\" _v-34eb1e72=\"\">\n          <a href=\"https://cander-paris.myshopify.com/products/rue-vertbois\" class=\"slide__product__btn\" _v-34eb1e72=\"\">Buy Now</a>\n        </div>\n        <div class=\"slide__product\" data-product-title=\"Rose\" _v-34eb1e72=\"\">\n          <img src=\"/images/candle-4.png\" alt=\"Rose\" _v-34eb1e72=\"\">\n          <a href=\"https://cander-paris.myshopify.com/products/rose\" class=\"slide__product__btn\" _v-34eb1e72=\"\">Buy Now</a>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <!-- SECTION 2: THE SCENT -->\n  <div class=\"slide slide--2 shade--dark\" data-0=\"opacity: 0\" data-200p=\"opacity: 0; transform: translate(0, 100%);\" data-250p=\"opacity: 0; transform: translate(0, 5%);\" data-300p=\"opacity: 1; transform: translate(0, 0%);\" data-450p=\"opacity: 0; transform: translate(0, -2%);\" _v-34eb1e72=\"\">\n    <div class=\"slide--2__bg is-dark\" style=\"background-image: url('/images/bg-aromatic-santal.jpg');\" _v-34eb1e72=\"\"></div>\n    <div class=\"the-scent\" _v-34eb1e72=\"\">\n      <p class=\"the-scent__desc\" style=\"font-style: italic;\" _v-34eb1e72=\"\">Refined fragrances created in Paris by elite French perfumers</p>\n    </div>\n  </div>\n\n  <!-- SECTION 3: DOOR -->\n  <div class=\"slide slide--3\" data-0=\"opacity: 0\" data-300p=\"opacity: 0; transform: translate(0, 100%);\" data-450p=\"opacity: 0; transform: translate(0, 30%);\" data-500p=\"opacity: 1; transform: translate(0, 0%);\" data-650p=\"opacity: 1; transform: translate(0, 0%);\" data-750p=\"transform: translate(0, -120%);\" _v-34eb1e72=\"\">\n    <div class=\"translations-wrapper\" _v-34eb1e72=\"\">\n      <ul class=\"translations-list\" _v-34eb1e72=\"\">\n        <li _v-34eb1e72=\"\">Bougie Parfumée</li>\n        <li _v-34eb1e72=\"\">Fragranced Candle</li>\n        <li _v-34eb1e72=\"\">Candela Profumata</li>\n        <li _v-34eb1e72=\"\">Vela Perfumada</li>\n        <li _v-34eb1e72=\"\">Duftkerze</li>\n        <li _v-34eb1e72=\"\">香味蠟燭</li>\n        <li _v-34eb1e72=\"\">香りのろうそく</li>\n      </ul>\n    </div>\n  </div>\n\n  <!-- SECTION 4: PRODUCT -->\n  <div class=\"slide slide--4\" data-0=\"opacity: 0\" data-700p=\"opacity: 0; transform: translate(0, 100%);\" data-725p=\"opacity: 0; transform: translate(0, 20%);\" data-760p=\"opacity: 0.3; transform: translate(0, 5%);\" data-770p=\"opacity: 1; transform: translate(0, 0%);\" data-800p=\"transform: translate(0, 0%);\" data-890p=\"transform: translate(0, -15%);\" _v-34eb1e72=\"\">\n    <div class=\"slide--4__inner\" _v-34eb1e72=\"\">\n      <img src=\"/images/menu-accent-contact-transparent.png\" alt=\"Front\" class=\"slide--4__product-image\" _v-34eb1e72=\"\">\n      <h2 class=\"zeta\" _v-34eb1e72=\"\">Coming soon in stores Autumn 2017</h2>\n    </div>\n  </div>\n\n  <!-- FOOTER -->\n  <div class=\"slide--footer-wrapper\" data-0=\"opacity: 0\" data-800p=\"opacity: 0; transform: translate(0, 100%);\" data-825p=\"opacity: 0; transform: translate(0, 20%);\" data-860p=\"opacity: 0.3; transform: translate(0, 5%);\" data-870p=\"opacity: 1; transform: translate(0, 0%);\" _v-34eb1e72=\"\">\n    <site-footer _v-34eb1e72=\"\"></site-footer>\n  </div>\n</div>\n";
+	module.exports = "\n<div class=\"slides\" _v-34eb1e72=\"\">\n  <!-- SCROLL ARROW ICON -->\n  <span class=\"slide__icn-scroll\" v-bind:class=\"scrollArrowIsActive ? 'is-active' : 'is-inactive'\" v-show=\"scrollArrowIsVisible\" transition=\"fade\" data-start=\"opacity: 1;\" data-850-end=\"opacity: 1;\" data-800-end=\"opacity: 0.5;\" data-700-end=\"opacity: 0;\" data-end=\"opacity: 0;\" _v-34eb1e72=\"\">Scroll Down</span>\n\n  <!-- SECTION 0: INTRO/HERO -->\n  <div class=\"slide slide--0 slide--intro\" _v-34eb1e72=\"\">\n    <div class=\"slide--intro__logo\" data-0=\"opacity: 1;\" data-50p=\"opacity: 0;\" _v-34eb1e72=\"\">\n      <img src=\"/images/logo.svg\" title=\"CANDER PARIS\" _v-34eb1e72=\"\">\n    </div>\n  </div>\n\n  <!-- SECTION 1: THE CANDLE -->\n  <div class=\"slide slide--1\" id=\"the-fold\" data-0=\"transform: translate(0, 100%);\" data-100p=\"transform: translate(0, 0%)\" _v-34eb1e72=\"\">\n    <!-- Product Images (non-mobile) -->\n    <div class=\"slide__product-wrapper\" data-0=\"opacity: 0\" data-100p=\"opacity: 1\" data-200p=\"opacity: 1\" data-250p=\"opacity: 0\" _v-34eb1e72=\"\">\n      <div class=\"slide__products\" _v-34eb1e72=\"\">\n        <div class=\"slide__product\" data-product-title=\"Scent 01\" _v-34eb1e72=\"\">\n          <img src=\"/images/updated-candles/01162017/scent01.jpg\" alt=\"Scent 01\" _v-34eb1e72=\"\">\n          <a href=\"https://cander-paris.myshopify.com/products/scent-01\" class=\"slide__product__btn\" _v-34eb1e72=\"\">Buy Now</a>\n        </div>\n        <div class=\"slide__product\" data-product-title=\"Our Youth\" _v-34eb1e72=\"\">\n          <img src=\"/images/updated-candles/01162017/ouryouth.jpg\" alt=\"Our Youth\" _v-34eb1e72=\"\">\n          <a href=\"https://cander-paris.myshopify.com/products/our-youth\" class=\"slide__product__btn\" _v-34eb1e72=\"\">Buy Now</a>\n        </div>\n        <div class=\"slide__product\" data-product-title=\"Rue Vertbois\" _v-34eb1e72=\"\">\n          <img src=\"/images/updated-candles/01162017/ruevertbois.jpg\" alt=\"Rue Vertbois\" _v-34eb1e72=\"\">\n          <a href=\"https://cander-paris.myshopify.com/products/rue-vertbois\" class=\"slide__product__btn\" _v-34eb1e72=\"\">Buy Now</a>\n        </div>\n        <div class=\"slide__product\" data-product-title=\"Rose\" _v-34eb1e72=\"\">\n          <img src=\"/images/updated-candles/01162017/rose.jpg\" alt=\"Rose\" _v-34eb1e72=\"\">\n          <a href=\"https://cander-paris.myshopify.com/products/rose\" class=\"slide__product__btn\" _v-34eb1e72=\"\">Buy Now</a>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <!-- SECTION 2: THE SCENT -->\n  <div class=\"slide slide--2 shade--dark\" data-0=\"opacity: 0\" data-200p=\"opacity: 0; transform: translate(0, 100%);\" data-250p=\"opacity: 0; transform: translate(0, 5%);\" data-300p=\"opacity: 1; transform: translate(0, 0%);\" data-450p=\"opacity: 0; transform: translate(0, -2%);\" _v-34eb1e72=\"\">\n    <div class=\"slide--2__bg is-dark\" style=\"background-image: url('/images/bg-aromatic-santal.jpg');\" _v-34eb1e72=\"\"></div>\n    <div class=\"the-scent\" _v-34eb1e72=\"\">\n      <p class=\"the-scent__desc\" style=\"font-style: italic;\" _v-34eb1e72=\"\">Refined fragrances created in Paris by elite French perfumers</p>\n    </div>\n  </div>\n\n  <!-- SECTION 3: DOOR -->\n  <div class=\"slide slide--3\" data-0=\"opacity: 0\" data-300p=\"opacity: 0; transform: translate(0, 100%);\" data-450p=\"opacity: 0; transform: translate(0, 30%);\" data-500p=\"opacity: 1; transform: translate(0, 0%);\" data-650p=\"opacity: 1; transform: translate(0, 0%);\" data-750p=\"transform: translate(0, -120%);\" _v-34eb1e72=\"\">\n    <div class=\"translations-wrapper\" _v-34eb1e72=\"\">\n      <ul class=\"translations-list\" _v-34eb1e72=\"\">\n        <li _v-34eb1e72=\"\">Bougie Parfumée</li>\n        <li _v-34eb1e72=\"\">Fragranced Candle</li>\n        <li _v-34eb1e72=\"\">Candela Profumata</li>\n        <li _v-34eb1e72=\"\">Vela Perfumada</li>\n        <li _v-34eb1e72=\"\">Duftkerze</li>\n        <li _v-34eb1e72=\"\">香味蠟燭</li>\n        <li _v-34eb1e72=\"\">香りのろうそく</li>\n      </ul>\n    </div>\n  </div>\n\n  <!-- SECTION 4: PRODUCT -->\n  <div class=\"slide slide--4\" data-0=\"opacity: 0\" data-700p=\"opacity: 0; transform: translate(0, 100%);\" data-725p=\"opacity: 0; transform: translate(0, 20%);\" data-760p=\"opacity: 0.3; transform: translate(0, 5%);\" data-770p=\"opacity: 1; transform: translate(0, 0%);\" data-800p=\"transform: translate(0, 0%);\" data-890p=\"transform: translate(0, -15%);\" _v-34eb1e72=\"\">\n    <div class=\"slide--4__inner\" _v-34eb1e72=\"\">\n      <img src=\"/images/menu-accent-contact-transparent.png\" alt=\"Front\" class=\"slide--4__product-image\" _v-34eb1e72=\"\">\n      <h2 class=\"zeta\" _v-34eb1e72=\"\">Coming soon in stores Autumn 2017</h2>\n    </div>\n  </div>\n\n  <!-- FOOTER -->\n  <div class=\"slide--footer-wrapper\" data-0=\"opacity: 0\" data-800p=\"opacity: 0; transform: translate(0, 100%);\" data-825p=\"opacity: 0; transform: translate(0, 20%);\" data-860p=\"opacity: 0.3; transform: translate(0, 5%);\" data-870p=\"opacity: 1; transform: translate(0, 0%);\" _v-34eb1e72=\"\">\n    <site-footer _v-34eb1e72=\"\"></site-footer>\n  </div>\n</div>\n";
 
 /***/ }),
 /* 94 */
@@ -41182,65 +41182,91 @@
 	    name: 'New York Observer',
 	    subtitle: ' ',
 	    image: '/images/press/observer-press-clipping-final.jpg',
-	    website: 'http://observer.com/2017/10/elizabeth-minett-interview-cander-paris-home/'
-	  }, {
+	    website: 'http://observer.com/2017/10/elizabeth-minett-interview-cander-paris-home/',
+	    date: new Date(2017, 10, 2) }, {
 	    name: 'South Florida Luxury Guide',
 	    subtitle: 'Miami Art Basel Edition',
-	    image: '/images/press/south-florida-luxury-guide.jpg'
+	    image: '/images/press/south-florida-luxury-guide.jpg',
+	    date: new Date(2017, 10, 2)
 	  }, {
 	    name: 'Bustle',
 	    subtitle: ' ',
-	    image: '/images/press/bustle-press-clip.jpg'
+	    image: '/images/press/bustle-press-clip.jpg',
+	    date: new Date(2017, 10, 15)
 	  }, {
 	    name: 'The Coveteur',
 	    subtitle: ' ',
-	    image: '/images/press/coveteur-press-clip.jpg'
+	    image: '/images/press/coveteur-press-clip.jpg',
+	    date: new Date(2017, 10, 15)
 	  }, {
 	    name: 'The Coveteur',
 	    subtitle: ' ',
 	    image: '/images/press/coveteur-press-clip-2.jpg',
-	    website: 'http://coveteur.com/2017/12/01/luxurious-candles-holiday-gift-guide/'
+	    website: 'http://coveteur.com/2017/12/01/luxurious-candles-holiday-gift-guide/',
+	    date: new Date(2017, 11, 5)
 	  }, {
 	    name: 'US Weekly',
 	    subtitle: ' ',
-	    image: '/images/press/us-weekly-press-clip.jpg'
+	    image: '/images/press/us-weekly-press-clip.jpg',
+	    date: new Date(2017, 10, 15)
 	  }, {
 	    name: 'Esquire',
 	    subtitle: ' ',
 	    image: '/images/press/esquire-press-clip.jpg',
-	    website: 'http://www.esquire.com/style/mens-accessories/g13818132/best-candles-apartment-home/'
+	    website: 'http://www.esquire.com/style/mens-accessories/g13818132/best-candles-apartment-home/',
+	    date: new Date(2017, 11, 6)
 	  }, {
 	    name: 'Glamour',
 	    subtitle: ' ',
 	    image: '/images/press/glamour-press-clip.jpg',
-	    website: 'https://www.glamour.com/gallery/best-candles-to-gift-for-holiday-2017#6'
+	    website: 'https://www.glamour.com/gallery/best-candles-to-gift-for-holiday-2017#6',
+	    date: new Date(2017, 11, 6)
 	  }, {
 	    name: 'Into the Gloss',
 	    subtitle: ' ',
 	    image: '/images/press/into-the-gloss-press-clip.jpg',
-	    website: 'https://intothegloss.com/2017/11/best-holiday-candles-2017/'
+	    website: 'https://intothegloss.com/2017/11/best-holiday-candles-2017/',
+	    date: new Date(2017, 11, 6)
 	  }, {
 	    name: 'Forbes',
 	    subtitle: ' ',
 	    image: '/images/press/forbes-press-clip.jpg',
-	    website: 'https://www.forbes.com/sites/abinlot/2017/12/16/the-gift-guide-for-the-discerning-creative/'
+	    website: 'https://www.forbes.com/sites/abinlot/2017/12/16/the-gift-guide-for-the-discerning-creative/',
+	    date: new Date(2017, 11, 21)
 	  }, {
 	    name: 'W Magazine',
 	    subtitle: ' ',
 	    image: '/images/press/w-press-clip.jpg',
-	    website: 'https://www.wmagazine.com/gallery/editor-approved-last-minute-holiday-beauty-gifts'
+	    website: 'https://www.wmagazine.com/gallery/editor-approved-last-minute-holiday-beauty-gifts',
+	    date: new Date(2017, 11, 21)
 	  }, {
 	    name: 'Brides Online',
 	    subtitle: ' ',
 	    image: '/images/press/brides-press-clip.jpg',
-	    website: 'https://www.brides.com/gallery/last-minute-holiday-gift-ideas-for-busy-brides'
+	    website: 'https://www.brides.com/gallery/last-minute-holiday-gift-ideas-for-busy-brides',
+	    date: new Date(2017, 11, 21)
 	  }, {
 	    name: 'GQ',
 	    subtitle: ' ',
 	    image: 'images/press/gq-press-clip.jpg',
-	    website: 'https://www.gq.com/story/the-best-holiday-candles'
+	    website: 'https://www.gq.com/story/the-best-holiday-candles',
+	    date: new Date(2017, 11, 26)
 	  }]
 	};
+
+	var sortArticles = function sortArticles(articles) {
+	  return articles.sort(function (a, b) {
+	    if (a.date.getTime() === b.date.getTime()) {
+	      return a.name < b.name ? -1 : 1;
+	    } else {
+	      return b.date.getTime() - a.date.getTime();
+	    }
+	  });
+	};
+
+	press.data.articles = sortArticles(press.data.articles);
+
+	console.log('SLKFDJLKSDJFSDLJKDFS', press);
 
 	exports.default = press;
 
