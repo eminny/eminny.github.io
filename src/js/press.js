@@ -157,6 +157,4 @@ press.data.articles = sortArticles(press.data.articles)
 
 // press.data.articles = sortedArticles;
 
-console.log('SLKFDJLKSDJFSDLJKDFS', press)
-
 export default press;
