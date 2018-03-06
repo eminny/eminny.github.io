@@ -5,13 +5,21 @@
       <hr>
       <ul class="retailers-list" v-if="retailers.length">
         <li class="retailer" v-for="retailer in retailers">
-          <h3 class="retailer__name">{{ retailer.name }}</h3>
+          <h3 class="retailer__name">
+            <a href="{{ retailer.website }}">
+              {{ retailer.name }}
+            </a>
+          </h3>
           <div class="retailer__locations" v-if="retailer.locations && retailer.locations.length">
-            <p v-for="location in retailer.locations">{{{ location }}}</p>
+            <p v-for="location in retailer.locations">
+              <a href="{{{ retailer.website }}}">{{{ location }}}</a>
+            </p>
           </div>
+          <!-- Changing retailer name to link to website
           <p class="retailer__website">
             <a href="{{ retailer.website }}" target="_blank" title="Visit {{ retailer.name }}">{{ retailer.website }}</a>
           </p>
+          -->
           <a href="#" class="retailer__map-btn" :class="retailer.mapRevealed ? 'is-active' : ''" @click.prevent="toggleMapRevealed(retailer)" v-if="hasMapLocation(retailer)">View Map</a>
           <div class="retailer__map" v-if="mapIsVisible(retailer)" transition="fade">
             <google-map :map-id="$index" :coords="retailer.mapCoords"></google-map>

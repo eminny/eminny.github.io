@@ -1,5 +1,25 @@
 <template>
   <header class="site-header" v-show="headerVisible" transition="fade">
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window,document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+
+      fbq('init', '200282564039202');
+      fbq('track', 'PageView');
+    </script>
+    <noscript>
+      <img height="1" width="1"
+    src="https://www.facebook.com/tr?id=200282564039202&ev=PageView
+    &noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
     <a href="/" @click.prevent="logoClickHandler" class="menu-overlay__nav-list__item">
       <img v-bind:src="logoUrl" alt="CANDER PARIS" title="CANDER PARIS" class="logo">
     </a>

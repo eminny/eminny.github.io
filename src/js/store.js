@@ -39,6 +39,40 @@ store.data = {
       // },
       // mapRevealed: false,
     },
+    {
+      name: 'Kirna Zabête',
+      locations: [
+        'The Royal Poinciana Plaza<br>340 Royal Poinciana Way Suite 305<br>Palm Beach, FL 33480<br>USA'
+      ],
+      website: 'https://theroyalpoincianaplaza.com/business/kirna-zabete/'
+    },
+    {
+      name: 'Luisa Via Roma',
+      locations: [
+        'Via Roma 19/21<br>50123 Florence, Italy'
+      ],
+      website: 'http://www.luisaviaroma.com/'
+    },
+    {
+      name: 'Megusta',
+      locations: [
+        'Lange Jansstraat 15<br>3512 BA Utecht<br>The Netherlands'
+      ],
+      website: 'https://www.megusta.nl/'
+    },
+    {
+      name: 'Chu Sister Shop',
+      locations: [
+        'Tainan, Taiwan'
+      ]
+    },
+    {
+      name: 'Beige',
+      locations: [
+        'Kaohsiung, Taiwan'
+      ],
+      website: 'https://www.facebook.com/BEIGEbyC/'
+    }
     // {
     //   name: 'Barneys New York',
     //   locations: [

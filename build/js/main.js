@@ -16718,6 +16718,25 @@
 	    name: 'Kirna Zabête',
 	    locations: ['477 Broome Street<br>New York, NY 10013<br>USA'],
 	    website: 'http://kirnazabete.com'
+	  }, {
+	    name: 'Kirna Zabête',
+	    locations: ['The Royal Poinciana Plaza<br>340 Royal Poinciana Way Suite 305<br>Palm Beach, FL 33480<br>USA'],
+	    website: 'https://theroyalpoincianaplaza.com/business/kirna-zabete/'
+	  }, {
+	    name: 'Luisa Via Roma',
+	    locations: ['Via Roma 19/21<br>50123 Florence, Italy'],
+	    website: 'http://www.luisaviaroma.com/'
+	  }, {
+	    name: 'Megusta',
+	    locations: ['Lange Jansstraat 15<br>3512 BA Utecht<br>The Netherlands'],
+	    website: 'https://www.megusta.nl/'
+	  }, {
+	    name: 'Chu Sister Shop',
+	    locations: ['Tainan, Taiwan']
+	  }, {
+	    name: 'Beige',
+	    locations: ['Kaohsiung, Taiwan'],
+	    website: 'https://www.facebook.com/BEIGEbyC/'
 	  }],
 	  googleMaps: {
 	    apiKey: 'AIzaSyDGWEnF8tC8zkdjhfLjEwDAjKVvtTOxORs',
@@ -41040,7 +41059,7 @@
 /* 104 */
 /***/ (function(module, exports) {
 
-	module.exports = "\n<div _v-2399ebcc=\"\">\n  <section _v-2399ebcc=\"\">\n    <h1 class=\"section__heading--alpha\" _v-2399ebcc=\"\">Retailers</h1>\n    <hr _v-2399ebcc=\"\">\n    <ul class=\"retailers-list\" v-if=\"retailers.length\" _v-2399ebcc=\"\">\n      <li class=\"retailer\" v-for=\"retailer in retailers\" _v-2399ebcc=\"\">\n        <h3 class=\"retailer__name\" _v-2399ebcc=\"\">{{ retailer.name }}</h3>\n        <div class=\"retailer__locations\" v-if=\"retailer.locations &amp;&amp; retailer.locations.length\" _v-2399ebcc=\"\">\n          <p v-for=\"location in retailer.locations\" _v-2399ebcc=\"\">{{{ location }}}</p>\n        </div>\n        <p class=\"retailer__website\" _v-2399ebcc=\"\">\n          <a href=\"{{ retailer.website }}\" target=\"_blank\" title=\"Visit {{ retailer.name }}\" _v-2399ebcc=\"\">{{ retailer.website }}</a>\n        </p>\n        <a href=\"#\" class=\"retailer__map-btn\" :class=\"retailer.mapRevealed ? 'is-active' : ''\" @click.prevent=\"toggleMapRevealed(retailer)\" v-if=\"hasMapLocation(retailer)\" _v-2399ebcc=\"\">View Map</a>\n        <div class=\"retailer__map\" v-if=\"mapIsVisible(retailer)\" transition=\"fade\" _v-2399ebcc=\"\">\n          <google-map :map-id=\"$index\" :coords=\"retailer.mapCoords\" _v-2399ebcc=\"\"></google-map>\n        </div>\n      </li>\n    </ul>\n    <div v-if=\"!retailers.length\" _v-2399ebcc=\"\">\n      <p class=\"retailers__empty-state-message\" _v-2399ebcc=\"\">Coming Soon</p>\n    </div>\n</section>\n  <site-footer _v-2399ebcc=\"\"></site-footer>\n</div>\n";
+	module.exports = "\n<div _v-2399ebcc=\"\">\n  <section _v-2399ebcc=\"\">\n    <h1 class=\"section__heading--alpha\" _v-2399ebcc=\"\">Retailers</h1>\n    <hr _v-2399ebcc=\"\">\n    <ul class=\"retailers-list\" v-if=\"retailers.length\" _v-2399ebcc=\"\">\n      <li class=\"retailer\" v-for=\"retailer in retailers\" _v-2399ebcc=\"\">\n        <h3 class=\"retailer__name\" _v-2399ebcc=\"\">\n          <a href=\"{{ retailer.website }}\" _v-2399ebcc=\"\">\n            {{ retailer.name }}\n          </a>\n        </h3>\n        <div class=\"retailer__locations\" v-if=\"retailer.locations &amp;&amp; retailer.locations.length\" _v-2399ebcc=\"\">\n          <p v-for=\"location in retailer.locations\" _v-2399ebcc=\"\">\n            <a href=\"{{{ retailer.website }}}\" _v-2399ebcc=\"\">{{{ location }}}</a>\n          </p>\n        </div>\n        <!-- Changing retailer name to link to website\n        <p class=\"retailer__website\">\n          <a href=\"{{ retailer.website }}\" target=\"_blank\" title=\"Visit {{ retailer.name }}\">{{ retailer.website }}</a>\n        </p>\n        -->\n        <a href=\"#\" class=\"retailer__map-btn\" :class=\"retailer.mapRevealed ? 'is-active' : ''\" @click.prevent=\"toggleMapRevealed(retailer)\" v-if=\"hasMapLocation(retailer)\" _v-2399ebcc=\"\">View Map</a>\n        <div class=\"retailer__map\" v-if=\"mapIsVisible(retailer)\" transition=\"fade\" _v-2399ebcc=\"\">\n          <google-map :map-id=\"$index\" :coords=\"retailer.mapCoords\" _v-2399ebcc=\"\"></google-map>\n        </div>\n      </li>\n    </ul>\n    <div v-if=\"!retailers.length\" _v-2399ebcc=\"\">\n      <p class=\"retailers__empty-state-message\" _v-2399ebcc=\"\">Coming Soon</p>\n    </div>\n</section>\n  <site-footer _v-2399ebcc=\"\"></site-footer>\n</div>\n";
 
 /***/ }),
 /* 105 */
@@ -42382,7 +42401,7 @@
 /* 149 */
 /***/ (function(module, exports) {
 
-	module.exports = "\n<header class=\"site-header\" v-show=\"headerVisible\" transition=\"fade\" _v-6a3fed21=\"\">\n  <a href=\"/\" @click.prevent=\"logoClickHandler\" class=\"menu-overlay__nav-list__item\" _v-6a3fed21=\"\">\n    <img v-bind:src=\"logoUrl\" alt=\"CANDER PARIS\" title=\"CANDER PARIS\" class=\"logo\" _v-6a3fed21=\"\">\n  </a>\n  <a href=\"/\" @click.prevent=\"toggleMenu\" class=\"btn-menu btn-menu--{{ toggleState }}\" _v-6a3fed21=\"\"></a>\n</header>\n";
+	module.exports = "\n<header class=\"site-header\" v-show=\"headerVisible\" transition=\"fade\" _v-6a3fed21=\"\">\n  <!-- Facebook Pixel Code -->\n  <script _v-6a3fed21=\"\">\n    !function(f,b,e,v,n,t,s)\n    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?\n    n.callMethod.apply(n,arguments):n.queue.push(arguments)};\n    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';\n    n.queue=[];t=b.createElement(e);t.async=!0;\n    t.src=v;s=b.getElementsByTagName(e)[0];\n    s.parentNode.insertBefore(t,s)}(window,document,'script',\n    'https://connect.facebook.net/en_US/fbevents.js');\n\n    fbq('init', '200282564039202');\n    fbq('track', 'PageView');\n  </script>\n  <noscript _v-6a3fed21=\"\">\n    <img height=\"1\" width=\"1\"\n  src=\"https://www.facebook.com/tr?id=200282564039202&ev=PageView\n  &noscript=1\"/>\n  </noscript>\n  <!-- End Facebook Pixel Code -->\n  <a href=\"/\" @click.prevent=\"logoClickHandler\" class=\"menu-overlay__nav-list__item\" _v-6a3fed21=\"\">\n    <img v-bind:src=\"logoUrl\" alt=\"CANDER PARIS\" title=\"CANDER PARIS\" class=\"logo\" _v-6a3fed21=\"\">\n  </a>\n  <a href=\"/\" @click.prevent=\"toggleMenu\" class=\"btn-menu btn-menu--{{ toggleState }}\" _v-6a3fed21=\"\"></a>\n</header>\n";
 
 /***/ }),
 /* 150 */
