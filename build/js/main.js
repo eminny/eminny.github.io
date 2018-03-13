@@ -16731,8 +16731,9 @@
 	    locations: ['Lange Jansstraat 15<br>3512 BA Utecht<br>The Netherlands'],
 	    website: 'https://www.megusta.nl/'
 	  }, {
-	    name: 'Chu Sister Shop',
-	    locations: ['Tainan, Taiwan']
+	    name: 'Chenchun Boutique',
+	    locations: ['Tainan, Taiwan'],
+	    website: 'https://www.chen-chun.com/'
 	  }, {
 	    name: 'Beige',
 	    locations: ['Kaohsiung, Taiwan'],

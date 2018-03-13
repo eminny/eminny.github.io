@@ -61,10 +61,11 @@ store.data = {
       website: 'https://www.megusta.nl/'
     },
     {
-      name: 'Chu Sister Shop',
+      name: 'Chenchun Boutique',
       locations: [
         'Tainan, Taiwan'
-      ]
+      ],
+      website: 'https://www.chen-chun.com/'
     },
     {
       name: 'Beige',
