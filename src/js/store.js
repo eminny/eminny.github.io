@@ -73,6 +73,10 @@ store.data = {
         'Kaohsiung, Taiwan'
       ],
       website: 'https://www.facebook.com/BEIGEbyC/'
+    },
+    {
+      name: 'Coggles',
+      website: 'https://www.coggles.com/'
     }
     // {
     //   name: 'Barneys New York',
@@ -270,5 +274,11 @@ store.data = {
     ],
   }
 };
+
+const sortRetailers = retailers => retailers.sort((a, b) => {
+  return a.name < b.name ? -1 : 1
+})
+
+store.data.retailers = sortRetailers(store.data.retailers)
 
 export default store;

@@ -16738,6 +16738,9 @@
 	    name: 'Beige',
 	    locations: ['Kaohsiung, Taiwan'],
 	    website: 'https://www.facebook.com/BEIGEbyC/'
+	  }, {
+	    name: 'Coggles',
+	    website: 'https://www.coggles.com/'
 	  }],
 	  googleMaps: {
 	    apiKey: 'AIzaSyDGWEnF8tC8zkdjhfLjEwDAjKVvtTOxORs',
@@ -16862,6 +16865,14 @@
 	    }]
 	  }
 	};
+
+	var sortRetailers = function sortRetailers(retailers) {
+	  return retailers.sort(function (a, b) {
+	    return a.name < b.name ? -1 : 1;
+	  });
+	};
+
+	store.data.retailers = sortRetailers(store.data.retailers);
 
 	exports.default = store;
 
