@@ -70,9 +70,9 @@
         instagramLink: 'https://www.instagram.com/canderparis',
         feedOptions: {
           get: 'user',
-          userId: '3217141691',
-          clientId: '6bcc0d93f5e14265ac5eab12fdc92aef',
-          accessToken: '3217141691.6bcc0d9.c10a1c87199e4f808aaa60efeb9748e1',
+          userId: '2256771534',
+          clientId: '99f35d35ab8c49dc842fadc55787ef9f',
+          accessToken: '2256771534.1677ed0.3e113d818dfa40e698c2553d25765850',
           limit: 20,
           resolution: 'standard_resolution',
           target: 'instafeed',

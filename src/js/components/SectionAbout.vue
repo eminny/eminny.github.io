@@ -24,7 +24,6 @@
           </div>
         </div>
       </div>
-      <diary></diary>
     </div>
     <site-footer></site-footer>
   </div>
@@ -118,7 +117,6 @@
 <script>
   import scroll from 'scroll'
   import store from '../store'
-  import Diary from './Diary.vue'
   import SiteFooter from './SiteFooter.vue'
   const page = require('scroll-doc')()
 
@@ -129,7 +127,6 @@
       }
     },
     components: {
-      Diary,
       SiteFooter,
     },
     methods: {
