@@ -16,7 +16,7 @@
         </div>
       </div>
     </div>
-    <!-- <site-footer></site-footer> -->
+    <site-footer></site-footer>
   </div>
 </template>
 
@@ -55,7 +55,7 @@
     height: auto;
     width: auto;
     max-width: 600px;
-    max-height: 600px;
+    max-height: 550px;
     margin-top: 4rem;
   }
 
