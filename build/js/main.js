@@ -80,7 +80,7 @@
 	(function __canderApp__() {
 	  _vue2.default.config.debug = false;
 
-	  var Cander = _vue2.default.extend(__webpack_require__(131));
+	  var Cander = _vue2.default.extend(__webpack_require__(136));
 
 	  _vue2.default.use(_vueTouch2.default);
 	  _vue2.default.use(_vueRouter2.default);
@@ -16094,10 +16094,11 @@
 	var SectionHome = _vue2.default.extend(__webpack_require__(63));
 	var SectionStores = _vue2.default.extend(__webpack_require__(94));
 	var SectionPress = _vue2.default.extend(__webpack_require__(105));
-	var SectionTerms = _vue2.default.extend(__webpack_require__(111));
-	var SectionPrivacy = _vue2.default.extend(__webpack_require__(116));
-	var SectionThanks = _vue2.default.extend(__webpack_require__(121));
-	var Error404 = _vue2.default.extend(__webpack_require__(126));
+	var SectionProduct = _vue2.default.extend(__webpack_require__(111));
+	var SectionTerms = _vue2.default.extend(__webpack_require__(116));
+	var SectionPrivacy = _vue2.default.extend(__webpack_require__(121));
+	var SectionThanks = _vue2.default.extend(__webpack_require__(126));
+	var Error404 = _vue2.default.extend(__webpack_require__(131));
 
 	exports.default = {
 	  '*': {
@@ -16110,6 +16111,10 @@
 	  '/about': {
 	    name: 'about',
 	    component: SectionAbout
+	  },
+	  '/product': {
+	    name: 'product',
+	    component: SectionProduct
 	  },
 	  '/contact': {
 	    name: 'contact',
@@ -16695,6 +16700,7 @@
 	    navImageMap: {
 	      'home': '',
 	      'about': '/images/menu-accent-about.jpg',
+	      'product': '/images/product-image.jpg',
 	      'stores': '/images/menu-accent-stores-1.jpg',
 	      'press': '/images/press-image.jpg',
 	      'contact': '/images/menu-accent-contact.png'
@@ -35707,7 +35713,7 @@
 
 
 	// module
-	exports.push([module.id, ".the-scent[_v-34eb1e72] {\n  -ms-flex-align: center;\n      align-items: center;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  height: 100%;\n  -ms-flex-pack: center;\n      justify-content: center;\n  -ms-transform: translateY(1%);\n      transform: translateY(1%); }\n  .is-mobile .the-scent[_v-34eb1e72] {\n    height: auto;\n    position: relative;\n    min-height: 100vh; }\n\n.the-scent__title[_v-34eb1e72] {\n  font-family: \"brown-std\", \"Helvetica Neue\", Helvetica, sans-serif;\n  font-size: 1.4rem;\n  line-height: 1.2858;\n  margin-bottom: 4rem;\n  text-transform: uppercase; }\n  .shade--dark .the-scent__title[_v-34eb1e72] {\n    color: #ffffff; }\n  .shade--light .the-scent__title[_v-34eb1e72] {\n    color: #000000; }\n\n.the-scent__desc[_v-34eb1e72] {\n  font-family: \"sabon-roman\", serif;\n  font-size: 1.8rem;\n  line-height: 1.34375;\n  text-align: center;\n  transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .shade--dark .the-scent__desc[_v-34eb1e72] {\n    color: #ffffff; }\n  .shade--light .the-scent__desc[_v-34eb1e72] {\n    color: #000000; }\n  @media screen and (min-width: 768px) {\n    .the-scent__desc[_v-34eb1e72] {\n      font-size: 3.2rem; } }\n\n.aromatic[_v-34eb1e72] {\n  cursor: pointer;\n  font-family: \"sabon-italic\", serif;\n  color: rgba(0, 0, 0, 0.5); }\n  .shade--dark .aromatic[_v-34eb1e72] {\n    color: rgba(255, 255, 255, 0.5); }\n  .shade--white .aromatic[_v-34eb1e72] {\n    color: rgba(0, 0, 0, 0.5); }\n  .aromatic[_v-34eb1e72]:hover, .aromatic.is-active[_v-34eb1e72] {\n    color: rgba(0, 0, 0, 0.8);\n    transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .shade--dark .aromatic[_v-34eb1e72]:hover,\n  .shade--dark .aromatic.is-active[_v-34eb1e72] {\n    color: rgba(255, 255, 255, 0.8); }\n  .shade--light .aromatic[_v-34eb1e72]:hover,\n  .shade--light .aromatic.is-active[_v-34eb1e72] {\n    color: rgba(0, 0, 0, 0.8); }\n\n.translations-wrapper[_v-34eb1e72] {\n  -ms-flex-align: center;\n      align-items: center;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  height: 100%;\n  -ms-flex-pack: center;\n      justify-content: center; }\n  .is-mobile .translations-wrapper[_v-34eb1e72] {\n    height: 100vh; }\n\n.translations-list[_v-34eb1e72] {\n  font-family: \"sabon-roman\", serif;\n  font-size: 1.2rem;\n  line-height: 2.75;\n  text-align: center;\n  text-transform: uppercase; }\n\n.slide__products[_v-34eb1e72] {\n  -ms-flex-align: center;\n      align-items: center;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n  -ms-flex-pack: center;\n      justify-content: center;\n  margin-bottom: 2.5rem; }\n\n.slide__product[_v-34eb1e72] {\n  cursor: pointer;\n  width: 50%;\n  padding: 1.5rem; }\n  .slide__product img + .slide__product__btn[_v-34eb1e72] {\n    margin-top: 1rem;\n    text-decoration: none; }\n  @media screen and (min-width: 620px) {\n    .slide__product[_v-34eb1e72] {\n      padding: 6rem; } }\n  @media screen and (min-width: 768px) {\n    .slide__product[_v-34eb1e72] {\n      padding: 1rem;\n      width: 25%; } }\n\n.slide__product__btn[_v-34eb1e72] {\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n  background: #ffffff;\n  border: 1px solid #c1c1c1;\n  box-shadow: none;\n  display: block;\n  font-size: 1.2rem;\n  margin: 0 auto;\n  padding: 1rem;\n  text-transform: uppercase;\n  transition: border-color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  width: 80%;\n  text-align: center; }\n  .slide__product__btn[_v-34eb1e72]:hover, .slide__product__btn[_v-34eb1e72]:focus {\n    outline: none; }\n  .slide__product:hover > .slide__product__btn[_v-34eb1e72] {\n    border-color: #000000; }\n  @media screen and (min-width: 768px) {\n    .slide__product__btn[_v-34eb1e72] {\n      font-size: 1.4rem; } }\n\n.slide__product__btn-buy[_v-34eb1e72], a.slide__product__btn-buy[_v-34eb1e72] {\n  margin: 0 auto 0; }\n", ""]);
+	exports.push([module.id, ".the-scent[_v-34eb1e72] {\n  -ms-flex-align: center;\n      align-items: center;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  height: 100%;\n  -ms-flex-pack: center;\n      justify-content: center;\n  -ms-transform: translateY(1%);\n      transform: translateY(1%); }\n  .is-mobile .the-scent[_v-34eb1e72] {\n    height: auto;\n    position: relative;\n    min-height: 100vh; }\n\n.the-scent__title[_v-34eb1e72] {\n  font-family: \"brown-std\", \"Helvetica Neue\", Helvetica, sans-serif;\n  font-size: 1.4rem;\n  line-height: 1.2858;\n  margin-bottom: 4rem;\n  text-transform: uppercase; }\n  .shade--dark .the-scent__title[_v-34eb1e72] {\n    color: #ffffff; }\n  .shade--light .the-scent__title[_v-34eb1e72] {\n    color: #000000; }\n\n.the-scent__desc[_v-34eb1e72] {\n  font-family: \"sabon-roman\", serif;\n  font-size: 1.8rem;\n  line-height: 1.34375;\n  text-align: center;\n  transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .shade--dark .the-scent__desc[_v-34eb1e72] {\n    color: #ffffff; }\n  .shade--light .the-scent__desc[_v-34eb1e72] {\n    color: #000000; }\n  @media screen and (min-width: 768px) {\n    .the-scent__desc[_v-34eb1e72] {\n      font-size: 3.2rem; } }\n\n.aromatic[_v-34eb1e72] {\n  cursor: pointer;\n  font-family: \"sabon-italic\", serif;\n  color: rgba(0, 0, 0, 0.5); }\n  .shade--dark .aromatic[_v-34eb1e72] {\n    color: rgba(255, 255, 255, 0.5); }\n  .shade--white .aromatic[_v-34eb1e72] {\n    color: rgba(0, 0, 0, 0.5); }\n  .aromatic[_v-34eb1e72]:hover, .aromatic.is-active[_v-34eb1e72] {\n    color: rgba(0, 0, 0, 0.8);\n    transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .shade--dark .aromatic[_v-34eb1e72]:hover,\n  .shade--dark .aromatic.is-active[_v-34eb1e72] {\n    color: rgba(255, 255, 255, 0.8); }\n  .shade--light .aromatic[_v-34eb1e72]:hover,\n  .shade--light .aromatic.is-active[_v-34eb1e72] {\n    color: rgba(0, 0, 0, 0.8); }\n\n.translations-wrapper[_v-34eb1e72] {\n  -ms-flex-align: center;\n      align-items: center;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  height: 100%;\n  -ms-flex-pack: center;\n      justify-content: center; }\n  .is-mobile .translations-wrapper[_v-34eb1e72] {\n    height: 100vh; }\n\n.translations-list[_v-34eb1e72] {\n  font-family: \"sabon-roman\", serif;\n  font-size: 1.2rem;\n  line-height: 2.75;\n  text-align: center;\n  text-transform: uppercase; }\n\n.diaryfeed[_v-34eb1e72] {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  height: 100%;\n  -ms-flex-pack: center;\n      justify-content: center; }\n\n.slide__products[_v-34eb1e72] {\n  -ms-flex-align: center;\n      align-items: center;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n  -ms-flex-pack: center;\n      justify-content: center;\n  margin-bottom: 2.5rem; }\n\n.slide__product[_v-34eb1e72] {\n  cursor: pointer;\n  width: 50%;\n  padding: 1.5rem; }\n  .slide__product img + .slide__product__btn[_v-34eb1e72] {\n    margin-top: 1rem;\n    text-decoration: none; }\n  @media screen and (min-width: 620px) {\n    .slide__product[_v-34eb1e72] {\n      padding: 6rem; } }\n  @media screen and (min-width: 768px) {\n    .slide__product[_v-34eb1e72] {\n      padding: 1rem;\n      width: 25%; } }\n\n.slide__product__btn[_v-34eb1e72] {\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n  background: #ffffff;\n  border: 1px solid #c1c1c1;\n  box-shadow: none;\n  display: block;\n  font-size: 1.2rem;\n  margin: 0 auto;\n  padding: 1rem;\n  text-transform: uppercase;\n  transition: border-color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  width: 80%;\n  text-align: center; }\n  .slide__product__btn[_v-34eb1e72]:hover, .slide__product__btn[_v-34eb1e72]:focus {\n    outline: none; }\n  .slide__product:hover > .slide__product__btn[_v-34eb1e72] {\n    border-color: #000000; }\n  @media screen and (min-width: 768px) {\n    .slide__product__btn[_v-34eb1e72] {\n      font-size: 1.4rem; } }\n\n.slide__product__btn-buy[_v-34eb1e72], a.slide__product__btn-buy[_v-34eb1e72] {\n  margin: 0 auto 0; }\n", ""]);
 
 	// exports
 
@@ -35738,10 +35744,6 @@
 
 	var _Diary2 = _interopRequireDefault(_Diary);
 
-	var _SiteFooter = __webpack_require__(19);
-
-	var _SiteFooter2 = _interopRequireDefault(_SiteFooter);
-
 	var _lodash = __webpack_require__(59);
 
 	var _helpers = __webpack_require__(61);
@@ -35751,8 +35753,7 @@
 	var page = __webpack_require__(28)();
 	exports.default = {
 	  components: {
-	    Diary: _Diary2.default,
-	    SiteFooter: _SiteFooter2.default
+	    Diary: _Diary2.default
 	  },
 	  data: function data() {
 	    return {
@@ -40571,7 +40572,7 @@
 /* 93 */
 /***/ (function(module, exports) {
 
-	module.exports = "\n<div class=\"slides\" _v-34eb1e72=\"\">\n  <!-- SCROLL ARROW ICON -->\n  <span class=\"slide__icn-scroll\" v-bind:class=\"scrollArrowIsActive ? 'is-active' : 'is-inactive'\" v-show=\"scrollArrowIsVisible\" transition=\"fade\" data-start=\"opacity: 1;\" data-850-end=\"opacity: 1;\" data-800-end=\"opacity: 0.5;\" data-700-end=\"opacity: 0;\" data-end=\"opacity: 0;\" _v-34eb1e72=\"\">Scroll Down</span>\n\n  <!-- SECTION 0: INTRO/HERO -->\n  <div class=\"slide slide--0 slide--intro\" _v-34eb1e72=\"\">\n    <div class=\"slide--intro__logo\" data-0=\"opacity: 1;\" data-50p=\"opacity: 0;\" _v-34eb1e72=\"\">\n      <img src=\"/images/logo.svg\" title=\"CANDER PARIS\" _v-34eb1e72=\"\">\n    </div>\n  </div>\n\n\n\n  <!-- SECTION 1: THE CANDLE -->\n  <div class=\"slide slide--1\" id=\"the-fold\" data-0=\"transform: translate(0, 100%);\" data-100p=\"transform: translate(0, 0%)\" _v-34eb1e72=\"\">\n    <!-- Product Images (non-mobile) -->\n    <div class=\"slide__product-wrapper\" data-0=\"opacity: 0\" data-100p=\"opacity: 1\" data-200p=\"opacity: 1\" data-250p=\"opacity: 0\" _v-34eb1e72=\"\">\n      <div class=\"slide__products\" _v-34eb1e72=\"\">\n        <div class=\"slide__product\" data-product-title=\"Scent 01\" _v-34eb1e72=\"\">\n          <img src=\"/images/updated-candles/01162017/scent01.jpg\" alt=\"Scent 01\" _v-34eb1e72=\"\">\n          <a href=\"https://cander-paris.myshopify.com/products/scent-01\" class=\"slide__product__btn\" _v-34eb1e72=\"\">Buy Now</a>\n        </div>\n        <div class=\"slide__product\" data-product-title=\"Our Youth\" _v-34eb1e72=\"\">\n          <img src=\"/images/updated-candles/01162017/ouryouth.jpg\" alt=\"Our Youth\" _v-34eb1e72=\"\">\n          <a href=\"https://cander-paris.myshopify.com/products/our-youth\" class=\"slide__product__btn\" _v-34eb1e72=\"\">Buy Now</a>\n        </div>\n        <div class=\"slide__product\" data-product-title=\"Rue Vertbois\" _v-34eb1e72=\"\">\n          <img src=\"/images/updated-candles/01162017/ruevertbois.jpg\" alt=\"Rue Vertbois\" _v-34eb1e72=\"\">\n          <a href=\"https://cander-paris.myshopify.com/products/rue-vertbois\" class=\"slide__product__btn\" _v-34eb1e72=\"\">Buy Now</a>\n        </div>\n        <div class=\"slide__product\" data-product-title=\"Rose\" _v-34eb1e72=\"\">\n          <img src=\"/images/updated-candles/01162017/rose.jpg\" alt=\"Rose\" _v-34eb1e72=\"\">\n          <a href=\"https://cander-paris.myshopify.com/products/rose\" class=\"slide__product__btn\" _v-34eb1e72=\"\">Buy Now</a>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <!-- SECTION 2: THE SCENT -->\n  <div class=\"slide slide--2 shade--dark\" data-0=\"opacity: 0\" data-200p=\"opacity: 0; transform: translate(0, 100%);\" data-250p=\"opacity: 0; transform: translate(0, 5%);\" data-300p=\"opacity: 1; transform: translate(0, 0%);\" data-450p=\"opacity: 0; transform: translate(0, -2%);\" _v-34eb1e72=\"\">\n    <div class=\"slide--2__bg is-dark\" style=\"background-image: url('/images/bg-aromatic-santal.jpg');\" _v-34eb1e72=\"\"></div>\n    <div class=\"the-scent\" _v-34eb1e72=\"\">\n      <p class=\"the-scent__desc\" style=\"font-style: italic;\" _v-34eb1e72=\"\">Refined fragrances created in Paris by elite French perfumers</p>\n    </div>\n  </div>\n\n  <!-- SECTION 3: DOOR -->\n  <div class=\"slide slide--3\" data-0=\"opacity: 0\" data-300p=\"opacity: 0; transform: translate(0, 100%);\" data-450p=\"opacity: 0; transform: translate(0, 30%);\" data-500p=\"opacity: 1; transform: translate(0, 0%);\" data-650p=\"opacity: 1; transform: translate(0, 0%);\" data-750p=\"transform: translate(0, -120%);\" _v-34eb1e72=\"\">\n    <div class=\"translations-wrapper\" _v-34eb1e72=\"\">\n      <ul class=\"translations-list\" _v-34eb1e72=\"\">\n        <li _v-34eb1e72=\"\">Bougie Parfumée</li>\n        <li _v-34eb1e72=\"\">Fragranced Candle</li>\n        <li _v-34eb1e72=\"\">Candela Profumata</li>\n        <li _v-34eb1e72=\"\">Vela Perfumada</li>\n        <li _v-34eb1e72=\"\">Duftkerze</li>\n        <li _v-34eb1e72=\"\">香味蠟燭</li>\n        <li _v-34eb1e72=\"\">香りのろうそく</li>\n      </ul>\n    </div>\n  </div>\n\n  <!-- SECTION 4: PRODUCT -->\n  <div class=\"slide slide--4\" data-0=\"opacity: 0\" data-700p=\"opacity: 0; transform: translate(0, 100%);\" data-725p=\"opacity: 0; transform: translate(0, 20%);\" data-760p=\"opacity: 0.3; transform: translate(0, 5%);\" data-770p=\"opacity: 1; transform: translate(0, 0%);\" data-800p=\"transform: translate(0, 0%);\" data-890p=\"transform: translate(0, -15%);\" data-900p=\"transform: translate(0, -120%);\" _v-34eb1e72=\"\">\n    <div class=\"slide--4__inner\" _v-34eb1e72=\"\">\n      <img src=\"/images/menu-accent-contact-transparent.png\" alt=\"Front\" class=\"slide--4__product-image\" _v-34eb1e72=\"\">\n      <h2 class=\"zeta\" _v-34eb1e72=\"\">Coming soon in stores Autumn 2017</h2>\n    </div>\n  </div>\n\n  <!-- SECTION 5: DIARY -->\n  <div class=\"slide slide--5\" data-0=\"opacity: 0\" data-890p=\"opacity: 0; transform: translate(0, 100%);\" data-920p=\"opacity: 1; transform: translate(0, 5%);\" data-960p=\"opacity: 1; transform: translate(0, 0%)\" _v-34eb1e72=\"\">\n    <div class=\"diaryfeed\" _v-34eb1e72=\"\">\n      <diary _v-34eb1e72=\"\"></diary>\n    </div>\n  </div>\n\n  <!-- FOOTER -->\n  <div class=\"slide--footer-wrapper\" data-0=\"opacity: 0\" data-900p=\"opacity: 0; transform: translate(0, 100%);\" data-910p=\"opacity: 0; transform: translate(0, 20%);\" data-9200p=\"opacity: 0.3; transform: translate(0, 5%);\" data-930p=\"opacity: 1; transform: translate(0, 0%);\" data-1000p=\"opacity: 1; transform: translate(0, 0%);\" _v-34eb1e72=\"\">\n    <site-footer _v-34eb1e72=\"\"></site-footer>\n  </div>\n</div>\n";
+	module.exports = "\n<div class=\"slides\" _v-34eb1e72=\"\">\n  <!-- SCROLL ARROW ICON -->\n  <span class=\"slide__icn-scroll\" v-bind:class=\"scrollArrowIsActive ? 'is-active' : 'is-inactive'\" v-show=\"scrollArrowIsVisible\" transition=\"fade\" data-start=\"opacity: 1;\" data-850-end=\"opacity: 1;\" data-800-end=\"opacity: 0.5;\" data-700-end=\"opacity: 0;\" data-end=\"opacity: 0;\" _v-34eb1e72=\"\">Scroll Down</span>\n\n  <!-- SECTION 0: INTRO/HERO -->\n  <div class=\"slide slide--0 slide--intro\" _v-34eb1e72=\"\">\n    <div class=\"slide--intro__logo\" data-0=\"opacity: 1;\" data-50p=\"opacity: 0;\" _v-34eb1e72=\"\">\n      <img src=\"/images/logo.svg\" title=\"CANDER PARIS\" _v-34eb1e72=\"\">\n    </div>\n  </div>\n\n\n\n  <!-- SECTION 1: THE CANDLE -->\n  <div class=\"slide slide--1\" id=\"the-fold\" data-0=\"transform: translate(0, 100%);\" data-100p=\"transform: translate(0, 0%)\" _v-34eb1e72=\"\">\n    <!-- Product Images (non-mobile) -->\n    <div class=\"slide__product-wrapper\" data-0=\"opacity: 0\" data-100p=\"opacity: 1\" data-200p=\"opacity: 1\" data-250p=\"opacity: 0\" _v-34eb1e72=\"\">\n      <div class=\"slide__products\" _v-34eb1e72=\"\">\n        <div class=\"slide__product\" data-product-title=\"Scent 01\" _v-34eb1e72=\"\">\n          <img src=\"/images/updated-candles/01162017/scent01.jpg\" alt=\"Scent 01\" _v-34eb1e72=\"\">\n          <a href=\"https://cander-paris.myshopify.com/products/scent-01\" class=\"slide__product__btn\" _v-34eb1e72=\"\">Buy Now</a>\n        </div>\n        <div class=\"slide__product\" data-product-title=\"Our Youth\" _v-34eb1e72=\"\">\n          <img src=\"/images/updated-candles/01162017/ouryouth.jpg\" alt=\"Our Youth\" _v-34eb1e72=\"\">\n          <a href=\"https://cander-paris.myshopify.com/products/our-youth\" class=\"slide__product__btn\" _v-34eb1e72=\"\">Buy Now</a>\n        </div>\n        <div class=\"slide__product\" data-product-title=\"Rue Vertbois\" _v-34eb1e72=\"\">\n          <img src=\"/images/updated-candles/01162017/ruevertbois.jpg\" alt=\"Rue Vertbois\" _v-34eb1e72=\"\">\n          <a href=\"https://cander-paris.myshopify.com/products/rue-vertbois\" class=\"slide__product__btn\" _v-34eb1e72=\"\">Buy Now</a>\n        </div>\n        <div class=\"slide__product\" data-product-title=\"Rose\" _v-34eb1e72=\"\">\n          <img src=\"/images/updated-candles/01162017/rose.jpg\" alt=\"Rose\" _v-34eb1e72=\"\">\n          <a href=\"https://cander-paris.myshopify.com/products/rose\" class=\"slide__product__btn\" _v-34eb1e72=\"\">Buy Now</a>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <!-- SECTION 2: THE SCENT -->\n  <div class=\"slide slide--2 shade--dark\" data-0=\"opacity: 0\" data-200p=\"opacity: 0; transform: translate(0, 100%);\" data-250p=\"opacity: 0; transform: translate(0, 5%);\" data-300p=\"opacity: 1; transform: translate(0, 0%);\" data-450p=\"opacity: 0; transform: translate(0, -2%);\" _v-34eb1e72=\"\">\n    <div class=\"slide--2__bg is-dark\" style=\"background-image: url('/images/bg-aromatic-santal.jpg');\" _v-34eb1e72=\"\"></div>\n    <div class=\"the-scent\" _v-34eb1e72=\"\">\n      <p class=\"the-scent__desc\" style=\"font-style: italic;\" _v-34eb1e72=\"\">Refined fragrances created in Paris by elite French perfumers</p>\n    </div>\n  </div>\n\n  <!-- SECTION 3: DOOR -->\n  <div class=\"slide slide--3\" data-0=\"opacity: 0\" data-300p=\"opacity: 0; transform: translate(0, 100%);\" data-450p=\"opacity: 0; transform: translate(0, 30%);\" data-500p=\"opacity: 1; transform: translate(0, 0%);\" data-650p=\"opacity: 1; transform: translate(0, 0%);\" data-750p=\"transform: translate(0, -120%);\" _v-34eb1e72=\"\">\n    <div class=\"translations-wrapper\" _v-34eb1e72=\"\">\n      <ul class=\"translations-list\" _v-34eb1e72=\"\">\n        <li _v-34eb1e72=\"\">Bougie Parfumée</li>\n        <li _v-34eb1e72=\"\">Fragranced Candle</li>\n        <li _v-34eb1e72=\"\">Candela Profumata</li>\n        <li _v-34eb1e72=\"\">Vela Perfumada</li>\n        <li _v-34eb1e72=\"\">Duftkerze</li>\n        <li _v-34eb1e72=\"\">香味蠟燭</li>\n        <li _v-34eb1e72=\"\">香りのろうそく</li>\n      </ul>\n    </div>\n  </div>\n\n  <!-- SECTION 4: DIARY -->\n  <div class=\"slide slide--4\" data-0=\"opacity: 0\" data-700p=\"opacity: 0; transform: translate(0, 100%);\" data-725p=\"opacity: 0; transform: translate(0, 20%);\" data-730p=\"opacity: 0.3; transform: translate(0, 5%);\" data-740p=\"opacity: 1; transform: translate(0, 0%);\" _v-34eb1e72=\"\">\n    <div class=\"diaryfeed\" _v-34eb1e72=\"\">\n      <diary _v-34eb1e72=\"\"></diary>\n    </div>\n  </div>\n</div>\n";
 
 /***/ }),
 /* 94 */
@@ -41303,7 +41304,7 @@
 /* 110 */
 /***/ (function(module, exports) {
 
-	module.exports = "\n<div class=\"articles-container\" _v-19e8468b=\"\">\n  <section class=\"wider\" _v-19e8468b=\"\">\n    <h1 class=\"section__heading--alpha\" _v-19e8468b=\"\">Press</h1>\n    <hr _v-19e8468b=\"\">\n    <ul class=\"articles-list\" v-if=\"articles.length\" _v-19e8468b=\"\">\n      <li class=\"article\" v-for=\"article in articles\" _v-19e8468b=\"\">\n        <a href=\"{{ article.website }}\" p=\"\" class=\"article__image\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\">\n          <img src=\"{{ article.image }}\" _v-19e8468b=\"\">\n        <p _v-19e8468b=\"\"></p>\n        <h3 class=\"article__name\" _v-19e8468b=\"\">{{ article.name }}</h3>\n        <div class=\"article__subtitle\" _v-19e8468b=\"\">{{ article.subtitle }}</div>\n      </a></li><a href=\"{{ article.website }}\" p=\"\" class=\"article__image\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\">\n    </a></ul><a href=\"{{ article.website }}\" p=\"\" class=\"article__image\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\">\n    <div v-if=\"!articles.length\" _v-19e8468b=\"\">\n      <p class=\"articles__empty-state-message\" _v-19e8468b=\"\">Coming Soon</p>\n    </div>\n</a></section><a href=\"{{ article.website }}\" p=\"\" class=\"article__image\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\">\n  <site-footer _v-19e8468b=\"\"></site-footer>\n</a></div><a href=\"{{ article.website }}\" p=\"\" class=\"article__image\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\">\n</a>";
+	module.exports = "\n<div class=\"articles-container\" _v-19e8468b=\"\">\n  <section class=\"wider\" _v-19e8468b=\"\">\n    <h1 class=\"section__heading--alpha\" _v-19e8468b=\"\">Press</h1>\n    <hr _v-19e8468b=\"\">\n    <ul class=\"articles-list\" v-if=\"articles.length\" _v-19e8468b=\"\">\n      <li class=\"article\" v-for=\"article in articles\" _v-19e8468b=\"\">\n        <a href=\"{{ article.website }}\" p=\"\" class=\"article__image\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\">\n          <img src=\"{{ article.image }}\" _v-19e8468b=\"\">\n        <p _v-19e8468b=\"\"></p>\n        <h3 class=\"article__name\" _v-19e8468b=\"\">{{ article.name }}</h3>\n        <div class=\"article__subtitle\" _v-19e8468b=\"\">{{ article.subtitle }}</div>\n      </a></li><a href=\"{{ article.website }}\" p=\"\" class=\"article__image\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\">\n    </a></ul><a href=\"{{ article.website }}\" p=\"\" class=\"article__image\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\">\n    <div v-if=\"!articles.length\" _v-19e8468b=\"\">\n      <p class=\"articles__empty-state-message\" _v-19e8468b=\"\">Coming Soon</p>\n    </div>\n</a></section><a href=\"{{ article.website }}\" p=\"\" class=\"article__image\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\">\n  <!-- <site-footer></site-footer> -->\n</a></div><a href=\"{{ article.website }}\" p=\"\" class=\"article__image\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\">\n</a>";
 
 /***/ }),
 /* 111 */
@@ -41314,8 +41315,136 @@
 	__webpack_require__(112)
 	__vue_script__ = __webpack_require__(114)
 	if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
-	  console.warn("[vue-loader] src/js/components/SectionTerms.vue: named exports in *.vue files are ignored.")}
+	  console.warn("[vue-loader] src/js/components/SectionProduct.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(115)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
+	if (__vue_template__) {
+	__vue_options__.template = __vue_template__
+	}
+	if (!__vue_options__.computed) __vue_options__.computed = {}
+	Object.keys(__vue_styles__).forEach(function (key) {
+	var module = __vue_styles__[key]
+	__vue_options__.computed[key] = function () { return module }
+	})
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "_v-8d26a592/SectionProduct.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ }),
+/* 112 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(113);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(12)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-8d26a592&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionProduct.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-8d26a592&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionProduct.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ }),
+/* 113 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(11)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".section-product__intro[_v-8d26a592] {\n  -ms-flex-align: center;\n      align-items: center;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  -ms-flex-pack: start;\n      justify-content: flex-start; }\n  @media screen and (min-width: 768px) {\n    .section-product__intro[_v-8d26a592] {\n      -ms-flex-align: start;\n          align-items: flex-start;\n      -ms-flex-direction: row;\n          flex-direction: row;\n      -ms-flex-pack: center;\n          justify-content: center; } }\n\n.section-product__intro__image-wrap[_v-8d26a592],\n.section-product__intro__text-wrap[_v-8d26a592] {\n  width: 90%; }\n  @media screen and (min-width: 768px) {\n    .section-product__intro__image-wrap[_v-8d26a592],\n    .section-product__intro__text-wrap[_v-8d26a592] {\n      padding: 5rem;\n      width: 50%; } }\n\n@media screen and (min-width: 768px) {\n  .section-product__intro__image-wrap[_v-8d26a592] {\n    padding-right: 0;\n    -ms-flex-align: start;\n        align-items: flex-start; } }\n\n.section-product__intro__image[_v-8d26a592] {\n  height: auto;\n  width: auto;\n  max-width: 600px;\n  max-height: 600px;\n  margin-top: 4rem; }\n\n.section-product__intro__text-wrap[_v-8d26a592] {\n  margin-bottom: 2rem; }\n  .section-product__intro__text-wrap h1[_v-8d26a592] {\n    margin: 4rem 0 2rem 0; }\n  .section-product__intro__text-wrap h3[_v-8d26a592] {\n    margin: 2.5rem 0 2rem 0; }\n\n.section-product__intro__text-wrap__inner[_v-8d26a592] {\n  opacity: 1;\n  max-width: 50rem;\n  min-height: 27rem; }\n  @media screen and (min-width: 768px) {\n    .section-product__intro__text-wrap__inner[_v-8d26a592] {\n      position: relative; } }\n\n.section-product__intro__language-switch[_v-8d26a592] {\n  border-top: 1px solid rgba(193, 193, 193, 0.333);\n  display: inline-block;\n  padding-top: 0.666rem; }\n  .section-product__intro__language-switch a[_v-8d26a592] {\n    color: #c1c1c1;\n    letter-spacing: 0.1rem;\n    text-decoration: none;\n    transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n    .section-product__intro__language-switch a[_v-8d26a592]:first-of-type {\n      margin-right: 0.666rem; }\n    .section-product__intro__language-switch a.is-active[_v-8d26a592], .section-product__intro__language-switch a[_v-8d26a592]:active, .section-product__intro__language-switch a[_v-8d26a592]:hover {\n      color: #000000; }\n  @media screen and (min-width: 768px) {\n    .section-product__intro__language-switch[_v-8d26a592] {\n      position: absolute; } }\n", ""]);
+
+	// exports
+
+
+/***/ }),
+/* 114 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _scroll = __webpack_require__(14);
+
+	var _scroll2 = _interopRequireDefault(_scroll);
+
+	var _store = __webpack_require__(17);
+
+	var _store2 = _interopRequireDefault(_store);
+
+	var _SiteFooter = __webpack_require__(19);
+
+	var _SiteFooter2 = _interopRequireDefault(_SiteFooter);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var page = __webpack_require__(28)();
+
+	exports.default = {
+	  data: function data() {
+	    return {
+	      language: _store2.default.data.language
+	    };
+	  },
+
+	  components: {
+	    SiteFooter: _SiteFooter2.default
+	  },
+	  methods: {
+	    setLanguage: function setLanguage(lang) {
+	      this.language = lang;
+	      this.scrollToTop();
+	    },
+	    scrollToTop: function scrollToTop() {
+	      _scroll2.default.top(page, 0, { duration: 400 });
+	    }
+	  },
+	  ready: function ready() {}
+	};
+
+/***/ }),
+/* 115 */
+/***/ (function(module, exports) {
+
+	module.exports = "\n<div class=\"single-page\" _v-8d26a592=\"\">\n  <div class=\"single-page__content\" _v-8d26a592=\"\">\n    <div class=\"section-product__intro\" _v-8d26a592=\"\">\n      <div class=\"section-product__intro__image-wrap\" _v-8d26a592=\"\">\n        <img src=\"/images/product-page-default.jpg\" alt=\"Product Page Default\" class=\"section-product__intro__image\" _v-8d26a592=\"\">\n      </div>\n      <div class=\"section-product__intro__text-wrap\" _v-8d26a592=\"\">\n        <div class=\"section-product__intro__text-wrap__inner\" v-show=\"language === 'en'\" transition=\"fade\" _v-8d26a592=\"\">\n          <h1 class=\"zeta\" _v-8d26a592=\"\">PRODUCT</h1>\n          <!-- <h2 class=\"delta\"><strong>Can<span style=\"font-size:0.75em\">•</span>dor [ 'kandər ]</strong>, <em>noun</em><br>the quality of being open and honest in expression</h2> -->\n          <h3 class=\"p-beta\" _v-8d26a592=\"\">Cander Paris candles are made in Grasse France using the finest craftsmanship and materials. We use hand-blown glass and the highest quality paraffin-vegetal wax blend to ensure the best aromatic performance. Each fragrance\n          is created in Paris with perfumer Emmanuel Philip. The launch collection of four fragrances features works of Pine, Amber, Sandalwood, and Rose. </h3>\n          <h3 class=\"p-beta\" _v-8d26a592=\"\">Burn instructions: <br _v-8d26a592=\"\"> For an ideal burn, we suggest trimming the wick to 3-5mm before each use. The candles should ideally be stored at room temperature.  </h3>\n        </div>\n      </div>\n    </div>\n  </div>\n  <!-- <site-footer></site-footer> -->\n</div>\n";
+
+/***/ }),
+/* 116 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	var __vue_styles__ = {}
+	__webpack_require__(117)
+	__vue_script__ = __webpack_require__(119)
+	if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
+	  console.warn("[vue-loader] src/js/components/SectionTerms.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(120)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -41340,13 +41469,13 @@
 	})()}
 
 /***/ }),
-/* 112 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(113);
+	var content = __webpack_require__(118);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(12)(content, {});
@@ -41366,115 +41495,6 @@
 	}
 
 /***/ }),
-/* 113 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(11)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "section[_v-6c02ac62] {\n  margin: 6rem auto;\n  max-width: 50rem;\n  width: 80%; }\n\nh1[_v-6c02ac62] {\n  font-size: 1.8rem;\n  text-align: center;\n  text-transform: uppercase; }\n\nh3[_v-6c02ac62] {\n  font-size: 1.2rem;\n  line-height: 1.8;\n  margin: 3rem 0 2rem 0;\n  text-transform: uppercase; }\n\np[_v-6c02ac62] {\n  font-family: \"sabon-roman\", serif;\n  font-size: 1.2rem;\n  line-height: 1.666;\n  margin-bottom: 1.2rem; }\n\nhr[_v-6c02ac62] {\n  margin: 4rem auto; }\n", ""]);
-
-	// exports
-
-
-/***/ }),
-/* 114 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _store = __webpack_require__(17);
-
-	var _store2 = _interopRequireDefault(_store);
-
-	var _SiteFooter = __webpack_require__(19);
-
-	var _SiteFooter2 = _interopRequireDefault(_SiteFooter);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = {
-	  components: {
-	    SiteFooter: _SiteFooter2.default
-	  },
-	  data: function data() {
-	    return {};
-	  }
-	};
-
-/***/ }),
-/* 115 */
-/***/ (function(module, exports) {
-
-	module.exports = "\n<div _v-6c02ac62=\"\">\n  <section _v-6c02ac62=\"\">\n    <h1 class=\"section__heading--alpha\" _v-6c02ac62=\"\">Terms and Conditions</h1>\n    <hr _v-6c02ac62=\"\">\n    <h3 _v-6c02ac62=\"\">OVERVIEW</h3>\n    <p _v-6c02ac62=\"\">This website is operated by Cander Paris. Throughout the site, the terms “we”, “us” and “our” refer to Cander. Cander offers this website, including all information, tools and services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies and notices stated here.</p>\n    <p _v-6c02ac62=\"\">By visiting our site and/ or purchasing something from us, you engage in our “Service” and agree to be bound by the following terms and conditions (“Terms of Service”, “Terms”), including those additional terms and conditions and policies referenced herein and/or available by hyperlink. These Terms of Service apply  to all users of the site, including without limitation users who are browsers, vendors, customers, merchants, and/ or contributors of content.</p>\n    <p _v-6c02ac62=\"\">Please read these Terms of Service carefully before accessing or using our website. By accessing or using any part of the site, you agree to be bound by these Terms of Service. If you do not agree to all the terms and conditions of this agreement, then you may not access the website or use any services. If these Terms of Service are considered an offer, acceptance is expressly limited to these Terms of Service.</p>\n    <p _v-6c02ac62=\"\">Any new features or tools which are added to the current store shall also be subject to the Terms of Service. You can review the most current version of the Terms of Service at any time on this page. We reserve the right to update, change or replace any part of these Terms of Service by posting updates and/or changes to our website. It is your responsibility to check this page periodically for changes. Your continued use of or access to the website following the posting of any changes constitutes acceptance of those changes.</p>\n    <h3 _v-6c02ac62=\"\">Section 1 - Online Store Terms</h3>\n    <p _v-6c02ac62=\"\">By agreeing to these Terms of Service, you represent that you are at least the age of majority in your state or province of residence, or that you are the age of majority in your state or province of residence and you have given us your consent to allow any of your minor dependents to use this site. A breach or violation of any of the Terms will result in an immediate termination of your Services.</p>\n    <h3 _v-6c02ac62=\"\">Section 2 - General Conditions</h3>\n    <p _v-6c02ac62=\"\">We reserve the right to refuse service to anyone for any reason at any time.</p>\n    <p _v-6c02ac62=\"\">You understand that your content (not including credit card information), may be transferred unencrypted and involve (a) transmissions over various networks; and (b) changes to conform and adapt to technical requirements of connecting networks or devices. Credit card information is always encrypted during transfer over networks.</p>\n    <p _v-6c02ac62=\"\">You agree not to reproduce, duplicate, copy, sell, resell or exploit any portion of the Service, use of the Service, or access to the Service or any contact on the website through which the service is provided, without express written permission by us.</p>\n    <p _v-6c02ac62=\"\">The headings used in this agreement are included for convenience only and will not limit or otherwise affect these Terms.</p>\n    <h3 _v-6c02ac62=\"\">Section 3 - Accuracy, Completeness And Timeliness Of Information</h3>\n    <p _v-6c02ac62=\"\">We are not responsible if information made available on this site is not accurate, complete or current. The material on this site is provided for general information only and should not be relied upon or used as the sole basis for making decisions without consulting primary, more accurate, more complete or more timely sources of information. Any reliance on the material on this site is at your own risk.</p>\n    <p _v-6c02ac62=\"\">This site may contain certain historical information. Historical information, necessarily, is not current and is provided for your reference only. We reserve the right to modify the contents of this site at any time, but we have no obligation to update any information on our site. You agree that it is your responsibility to monitor changes to our site.</p>\n    <h3 _v-6c02ac62=\"\">Section 4 - Modifications To The Service And Prices</h3>\n    <p _v-6c02ac62=\"\">Prices for our products are subject to change without notice.We reserve the right at any time to modify or discontinue the Service (or any part or content thereof) without notice at any time.We shall not be liable to you or to any third-party for any modification, price change, suspension or discontinuance of the Service.</p>\n    <h3 _v-6c02ac62=\"\">Section 5 - Products Or Services (if Applicable)</h3>\n    <p _v-6c02ac62=\"\">Certain products or services may be available exclusively online through the website. These products or services may have limited quantities and are subject to return or exchange only according to our Return Policy.</p>\n    <p _v-6c02ac62=\"\">We have made every effort to display as accurately as possible the colors and images of our products that appear at the store. We cannot guarantee that your computer monitor's display of any color will be accurate.</p>\n    <p _v-6c02ac62=\"\">We reserve the right, but are not obligated, to limit the sales of our products or Services to any person, geographic region or jurisdiction. We may exercise this right on a case-by-case basis. We reserve the right to limit the quantities of any products or services that we offer. All descriptions of products or product pricing are subject to change at anytime without notice, at the sole discretion of us. We reserve the right to discontinue any product at any time. Any offer for any product or service made on this site is void where prohibited.</p>\n    <p _v-6c02ac62=\"\">We do not warrant that the quality of any products, services, information, or other material purchased or obtained by you will meet your expectations, or that any errors in the Service will be corrected.</p>\n    <h3 _v-6c02ac62=\"\">Section 6 - Accuracy Of Billing And Account Information</h3>\n    <p _v-6c02ac62=\"\">We reserve the right to refuse any order you place with us. We may, in our sole discretion, limit or cancel quantities purchased per person, per household or per order. These restrictions may include orders placed by or under the same customer account, the same credit card, and/or orders that use the same billing and/or shipping address. In the event that we make a change to or cancel an order, we may attempt to notify you by contacting the e-mail and/or billing address/phone number provided at the time the order was made. We reserve the right to limit or prohibit orders that, in our sole judgment, appear to be placed by dealers, resellers or distributors.</p>\n    <p _v-6c02ac62=\"\">You agree to provide current, complete and accurate purchase and account information for all purchases made at our store. You agree to promptly update your account and other information, including your email address and credit card numbers and expiration dates, so that we can complete your transactions and contact you as needed.</p>\n    <p _v-6c02ac62=\"\">For more detail, please review our Returns Policy.</p>\n    <h3 _v-6c02ac62=\"\">Section 7 - Optional Tools</h3>\n    <p _v-6c02ac62=\"\">We may provide you with access to third-party tools over which we neither monitor nor have any control nor input.</p>\n    <p _v-6c02ac62=\"\">You acknowledge and agree that we provide access to such tools ”as is” and “as available” without any warranties, representations or conditions of any kind and without any endorsement. We shall have no liability whatsoever arising from or relating to your use of optional third-party tools.</p>\n    <p _v-6c02ac62=\"\">Any use by you of optional tools offered through the site is entirely at your own risk and discretion and you should ensure that you are familiar with and approve of the terms on which tools are provided by the relevant third-party provider(s).</p>\n    <p _v-6c02ac62=\"\">We may also, in the future, offer new services and/or features through the website (including, the release of new tools and resources). Such new features and/or services shall also be subject to these Terms of Service.</p>\n    <h3 _v-6c02ac62=\"\">Section 8 - Third-party Links</h3>\n    <p _v-6c02ac62=\"\">Certain content, products and services available via our Service may include materials from third-parties.</p>\n    <p _v-6c02ac62=\"\">Third-party links on this site may direct you to third-party websites that are not affiliated with us. We are not responsible for examining or evaluating the content or accuracy and we do not warrant and will not have any liability or responsibility for any third-party materials or websites, or for any other materials, products, or services of third-parties.</p>\n    <p _v-6c02ac62=\"\">We are not liable for any harm or damages related to the purchase or use of goods, services, resources, content, or any other transactions made in connection with any third-party websites. Please review carefully the third-party's policies and practices and make sure you understand them before you engage in any transaction. Complaints, claims, concerns, or questions regarding third-party products should be directed to the third-party.</p>\n    <h3 _v-6c02ac62=\"\">Section 9 - User Comments, Feedback And Other Submissions</h3>\n    <p _v-6c02ac62=\"\">If, at our request, you send certain specific submissions (for example contest entries) or without a request from us you send creative ideas, suggestions, proposals, plans, or other materials, whether online, by email, by postal mail, or otherwise (collectively, 'comments'), you agree that we may, at any time, without restriction, edit, copy, publish, distribute, translate and otherwise use in any medium any comments that you forward to us. We are and shall be under no obligation (1) to maintain any comments in confidence; (2) to pay compensation for any comments; or (3) to respond to any comments.</p>\n    <p _v-6c02ac62=\"\">We may, but have no obligation to, monitor, edit or remove content that we determine in our sole discretion are unlawful, offensive, threatening, libelous, defamatory, pornographic, obscene or otherwise objectionable or violates any party’s intellectual property or these Terms of Service.</p>\n    <p _v-6c02ac62=\"\">You agree that your comments will not violate any right of any third-party, including copyright, trademark, privacy, personality or other personal or proprietary right. You further agree that your comments will not contain libelous or otherwise unlawful, abusive or obscene material, or contain any computer virus or other malware that could in any way affect the operation of the Service or any related website. You may not use a false e-mail address, pretend to be someone other than yourself, or otherwise mislead us or third-parties as to the origin of any comments. You are solely responsible for any comments you make and their accuracy. We take no responsibility and assume no liability for any comments posted by you or any third-party.</p>\n    <h3 _v-6c02ac62=\"\">Section 10 - Personal Information</h3>\n    <p _v-6c02ac62=\"\">Your submission of personal information through the store is governed by our Privacy Policy. To view our Privacy Policy.</p>\n    <h3 _v-6c02ac62=\"\">Section 11 - Errors, Inaccuracies And Omissions</h3>\n    <p _v-6c02ac62=\"\">Occasionally there may be information on our site or in the Service that contains typographical errors, inaccuracies or omissions that may relate to product descriptions, pricing, promotions, offers, product shipping charges, transit times and availability. We reserve the right to correct any errors, inaccuracies or omissions, and to change or update information or cancel orders if any information in the Service or on any related website is inaccurate at any time without prior notice (including after you have submitted your order).</p>\n    <p _v-6c02ac62=\"\">We undertake no obligation to update, amend or clarify information in the Service or on any related website, including without limitation, pricing information, except as required by law. No specified update or refresh date applied in the Service or on any related website, should be taken to indicate that all information in the Service or on any related website has been modified or updated.</p>\n    <h3 _v-6c02ac62=\"\">Section 12 - Prohibited Uses</h3>\n    <p _v-6c02ac62=\"\">In addition to other prohibitions as set forth in the Terms of Service, you are prohibited from using the site or its content: (a) for any unlawful purpose; (b) to solicit others to perform or participate in any unlawful acts; (c) to violate any international, federal, provincial or state regulations, rules, laws, or local ordinances; (d) to infringe upon or violate our intellectual property rights or the intellectual property rights of others; (e) to harass, abuse, insult, harm, defame, slander, disparage, intimidate, or discriminate based on gender, sexual orientation, religion, ethnicity, race, age, national origin, or disability; (f) to submit false or misleading information; (g) to upload or transmit viruses or any other type of malicious code that will or may be used in any way that will affect the functionality or operation of the Service or of any related website, other websites, or the Internet; (h) to collect or track the personal information of others; (i) to spam, phish, pharm, pretext, spider, crawl, or scrape; (j) for any obscene or immoral purpose; or (k) to interfere with or circumvent the security features of the Service or any related website, other websites, or the Internet. We reserve the right to terminate your use of the Service or any related website for violating any of the prohibited uses.</p>\n    <h3 _v-6c02ac62=\"\">Section 13 - Disclaimer Of Warranties; Limitation Of Liability</h3>\n    <p _v-6c02ac62=\"\">We do not guarantee, represent or warrant that your use of our service will be uninterrupted, timely, secure or error-free.</p>\n    <p _v-6c02ac62=\"\">We do not warrant that the results that may be obtained from the use of the service will be accurate or reliable.</p>\n    <p _v-6c02ac62=\"\">You agree that from time to time we may remove the service for indefinite periods of time or cancel the service at any time, without notice to you.</p>\n    <p _v-6c02ac62=\"\">You expressly agree that your use of, or inability to use, the service is at your sole risk. The service and all products and services delivered to you through the service are (except as expressly stated by us) provided 'as is' and 'as available' for your use, without any representation, warranties or conditions of any kind, either express or implied, including all implied warranties or conditions of merchantability, merchantable quality, fitness for a particular purpose, durability, title, and non-infringement.</p>\n    <p _v-6c02ac62=\"\">In no case shall Cander, our directors, officers, employees, affiliates, agents, contractors, interns, suppliers, service providers or licensors be liable for any injury, loss, claim, or any direct, indirect, incidental, punitive, special, or consequential damages of any kind, including, without limitation lost profits, lost revenue, lost savings, loss of data, replacement costs, or any similar damages, whether based in contract, tort (including negligence), strict liability or otherwise, arising from your use of any of the service or any products procured using the service, or for any other claim related in any way to your use of the service or any product, including, but not limited to, any errors or omissions in any content, or any loss or damage of any kind incurred as a result of the use of the service or any content (or product) posted, transmitted, or otherwise made available via the service, even if advised of their possibility. Because some states or jurisdictions do not allow the exclusion or the limitation of liability for consequential or incidental damages, in such states or jurisdictions, our liability shall be limited to the maximum extent permitted by law.</p>\n    <h3 _v-6c02ac62=\"\">Section 14 - Indemnification</h3>\n    <p _v-6c02ac62=\"\">You agree to indemnify, defend and hold harmless Cander and our parent, subsidiaries, affiliates, partners, officers, directors, agents, contractors, licensors, service providers, subcontractors, suppliers, interns and employees, harmless from any claim or demand, including reasonable attorneys’ fees, made by any third-party due to or arising out of your breach of these Terms of Service or the documents they incorporate by reference, or your violation of any law or the rights of a third-party.</p>\n    <h3 _v-6c02ac62=\"\">Section 15 - Severability</h3>\n    <p _v-6c02ac62=\"\">In the event that any provision of these Terms of Service is determined to be unlawful, void or unenforceable, such provision shall nonetheless be enforceable to the fullest extent permitted by applicable law, and the unenforceable portion shall be deemed to be severed from these Terms of Service, such determination shall not affect the validity and enforceability of any other remaining provisions.</p>\n    <h3 _v-6c02ac62=\"\">Section 16 - Termination</h3>\n    <p _v-6c02ac62=\"\">The obligations and liabilities of the parties incurred prior to the termination date shall survive the termination of this agreement for all purposes. These Terms of Service are effective unless and until terminated by either you or us. You may terminate these Terms of Service at any time by notifying us that you no longer wish to use our Services, or when you cease using our site.</p>\n    <p _v-6c02ac62=\"\">If in our sole judgment you fail, or we suspect that you have failed, to comply with any term or provision of these Terms of Service, we also may terminate this agreement at any time without notice and you will remain liable for all amounts due up to and including the date of termination; and/or accordingly may deny you access to our Services (or any part thereof).</p>\n    <h3 _v-6c02ac62=\"\">Section 17 - Entire Agreement</h3>\n    <p _v-6c02ac62=\"\">The failure of us to exercise or enforce any right or provision of these Terms of Service shall not constitute a waiver of such right or provision.</p>\n    <p _v-6c02ac62=\"\">These Terms of Service and any policies or operating rules posted by us on this site or in respect to The Service constitutes the entire agreement and understanding between you and us and govern your use of the Service, superseding any prior or contemporaneous agreements, communications and proposals, whether oral or written, between you and us (including, but not limited to, any prior versions of the Terms of Service).</p>\n    <p _v-6c02ac62=\"\">Any ambiguities in the interpretation of these Terms of Service shall not be construed against the drafting party.</p>\n    <h3 _v-6c02ac62=\"\">Section 18 - Changes To Terms Of Service</h3>\n    <p _v-6c02ac62=\"\">You can review the most current version of the Terms of Service at any time at this page.</p>\n    <p _v-6c02ac62=\"\">We reserve the right, at our sole discretion, to update, change or replace any part of these Terms of Service by posting updates and changes to our website. It is your responsibility to check our website periodically for changes. Your continued use of or access to our website or the Service following the posting of any changes to these Terms of Service constitutes acceptance of those changes.</p>\n    <h3 _v-6c02ac62=\"\">Section 19 - Contact Information</h3>\n    <p _v-6c02ac62=\"\">Questions about the Terms of Service should be sent to us at info@canderparis.com.</p>\n  </section>\n  <site-footer _v-6c02ac62=\"\"></site-footer>\n</div>\n";
-
-/***/ }),
-/* 116 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(117)
-	__vue_script__ = __webpack_require__(119)
-	if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
-	  console.warn("[vue-loader] src/js/components/SectionPrivacy.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(120)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
-	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-6bf10f50/SectionPrivacy.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ }),
-/* 117 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(118);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(12)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6bf10f50&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionPrivacy.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6bf10f50&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionPrivacy.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ }),
 /* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -41483,7 +41503,7 @@
 
 
 	// module
-	exports.push([module.id, "section[_v-6bf10f50] {\n  margin: 6rem auto;\n  max-width: 50rem;\n  width: 80%; }\n\nh1[_v-6bf10f50] {\n  font-size: 1.8rem;\n  text-align: center;\n  text-transform: uppercase; }\n\nh3[_v-6bf10f50] {\n  font-size: 1.2rem;\n  line-height: 1.8;\n  margin: 3rem 0 2rem 0;\n  text-transform: uppercase; }\n\np[_v-6bf10f50] {\n  font-family: \"sabon-roman\", serif;\n  font-size: 1.2rem;\n  line-height: 1.666;\n  margin-bottom: 1.2rem; }\n\nhr[_v-6bf10f50] {\n  margin: 4rem auto; }\n", ""]);
+	exports.push([module.id, "section[_v-6c02ac62] {\n  margin: 6rem auto;\n  max-width: 50rem;\n  width: 80%; }\n\nh1[_v-6c02ac62] {\n  font-size: 1.8rem;\n  text-align: center;\n  text-transform: uppercase; }\n\nh3[_v-6c02ac62] {\n  font-size: 1.2rem;\n  line-height: 1.8;\n  margin: 3rem 0 2rem 0;\n  text-transform: uppercase; }\n\np[_v-6c02ac62] {\n  font-family: \"sabon-roman\", serif;\n  font-size: 1.2rem;\n  line-height: 1.666;\n  margin-bottom: 1.2rem; }\n\nhr[_v-6c02ac62] {\n  margin: 4rem auto; }\n", ""]);
 
 	// exports
 
@@ -41521,7 +41541,7 @@
 /* 120 */
 /***/ (function(module, exports) {
 
-	module.exports = "\n<div _v-6bf10f50=\"\">\n  <section _v-6bf10f50=\"\">\n    <h1 class=\"section__heading--alpha\" _v-6bf10f50=\"\">Privacy Policy</h1>\n    <hr _v-6bf10f50=\"\">\n    <h3 _v-6bf10f50=\"\">CANDER PARIS IS COMMITTED TO PROTECTING YOUR PRIVACY.<br _v-6bf10f50=\"\">OUR OFFICIAL PRIVACY POLICIES ARE AS FOLLOWS:</h3>\n    <h3 _v-6bf10f50=\"\">What information do we collect?</h3>\n    <p _v-6bf10f50=\"\">We collect information from you when you place an order, enter a contest on our social media, send communication such as e-mail, or participate in other site features. When ordering, we may ask you for your name, e-mail address, mailing address, phone number, credit card information or other information. You may, however, visit our site anonymously. We also collect information about gift recipients so that we can fulfill the gift purchase. The information we collect about gift recipients is not used for marketing purposes. Like many websites, we use \"cookies\" to enhance your experience and gather information about visitors and visits to our websites. Please refer to the \"Do we use 'cookies'?\" section below for information about cookies and how we use them.</p>\n    <h3 _v-6bf10f50=\"\">How do we use your information?</h3>\n    <p _v-6bf10f50=\"\">We may use the information we collect from you when you purchase products, enter a contest or promotion, respond to marketing communication, surf the website, or use certain other site features in the following ways: To personalize your site experience and to allow us to deliver the type of content and product offerings in which you are most interested. To allow us to better service you in responding to your customer service requests. To quickly process your transactions. To administer a contest, promotion, survey or other site feature.</p>\n    <p _v-6bf10f50=\"\">How do we protect visitor information?</p>&nbsp;\n    <p _v-6bf10f50=\"\">We implement a variety of security measures to maintain the safety of your personal information. Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. When you place orders or access your personal information, we offer the use of a secure server. All sensitive/credit information you supply is transmitted via Secure Socket Layer (SSL) technology and then encrypted into our databases to be only accessed as stated above.</p>\n    <h3 _v-6bf10f50=\"\">Do we use \"cookies\"?</h3>\n    <p _v-6bf10f50=\"\">Yes. Cookies are small files that a site or its service provider transfers to your computer's hard drive through your Web browser (if you allow) that enables the site's or service provider's systems to recognize your browser and capture and remember certain information. For instance, we use cookies to help us remember and process the items in your shopping cart. They are also used to help us understand your preferences based on previous or current site activity, which enables us to provide you with improved services. We also use cookies to help us compile aggregate data about site traffic and site interaction so that we can offer better site experiences and tools in the future. We may contract with third-party service providers to assist us in better understanding our site visitors. These service providers are not permitted to use the information collected on our behalf except to help us conduct and improve our business. You can choose to have your computer warn you each time a cookie is being sent, or you can choose to turn off all cookies. You do this through your browser (like Firefox or Google Chrome) settings. Each browser is a little different, so look at your browser Help menu to learn the correct way to modify your cookies. If you turn cookies off, you won't have access to many features that make your site experience more efficient and some of our services will not function properly.</p>\n    <h3 _v-6bf10f50=\"\">Do we disclose the information we collect to outside parties?</h3>\n    <p _v-6bf10f50=\"\">We do not sell, trade, or otherwise transfer to outside parties your personally identifiable information unless we provide you with advance notice, except as described below. The term \"outside parties\" does not include our business. It also does not include website hosting partners and other parties who assist us in operating our website, conducting our business, or servicing you, so long as those parties agree to keep this information confidential. We may also release your information when we believe release is appropriate to comply with the law, enforce our site policies, or protect ours or others' rights, property, or safety. However, non-personally identifiable visitor information may be provided to other parties for marketing, advertising, or other uses.</p>\n    <p _v-6bf10f50=\"\">Please note that we may maintain information about an individual sales transaction in order to service that transaction and for record keeping. In an attempt to provide you with increased value, we may include third party links on our site. These linked sites have separate and independent privacy policies. We therefore have no responsibility or liability for the content and activities of these linked sites. Nonetheless, we seek to protect the integrity of our site and welcome any feedback about these linked sites (including if a specific link does not work). We will post any changes to our policy, If we decide to change our privacy policy, on this page. Policy changes will apply only to information collected after the date of the change. This policy was last modified on September 21, 2016.</p>\n  </section>\n  <site-footer _v-6bf10f50=\"\"></site-footer>\n</div>\n";
+	module.exports = "\n<div _v-6c02ac62=\"\">\n  <section _v-6c02ac62=\"\">\n    <h1 class=\"section__heading--alpha\" _v-6c02ac62=\"\">Terms and Conditions</h1>\n    <hr _v-6c02ac62=\"\">\n    <h3 _v-6c02ac62=\"\">OVERVIEW</h3>\n    <p _v-6c02ac62=\"\">This website is operated by Cander Paris. Throughout the site, the terms “we”, “us” and “our” refer to Cander. Cander offers this website, including all information, tools and services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies and notices stated here.</p>\n    <p _v-6c02ac62=\"\">By visiting our site and/ or purchasing something from us, you engage in our “Service” and agree to be bound by the following terms and conditions (“Terms of Service”, “Terms”), including those additional terms and conditions and policies referenced herein and/or available by hyperlink. These Terms of Service apply  to all users of the site, including without limitation users who are browsers, vendors, customers, merchants, and/ or contributors of content.</p>\n    <p _v-6c02ac62=\"\">Please read these Terms of Service carefully before accessing or using our website. By accessing or using any part of the site, you agree to be bound by these Terms of Service. If you do not agree to all the terms and conditions of this agreement, then you may not access the website or use any services. If these Terms of Service are considered an offer, acceptance is expressly limited to these Terms of Service.</p>\n    <p _v-6c02ac62=\"\">Any new features or tools which are added to the current store shall also be subject to the Terms of Service. You can review the most current version of the Terms of Service at any time on this page. We reserve the right to update, change or replace any part of these Terms of Service by posting updates and/or changes to our website. It is your responsibility to check this page periodically for changes. Your continued use of or access to the website following the posting of any changes constitutes acceptance of those changes.</p>\n    <h3 _v-6c02ac62=\"\">Section 1 - Online Store Terms</h3>\n    <p _v-6c02ac62=\"\">By agreeing to these Terms of Service, you represent that you are at least the age of majority in your state or province of residence, or that you are the age of majority in your state or province of residence and you have given us your consent to allow any of your minor dependents to use this site. A breach or violation of any of the Terms will result in an immediate termination of your Services.</p>\n    <h3 _v-6c02ac62=\"\">Section 2 - General Conditions</h3>\n    <p _v-6c02ac62=\"\">We reserve the right to refuse service to anyone for any reason at any time.</p>\n    <p _v-6c02ac62=\"\">You understand that your content (not including credit card information), may be transferred unencrypted and involve (a) transmissions over various networks; and (b) changes to conform and adapt to technical requirements of connecting networks or devices. Credit card information is always encrypted during transfer over networks.</p>\n    <p _v-6c02ac62=\"\">You agree not to reproduce, duplicate, copy, sell, resell or exploit any portion of the Service, use of the Service, or access to the Service or any contact on the website through which the service is provided, without express written permission by us.</p>\n    <p _v-6c02ac62=\"\">The headings used in this agreement are included for convenience only and will not limit or otherwise affect these Terms.</p>\n    <h3 _v-6c02ac62=\"\">Section 3 - Accuracy, Completeness And Timeliness Of Information</h3>\n    <p _v-6c02ac62=\"\">We are not responsible if information made available on this site is not accurate, complete or current. The material on this site is provided for general information only and should not be relied upon or used as the sole basis for making decisions without consulting primary, more accurate, more complete or more timely sources of information. Any reliance on the material on this site is at your own risk.</p>\n    <p _v-6c02ac62=\"\">This site may contain certain historical information. Historical information, necessarily, is not current and is provided for your reference only. We reserve the right to modify the contents of this site at any time, but we have no obligation to update any information on our site. You agree that it is your responsibility to monitor changes to our site.</p>\n    <h3 _v-6c02ac62=\"\">Section 4 - Modifications To The Service And Prices</h3>\n    <p _v-6c02ac62=\"\">Prices for our products are subject to change without notice.We reserve the right at any time to modify or discontinue the Service (or any part or content thereof) without notice at any time.We shall not be liable to you or to any third-party for any modification, price change, suspension or discontinuance of the Service.</p>\n    <h3 _v-6c02ac62=\"\">Section 5 - Products Or Services (if Applicable)</h3>\n    <p _v-6c02ac62=\"\">Certain products or services may be available exclusively online through the website. These products or services may have limited quantities and are subject to return or exchange only according to our Return Policy.</p>\n    <p _v-6c02ac62=\"\">We have made every effort to display as accurately as possible the colors and images of our products that appear at the store. We cannot guarantee that your computer monitor's display of any color will be accurate.</p>\n    <p _v-6c02ac62=\"\">We reserve the right, but are not obligated, to limit the sales of our products or Services to any person, geographic region or jurisdiction. We may exercise this right on a case-by-case basis. We reserve the right to limit the quantities of any products or services that we offer. All descriptions of products or product pricing are subject to change at anytime without notice, at the sole discretion of us. We reserve the right to discontinue any product at any time. Any offer for any product or service made on this site is void where prohibited.</p>\n    <p _v-6c02ac62=\"\">We do not warrant that the quality of any products, services, information, or other material purchased or obtained by you will meet your expectations, or that any errors in the Service will be corrected.</p>\n    <h3 _v-6c02ac62=\"\">Section 6 - Accuracy Of Billing And Account Information</h3>\n    <p _v-6c02ac62=\"\">We reserve the right to refuse any order you place with us. We may, in our sole discretion, limit or cancel quantities purchased per person, per household or per order. These restrictions may include orders placed by or under the same customer account, the same credit card, and/or orders that use the same billing and/or shipping address. In the event that we make a change to or cancel an order, we may attempt to notify you by contacting the e-mail and/or billing address/phone number provided at the time the order was made. We reserve the right to limit or prohibit orders that, in our sole judgment, appear to be placed by dealers, resellers or distributors.</p>\n    <p _v-6c02ac62=\"\">You agree to provide current, complete and accurate purchase and account information for all purchases made at our store. You agree to promptly update your account and other information, including your email address and credit card numbers and expiration dates, so that we can complete your transactions and contact you as needed.</p>\n    <p _v-6c02ac62=\"\">For more detail, please review our Returns Policy.</p>\n    <h3 _v-6c02ac62=\"\">Section 7 - Optional Tools</h3>\n    <p _v-6c02ac62=\"\">We may provide you with access to third-party tools over which we neither monitor nor have any control nor input.</p>\n    <p _v-6c02ac62=\"\">You acknowledge and agree that we provide access to such tools ”as is” and “as available” without any warranties, representations or conditions of any kind and without any endorsement. We shall have no liability whatsoever arising from or relating to your use of optional third-party tools.</p>\n    <p _v-6c02ac62=\"\">Any use by you of optional tools offered through the site is entirely at your own risk and discretion and you should ensure that you are familiar with and approve of the terms on which tools are provided by the relevant third-party provider(s).</p>\n    <p _v-6c02ac62=\"\">We may also, in the future, offer new services and/or features through the website (including, the release of new tools and resources). Such new features and/or services shall also be subject to these Terms of Service.</p>\n    <h3 _v-6c02ac62=\"\">Section 8 - Third-party Links</h3>\n    <p _v-6c02ac62=\"\">Certain content, products and services available via our Service may include materials from third-parties.</p>\n    <p _v-6c02ac62=\"\">Third-party links on this site may direct you to third-party websites that are not affiliated with us. We are not responsible for examining or evaluating the content or accuracy and we do not warrant and will not have any liability or responsibility for any third-party materials or websites, or for any other materials, products, or services of third-parties.</p>\n    <p _v-6c02ac62=\"\">We are not liable for any harm or damages related to the purchase or use of goods, services, resources, content, or any other transactions made in connection with any third-party websites. Please review carefully the third-party's policies and practices and make sure you understand them before you engage in any transaction. Complaints, claims, concerns, or questions regarding third-party products should be directed to the third-party.</p>\n    <h3 _v-6c02ac62=\"\">Section 9 - User Comments, Feedback And Other Submissions</h3>\n    <p _v-6c02ac62=\"\">If, at our request, you send certain specific submissions (for example contest entries) or without a request from us you send creative ideas, suggestions, proposals, plans, or other materials, whether online, by email, by postal mail, or otherwise (collectively, 'comments'), you agree that we may, at any time, without restriction, edit, copy, publish, distribute, translate and otherwise use in any medium any comments that you forward to us. We are and shall be under no obligation (1) to maintain any comments in confidence; (2) to pay compensation for any comments; or (3) to respond to any comments.</p>\n    <p _v-6c02ac62=\"\">We may, but have no obligation to, monitor, edit or remove content that we determine in our sole discretion are unlawful, offensive, threatening, libelous, defamatory, pornographic, obscene or otherwise objectionable or violates any party’s intellectual property or these Terms of Service.</p>\n    <p _v-6c02ac62=\"\">You agree that your comments will not violate any right of any third-party, including copyright, trademark, privacy, personality or other personal or proprietary right. You further agree that your comments will not contain libelous or otherwise unlawful, abusive or obscene material, or contain any computer virus or other malware that could in any way affect the operation of the Service or any related website. You may not use a false e-mail address, pretend to be someone other than yourself, or otherwise mislead us or third-parties as to the origin of any comments. You are solely responsible for any comments you make and their accuracy. We take no responsibility and assume no liability for any comments posted by you or any third-party.</p>\n    <h3 _v-6c02ac62=\"\">Section 10 - Personal Information</h3>\n    <p _v-6c02ac62=\"\">Your submission of personal information through the store is governed by our Privacy Policy. To view our Privacy Policy.</p>\n    <h3 _v-6c02ac62=\"\">Section 11 - Errors, Inaccuracies And Omissions</h3>\n    <p _v-6c02ac62=\"\">Occasionally there may be information on our site or in the Service that contains typographical errors, inaccuracies or omissions that may relate to product descriptions, pricing, promotions, offers, product shipping charges, transit times and availability. We reserve the right to correct any errors, inaccuracies or omissions, and to change or update information or cancel orders if any information in the Service or on any related website is inaccurate at any time without prior notice (including after you have submitted your order).</p>\n    <p _v-6c02ac62=\"\">We undertake no obligation to update, amend or clarify information in the Service or on any related website, including without limitation, pricing information, except as required by law. No specified update or refresh date applied in the Service or on any related website, should be taken to indicate that all information in the Service or on any related website has been modified or updated.</p>\n    <h3 _v-6c02ac62=\"\">Section 12 - Prohibited Uses</h3>\n    <p _v-6c02ac62=\"\">In addition to other prohibitions as set forth in the Terms of Service, you are prohibited from using the site or its content: (a) for any unlawful purpose; (b) to solicit others to perform or participate in any unlawful acts; (c) to violate any international, federal, provincial or state regulations, rules, laws, or local ordinances; (d) to infringe upon or violate our intellectual property rights or the intellectual property rights of others; (e) to harass, abuse, insult, harm, defame, slander, disparage, intimidate, or discriminate based on gender, sexual orientation, religion, ethnicity, race, age, national origin, or disability; (f) to submit false or misleading information; (g) to upload or transmit viruses or any other type of malicious code that will or may be used in any way that will affect the functionality or operation of the Service or of any related website, other websites, or the Internet; (h) to collect or track the personal information of others; (i) to spam, phish, pharm, pretext, spider, crawl, or scrape; (j) for any obscene or immoral purpose; or (k) to interfere with or circumvent the security features of the Service or any related website, other websites, or the Internet. We reserve the right to terminate your use of the Service or any related website for violating any of the prohibited uses.</p>\n    <h3 _v-6c02ac62=\"\">Section 13 - Disclaimer Of Warranties; Limitation Of Liability</h3>\n    <p _v-6c02ac62=\"\">We do not guarantee, represent or warrant that your use of our service will be uninterrupted, timely, secure or error-free.</p>\n    <p _v-6c02ac62=\"\">We do not warrant that the results that may be obtained from the use of the service will be accurate or reliable.</p>\n    <p _v-6c02ac62=\"\">You agree that from time to time we may remove the service for indefinite periods of time or cancel the service at any time, without notice to you.</p>\n    <p _v-6c02ac62=\"\">You expressly agree that your use of, or inability to use, the service is at your sole risk. The service and all products and services delivered to you through the service are (except as expressly stated by us) provided 'as is' and 'as available' for your use, without any representation, warranties or conditions of any kind, either express or implied, including all implied warranties or conditions of merchantability, merchantable quality, fitness for a particular purpose, durability, title, and non-infringement.</p>\n    <p _v-6c02ac62=\"\">In no case shall Cander, our directors, officers, employees, affiliates, agents, contractors, interns, suppliers, service providers or licensors be liable for any injury, loss, claim, or any direct, indirect, incidental, punitive, special, or consequential damages of any kind, including, without limitation lost profits, lost revenue, lost savings, loss of data, replacement costs, or any similar damages, whether based in contract, tort (including negligence), strict liability or otherwise, arising from your use of any of the service or any products procured using the service, or for any other claim related in any way to your use of the service or any product, including, but not limited to, any errors or omissions in any content, or any loss or damage of any kind incurred as a result of the use of the service or any content (or product) posted, transmitted, or otherwise made available via the service, even if advised of their possibility. Because some states or jurisdictions do not allow the exclusion or the limitation of liability for consequential or incidental damages, in such states or jurisdictions, our liability shall be limited to the maximum extent permitted by law.</p>\n    <h3 _v-6c02ac62=\"\">Section 14 - Indemnification</h3>\n    <p _v-6c02ac62=\"\">You agree to indemnify, defend and hold harmless Cander and our parent, subsidiaries, affiliates, partners, officers, directors, agents, contractors, licensors, service providers, subcontractors, suppliers, interns and employees, harmless from any claim or demand, including reasonable attorneys’ fees, made by any third-party due to or arising out of your breach of these Terms of Service or the documents they incorporate by reference, or your violation of any law or the rights of a third-party.</p>\n    <h3 _v-6c02ac62=\"\">Section 15 - Severability</h3>\n    <p _v-6c02ac62=\"\">In the event that any provision of these Terms of Service is determined to be unlawful, void or unenforceable, such provision shall nonetheless be enforceable to the fullest extent permitted by applicable law, and the unenforceable portion shall be deemed to be severed from these Terms of Service, such determination shall not affect the validity and enforceability of any other remaining provisions.</p>\n    <h3 _v-6c02ac62=\"\">Section 16 - Termination</h3>\n    <p _v-6c02ac62=\"\">The obligations and liabilities of the parties incurred prior to the termination date shall survive the termination of this agreement for all purposes. These Terms of Service are effective unless and until terminated by either you or us. You may terminate these Terms of Service at any time by notifying us that you no longer wish to use our Services, or when you cease using our site.</p>\n    <p _v-6c02ac62=\"\">If in our sole judgment you fail, or we suspect that you have failed, to comply with any term or provision of these Terms of Service, we also may terminate this agreement at any time without notice and you will remain liable for all amounts due up to and including the date of termination; and/or accordingly may deny you access to our Services (or any part thereof).</p>\n    <h3 _v-6c02ac62=\"\">Section 17 - Entire Agreement</h3>\n    <p _v-6c02ac62=\"\">The failure of us to exercise or enforce any right or provision of these Terms of Service shall not constitute a waiver of such right or provision.</p>\n    <p _v-6c02ac62=\"\">These Terms of Service and any policies or operating rules posted by us on this site or in respect to The Service constitutes the entire agreement and understanding between you and us and govern your use of the Service, superseding any prior or contemporaneous agreements, communications and proposals, whether oral or written, between you and us (including, but not limited to, any prior versions of the Terms of Service).</p>\n    <p _v-6c02ac62=\"\">Any ambiguities in the interpretation of these Terms of Service shall not be construed against the drafting party.</p>\n    <h3 _v-6c02ac62=\"\">Section 18 - Changes To Terms Of Service</h3>\n    <p _v-6c02ac62=\"\">You can review the most current version of the Terms of Service at any time at this page.</p>\n    <p _v-6c02ac62=\"\">We reserve the right, at our sole discretion, to update, change or replace any part of these Terms of Service by posting updates and changes to our website. It is your responsibility to check our website periodically for changes. Your continued use of or access to our website or the Service following the posting of any changes to these Terms of Service constitutes acceptance of those changes.</p>\n    <h3 _v-6c02ac62=\"\">Section 19 - Contact Information</h3>\n    <p _v-6c02ac62=\"\">Questions about the Terms of Service should be sent to us at info@canderparis.com.</p>\n  </section>\n  <site-footer _v-6c02ac62=\"\"></site-footer>\n</div>\n";
 
 /***/ }),
 /* 121 */
@@ -41532,8 +41552,117 @@
 	__webpack_require__(122)
 	__vue_script__ = __webpack_require__(124)
 	if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
-	  console.warn("[vue-loader] src/js/components/SectionThanks.vue: named exports in *.vue files are ignored.")}
+	  console.warn("[vue-loader] src/js/components/SectionPrivacy.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(125)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
+	if (__vue_template__) {
+	__vue_options__.template = __vue_template__
+	}
+	if (!__vue_options__.computed) __vue_options__.computed = {}
+	Object.keys(__vue_styles__).forEach(function (key) {
+	var module = __vue_styles__[key]
+	__vue_options__.computed[key] = function () { return module }
+	})
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "_v-6bf10f50/SectionPrivacy.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ }),
+/* 122 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(123);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(12)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6bf10f50&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionPrivacy.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6bf10f50&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionPrivacy.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ }),
+/* 123 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(11)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "section[_v-6bf10f50] {\n  margin: 6rem auto;\n  max-width: 50rem;\n  width: 80%; }\n\nh1[_v-6bf10f50] {\n  font-size: 1.8rem;\n  text-align: center;\n  text-transform: uppercase; }\n\nh3[_v-6bf10f50] {\n  font-size: 1.2rem;\n  line-height: 1.8;\n  margin: 3rem 0 2rem 0;\n  text-transform: uppercase; }\n\np[_v-6bf10f50] {\n  font-family: \"sabon-roman\", serif;\n  font-size: 1.2rem;\n  line-height: 1.666;\n  margin-bottom: 1.2rem; }\n\nhr[_v-6bf10f50] {\n  margin: 4rem auto; }\n", ""]);
+
+	// exports
+
+
+/***/ }),
+/* 124 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _store = __webpack_require__(17);
+
+	var _store2 = _interopRequireDefault(_store);
+
+	var _SiteFooter = __webpack_require__(19);
+
+	var _SiteFooter2 = _interopRequireDefault(_SiteFooter);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
+	  components: {
+	    SiteFooter: _SiteFooter2.default
+	  },
+	  data: function data() {
+	    return {};
+	  }
+	};
+
+/***/ }),
+/* 125 */
+/***/ (function(module, exports) {
+
+	module.exports = "\n<div _v-6bf10f50=\"\">\n  <section _v-6bf10f50=\"\">\n    <h1 class=\"section__heading--alpha\" _v-6bf10f50=\"\">Privacy Policy</h1>\n    <hr _v-6bf10f50=\"\">\n    <h3 _v-6bf10f50=\"\">CANDER PARIS IS COMMITTED TO PROTECTING YOUR PRIVACY.<br _v-6bf10f50=\"\">OUR OFFICIAL PRIVACY POLICIES ARE AS FOLLOWS:</h3>\n    <h3 _v-6bf10f50=\"\">What information do we collect?</h3>\n    <p _v-6bf10f50=\"\">We collect information from you when you place an order, enter a contest on our social media, send communication such as e-mail, or participate in other site features. When ordering, we may ask you for your name, e-mail address, mailing address, phone number, credit card information or other information. You may, however, visit our site anonymously. We also collect information about gift recipients so that we can fulfill the gift purchase. The information we collect about gift recipients is not used for marketing purposes. Like many websites, we use \"cookies\" to enhance your experience and gather information about visitors and visits to our websites. Please refer to the \"Do we use 'cookies'?\" section below for information about cookies and how we use them.</p>\n    <h3 _v-6bf10f50=\"\">How do we use your information?</h3>\n    <p _v-6bf10f50=\"\">We may use the information we collect from you when you purchase products, enter a contest or promotion, respond to marketing communication, surf the website, or use certain other site features in the following ways: To personalize your site experience and to allow us to deliver the type of content and product offerings in which you are most interested. To allow us to better service you in responding to your customer service requests. To quickly process your transactions. To administer a contest, promotion, survey or other site feature.</p>\n    <p _v-6bf10f50=\"\">How do we protect visitor information?</p>&nbsp;\n    <p _v-6bf10f50=\"\">We implement a variety of security measures to maintain the safety of your personal information. Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. When you place orders or access your personal information, we offer the use of a secure server. All sensitive/credit information you supply is transmitted via Secure Socket Layer (SSL) technology and then encrypted into our databases to be only accessed as stated above.</p>\n    <h3 _v-6bf10f50=\"\">Do we use \"cookies\"?</h3>\n    <p _v-6bf10f50=\"\">Yes. Cookies are small files that a site or its service provider transfers to your computer's hard drive through your Web browser (if you allow) that enables the site's or service provider's systems to recognize your browser and capture and remember certain information. For instance, we use cookies to help us remember and process the items in your shopping cart. They are also used to help us understand your preferences based on previous or current site activity, which enables us to provide you with improved services. We also use cookies to help us compile aggregate data about site traffic and site interaction so that we can offer better site experiences and tools in the future. We may contract with third-party service providers to assist us in better understanding our site visitors. These service providers are not permitted to use the information collected on our behalf except to help us conduct and improve our business. You can choose to have your computer warn you each time a cookie is being sent, or you can choose to turn off all cookies. You do this through your browser (like Firefox or Google Chrome) settings. Each browser is a little different, so look at your browser Help menu to learn the correct way to modify your cookies. If you turn cookies off, you won't have access to many features that make your site experience more efficient and some of our services will not function properly.</p>\n    <h3 _v-6bf10f50=\"\">Do we disclose the information we collect to outside parties?</h3>\n    <p _v-6bf10f50=\"\">We do not sell, trade, or otherwise transfer to outside parties your personally identifiable information unless we provide you with advance notice, except as described below. The term \"outside parties\" does not include our business. It also does not include website hosting partners and other parties who assist us in operating our website, conducting our business, or servicing you, so long as those parties agree to keep this information confidential. We may also release your information when we believe release is appropriate to comply with the law, enforce our site policies, or protect ours or others' rights, property, or safety. However, non-personally identifiable visitor information may be provided to other parties for marketing, advertising, or other uses.</p>\n    <p _v-6bf10f50=\"\">Please note that we may maintain information about an individual sales transaction in order to service that transaction and for record keeping. In an attempt to provide you with increased value, we may include third party links on our site. These linked sites have separate and independent privacy policies. We therefore have no responsibility or liability for the content and activities of these linked sites. Nonetheless, we seek to protect the integrity of our site and welcome any feedback about these linked sites (including if a specific link does not work). We will post any changes to our policy, If we decide to change our privacy policy, on this page. Policy changes will apply only to information collected after the date of the change. This policy was last modified on September 21, 2016.</p>\n  </section>\n  <site-footer _v-6bf10f50=\"\"></site-footer>\n</div>\n";
+
+/***/ }),
+/* 126 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	var __vue_styles__ = {}
+	__webpack_require__(127)
+	__vue_script__ = __webpack_require__(129)
+	if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
+	  console.warn("[vue-loader] src/js/components/SectionThanks.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(130)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -41558,13 +41687,13 @@
 	})()}
 
 /***/ }),
-/* 122 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(123);
+	var content = __webpack_require__(128);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(12)(content, {});
@@ -41584,7 +41713,7 @@
 	}
 
 /***/ }),
-/* 123 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(11)();
@@ -41598,7 +41727,7 @@
 
 
 /***/ }),
-/* 124 */
+/* 129 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -41620,22 +41749,22 @@
 	};
 
 /***/ }),
-/* 125 */
+/* 130 */
 /***/ (function(module, exports) {
 
 	module.exports = "\n<div class=\"page\" _v-779af9b1=\"\">\n  <h1 _v-779af9b1=\"\">Thanks {{ forWhat }}</h1>\n</div>\n";
 
 /***/ }),
-/* 126 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(127)
-	__vue_script__ = __webpack_require__(129)
+	__webpack_require__(132)
+	__vue_script__ = __webpack_require__(134)
 	if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
 	  console.warn("[vue-loader] src/js/components/Error404.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(130)
+	__vue_template__ = __webpack_require__(135)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -41660,13 +41789,13 @@
 	})()}
 
 /***/ }),
-/* 127 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(128);
+	var content = __webpack_require__(133);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(12)(content, {});
@@ -41686,7 +41815,7 @@
 	}
 
 /***/ }),
-/* 128 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(11)();
@@ -41700,28 +41829,28 @@
 
 
 /***/ }),
-/* 129 */
+/* 134 */
 /***/ (function(module, exports) {
 
 	"use strict";
 
 /***/ }),
-/* 130 */
+/* 135 */
 /***/ (function(module, exports) {
 
 	module.exports = "\n<div class=\"page-404\" _v-160a3ddd=\"\">\n  <h1 _v-160a3ddd=\"\">Not Found</h1>\n</div>\n";
 
 /***/ }),
-/* 131 */
+/* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(132)
-	__vue_script__ = __webpack_require__(134)
+	__webpack_require__(137)
+	__vue_script__ = __webpack_require__(139)
 	if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
 	  console.warn("[vue-loader] src/js/App.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(150)
+	__vue_template__ = __webpack_require__(155)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -41746,13 +41875,13 @@
 	})()}
 
 /***/ }),
-/* 132 */
+/* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(133);
+	var content = __webpack_require__(138);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(12)(content, {});
@@ -41772,7 +41901,7 @@
 	}
 
 /***/ }),
-/* 133 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(11)();
@@ -41786,7 +41915,7 @@
 
 
 /***/ }),
-/* 134 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41799,15 +41928,15 @@
 
 	var _store2 = _interopRequireDefault(_store);
 
-	var _MenuOverlay = __webpack_require__(135);
+	var _MenuOverlay = __webpack_require__(140);
 
 	var _MenuOverlay2 = _interopRequireDefault(_MenuOverlay);
 
-	var _Modal = __webpack_require__(140);
+	var _Modal = __webpack_require__(145);
 
 	var _Modal2 = _interopRequireDefault(_Modal);
 
-	var _SiteHeader = __webpack_require__(145);
+	var _SiteHeader = __webpack_require__(150);
 
 	var _SiteHeader2 = _interopRequireDefault(_SiteHeader);
 
@@ -41843,16 +41972,16 @@
 	};
 
 /***/ }),
-/* 135 */
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(136)
-	__vue_script__ = __webpack_require__(138)
+	__webpack_require__(141)
+	__vue_script__ = __webpack_require__(143)
 	if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
 	  console.warn("[vue-loader] src/js/components/MenuOverlay.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(139)
+	__vue_template__ = __webpack_require__(144)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -41877,13 +42006,13 @@
 	})()}
 
 /***/ }),
-/* 136 */
+/* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(137);
+	var content = __webpack_require__(142);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(12)(content, {});
@@ -41903,7 +42032,7 @@
 	}
 
 /***/ }),
-/* 137 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(11)();
@@ -41917,7 +42046,7 @@
 
 
 /***/ }),
-/* 138 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41985,22 +42114,22 @@
 	};
 
 /***/ }),
-/* 139 */
+/* 144 */
 /***/ (function(module, exports) {
 
-	module.exports = "\n<div class=\"menu-overlay-wrapper\" _v-7a117a58=\"\">\n  <div class=\"menu-overlay\" _v-7a117a58=\"\">\n    <div class=\"menu-overlay__nav-wrapper\" _v-7a117a58=\"\">\n      <nav class=\"menu-overlay__nav-list\" _v-7a117a58=\"\">\n        <a v-link=\"{ name: 'home' }\" v-on:mouseover=\"setHoverItem('home')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-7a117a58=\"\">Home</a>\n        <a v-link=\"{ name: 'about' }\" v-on:mouseover=\"setHoverItem('about')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-7a117a58=\"\">About</a>\n        <a v-link=\"{ name: 'stores' }\" v-on:mouseover=\"setHoverItem('stores')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-7a117a58=\"\">Stores</a>\n        <a v-link=\"{ name: 'press' }\" v-on:mouseover=\"setHoverItem('press')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-7a117a58=\"\">Press</a>\n        <a v-link=\"{ name: 'contact' }\" v-on:mouseover=\"setHoverItem('contact')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-7a117a58=\"\">Contact</a>\n      </nav>\n      <div class=\"menu-overlay__nav-social-links-wrapper\" _v-7a117a58=\"\">\n        <social-links _v-7a117a58=\"\"></social-links>\n      </div>\n      <div class=\"menu-overlay__nav-contact\" _v-7a117a58=\"\">\n        <p _v-7a117a58=\"\">For all general information please contact <a href=\"mailto:info@canderparis.com\" _v-7a117a58=\"\">info@canderparis.com</a></p>\n        <p _v-7a117a58=\"\">For press information please contact <a href=\"mailto:press@canderparis.com\" _v-7a117a58=\"\">press@canderparis.com</a></p>\n      </div>\n    </div>\n    <div class=\"menu-overlay__accent-wrapper\" _v-7a117a58=\"\">\n      <img :src=\"menuOverlay.navImageMap[hoverItem]\" class=\"menu-overlay__accent\" :data-id=\"hoverItem\" _v-7a117a58=\"\">\n    </div>\n  </div>\n</div>\n";
+	module.exports = "\n<div class=\"menu-overlay-wrapper\" _v-7a117a58=\"\">\n  <div class=\"menu-overlay\" _v-7a117a58=\"\">\n    <div class=\"menu-overlay__nav-wrapper\" _v-7a117a58=\"\">\n      <nav class=\"menu-overlay__nav-list\" _v-7a117a58=\"\">\n        <a v-link=\"{ name: 'home' }\" v-on:mouseover=\"setHoverItem('home')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-7a117a58=\"\">Home</a>\n        <a v-link=\"{ name: 'about' }\" v-on:mouseover=\"setHoverItem('about')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-7a117a58=\"\">About</a>\n        <a v-link=\"{ name: 'product' }\" v-on:mouseover=\"setHoverItem('product')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-7a117a58=\"\">Product</a>\n        <a v-link=\"{ name: 'stores' }\" v-on:mouseover=\"setHoverItem('stores')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-7a117a58=\"\">Stores</a>\n        <a v-link=\"{ name: 'press' }\" v-on:mouseover=\"setHoverItem('press')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-7a117a58=\"\">Press</a>\n        <a v-link=\"{ name: 'contact' }\" v-on:mouseover=\"setHoverItem('contact')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-7a117a58=\"\">Contact</a>\n      </nav>\n      <div class=\"menu-overlay__nav-social-links-wrapper\" _v-7a117a58=\"\">\n        <social-links _v-7a117a58=\"\"></social-links>\n      </div>\n      <div class=\"menu-overlay__nav-contact\" _v-7a117a58=\"\">\n        <p _v-7a117a58=\"\">For all general information please contact <a href=\"mailto:info@canderparis.com\" _v-7a117a58=\"\">info@canderparis.com</a></p>\n        <p _v-7a117a58=\"\">For press information please contact <a href=\"mailto:press@canderparis.com\" _v-7a117a58=\"\">press@canderparis.com</a></p>\n      </div>\n    </div>\n    <div class=\"menu-overlay__accent-wrapper\" _v-7a117a58=\"\">\n      <img :src=\"menuOverlay.navImageMap[hoverItem]\" class=\"menu-overlay__accent\" :data-id=\"hoverItem\" _v-7a117a58=\"\">\n    </div>\n  </div>\n</div>\n";
 
 /***/ }),
-/* 140 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(141)
-	__vue_script__ = __webpack_require__(143)
+	__webpack_require__(146)
+	__vue_script__ = __webpack_require__(148)
 	if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
 	  console.warn("[vue-loader] src/js/components/Modal.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(144)
+	__vue_template__ = __webpack_require__(149)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -42025,13 +42154,13 @@
 	})()}
 
 /***/ }),
-/* 141 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(142);
+	var content = __webpack_require__(147);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(12)(content, {});
@@ -42051,7 +42180,7 @@
 	}
 
 /***/ }),
-/* 142 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(11)();
@@ -42065,7 +42194,7 @@
 
 
 /***/ }),
-/* 143 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -42220,22 +42349,22 @@
 	};
 
 /***/ }),
-/* 144 */
+/* 149 */
 /***/ (function(module, exports) {
 
 	module.exports = "\n\n<div class=\"modal-wrap\" @click=\"closeModal\" _v-a7613460=\"\">\n  <div class=\"modal\" _v-a7613460=\"\">\n    <button @click=\"closeModal\" class=\"btn-close\" _v-a7613460=\"\"></button>\n    <h1 class=\"modal-title gamma\" v-if=\"modal.title\" _v-a7613460=\"\">{{ modal.title }}</h1>\n    <p class=\"modal-body p-beta\" v-if=\"modal.body\" _v-a7613460=\"\">{{ modal.body }}</p>\n    <form id=\"sold_out_form\" class=\"newsletter__form newsletter__form--in-modal group\" action=\"https://www.enformed.io/sgttqhhh\" method=\"post\" v-show=\"showForm\" _v-a7613460=\"\">\n      <!-- <label for=\"user-email\" class=\"newsletter__label\">Enter your email</label> -->\n      <div class=\"newsletter__form__inner\" _v-a7613460=\"\">\n        <input v-model=\"modal.userEmail\" id=\"user-email\" name=\"user-email\" class=\"newsletter__email\" type=\"email\" placeholder=\"EMAIL ADDRESS\" autocomplete=\"off\" autocorrect=\"off\" _v-a7613460=\"\">\n        <input v-if=\"modal.productOfInterest\" type=\"hidden\" name=\"product-of-interest\" value=\"{{ modal.productOfInterest }}\" _v-a7613460=\"\">\n        <input type=\"hidden\" name=\"*formname\" value=\"Product Interest Form\" _v-a7613460=\"\">\n        <input type=\"hidden\" name=\"*honeypot\" _v-a7613460=\"\">\n        <button id=\"btn-submit\" class=\"newsletter__form__btn-submit\" type=\"submit\" @click.prevent=\"submitForm\" _v-a7613460=\"\">Submit</button>\n      </div>\n    </form>\n  </div>\n</div>\n";
 
 /***/ }),
-/* 145 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(146)
-	__vue_script__ = __webpack_require__(148)
+	__webpack_require__(151)
+	__vue_script__ = __webpack_require__(153)
 	if (Object.keys(__vue_script__).some(function (key) { return key !== "default" && key !== "__esModule" })) {
 	  console.warn("[vue-loader] src/js/components/SiteHeader.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(149)
+	__vue_template__ = __webpack_require__(154)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -42260,13 +42389,13 @@
 	})()}
 
 /***/ }),
-/* 146 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(147);
+	var content = __webpack_require__(152);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(12)(content, {});
@@ -42286,7 +42415,7 @@
 	}
 
 /***/ }),
-/* 147 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(11)();
@@ -42300,7 +42429,7 @@
 
 
 /***/ }),
-/* 148 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -42410,13 +42539,13 @@
 	};
 
 /***/ }),
-/* 149 */
+/* 154 */
 /***/ (function(module, exports) {
 
 	module.exports = "\n<header class=\"site-header\" v-show=\"headerVisible\" transition=\"fade\" _v-6a3fed21=\"\">\n  <!-- Facebook Pixel Code -->\n  <script _v-6a3fed21=\"\">\n    !function(f,b,e,v,n,t,s)\n    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?\n    n.callMethod.apply(n,arguments):n.queue.push(arguments)};\n    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';\n    n.queue=[];t=b.createElement(e);t.async=!0;\n    t.src=v;s=b.getElementsByTagName(e)[0];\n    s.parentNode.insertBefore(t,s)}(window,document,'script',\n    'https://connect.facebook.net/en_US/fbevents.js');\n\n    fbq('init', '200282564039202');\n    fbq('track', 'PageView');\n  </script>\n  <noscript _v-6a3fed21=\"\">\n    <img height=\"1\" width=\"1\"\n  src=\"https://www.facebook.com/tr?id=200282564039202&ev=PageView\n  &noscript=1\"/>\n  </noscript>\n  <!-- End Facebook Pixel Code -->\n  <a href=\"/\" @click.prevent=\"logoClickHandler\" class=\"menu-overlay__nav-list__item\" _v-6a3fed21=\"\">\n    <img v-bind:src=\"logoUrl\" alt=\"CANDER PARIS\" title=\"CANDER PARIS\" class=\"logo\" _v-6a3fed21=\"\">\n  </a>\n  <a href=\"/\" @click.prevent=\"toggleMenu\" class=\"btn-menu btn-menu--{{ toggleState }}\" _v-6a3fed21=\"\"></a>\n</header>\n";
 
 /***/ }),
-/* 150 */
+/* 155 */
 /***/ (function(module, exports) {
 
 	module.exports = "\n<div class=\"cander-wrapper page--{{ this.$route.name ? this.$route.name : 'default' }}\" id=\"cander-app\">\n  <site-header :dark-mode=\"darkMode\"></site-header>\n  <menu-overlay v-if=\"menuOverlay.visible\" transition=\"fade\"></menu-overlay>\n  <modal v-if=\"modal.visible\" transition=\"fade\"></modal>\n  <main class=\"main-content\">\n    <router-view></router-view>\n  </main>\n</div>\n";
