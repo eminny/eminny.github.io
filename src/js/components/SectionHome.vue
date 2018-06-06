@@ -6,9 +6,9 @@
       v-show="scrollArrowIsVisible"
       transition="fade"
       data-start="opacity: 1;"
-      data-850-end="opacity: 1;"
-      data-800-end="opacity: 0.5;"
-      data-700-end="opacity: 0;"
+      data-1000-end="opacity: 1;"
+      data-450-end="opacity: 0.5;"
+      data-400-end="opacity: 0;"
       data-end="opacity: 0;">Scroll Down</span>
 
     <!-- SECTION 0: INTRO/HERO -->
