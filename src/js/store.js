@@ -12,6 +12,7 @@ store.data = {
     navImageMap: {
       'home': '',
       'about': '/images/menu-accent-about.jpg',
+      'product': '/images/product-image.jpg',
       'stores': '/images/menu-accent-stores-1.jpg',
       'press': '/images/press-image.jpg',
       'contact': '/images/menu-accent-contact.png',

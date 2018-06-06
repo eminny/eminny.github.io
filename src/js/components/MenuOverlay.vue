@@ -13,6 +13,11 @@
              v-on:click="closeMenu(300)"
              class="menu-overlay__nav-list__item"
           >About</a>
+          <a v-link="{ name: 'product' }"
+             v-on:mouseover="setHoverItem('product')"
+             v-on:click="closeMenu(300)"
+             class="menu-overlay__nav-list__item"
+          >Product</a>
           <a v-link="{ name: 'stores' }"
              v-on:mouseover="setHoverItem('stores')"
              v-on:click="closeMenu(300)"

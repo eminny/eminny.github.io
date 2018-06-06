@@ -6,6 +6,7 @@ const SectionContact = Vue.extend(require('./components/SectionContact.vue'))
 const SectionHome = Vue.extend(require('./components/SectionHome.vue'))
 const SectionStores = Vue.extend(require('./components/SectionStores.vue'))
 const SectionPress = Vue.extend(require('./components/SectionPress.vue'))
+const SectionProduct = Vue.extend(require('./components/SectionProduct.vue'))
 const SectionTerms = Vue.extend(require('./components/SectionTerms.vue'))
 const SectionPrivacy = Vue.extend(require('./components/SectionPrivacy.vue'))
 const SectionThanks = Vue.extend(require('./components/SectionThanks.vue'))
@@ -23,6 +24,10 @@ export default {
   '/about': {
     name: 'about',
     component: SectionAbout,
+  },
+  '/product': {
+    name: 'product',
+    component: SectionProduct,
   },
   '/contact': {
     name: 'contact',

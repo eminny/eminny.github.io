@@ -16,7 +16,7 @@
         <p class="articles__empty-state-message">Coming Soon</p>
       </div>
   </section>
-    <site-footer></site-footer>
+    <!-- <site-footer></site-footer> -->
   </div>
 </template>
 

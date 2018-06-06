@@ -92,45 +92,17 @@
       </div>
     </div>
 
-    <!-- SECTION 4: PRODUCT -->
+    <!-- SECTION 4: DIARY -->
     <div class="slide slide--4"
          data-0="opacity: 0"
          data-700p="opacity: 0; transform: translate(0, 100%);"
          data-725p="opacity: 0; transform: translate(0, 20%);"
-         data-760p="opacity: 0.3; transform: translate(0, 5%);"
-         data-770p="opacity: 1; transform: translate(0, 0%);"
-         data-800p="transform: translate(0, 0%);"
-         data-890p="transform: translate(0, -15%);"
-         data-900p="transform: translate(0, -120%);"
-    >
-      <div class="slide--4__inner">
-        <img src="/images/menu-accent-contact-transparent.png" alt="Front" class="slide--4__product-image">
-        <h2 class="zeta">Coming soon in stores Autumn 2017</h2>
-      </div>
-    </div>
-
-    <!-- SECTION 5: DIARY -->
-    <div class="slide slide--5"
-         data-0="opacity: 0"
-         data-890p="opacity: 0; transform: translate(0, 100%);"
-         data-920p="opacity: 1; transform: translate(0, 5%);"
-         data-960p="opacity: 1; transform: translate(0, 0%)"
+         data-730p="opacity: 0.3; transform: translate(0, 5%);"
+         data-740p="opacity: 1; transform: translate(0, 0%);"
     >
       <div class="diaryfeed">
         <diary></diary>
       </div>
-    </div>
-
-    <!-- FOOTER -->
-    <div class="slide--footer-wrapper"
-         data-0="opacity: 0"
-         data-900p="opacity: 0; transform: translate(0, 100%);"
-         data-910p="opacity: 0; transform: translate(0, 20%);"
-         data-9200p="opacity: 0.3; transform: translate(0, 5%);"
-         data-930p="opacity: 1; transform: translate(0, 0%);"
-         data-1000p="opacity: 1; transform: translate(0, 0%);"
-    >
-      <site-footer></site-footer>
     </div>
   </div>
 </template>
@@ -145,14 +117,12 @@
   import store from '../store'
   const page = require('scroll-doc')()
   import Diary from './Diary.vue'
-  import SiteFooter from './SiteFooter.vue'
   import { forEach } from 'lodash'
   import { addClass, removeClass, isMobile } from '../helpers'
 
   export default {
     components: {
       Diary,
-      SiteFooter,
     },
     data() {
       return {
