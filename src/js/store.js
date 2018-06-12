@@ -78,6 +78,12 @@ store.data = {
     {
       name: 'Coggles',
       website: 'https://www.coggles.com/'
+    },
+    {
+      name: 'Pad Lifestyle Harvey Nichols UK',
+      locations: [
+      ],
+      website: 'https://www.padlifestyle.com/search?q=cander+paris'
     }
     // {
     //   name: 'Barneys New York',
