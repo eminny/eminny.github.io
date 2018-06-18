@@ -110,8 +110,8 @@
     <!-- SECTION 5: DIARY -->
     <div class="slide slide--5"
          data-0="opacity: 0"
-         data-850p="opacity: 0;"
-         data-900p="opacity: 0.3;"
+         data-850p="opacity: 0; transform: translate(0, 100%)"
+         data-900p="opacity: 0.3; transform: translate(0, 30%);"
          data-920p="opacity: 1; transform: translate(0, 0%)"
          data-970p="transform: translate(0, -10%);"
     >
