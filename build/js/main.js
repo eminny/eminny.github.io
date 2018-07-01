@@ -16746,10 +16746,6 @@
 	    name: 'Pad Lifestyle Harvey Nichols UK',
 	    locations: [],
 	    website: 'https://www.padlifestyle.com/search?q=cander+paris'
-	  }, {
-	    name: 'Beam BK',
-	    locations: ['240 Kent Avenue (at N. 1st) <br>Brooklyn, NY 11249<br>USA'],
-	    website: 'https://beambk.com/'
 	  }],
 	  googleMaps: {
 	    apiKey: 'AIzaSyDGWEnF8tC8zkdjhfLjEwDAjKVvtTOxORs',
