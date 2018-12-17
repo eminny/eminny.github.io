@@ -72,7 +72,7 @@
           get: 'user',
           userId: '2256771534',
           clientId: '99f35d35ab8c49dc842fadc55787ef9f',
-          accessToken: '2256771534.1677ed0.3e113d818dfa40e698c2553d25765850',
+          accessToken: '2256771534.99f35d3.f76c9064a036497c862be997f8c703d4',
           limit: 20,
           resolution: 'standard_resolution',
           target: 'instafeed',

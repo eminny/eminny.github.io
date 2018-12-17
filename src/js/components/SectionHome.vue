@@ -21,8 +21,6 @@
       </div>
     </div>
 
-
-
     <!-- SECTION 1: THE CANDLE -->
     <div class="slide slide--1" id="the-fold"
          data-0="transform: translate(0, 100%);"

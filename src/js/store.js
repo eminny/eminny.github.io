@@ -85,6 +85,27 @@ store.data = {
       ],
       website: 'https://www.padlifestyle.com/search?q=cander+paris'
     },
+    {
+      name: 'GEE Beauty',
+      locations: [
+        '1845 Purdy Avenue<br>Miami Beach, FL 33139<br>USA'
+      ],
+      website: 'https://www.geebeauty.com/'
+    },
+    {
+      name: 'Mrs. Mandolin',
+      locations: [
+        '4218 NE 2nd Avenue<br>Miami, FL 33137<br>USA'
+      ],
+      website: 'http://www.mrsmandolin.com/'
+    },
+    {
+      name: 'Penelope & The Beauty Bar',
+      locations: [
+        'Fairmont Olympic Hotel<br>411 University Street<br>Seattle, WA 98101<br>USA'
+      ],
+      website: 'https://www.penelopeandthebeautybar.com/'
+    }
     // {
     //   name: 'Beam BK',
     //   locations: [
