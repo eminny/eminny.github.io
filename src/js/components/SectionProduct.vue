@@ -9,8 +9,9 @@
           <div class="section-product__intro__text-wrap__inner" v-show="language === 'en'" transition="fade">
             <h1 class="zeta">PRODUCT</h1>
             <!-- <h2 class="delta"><strong>Can<span style="font-size:0.75em">•</span>dor [ 'kandər ]</strong>, <em>noun</em><br>the quality of being open and honest in expression</h2> -->
-            <h3 class="p-beta">Cander Paris candles are made in Grasse France using the finest craftsmanship and materials. We use hand-blown glass and the highest quality paraffin-vegetal wax blend to ensure the best aromatic performance. Each fragrance
-            is created in Paris with perfumer Emmanuel Philip. The launch collection of four fragrances features works of Pine, Amber, Sandalwood, and Rose. </h3>
+            <h3 class="p-beta">Our products are manufactured by the oldest and most exclusive French candlemakers in the world, Cire Trudon private label. Founded in 1643, CIR supplied candles to the royal court of King Louis XIV and continues to provide some of highest quality wax in the world today. The brands under their private label production are extremely selective and few.
+            <br>The candle vessels are made of hand-blown glass in exquisite colors. Our wax is a non-toxic vegetal blend within the OSPAR by Greenpeace standards.
+            <br>Each fragrance is created in Paris by elite perfumer Emmanuel Philip at his atelier, featuring works of Balsam Fir, Rose, Amber, and Sandalwood.  </h3>
             <h3 class="p-beta">Burn instructions: <br> For an ideal burn, we suggest trimming the wick to 3-5mm before each use. The candles should ideally be stored at room temperature.  </h3>
           </div>
         </div>
