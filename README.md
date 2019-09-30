@@ -2,6 +2,28 @@
 
 ### Development setup
 
+#### Prerequisites
+
+Ensure you have the following binaries installed on your dev machine
+- Node/NPM
+- Nodenv
+- Yarn
+- Gulp
+- Ruby
+
+#### Preparing your dev machine
+
+- Install node 6.10.3
+    - `nodenv install 6.10.3`
+- Install some system wide Ruby gems
+    - `sudo gem install sass`
+    - `sudo gem install compass`
+    - `sudo gem install breakpoint`
+    - `sudo gem install susy`
+    - `sudo gem install modular-scale`
+
+#### Building the code
+
 Run `yarn install` to pull in dependencies.
 
 Next, run `gulp` to watch for live file changes to files in `src/` and compile the new build on the fly. Gulp should have been installed when you ran `npm install`, but if it is not found, just run `npm install -g gulp`.
