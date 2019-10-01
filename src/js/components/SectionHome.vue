@@ -34,9 +34,21 @@
            data-220p="opacity: 0"
       >
         <div class="slide__products">
-          <div class="slide__product" data-product-title="Scent 01">
-            <img src="/images/updated-candles/20190930/fete.jpg" v-on:mouseenter="/images/scent01mouseover.jpg" alt="Scent 01" />
-            <a href="https://cander-paris-us.myshopify.com/products/fete" class="slide__product__btn">Buy Now</a>
+          <div class="slide__product slide__product__featured" data-product-title="Scent 01">
+            <a href="https://cander-paris-us.myshopify.com/products/fete">
+              <img src="/images/updated-candles/20190930/fete.jpg" v-on:mouseenter="/images/scent01mouseover.jpg" alt="Scent 01" />
+            </a>
+            <div class="slide__product__featured__cta__wrapper">
+              <a href="https://cander-paris-us.myshopify.com/products/fete" class="slide__product__featured__cta__anchor">
+                <div class="slide__product__featured__cta__outer">
+                  <div class="slide__product__featured__cta">
+                    <p class="slide__product__featured__name">FÊTE</p>
+                    <p class="slide__product__featured__desc">Introducing our holiday fragrance featuring pomegranate, citrus & spice.</p>
+                    <p class="slide__product__featured__btn">ADD TO CART</p>
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
