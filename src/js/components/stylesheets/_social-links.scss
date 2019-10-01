@@ -4,9 +4,6 @@
 a.social__item {
   transition: color $transition-standard;
   text-decoration: none;
-  &:first-of-type {
-    margin-right: 2rem;
-  }
 }
 
 .icon {
