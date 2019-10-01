@@ -73,7 +73,7 @@
             <a href="https://cander-paris-us.myshopify.com/products/scent-01">
               <img src="/images/updated-candles/20190930/scent-01.jpg" v-on:mouseenter="/images/scent01mouseover.jpg" alt="Scent 01" />
             </a>
-            <a href="https://cander-paris-us.myshopify.com/products/scent-01" class="slide__product__btn">SCENT ONE</a>
+            <a href="https://cander-paris-us.myshopify.com/products/scent-01" class="slide__product__btn">SCENT 01</a>
           </div>
           <div class="slide__product" data-product-title="Our Youth">
             <a href="https://cander-paris-us.myshopify.com/products/our-youth">
@@ -107,7 +107,7 @@
     >
       <div class="slide--2__bg is-dark" style="background-image: url('/images/bg-aromatic-santal.jpg');"></div>
       <div class="the-scent">
-        <p class="the-scent__desc" style="font-style: italic;">Refined fragrances created in Paris by elite French perfumers</p>
+        <p class="the-scent__desc" style="font-style: italic;">Creating contemporary ambiance with the world’s most revered French candlemakers.</p>
       </div>
     </div>
 
