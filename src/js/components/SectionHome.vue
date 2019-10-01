@@ -58,20 +58,28 @@
       >
         <div class="slide__products">
           <div class="slide__product" data-product-title="Scent 01">
-            <img src="/images/updated-candles/20190930/scent-01.jpg" v-on:mouseenter="/images/scent01mouseover.jpg" alt="Scent 01" />
-            <a href="https://cander-paris-us.myshopify.com/products/scent-01" class="slide__product__btn">Buy Now</a>
+            <a href="https://cander-paris-us.myshopify.com/products/scent-01">
+              <img src="/images/updated-candles/20190930/scent-01.jpg" v-on:mouseenter="/images/scent01mouseover.jpg" alt="Scent 01" />
+            </a>
+            <a href="https://cander-paris-us.myshopify.com/products/scent-01" class="slide__product__btn">SCENT ONE</a>
           </div>
           <div class="slide__product" data-product-title="Our Youth">
-            <img src="/images/updated-candles/20190930/our-youth.jpg" alt="Our Youth">
-            <a href="https://cander-paris-us.myshopify.com/products/our-youth" class="slide__product__btn">Buy Now</a>
+            <a href="https://cander-paris-us.myshopify.com/products/our-youth">
+              <img src="/images/updated-candles/20190930/our-youth.jpg" alt="Our Youth">
+            </a>
+            <a href="https://cander-paris-us.myshopify.com/products/our-youth" class="slide__product__btn">OUR YOUTH</a>
           </div>
           <div class="slide__product" data-product-title="Rue Vertbois">
-            <img src="/images/updated-candles/20190930/rue-vertbois.jpg" alt="Rue Vertbois">
-            <a href="https://cander-paris-us.myshopify.com/products/rue-vertbois" class="slide__product__btn">Buy Now</a>
+            <a href="https://cander-paris-us.myshopify.com/products/rue-vertbois">
+              <img src="/images/updated-candles/20190930/rue-vertbois.jpg" alt="Rue Vertbois">
+            </a>
+            <a href="https://cander-paris-us.myshopify.com/products/rue-vertbois" class="slide__product__btn">RUE VERTBOIS</a>
           </div>
           <div class="slide__product" data-product-title="Rose">
-            <img src="/images/updated-candles/20190930/rose.jpg" alt="Rose">
-            <a href="https://cander-paris-us.myshopify.com/products/rose" class="slide__product__btn">Buy Now</a>
+            <a href="https://cander-paris-us.myshopify.com/products/rose">
+              <img src="/images/updated-candles/20190930/rose.jpg" alt="Rose">
+            </a>
+            <a href="https://cander-paris-us.myshopify.com/products/rose" class="slide__product__btn">ROSE</a>
           </div>
         </div>
       </div>

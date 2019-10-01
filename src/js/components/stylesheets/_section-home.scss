@@ -123,7 +123,7 @@
   width: 50%;
   padding: 1.5rem;
 
-  img + .slide__product__btn {
+  .slide__product__btn {
     margin-top: 1rem;
     text-decoration: none;
   }
@@ -141,8 +141,8 @@
 .slide__product__btn {
   cursor: pointer;
   appearance:  none;
-  background: $color__white;
-  border: 1px solid $color__gray;
+  background: rgba(0,0,0,0);
+  border: 0px;
   box-shadow: none;
   display: block;
   font-size: 1.2rem;
@@ -156,6 +156,7 @@
 
   &:hover, &:focus {
     outline: none;
+    color: #000;
   }
 
   .slide__product:hover > & {
