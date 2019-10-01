@@ -42,14 +42,14 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(1);
 
 
-/***/ }),
+/***/ },
 /* 1 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -106,9 +106,9 @@
 	  });
 	})();
 
-/***/ }),
+/***/ },
 /* 2 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/*!
 	 * Vue.js v1.0.28
@@ -10350,9 +10350,9 @@
 	module.exports = Vue;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
-/***/ }),
+/***/ },
 /* 3 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	// shim for using process in browser
 	var process = module.exports = {};
@@ -10524,10 +10524,6 @@
 	process.removeListener = noop;
 	process.removeAllListeners = noop;
 	process.emit = noop;
-	process.prependListener = noop;
-	process.prependOnceListener = noop;
-
-	process.listeners = function (name) { return [] }
 
 	process.binding = function (name) {
 	    throw new Error('process.binding is not supported');
@@ -10540,9 +10536,9 @@
 	process.umask = function() { return 0; };
 
 
-/***/ }),
+/***/ },
 /* 4 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	/*!
 	 * vue-router v0.7.13
@@ -13254,9 +13250,9 @@
 
 	}));
 
-/***/ }),
+/***/ },
 /* 5 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	;(function () {
 
@@ -13424,9 +13420,9 @@
 	})()
 
 
-/***/ }),
+/***/ },
 /* 6 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/*! Hammer.JS - v2.0.7 - 2016-04-22
 	 * http://hammerjs.github.io/
@@ -16073,9 +16069,9 @@
 	})(window, document, 'Hammer');
 
 
-/***/ }),
+/***/ },
 /* 7 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -16142,9 +16138,9 @@
 	  }
 	};
 
-/***/ }),
+/***/ },
 /* 8 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
@@ -16168,7 +16164,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-004910d5/SectionAbout.vue"
+	  var id = "_v-5c05158a/SectionAbout.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -16176,9 +16172,9 @@
 	  }
 	})()}
 
-/***/ }),
+/***/ },
 /* 9 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
@@ -16192,8 +16188,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-004910d5&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionAbout.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-004910d5&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionAbout.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-5c05158a&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionAbout.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-5c05158a&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionAbout.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -16202,23 +16198,23 @@
 		module.hot.dispose(function() { update(); });
 	}
 
-/***/ }),
+/***/ },
 /* 10 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(11)();
 	// imports
 
 
 	// module
-	exports.push([module.id, ".section-about__intro[_v-004910d5] {\n  -ms-flex-align: center;\n      align-items: center;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  -ms-flex-pack: start;\n      justify-content: flex-start; }\n  @media screen and (min-width: 768px) {\n    .section-about__intro[_v-004910d5] {\n      -ms-flex-align: start;\n          align-items: flex-start;\n      -ms-flex-direction: row;\n          flex-direction: row;\n      -ms-flex-pack: center;\n          justify-content: center; } }\n\n.section-about__intro__image-wrap[_v-004910d5],\n.section-about__intro__text-wrap[_v-004910d5] {\n  width: 90%; }\n  @media screen and (min-width: 768px) {\n    .section-about__intro__image-wrap[_v-004910d5],\n    .section-about__intro__text-wrap[_v-004910d5] {\n      padding: 5rem;\n      width: 50%; } }\n\n@media screen and (min-width: 768px) {\n  .section-about__intro__image-wrap[_v-004910d5] {\n    padding-right: 0;\n    -ms-flex-align: start;\n        align-items: flex-start; } }\n\n.section-about__intro__image[_v-004910d5] {\n  margin-top: 4rem; }\n\n.section-about__intro__text-wrap[_v-004910d5] {\n  margin-bottom: 2rem; }\n  .section-about__intro__text-wrap h1[_v-004910d5] {\n    margin: 4rem 0 2rem 0; }\n  .section-about__intro__text-wrap h3[_v-004910d5] {\n    margin: 2.5rem 0 2rem 0; }\n\n.section-about__intro__text-wrap__inner[_v-004910d5] {\n  opacity: 1;\n  max-width: 50rem;\n  min-height: 27rem; }\n  @media screen and (min-width: 768px) {\n    .section-about__intro__text-wrap__inner[_v-004910d5] {\n      position: relative; } }\n\n.section-about__intro__language-switch[_v-004910d5] {\n  border-top: 1px solid rgba(193, 193, 193, 0.333);\n  display: inline-block;\n  padding-top: 0.666rem; }\n  .section-about__intro__language-switch a[_v-004910d5] {\n    color: #c1c1c1;\n    letter-spacing: 0.1rem;\n    text-decoration: none;\n    transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n    .section-about__intro__language-switch a[_v-004910d5]:first-of-type {\n      margin-right: 0.666rem; }\n    .section-about__intro__language-switch a.is-active[_v-004910d5], .section-about__intro__language-switch a[_v-004910d5]:active, .section-about__intro__language-switch a[_v-004910d5]:hover {\n      color: #000000; }\n  @media screen and (min-width: 768px) {\n    .section-about__intro__language-switch[_v-004910d5] {\n      position: absolute; } }\n", ""]);
+	exports.push([module.id, ".section-about__intro[_v-5c05158a] {\n  -ms-flex-align: center;\n      align-items: center;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  -ms-flex-pack: start;\n      justify-content: flex-start; }\n  @media screen and (min-width: 768px) {\n    .section-about__intro[_v-5c05158a] {\n      -ms-flex-align: start;\n          align-items: flex-start;\n      -ms-flex-direction: row;\n          flex-direction: row;\n      -ms-flex-pack: center;\n          justify-content: center; } }\n\n.section-about__intro__image-wrap[_v-5c05158a],\n.section-about__intro__text-wrap[_v-5c05158a] {\n  width: 90%; }\n  @media screen and (min-width: 768px) {\n    .section-about__intro__image-wrap[_v-5c05158a],\n    .section-about__intro__text-wrap[_v-5c05158a] {\n      padding: 5rem;\n      width: 50%; } }\n\n@media screen and (min-width: 768px) {\n  .section-about__intro__image-wrap[_v-5c05158a] {\n    padding-right: 0;\n    -ms-flex-align: start;\n        align-items: flex-start; } }\n\n.section-about__intro__image[_v-5c05158a] {\n  margin-top: 4rem; }\n\n.section-about__intro__text-wrap[_v-5c05158a] {\n  margin-bottom: 2rem; }\n  .section-about__intro__text-wrap h1[_v-5c05158a] {\n    margin: 4rem 0 2rem 0; }\n  .section-about__intro__text-wrap h3[_v-5c05158a] {\n    margin: 2.5rem 0 2rem 0; }\n\n.section-about__intro__text-wrap__inner[_v-5c05158a] {\n  opacity: 1;\n  max-width: 50rem;\n  min-height: 27rem; }\n  @media screen and (min-width: 768px) {\n    .section-about__intro__text-wrap__inner[_v-5c05158a] {\n      position: relative; } }\n\n.section-about__intro__language-switch[_v-5c05158a] {\n  border-top: 1px solid rgba(193, 193, 193, 0.333);\n  display: inline-block;\n  padding-top: 0.666rem; }\n  .section-about__intro__language-switch a[_v-5c05158a] {\n    color: #c1c1c1;\n    letter-spacing: 0.1rem;\n    text-decoration: none;\n    transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n    .section-about__intro__language-switch a[_v-5c05158a]:first-of-type {\n      margin-right: 0.666rem; }\n    .section-about__intro__language-switch a.is-active[_v-5c05158a], .section-about__intro__language-switch a[_v-5c05158a]:active, .section-about__intro__language-switch a[_v-5c05158a]:hover {\n      color: #000000; }\n  @media screen and (min-width: 768px) {\n    .section-about__intro__language-switch[_v-5c05158a] {\n      position: absolute; } }\n", ""]);
 
 	// exports
 
 
-/***/ }),
+/***/ },
 /* 11 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	/*
 		MIT License http://www.opensource.org/licenses/mit-license.php
@@ -16272,9 +16268,9 @@
 	};
 
 
-/***/ }),
+/***/ },
 /* 12 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	/*
 		MIT License http://www.opensource.org/licenses/mit-license.php
@@ -16494,9 +16490,9 @@
 	}
 
 
-/***/ }),
+/***/ },
 /* 13 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -16542,9 +16538,9 @@
 	  ready: function ready() {}
 	};
 
-/***/ }),
+/***/ },
 /* 14 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var raf = __webpack_require__(15)
 
@@ -16591,9 +16587,9 @@
 
 	    element[prop] = (eased * (to - from)) + from
 
-	    time < 1 ? raf(animate) : raf(function () {
+	    time < 1 ?
+	      raf(animate) :
 	      callback(null, element[prop])
-	    })
 	  }
 
 	  raf(animate)
@@ -16602,7 +16598,7 @@
 	}
 
 	function inOutSine (n) {
-	  return .5 * (1 - Math.cos(Math.PI * n))
+	  return .5 * (1 - Math.cos(Math.PI * n));
 	}
 
 	module.exports = {
@@ -16615,9 +16611,9 @@
 	}
 
 
-/***/ }),
+/***/ },
 /* 15 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var global = __webpack_require__(16)
 
@@ -16656,29 +16652,25 @@
 	exports.cancel = cancel
 
 
-/***/ }),
+/***/ },
 /* 16 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
-	/* WEBPACK VAR INJECTION */(function(global) {var win;
-
-	if (typeof window !== "undefined") {
-	    win = window;
+	/* WEBPACK VAR INJECTION */(function(global) {if (typeof window !== "undefined") {
+	    module.exports = window;
 	} else if (typeof global !== "undefined") {
-	    win = global;
+	    module.exports = global;
 	} else if (typeof self !== "undefined"){
-	    win = self;
+	    module.exports = self;
 	} else {
-	    win = {};
+	    module.exports = {};
 	}
-
-	module.exports = win;
 
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
-/***/ }),
+/***/ },
 /* 17 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -16893,9 +16885,9 @@
 
 	exports.default = store;
 
-/***/ }),
+/***/ },
 /* 18 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	// Copyright Joyent, Inc. and other Node contributors.
 	//
@@ -17201,9 +17193,9 @@
 	}
 
 
-/***/ }),
+/***/ },
 /* 19 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
@@ -17227,7 +17219,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-490d892f/SiteFooter.vue"
+	  var id = "_v-21fd3724/SiteFooter.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -17235,9 +17227,9 @@
 	  }
 	})()}
 
-/***/ }),
+/***/ },
 /* 20 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
@@ -17261,9 +17253,9 @@
 		module.hot.dispose(function() { update(); });
 	}
 
-/***/ }),
+/***/ },
 /* 21 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(11)();
 	// imports
@@ -17275,9 +17267,9 @@
 	// exports
 
 
-/***/ }),
+/***/ },
 /* 22 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -17308,9 +17300,9 @@
 	  ready: function ready() {}
 	};
 
-/***/ }),
+/***/ },
 /* 23 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
@@ -17331,7 +17323,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-5af5b3af/SocialLinks.vue"
+	  var id = "_v-c008774c/SocialLinks.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -17339,9 +17331,9 @@
 	  }
 	})()}
 
-/***/ }),
+/***/ },
 /* 24 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
@@ -17355,8 +17347,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-5af5b3af&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SocialLinks.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-5af5b3af&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SocialLinks.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-c008774c&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SocialLinks.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-c008774c&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SocialLinks.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -17365,35 +17357,35 @@
 		module.hot.dispose(function() { update(); });
 	}
 
-/***/ }),
+/***/ },
 /* 25 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(11)();
 	// imports
 
 
 	// module
-	exports.push([module.id, ".social__item[_v-5af5b3af],\na.social__item[_v-5af5b3af] {\n  transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);\n  text-decoration: none; }\n  .social__item[_v-5af5b3af]:first-of-type,\n  a.social__item[_v-5af5b3af]:first-of-type {\n    margin-right: 2rem; }\n\n.icon[_v-5af5b3af] {\n  display: inline-block;\n  width: 1.5rem;\n  height: 1.5rem;\n  stroke-width: 0;\n  stroke: currentColor;\n  fill: currentColor; }\n", ""]);
+	exports.push([module.id, ".social__item[_v-c008774c],\na.social__item[_v-c008774c] {\n  transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);\n  text-decoration: none; }\n\n.icon[_v-c008774c] {\n  display: inline-block;\n  width: 1.5rem;\n  height: 1.5rem;\n  stroke-width: 0;\n  stroke: currentColor;\n  fill: currentColor; }\n", ""]);
 
 	// exports
 
 
-/***/ }),
+/***/ },
 /* 26 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"social\" _v-5af5b3af=\"\">\n  <a class=\"social__item\" href=\"https://facebook.com/CanderParis\" target=\"_blank\" _v-5af5b3af=\"\">\n    <svg class=\"icon icon-facebook\" _v-5af5b3af=\"\">\n      <use xlink:href=\"#icon-facebook\" _v-5af5b3af=\"\"></use>\n    </svg>\n  </a>\n  <a class=\"social__item\" href=\"https://instagram.com/CanderParis\" target=\"_blank\" _v-5af5b3af=\"\">\n    <svg class=\"icon icon-instagram\" _v-5af5b3af=\"\"><use xlink:href=\"#icon-instagram\" _v-5af5b3af=\"\"></use></svg>\n  </a>\n  <svg style=\"position: absolute; width: 0; height: 0; overflow: hidden;\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" _v-5af5b3af=\"\">\n    <defs _v-5af5b3af=\"\">\n      <symbol id=\"icon-instagram\" viewBox=\"0 0 16 16\" _v-5af5b3af=\"\">\n        <title _v-5af5b3af=\"\">Instagram</title>\n        <path class=\"path1\" d=\"M14.5 0h-13c-0.825 0-1.5 0.675-1.5 1.5v13c0 0.825 0.675 1.5 1.5 1.5h13c0.825 0 1.5-0.675 1.5-1.5v-13c0-0.825-0.675-1.5-1.5-1.5zM11 2.5c0-0.275 0.225-0.5 0.5-0.5h2c0.275 0 0.5 0.225 0.5 0.5v2c0 0.275-0.225 0.5-0.5 0.5h-2c-0.275 0-0.5-0.225-0.5-0.5v-2zM8 5c1.656 0 3 1.344 3 3s-1.344 3-3 3c-1.656 0-3-1.344-3-3s1.344-3 3-3zM14 13.5v0c0 0.275-0.225 0.5-0.5 0.5h-11c-0.275 0-0.5-0.225-0.5-0.5v0-6.5h1.1c-0.066 0.322-0.1 0.656-0.1 1 0 2.762 2.237 5 5 5s5-2.238 5-5c0-0.344-0.034-0.678-0.1-1h1.1v6.5z\" _v-5af5b3af=\"\"></path>\n      </symbol>\n      <symbol id=\"icon-facebook\" viewBox=\"0 0 16 16\" _v-5af5b3af=\"\">\n        <title _v-5af5b3af=\"\">Facebook</title>\n        <path class=\"path1\" d=\"M9.5 3h2.5v-3h-2.5c-1.93 0-3.5 1.57-3.5 3.5v1.5h-2v3h2v8h3v-8h2.5l0.5-3h-3v-1.5c0-0.271 0.229-0.5 0.5-0.5z\" _v-5af5b3af=\"\"></path>\n      </symbol>\n    </defs>\n  </svg>\n</div>\n";
+	module.exports = "\n<div class=\"social\" _v-c008774c=\"\">\n  <a class=\"social__item\" href=\"https://instagram.com/CanderParis\" target=\"_blank\" _v-c008774c=\"\">\n    <svg class=\"icon icon-instagram\" _v-c008774c=\"\"><use xlink:href=\"#icon-instagram\" _v-c008774c=\"\"></use></svg>\n  </a>\n  <svg style=\"position: absolute; width: 0; height: 0; overflow: hidden;\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" _v-c008774c=\"\">\n    <defs _v-c008774c=\"\">\n      <symbol id=\"icon-instagram\" viewBox=\"0 0 16 16\" _v-c008774c=\"\">\n        <title _v-c008774c=\"\">Instagram</title>\n        <path class=\"path1\" d=\"M14.5 0h-13c-0.825 0-1.5 0.675-1.5 1.5v13c0 0.825 0.675 1.5 1.5 1.5h13c0.825 0 1.5-0.675 1.5-1.5v-13c0-0.825-0.675-1.5-1.5-1.5zM11 2.5c0-0.275 0.225-0.5 0.5-0.5h2c0.275 0 0.5 0.225 0.5 0.5v2c0 0.275-0.225 0.5-0.5 0.5h-2c-0.275 0-0.5-0.225-0.5-0.5v-2zM8 5c1.656 0 3 1.344 3 3s-1.344 3-3 3c-1.656 0-3-1.344-3-3s1.344-3 3-3zM14 13.5v0c0 0.275-0.225 0.5-0.5 0.5h-11c-0.275 0-0.5-0.225-0.5-0.5v0-6.5h1.1c-0.066 0.322-0.1 0.656-0.1 1 0 2.762 2.237 5 5 5s5-2.238 5-5c0-0.344-0.034-0.678-0.1-1h1.1v6.5z\" _v-c008774c=\"\"></path>\n      </symbol>\n    </defs>\n  </svg>\n</div>\n";
 
-/***/ }),
+/***/ },
 /* 27 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
-	module.exports = "\n<footer class=\"site-footer\">\n  <div class=\"site-footer__social-icons-wrapper\">\n    <social-links></social-links>\n  </div>\n  <form id=\"newsletter__form\"\n        class=\"newsletter__form group\"\n        action=\"//hauteappetite.createsend.com/t/i/s/npiud/\"\n        method=\"post\"\n        id=\"subForm\"\n  >\n    <label for=\"fieldEmail\" class=\"newsletter__label\">Sign up and stay updated</label>\n    <div class=\"newsletter__form__inner\">\n      <input id=\"fieldEmail\" name=\"cm-npiud-npiud\" class=\"newsletter__email\" type=\"email\" placeholder=\"EMAIL ADDRESS\" autocomplete=\"off\" autocorrect=\"off\" required>\n      <button class=\"newsletter__form__btn-submit\" type=\"submit\">Submit</button>\n    </div>\n  </form>\n  <p class=\"site-footer__copyright\">&copy; 2018 CANDER PARIS. <a v-link=\"{ name: 'privacy' }\">Privacy</a> / <a v-link=\"{ name: 'terms' }\">Terms.</a></p>\n</footer>\n";
+	module.exports = "\n<footer class=\"site-footer\">\n  <div class=\"site-footer__social-icons-wrapper\">\n    <social-links></social-links>\n  </div>\n  <form id=\"newsletter__form\"\n        class=\"newsletter__form group\"\n        action=\"//hauteappetite.createsend.com/t/i/s/npiud/\"\n        method=\"post\"\n        id=\"subForm\"\n  >\n    <label for=\"fieldEmail\" class=\"newsletter__label\">Sign up and stay updated</label>\n    <div class=\"newsletter__form__inner\">\n      <input id=\"fieldEmail\" name=\"cm-npiud-npiud\" class=\"newsletter__email\" type=\"email\" placeholder=\"EMAIL ADDRESS\" autocomplete=\"off\" autocorrect=\"off\" required>\n      <button class=\"newsletter__form__btn-submit\" type=\"submit\">Submit</button>\n    </div>\n  </form>\n  <p class=\"site-footer__copyright\">&copy; 2019 CANDER PARIS. <a v-link=\"{ name: 'privacy' }\">Privacy</a> / <a v-link=\"{ name: 'terms' }\">Terms.</a></p>\n</footer>\n";
 
-/***/ }),
+/***/ },
 /* 28 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	var win = window || {};
 	var doc = document || { documentElement: {} };
@@ -17419,15 +17411,15 @@
 	}
 
 
-/***/ }),
+/***/ },
 /* 29 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"single-page\" _v-004910d5=\"\">\n  <div class=\"single-page__content\" _v-004910d5=\"\">\n    <div class=\"section-about__intro\" _v-004910d5=\"\">\n      <div class=\"section-about__intro__image-wrap\" _v-004910d5=\"\">\n        <img src=\"/images/about-intro-elizabeth-minett.jpg\" alt=\"BY ELIZABETH MINETT\" class=\"section-about__intro__image\" _v-004910d5=\"\">\n      </div>\n      <div class=\"section-about__intro__text-wrap\" _v-004910d5=\"\">\n        <div class=\"section-about__intro__text-wrap__inner\" v-show=\"language === 'en'\" transition=\"fade\" _v-004910d5=\"\">\n          <h1 class=\"zeta\" _v-004910d5=\"\">by Elizabeth Minett</h1>\n          <h2 class=\"delta\" _v-004910d5=\"\"><strong _v-004910d5=\"\">Can<span style=\"font-size:0.75em\" _v-004910d5=\"\">•</span>dor [ 'kandər ]</strong>, <em _v-004910d5=\"\">noun</em><br _v-004910d5=\"\">the quality of being open and honest in expression</h2>\n          <h3 class=\"p-beta\" _v-004910d5=\"\">Cander Paris was founded in 2016 by Elizabeth Minett. Elizabeth was born and raised in a place where candor was the essence of her culture. A childhood filled with the rustic landscapes of harsh winters would forever shape her olfactive tastes. She developed a more refined nose during her years travelling the globe as a bon vivant, especially whilst in France. Cander Paris is inspired not only by her passion for luxury ambiance, but by the intimacy of candid moments, and the quest for genuine expression. She has teamed with world-renowned French perfumer Emmanuel Philip to create her debut collection. Made in France with the excellence and tradition of French perfumery, the candles are exquisitely crafted of the highest quality. Refined, and euphorically indulgent. The fragrances of candid moments.</h3>\n          <h3 class=\"p-beta\" _v-004910d5=\"\">Elizabeth was born and raised near Toronto, Canada of Norwegian and Russian heritage. After a chance encounter in an elevator, she was scouted to work as a fashion model and soon moved to Europe. She was an early adopter of the digital influencer trend, and transitioned from the modelling world to create her successful lifestyle website. An auspicious visit to her friend’s perfume lab set her heart aflame for her next evolution as a scent creator. She is one of the youngest female entrepreneurs to have created her own luxury home scent brand. Elizabeth is regularly featured in online publications like Vogue, Elle, Harper’s Bazaar, and Grazia for her style and influence.</h3>\n        </div>\n        <div class=\"section-about__intro__text-wrap__inner\" v-show=\"language === 'fr'\" transition=\"fade\" _v-004910d5=\"\">\n          <h1 class=\"zeta\" _v-004910d5=\"\">par Elizabeth Minett</h1>\n          <h2 class=\"delta\" _v-004910d5=\"\"><strong _v-004910d5=\"\">Can<span style=\"font-size:0.75em\" _v-004910d5=\"\">•</span>deur [ kan.dœr ]</strong>, <em _v-004910d5=\"\">nom féminin</em><br _v-004910d5=\"\">charactère du celui qui se montre ingénu</h2>\n          <h3 class=\"p-beta\" _v-004910d5=\"\">La maison CANDER Paris a été fondée en 2016 par Elizabeth Minett. C’est au Canada qu’Elizabeth a été élevée dans la plus grande ingénuité. Elle garde de son enfance les souvenirs olfactifs d’une nature sauvage, de paysages rustiques marqués par les saisons. Epicurienne, elle affine progressivement ses capacités sensorielles lors de ses nombreux voyages. Plus qu’une maison de luxe, CANDER Paris est ainsi le fruit d’une véritable quête d’authenticité. C’est la raison pour laquelle Elizabeth a choisi de s’associer au talentueux parfumeur français Emmanuel Philip pour la création de sa première collection. Résultat d’une confection délicate, les bougies CANDER sont fabriquées en France dans le plus pur respect des traditions et savoir-faire de la parfumerie de luxe.</h3>\n          <h3 class=\"p-beta\" _v-004910d5=\"\">Elizabeth nait et grandit au Canada près de Toronto où elle bénéficie également d’une culture russe et norvégienne par ses parents. Pendant son adolescence, alors qu’elle se trouve dans un ascenseur, Elizabeth se fait repérer pour devenir mannequin et part rapidement en Europe pour lancer sa carrière. Adepte du monde digital et consciente de l’impact des « influenceurs », elle se transforme en bloggeuse lifestyle et lance avec succès son propre site. C’est finalement au cours d’une visite dans l’atelier de l’un de ses amis parfumeur que se révèle sa vocation de créatrice de parfums. Elle devient ainsi la plus jeune entrepreneur dans le monde de la parfumerie d’ambiance de luxe. Avec son style unique, Elizabeth est souvent représentée dans des publications prestigieuses telles que Vogue, Elle, Harper’s Bazaar ou encore Grazia.</h3>\n        </div>\n        <div class=\"section-about__intro__language-switch\" _v-004910d5=\"\">\n          <a href=\"#\" @click.prevent=\"setLanguage('en')\" class=\"{{ language === 'en' ? 'is-active' : '' }}\" _v-004910d5=\"\">EN</a>\n          <a href=\"#\" @click.prevent=\"setLanguage('fr')\" class=\"{{ language === 'fr' ? 'is-active' : '' }}\" _v-004910d5=\"\">FR</a>\n        </div>\n      </div>\n    </div>\n  </div>\n  <site-footer _v-004910d5=\"\"></site-footer>\n</div>\n";
+	module.exports = "\n<div class=\"single-page\" _v-5c05158a=\"\">\n  <div class=\"single-page__content\" _v-5c05158a=\"\">\n    <div class=\"section-about__intro\" _v-5c05158a=\"\">\n      <div class=\"section-about__intro__image-wrap\" _v-5c05158a=\"\">\n        <img src=\"/images/about-intro-elizabeth-minett.jpg\" alt=\"BY ELIZABETH MINETT\" class=\"section-about__intro__image\" _v-5c05158a=\"\">\n      </div>\n      <div class=\"section-about__intro__text-wrap\" _v-5c05158a=\"\">\n        <div class=\"section-about__intro__text-wrap__inner\" v-show=\"language === 'en'\" transition=\"fade\" _v-5c05158a=\"\">\n          <h1 class=\"zeta\" _v-5c05158a=\"\">by Elizabeth Minett</h1>\n          <h2 class=\"delta\" _v-5c05158a=\"\"><strong _v-5c05158a=\"\">Can<span style=\"font-size:0.75em\" _v-5c05158a=\"\">•</span>dor [ 'kandər ]</strong>, <em _v-5c05158a=\"\">noun</em><br _v-5c05158a=\"\">the quality of being open and honest in expression</h2>\n          <h3 class=\"p-beta\" _v-5c05158a=\"\">Cander Paris was founded in 2016 by Elizabeth Minett. Elizabeth was born and raised in a place where candor was the essence of her culture. A childhood filled with the rustic landscapes of harsh winters would forever shape her olfactive tastes. She developed a more refined nose during her years travelling the globe as a bon vivant, especially whilst in France. Cander Paris is inspired not only by her passion for luxury ambiance, but by the intimacy of candid moments, and the quest for genuine expression. She has teamed with world-renowned French perfumer Emmanuel Philip to create her debut collection. Made in France with the excellence and tradition of French perfumery, the candles are exquisitely crafted of the highest quality. Refined, and euphorically indulgent. The fragrances of candid moments.</h3>\n          <h3 class=\"p-beta\" _v-5c05158a=\"\">Elizabeth was born and raised near Toronto, Canada of Norwegian and Russian heritage. After a chance encounter in an elevator, she was scouted to work as a fashion model and soon moved to Europe. She was an early adopter of the digital influencer trend, and transitioned from the modelling world to create her successful lifestyle website. An auspicious visit to her friend’s perfume lab set her heart aflame for her next evolution as a scent creator. She is one of the youngest female entrepreneurs to have created her own luxury home scent brand. Elizabeth is regularly featured in online publications like Vogue, Elle, Harper’s Bazaar, and Grazia for her style and influence.</h3>\n        </div>\n        <div class=\"section-about__intro__text-wrap__inner\" v-show=\"language === 'fr'\" transition=\"fade\" _v-5c05158a=\"\">\n          <h1 class=\"zeta\" _v-5c05158a=\"\">par Elizabeth Minett</h1>\n          <h2 class=\"delta\" _v-5c05158a=\"\"><strong _v-5c05158a=\"\">Can<span style=\"font-size:0.75em\" _v-5c05158a=\"\">•</span>deur [ kan.dœr ]</strong>, <em _v-5c05158a=\"\">nom féminin</em><br _v-5c05158a=\"\">charactère du celui qui se montre ingénu</h2>\n          <h3 class=\"p-beta\" _v-5c05158a=\"\">La maison CANDER Paris a été fondée en 2016 par Elizabeth Minett. C’est au Canada qu’Elizabeth a été élevée dans la plus grande ingénuité. Elle garde de son enfance les souvenirs olfactifs d’une nature sauvage, de paysages rustiques marqués par les saisons. Epicurienne, elle affine progressivement ses capacités sensorielles lors de ses nombreux voyages. Plus qu’une maison de luxe, CANDER Paris est ainsi le fruit d’une véritable quête d’authenticité. C’est la raison pour laquelle Elizabeth a choisi de s’associer au talentueux parfumeur français Emmanuel Philip pour la création de sa première collection. Résultat d’une confection délicate, les bougies CANDER sont fabriquées en France dans le plus pur respect des traditions et savoir-faire de la parfumerie de luxe.</h3>\n          <h3 class=\"p-beta\" _v-5c05158a=\"\">Elizabeth nait et grandit au Canada près de Toronto où elle bénéficie également d’une culture russe et norvégienne par ses parents. Pendant son adolescence, alors qu’elle se trouve dans un ascenseur, Elizabeth se fait repérer pour devenir mannequin et part rapidement en Europe pour lancer sa carrière. Adepte du monde digital et consciente de l’impact des « influenceurs », elle se transforme en bloggeuse lifestyle et lance avec succès son propre site. C’est finalement au cours d’une visite dans l’atelier de l’un de ses amis parfumeur que se révèle sa vocation de créatrice de parfums. Elle devient ainsi la plus jeune entrepreneur dans le monde de la parfumerie d’ambiance de luxe. Avec son style unique, Elizabeth est souvent représentée dans des publications prestigieuses telles que Vogue, Elle, Harper’s Bazaar ou encore Grazia.</h3>\n        </div>\n        <div class=\"section-about__intro__language-switch\" _v-5c05158a=\"\">\n          <a href=\"#\" @click.prevent=\"setLanguage('en')\" class=\"{{ language === 'en' ? 'is-active' : '' }}\" _v-5c05158a=\"\">EN</a>\n          <a href=\"#\" @click.prevent=\"setLanguage('fr')\" class=\"{{ language === 'fr' ? 'is-active' : '' }}\" _v-5c05158a=\"\">FR</a>\n        </div>\n      </div>\n    </div>\n  </div>\n  <site-footer _v-5c05158a=\"\"></site-footer>\n</div>\n";
 
-/***/ }),
+/***/ },
 /* 30 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
@@ -17451,7 +17443,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-14c503e8/SectionContact.vue"
+	  var id = "_v-7192af5d/SectionContact.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -17459,9 +17451,9 @@
 	  }
 	})()}
 
-/***/ }),
+/***/ },
 /* 31 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
@@ -17475,8 +17467,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-14c503e8&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionContact.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-14c503e8&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionContact.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7192af5d&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionContact.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7192af5d&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionContact.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -17485,23 +17477,23 @@
 		module.hot.dispose(function() { update(); });
 	}
 
-/***/ }),
+/***/ },
 /* 32 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(11)();
 	// imports
 
 
 	// module
-	exports.push([module.id, ".contact-form[_v-14c503e8] {\n  -ms-flex-align: center;\n      align-items: center;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  -ms-flex-pack: center;\n      justify-content: center;\n  max-width: 80%;\n  min-height: 40rem;\n  width: 60rem; }\n\ninput.contact-form__input--text[_v-14c503e8] {\n  background-color: transparent;\n  border: none;\n  border-bottom: 1px solid rgba(193, 193, 193, 0.333);\n  color: #000000;\n  display: block;\n  font-size: 1.2rem;\n  height: 4rem;\n  line-height: 1;\n  margin-top: 2.5rem;\n  padding: 0;\n  transition: all 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);\n  -webkit-user-select: auto;\n     -moz-user-select: auto;\n      -ms-user-select: auto;\n          user-select: auto;\n  width: 100%; }\n  input.contact-form__input--text[_v-14c503e8]:focus {\n    border-color: #000000;\n    box-shadow: none;\n    outline: none; }\n  input.contact-form__input--text.validation-failed[_v-14c503e8]::-webkit-input-placeholder {\n    color: #000000; }\n  input.contact-form__input--text.validation-failed[_v-14c503e8]:-moz-placeholder {\n    color: #000000; }\n\ninput.contact-form__input--btn[_v-14c503e8],\nbutton.contact-form__input--btn[_v-14c503e8] {\n  background: transparent;\n  border: 1px solid rgba(193, 193, 193, 0.333);\n  border-radius: 0;\n  color: #000000;\n  display: block;\n  font-size: 1.4rem;\n  height: 5rem;\n  line-height: 5rem;\n  margin-left: auto;\n  margin-right: auto;\n  text-decoration: none;\n  text-transform: uppercase;\n  transition: border-color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);\n  width: 90%;\n  margin: 5rem auto;\n  max-width: 100%;\n  width: 100%; }\n  input.contact-form__input--btn[_v-14c503e8]:hover, input.contact-form__input--btn[_v-14c503e8]:focus,\n  button.contact-form__input--btn[_v-14c503e8]:hover,\n  button.contact-form__input--btn[_v-14c503e8]:focus {\n    border-color: #000000;\n    box-shadow: none;\n    outline: none; }\n  input.contact-form__input--btn[disabled][_v-14c503e8], input.contact-form__input--btn.is-disabled[_v-14c503e8],\n  button.contact-form__input--btn[disabled][_v-14c503e8],\n  button.contact-form__input--btn.is-disabled[_v-14c503e8] {\n    border-color: #c1c1c1;\n    color: #c1c1c1; }\n    input.contact-form__input--btn[disabled][_v-14c503e8]:hover, input.contact-form__input--btn.is-disabled[_v-14c503e8]:hover,\n    button.contact-form__input--btn[disabled][_v-14c503e8]:hover,\n    button.contact-form__input--btn.is-disabled[_v-14c503e8]:hover {\n      border-color: #c1c1c1;\n      color: #c1c1c1; }\n  @media screen and (min-width: 768px) {\n    input.contact-form__input--btn[_v-14c503e8],\n    button.contact-form__input--btn[_v-14c503e8] {\n      max-width: 20rem; } }\n  @media screen and (min-width: 768px) {\n    input.contact-form__input--btn[_v-14c503e8],\n    button.contact-form__input--btn[_v-14c503e8] {\n      margin: 5rem auto 0 auto;\n      max-width: 100%;\n      width: 100%; } }\n", ""]);
+	exports.push([module.id, ".contact-form[_v-7192af5d] {\n  -ms-flex-align: center;\n      align-items: center;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  -ms-flex-pack: center;\n      justify-content: center;\n  max-width: 80%;\n  min-height: 40rem;\n  width: 60rem; }\n\ninput.contact-form__input--text[_v-7192af5d] {\n  background-color: transparent;\n  border: none;\n  border-bottom: 1px solid rgba(193, 193, 193, 0.333);\n  color: #000000;\n  display: block;\n  font-size: 1.2rem;\n  height: 4rem;\n  line-height: 1;\n  margin-top: 2.5rem;\n  padding: 0;\n  transition: all 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);\n  -webkit-user-select: auto;\n     -moz-user-select: auto;\n      -ms-user-select: auto;\n          user-select: auto;\n  width: 100%; }\n  input.contact-form__input--text[_v-7192af5d]:focus {\n    border-color: #000000;\n    box-shadow: none;\n    outline: none; }\n  input.contact-form__input--text.validation-failed[_v-7192af5d]::-webkit-input-placeholder {\n    color: #000000; }\n  input.contact-form__input--text.validation-failed[_v-7192af5d]:-moz-placeholder {\n    color: #000000; }\n\ninput.contact-form__input--btn[_v-7192af5d],\nbutton.contact-form__input--btn[_v-7192af5d] {\n  background: transparent;\n  border: 1px solid rgba(193, 193, 193, 0.333);\n  border-radius: 0;\n  color: #000000;\n  display: block;\n  font-size: 1.4rem;\n  height: 5rem;\n  line-height: 5rem;\n  margin-left: auto;\n  margin-right: auto;\n  text-decoration: none;\n  text-transform: uppercase;\n  transition: border-color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);\n  width: 90%;\n  margin: 5rem auto;\n  max-width: 100%;\n  width: 100%; }\n  input.contact-form__input--btn[_v-7192af5d]:hover, input.contact-form__input--btn[_v-7192af5d]:focus,\n  button.contact-form__input--btn[_v-7192af5d]:hover,\n  button.contact-form__input--btn[_v-7192af5d]:focus {\n    border-color: #000000;\n    box-shadow: none;\n    outline: none; }\n  input.contact-form__input--btn[disabled][_v-7192af5d], input.contact-form__input--btn.is-disabled[_v-7192af5d],\n  button.contact-form__input--btn[disabled][_v-7192af5d],\n  button.contact-form__input--btn.is-disabled[_v-7192af5d] {\n    border-color: #c1c1c1;\n    color: #c1c1c1; }\n    input.contact-form__input--btn[disabled][_v-7192af5d]:hover, input.contact-form__input--btn.is-disabled[_v-7192af5d]:hover,\n    button.contact-form__input--btn[disabled][_v-7192af5d]:hover,\n    button.contact-form__input--btn.is-disabled[_v-7192af5d]:hover {\n      border-color: #c1c1c1;\n      color: #c1c1c1; }\n  @media screen and (min-width: 768px) {\n    input.contact-form__input--btn[_v-7192af5d],\n    button.contact-form__input--btn[_v-7192af5d] {\n      max-width: 20rem; } }\n  @media screen and (min-width: 768px) {\n    input.contact-form__input--btn[_v-7192af5d],\n    button.contact-form__input--btn[_v-7192af5d] {\n      margin: 5rem auto 0 auto;\n      max-width: 100%;\n      width: 100%; } }\n", ""]);
 
 	// exports
 
 
-/***/ }),
+/***/ },
 /* 33 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -17635,299 +17627,280 @@
 	  }
 	};
 
-/***/ }),
+/***/ },
 /* 34 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	module.exports = { "default": __webpack_require__(35), __esModule: true };
 
-/***/ }),
+/***/ },
 /* 35 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
-	var core = __webpack_require__(36);
-	var $JSON = core.JSON || (core.JSON = { stringify: JSON.stringify });
-	module.exports = function stringify(it) { // eslint-disable-line no-unused-vars
+	var core  = __webpack_require__(36)
+	  , $JSON = core.JSON || (core.JSON = {stringify: JSON.stringify});
+	module.exports = function stringify(it){ // eslint-disable-line no-unused-vars
 	  return $JSON.stringify.apply($JSON, arguments);
 	};
 
-
-/***/ }),
+/***/ },
 /* 36 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
-	var core = module.exports = { version: '2.5.1' };
-	if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
+	var core = module.exports = {version: '2.4.0'};
+	if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
 
-
-/***/ }),
+/***/ },
 /* 37 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	module.exports = { "default": __webpack_require__(38), __esModule: true };
 
-/***/ }),
+/***/ },
 /* 38 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(39);
 	module.exports = __webpack_require__(36).Object.freeze;
 
-
-/***/ }),
+/***/ },
 /* 39 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.5 Object.freeze(O)
-	var isObject = __webpack_require__(40);
-	var meta = __webpack_require__(41).onFreeze;
+	var isObject = __webpack_require__(40)
+	  , meta     = __webpack_require__(41).onFreeze;
 
-	__webpack_require__(52)('freeze', function ($freeze) {
-	  return function freeze(it) {
+	__webpack_require__(52)('freeze', function($freeze){
+	  return function freeze(it){
 	    return $freeze && isObject(it) ? $freeze(meta(it)) : it;
 	  };
 	});
 
-
-/***/ }),
+/***/ },
 /* 40 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
-	module.exports = function (it) {
+	module.exports = function(it){
 	  return typeof it === 'object' ? it !== null : typeof it === 'function';
 	};
 
-
-/***/ }),
+/***/ },
 /* 41 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
-	var META = __webpack_require__(42)('meta');
-	var isObject = __webpack_require__(40);
-	var has = __webpack_require__(43);
-	var setDesc = __webpack_require__(44).f;
-	var id = 0;
-	var isExtensible = Object.isExtensible || function () {
+	var META     = __webpack_require__(42)('meta')
+	  , isObject = __webpack_require__(40)
+	  , has      = __webpack_require__(43)
+	  , setDesc  = __webpack_require__(44).f
+	  , id       = 0;
+	var isExtensible = Object.isExtensible || function(){
 	  return true;
 	};
-	var FREEZE = !__webpack_require__(48)(function () {
+	var FREEZE = !__webpack_require__(48)(function(){
 	  return isExtensible(Object.preventExtensions({}));
 	});
-	var setMeta = function (it) {
-	  setDesc(it, META, { value: {
+	var setMeta = function(it){
+	  setDesc(it, META, {value: {
 	    i: 'O' + ++id, // object ID
 	    w: {}          // weak collections IDs
-	  } });
+	  }});
 	};
-	var fastKey = function (it, create) {
+	var fastKey = function(it, create){
 	  // return primitive with prefix
-	  if (!isObject(it)) return typeof it == 'symbol' ? it : (typeof it == 'string' ? 'S' : 'P') + it;
-	  if (!has(it, META)) {
+	  if(!isObject(it))return typeof it == 'symbol' ? it : (typeof it == 'string' ? 'S' : 'P') + it;
+	  if(!has(it, META)){
 	    // can't set metadata to uncaught frozen object
-	    if (!isExtensible(it)) return 'F';
+	    if(!isExtensible(it))return 'F';
 	    // not necessary to add metadata
-	    if (!create) return 'E';
+	    if(!create)return 'E';
 	    // add missing metadata
 	    setMeta(it);
 	  // return object ID
 	  } return it[META].i;
 	};
-	var getWeak = function (it, create) {
-	  if (!has(it, META)) {
+	var getWeak = function(it, create){
+	  if(!has(it, META)){
 	    // can't set metadata to uncaught frozen object
-	    if (!isExtensible(it)) return true;
+	    if(!isExtensible(it))return true;
 	    // not necessary to add metadata
-	    if (!create) return false;
+	    if(!create)return false;
 	    // add missing metadata
 	    setMeta(it);
 	  // return hash weak collections IDs
 	  } return it[META].w;
 	};
 	// add metadata on freeze-family methods calling
-	var onFreeze = function (it) {
-	  if (FREEZE && meta.NEED && isExtensible(it) && !has(it, META)) setMeta(it);
+	var onFreeze = function(it){
+	  if(FREEZE && meta.NEED && isExtensible(it) && !has(it, META))setMeta(it);
 	  return it;
 	};
 	var meta = module.exports = {
-	  KEY: META,
-	  NEED: false,
-	  fastKey: fastKey,
-	  getWeak: getWeak,
+	  KEY:      META,
+	  NEED:     false,
+	  fastKey:  fastKey,
+	  getWeak:  getWeak,
 	  onFreeze: onFreeze
 	};
 
-
-/***/ }),
+/***/ },
 /* 42 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
-	var id = 0;
-	var px = Math.random();
-	module.exports = function (key) {
+	var id = 0
+	  , px = Math.random();
+	module.exports = function(key){
 	  return 'Symbol('.concat(key === undefined ? '' : key, ')_', (++id + px).toString(36));
 	};
 
-
-/***/ }),
+/***/ },
 /* 43 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	var hasOwnProperty = {}.hasOwnProperty;
-	module.exports = function (it, key) {
+	module.exports = function(it, key){
 	  return hasOwnProperty.call(it, key);
 	};
 
-
-/***/ }),
+/***/ },
 /* 44 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
-	var anObject = __webpack_require__(45);
-	var IE8_DOM_DEFINE = __webpack_require__(46);
-	var toPrimitive = __webpack_require__(51);
-	var dP = Object.defineProperty;
+	var anObject       = __webpack_require__(45)
+	  , IE8_DOM_DEFINE = __webpack_require__(46)
+	  , toPrimitive    = __webpack_require__(51)
+	  , dP             = Object.defineProperty;
 
-	exports.f = __webpack_require__(47) ? Object.defineProperty : function defineProperty(O, P, Attributes) {
+	exports.f = __webpack_require__(47) ? Object.defineProperty : function defineProperty(O, P, Attributes){
 	  anObject(O);
 	  P = toPrimitive(P, true);
 	  anObject(Attributes);
-	  if (IE8_DOM_DEFINE) try {
+	  if(IE8_DOM_DEFINE)try {
 	    return dP(O, P, Attributes);
-	  } catch (e) { /* empty */ }
-	  if ('get' in Attributes || 'set' in Attributes) throw TypeError('Accessors not supported!');
-	  if ('value' in Attributes) O[P] = Attributes.value;
+	  } catch(e){ /* empty */ }
+	  if('get' in Attributes || 'set' in Attributes)throw TypeError('Accessors not supported!');
+	  if('value' in Attributes)O[P] = Attributes.value;
 	  return O;
 	};
 
-
-/***/ }),
+/***/ },
 /* 45 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var isObject = __webpack_require__(40);
-	module.exports = function (it) {
-	  if (!isObject(it)) throw TypeError(it + ' is not an object!');
+	module.exports = function(it){
+	  if(!isObject(it))throw TypeError(it + ' is not an object!');
 	  return it;
 	};
 
-
-/***/ }),
+/***/ },
 /* 46 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = !__webpack_require__(47) && !__webpack_require__(48)(function () {
-	  return Object.defineProperty(__webpack_require__(49)('div'), 'a', { get: function () { return 7; } }).a != 7;
+	module.exports = !__webpack_require__(47) && !__webpack_require__(48)(function(){
+	  return Object.defineProperty(__webpack_require__(49)('div'), 'a', {get: function(){ return 7; }}).a != 7;
 	});
 
-
-/***/ }),
+/***/ },
 /* 47 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// Thank's IE8 for his funny defineProperty
-	module.exports = !__webpack_require__(48)(function () {
-	  return Object.defineProperty({}, 'a', { get: function () { return 7; } }).a != 7;
+	module.exports = !__webpack_require__(48)(function(){
+	  return Object.defineProperty({}, 'a', {get: function(){ return 7; }}).a != 7;
 	});
 
-
-/***/ }),
+/***/ },
 /* 48 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
-	module.exports = function (exec) {
+	module.exports = function(exec){
 	  try {
 	    return !!exec();
-	  } catch (e) {
+	  } catch(e){
 	    return true;
 	  }
 	};
 
-
-/***/ }),
+/***/ },
 /* 49 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
-	var isObject = __webpack_require__(40);
-	var document = __webpack_require__(50).document;
-	// typeof document.createElement is 'object' in old IE
-	var is = isObject(document) && isObject(document.createElement);
-	module.exports = function (it) {
+	var isObject = __webpack_require__(40)
+	  , document = __webpack_require__(50).document
+	  // in old IE typeof document.createElement is 'object'
+	  , is = isObject(document) && isObject(document.createElement);
+	module.exports = function(it){
 	  return is ? document.createElement(it) : {};
 	};
 
-
-/***/ }),
+/***/ },
 /* 50 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
 	var global = module.exports = typeof window != 'undefined' && window.Math == Math
-	  ? window : typeof self != 'undefined' && self.Math == Math ? self
-	  // eslint-disable-next-line no-new-func
-	  : Function('return this')();
-	if (typeof __g == 'number') __g = global; // eslint-disable-line no-undef
+	  ? window : typeof self != 'undefined' && self.Math == Math ? self : Function('return this')();
+	if(typeof __g == 'number')__g = global; // eslint-disable-line no-undef
 
-
-/***/ }),
+/***/ },
 /* 51 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// 7.1.1 ToPrimitive(input [, PreferredType])
 	var isObject = __webpack_require__(40);
 	// instead of the ES6 spec version, we didn't implement @@toPrimitive case
 	// and the second argument - flag - preferred type is a string
-	module.exports = function (it, S) {
-	  if (!isObject(it)) return it;
+	module.exports = function(it, S){
+	  if(!isObject(it))return it;
 	  var fn, val;
-	  if (S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it))) return val;
-	  if (typeof (fn = it.valueOf) == 'function' && !isObject(val = fn.call(it))) return val;
-	  if (!S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it))) return val;
+	  if(S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it)))return val;
+	  if(typeof (fn = it.valueOf) == 'function' && !isObject(val = fn.call(it)))return val;
+	  if(!S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it)))return val;
 	  throw TypeError("Can't convert object to primitive value");
 	};
 
-
-/***/ }),
+/***/ },
 /* 52 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// most Object methods by ES6 should accept primitives
-	var $export = __webpack_require__(53);
-	var core = __webpack_require__(36);
-	var fails = __webpack_require__(48);
-	module.exports = function (KEY, exec) {
-	  var fn = (core.Object || {})[KEY] || Object[KEY];
-	  var exp = {};
+	var $export = __webpack_require__(53)
+	  , core    = __webpack_require__(36)
+	  , fails   = __webpack_require__(48);
+	module.exports = function(KEY, exec){
+	  var fn  = (core.Object || {})[KEY] || Object[KEY]
+	    , exp = {};
 	  exp[KEY] = exec(fn);
-	  $export($export.S + $export.F * fails(function () { fn(1); }), 'Object', exp);
+	  $export($export.S + $export.F * fails(function(){ fn(1); }), 'Object', exp);
 	};
 
-
-/***/ }),
+/***/ },
 /* 53 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
-	var global = __webpack_require__(50);
-	var core = __webpack_require__(36);
-	var ctx = __webpack_require__(54);
-	var hide = __webpack_require__(56);
-	var PROTOTYPE = 'prototype';
+	var global    = __webpack_require__(50)
+	  , core      = __webpack_require__(36)
+	  , ctx       = __webpack_require__(54)
+	  , hide      = __webpack_require__(56)
+	  , PROTOTYPE = 'prototype';
 
-	var $export = function (type, name, source) {
-	  var IS_FORCED = type & $export.F;
-	  var IS_GLOBAL = type & $export.G;
-	  var IS_STATIC = type & $export.S;
-	  var IS_PROTO = type & $export.P;
-	  var IS_BIND = type & $export.B;
-	  var IS_WRAP = type & $export.W;
-	  var exports = IS_GLOBAL ? core : core[name] || (core[name] = {});
-	  var expProto = exports[PROTOTYPE];
-	  var target = IS_GLOBAL ? global : IS_STATIC ? global[name] : (global[name] || {})[PROTOTYPE];
-	  var key, own, out;
-	  if (IS_GLOBAL) source = name;
-	  for (key in source) {
+	var $export = function(type, name, source){
+	  var IS_FORCED = type & $export.F
+	    , IS_GLOBAL = type & $export.G
+	    , IS_STATIC = type & $export.S
+	    , IS_PROTO  = type & $export.P
+	    , IS_BIND   = type & $export.B
+	    , IS_WRAP   = type & $export.W
+	    , exports   = IS_GLOBAL ? core : core[name] || (core[name] = {})
+	    , expProto  = exports[PROTOTYPE]
+	    , target    = IS_GLOBAL ? global : IS_STATIC ? global[name] : (global[name] || {})[PROTOTYPE]
+	    , key, own, out;
+	  if(IS_GLOBAL)source = name;
+	  for(key in source){
 	    // contains in native
 	    own = !IS_FORCED && target && target[key] !== undefined;
-	    if (own && key in exports) continue;
+	    if(own && key in exports)continue;
 	    // export native or passed
 	    out = own ? target[key] : source[key];
 	    // prevent global pollution for namespaces
@@ -17935,11 +17908,11 @@
 	    // bind timers to global for call from export context
 	    : IS_BIND && own ? ctx(out, global)
 	    // wrap global constructors for prevent change them in library
-	    : IS_WRAP && target[key] == out ? (function (C) {
-	      var F = function (a, b, c) {
-	        if (this instanceof C) {
-	          switch (arguments.length) {
-	            case 0: return new C();
+	    : IS_WRAP && target[key] == out ? (function(C){
+	      var F = function(a, b, c){
+	        if(this instanceof C){
+	          switch(arguments.length){
+	            case 0: return new C;
 	            case 1: return new C(a);
 	            case 2: return new C(a, b);
 	          } return new C(a, b, c);
@@ -17950,10 +17923,10 @@
 	    // make static versions for prototype methods
 	    })(out) : IS_PROTO && typeof out == 'function' ? ctx(Function.call, out) : out;
 	    // export proto methods to core.%CONSTRUCTOR%.methods.%NAME%
-	    if (IS_PROTO) {
+	    if(IS_PROTO){
 	      (exports.virtual || (exports.virtual = {}))[key] = out;
 	      // export proto methods to core.%CONSTRUCTOR%.prototype.%NAME%
-	      if (type & $export.R && expProto && !expProto[key]) hide(expProto, key, out);
+	      if(type & $export.R && expProto && !expProto[key])hide(expProto, key, out);
 	    }
 	  }
 	};
@@ -17965,77 +17938,72 @@
 	$export.B = 16;  // bind
 	$export.W = 32;  // wrap
 	$export.U = 64;  // safe
-	$export.R = 128; // real proto method for `library`
+	$export.R = 128; // real proto method for `library` 
 	module.exports = $export;
 
-
-/***/ }),
+/***/ },
 /* 54 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// optional / simple context binding
 	var aFunction = __webpack_require__(55);
-	module.exports = function (fn, that, length) {
+	module.exports = function(fn, that, length){
 	  aFunction(fn);
-	  if (that === undefined) return fn;
-	  switch (length) {
-	    case 1: return function (a) {
+	  if(that === undefined)return fn;
+	  switch(length){
+	    case 1: return function(a){
 	      return fn.call(that, a);
 	    };
-	    case 2: return function (a, b) {
+	    case 2: return function(a, b){
 	      return fn.call(that, a, b);
 	    };
-	    case 3: return function (a, b, c) {
+	    case 3: return function(a, b, c){
 	      return fn.call(that, a, b, c);
 	    };
 	  }
-	  return function (/* ...args */) {
+	  return function(/* ...args */){
 	    return fn.apply(that, arguments);
 	  };
 	};
 
-
-/***/ }),
+/***/ },
 /* 55 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
-	module.exports = function (it) {
-	  if (typeof it != 'function') throw TypeError(it + ' is not a function!');
+	module.exports = function(it){
+	  if(typeof it != 'function')throw TypeError(it + ' is not a function!');
 	  return it;
 	};
 
-
-/***/ }),
+/***/ },
 /* 56 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
-	var dP = __webpack_require__(44);
-	var createDesc = __webpack_require__(57);
-	module.exports = __webpack_require__(47) ? function (object, key, value) {
+	var dP         = __webpack_require__(44)
+	  , createDesc = __webpack_require__(57);
+	module.exports = __webpack_require__(47) ? function(object, key, value){
 	  return dP.f(object, key, createDesc(1, value));
-	} : function (object, key, value) {
+	} : function(object, key, value){
 	  object[key] = value;
 	  return object;
 	};
 
-
-/***/ }),
+/***/ },
 /* 57 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
-	module.exports = function (bitmap, value) {
+	module.exports = function(bitmap, value){
 	  return {
-	    enumerable: !(bitmap & 1),
+	    enumerable  : !(bitmap & 1),
 	    configurable: !(bitmap & 2),
-	    writable: !(bitmap & 4),
-	    value: value
+	    writable    : !(bitmap & 4),
+	    value       : value
 	  };
 	};
 
-
-/***/ }),
+/***/ },
 /* 58 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	(function(self) {
 	  'use strict';
@@ -18505,9 +18473,9 @@
 	})(typeof self !== 'undefined' ? self : this);
 
 
-/***/ }),
+/***/ },
 /* 59 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(global, module) {/**
 	 * @license
@@ -35596,9 +35564,9 @@
 
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(60)(module)))
 
-/***/ }),
+/***/ },
 /* 60 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	module.exports = function(module) {
 		if(!module.webpackPolyfill) {
@@ -35612,9 +35580,9 @@
 	}
 
 
-/***/ }),
+/***/ },
 /* 61 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	'use strict';
 
@@ -35654,15 +35622,15 @@
 	  );
 	}
 
-/***/ }),
+/***/ },
 /* 62 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"single-page\" _v-14c503e8=\"\">\n  <div class=\"single-page__content\" _v-14c503e8=\"\">\n    <form action=\"//formspree.io/{{ recipientEmail }}\" method=\"POST\" class=\"contact-form\" _v-14c503e8=\"\">\n      <input type=\"hidden\" name=\"_next\" value=\"/contact/thanks\" _v-14c503e8=\"\">\n      <input type=\"hidden\" name=\"_format\" value=\"plain\" _v-14c503e8=\"\">\n      <input class=\"contact-form__input--text\" autocomplete=\"off\" autocapitalize=\"on\" type=\"text\" name=\"name\" id=\"name\" placeholder=\"NAME\" required=\"\" _v-14c503e8=\"\">\n      <input class=\"contact-form__input--text\" autocomplete=\"off\" autocapitalize=\"off\" type=\"email\" name=\"_replyto\" id=\"_replyto\" placeholder=\"EMAIL ADDRESS\" required=\"\" _v-14c503e8=\"\">\n      <input class=\"contact-form__input--text\" autocomplete=\"off\" autocapitalize=\"on\" type=\"text\" name=\"subject\" id=\"subject\" placeholder=\"INQUIRY SUBJECT\" _v-14c503e8=\"\">\n      <input class=\"contact-form__input--text\" autocomplete=\"off\" autocapitalize=\"on\" type=\"text\" name=\"message\" id=\"message\" placeholder=\"MESSAGE\" required=\"\" _v-14c503e8=\"\">\n      <input type=\"text\" name=\"_gotcha\" style=\"display: none;\" _v-14c503e8=\"\">\n      <input id=\"btn-submit\" type=\"submit\" value=\"Submit\" class=\"contact-form__input--btn\" @click.prevent=\"submitForm\" _v-14c503e8=\"\">\n    </form>\n  </div>\n  <site-footer _v-14c503e8=\"\"></site-footer>\n</div>\n";
+	module.exports = "\n<div class=\"single-page\" _v-7192af5d=\"\">\n  <div class=\"single-page__content\" _v-7192af5d=\"\">\n    <form action=\"//formspree.io/{{ recipientEmail }}\" method=\"POST\" class=\"contact-form\" _v-7192af5d=\"\">\n      <input type=\"hidden\" name=\"_next\" value=\"/contact/thanks\" _v-7192af5d=\"\">\n      <input type=\"hidden\" name=\"_format\" value=\"plain\" _v-7192af5d=\"\">\n      <input class=\"contact-form__input--text\" autocomplete=\"off\" autocapitalize=\"on\" type=\"text\" name=\"name\" id=\"name\" placeholder=\"NAME\" required=\"\" _v-7192af5d=\"\">\n      <input class=\"contact-form__input--text\" autocomplete=\"off\" autocapitalize=\"off\" type=\"email\" name=\"_replyto\" id=\"_replyto\" placeholder=\"EMAIL ADDRESS\" required=\"\" _v-7192af5d=\"\">\n      <input class=\"contact-form__input--text\" autocomplete=\"off\" autocapitalize=\"on\" type=\"text\" name=\"subject\" id=\"subject\" placeholder=\"INQUIRY SUBJECT\" _v-7192af5d=\"\">\n      <input class=\"contact-form__input--text\" autocomplete=\"off\" autocapitalize=\"on\" type=\"text\" name=\"message\" id=\"message\" placeholder=\"MESSAGE\" required=\"\" _v-7192af5d=\"\">\n      <input type=\"text\" name=\"_gotcha\" style=\"display: none;\" _v-7192af5d=\"\">\n      <input id=\"btn-submit\" type=\"submit\" value=\"Submit\" class=\"contact-form__input--btn\" @click.prevent=\"submitForm\" _v-7192af5d=\"\">\n    </form>\n  </div>\n  <site-footer _v-7192af5d=\"\"></site-footer>\n</div>\n";
 
-/***/ }),
+/***/ },
 /* 63 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
@@ -35686,7 +35654,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-34eb1e72/SectionHome.vue"
+	  var id = "_v-2a908172/SectionHome.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -35694,9 +35662,9 @@
 	  }
 	})()}
 
-/***/ }),
+/***/ },
 /* 64 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
@@ -35710,8 +35678,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-34eb1e72&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionHome.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-34eb1e72&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionHome.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2a908172&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionHome.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2a908172&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionHome.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -35720,23 +35688,23 @@
 		module.hot.dispose(function() { update(); });
 	}
 
-/***/ }),
+/***/ },
 /* 65 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(11)();
 	// imports
 
 
 	// module
-	exports.push([module.id, ".the-scent[_v-34eb1e72] {\n  -ms-flex-align: center;\n      align-items: center;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  height: 100%;\n  -ms-flex-pack: center;\n      justify-content: center;\n  -ms-transform: translateY(1%);\n      transform: translateY(1%); }\n  .is-mobile .the-scent[_v-34eb1e72] {\n    height: auto;\n    position: relative;\n    min-height: 100vh; }\n\n.the-scent__title[_v-34eb1e72] {\n  font-family: \"brown-std\", \"Helvetica Neue\", Helvetica, sans-serif;\n  font-size: 1.4rem;\n  line-height: 1.2858;\n  margin-bottom: 4rem;\n  text-transform: uppercase; }\n  .shade--dark .the-scent__title[_v-34eb1e72] {\n    color: #ffffff; }\n  .shade--light .the-scent__title[_v-34eb1e72] {\n    color: #000000; }\n\n.the-scent__desc[_v-34eb1e72] {\n  font-family: \"sabon-roman\", serif;\n  font-size: 1.8rem;\n  line-height: 1.34375;\n  text-align: center;\n  transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .shade--dark .the-scent__desc[_v-34eb1e72] {\n    color: #ffffff; }\n  .shade--light .the-scent__desc[_v-34eb1e72] {\n    color: #000000; }\n  @media screen and (min-width: 768px) {\n    .the-scent__desc[_v-34eb1e72] {\n      font-size: 3.2rem; } }\n\n.aromatic[_v-34eb1e72] {\n  cursor: pointer;\n  font-family: \"sabon-italic\", serif;\n  color: rgba(0, 0, 0, 0.5); }\n  .shade--dark .aromatic[_v-34eb1e72] {\n    color: rgba(255, 255, 255, 0.5); }\n  .shade--white .aromatic[_v-34eb1e72] {\n    color: rgba(0, 0, 0, 0.5); }\n  .aromatic[_v-34eb1e72]:hover, .aromatic.is-active[_v-34eb1e72] {\n    color: rgba(0, 0, 0, 0.8);\n    transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .shade--dark .aromatic[_v-34eb1e72]:hover,\n  .shade--dark .aromatic.is-active[_v-34eb1e72] {\n    color: rgba(255, 255, 255, 0.8); }\n  .shade--light .aromatic[_v-34eb1e72]:hover,\n  .shade--light .aromatic.is-active[_v-34eb1e72] {\n    color: rgba(0, 0, 0, 0.8); }\n\n.translations-wrapper[_v-34eb1e72] {\n  -ms-flex-align: center;\n      align-items: center;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  height: 100%;\n  -ms-flex-pack: center;\n      justify-content: center; }\n  .is-mobile .translations-wrapper[_v-34eb1e72] {\n    height: 100vh; }\n\n.translations-list[_v-34eb1e72] {\n  font-family: \"sabon-roman\", serif;\n  font-size: 1.2rem;\n  line-height: 2.75;\n  text-align: center;\n  text-transform: uppercase; }\n\n.diaryfeed[_v-34eb1e72] {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  height: 100%;\n  -ms-flex-pack: center;\n      justify-content: center; }\n\n.slide__products[_v-34eb1e72] {\n  -ms-flex-align: center;\n      align-items: center;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n  -ms-flex-pack: center;\n      justify-content: center;\n  margin-bottom: 2.5rem; }\n\n.slide__product[_v-34eb1e72] {\n  width: 50%;\n  padding: 1.5rem; }\n  .slide__product img + .slide__product__btn[_v-34eb1e72] {\n    margin-top: 1rem;\n    text-decoration: none; }\n  @media screen and (min-width: 620px) {\n    .slide__product[_v-34eb1e72] {\n      padding: 6rem; } }\n  @media screen and (min-width: 768px) {\n    .slide__product[_v-34eb1e72] {\n      padding: 1rem;\n      width: 25%; } }\n\n.slide__product__btn[_v-34eb1e72] {\n  cursor: pointer;\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n  background: #ffffff;\n  border: 1px solid #c1c1c1;\n  box-shadow: none;\n  display: block;\n  font-size: 1.2rem;\n  margin: 0 auto;\n  padding: 1rem;\n  text-transform: uppercase;\n  transition: border-color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  width: 80%;\n  text-align: center; }\n  .slide__product__btn[_v-34eb1e72]:hover, .slide__product__btn[_v-34eb1e72]:focus {\n    outline: none; }\n  .slide__product:hover > .slide__product__btn[_v-34eb1e72] {\n    border-color: #000000; }\n  @media screen and (min-width: 768px) {\n    .slide__product__btn[_v-34eb1e72] {\n      font-size: 1.4rem; } }\n\n.slide__product__btn-buy[_v-34eb1e72], a.slide__product__btn-buy[_v-34eb1e72] {\n  margin: 0 auto 0; }\n", ""]);
+	exports.push([module.id, ".the-scent[_v-2a908172] {\n  -ms-flex-align: center;\n      align-items: center;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  height: 100%;\n  -ms-flex-pack: center;\n      justify-content: center;\n  -ms-transform: translateY(1%);\n      transform: translateY(1%); }\n  .is-mobile .the-scent[_v-2a908172] {\n    height: auto;\n    position: relative;\n    min-height: 100vh; }\n\n.the-scent__title[_v-2a908172] {\n  font-family: \"brown-std\", \"Helvetica Neue\", Helvetica, sans-serif;\n  font-size: 1.4rem;\n  line-height: 1.2858;\n  margin-bottom: 4rem;\n  text-transform: uppercase; }\n  .shade--dark .the-scent__title[_v-2a908172] {\n    color: #ffffff; }\n  .shade--light .the-scent__title[_v-2a908172] {\n    color: #000000; }\n\n.the-scent__desc[_v-2a908172] {\n  font-family: \"sabon-roman\", serif;\n  font-size: 1.8rem;\n  line-height: 1.34375;\n  text-align: center;\n  transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .shade--dark .the-scent__desc[_v-2a908172] {\n    color: #ffffff; }\n  .shade--light .the-scent__desc[_v-2a908172] {\n    color: #000000; }\n  @media screen and (min-width: 768px) {\n    .the-scent__desc[_v-2a908172] {\n      font-size: 3.2rem; } }\n\n.aromatic[_v-2a908172] {\n  cursor: pointer;\n  font-family: \"sabon-italic\", serif;\n  color: rgba(0, 0, 0, 0.5); }\n  .shade--dark .aromatic[_v-2a908172] {\n    color: rgba(255, 255, 255, 0.5); }\n  .shade--white .aromatic[_v-2a908172] {\n    color: rgba(0, 0, 0, 0.5); }\n  .aromatic[_v-2a908172]:hover, .aromatic.is-active[_v-2a908172] {\n    color: rgba(0, 0, 0, 0.8);\n    transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .shade--dark .aromatic[_v-2a908172]:hover,\n  .shade--dark .aromatic.is-active[_v-2a908172] {\n    color: rgba(255, 255, 255, 0.8); }\n  .shade--light .aromatic[_v-2a908172]:hover,\n  .shade--light .aromatic.is-active[_v-2a908172] {\n    color: rgba(0, 0, 0, 0.8); }\n\n.translations-wrapper[_v-2a908172] {\n  -ms-flex-align: center;\n      align-items: center;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  height: 100%;\n  -ms-flex-pack: center;\n      justify-content: center; }\n  .is-mobile .translations-wrapper[_v-2a908172] {\n    height: 100vh; }\n\n.translations-list[_v-2a908172] {\n  font-family: \"sabon-roman\", serif;\n  font-size: 1.2rem;\n  line-height: 2.75;\n  text-align: center;\n  text-transform: uppercase; }\n\n.diaryfeed[_v-2a908172] {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  height: 100%;\n  -ms-flex-pack: center;\n      justify-content: center; }\n\n.slide__products[_v-2a908172] {\n  -ms-flex-align: center;\n      align-items: center;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n  -ms-flex-pack: center;\n      justify-content: center;\n  margin-bottom: 2.5rem; }\n\n.slide__product__featured[_v-2a908172] {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: row;\n      flex-direction: row;\n  -ms-flex-align: center;\n      align-items: center;\n  -ms-flex-pack: center;\n      justify-content: center; }\n\n.slide__product[_v-2a908172] {\n  width: 50%;\n  padding: 1.5rem; }\n  .slide__product .slide__product__btn[_v-2a908172] {\n    margin-top: 1rem;\n    text-decoration: none; }\n  @media screen and (min-width: 620px) {\n    .slide__product[_v-2a908172] {\n      padding: 6rem; } }\n  @media screen and (min-width: 768px) {\n    .slide__product[_v-2a908172] {\n      padding: 1rem;\n      width: 25%; } }\n\n.slide__product__btn[_v-2a908172] {\n  cursor: pointer;\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n  background: transparent;\n  border: 0px;\n  box-shadow: none;\n  display: block;\n  font-size: 1.2rem;\n  margin: 0 auto;\n  padding: 1rem;\n  text-transform: uppercase;\n  transition: border-color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  width: 80%;\n  text-align: center; }\n  .slide__product__btn[_v-2a908172]:hover, .slide__product__btn[_v-2a908172]:focus {\n    outline: none;\n    color: #000; }\n  .slide__product:hover > .slide__product__btn[_v-2a908172] {\n    border-color: #000000; }\n  @media screen and (min-width: 768px) {\n    .slide__product__btn[_v-2a908172] {\n      font-size: 1.4rem; } }\n\n.slide__product__btn-buy[_v-2a908172], a.slide__product__btn-buy[_v-2a908172] {\n  margin: 0 auto 0; }\n\n.slide__product__featured__cta__wrapper[_v-2a908172] {\n  position: relative; }\n\n.slide__product__featured__cta__anchor[_v-2a908172] {\n  display: block;\n  text-decoration: none;\n  position: absolute;\n  left: -60px;\n  top: 40px; }\n\n.slide__product__featured__cta__outer[_v-2a908172] {\n  border: 10px solid white;\n  width: 150px; }\n\n.slide__product__featured__cta[_v-2a908172] {\n  background-color: white;\n  border: 5px solid black;\n  padding: 10px;\n  text-align: center;\n  width: 130px; }\n  .slide__product__featured__cta p[_v-2a908172] {\n    color: black;\n    text-decoration: none; }\n\n.slide__product__featured__name[_v-2a908172] {\n  margin-bottom: 10px;\n  font-size: 14px; }\n\n.slide__product__featured__desc[_v-2a908172] {\n  margin-bottom: 10px;\n  font-family: \"sabon-roman\", serif;\n  font-style: italic;\n  font-size: 12px; }\n\n.slide__product__featured__btn[_v-2a908172] {\n  font-family: \"sabon-roman\", serif;\n  font-style: normal;\n  font-size: 12px;\n  font-weight: bold; }\n", ""]);
 
 	// exports
 
 
-/***/ }),
+/***/ },
 /* 66 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -35942,16 +35910,16 @@
 	  }
 	};
 
-/***/ }),
+/***/ },
 /* 67 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/*! skrollr 0.6.26 (2014-06-08) | Alexander Prinzhorn - https://github.com/Prinzhorn/skrollr | Free to use under terms of MIT license */
 	(function(e,t,r){"use strict";function n(r){if(o=t.documentElement,a=t.body,K(),it=this,r=r||{},ut=r.constants||{},r.easing)for(var n in r.easing)U[n]=r.easing[n];yt=r.edgeStrategy||"set",ct={beforerender:r.beforerender,render:r.render,keyframe:r.keyframe},ft=r.forceHeight!==!1,ft&&(Vt=r.scale||1),mt=r.mobileDeceleration||x,dt=r.smoothScrolling!==!1,gt=r.smoothScrollingDuration||E,vt={targetTop:it.getScrollTop()},Gt=(r.mobileCheck||function(){return/Android|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent||navigator.vendor||e.opera)})(),Gt?(st=t.getElementById("skrollr-body"),st&&at(),X(),Dt(o,[y,S],[T])):Dt(o,[y,b],[T]),it.refresh(),St(e,"resize orientationchange",function(){var e=o.clientWidth,t=o.clientHeight;(t!==$t||e!==Mt)&&($t=t,Mt=e,_t=!0)});var i=Y();return function l(){Z(),bt=i(l)}(),it}var o,a,i={get:function(){return it},init:function(e){return it||new n(e)},VERSION:"0.6.26"},l=Object.prototype.hasOwnProperty,s=e.Math,c=e.getComputedStyle,f="touchstart",u="touchmove",m="touchcancel",p="touchend",d="skrollable",g=d+"-before",v=d+"-between",h=d+"-after",y="skrollr",T="no-"+y,b=y+"-desktop",S=y+"-mobile",k="linear",w=1e3,x=.004,E=200,A="start",F="end",C="center",D="bottom",H="___skrollable_id",I=/^(?:input|textarea|button|select)$/i,P=/^\s+|\s+$/g,N=/^data(?:-(_\w+))?(?:-?(-?\d*\.?\d+p?))?(?:-?(start|end|top|center|bottom))?(?:-?(top|center|bottom))?$/,O=/\s*(@?[\w\-\[\]]+)\s*:\s*(.+?)\s*(?:;|$)/gi,V=/^(@?[a-z\-]+)\[(\w+)\]$/,z=/-([a-z0-9_])/g,q=function(e,t){return t.toUpperCase()},L=/[\-+]?[\d]*\.?[\d]+/g,M=/\{\?\}/g,$=/rgba?\(\s*-?\d+\s*,\s*-?\d+\s*,\s*-?\d+/g,_=/[a-z\-]+-gradient/g,B="",G="",K=function(){var e=/^(?:O|Moz|webkit|ms)|(?:-(?:o|moz|webkit|ms)-)/;if(c){var t=c(a,null);for(var n in t)if(B=n.match(e)||+n==n&&t[n].match(e))break;if(!B)return B=G="",r;B=B[0],"-"===B.slice(0,1)?(G=B,B={"-webkit-":"webkit","-moz-":"Moz","-ms-":"ms","-o-":"O"}[B]):G="-"+B.toLowerCase()+"-"}},Y=function(){var t=e.requestAnimationFrame||e[B.toLowerCase()+"RequestAnimationFrame"],r=Pt();return(Gt||!t)&&(t=function(t){var n=Pt()-r,o=s.max(0,1e3/60-n);return e.setTimeout(function(){r=Pt(),t()},o)}),t},R=function(){var t=e.cancelAnimationFrame||e[B.toLowerCase()+"CancelAnimationFrame"];return(Gt||!t)&&(t=function(t){return e.clearTimeout(t)}),t},U={begin:function(){return 0},end:function(){return 1},linear:function(e){return e},quadratic:function(e){return e*e},cubic:function(e){return e*e*e},swing:function(e){return-s.cos(e*s.PI)/2+.5},sqrt:function(e){return s.sqrt(e)},outCubic:function(e){return s.pow(e-1,3)+1},bounce:function(e){var t;if(.5083>=e)t=3;else if(.8489>=e)t=9;else if(.96208>=e)t=27;else{if(!(.99981>=e))return 1;t=91}return 1-s.abs(3*s.cos(1.028*e*t)/t)}};n.prototype.refresh=function(e){var n,o,a=!1;for(e===r?(a=!0,lt=[],Bt=0,e=t.getElementsByTagName("*")):e.length===r&&(e=[e]),n=0,o=e.length;o>n;n++){var i=e[n],l=i,s=[],c=dt,f=yt,u=!1;if(a&&H in i&&delete i[H],i.attributes){for(var m=0,p=i.attributes.length;p>m;m++){var g=i.attributes[m];if("data-anchor-target"!==g.name)if("data-smooth-scrolling"!==g.name)if("data-edge-strategy"!==g.name)if("data-emit-events"!==g.name){var v=g.name.match(N);if(null!==v){var h={props:g.value,element:i,eventType:g.name.replace(z,q)};s.push(h);var y=v[1];y&&(h.constant=y.substr(1));var T=v[2];/p$/.test(T)?(h.isPercentage=!0,h.offset=(0|T.slice(0,-1))/100):h.offset=0|T;var b=v[3],S=v[4]||b;b&&b!==A&&b!==F?(h.mode="relative",h.anchors=[b,S]):(h.mode="absolute",b===F?h.isEnd=!0:h.isPercentage||(h.offset=h.offset*Vt))}}else u=!0;else f=g.value;else c="off"!==g.value;else if(l=t.querySelector(g.value),null===l)throw'Unable to find anchor target "'+g.value+'"'}if(s.length){var k,w,x;!a&&H in i?(x=i[H],k=lt[x].styleAttr,w=lt[x].classAttr):(x=i[H]=Bt++,k=i.style.cssText,w=Ct(i)),lt[x]={element:i,styleAttr:k,classAttr:w,anchorTarget:l,keyFrames:s,smoothScrolling:c,edgeStrategy:f,emitEvents:u,lastFrameIndex:-1},Dt(i,[d],[])}}}for(Et(),n=0,o=e.length;o>n;n++){var E=lt[e[n][H]];E!==r&&(J(E),et(E))}return it},n.prototype.relativeToAbsolute=function(e,t,r){var n=o.clientHeight,a=e.getBoundingClientRect(),i=a.top,l=a.bottom-a.top;return t===D?i-=n:t===C&&(i-=n/2),r===D?i+=l:r===C&&(i+=l/2),i+=it.getScrollTop(),0|i+.5},n.prototype.animateTo=function(e,t){t=t||{};var n=Pt(),o=it.getScrollTop();return pt={startTop:o,topDiff:e-o,targetTop:e,duration:t.duration||w,startTime:n,endTime:n+(t.duration||w),easing:U[t.easing||k],done:t.done},pt.topDiff||(pt.done&&pt.done.call(it,!1),pt=r),it},n.prototype.stopAnimateTo=function(){pt&&pt.done&&pt.done.call(it,!0),pt=r},n.prototype.isAnimatingTo=function(){return!!pt},n.prototype.isMobile=function(){return Gt},n.prototype.setScrollTop=function(t,r){return ht=r===!0,Gt?Kt=s.min(s.max(t,0),Ot):e.scrollTo(0,t),it},n.prototype.getScrollTop=function(){return Gt?Kt:e.pageYOffset||o.scrollTop||a.scrollTop||0},n.prototype.getMaxScrollTop=function(){return Ot},n.prototype.on=function(e,t){return ct[e]=t,it},n.prototype.off=function(e){return delete ct[e],it},n.prototype.destroy=function(){var e=R();e(bt),wt(),Dt(o,[T],[y,b,S]);for(var t=0,n=lt.length;n>t;t++)ot(lt[t].element);o.style.overflow=a.style.overflow="",o.style.height=a.style.height="",st&&i.setStyle(st,"transform","none"),it=r,st=r,ct=r,ft=r,Ot=0,Vt=1,ut=r,mt=r,zt="down",qt=-1,Mt=0,$t=0,_t=!1,pt=r,dt=r,gt=r,vt=r,ht=r,Bt=0,yt=r,Gt=!1,Kt=0,Tt=r};var X=function(){var n,i,l,c,d,g,v,h,y,T,b,S;St(o,[f,u,m,p].join(" "),function(e){var o=e.changedTouches[0];for(c=e.target;3===c.nodeType;)c=c.parentNode;switch(d=o.clientY,g=o.clientX,T=e.timeStamp,I.test(c.tagName)||e.preventDefault(),e.type){case f:n&&n.blur(),it.stopAnimateTo(),n=c,i=v=d,l=g,y=T;break;case u:I.test(c.tagName)&&t.activeElement!==c&&e.preventDefault(),h=d-v,S=T-b,it.setScrollTop(Kt-h,!0),v=d,b=T;break;default:case m:case p:var a=i-d,k=l-g,w=k*k+a*a;if(49>w){if(!I.test(n.tagName)){n.focus();var x=t.createEvent("MouseEvents");x.initMouseEvent("click",!0,!0,e.view,1,o.screenX,o.screenY,o.clientX,o.clientY,e.ctrlKey,e.altKey,e.shiftKey,e.metaKey,0,null),n.dispatchEvent(x)}return}n=r;var E=h/S;E=s.max(s.min(E,3),-3);var A=s.abs(E/mt),F=E*A+.5*mt*A*A,C=it.getScrollTop()-F,D=0;C>Ot?(D=(Ot-C)/F,C=Ot):0>C&&(D=-C/F,C=0),A*=1-D,it.animateTo(0|C+.5,{easing:"outCubic",duration:A})}}),e.scrollTo(0,0),o.style.overflow=a.style.overflow="hidden"},j=function(){var e,t,r,n,a,i,l,c,f,u,m,p=o.clientHeight,d=At();for(c=0,f=lt.length;f>c;c++)for(e=lt[c],t=e.element,r=e.anchorTarget,n=e.keyFrames,a=0,i=n.length;i>a;a++)l=n[a],u=l.offset,m=d[l.constant]||0,l.frame=u,l.isPercentage&&(u*=p,l.frame=u),"relative"===l.mode&&(ot(t),l.frame=it.relativeToAbsolute(r,l.anchors[0],l.anchors[1])-u,ot(t,!0)),l.frame+=m,ft&&!l.isEnd&&l.frame>Ot&&(Ot=l.frame);for(Ot=s.max(Ot,Ft()),c=0,f=lt.length;f>c;c++){for(e=lt[c],n=e.keyFrames,a=0,i=n.length;i>a;a++)l=n[a],m=d[l.constant]||0,l.isEnd&&(l.frame=Ot-l.offset+m);e.keyFrames.sort(Nt)}},W=function(e,t){for(var r=0,n=lt.length;n>r;r++){var o,a,s=lt[r],c=s.element,f=s.smoothScrolling?e:t,u=s.keyFrames,m=u.length,p=u[0],y=u[u.length-1],T=p.frame>f,b=f>y.frame,S=T?p:y,k=s.emitEvents,w=s.lastFrameIndex;if(T||b){if(T&&-1===s.edge||b&&1===s.edge)continue;switch(T?(Dt(c,[g],[h,v]),k&&w>-1&&(xt(c,p.eventType,zt),s.lastFrameIndex=-1)):(Dt(c,[h],[g,v]),k&&m>w&&(xt(c,y.eventType,zt),s.lastFrameIndex=m)),s.edge=T?-1:1,s.edgeStrategy){case"reset":ot(c);continue;case"ease":f=S.frame;break;default:case"set":var x=S.props;for(o in x)l.call(x,o)&&(a=nt(x[o].value),0===o.indexOf("@")?c.setAttribute(o.substr(1),a):i.setStyle(c,o,a));continue}}else 0!==s.edge&&(Dt(c,[d,v],[g,h]),s.edge=0);for(var E=0;m-1>E;E++)if(f>=u[E].frame&&u[E+1].frame>=f){var A=u[E],F=u[E+1];for(o in A.props)if(l.call(A.props,o)){var C=(f-A.frame)/(F.frame-A.frame);C=A.props[o].easing(C),a=rt(A.props[o].value,F.props[o].value,C),a=nt(a),0===o.indexOf("@")?c.setAttribute(o.substr(1),a):i.setStyle(c,o,a)}k&&w!==E&&("down"===zt?xt(c,A.eventType,zt):xt(c,F.eventType,zt),s.lastFrameIndex=E);break}}},Z=function(){_t&&(_t=!1,Et());var e,t,n=it.getScrollTop(),o=Pt();if(pt)o>=pt.endTime?(n=pt.targetTop,e=pt.done,pt=r):(t=pt.easing((o-pt.startTime)/pt.duration),n=0|pt.startTop+t*pt.topDiff),it.setScrollTop(n,!0);else if(!ht){var a=vt.targetTop-n;a&&(vt={startTop:qt,topDiff:n-qt,targetTop:n,startTime:Lt,endTime:Lt+gt}),vt.endTime>=o&&(t=U.sqrt((o-vt.startTime)/gt),n=0|vt.startTop+t*vt.topDiff)}if(Gt&&st&&i.setStyle(st,"transform","translate(0, "+-Kt+"px) "+Tt),ht||qt!==n){zt=n>qt?"down":qt>n?"up":zt,ht=!1;var l={curTop:n,lastTop:qt,maxTop:Ot,direction:zt},s=ct.beforerender&&ct.beforerender.call(it,l);s!==!1&&(W(n,it.getScrollTop()),qt=n,ct.render&&ct.render.call(it,l)),e&&e.call(it,!1)}Lt=o},J=function(e){for(var t=0,r=e.keyFrames.length;r>t;t++){for(var n,o,a,i,l=e.keyFrames[t],s={};null!==(i=O.exec(l.props));)a=i[1],o=i[2],n=a.match(V),null!==n?(a=n[1],n=n[2]):n=k,o=o.indexOf("!")?Q(o):[o.slice(1)],s[a]={value:o,easing:U[n]};l.props=s}},Q=function(e){var t=[];return $.lastIndex=0,e=e.replace($,function(e){return e.replace(L,function(e){return 100*(e/255)+"%"})}),G&&(_.lastIndex=0,e=e.replace(_,function(e){return G+e})),e=e.replace(L,function(e){return t.push(+e),"{?}"}),t.unshift(e),t},et=function(e){var t,r,n={};for(t=0,r=e.keyFrames.length;r>t;t++)tt(e.keyFrames[t],n);for(n={},t=e.keyFrames.length-1;t>=0;t--)tt(e.keyFrames[t],n)},tt=function(e,t){var r;for(r in t)l.call(e.props,r)||(e.props[r]=t[r]);for(r in e.props)t[r]=e.props[r]},rt=function(e,t,r){var n,o=e.length;if(o!==t.length)throw"Can't interpolate between \""+e[0]+'" and "'+t[0]+'"';var a=[e[0]];for(n=1;o>n;n++)a[n]=e[n]+(t[n]-e[n])*r;return a},nt=function(e){var t=1;return M.lastIndex=0,e[0].replace(M,function(){return e[t++]})},ot=function(e,t){e=[].concat(e);for(var r,n,o=0,a=e.length;a>o;o++)n=e[o],r=lt[n[H]],r&&(t?(n.style.cssText=r.dirtyStyleAttr,Dt(n,r.dirtyClassAttr)):(r.dirtyStyleAttr=n.style.cssText,r.dirtyClassAttr=Ct(n),n.style.cssText=r.styleAttr,Dt(n,r.classAttr)))},at=function(){Tt="translateZ(0)",i.setStyle(st,"transform",Tt);var e=c(st),t=e.getPropertyValue("transform"),r=e.getPropertyValue(G+"transform"),n=t&&"none"!==t||r&&"none"!==r;n||(Tt="")};i.setStyle=function(e,t,r){var n=e.style;if(t=t.replace(z,q).replace("-",""),"zIndex"===t)n[t]=isNaN(r)?r:""+(0|r);else if("float"===t)n.styleFloat=n.cssFloat=r;else try{B&&(n[B+t.slice(0,1).toUpperCase()+t.slice(1)]=r),n[t]=r}catch(o){}};var it,lt,st,ct,ft,ut,mt,pt,dt,gt,vt,ht,yt,Tt,bt,St=i.addEvent=function(t,r,n){var o=function(t){return t=t||e.event,t.target||(t.target=t.srcElement),t.preventDefault||(t.preventDefault=function(){t.returnValue=!1,t.defaultPrevented=!0}),n.call(this,t)};r=r.split(" ");for(var a,i=0,l=r.length;l>i;i++)a=r[i],t.addEventListener?t.addEventListener(a,n,!1):t.attachEvent("on"+a,o),Yt.push({element:t,name:a,listener:n})},kt=i.removeEvent=function(e,t,r){t=t.split(" ");for(var n=0,o=t.length;o>n;n++)e.removeEventListener?e.removeEventListener(t[n],r,!1):e.detachEvent("on"+t[n],r)},wt=function(){for(var e,t=0,r=Yt.length;r>t;t++)e=Yt[t],kt(e.element,e.name,e.listener);Yt=[]},xt=function(e,t,r){ct.keyframe&&ct.keyframe.call(it,e,t,r)},Et=function(){var e=it.getScrollTop();Ot=0,ft&&!Gt&&(a.style.height=""),j(),ft&&!Gt&&(a.style.height=Ot+o.clientHeight+"px"),Gt?it.setScrollTop(s.min(it.getScrollTop(),Ot)):it.setScrollTop(e,!0),ht=!0},At=function(){var e,t,r=o.clientHeight,n={};for(e in ut)t=ut[e],"function"==typeof t?t=t.call(it):/p$/.test(t)&&(t=t.slice(0,-1)/100*r),n[e]=t;return n},Ft=function(){var e=st&&st.offsetHeight||0,t=s.max(e,a.scrollHeight,a.offsetHeight,o.scrollHeight,o.offsetHeight,o.clientHeight);return t-o.clientHeight},Ct=function(t){var r="className";return e.SVGElement&&t instanceof e.SVGElement&&(t=t[r],r="baseVal"),t[r]},Dt=function(t,n,o){var a="className";if(e.SVGElement&&t instanceof e.SVGElement&&(t=t[a],a="baseVal"),o===r)return t[a]=n,r;for(var i=t[a],l=0,s=o.length;s>l;l++)i=It(i).replace(It(o[l])," ");i=Ht(i);for(var c=0,f=n.length;f>c;c++)-1===It(i).indexOf(It(n[c]))&&(i+=" "+n[c]);t[a]=Ht(i)},Ht=function(e){return e.replace(P,"")},It=function(e){return" "+e+" "},Pt=Date.now||function(){return+new Date},Nt=function(e,t){return e.frame-t.frame},Ot=0,Vt=1,zt="down",qt=-1,Lt=Pt(),Mt=0,$t=0,_t=!1,Bt=0,Gt=!1,Kt=0,Yt=[]; true?!(__WEBPACK_AMD_DEFINE_RESULT__ = function(){return i}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)):"undefined"!=typeof module&&module.exports?module.exports=i:e.skrollr=i})(window,document);
 
-/***/ }),
+/***/ },
 /* 68 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
@@ -35975,7 +35943,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-f4b15834/Diary.vue"
+	  var id = "_v-6bf3fe5e/Diary.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -35983,9 +35951,9 @@
 	  }
 	})()}
 
-/***/ }),
+/***/ },
 /* 69 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
@@ -36009,9 +35977,9 @@
 		module.hot.dispose(function() { update(); });
 	}
 
-/***/ }),
+/***/ },
 /* 70 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(11)();
 	// imports
@@ -36023,9 +35991,9 @@
 	// exports
 
 
-/***/ }),
+/***/ },
 /* 71 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -36048,7 +36016,7 @@
 	        get: 'user',
 	        userId: '2256771534',
 	        clientId: '99f35d35ab8c49dc842fadc55787ef9f',
-	        accessToken: '2256771534.99f35d3.f76c9064a036497c862be997f8c703d4',
+	        accessToken: '2256771534.1677ed0.cb71470b96af4e8c9b4216e3d4ce240b',
 	        limit: 20,
 	        resolution: 'standard_resolution',
 	        target: 'instafeed',
@@ -36102,9 +36070,9 @@
 	  }
 	};
 
-/***/ }),
+/***/ },
 /* 72 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
 	 * Flickity background lazyload v1.0.0
@@ -36227,19 +36195,19 @@
 	}));
 
 
-/***/ }),
+/***/ },
 /* 73 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
-	 * Flickity v2.0.10
+	 * Flickity v2.0.5
 	 * Touch, responsive, flickable carousels
 	 *
 	 * Licensed GPLv3 for open source use
 	 * or Flickity Commercial License for commercial use
 	 *
 	 * http://flickity.metafizzy.co
-	 * Copyright 2017 Metafizzy
+	 * Copyright 2016 Metafizzy
 	 */
 
 	( function( window, factory ) {
@@ -36275,9 +36243,9 @@
 	});
 
 
-/***/ }),
+/***/ },
 /* 74 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// Flickity main
 	( function( window, factory ) {
@@ -37124,11 +37092,6 @@
 	  jQuery.bridget( 'flickity', Flickity );
 	}
 
-	// set internal jQuery, for Webpack + jQuery v3, #478
-	Flickity.setJQuery = function( jq ) {
-	  jQuery = jq;
-	};
-
 	Flickity.Cell = Cell;
 
 	return Flickity;
@@ -37136,12 +37099,12 @@
 	}));
 
 
-/***/ }),
+/***/ },
 /* 75 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
-	 * EvEmitter v1.1.0
+	 * EvEmitter v1.0.3
 	 * Lil' event emitter
 	 * MIT License
 	 */
@@ -37221,14 +37184,13 @@
 	  if ( !listeners || !listeners.length ) {
 	    return;
 	  }
-	  // copy over to avoid interference if .off() in listener
-	  listeners = listeners.slice(0);
+	  var i = 0;
+	  var listener = listeners[i];
 	  args = args || [];
 	  // once stuff
 	  var onceListeners = this._onceEvents && this._onceEvents[ eventName ];
 
-	  for ( var i=0; i < listeners.length; i++ ) {
-	    var listener = listeners[i]
+	  while ( listener ) {
 	    var isOnce = onceListeners && onceListeners[ listener ];
 	    if ( isOnce ) {
 	      // remove listener
@@ -37239,14 +37201,12 @@
 	    }
 	    // trigger listener
 	    listener.apply( this, args );
+	    // get next listener
+	    i += isOnce ? 0 : 1;
+	    listener = listeners[i];
 	  }
 
 	  return this;
-	};
-
-	proto.allOff = function() {
-	  delete this._events;
-	  delete this._onceEvents;
 	};
 
 	return EvEmitter;
@@ -37254,9 +37214,9 @@
 	}));
 
 
-/***/ }),
+/***/ },
 /* 76 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/*!
 	 * getSize v2.0.2
@@ -37469,12 +37429,12 @@
 	});
 
 
-/***/ }),
+/***/ },
 /* 77 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
-	 * Fizzy UI utils v2.0.5
+	 * Fizzy UI utils v2.0.4
 	 * MIT license
 	 */
 
@@ -37560,7 +37520,7 @@
 	// ----- getParent ----- //
 
 	utils.getParent = function( elem, selector ) {
-	  while ( elem.parentNode && elem != document.body ) {
+	  while ( elem != document.body ) {
 	    elem = elem.parentNode;
 	    if ( matchesSelector( elem, selector ) ) {
 	      return elem;
@@ -37713,9 +37673,9 @@
 	}));
 
 
-/***/ }),
+/***/ },
 /* 78 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
 	 * matchesSelector v2.0.2
@@ -37772,9 +37732,9 @@
 	}));
 
 
-/***/ }),
+/***/ },
 /* 79 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// Flickity.Cell
 	( function( window, factory ) {
@@ -37868,9 +37828,9 @@
 	}));
 
 
-/***/ }),
+/***/ },
 /* 80 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;// slide
 	( function( window, factory ) {
@@ -37950,9 +37910,9 @@
 	}));
 
 
-/***/ }),
+/***/ },
 /* 81 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// animate
 	( function( window, factory ) {
@@ -38175,9 +38135,9 @@
 	}));
 
 
-/***/ }),
+/***/ },
 /* 82 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// drag
 	( function( window, factory ) {
@@ -38229,7 +38189,6 @@
 
 	var proto = Flickity.prototype;
 	utils.extend( proto, Unidragger.prototype );
-	proto._touchActionValue = 'pan-y';
 
 	// --------------------------  -------------------------- //
 
@@ -38329,10 +38288,20 @@
 	  this.dispatchEvent( 'pointerDown', event, [ pointer ] );
 	};
 
+	var touchStartEvents = {
+	  touchstart: true,
+	  MSPointerDown: true
+	};
+
+	var focusNodes = {
+	  INPUT: true,
+	  SELECT: true
+	};
+
 	proto.pointerDownFocus = function( event ) {
 	  // focus element, if not touch, and its not an input or select
-	  var canPointerDown = getCanPointerDown( event );
-	  if ( !this.options.accessibility || canPointerDown ) {
+	  if ( !this.options.accessibility || touchStartEvents[ event.type ] ||
+	      focusNodes[ event.target.nodeName ] ) {
 	    return;
 	  }
 	  var prevScrollY = window.pageYOffset;
@@ -38343,22 +38312,11 @@
 	  }
 	};
 
-	var focusNodes = {
-	  INPUT: true,
-	  SELECT: true,
-	};
-
-	function getCanPointerDown( event ) {
-	  var isTouchStart = event.type == 'touchstart';
-	  var isTouchPointer = event.pointerType == 'touch';
-	  var isFocusNode = focusNodes[ event.target.nodeName ];
-	  return isTouchStart || isTouchPointer || isFocusNode;
-	}
-
 	proto.canPreventDefaultOnPointerDown = function( event ) {
-	  // prevent default, unless touchstart or input
-	  var canPointerDown = getCanPointerDown( event );
-	  return !canPointerDown;
+	  // prevent default, unless touchstart or <select>
+	  var isTouchstart = event.type == 'touchstart';
+	  var targetNodeName = event.target.nodeName;
+	  return !isTouchstart && targetNodeName != 'SELECT';
 	};
 
 	// ----- move ----- //
@@ -38567,12 +38525,12 @@
 	}));
 
 
-/***/ }),
+/***/ },
 /* 83 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
-	 * Unidragger v2.2.3
+	 * Unidragger v2.1.0
 	 * Draggable base class
 	 * MIT license
 	 */
@@ -38608,6 +38566,10 @@
 
 	'use strict';
 
+	// -----  ----- //
+
+	function noop() {}
+
 	// -------------------------- Unidragger -------------------------- //
 
 	function Unidragger() {}
@@ -38625,6 +38587,7 @@
 	  this._bindHandles( false );
 	};
 
+	var navigator = window.navigator;
 	/**
 	 * works as unbinder, as you can .bindHandles( false ) to unbind
 	 * @param {Boolean} isBind - will unbind if falsey
@@ -38632,22 +38595,30 @@
 	proto._bindHandles = function( isBind ) {
 	  // munge isBind, default to true
 	  isBind = isBind === undefined ? true : !!isBind;
+	  // extra bind logic
+	  var binderExtra;
+	  if ( navigator.pointerEnabled ) {
+	    binderExtra = function( handle ) {
+	      // disable scrolling on the element
+	      handle.style.touchAction = isBind ? 'none' : '';
+	    };
+	  } else if ( navigator.msPointerEnabled ) {
+	    binderExtra = function( handle ) {
+	      // disable scrolling on the element
+	      handle.style.msTouchAction = isBind ? 'none' : '';
+	    };
+	  } else {
+	    binderExtra = noop;
+	  }
 	  // bind each handle
 	  var bindMethod = isBind ? 'addEventListener' : 'removeEventListener';
 	  for ( var i=0; i < this.handles.length; i++ ) {
 	    var handle = this.handles[i];
 	    this._bindStartEvent( handle, isBind );
+	    binderExtra( handle );
 	    handle[ bindMethod ]( 'click', this );
-	    // touch-action: none to override browser touch gestures
-	    // metafizzy/flickity#540
-	    if ( window.PointerEvent ) {
-	      handle.style.touchAction = isBind ? this._touchActionValue : '';
-	    }
 	  }
 	};
-
-	// prototype so it can be overwriteable by Flickity
-	proto._touchActionValue = 'none';
 
 	// ----- start event ----- //
 
@@ -38844,12 +38815,12 @@
 	}));
 
 
-/***/ }),
+/***/ },
 /* 84 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
-	 * Unipointer v2.2.0
+	 * Unipointer v2.1.0
 	 * base class for doing one thing with pointer event
 	 * MIT license
 	 */
@@ -38908,9 +38879,12 @@
 	  isBind = isBind === undefined ? true : !!isBind;
 	  var bindMethod = isBind ? 'addEventListener' : 'removeEventListener';
 
-	  if ( window.PointerEvent ) {
-	    // Pointer Events. Chrome 55, IE11, Edge 14
+	  if ( window.navigator.pointerEnabled ) {
+	    // W3C Pointer Events, IE11. See https://coderwall.com/p/mfreca
 	    elem[ bindMethod ]( 'pointerdown', this );
+	  } else if ( window.navigator.msPointerEnabled ) {
+	    // IE10 Pointer Events
+	    elem[ bindMethod ]( 'MSPointerDown', this );
 	  } else {
 	    // listen for both, for devices like Chrome Pixel
 	    elem[ bindMethod ]( 'mousedown', this );
@@ -38951,6 +38925,7 @@
 	  this._pointerDown( event, event.changedTouches[0] );
 	};
 
+	proto.onMSPointerDown =
 	proto.onpointerdown = function( event ) {
 	  this._pointerDown( event, event );
 	};
@@ -38985,6 +38960,7 @@
 	  mousedown: [ 'mousemove', 'mouseup' ],
 	  touchstart: [ 'touchmove', 'touchend', 'touchcancel' ],
 	  pointerdown: [ 'pointermove', 'pointerup', 'pointercancel' ],
+	  MSPointerDown: [ 'MSPointerMove', 'MSPointerUp', 'MSPointerCancel' ]
 	};
 
 	proto._bindPostStartEvents = function( event ) {
@@ -39019,6 +38995,7 @@
 	  this._pointerMove( event, event );
 	};
 
+	proto.onMSPointerMove =
 	proto.onpointermove = function( event ) {
 	  if ( event.pointerId == this.pointerIdentifier ) {
 	    this._pointerMove( event, event );
@@ -39054,6 +39031,7 @@
 	  this._pointerUp( event, event );
 	};
 
+	proto.onMSPointerUp =
 	proto.onpointerup = function( event ) {
 	  if ( event.pointerId == this.pointerIdentifier ) {
 	    this._pointerUp( event, event );
@@ -39099,6 +39077,7 @@
 
 	// ----- pointer cancel ----- //
 
+	proto.onMSPointerCancel =
 	proto.onpointercancel = function( event ) {
 	  if ( event.pointerId == this.pointerIdentifier ) {
 	    this._pointerCancel( event, event );
@@ -39145,9 +39124,9 @@
 	}));
 
 
-/***/ }),
+/***/ },
 /* 85 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// prev/next buttons
 	( function( window, factory ) {
@@ -39371,9 +39350,9 @@
 	}));
 
 
-/***/ }),
+/***/ },
 /* 86 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 	 * Tap listener v2.0.0
@@ -39490,9 +39469,9 @@
 	}));
 
 
-/***/ }),
+/***/ },
 /* 87 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// page dots
 	( function( window, factory ) {
@@ -39674,9 +39653,9 @@
 	}));
 
 
-/***/ }),
+/***/ },
 /* 88 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// player & autoPlay
 	( function( window, factory ) {
@@ -39893,9 +39872,9 @@
 	}));
 
 
-/***/ }),
+/***/ },
 /* 89 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// add, remove cell
 	( function( window, factory ) {
@@ -40081,9 +40060,9 @@
 	}));
 
 
-/***/ }),
+/***/ },
 /* 90 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// lazyload
 	( function( window, factory ) {
@@ -40206,9 +40185,9 @@
 	}));
 
 
-/***/ }),
+/***/ },
 /* 91 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// Generated by CoffeeScript 1.9.3
 	(function() {
@@ -40583,21 +40562,21 @@
 	}).call(this);
 
 
-/***/ }),
+/***/ },
 /* 92 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"diary\">\n  <h2 class=\"diary__heading\">The Diary</h2>\n  <div class=\"diary-carousel-wrapper\">\n    <div class=\"diary-carousel\" id=\"instafeed\"></div>\n  </div>\n</div>\n";
 
-/***/ }),
+/***/ },
 /* 93 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"slides\" _v-34eb1e72=\"\">\n  <!-- SCROLL ARROW ICON -->\n  <span class=\"slide__icn-scroll\" v-bind:class=\"scrollArrowIsActive ? 'is-active' : 'is-inactive'\" v-show=\"scrollArrowIsVisible\" transition=\"fade\" data-start=\"opacity: 1;\" data-1000-end=\"opacity: 1;\" data-450-end=\"opacity: 0.5;\" data-400-end=\"opacity: 0;\" data-end=\"opacity: 0;\" _v-34eb1e72=\"\">Scroll Down</span>\n\n  <!-- SECTION 0: INTRO/HERO -->\n  <div class=\"slide slide--0 slide--intro\" _v-34eb1e72=\"\">\n    <div class=\"slide--intro__logo\" data-0=\"opacity: 1;\" data-50p=\"opacity: 0;\" _v-34eb1e72=\"\">\n      <img src=\"/images/logo.svg\" title=\"CANDER PARIS\" _v-34eb1e72=\"\">\n    </div>\n  </div>\n\n  <!-- SECTION 1: THE CANDLE -->\n  <div class=\"slide slide--1\" id=\"the-fold\" data-0=\"transform: translate(0, 100%);\" data-100p=\"transform: translate(0, 0%)\" _v-34eb1e72=\"\">\n    <!-- Product Images (non-mobile) -->\n    <div class=\"slide__product-wrapper\" data-0=\"opacity: 0\" data-100p=\"opacity: 1\" data-200p=\"opacity: 1\" data-250p=\"opacity: 0\" _v-34eb1e72=\"\">\n      <div class=\"slide__products\" _v-34eb1e72=\"\">\n        <div class=\"slide__product\" data-product-title=\"Scent 01\" _v-34eb1e72=\"\">\n          <img src=\"/images/updated-candles/01162017/scent01.jpg\" v-on:mouseenter=\"/images/scent01mouseover.jpg\" alt=\"Scent 01\" _v-34eb1e72=\"\">\n          <a href=\"https://cander-paris.myshopify.com/products/scent-01\" class=\"slide__product__btn\" _v-34eb1e72=\"\">Buy Now</a>\n        </div>\n        <div class=\"slide__product\" data-product-title=\"Our Youth\" _v-34eb1e72=\"\">\n          <img src=\"/images/updated-candles/01162017/ouryouth.jpg\" alt=\"Our Youth\" _v-34eb1e72=\"\">\n          <a href=\"https://cander-paris.myshopify.com/products/our-youth\" class=\"slide__product__btn\" _v-34eb1e72=\"\">Buy Now</a>\n        </div>\n        <div class=\"slide__product\" data-product-title=\"Rue Vertbois\" _v-34eb1e72=\"\">\n          <img src=\"/images/updated-candles/01162017/ruevertbois.jpg\" alt=\"Rue Vertbois\" _v-34eb1e72=\"\">\n          <a href=\"https://cander-paris.myshopify.com/products/rue-vertbois\" class=\"slide__product__btn\" _v-34eb1e72=\"\">Buy Now</a>\n        </div>\n        <div class=\"slide__product\" data-product-title=\"Rose\" _v-34eb1e72=\"\">\n          <img src=\"/images/updated-candles/01162017/rose.jpg\" alt=\"Rose\" _v-34eb1e72=\"\">\n          <a href=\"https://cander-paris.myshopify.com/products/rose\" class=\"slide__product__btn\" _v-34eb1e72=\"\">Buy Now</a>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <!-- SECTION 2: THE SCENT -->\n  <div class=\"slide slide--2 shade--dark\" data-0=\"opacity: 0\" data-200p=\"opacity: 0; transform: translate(0, 100%);\" data-250p=\"opacity: 0; transform: translate(0, 5%);\" data-300p=\"opacity: 1; transform: translate(0, 0%);\" data-450p=\"opacity: 0; transform: translate(0, -2%);\" _v-34eb1e72=\"\">\n    <div class=\"slide--2__bg is-dark\" style=\"background-image: url('/images/bg-aromatic-santal.jpg');\" _v-34eb1e72=\"\"></div>\n    <div class=\"the-scent\" _v-34eb1e72=\"\">\n      <p class=\"the-scent__desc\" style=\"font-style: italic;\" _v-34eb1e72=\"\">Refined fragrances created in Paris by elite French perfumers</p>\n    </div>\n  </div>\n\n  <!-- SECTION 3: DOOR -->\n  <div class=\"slide slide--3\" data-0=\"opacity: 0\" data-300p=\"opacity: 0; transform: translate(0, 100%);\" data-450p=\"opacity: 0; transform: translate(0, 30%);\" data-500p=\"opacity: 1; transform: translate(0, 0%);\" data-650p=\"opacity: 1; transform: translate(0, 0%);\" data-750p=\"transform: translate(0, -120%);\" _v-34eb1e72=\"\">\n    <div class=\"translations-wrapper\" _v-34eb1e72=\"\">\n      <ul class=\"translations-list\" _v-34eb1e72=\"\">\n        <li _v-34eb1e72=\"\">Bougie Parfumée</li>\n        <li _v-34eb1e72=\"\">Fragranced Candle</li>\n        <li _v-34eb1e72=\"\">Candela Profumata</li>\n        <li _v-34eb1e72=\"\">Vela Perfumada</li>\n        <li _v-34eb1e72=\"\">Duftkerze</li>\n        <li _v-34eb1e72=\"\">香味蠟燭</li>\n        <li _v-34eb1e72=\"\">香りのろうそく</li>\n      </ul>\n    </div>\n  </div>\n\n  <!-- SECTION 4: PRODUCT -->\n  <div class=\"slide slide--4\" data-0=\"opacity: 0\" data-700p=\"opacity: 0; transform: translate(0, 100%);\" data-725p=\"opacity: 0; transform: translate(0, 20%);\" data-760p=\"opacity: 0.3; transform: translate(0, 5%);\" data-770p=\"opacity: 1; transform: translate(0, 0%);\" data-840p=\"opacity: 0\" _v-34eb1e72=\"\">\n    <div class=\"slide--4__inner\" _v-34eb1e72=\"\">\n      <img src=\"/images/menu-accent-contact-transparent.png\" alt=\"Front\" class=\"slide--4__product-image\" _v-34eb1e72=\"\">\n      <!-- <h2 class=\"zeta\">Coming soon in stores Autumn 2017</h2> -->\n    </div>\n  </div>\n\n  <!-- SECTION 5: DIARY -->\n  <div class=\"slide slide--5\" data-0=\"opacity: 0\" data-850p=\"opacity: 0; transform: translate(0, 100%)\" data-900p=\"opacity: 0.3; transform: translate(0, 30%);\" data-920p=\"opacity: 1; transform: translate(0, 0%)\" data-970p=\"transform: translate(0, -10%);\" _v-34eb1e72=\"\">\n    <div class=\"diaryfeed\" _v-34eb1e72=\"\">\n      <diary _v-34eb1e72=\"\"></diary>\n    </div>\n  </div>\n\n  <!-- FOOTER -->\n  <div class=\"slide--footer-wrapper\" data-0=\"opacity: 0\" data-940p=\"opacity: 0; transform: translate(0, 100%);\" data-950p=\"opacity: 0; transform: translate(0, 20%);\" data-990p=\"opacity: 0.3; transform: translate(0, 5%);\" data-1000p=\"opacity: 1; transform: translate(0, 0%);\" _v-34eb1e72=\"\">\n    <site-footer _v-34eb1e72=\"\"></site-footer>\n  </div>\n  </div>\n  ";
+	module.exports = "\n<div class=\"slides\" _v-2a908172=\"\">\n  <!-- SCROLL ARROW ICON -->\n  <span class=\"slide__icn-scroll\" v-bind:class=\"scrollArrowIsActive ? 'is-active' : 'is-inactive'\" v-show=\"scrollArrowIsVisible\" transition=\"fade\" data-start=\"opacity: 1;\" data-1000-end=\"opacity: 1;\" data-450-end=\"opacity: 0.5;\" data-400-end=\"opacity: 0;\" data-end=\"opacity: 0;\" _v-2a908172=\"\">Scroll Down</span>\n\n  <!-- SECTION 0: INTRO/HERO -->\n  <div class=\"slide slide--0 slide--intro\" _v-2a908172=\"\">\n    <div class=\"slide--intro__logo\" data-0=\"opacity: 1;\" data-50p=\"opacity: 0;\" _v-2a908172=\"\">\n      <img src=\"/images/home-page-hero-image.jpg\" _v-2a908172=\"\">\n    </div>\n  </div>\n\n  <!-- SECTION 1a: THE FEATURED CANDLE -->\n  <div class=\"slide slide--1\" id=\"the-fold-a\" data-0=\"transform: translate(0, 100%);\" data-100p=\"transform: translate(0, 0%)\" _v-2a908172=\"\">\n    <!-- Product Images (non-mobile) -->\n    <div class=\"slide__product-wrapper\" data-0=\"opacity: 0\" data-100p=\"opacity: 1\" data-150p=\"opacity: 1\" data-220p=\"opacity: 0\" _v-2a908172=\"\">\n      <div class=\"slide__products\" _v-2a908172=\"\">\n        <div class=\"slide__product slide__product__featured\" data-product-title=\"Scent 01\" _v-2a908172=\"\">\n          <a href=\"https://cander-paris-us.myshopify.com/products/fete\" _v-2a908172=\"\">\n            <img src=\"/images/updated-candles/20190930/fete.jpg\" v-on:mouseenter=\"/images/scent01mouseover.jpg\" alt=\"Scent 01\" _v-2a908172=\"\">\n          </a>\n          <div class=\"slide__product__featured__cta__wrapper\" _v-2a908172=\"\">\n            <a href=\"https://cander-paris-us.myshopify.com/products/fete\" class=\"slide__product__featured__cta__anchor\" _v-2a908172=\"\">\n              <div class=\"slide__product__featured__cta__outer\" _v-2a908172=\"\">\n                <div class=\"slide__product__featured__cta\" _v-2a908172=\"\">\n                  <p class=\"slide__product__featured__name\" _v-2a908172=\"\">FÊTE</p>\n                  <p class=\"slide__product__featured__desc\" _v-2a908172=\"\">Introducing our holiday fragrance featuring pomegranate, citrus &amp; spice.</p>\n                  <p class=\"slide__product__featured__btn\" _v-2a908172=\"\">ADD TO CART</p>\n                </div>\n              </div>\n            </a>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <!-- SECTION 1b: THE CANDLES -->\n  <div class=\"slide slide--1\" id=\"the-fold\" data-0=\"transform: translate(0, 100%);\" data-150p=\"transform: translate(0, 100%);\" data-250p=\"transform: translate(0, 0%)\" _v-2a908172=\"\">\n    <!-- Product Images (non-mobile) -->\n    <div class=\"slide__product-wrapper\" data-0=\"opacity: 0\" data-150p=\"opacity: 0\" data-250p=\"opacity: 1\" data-300p=\"opacity: 1\" data-350p=\"opacity: 0\" _v-2a908172=\"\">\n      <div class=\"slide__products\" _v-2a908172=\"\">\n        <div class=\"slide__product\" data-product-title=\"Scent 01\" _v-2a908172=\"\">\n          <a href=\"https://cander-paris-us.myshopify.com/products/scent-01\" _v-2a908172=\"\">\n            <img src=\"/images/updated-candles/20190930/scent-01.jpg\" v-on:mouseenter=\"/images/scent01mouseover.jpg\" alt=\"Scent 01\" _v-2a908172=\"\">\n          </a>\n          <a href=\"https://cander-paris-us.myshopify.com/products/scent-01\" class=\"slide__product__btn\" _v-2a908172=\"\">SCENT ONE</a>\n        </div>\n        <div class=\"slide__product\" data-product-title=\"Our Youth\" _v-2a908172=\"\">\n          <a href=\"https://cander-paris-us.myshopify.com/products/our-youth\" _v-2a908172=\"\">\n            <img src=\"/images/updated-candles/20190930/our-youth.jpg\" alt=\"Our Youth\" _v-2a908172=\"\">\n          </a>\n          <a href=\"https://cander-paris-us.myshopify.com/products/our-youth\" class=\"slide__product__btn\" _v-2a908172=\"\">OUR YOUTH</a>\n        </div>\n        <div class=\"slide__product\" data-product-title=\"Rue Vertbois\" _v-2a908172=\"\">\n          <a href=\"https://cander-paris-us.myshopify.com/products/rue-vertbois\" _v-2a908172=\"\">\n            <img src=\"/images/updated-candles/20190930/rue-vertbois.jpg\" alt=\"Rue Vertbois\" _v-2a908172=\"\">\n          </a>\n          <a href=\"https://cander-paris-us.myshopify.com/products/rue-vertbois\" class=\"slide__product__btn\" _v-2a908172=\"\">RUE VERTBOIS</a>\n        </div>\n        <div class=\"slide__product\" data-product-title=\"Rose\" _v-2a908172=\"\">\n          <a href=\"https://cander-paris-us.myshopify.com/products/rose\" _v-2a908172=\"\">\n            <img src=\"/images/updated-candles/20190930/rose.jpg\" alt=\"Rose\" _v-2a908172=\"\">\n          </a>\n          <a href=\"https://cander-paris-us.myshopify.com/products/rose\" class=\"slide__product__btn\" _v-2a908172=\"\">ROSE</a>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <!-- SECTION 2: THE SCENT -->\n  <div class=\"slide slide--2 shade--dark\" data-0=\"opacity: 0\" data-300p=\"opacity: 0; transform: translate(0, 100%);\" data-350p=\"opacity: 0; transform: translate(0, 5%);\" data-400p=\"opacity: 1; transform: translate(0, 0%);\" data-550p=\"opacity: 0; transform: translate(0, -2%);\" _v-2a908172=\"\">\n    <div class=\"slide--2__bg is-dark\" style=\"background-image: url('/images/bg-aromatic-santal.jpg');\" _v-2a908172=\"\"></div>\n    <div class=\"the-scent\" _v-2a908172=\"\">\n      <p class=\"the-scent__desc\" style=\"font-style: italic;\" _v-2a908172=\"\">Refined fragrances created in Paris by elite French perfumers</p>\n    </div>\n  </div>\n\n  <!-- SECTION 3: DOOR -->\n  <div class=\"slide slide--3\" data-0=\"opacity: 0\" data-400p=\"opacity: 0; transform: translate(0, 100%);\" data-550p=\"opacity: 0; transform: translate(0, 30%);\" data-600p=\"opacity: 1; transform: translate(0, 0%);\" data-750p=\"opacity: 1; transform: translate(0, 0%);\" data-850p=\"transform: translate(0, -120%);\" _v-2a908172=\"\">\n    <div class=\"translations-wrapper\" _v-2a908172=\"\">\n      <ul class=\"translations-list\" _v-2a908172=\"\">\n        <li _v-2a908172=\"\">Bougie Parfumée</li>\n        <li _v-2a908172=\"\">Fragranced Candle</li>\n        <li _v-2a908172=\"\">Candela Profumata</li>\n        <li _v-2a908172=\"\">Vela Perfumada</li>\n        <li _v-2a908172=\"\">Duftkerze</li>\n        <li _v-2a908172=\"\">香味蠟燭</li>\n        <li _v-2a908172=\"\">香りのろうそく</li>\n      </ul>\n    </div>\n  </div>\n\n  <!-- SECTION 4: PRODUCT -->\n  <div class=\"slide slide--4\" data-0=\"opacity: 0\" data-800p=\"opacity: 0; transform: translate(0, 100%);\" data-825p=\"opacity: 0; transform: translate(0, 20%);\" data-860p=\"opacity: 0.3; transform: translate(0, 5%);\" data-870p=\"opacity: 1; transform: translate(0, 0%);\" data-940p=\"opacity: 0\" _v-2a908172=\"\">\n    <div class=\"slide--4__inner\" _v-2a908172=\"\">\n      <img src=\"/images/menu-accent-contact-transparent.png\" alt=\"Front\" class=\"slide--4__product-image\" _v-2a908172=\"\">\n      <!-- <h2 class=\"zeta\">Coming soon in stores Autumn 2017</h2> -->\n    </div>\n  </div>\n\n  <!-- SECTION 5: DIARY -->\n  <div class=\"slide slide--5\" data-0=\"opacity: 0\" data-950p=\"opacity: 0; transform: translate(0, 100%)\" data-1000p=\"opacity: 0.3; transform: translate(0, 30%);\" data-1020p=\"opacity: 1; transform: translate(0, 0%)\" data-1070p=\"transform: translate(0, -10%);\" _v-2a908172=\"\">\n    <div class=\"diaryfeed\" _v-2a908172=\"\">\n      <diary _v-2a908172=\"\"></diary>\n    </div>\n  </div>\n\n  <!-- FOOTER -->\n  <div class=\"slide--footer-wrapper\" data-0=\"opacity: 0\" data-1040p=\"opacity: 0; transform: translate(0, 100%);\" data-1050p=\"opacity: 0; transform: translate(0, 20%);\" data-1090p=\"opacity: 0.3; transform: translate(0, 5%);\" data-1100p=\"opacity: 1; transform: translate(0, 0%);\" _v-2a908172=\"\">\n    <site-footer _v-2a908172=\"\"></site-footer>\n  </div>\n  </div>\n  ";
 
-/***/ }),
+/***/ },
 /* 94 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
@@ -40621,7 +40600,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-2399ebcc/SectionStores.vue"
+	  var id = "_v-09f79c05/SectionStores.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -40629,9 +40608,9 @@
 	  }
 	})()}
 
-/***/ }),
+/***/ },
 /* 95 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
@@ -40645,8 +40624,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2399ebcc&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionStores.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2399ebcc&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionStores.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-09f79c05&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionStores.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-09f79c05&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionStores.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -40655,23 +40634,23 @@
 		module.hot.dispose(function() { update(); });
 	}
 
-/***/ }),
+/***/ },
 /* 96 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(11)();
 	// imports
 
 
 	// module
-	exports.push([module.id, "section[_v-2399ebcc] {\n  margin: 6rem auto;\n  max-width: 60rem;\n  width: 80%;\n  min-height: calc(100vh - 40rem);\n  margin-bottom: 6rem; }\n\nh1[_v-2399ebcc] {\n  font-size: 1.8rem;\n  text-align: center;\n  text-transform: uppercase; }\n\np[_v-2399ebcc] {\n  font-family: \"sabon-roman\", serif;\n  font-size: 1.4rem;\n  line-height: 1.666;\n  margin-bottom: 1.2rem; }\n\na[_v-2399ebcc] {\n  transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n\nhr[_v-2399ebcc] {\n  margin: 4rem auto; }\n\n.retailers-list[_v-2399ebcc] {\n  text-align: center; }\n\n.retailers__empty-state-message[_v-2399ebcc] {\n  font-family: \"brown-std\", \"Helvetica Neue\", Helvetica, sans-serif;\n  font-size: 1.4rem;\n  margin-bottom: 5rem;\n  margin-top: 5rem;\n  text-align: center;\n  text-transform: uppercase; }\n\n.retailer[_v-2399ebcc] {\n  border-top: 1px solid rgba(193, 193, 193, 0.333);\n  padding: 0 0 3rem 0; }\n  .retailer[_v-2399ebcc]:first-of-type {\n    border-top: none; }\n  .retailer[_v-2399ebcc]:last-of-type {\n    padding: 0; }\n\n.retailer__map-btn[_v-2399ebcc] {\n  color: #c1c1c1;\n  display: inline-block;\n  font-size: 1rem;\n  letter-spacing: 0.1rem;\n  margin: 2.666rem 0 1.666rem 0;\n  text-decoration: none;\n  text-transform: uppercase; }\n  .retailer__map-btn[_v-2399ebcc]:after {\n    /* use !important to prevent issues with browser extensions that change fonts */\n    font-family: \"icomoon\" !important;\n    speak: none;\n    font-style: normal;\n    font-weight: normal;\n    font-variant: normal;\n    text-transform: none;\n    line-height: 1;\n    /* Better Font Rendering =========== */\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n    background-size: 100% 100%;\n    content: \"\\E902\";\n    display: inline-block;\n    height: 1rem;\n    margin-left: 0.5rem;\n    transition: all 220ms cubic-bezier(0.77, 0, 0.175, 1);\n    width: 1rem; }\n  .retailer__map-btn.is-active[_v-2399ebcc]:after {\n    -ms-transform: rotate(180deg);\n        transform: rotate(180deg); }\n\n.retailer__map[_v-2399ebcc] {\n  height: 30rem;\n  transition: opacity 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .retailer__map.fade-transition[_v-2399ebcc] {\n    transition: opacity 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .retailer__map.fade-enter[_v-2399ebcc], .retailer__map.fade-leave[_v-2399ebcc] {\n    opacity: 0; }\n\n.retailer__name[_v-2399ebcc] {\n  font-size: 1.4rem;\n  line-height: 1.8;\n  margin: 3rem 0 2rem 0;\n  text-transform: uppercase;\n  header: 25px; }\n\n.retailer__locations p[_v-2399ebcc]:last-of-type {\n  margin-bottom: 0; }\n\n.retailer__website[_v-2399ebcc] {\n  margin: 0; }\n", ""]);
+	exports.push([module.id, "section[_v-09f79c05] {\n  margin: 6rem auto;\n  max-width: 60rem;\n  width: 80%;\n  min-height: calc(100vh - 40rem);\n  margin-bottom: 6rem; }\n\nh1[_v-09f79c05] {\n  font-size: 1.8rem;\n  text-align: center;\n  text-transform: uppercase; }\n\np[_v-09f79c05] {\n  font-family: \"sabon-roman\", serif;\n  font-size: 1.4rem;\n  line-height: 1.666;\n  margin-bottom: 1.2rem; }\n\na[_v-09f79c05] {\n  transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n\nhr[_v-09f79c05] {\n  margin: 4rem auto; }\n\n.retailers-list[_v-09f79c05] {\n  text-align: center; }\n\n.retailers__empty-state-message[_v-09f79c05] {\n  font-family: \"brown-std\", \"Helvetica Neue\", Helvetica, sans-serif;\n  font-size: 1.4rem;\n  margin-bottom: 5rem;\n  margin-top: 5rem;\n  text-align: center;\n  text-transform: uppercase; }\n\n.retailer[_v-09f79c05] {\n  border-top: 1px solid rgba(193, 193, 193, 0.333);\n  padding: 0 0 3rem 0; }\n  .retailer[_v-09f79c05]:first-of-type {\n    border-top: none; }\n  .retailer[_v-09f79c05]:last-of-type {\n    padding: 0; }\n\n.retailer__map-btn[_v-09f79c05] {\n  color: #c1c1c1;\n  display: inline-block;\n  font-size: 1rem;\n  letter-spacing: 0.1rem;\n  margin: 2.666rem 0 1.666rem 0;\n  text-decoration: none;\n  text-transform: uppercase; }\n  .retailer__map-btn[_v-09f79c05]:after {\n    /* use !important to prevent issues with browser extensions that change fonts */\n    font-family: \"icomoon\" !important;\n    speak: none;\n    font-style: normal;\n    font-weight: normal;\n    font-variant: normal;\n    text-transform: none;\n    line-height: 1;\n    /* Better Font Rendering =========== */\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n    background-size: 100% 100%;\n    content: \"\\E902\";\n    display: inline-block;\n    height: 1rem;\n    margin-left: 0.5rem;\n    transition: all 220ms cubic-bezier(0.77, 0, 0.175, 1);\n    width: 1rem; }\n  .retailer__map-btn.is-active[_v-09f79c05]:after {\n    -ms-transform: rotate(180deg);\n        transform: rotate(180deg); }\n\n.retailer__map[_v-09f79c05] {\n  height: 30rem;\n  transition: opacity 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .retailer__map.fade-transition[_v-09f79c05] {\n    transition: opacity 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .retailer__map.fade-enter[_v-09f79c05], .retailer__map.fade-leave[_v-09f79c05] {\n    opacity: 0; }\n\n.retailer__name[_v-09f79c05] {\n  font-size: 1.4rem;\n  line-height: 1.8;\n  margin: 3rem 0 2rem 0;\n  text-transform: uppercase;\n  header: 25px; }\n\n.retailer__locations p[_v-09f79c05]:last-of-type {\n  margin-bottom: 0; }\n\n.retailer__website[_v-09f79c05] {\n  margin: 0; }\n", ""]);
 
 	// exports
 
 
-/***/ }),
+/***/ },
 /* 97 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -40725,9 +40704,9 @@
 	  }
 	};
 
-/***/ }),
+/***/ },
 /* 98 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
@@ -40751,7 +40730,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-71d7c9f4/GoogleMap.vue"
+	  var id = "_v-312c5a71/GoogleMap.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -40759,9 +40738,9 @@
 	  }
 	})()}
 
-/***/ }),
+/***/ },
 /* 99 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
@@ -40785,9 +40764,9 @@
 		module.hot.dispose(function() { update(); });
 	}
 
-/***/ }),
+/***/ },
 /* 100 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(11)();
 	// imports
@@ -40799,9 +40778,9 @@
 	// exports
 
 
-/***/ }),
+/***/ },
 /* 101 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -40858,9 +40837,9 @@
 	  }
 	};
 
-/***/ }),
+/***/ },
 /* 102 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;(function(root, factory) {
 
@@ -41083,21 +41062,21 @@
 	});
 
 
-/***/ }),
+/***/ },
 /* 103 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"google-map\">\n  <div id=\"map-{{* mapId }}\"></div>\n</div>\n";
 
-/***/ }),
+/***/ },
 /* 104 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
-	module.exports = "\n<div _v-2399ebcc=\"\">\n  <section _v-2399ebcc=\"\">\n    <h1 class=\"section__heading--alpha\" _v-2399ebcc=\"\">Retailers</h1>\n    <hr _v-2399ebcc=\"\">\n    <ul class=\"retailers-list\" v-if=\"retailers.length\" _v-2399ebcc=\"\">\n      <li class=\"retailer\" v-for=\"retailer in retailers\" _v-2399ebcc=\"\">\n        <h3 class=\"retailer__name\" _v-2399ebcc=\"\">\n          <a href=\"{{ retailer.website }}\" _v-2399ebcc=\"\">\n            {{ retailer.name }}\n          </a>\n        </h3>\n        <div class=\"retailer__locations\" v-if=\"retailer.locations &amp;&amp; retailer.locations.length\" _v-2399ebcc=\"\">\n          <p v-for=\"location in retailer.locations\" _v-2399ebcc=\"\">\n            <a href=\"{{{ retailer.website }}}\" _v-2399ebcc=\"\">{{{ location }}}</a>\n          </p>\n        </div>\n        <!-- Changing retailer name to link to website\n        <p class=\"retailer__website\">\n          <a href=\"{{ retailer.website }}\" target=\"_blank\" title=\"Visit {{ retailer.name }}\">{{ retailer.website }}</a>\n        </p>\n        -->\n        <a href=\"#\" class=\"retailer__map-btn\" :class=\"retailer.mapRevealed ? 'is-active' : ''\" @click.prevent=\"toggleMapRevealed(retailer)\" v-if=\"hasMapLocation(retailer)\" _v-2399ebcc=\"\">View Map</a>\n        <div class=\"retailer__map\" v-if=\"mapIsVisible(retailer)\" transition=\"fade\" _v-2399ebcc=\"\">\n          <google-map :map-id=\"$index\" :coords=\"retailer.mapCoords\" _v-2399ebcc=\"\"></google-map>\n        </div>\n      </li>\n    </ul>\n    <div v-if=\"!retailers.length\" _v-2399ebcc=\"\">\n      <p class=\"retailers__empty-state-message\" _v-2399ebcc=\"\">Coming Soon</p>\n    </div>\n</section>\n  <site-footer _v-2399ebcc=\"\"></site-footer>\n</div>\n";
+	module.exports = "\n<div _v-09f79c05=\"\">\n  <section _v-09f79c05=\"\">\n    <h1 class=\"section__heading--alpha\" _v-09f79c05=\"\">Retailers</h1>\n    <hr _v-09f79c05=\"\">\n    <ul class=\"retailers-list\" v-if=\"retailers.length\" _v-09f79c05=\"\">\n      <li class=\"retailer\" v-for=\"retailer in retailers\" _v-09f79c05=\"\">\n        <h3 class=\"retailer__name\" _v-09f79c05=\"\">\n          <a href=\"{{ retailer.website }}\" _v-09f79c05=\"\">\n            {{ retailer.name }}\n          </a>\n        </h3>\n        <div class=\"retailer__locations\" v-if=\"retailer.locations &amp;&amp; retailer.locations.length\" _v-09f79c05=\"\">\n          <p v-for=\"location in retailer.locations\" _v-09f79c05=\"\">\n            <a href=\"{{{ retailer.website }}}\" _v-09f79c05=\"\">{{{ location }}}</a>\n          </p>\n        </div>\n        <!-- Changing retailer name to link to website\n        <p class=\"retailer__website\">\n          <a href=\"{{ retailer.website }}\" target=\"_blank\" title=\"Visit {{ retailer.name }}\">{{ retailer.website }}</a>\n        </p>\n        -->\n        <a href=\"#\" class=\"retailer__map-btn\" :class=\"retailer.mapRevealed ? 'is-active' : ''\" @click.prevent=\"toggleMapRevealed(retailer)\" v-if=\"hasMapLocation(retailer)\" _v-09f79c05=\"\">View Map</a>\n        <div class=\"retailer__map\" v-if=\"mapIsVisible(retailer)\" transition=\"fade\" _v-09f79c05=\"\">\n          <google-map :map-id=\"$index\" :coords=\"retailer.mapCoords\" _v-09f79c05=\"\"></google-map>\n        </div>\n      </li>\n    </ul>\n    <div v-if=\"!retailers.length\" _v-09f79c05=\"\">\n      <p class=\"retailers__empty-state-message\" _v-09f79c05=\"\">Coming Soon</p>\n    </div>\n</section>\n  <site-footer _v-09f79c05=\"\"></site-footer>\n</div>\n";
 
-/***/ }),
+/***/ },
 /* 105 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
@@ -41121,7 +41100,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-19e8468b/SectionPress.vue"
+	  var id = "_v-75a44b40/SectionPress.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -41129,9 +41108,9 @@
 	  }
 	})()}
 
-/***/ }),
+/***/ },
 /* 106 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
@@ -41145,8 +41124,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-19e8468b&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionPress.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-19e8468b&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionPress.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-75a44b40&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionPress.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-75a44b40&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionPress.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -41155,23 +41134,23 @@
 		module.hot.dispose(function() { update(); });
 	}
 
-/***/ }),
+/***/ },
 /* 107 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(11)();
 	// imports
 
 
 	// module
-	exports.push([module.id, "section[_v-19e8468b] {\n  margin: 6rem auto;\n  max-width: 60rem;\n  width: 80%;\n  min-height: calc(100vh - 40rem);\n  margin-bottom: 6rem; }\n\nsection.wider[_v-19e8468b] {\n  max-width: 100rem; }\n\nh1[_v-19e8468b] {\n  font-size: 1.8rem;\n  text-align: center;\n  text-transform: uppercase; }\n\nh3[_v-19e8468b] {\n  font-size: 1.4rem;\n  line-height: 1.8;\n  text-transform: uppercase; }\n\np[_v-19e8468b] {\n  font-family: \"sabon-roman\", serif;\n  font-size: 1.4rem;\n  line-height: 1.666;\n  margin-bottom: 1.2rem; }\n\na[_v-19e8468b] {\n  transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n\nhr[_v-19e8468b] {\n  margin: 4rem auto; }\n\n.articles-container[_v-19e8468b] {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n      flex-direction: column; }\n\n.articles-list[_v-19e8468b] {\n  text-align: center; }\n\n.article__name[_v-19e8468b] {\n  text-transform: uppercase; }\n\n.articles__empty-state-message[_v-19e8468b] {\n  font-family: \"brown-std\", \"Helvetica Neue\", Helvetica, sans-serif;\n  font-size: 1.4rem;\n  margin-bottom: 5rem;\n  margin-top: 5rem;\n  text-align: center;\n  text-transform: uppercase; }\n\n.article[_v-19e8468b] {\n  float: left;\n  width: 300px;\n  margin: 0 16.6666667px; }\n  .article[_v-19e8468b]:first-of-type {\n    border-top: none; }\n  .article[_v-19e8468b]:last-of-type {\n    padding: 10; }\n\n.article__subtitle[_v-19e8468b] {\n  height: 25px;\n  font-size: 1.4rem; }\n", ""]);
+	exports.push([module.id, "section[_v-75a44b40] {\n  margin: 6rem auto;\n  max-width: 60rem;\n  width: 80%;\n  min-height: calc(100vh - 40rem);\n  margin-bottom: 6rem; }\n\nsection.wider[_v-75a44b40] {\n  max-width: 100rem; }\n\nh1[_v-75a44b40] {\n  font-size: 1.8rem;\n  text-align: center;\n  text-transform: uppercase; }\n\nh3[_v-75a44b40] {\n  font-size: 1.4rem;\n  line-height: 1.8;\n  text-transform: uppercase; }\n\np[_v-75a44b40] {\n  font-family: \"sabon-roman\", serif;\n  font-size: 1.4rem;\n  line-height: 1.666;\n  margin-bottom: 1.2rem; }\n\na[_v-75a44b40] {\n  transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n\nhr[_v-75a44b40] {\n  margin: 4rem auto; }\n\n.articles-container[_v-75a44b40] {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n      flex-direction: column; }\n\n.articles-list[_v-75a44b40] {\n  text-align: center; }\n\n.article__name[_v-75a44b40] {\n  text-transform: uppercase; }\n\n.articles__empty-state-message[_v-75a44b40] {\n  font-family: \"brown-std\", \"Helvetica Neue\", Helvetica, sans-serif;\n  font-size: 1.4rem;\n  margin-bottom: 5rem;\n  margin-top: 5rem;\n  text-align: center;\n  text-transform: uppercase; }\n\n.article[_v-75a44b40] {\n  float: left;\n  width: 300px;\n  margin: 0 16.6666667px; }\n  .article[_v-75a44b40]:first-of-type {\n    border-top: none; }\n  .article[_v-75a44b40]:last-of-type {\n    padding: 10; }\n\n.article__subtitle[_v-75a44b40] {\n  height: 25px;\n  font-size: 1.4rem; }\n", ""]);
 
 	// exports
 
 
-/***/ }),
+/***/ },
 /* 108 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -41202,9 +41181,9 @@
 	  }
 	};
 
-/***/ }),
+/***/ },
 /* 109 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -41321,15 +41300,15 @@
 
 	exports.default = press;
 
-/***/ }),
+/***/ },
 /* 110 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"articles-container\" _v-19e8468b=\"\">\n  <section class=\"wider\" _v-19e8468b=\"\">\n    <h1 class=\"section__heading--alpha\" _v-19e8468b=\"\">Press</h1>\n    <hr _v-19e8468b=\"\">\n    <ul class=\"articles-list\" v-if=\"articles.length\" _v-19e8468b=\"\">\n      <li class=\"article\" v-for=\"article in articles\" _v-19e8468b=\"\">\n        <a href=\"{{ article.website }}\" p=\"\" class=\"article__image\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\">\n          <img src=\"{{ article.image }}\" _v-19e8468b=\"\">\n        <p _v-19e8468b=\"\"></p>\n        <h3 class=\"article__name\" _v-19e8468b=\"\">{{ article.name }}</h3>\n        <div class=\"article__subtitle\" _v-19e8468b=\"\">{{ article.subtitle }}</div>\n      </a></li><a href=\"{{ article.website }}\" p=\"\" class=\"article__image\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\">\n    </a></ul><a href=\"{{ article.website }}\" p=\"\" class=\"article__image\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\">\n    <div v-if=\"!articles.length\" _v-19e8468b=\"\">\n      <p class=\"articles__empty-state-message\" _v-19e8468b=\"\">Coming Soon</p>\n    </div>\n</a></section><a href=\"{{ article.website }}\" p=\"\" class=\"article__image\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\">\n  <!-- <site-footer></site-footer> -->\n</a></div><a href=\"{{ article.website }}\" p=\"\" class=\"article__image\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\" _v-19e8468b=\"\">\n</a>";
+	module.exports = "\n<div class=\"articles-container\" _v-75a44b40=\"\">\n  <section class=\"wider\" _v-75a44b40=\"\">\n    <h1 class=\"section__heading--alpha\" _v-75a44b40=\"\">Press</h1>\n    <hr _v-75a44b40=\"\">\n    <ul class=\"articles-list\" v-if=\"articles.length\" _v-75a44b40=\"\">\n      <li class=\"article\" v-for=\"article in articles\" _v-75a44b40=\"\">\n        <a href=\"{{ article.website }}\" p=\"\" class=\"article__image\" _v-75a44b40=\"\" _v-75a44b40=\"\" _v-75a44b40=\"\" _v-75a44b40=\"\" _v-75a44b40=\"\">\n          <img src=\"{{ article.image }}\" _v-75a44b40=\"\">\n        <p _v-75a44b40=\"\"></p>\n        <h3 class=\"article__name\" _v-75a44b40=\"\">{{ article.name }}</h3>\n        <div class=\"article__subtitle\" _v-75a44b40=\"\">{{ article.subtitle }}</div>\n      </a></li><a href=\"{{ article.website }}\" p=\"\" class=\"article__image\" _v-75a44b40=\"\" _v-75a44b40=\"\" _v-75a44b40=\"\" _v-75a44b40=\"\" _v-75a44b40=\"\">\n    </a></ul><a href=\"{{ article.website }}\" p=\"\" class=\"article__image\" _v-75a44b40=\"\" _v-75a44b40=\"\" _v-75a44b40=\"\" _v-75a44b40=\"\" _v-75a44b40=\"\">\n    <div v-if=\"!articles.length\" _v-75a44b40=\"\">\n      <p class=\"articles__empty-state-message\" _v-75a44b40=\"\">Coming Soon</p>\n    </div>\n</a></section><a href=\"{{ article.website }}\" p=\"\" class=\"article__image\" _v-75a44b40=\"\" _v-75a44b40=\"\" _v-75a44b40=\"\" _v-75a44b40=\"\" _v-75a44b40=\"\">\n  <!-- <site-footer></site-footer> -->\n</a></div><a href=\"{{ article.website }}\" p=\"\" class=\"article__image\" _v-75a44b40=\"\" _v-75a44b40=\"\" _v-75a44b40=\"\" _v-75a44b40=\"\" _v-75a44b40=\"\">\n</a>";
 
-/***/ }),
+/***/ },
 /* 111 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
@@ -41353,7 +41332,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-8d26a592/SectionProduct.vue"
+	  var id = "_v-163a58ac/SectionProduct.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -41361,9 +41340,9 @@
 	  }
 	})()}
 
-/***/ }),
+/***/ },
 /* 112 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
@@ -41377,8 +41356,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-8d26a592&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionProduct.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-8d26a592&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionProduct.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-163a58ac&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionProduct.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-163a58ac&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionProduct.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -41387,23 +41366,23 @@
 		module.hot.dispose(function() { update(); });
 	}
 
-/***/ }),
+/***/ },
 /* 113 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(11)();
 	// imports
 
 
 	// module
-	exports.push([module.id, ".section-product__intro[_v-8d26a592] {\n  -ms-flex-align: center;\n      align-items: center;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  -ms-flex-pack: start;\n      justify-content: flex-start; }\n  @media screen and (min-width: 768px) {\n    .section-product__intro[_v-8d26a592] {\n      -ms-flex-align: start;\n          align-items: flex-start;\n      -ms-flex-direction: row;\n          flex-direction: row;\n      -ms-flex-pack: center;\n          justify-content: center; } }\n\n.section-product__intro__image-wrap[_v-8d26a592],\n.section-product__intro__text-wrap[_v-8d26a592] {\n  width: 90%; }\n  @media screen and (min-width: 768px) {\n    .section-product__intro__image-wrap[_v-8d26a592],\n    .section-product__intro__text-wrap[_v-8d26a592] {\n      padding: 5rem;\n      width: 50%; } }\n\n@media screen and (min-width: 768px) {\n  .section-product__intro__image-wrap[_v-8d26a592] {\n    padding-right: 0;\n    -ms-flex-align: start;\n        align-items: flex-start; } }\n\n.section-product__intro__image[_v-8d26a592] {\n  height: auto;\n  width: auto;\n  max-width: 600px;\n  max-height: 550px;\n  margin-top: 4rem; }\n\n.section-product__intro__text-wrap[_v-8d26a592] {\n  margin-bottom: 2rem; }\n  .section-product__intro__text-wrap h1[_v-8d26a592] {\n    margin: 4rem 0 2rem 0; }\n  .section-product__intro__text-wrap h3[_v-8d26a592] {\n    margin: 2.5rem 0 2rem 0; }\n\n.section-product__intro__text-wrap__inner[_v-8d26a592] {\n  opacity: 1;\n  max-width: 50rem;\n  min-height: 27rem; }\n  @media screen and (min-width: 768px) {\n    .section-product__intro__text-wrap__inner[_v-8d26a592] {\n      position: relative; } }\n\n.section-product__intro__language-switch[_v-8d26a592] {\n  border-top: 1px solid rgba(193, 193, 193, 0.333);\n  display: inline-block;\n  padding-top: 0.666rem; }\n  .section-product__intro__language-switch a[_v-8d26a592] {\n    color: #c1c1c1;\n    letter-spacing: 0.1rem;\n    text-decoration: none;\n    transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n    .section-product__intro__language-switch a[_v-8d26a592]:first-of-type {\n      margin-right: 0.666rem; }\n    .section-product__intro__language-switch a.is-active[_v-8d26a592], .section-product__intro__language-switch a[_v-8d26a592]:active, .section-product__intro__language-switch a[_v-8d26a592]:hover {\n      color: #000000; }\n  @media screen and (min-width: 768px) {\n    .section-product__intro__language-switch[_v-8d26a592] {\n      position: absolute; } }\n", ""]);
+	exports.push([module.id, ".section-product__intro[_v-163a58ac] {\n  -ms-flex-align: center;\n      align-items: center;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  -ms-flex-pack: start;\n      justify-content: flex-start; }\n  @media screen and (min-width: 768px) {\n    .section-product__intro[_v-163a58ac] {\n      -ms-flex-align: start;\n          align-items: flex-start;\n      -ms-flex-direction: row;\n          flex-direction: row;\n      -ms-flex-pack: center;\n          justify-content: center; } }\n\n.section-product__intro__image-wrap[_v-163a58ac],\n.section-product__intro__text-wrap[_v-163a58ac] {\n  width: 90%; }\n  @media screen and (min-width: 768px) {\n    .section-product__intro__image-wrap[_v-163a58ac],\n    .section-product__intro__text-wrap[_v-163a58ac] {\n      padding: 5rem;\n      width: 50%; } }\n\n@media screen and (min-width: 768px) {\n  .section-product__intro__image-wrap[_v-163a58ac] {\n    padding-right: 0;\n    -ms-flex-align: start;\n        align-items: flex-start; } }\n\n.section-product__intro__image[_v-163a58ac] {\n  height: auto;\n  width: auto;\n  max-width: 600px;\n  max-height: 550px;\n  margin-top: 4rem; }\n\n.section-product__intro__text-wrap[_v-163a58ac] {\n  margin-bottom: 2rem; }\n  .section-product__intro__text-wrap h1[_v-163a58ac] {\n    margin: 4rem 0 2rem 0; }\n  .section-product__intro__text-wrap h3[_v-163a58ac] {\n    margin: 2.5rem 0 2rem 0; }\n\n.section-product__intro__text-wrap__inner[_v-163a58ac] {\n  opacity: 1;\n  max-width: 50rem;\n  min-height: 27rem; }\n  @media screen and (min-width: 768px) {\n    .section-product__intro__text-wrap__inner[_v-163a58ac] {\n      position: relative; } }\n\n.section-product__intro__language-switch[_v-163a58ac] {\n  border-top: 1px solid rgba(193, 193, 193, 0.333);\n  display: inline-block;\n  padding-top: 0.666rem; }\n  .section-product__intro__language-switch a[_v-163a58ac] {\n    color: #c1c1c1;\n    letter-spacing: 0.1rem;\n    text-decoration: none;\n    transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n    .section-product__intro__language-switch a[_v-163a58ac]:first-of-type {\n      margin-right: 0.666rem; }\n    .section-product__intro__language-switch a.is-active[_v-163a58ac], .section-product__intro__language-switch a[_v-163a58ac]:active, .section-product__intro__language-switch a[_v-163a58ac]:hover {\n      color: #000000; }\n  @media screen and (min-width: 768px) {\n    .section-product__intro__language-switch[_v-163a58ac] {\n      position: absolute; } }\n", ""]);
 
 	// exports
 
 
-/***/ }),
+/***/ },
 /* 114 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -41449,15 +41428,15 @@
 	  ready: function ready() {}
 	};
 
-/***/ }),
+/***/ },
 /* 115 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"single-page\" _v-8d26a592=\"\">\n  <div class=\"single-page__content\" _v-8d26a592=\"\">\n    <div class=\"section-product__intro\" _v-8d26a592=\"\">\n      <div class=\"section-product__intro__image-wrap\" _v-8d26a592=\"\">\n        <img src=\"/images/product-page-default.jpg\" alt=\"Product Page Default\" class=\"section-product__intro__image\" _v-8d26a592=\"\">\n      </div>\n      <div class=\"section-product__intro__text-wrap\" _v-8d26a592=\"\">\n        <div class=\"section-product__intro__text-wrap__inner\" v-show=\"language === 'en'\" transition=\"fade\" _v-8d26a592=\"\">\n          <h1 class=\"zeta\" _v-8d26a592=\"\">PRODUCT</h1>\n          <!-- <h2 class=\"delta\"><strong>Can<span style=\"font-size:0.75em\">•</span>dor [ 'kandər ]</strong>, <em>noun</em><br>the quality of being open and honest in expression</h2> -->\n          <h3 class=\"p-beta\" _v-8d26a592=\"\">Our products are manufactured by the oldest and most exclusive French candlemakers in the world, Cire Trudon private label. Founded in 1643, CIR supplied candles to the royal court of King Louis XIV and continues to provide some of highest quality wax in the world today. The brands under their private label production are extremely selective and few.\n          <br _v-8d26a592=\"\">The candle vessels are made of hand-blown glass in exquisite colors. Our wax is a non-toxic vegetal blend within the OSPAR by Greenpeace standards.\n          <br _v-8d26a592=\"\">Each fragrance is created in Paris by elite perfumer Emmanuel Philip at his atelier, featuring works of Balsam Fir, Rose, Amber, and Sandalwood.  </h3>\n          <h3 class=\"p-beta\" _v-8d26a592=\"\">Burn instructions: <br _v-8d26a592=\"\"> For an ideal burn, we suggest trimming the wick to 3-5mm before each use. The candles should ideally be stored at room temperature.  </h3>\n        </div>\n      </div>\n    </div>\n  </div>\n  <site-footer _v-8d26a592=\"\"></site-footer>\n</div>\n";
+	module.exports = "\n<div class=\"single-page\" _v-163a58ac=\"\">\n  <div class=\"single-page__content\" _v-163a58ac=\"\">\n    <div class=\"section-product__intro\" _v-163a58ac=\"\">\n      <div class=\"section-product__intro__image-wrap\" _v-163a58ac=\"\">\n        <img src=\"/images/product-page-default.jpg\" alt=\"Product Page Default\" class=\"section-product__intro__image\" _v-163a58ac=\"\">\n      </div>\n      <div class=\"section-product__intro__text-wrap\" _v-163a58ac=\"\">\n        <div class=\"section-product__intro__text-wrap__inner\" v-show=\"language === 'en'\" transition=\"fade\" _v-163a58ac=\"\">\n          <h1 class=\"zeta\" _v-163a58ac=\"\">PRODUCT</h1>\n          <!-- <h2 class=\"delta\"><strong>Can<span style=\"font-size:0.75em\">•</span>dor [ 'kandər ]</strong>, <em>noun</em><br>the quality of being open and honest in expression</h2> -->\n          <h3 class=\"p-beta\" _v-163a58ac=\"\">Our products are manufactured by the oldest and most exclusive French candlemakers in the world, Cire Trudon private label. Founded in 1643, CIR supplied candles to the royal court of King Louis XIV and continues to provide some of highest quality wax in the world today. The brands under their private label production are extremely selective and few.\n          <br _v-163a58ac=\"\">The candle vessels are made of hand-blown glass in exquisite colors. Our wax is a non-toxic vegetal blend within the OSPAR by Greenpeace standards.\n          <br _v-163a58ac=\"\">Each fragrance is created in Paris by elite perfumer Emmanuel Philip at his atelier, featuring works of Balsam Fir, Rose, Amber, and Sandalwood.  </h3>\n          <h3 class=\"p-beta\" _v-163a58ac=\"\">Burn instructions: <br _v-163a58ac=\"\"> For an ideal burn, we suggest trimming the wick to 3-5mm before each use. The candles should ideally be stored at room temperature.  </h3>\n        </div>\n      </div>\n    </div>\n  </div>\n  <site-footer _v-163a58ac=\"\"></site-footer>\n</div>\n";
 
-/***/ }),
+/***/ },
 /* 116 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
@@ -41481,7 +41460,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-6c02ac62/SectionTerms.vue"
+	  var id = "_v-25baae84/SectionTerms.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -41489,9 +41468,9 @@
 	  }
 	})()}
 
-/***/ }),
+/***/ },
 /* 117 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
@@ -41505,8 +41484,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6c02ac62&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionTerms.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6c02ac62&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionTerms.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-25baae84&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionTerms.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-25baae84&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionTerms.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -41515,23 +41494,23 @@
 		module.hot.dispose(function() { update(); });
 	}
 
-/***/ }),
+/***/ },
 /* 118 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(11)();
 	// imports
 
 
 	// module
-	exports.push([module.id, "section[_v-6c02ac62] {\n  margin: 6rem auto;\n  max-width: 50rem;\n  width: 80%; }\n\nh1[_v-6c02ac62] {\n  font-size: 1.8rem;\n  text-align: center;\n  text-transform: uppercase; }\n\nh3[_v-6c02ac62] {\n  font-size: 1.2rem;\n  line-height: 1.8;\n  margin: 3rem 0 2rem 0;\n  text-transform: uppercase; }\n\np[_v-6c02ac62] {\n  font-family: \"sabon-roman\", serif;\n  font-size: 1.2rem;\n  line-height: 1.666;\n  margin-bottom: 1.2rem; }\n\nhr[_v-6c02ac62] {\n  margin: 4rem auto; }\n", ""]);
+	exports.push([module.id, "section[_v-25baae84] {\n  margin: 6rem auto;\n  max-width: 50rem;\n  width: 80%; }\n\nh1[_v-25baae84] {\n  font-size: 1.8rem;\n  text-align: center;\n  text-transform: uppercase; }\n\nh3[_v-25baae84] {\n  font-size: 1.2rem;\n  line-height: 1.8;\n  margin: 3rem 0 2rem 0;\n  text-transform: uppercase; }\n\np[_v-25baae84] {\n  font-family: \"sabon-roman\", serif;\n  font-size: 1.2rem;\n  line-height: 1.666;\n  margin-bottom: 1.2rem; }\n\nhr[_v-25baae84] {\n  margin: 4rem auto; }\n", ""]);
 
 	// exports
 
 
-/***/ }),
+/***/ },
 /* 119 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -41558,15 +41537,15 @@
 	  }
 	};
 
-/***/ }),
+/***/ },
 /* 120 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
-	module.exports = "\n<div _v-6c02ac62=\"\">\n  <section _v-6c02ac62=\"\">\n    <h1 class=\"section__heading--alpha\" _v-6c02ac62=\"\">Terms and Conditions</h1>\n    <hr _v-6c02ac62=\"\">\n    <h3 _v-6c02ac62=\"\">OVERVIEW</h3>\n    <p _v-6c02ac62=\"\">This website is operated by Cander Paris. Throughout the site, the terms “we”, “us” and “our” refer to Cander. Cander offers this website, including all information, tools and services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies and notices stated here.</p>\n    <p _v-6c02ac62=\"\">By visiting our site and/ or purchasing something from us, you engage in our “Service” and agree to be bound by the following terms and conditions (“Terms of Service”, “Terms”), including those additional terms and conditions and policies referenced herein and/or available by hyperlink. These Terms of Service apply  to all users of the site, including without limitation users who are browsers, vendors, customers, merchants, and/ or contributors of content.</p>\n    <p _v-6c02ac62=\"\">Please read these Terms of Service carefully before accessing or using our website. By accessing or using any part of the site, you agree to be bound by these Terms of Service. If you do not agree to all the terms and conditions of this agreement, then you may not access the website or use any services. If these Terms of Service are considered an offer, acceptance is expressly limited to these Terms of Service.</p>\n    <p _v-6c02ac62=\"\">Any new features or tools which are added to the current store shall also be subject to the Terms of Service. You can review the most current version of the Terms of Service at any time on this page. We reserve the right to update, change or replace any part of these Terms of Service by posting updates and/or changes to our website. It is your responsibility to check this page periodically for changes. Your continued use of or access to the website following the posting of any changes constitutes acceptance of those changes.</p>\n    <h3 _v-6c02ac62=\"\">Section 1 - Online Store Terms</h3>\n    <p _v-6c02ac62=\"\">By agreeing to these Terms of Service, you represent that you are at least the age of majority in your state or province of residence, or that you are the age of majority in your state or province of residence and you have given us your consent to allow any of your minor dependents to use this site. A breach or violation of any of the Terms will result in an immediate termination of your Services.</p>\n    <h3 _v-6c02ac62=\"\">Section 2 - General Conditions</h3>\n    <p _v-6c02ac62=\"\">We reserve the right to refuse service to anyone for any reason at any time.</p>\n    <p _v-6c02ac62=\"\">You understand that your content (not including credit card information), may be transferred unencrypted and involve (a) transmissions over various networks; and (b) changes to conform and adapt to technical requirements of connecting networks or devices. Credit card information is always encrypted during transfer over networks.</p>\n    <p _v-6c02ac62=\"\">You agree not to reproduce, duplicate, copy, sell, resell or exploit any portion of the Service, use of the Service, or access to the Service or any contact on the website through which the service is provided, without express written permission by us.</p>\n    <p _v-6c02ac62=\"\">The headings used in this agreement are included for convenience only and will not limit or otherwise affect these Terms.</p>\n    <h3 _v-6c02ac62=\"\">Section 3 - Accuracy, Completeness And Timeliness Of Information</h3>\n    <p _v-6c02ac62=\"\">We are not responsible if information made available on this site is not accurate, complete or current. The material on this site is provided for general information only and should not be relied upon or used as the sole basis for making decisions without consulting primary, more accurate, more complete or more timely sources of information. Any reliance on the material on this site is at your own risk.</p>\n    <p _v-6c02ac62=\"\">This site may contain certain historical information. Historical information, necessarily, is not current and is provided for your reference only. We reserve the right to modify the contents of this site at any time, but we have no obligation to update any information on our site. You agree that it is your responsibility to monitor changes to our site.</p>\n    <h3 _v-6c02ac62=\"\">Section 4 - Modifications To The Service And Prices</h3>\n    <p _v-6c02ac62=\"\">Prices for our products are subject to change without notice.We reserve the right at any time to modify or discontinue the Service (or any part or content thereof) without notice at any time.We shall not be liable to you or to any third-party for any modification, price change, suspension or discontinuance of the Service.</p>\n    <h3 _v-6c02ac62=\"\">Section 5 - Products Or Services (if Applicable)</h3>\n    <p _v-6c02ac62=\"\">Certain products or services may be available exclusively online through the website. These products or services may have limited quantities and are subject to return or exchange only according to our Return Policy.</p>\n    <p _v-6c02ac62=\"\">We have made every effort to display as accurately as possible the colors and images of our products that appear at the store. We cannot guarantee that your computer monitor's display of any color will be accurate.</p>\n    <p _v-6c02ac62=\"\">We reserve the right, but are not obligated, to limit the sales of our products or Services to any person, geographic region or jurisdiction. We may exercise this right on a case-by-case basis. We reserve the right to limit the quantities of any products or services that we offer. All descriptions of products or product pricing are subject to change at anytime without notice, at the sole discretion of us. We reserve the right to discontinue any product at any time. Any offer for any product or service made on this site is void where prohibited.</p>\n    <p _v-6c02ac62=\"\">We do not warrant that the quality of any products, services, information, or other material purchased or obtained by you will meet your expectations, or that any errors in the Service will be corrected.</p>\n    <h3 _v-6c02ac62=\"\">Section 6 - Accuracy Of Billing And Account Information</h3>\n    <p _v-6c02ac62=\"\">We reserve the right to refuse any order you place with us. We may, in our sole discretion, limit or cancel quantities purchased per person, per household or per order. These restrictions may include orders placed by or under the same customer account, the same credit card, and/or orders that use the same billing and/or shipping address. In the event that we make a change to or cancel an order, we may attempt to notify you by contacting the e-mail and/or billing address/phone number provided at the time the order was made. We reserve the right to limit or prohibit orders that, in our sole judgment, appear to be placed by dealers, resellers or distributors.</p>\n    <p _v-6c02ac62=\"\">You agree to provide current, complete and accurate purchase and account information for all purchases made at our store. You agree to promptly update your account and other information, including your email address and credit card numbers and expiration dates, so that we can complete your transactions and contact you as needed.</p>\n    <p _v-6c02ac62=\"\">For more detail, please review our Returns Policy.</p>\n    <h3 _v-6c02ac62=\"\">Section 7 - Optional Tools</h3>\n    <p _v-6c02ac62=\"\">We may provide you with access to third-party tools over which we neither monitor nor have any control nor input.</p>\n    <p _v-6c02ac62=\"\">You acknowledge and agree that we provide access to such tools ”as is” and “as available” without any warranties, representations or conditions of any kind and without any endorsement. We shall have no liability whatsoever arising from or relating to your use of optional third-party tools.</p>\n    <p _v-6c02ac62=\"\">Any use by you of optional tools offered through the site is entirely at your own risk and discretion and you should ensure that you are familiar with and approve of the terms on which tools are provided by the relevant third-party provider(s).</p>\n    <p _v-6c02ac62=\"\">We may also, in the future, offer new services and/or features through the website (including, the release of new tools and resources). Such new features and/or services shall also be subject to these Terms of Service.</p>\n    <h3 _v-6c02ac62=\"\">Section 8 - Third-party Links</h3>\n    <p _v-6c02ac62=\"\">Certain content, products and services available via our Service may include materials from third-parties.</p>\n    <p _v-6c02ac62=\"\">Third-party links on this site may direct you to third-party websites that are not affiliated with us. We are not responsible for examining or evaluating the content or accuracy and we do not warrant and will not have any liability or responsibility for any third-party materials or websites, or for any other materials, products, or services of third-parties.</p>\n    <p _v-6c02ac62=\"\">We are not liable for any harm or damages related to the purchase or use of goods, services, resources, content, or any other transactions made in connection with any third-party websites. Please review carefully the third-party's policies and practices and make sure you understand them before you engage in any transaction. Complaints, claims, concerns, or questions regarding third-party products should be directed to the third-party.</p>\n    <h3 _v-6c02ac62=\"\">Section 9 - User Comments, Feedback And Other Submissions</h3>\n    <p _v-6c02ac62=\"\">If, at our request, you send certain specific submissions (for example contest entries) or without a request from us you send creative ideas, suggestions, proposals, plans, or other materials, whether online, by email, by postal mail, or otherwise (collectively, 'comments'), you agree that we may, at any time, without restriction, edit, copy, publish, distribute, translate and otherwise use in any medium any comments that you forward to us. We are and shall be under no obligation (1) to maintain any comments in confidence; (2) to pay compensation for any comments; or (3) to respond to any comments.</p>\n    <p _v-6c02ac62=\"\">We may, but have no obligation to, monitor, edit or remove content that we determine in our sole discretion are unlawful, offensive, threatening, libelous, defamatory, pornographic, obscene or otherwise objectionable or violates any party’s intellectual property or these Terms of Service.</p>\n    <p _v-6c02ac62=\"\">You agree that your comments will not violate any right of any third-party, including copyright, trademark, privacy, personality or other personal or proprietary right. You further agree that your comments will not contain libelous or otherwise unlawful, abusive or obscene material, or contain any computer virus or other malware that could in any way affect the operation of the Service or any related website. You may not use a false e-mail address, pretend to be someone other than yourself, or otherwise mislead us or third-parties as to the origin of any comments. You are solely responsible for any comments you make and their accuracy. We take no responsibility and assume no liability for any comments posted by you or any third-party.</p>\n    <h3 _v-6c02ac62=\"\">Section 10 - Personal Information</h3>\n    <p _v-6c02ac62=\"\">Your submission of personal information through the store is governed by our Privacy Policy. To view our Privacy Policy.</p>\n    <h3 _v-6c02ac62=\"\">Section 11 - Errors, Inaccuracies And Omissions</h3>\n    <p _v-6c02ac62=\"\">Occasionally there may be information on our site or in the Service that contains typographical errors, inaccuracies or omissions that may relate to product descriptions, pricing, promotions, offers, product shipping charges, transit times and availability. We reserve the right to correct any errors, inaccuracies or omissions, and to change or update information or cancel orders if any information in the Service or on any related website is inaccurate at any time without prior notice (including after you have submitted your order).</p>\n    <p _v-6c02ac62=\"\">We undertake no obligation to update, amend or clarify information in the Service or on any related website, including without limitation, pricing information, except as required by law. No specified update or refresh date applied in the Service or on any related website, should be taken to indicate that all information in the Service or on any related website has been modified or updated.</p>\n    <h3 _v-6c02ac62=\"\">Section 12 - Prohibited Uses</h3>\n    <p _v-6c02ac62=\"\">In addition to other prohibitions as set forth in the Terms of Service, you are prohibited from using the site or its content: (a) for any unlawful purpose; (b) to solicit others to perform or participate in any unlawful acts; (c) to violate any international, federal, provincial or state regulations, rules, laws, or local ordinances; (d) to infringe upon or violate our intellectual property rights or the intellectual property rights of others; (e) to harass, abuse, insult, harm, defame, slander, disparage, intimidate, or discriminate based on gender, sexual orientation, religion, ethnicity, race, age, national origin, or disability; (f) to submit false or misleading information; (g) to upload or transmit viruses or any other type of malicious code that will or may be used in any way that will affect the functionality or operation of the Service or of any related website, other websites, or the Internet; (h) to collect or track the personal information of others; (i) to spam, phish, pharm, pretext, spider, crawl, or scrape; (j) for any obscene or immoral purpose; or (k) to interfere with or circumvent the security features of the Service or any related website, other websites, or the Internet. We reserve the right to terminate your use of the Service or any related website for violating any of the prohibited uses.</p>\n    <h3 _v-6c02ac62=\"\">Section 13 - Disclaimer Of Warranties; Limitation Of Liability</h3>\n    <p _v-6c02ac62=\"\">We do not guarantee, represent or warrant that your use of our service will be uninterrupted, timely, secure or error-free.</p>\n    <p _v-6c02ac62=\"\">We do not warrant that the results that may be obtained from the use of the service will be accurate or reliable.</p>\n    <p _v-6c02ac62=\"\">You agree that from time to time we may remove the service for indefinite periods of time or cancel the service at any time, without notice to you.</p>\n    <p _v-6c02ac62=\"\">You expressly agree that your use of, or inability to use, the service is at your sole risk. The service and all products and services delivered to you through the service are (except as expressly stated by us) provided 'as is' and 'as available' for your use, without any representation, warranties or conditions of any kind, either express or implied, including all implied warranties or conditions of merchantability, merchantable quality, fitness for a particular purpose, durability, title, and non-infringement.</p>\n    <p _v-6c02ac62=\"\">In no case shall Cander, our directors, officers, employees, affiliates, agents, contractors, interns, suppliers, service providers or licensors be liable for any injury, loss, claim, or any direct, indirect, incidental, punitive, special, or consequential damages of any kind, including, without limitation lost profits, lost revenue, lost savings, loss of data, replacement costs, or any similar damages, whether based in contract, tort (including negligence), strict liability or otherwise, arising from your use of any of the service or any products procured using the service, or for any other claim related in any way to your use of the service or any product, including, but not limited to, any errors or omissions in any content, or any loss or damage of any kind incurred as a result of the use of the service or any content (or product) posted, transmitted, or otherwise made available via the service, even if advised of their possibility. Because some states or jurisdictions do not allow the exclusion or the limitation of liability for consequential or incidental damages, in such states or jurisdictions, our liability shall be limited to the maximum extent permitted by law.</p>\n    <h3 _v-6c02ac62=\"\">Section 14 - Indemnification</h3>\n    <p _v-6c02ac62=\"\">You agree to indemnify, defend and hold harmless Cander and our parent, subsidiaries, affiliates, partners, officers, directors, agents, contractors, licensors, service providers, subcontractors, suppliers, interns and employees, harmless from any claim or demand, including reasonable attorneys’ fees, made by any third-party due to or arising out of your breach of these Terms of Service or the documents they incorporate by reference, or your violation of any law or the rights of a third-party.</p>\n    <h3 _v-6c02ac62=\"\">Section 15 - Severability</h3>\n    <p _v-6c02ac62=\"\">In the event that any provision of these Terms of Service is determined to be unlawful, void or unenforceable, such provision shall nonetheless be enforceable to the fullest extent permitted by applicable law, and the unenforceable portion shall be deemed to be severed from these Terms of Service, such determination shall not affect the validity and enforceability of any other remaining provisions.</p>\n    <h3 _v-6c02ac62=\"\">Section 16 - Termination</h3>\n    <p _v-6c02ac62=\"\">The obligations and liabilities of the parties incurred prior to the termination date shall survive the termination of this agreement for all purposes. These Terms of Service are effective unless and until terminated by either you or us. You may terminate these Terms of Service at any time by notifying us that you no longer wish to use our Services, or when you cease using our site.</p>\n    <p _v-6c02ac62=\"\">If in our sole judgment you fail, or we suspect that you have failed, to comply with any term or provision of these Terms of Service, we also may terminate this agreement at any time without notice and you will remain liable for all amounts due up to and including the date of termination; and/or accordingly may deny you access to our Services (or any part thereof).</p>\n    <h3 _v-6c02ac62=\"\">Section 17 - Entire Agreement</h3>\n    <p _v-6c02ac62=\"\">The failure of us to exercise or enforce any right or provision of these Terms of Service shall not constitute a waiver of such right or provision.</p>\n    <p _v-6c02ac62=\"\">These Terms of Service and any policies or operating rules posted by us on this site or in respect to The Service constitutes the entire agreement and understanding between you and us and govern your use of the Service, superseding any prior or contemporaneous agreements, communications and proposals, whether oral or written, between you and us (including, but not limited to, any prior versions of the Terms of Service).</p>\n    <p _v-6c02ac62=\"\">Any ambiguities in the interpretation of these Terms of Service shall not be construed against the drafting party.</p>\n    <h3 _v-6c02ac62=\"\">Section 18 - Changes To Terms Of Service</h3>\n    <p _v-6c02ac62=\"\">You can review the most current version of the Terms of Service at any time at this page.</p>\n    <p _v-6c02ac62=\"\">We reserve the right, at our sole discretion, to update, change or replace any part of these Terms of Service by posting updates and changes to our website. It is your responsibility to check our website periodically for changes. Your continued use of or access to our website or the Service following the posting of any changes to these Terms of Service constitutes acceptance of those changes.</p>\n    <h3 _v-6c02ac62=\"\">Section 19 - Contact Information</h3>\n    <p _v-6c02ac62=\"\">Questions about the Terms of Service should be sent to us at info@canderparis.com.</p>\n  </section>\n  <site-footer _v-6c02ac62=\"\"></site-footer>\n</div>\n";
+	module.exports = "\n<div _v-25baae84=\"\">\n  <section _v-25baae84=\"\">\n    <h1 class=\"section__heading--alpha\" _v-25baae84=\"\">Terms and Conditions</h1>\n    <hr _v-25baae84=\"\">\n    <h3 _v-25baae84=\"\">OVERVIEW</h3>\n    <p _v-25baae84=\"\">This website is operated by Cander Paris. Throughout the site, the terms “we”, “us” and “our” refer to Cander. Cander offers this website, including all information, tools and services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies and notices stated here.</p>\n    <p _v-25baae84=\"\">By visiting our site and/ or purchasing something from us, you engage in our “Service” and agree to be bound by the following terms and conditions (“Terms of Service”, “Terms”), including those additional terms and conditions and policies referenced herein and/or available by hyperlink. These Terms of Service apply  to all users of the site, including without limitation users who are browsers, vendors, customers, merchants, and/ or contributors of content.</p>\n    <p _v-25baae84=\"\">Please read these Terms of Service carefully before accessing or using our website. By accessing or using any part of the site, you agree to be bound by these Terms of Service. If you do not agree to all the terms and conditions of this agreement, then you may not access the website or use any services. If these Terms of Service are considered an offer, acceptance is expressly limited to these Terms of Service.</p>\n    <p _v-25baae84=\"\">Any new features or tools which are added to the current store shall also be subject to the Terms of Service. You can review the most current version of the Terms of Service at any time on this page. We reserve the right to update, change or replace any part of these Terms of Service by posting updates and/or changes to our website. It is your responsibility to check this page periodically for changes. Your continued use of or access to the website following the posting of any changes constitutes acceptance of those changes.</p>\n    <h3 _v-25baae84=\"\">Section 1 - Online Store Terms</h3>\n    <p _v-25baae84=\"\">By agreeing to these Terms of Service, you represent that you are at least the age of majority in your state or province of residence, or that you are the age of majority in your state or province of residence and you have given us your consent to allow any of your minor dependents to use this site. A breach or violation of any of the Terms will result in an immediate termination of your Services.</p>\n    <h3 _v-25baae84=\"\">Section 2 - General Conditions</h3>\n    <p _v-25baae84=\"\">We reserve the right to refuse service to anyone for any reason at any time.</p>\n    <p _v-25baae84=\"\">You understand that your content (not including credit card information), may be transferred unencrypted and involve (a) transmissions over various networks; and (b) changes to conform and adapt to technical requirements of connecting networks or devices. Credit card information is always encrypted during transfer over networks.</p>\n    <p _v-25baae84=\"\">You agree not to reproduce, duplicate, copy, sell, resell or exploit any portion of the Service, use of the Service, or access to the Service or any contact on the website through which the service is provided, without express written permission by us.</p>\n    <p _v-25baae84=\"\">The headings used in this agreement are included for convenience only and will not limit or otherwise affect these Terms.</p>\n    <h3 _v-25baae84=\"\">Section 3 - Accuracy, Completeness And Timeliness Of Information</h3>\n    <p _v-25baae84=\"\">We are not responsible if information made available on this site is not accurate, complete or current. The material on this site is provided for general information only and should not be relied upon or used as the sole basis for making decisions without consulting primary, more accurate, more complete or more timely sources of information. Any reliance on the material on this site is at your own risk.</p>\n    <p _v-25baae84=\"\">This site may contain certain historical information. Historical information, necessarily, is not current and is provided for your reference only. We reserve the right to modify the contents of this site at any time, but we have no obligation to update any information on our site. You agree that it is your responsibility to monitor changes to our site.</p>\n    <h3 _v-25baae84=\"\">Section 4 - Modifications To The Service And Prices</h3>\n    <p _v-25baae84=\"\">Prices for our products are subject to change without notice.We reserve the right at any time to modify or discontinue the Service (or any part or content thereof) without notice at any time.We shall not be liable to you or to any third-party for any modification, price change, suspension or discontinuance of the Service.</p>\n    <h3 _v-25baae84=\"\">Section 5 - Products Or Services (if Applicable)</h3>\n    <p _v-25baae84=\"\">Certain products or services may be available exclusively online through the website. These products or services may have limited quantities and are subject to return or exchange only according to our Return Policy.</p>\n    <p _v-25baae84=\"\">We have made every effort to display as accurately as possible the colors and images of our products that appear at the store. We cannot guarantee that your computer monitor's display of any color will be accurate.</p>\n    <p _v-25baae84=\"\">We reserve the right, but are not obligated, to limit the sales of our products or Services to any person, geographic region or jurisdiction. We may exercise this right on a case-by-case basis. We reserve the right to limit the quantities of any products or services that we offer. All descriptions of products or product pricing are subject to change at anytime without notice, at the sole discretion of us. We reserve the right to discontinue any product at any time. Any offer for any product or service made on this site is void where prohibited.</p>\n    <p _v-25baae84=\"\">We do not warrant that the quality of any products, services, information, or other material purchased or obtained by you will meet your expectations, or that any errors in the Service will be corrected.</p>\n    <h3 _v-25baae84=\"\">Section 6 - Accuracy Of Billing And Account Information</h3>\n    <p _v-25baae84=\"\">We reserve the right to refuse any order you place with us. We may, in our sole discretion, limit or cancel quantities purchased per person, per household or per order. These restrictions may include orders placed by or under the same customer account, the same credit card, and/or orders that use the same billing and/or shipping address. In the event that we make a change to or cancel an order, we may attempt to notify you by contacting the e-mail and/or billing address/phone number provided at the time the order was made. We reserve the right to limit or prohibit orders that, in our sole judgment, appear to be placed by dealers, resellers or distributors.</p>\n    <p _v-25baae84=\"\">You agree to provide current, complete and accurate purchase and account information for all purchases made at our store. You agree to promptly update your account and other information, including your email address and credit card numbers and expiration dates, so that we can complete your transactions and contact you as needed.</p>\n    <p _v-25baae84=\"\">For more detail, please review our Returns Policy.</p>\n    <h3 _v-25baae84=\"\">Section 7 - Optional Tools</h3>\n    <p _v-25baae84=\"\">We may provide you with access to third-party tools over which we neither monitor nor have any control nor input.</p>\n    <p _v-25baae84=\"\">You acknowledge and agree that we provide access to such tools ”as is” and “as available” without any warranties, representations or conditions of any kind and without any endorsement. We shall have no liability whatsoever arising from or relating to your use of optional third-party tools.</p>\n    <p _v-25baae84=\"\">Any use by you of optional tools offered through the site is entirely at your own risk and discretion and you should ensure that you are familiar with and approve of the terms on which tools are provided by the relevant third-party provider(s).</p>\n    <p _v-25baae84=\"\">We may also, in the future, offer new services and/or features through the website (including, the release of new tools and resources). Such new features and/or services shall also be subject to these Terms of Service.</p>\n    <h3 _v-25baae84=\"\">Section 8 - Third-party Links</h3>\n    <p _v-25baae84=\"\">Certain content, products and services available via our Service may include materials from third-parties.</p>\n    <p _v-25baae84=\"\">Third-party links on this site may direct you to third-party websites that are not affiliated with us. We are not responsible for examining or evaluating the content or accuracy and we do not warrant and will not have any liability or responsibility for any third-party materials or websites, or for any other materials, products, or services of third-parties.</p>\n    <p _v-25baae84=\"\">We are not liable for any harm or damages related to the purchase or use of goods, services, resources, content, or any other transactions made in connection with any third-party websites. Please review carefully the third-party's policies and practices and make sure you understand them before you engage in any transaction. Complaints, claims, concerns, or questions regarding third-party products should be directed to the third-party.</p>\n    <h3 _v-25baae84=\"\">Section 9 - User Comments, Feedback And Other Submissions</h3>\n    <p _v-25baae84=\"\">If, at our request, you send certain specific submissions (for example contest entries) or without a request from us you send creative ideas, suggestions, proposals, plans, or other materials, whether online, by email, by postal mail, or otherwise (collectively, 'comments'), you agree that we may, at any time, without restriction, edit, copy, publish, distribute, translate and otherwise use in any medium any comments that you forward to us. We are and shall be under no obligation (1) to maintain any comments in confidence; (2) to pay compensation for any comments; or (3) to respond to any comments.</p>\n    <p _v-25baae84=\"\">We may, but have no obligation to, monitor, edit or remove content that we determine in our sole discretion are unlawful, offensive, threatening, libelous, defamatory, pornographic, obscene or otherwise objectionable or violates any party’s intellectual property or these Terms of Service.</p>\n    <p _v-25baae84=\"\">You agree that your comments will not violate any right of any third-party, including copyright, trademark, privacy, personality or other personal or proprietary right. You further agree that your comments will not contain libelous or otherwise unlawful, abusive or obscene material, or contain any computer virus or other malware that could in any way affect the operation of the Service or any related website. You may not use a false e-mail address, pretend to be someone other than yourself, or otherwise mislead us or third-parties as to the origin of any comments. You are solely responsible for any comments you make and their accuracy. We take no responsibility and assume no liability for any comments posted by you or any third-party.</p>\n    <h3 _v-25baae84=\"\">Section 10 - Personal Information</h3>\n    <p _v-25baae84=\"\">Your submission of personal information through the store is governed by our Privacy Policy. To view our Privacy Policy.</p>\n    <h3 _v-25baae84=\"\">Section 11 - Errors, Inaccuracies And Omissions</h3>\n    <p _v-25baae84=\"\">Occasionally there may be information on our site or in the Service that contains typographical errors, inaccuracies or omissions that may relate to product descriptions, pricing, promotions, offers, product shipping charges, transit times and availability. We reserve the right to correct any errors, inaccuracies or omissions, and to change or update information or cancel orders if any information in the Service or on any related website is inaccurate at any time without prior notice (including after you have submitted your order).</p>\n    <p _v-25baae84=\"\">We undertake no obligation to update, amend or clarify information in the Service or on any related website, including without limitation, pricing information, except as required by law. No specified update or refresh date applied in the Service or on any related website, should be taken to indicate that all information in the Service or on any related website has been modified or updated.</p>\n    <h3 _v-25baae84=\"\">Section 12 - Prohibited Uses</h3>\n    <p _v-25baae84=\"\">In addition to other prohibitions as set forth in the Terms of Service, you are prohibited from using the site or its content: (a) for any unlawful purpose; (b) to solicit others to perform or participate in any unlawful acts; (c) to violate any international, federal, provincial or state regulations, rules, laws, or local ordinances; (d) to infringe upon or violate our intellectual property rights or the intellectual property rights of others; (e) to harass, abuse, insult, harm, defame, slander, disparage, intimidate, or discriminate based on gender, sexual orientation, religion, ethnicity, race, age, national origin, or disability; (f) to submit false or misleading information; (g) to upload or transmit viruses or any other type of malicious code that will or may be used in any way that will affect the functionality or operation of the Service or of any related website, other websites, or the Internet; (h) to collect or track the personal information of others; (i) to spam, phish, pharm, pretext, spider, crawl, or scrape; (j) for any obscene or immoral purpose; or (k) to interfere with or circumvent the security features of the Service or any related website, other websites, or the Internet. We reserve the right to terminate your use of the Service or any related website for violating any of the prohibited uses.</p>\n    <h3 _v-25baae84=\"\">Section 13 - Disclaimer Of Warranties; Limitation Of Liability</h3>\n    <p _v-25baae84=\"\">We do not guarantee, represent or warrant that your use of our service will be uninterrupted, timely, secure or error-free.</p>\n    <p _v-25baae84=\"\">We do not warrant that the results that may be obtained from the use of the service will be accurate or reliable.</p>\n    <p _v-25baae84=\"\">You agree that from time to time we may remove the service for indefinite periods of time or cancel the service at any time, without notice to you.</p>\n    <p _v-25baae84=\"\">You expressly agree that your use of, or inability to use, the service is at your sole risk. The service and all products and services delivered to you through the service are (except as expressly stated by us) provided 'as is' and 'as available' for your use, without any representation, warranties or conditions of any kind, either express or implied, including all implied warranties or conditions of merchantability, merchantable quality, fitness for a particular purpose, durability, title, and non-infringement.</p>\n    <p _v-25baae84=\"\">In no case shall Cander, our directors, officers, employees, affiliates, agents, contractors, interns, suppliers, service providers or licensors be liable for any injury, loss, claim, or any direct, indirect, incidental, punitive, special, or consequential damages of any kind, including, without limitation lost profits, lost revenue, lost savings, loss of data, replacement costs, or any similar damages, whether based in contract, tort (including negligence), strict liability or otherwise, arising from your use of any of the service or any products procured using the service, or for any other claim related in any way to your use of the service or any product, including, but not limited to, any errors or omissions in any content, or any loss or damage of any kind incurred as a result of the use of the service or any content (or product) posted, transmitted, or otherwise made available via the service, even if advised of their possibility. Because some states or jurisdictions do not allow the exclusion or the limitation of liability for consequential or incidental damages, in such states or jurisdictions, our liability shall be limited to the maximum extent permitted by law.</p>\n    <h3 _v-25baae84=\"\">Section 14 - Indemnification</h3>\n    <p _v-25baae84=\"\">You agree to indemnify, defend and hold harmless Cander and our parent, subsidiaries, affiliates, partners, officers, directors, agents, contractors, licensors, service providers, subcontractors, suppliers, interns and employees, harmless from any claim or demand, including reasonable attorneys’ fees, made by any third-party due to or arising out of your breach of these Terms of Service or the documents they incorporate by reference, or your violation of any law or the rights of a third-party.</p>\n    <h3 _v-25baae84=\"\">Section 15 - Severability</h3>\n    <p _v-25baae84=\"\">In the event that any provision of these Terms of Service is determined to be unlawful, void or unenforceable, such provision shall nonetheless be enforceable to the fullest extent permitted by applicable law, and the unenforceable portion shall be deemed to be severed from these Terms of Service, such determination shall not affect the validity and enforceability of any other remaining provisions.</p>\n    <h3 _v-25baae84=\"\">Section 16 - Termination</h3>\n    <p _v-25baae84=\"\">The obligations and liabilities of the parties incurred prior to the termination date shall survive the termination of this agreement for all purposes. These Terms of Service are effective unless and until terminated by either you or us. You may terminate these Terms of Service at any time by notifying us that you no longer wish to use our Services, or when you cease using our site.</p>\n    <p _v-25baae84=\"\">If in our sole judgment you fail, or we suspect that you have failed, to comply with any term or provision of these Terms of Service, we also may terminate this agreement at any time without notice and you will remain liable for all amounts due up to and including the date of termination; and/or accordingly may deny you access to our Services (or any part thereof).</p>\n    <h3 _v-25baae84=\"\">Section 17 - Entire Agreement</h3>\n    <p _v-25baae84=\"\">The failure of us to exercise or enforce any right or provision of these Terms of Service shall not constitute a waiver of such right or provision.</p>\n    <p _v-25baae84=\"\">These Terms of Service and any policies or operating rules posted by us on this site or in respect to The Service constitutes the entire agreement and understanding between you and us and govern your use of the Service, superseding any prior or contemporaneous agreements, communications and proposals, whether oral or written, between you and us (including, but not limited to, any prior versions of the Terms of Service).</p>\n    <p _v-25baae84=\"\">Any ambiguities in the interpretation of these Terms of Service shall not be construed against the drafting party.</p>\n    <h3 _v-25baae84=\"\">Section 18 - Changes To Terms Of Service</h3>\n    <p _v-25baae84=\"\">You can review the most current version of the Terms of Service at any time at this page.</p>\n    <p _v-25baae84=\"\">We reserve the right, at our sole discretion, to update, change or replace any part of these Terms of Service by posting updates and changes to our website. It is your responsibility to check our website periodically for changes. Your continued use of or access to our website or the Service following the posting of any changes to these Terms of Service constitutes acceptance of those changes.</p>\n    <h3 _v-25baae84=\"\">Section 19 - Contact Information</h3>\n    <p _v-25baae84=\"\">Questions about the Terms of Service should be sent to us at info@canderparis.com.</p>\n  </section>\n  <site-footer _v-25baae84=\"\"></site-footer>\n</div>\n";
 
-/***/ }),
+/***/ },
 /* 121 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
@@ -41590,7 +41569,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-6bf10f50/SectionPrivacy.vue"
+	  var id = "_v-6e828a76/SectionPrivacy.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -41598,9 +41577,9 @@
 	  }
 	})()}
 
-/***/ }),
+/***/ },
 /* 122 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
@@ -41614,8 +41593,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6bf10f50&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionPrivacy.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6bf10f50&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionPrivacy.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6e828a76&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionPrivacy.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6e828a76&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionPrivacy.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -41624,23 +41603,23 @@
 		module.hot.dispose(function() { update(); });
 	}
 
-/***/ }),
+/***/ },
 /* 123 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(11)();
 	// imports
 
 
 	// module
-	exports.push([module.id, "section[_v-6bf10f50] {\n  margin: 6rem auto;\n  max-width: 50rem;\n  width: 80%; }\n\nh1[_v-6bf10f50] {\n  font-size: 1.8rem;\n  text-align: center;\n  text-transform: uppercase; }\n\nh3[_v-6bf10f50] {\n  font-size: 1.2rem;\n  line-height: 1.8;\n  margin: 3rem 0 2rem 0;\n  text-transform: uppercase; }\n\np[_v-6bf10f50] {\n  font-family: \"sabon-roman\", serif;\n  font-size: 1.2rem;\n  line-height: 1.666;\n  margin-bottom: 1.2rem; }\n\nhr[_v-6bf10f50] {\n  margin: 4rem auto; }\n", ""]);
+	exports.push([module.id, "section[_v-6e828a76] {\n  margin: 6rem auto;\n  max-width: 50rem;\n  width: 80%; }\n\nh1[_v-6e828a76] {\n  font-size: 1.8rem;\n  text-align: center;\n  text-transform: uppercase; }\n\nh3[_v-6e828a76] {\n  font-size: 1.2rem;\n  line-height: 1.8;\n  margin: 3rem 0 2rem 0;\n  text-transform: uppercase; }\n\np[_v-6e828a76] {\n  font-family: \"sabon-roman\", serif;\n  font-size: 1.2rem;\n  line-height: 1.666;\n  margin-bottom: 1.2rem; }\n\nhr[_v-6e828a76] {\n  margin: 4rem auto; }\n", ""]);
 
 	// exports
 
 
-/***/ }),
+/***/ },
 /* 124 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -41667,15 +41646,15 @@
 	  }
 	};
 
-/***/ }),
+/***/ },
 /* 125 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
-	module.exports = "\n<div _v-6bf10f50=\"\">\n  <section _v-6bf10f50=\"\">\n    <h1 class=\"section__heading--alpha\" _v-6bf10f50=\"\">Privacy Policy</h1>\n    <hr _v-6bf10f50=\"\">\n    <h3 _v-6bf10f50=\"\">CANDER PARIS IS COMMITTED TO PROTECTING YOUR PRIVACY.<br _v-6bf10f50=\"\">OUR OFFICIAL PRIVACY POLICIES ARE AS FOLLOWS:</h3>\n    <h3 _v-6bf10f50=\"\">What information do we collect?</h3>\n    <p _v-6bf10f50=\"\">We collect information from you when you place an order, enter a contest on our social media, send communication such as e-mail, or participate in other site features. When ordering, we may ask you for your name, e-mail address, mailing address, phone number, credit card information or other information. You may, however, visit our site anonymously. We also collect information about gift recipients so that we can fulfill the gift purchase. The information we collect about gift recipients is not used for marketing purposes. Like many websites, we use \"cookies\" to enhance your experience and gather information about visitors and visits to our websites. Please refer to the \"Do we use 'cookies'?\" section below for information about cookies and how we use them.</p>\n    <h3 _v-6bf10f50=\"\">How do we use your information?</h3>\n    <p _v-6bf10f50=\"\">We may use the information we collect from you when you purchase products, enter a contest or promotion, respond to marketing communication, surf the website, or use certain other site features in the following ways: To personalize your site experience and to allow us to deliver the type of content and product offerings in which you are most interested. To allow us to better service you in responding to your customer service requests. To quickly process your transactions. To administer a contest, promotion, survey or other site feature.</p>\n    <p _v-6bf10f50=\"\">How do we protect visitor information?</p>&nbsp;\n    <p _v-6bf10f50=\"\">We implement a variety of security measures to maintain the safety of your personal information. Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. When you place orders or access your personal information, we offer the use of a secure server. All sensitive/credit information you supply is transmitted via Secure Socket Layer (SSL) technology and then encrypted into our databases to be only accessed as stated above.</p>\n    <h3 _v-6bf10f50=\"\">Do we use \"cookies\"?</h3>\n    <p _v-6bf10f50=\"\">Yes. Cookies are small files that a site or its service provider transfers to your computer's hard drive through your Web browser (if you allow) that enables the site's or service provider's systems to recognize your browser and capture and remember certain information. For instance, we use cookies to help us remember and process the items in your shopping cart. They are also used to help us understand your preferences based on previous or current site activity, which enables us to provide you with improved services. We also use cookies to help us compile aggregate data about site traffic and site interaction so that we can offer better site experiences and tools in the future. We may contract with third-party service providers to assist us in better understanding our site visitors. These service providers are not permitted to use the information collected on our behalf except to help us conduct and improve our business. You can choose to have your computer warn you each time a cookie is being sent, or you can choose to turn off all cookies. You do this through your browser (like Firefox or Google Chrome) settings. Each browser is a little different, so look at your browser Help menu to learn the correct way to modify your cookies. If you turn cookies off, you won't have access to many features that make your site experience more efficient and some of our services will not function properly.</p>\n    <h3 _v-6bf10f50=\"\">Do we disclose the information we collect to outside parties?</h3>\n    <p _v-6bf10f50=\"\">We do not sell, trade, or otherwise transfer to outside parties your personally identifiable information unless we provide you with advance notice, except as described below. The term \"outside parties\" does not include our business. It also does not include website hosting partners and other parties who assist us in operating our website, conducting our business, or servicing you, so long as those parties agree to keep this information confidential. We may also release your information when we believe release is appropriate to comply with the law, enforce our site policies, or protect ours or others' rights, property, or safety. However, non-personally identifiable visitor information may be provided to other parties for marketing, advertising, or other uses.</p>\n    <p _v-6bf10f50=\"\">Please note that we may maintain information about an individual sales transaction in order to service that transaction and for record keeping. In an attempt to provide you with increased value, we may include third party links on our site. These linked sites have separate and independent privacy policies. We therefore have no responsibility or liability for the content and activities of these linked sites. Nonetheless, we seek to protect the integrity of our site and welcome any feedback about these linked sites (including if a specific link does not work). We will post any changes to our policy, If we decide to change our privacy policy, on this page. Policy changes will apply only to information collected after the date of the change. This policy was last modified on September 21, 2016.</p>\n  </section>\n  <site-footer _v-6bf10f50=\"\"></site-footer>\n</div>\n";
+	module.exports = "\n<div _v-6e828a76=\"\">\n  <section _v-6e828a76=\"\">\n    <h1 class=\"section__heading--alpha\" _v-6e828a76=\"\">Privacy Policy</h1>\n    <hr _v-6e828a76=\"\">\n    <h3 _v-6e828a76=\"\">CANDER PARIS IS COMMITTED TO PROTECTING YOUR PRIVACY.<br _v-6e828a76=\"\">OUR OFFICIAL PRIVACY POLICIES ARE AS FOLLOWS:</h3>\n    <h3 _v-6e828a76=\"\">What information do we collect?</h3>\n    <p _v-6e828a76=\"\">We collect information from you when you place an order, enter a contest on our social media, send communication such as e-mail, or participate in other site features. When ordering, we may ask you for your name, e-mail address, mailing address, phone number, credit card information or other information. You may, however, visit our site anonymously. We also collect information about gift recipients so that we can fulfill the gift purchase. The information we collect about gift recipients is not used for marketing purposes. Like many websites, we use \"cookies\" to enhance your experience and gather information about visitors and visits to our websites. Please refer to the \"Do we use 'cookies'?\" section below for information about cookies and how we use them.</p>\n    <h3 _v-6e828a76=\"\">How do we use your information?</h3>\n    <p _v-6e828a76=\"\">We may use the information we collect from you when you purchase products, enter a contest or promotion, respond to marketing communication, surf the website, or use certain other site features in the following ways: To personalize your site experience and to allow us to deliver the type of content and product offerings in which you are most interested. To allow us to better service you in responding to your customer service requests. To quickly process your transactions. To administer a contest, promotion, survey or other site feature.</p>\n    <p _v-6e828a76=\"\">How do we protect visitor information?</p>&nbsp;\n    <p _v-6e828a76=\"\">We implement a variety of security measures to maintain the safety of your personal information. Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. When you place orders or access your personal information, we offer the use of a secure server. All sensitive/credit information you supply is transmitted via Secure Socket Layer (SSL) technology and then encrypted into our databases to be only accessed as stated above.</p>\n    <h3 _v-6e828a76=\"\">Do we use \"cookies\"?</h3>\n    <p _v-6e828a76=\"\">Yes. Cookies are small files that a site or its service provider transfers to your computer's hard drive through your Web browser (if you allow) that enables the site's or service provider's systems to recognize your browser and capture and remember certain information. For instance, we use cookies to help us remember and process the items in your shopping cart. They are also used to help us understand your preferences based on previous or current site activity, which enables us to provide you with improved services. We also use cookies to help us compile aggregate data about site traffic and site interaction so that we can offer better site experiences and tools in the future. We may contract with third-party service providers to assist us in better understanding our site visitors. These service providers are not permitted to use the information collected on our behalf except to help us conduct and improve our business. You can choose to have your computer warn you each time a cookie is being sent, or you can choose to turn off all cookies. You do this through your browser (like Firefox or Google Chrome) settings. Each browser is a little different, so look at your browser Help menu to learn the correct way to modify your cookies. If you turn cookies off, you won't have access to many features that make your site experience more efficient and some of our services will not function properly.</p>\n    <h3 _v-6e828a76=\"\">Do we disclose the information we collect to outside parties?</h3>\n    <p _v-6e828a76=\"\">We do not sell, trade, or otherwise transfer to outside parties your personally identifiable information unless we provide you with advance notice, except as described below. The term \"outside parties\" does not include our business. It also does not include website hosting partners and other parties who assist us in operating our website, conducting our business, or servicing you, so long as those parties agree to keep this information confidential. We may also release your information when we believe release is appropriate to comply with the law, enforce our site policies, or protect ours or others' rights, property, or safety. However, non-personally identifiable visitor information may be provided to other parties for marketing, advertising, or other uses.</p>\n    <p _v-6e828a76=\"\">Please note that we may maintain information about an individual sales transaction in order to service that transaction and for record keeping. In an attempt to provide you with increased value, we may include third party links on our site. These linked sites have separate and independent privacy policies. We therefore have no responsibility or liability for the content and activities of these linked sites. Nonetheless, we seek to protect the integrity of our site and welcome any feedback about these linked sites (including if a specific link does not work). We will post any changes to our policy, If we decide to change our privacy policy, on this page. Policy changes will apply only to information collected after the date of the change. This policy was last modified on September 21, 2016.</p>\n  </section>\n  <site-footer _v-6e828a76=\"\"></site-footer>\n</div>\n";
 
-/***/ }),
+/***/ },
 /* 126 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
@@ -41699,7 +41678,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-779af9b1/SectionThanks.vue"
+	  var id = "_v-d940e8c8/SectionThanks.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -41707,9 +41686,9 @@
 	  }
 	})()}
 
-/***/ }),
+/***/ },
 /* 127 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
@@ -41723,8 +41702,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-779af9b1&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionThanks.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-779af9b1&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionThanks.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-d940e8c8&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionThanks.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-d940e8c8&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SectionThanks.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -41733,23 +41712,23 @@
 		module.hot.dispose(function() { update(); });
 	}
 
-/***/ }),
+/***/ },
 /* 128 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(11)();
 	// imports
 
 
 	// module
-	exports.push([module.id, ".page[_v-779af9b1] {\n  -ms-flex-align: center;\n      align-items: center;\n  display: -ms-flexbox;\n  display: flex;\n  height: calc(100vh - 8rem);\n  -ms-flex-pack: center;\n      justify-content: center;\n  -ms-transform: translateY(-2rem);\n      transform: translateY(-2rem); }\n\nh1[_v-779af9b1] {\n  font-size: 1.8rem;\n  text-transform: uppercase; }\n", ""]);
+	exports.push([module.id, ".page[_v-d940e8c8] {\n  -ms-flex-align: center;\n      align-items: center;\n  display: -ms-flexbox;\n  display: flex;\n  height: calc(100vh - 8rem);\n  -ms-flex-pack: center;\n      justify-content: center;\n  -ms-transform: translateY(-2rem);\n      transform: translateY(-2rem); }\n\nh1[_v-d940e8c8] {\n  font-size: 1.8rem;\n  text-transform: uppercase; }\n", ""]);
 
 	// exports
 
 
-/***/ }),
+/***/ },
 /* 129 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	'use strict';
 
@@ -41769,15 +41748,15 @@
 	  }
 	};
 
-/***/ }),
+/***/ },
 /* 130 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"page\" _v-779af9b1=\"\">\n  <h1 _v-779af9b1=\"\">Thanks {{ forWhat }}</h1>\n</div>\n";
+	module.exports = "\n<div class=\"page\" _v-d940e8c8=\"\">\n  <h1 _v-d940e8c8=\"\">Thanks {{ forWhat }}</h1>\n</div>\n";
 
-/***/ }),
+/***/ },
 /* 131 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
@@ -41801,7 +41780,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-160a3ddd/Error404.vue"
+	  var id = "_v-5b86e512/Error404.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -41809,9 +41788,9 @@
 	  }
 	})()}
 
-/***/ }),
+/***/ },
 /* 132 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
@@ -41825,8 +41804,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-160a3ddd&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Error404.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-160a3ddd&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Error404.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-5b86e512&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Error404.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-5b86e512&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Error404.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -41835,35 +41814,35 @@
 		module.hot.dispose(function() { update(); });
 	}
 
-/***/ }),
+/***/ },
 /* 133 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(11)();
 	// imports
 
 
 	// module
-	exports.push([module.id, ".page-404[_v-160a3ddd] {\n  -ms-flex-align: center;\n      align-items: center;\n  display: -ms-flexbox;\n  display: flex;\n  height: calc(100vh - 8rem);\n  -ms-flex-pack: center;\n      justify-content: center;\n  -ms-transform: translateY(-2rem);\n      transform: translateY(-2rem); }\n\nh1[_v-160a3ddd] {\n  font-size: 1.8rem;\n  text-transform: uppercase; }\n", ""]);
+	exports.push([module.id, ".page-404[_v-5b86e512] {\n  -ms-flex-align: center;\n      align-items: center;\n  display: -ms-flexbox;\n  display: flex;\n  height: calc(100vh - 8rem);\n  -ms-flex-pack: center;\n      justify-content: center;\n  -ms-transform: translateY(-2rem);\n      transform: translateY(-2rem); }\n\nh1[_v-5b86e512] {\n  font-size: 1.8rem;\n  text-transform: uppercase; }\n", ""]);
 
 	// exports
 
 
-/***/ }),
+/***/ },
 /* 134 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	"use strict";
 
-/***/ }),
+/***/ },
 /* 135 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"page-404\" _v-160a3ddd=\"\">\n  <h1 _v-160a3ddd=\"\">Not Found</h1>\n</div>\n";
+	module.exports = "\n<div class=\"page-404\" _v-5b86e512=\"\">\n  <h1 _v-5b86e512=\"\">Not Found</h1>\n</div>\n";
 
-/***/ }),
+/***/ },
 /* 136 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
@@ -41887,7 +41866,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-d68bd296/App.vue"
+	  var id = "_v-8ae4702c/App.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -41895,9 +41874,9 @@
 	  }
 	})()}
 
-/***/ }),
+/***/ },
 /* 137 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
@@ -41921,9 +41900,9 @@
 		module.hot.dispose(function() { update(); });
 	}
 
-/***/ }),
+/***/ },
 /* 138 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(11)();
 	// imports
@@ -41935,9 +41914,9 @@
 	// exports
 
 
-/***/ }),
+/***/ },
 /* 139 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -41992,9 +41971,9 @@
 	  }
 	};
 
-/***/ }),
+/***/ },
 /* 140 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
@@ -42018,7 +41997,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-7a117a58/MenuOverlay.vue"
+	  var id = "_v-07fd537f/MenuOverlay.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -42026,9 +42005,9 @@
 	  }
 	})()}
 
-/***/ }),
+/***/ },
 /* 141 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
@@ -42042,8 +42021,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7a117a58&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./MenuOverlay.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7a117a58&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./MenuOverlay.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-07fd537f&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./MenuOverlay.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-07fd537f&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./MenuOverlay.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -42052,23 +42031,23 @@
 		module.hot.dispose(function() { update(); });
 	}
 
-/***/ }),
+/***/ },
 /* 142 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(11)();
 	// imports
 
 
 	// module
-	exports.push([module.id, ".menu-overlay-wrapper[_v-7a117a58] {\n  background: #ffffff;\n  bottom: 0;\n  display: block;\n  height: 100%;\n  left: 0;\n  min-height: 100vh;\n  overflow-y: scroll;\n  -webkit-overflow-scrolling: touch;\n  position: fixed;\n  right: 0;\n  top: 0;\n  width: 100%;\n  transition: opacity 500ms ease;\n  z-index: 1150; }\n  .menu-overlay-wrapper.fade-transition[_v-7a117a58] {\n    transition: opacity 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .menu-overlay-wrapper.fade-enter[_v-7a117a58], .menu-overlay-wrapper.fade-leave[_v-7a117a58] {\n    opacity: 0; }\n\n.menu-overlay[_v-7a117a58] {\n  -ms-flex-align: start;\n      align-items: flex-start;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: row;\n      flex-direction: row;\n  -ms-flex-pack: start;\n      justify-content: flex-start;\n  margin-top: 8rem; }\n  @media screen and (min-width: 768px) {\n    .menu-overlay[_v-7a117a58] {\n      margin-top: 0; } }\n\n@media (min-width: 768px) {\n  .menu-overlay__nav-wrapper[_v-7a117a58],\n  .menu-overlay__accent-wrapper[_v-7a117a58] {\n    min-height: 100vh;\n    width: 50%; } }\n\n.menu-overlay__nav-wrapper[_v-7a117a58] {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  -ms-flex-pack: center;\n      justify-content: center;\n  padding: 3.5rem; }\n  @media (min-width: 768px) {\n    .menu-overlay__nav-wrapper[_v-7a117a58] {\n      padding: 6rem; } }\n\n.menu-overlay__nav-list[_v-7a117a58] {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  -ms-flex-pack: center;\n      justify-content: center;\n  margin-bottom: 4rem;\n  max-width: 30rem; }\n\n.menu-overlay__nav-list__item[_v-7a117a58],\na.menu-overlay__nav-list__item[_v-7a117a58] {\n  font-family: \"sabon-roman\", serif;\n  font-size: 4rem;\n  color: #000000;\n  letter-spacing: 0.075rem;\n  line-height: 1.333;\n  text-decoration: none;\n  transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .menu-overlay__nav-list__item[_v-7a117a58]:hover,\n  a.menu-overlay__nav-list__item[_v-7a117a58]:hover {\n    color: #c1c1c1; }\n  @media (min-width: 768px) {\n    .menu-overlay__nav-list__item[_v-7a117a58],\n    a.menu-overlay__nav-list__item[_v-7a117a58] {\n      color: #c1c1c1; }\n      .menu-overlay__nav-list__item[_v-7a117a58]:hover,\n      a.menu-overlay__nav-list__item[_v-7a117a58]:hover {\n        color: #000000; } }\n\n.menu-overlay__nav-social[_v-7a117a58] {\n  border-top: 1px solid rgba(193, 193, 193, 0.333);\n  padding-top: 6rem; }\n\n.menu-overlay__nav-contact[_v-7a117a58] {\n  font-family: \"sabon-roman\", serif;\n  font-size: 1.4rem;\n  line-height: 1.4286;\n  margin-top: 4rem;\n  max-width: 30rem; }\n  .menu-overlay__nav-contact p[_v-7a117a58] {\n    margin-top: 1rem; }\n  .menu-overlay__nav-contact a[_v-7a117a58] {\n    color: #000000;\n    letter-spacing: 0.03rem;\n    text-decoration: none;\n    transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n    .menu-overlay__nav-contact a[_v-7a117a58]:hover {\n      color: #c1c1c1; }\n\n.menu-overlay__accent-wrapper[_v-7a117a58] {\n  display: none;\n  height: 100%;\n  overflow: hidden;\n  width: 50%; }\n  @media (min-width: 768px) {\n    .menu-overlay__accent-wrapper[_v-7a117a58] {\n      -ms-flex-align: start;\n          align-items: flex-start;\n      display: -ms-flexbox;\n      display: flex;\n      -ms-flex-direction: column;\n          flex-direction: column;\n      -ms-flex-pack: center;\n          justify-content: center; } }\n\n.menu-overlay__accent[_v-7a117a58] {\n  margin: 0;\n  max-height: 90%; }\n  @media (min-width: 768px) {\n    .menu-overlay__accent[_v-7a117a58] {\n      max-width: 40vw; } }\n\n.menu-overlay__btn-close[_v-7a117a58] {\n  cursor: pointer;\n  position: absolute;\n  right: 2rem;\n  top: 2rem; }\n  .menu-overlay__btn-close .menu-icon-close[_v-7a117a58] {\n    fill: #000000;\n    height: 1.333rem;\n    opacity: 1;\n    width: 1.333rem;\n    transition: all 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);\n    visibility: visible; }\n  .menu-overlay__btn-close:hover .menu-icon-close[_v-7a117a58] {\n    fill: #c1c1c1; }\n\n.menu-overlay__nav-social-links-wrapper[_v-7a117a58] {\n  border-top: 1px solid rgba(193, 193, 193, 0.333);\n  padding-top: 6rem; }\n", ""]);
+	exports.push([module.id, ".menu-overlay-wrapper[_v-07fd537f] {\n  background: #ffffff;\n  bottom: 0;\n  display: block;\n  height: 100%;\n  left: 0;\n  min-height: 100vh;\n  overflow-y: scroll;\n  -webkit-overflow-scrolling: touch;\n  position: fixed;\n  right: 0;\n  top: 0;\n  width: 100%;\n  transition: opacity 500ms ease;\n  z-index: 1150; }\n  .menu-overlay-wrapper.fade-transition[_v-07fd537f] {\n    transition: opacity 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .menu-overlay-wrapper.fade-enter[_v-07fd537f], .menu-overlay-wrapper.fade-leave[_v-07fd537f] {\n    opacity: 0; }\n\n.menu-overlay[_v-07fd537f] {\n  -ms-flex-align: start;\n      align-items: flex-start;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: row;\n      flex-direction: row;\n  -ms-flex-pack: start;\n      justify-content: flex-start;\n  margin-top: 8rem; }\n  @media screen and (min-width: 768px) {\n    .menu-overlay[_v-07fd537f] {\n      margin-top: 0; } }\n\n@media (min-width: 768px) {\n  .menu-overlay__nav-wrapper[_v-07fd537f],\n  .menu-overlay__accent-wrapper[_v-07fd537f] {\n    min-height: 100vh;\n    width: 50%; } }\n\n.menu-overlay__nav-wrapper[_v-07fd537f] {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  -ms-flex-pack: center;\n      justify-content: center;\n  padding: 3.5rem; }\n  @media (min-width: 768px) {\n    .menu-overlay__nav-wrapper[_v-07fd537f] {\n      padding: 6rem; } }\n\n.menu-overlay__nav-list[_v-07fd537f] {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  -ms-flex-pack: center;\n      justify-content: center;\n  margin-bottom: 4rem;\n  max-width: 30rem; }\n\n.menu-overlay__nav-list__item[_v-07fd537f],\na.menu-overlay__nav-list__item[_v-07fd537f] {\n  font-family: \"sabon-roman\", serif;\n  font-size: 4rem;\n  color: #000000;\n  letter-spacing: 0.075rem;\n  line-height: 1.333;\n  text-decoration: none;\n  transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .menu-overlay__nav-list__item[_v-07fd537f]:hover,\n  a.menu-overlay__nav-list__item[_v-07fd537f]:hover {\n    color: #c1c1c1; }\n  @media (min-width: 768px) {\n    .menu-overlay__nav-list__item[_v-07fd537f],\n    a.menu-overlay__nav-list__item[_v-07fd537f] {\n      color: #c1c1c1; }\n      .menu-overlay__nav-list__item[_v-07fd537f]:hover,\n      a.menu-overlay__nav-list__item[_v-07fd537f]:hover {\n        color: #000000; } }\n\n.menu-overlay__nav-social[_v-07fd537f] {\n  border-top: 1px solid rgba(193, 193, 193, 0.333);\n  padding-top: 6rem; }\n\n.menu-overlay__nav-contact[_v-07fd537f] {\n  font-family: \"sabon-roman\", serif;\n  font-size: 1.4rem;\n  line-height: 1.4286;\n  margin-top: 4rem;\n  max-width: 30rem; }\n  .menu-overlay__nav-contact p[_v-07fd537f] {\n    margin-top: 1rem; }\n  .menu-overlay__nav-contact a[_v-07fd537f] {\n    color: #000000;\n    letter-spacing: 0.03rem;\n    text-decoration: none;\n    transition: color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n    .menu-overlay__nav-contact a[_v-07fd537f]:hover {\n      color: #c1c1c1; }\n\n.menu-overlay__accent-wrapper[_v-07fd537f] {\n  display: none;\n  height: 100%;\n  overflow: hidden;\n  width: 50%; }\n  @media (min-width: 768px) {\n    .menu-overlay__accent-wrapper[_v-07fd537f] {\n      -ms-flex-align: start;\n          align-items: flex-start;\n      display: -ms-flexbox;\n      display: flex;\n      -ms-flex-direction: column;\n          flex-direction: column;\n      -ms-flex-pack: center;\n          justify-content: center; } }\n\n.menu-overlay__accent[_v-07fd537f] {\n  margin: 0;\n  max-height: 90%; }\n  @media (min-width: 768px) {\n    .menu-overlay__accent[_v-07fd537f] {\n      max-width: 40vw; } }\n\n.menu-overlay__btn-close[_v-07fd537f] {\n  cursor: pointer;\n  position: absolute;\n  right: 2rem;\n  top: 2rem; }\n  .menu-overlay__btn-close .menu-icon-close[_v-07fd537f] {\n    fill: #000000;\n    height: 1.333rem;\n    opacity: 1;\n    width: 1.333rem;\n    transition: all 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);\n    visibility: visible; }\n  .menu-overlay__btn-close:hover .menu-icon-close[_v-07fd537f] {\n    fill: #c1c1c1; }\n\n.menu-overlay__nav-social-links-wrapper[_v-07fd537f] {\n  border-top: 1px solid rgba(193, 193, 193, 0.333);\n  padding-top: 6rem; }\n", ""]);
 
 	// exports
 
 
-/***/ }),
+/***/ },
 /* 143 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -42134,15 +42113,15 @@
 	  }
 	};
 
-/***/ }),
+/***/ },
 /* 144 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"menu-overlay-wrapper\" _v-7a117a58=\"\">\n  <div class=\"menu-overlay\" _v-7a117a58=\"\">\n    <div class=\"menu-overlay__nav-wrapper\" _v-7a117a58=\"\">\n      <nav class=\"menu-overlay__nav-list\" _v-7a117a58=\"\">\n        <a v-link=\"{ name: 'home' }\" v-on:mouseover=\"setHoverItem('home')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-7a117a58=\"\">Home</a>\n        <a v-link=\"{ name: 'about' }\" v-on:mouseover=\"setHoverItem('about')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-7a117a58=\"\">About</a>\n        <a v-link=\"{ name: 'product' }\" v-on:mouseover=\"setHoverItem('product')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-7a117a58=\"\">Product</a>\n        <a v-link=\"{ name: 'stores' }\" v-on:mouseover=\"setHoverItem('stores')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-7a117a58=\"\">Stores</a>\n        <a v-link=\"{ name: 'press' }\" v-on:mouseover=\"setHoverItem('press')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-7a117a58=\"\">Press</a>\n        <a v-link=\"{ name: 'contact' }\" v-on:mouseover=\"setHoverItem('contact')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-7a117a58=\"\">Contact</a>\n      </nav>\n      <div class=\"menu-overlay__nav-social-links-wrapper\" _v-7a117a58=\"\">\n        <social-links _v-7a117a58=\"\"></social-links>\n      </div>\n      <div class=\"menu-overlay__nav-contact\" _v-7a117a58=\"\">\n        <p _v-7a117a58=\"\">For all general information please contact <a href=\"mailto:info@canderparis.com\" _v-7a117a58=\"\">info@canderparis.com</a></p>\n        <p _v-7a117a58=\"\">For press information please contact <a href=\"mailto:press@canderparis.com\" _v-7a117a58=\"\">press@canderparis.com</a></p>\n      </div>\n    </div>\n    <div class=\"menu-overlay__accent-wrapper\" _v-7a117a58=\"\">\n      <img :src=\"menuOverlay.navImageMap[hoverItem]\" class=\"menu-overlay__accent\" :data-id=\"hoverItem\" _v-7a117a58=\"\">\n    </div>\n  </div>\n</div>\n";
+	module.exports = "\n<div class=\"menu-overlay-wrapper\" _v-07fd537f=\"\">\n  <div class=\"menu-overlay\" _v-07fd537f=\"\">\n    <div class=\"menu-overlay__nav-wrapper\" _v-07fd537f=\"\">\n      <nav class=\"menu-overlay__nav-list\" _v-07fd537f=\"\">\n        <a v-link=\"{ name: 'home' }\" v-on:mouseover=\"setHoverItem('home')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-07fd537f=\"\">Home</a>\n        <a v-link=\"{ name: 'about' }\" v-on:mouseover=\"setHoverItem('about')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-07fd537f=\"\">About</a>\n        <a v-link=\"{ name: 'product' }\" v-on:mouseover=\"setHoverItem('product')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-07fd537f=\"\">Product</a>\n        <a v-link=\"{ name: 'stores' }\" v-on:mouseover=\"setHoverItem('stores')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-07fd537f=\"\">Stores</a>\n        <a v-link=\"{ name: 'press' }\" v-on:mouseover=\"setHoverItem('press')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-07fd537f=\"\">Press</a>\n        <a v-link=\"{ name: 'contact' }\" v-on:mouseover=\"setHoverItem('contact')\" v-on:click=\"closeMenu(300)\" class=\"menu-overlay__nav-list__item\" _v-07fd537f=\"\">Contact</a>\n      </nav>\n      <div class=\"menu-overlay__nav-social-links-wrapper\" _v-07fd537f=\"\">\n        <social-links _v-07fd537f=\"\"></social-links>\n      </div>\n      <div class=\"menu-overlay__nav-contact\" _v-07fd537f=\"\">\n        <p _v-07fd537f=\"\">For all general information please contact <a href=\"mailto:info@canderparis.com\" _v-07fd537f=\"\">info@canderparis.com</a></p>\n        <p _v-07fd537f=\"\">For press information please contact <a href=\"mailto:press@canderparis.com\" _v-07fd537f=\"\">press@canderparis.com</a></p>\n      </div>\n    </div>\n    <div class=\"menu-overlay__accent-wrapper\" _v-07fd537f=\"\">\n      <img :src=\"menuOverlay.navImageMap[hoverItem]\" class=\"menu-overlay__accent\" :data-id=\"hoverItem\" _v-07fd537f=\"\">\n    </div>\n  </div>\n</div>\n";
 
-/***/ }),
+/***/ },
 /* 145 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
@@ -42166,7 +42145,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-a7613460/Modal.vue"
+	  var id = "_v-1ea3da8a/Modal.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -42174,9 +42153,9 @@
 	  }
 	})()}
 
-/***/ }),
+/***/ },
 /* 146 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
@@ -42190,8 +42169,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-a7613460&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Modal.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-a7613460&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Modal.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1ea3da8a&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Modal.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1ea3da8a&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Modal.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -42200,23 +42179,23 @@
 		module.hot.dispose(function() { update(); });
 	}
 
-/***/ }),
+/***/ },
 /* 147 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(11)();
 	// imports
 
 
 	// module
-	exports.push([module.id, ".modal-wrap[_v-a7613460] {\n  background: rgba(0, 0, 0, 0.2);\n  bottom: 0;\n  display: block;\n  height: 100%;\n  left: 0;\n  min-height: 100vh;\n  position: fixed;\n  right: 0;\n  top: 0;\n  width: 100%;\n  transition: opacity 500ms ease;\n  z-index: 1050;\n  -ms-flex-align: center;\n      align-items: center;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: center;\n      justify-content: center; }\n  .modal-wrap.fade-transition[_v-a7613460] {\n    transition: opacity 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .modal-wrap.fade-enter[_v-a7613460], .modal-wrap.fade-leave[_v-a7613460] {\n    opacity: 0; }\n  .modal-wrap.fade-transition > .modal[_v-a7613460] {\n    transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955), opacity 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .modal-wrap.fade-enter > .modal[_v-a7613460],\n  .modal-wrap.fade-leave > .modal[_v-a7613460] {\n    opacity: 0;\n    -ms-transform: translateY(20px);\n        transform: translateY(20px); }\n\n.modal[_v-a7613460] {\n  background: #ffffff;\n  -ms-flex-align: start;\n      align-items: flex-start;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  -ms-flex-pack: center;\n      justify-content: center;\n  margin-top: 8rem;\n  padding: 3rem;\n  position: relative;\n  width: 100%;\n  min-height: 15rem; }\n  @media screen and (min-width: 400px) {\n    .modal[_v-a7613460] {\n      max-width: 400px; } }\n\n.btn-close[_v-a7613460] {\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n  background: transparent;\n  border: none;\n  display: block;\n  height: 1.3rem;\n  position: absolute;\n  right: 1.4rem;\n  top: 1.2rem;\n  width: 2rem;\n  text-indent: -9999px; }\n  .btn-close[_v-a7613460]:after, .btn-close[_v-a7613460]:before {\n    content: '';\n    display: block;\n    position: absolute;\n    width: 100%;\n    transition: border-color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .btn-close[_v-a7613460]:after {\n    border-bottom: 0.2rem solid #000000;\n    -ms-transform: rotate(45deg);\n        transform: rotate(45deg); }\n  .btn-close[_v-a7613460]:before {\n    border-top: 0.2rem solid #000000;\n    -ms-transform: rotate(-45deg);\n        transform: rotate(-45deg); }\n  .btn-close[_v-a7613460]:active, .btn-close[_v-a7613460]:focus {\n    outline: none;\n    box-shadow: none; }\n", ""]);
+	exports.push([module.id, ".modal-wrap[_v-1ea3da8a] {\n  background: rgba(0, 0, 0, 0.2);\n  bottom: 0;\n  display: block;\n  height: 100%;\n  left: 0;\n  min-height: 100vh;\n  position: fixed;\n  right: 0;\n  top: 0;\n  width: 100%;\n  transition: opacity 500ms ease;\n  z-index: 1050;\n  -ms-flex-align: center;\n      align-items: center;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: center;\n      justify-content: center; }\n  .modal-wrap.fade-transition[_v-1ea3da8a] {\n    transition: opacity 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .modal-wrap.fade-enter[_v-1ea3da8a], .modal-wrap.fade-leave[_v-1ea3da8a] {\n    opacity: 0; }\n  .modal-wrap.fade-transition > .modal[_v-1ea3da8a] {\n    transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955), opacity 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .modal-wrap.fade-enter > .modal[_v-1ea3da8a],\n  .modal-wrap.fade-leave > .modal[_v-1ea3da8a] {\n    opacity: 0;\n    -ms-transform: translateY(20px);\n        transform: translateY(20px); }\n\n.modal[_v-1ea3da8a] {\n  background: #ffffff;\n  -ms-flex-align: start;\n      align-items: flex-start;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n      flex-direction: column;\n  -ms-flex-pack: center;\n      justify-content: center;\n  margin-top: 8rem;\n  padding: 3rem;\n  position: relative;\n  width: 100%;\n  min-height: 15rem; }\n  @media screen and (min-width: 400px) {\n    .modal[_v-1ea3da8a] {\n      max-width: 400px; } }\n\n.btn-close[_v-1ea3da8a] {\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n  background: transparent;\n  border: none;\n  display: block;\n  height: 1.3rem;\n  position: absolute;\n  right: 1.4rem;\n  top: 1.2rem;\n  width: 2rem;\n  text-indent: -9999px; }\n  .btn-close[_v-1ea3da8a]:after, .btn-close[_v-1ea3da8a]:before {\n    content: '';\n    display: block;\n    position: absolute;\n    width: 100%;\n    transition: border-color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .btn-close[_v-1ea3da8a]:after {\n    border-bottom: 0.2rem solid #000000;\n    -ms-transform: rotate(45deg);\n        transform: rotate(45deg); }\n  .btn-close[_v-1ea3da8a]:before {\n    border-top: 0.2rem solid #000000;\n    -ms-transform: rotate(-45deg);\n        transform: rotate(-45deg); }\n  .btn-close[_v-1ea3da8a]:active, .btn-close[_v-1ea3da8a]:focus {\n    outline: none;\n    box-shadow: none; }\n", ""]);
 
 	// exports
 
 
-/***/ }),
+/***/ },
 /* 148 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -42369,15 +42348,15 @@
 	  }
 	};
 
-/***/ }),
+/***/ },
 /* 149 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
-	module.exports = "\n\n<div class=\"modal-wrap\" @click=\"closeModal\" _v-a7613460=\"\">\n  <div class=\"modal\" _v-a7613460=\"\">\n    <button @click=\"closeModal\" class=\"btn-close\" _v-a7613460=\"\"></button>\n    <h1 class=\"modal-title gamma\" v-if=\"modal.title\" _v-a7613460=\"\">{{ modal.title }}</h1>\n    <p class=\"modal-body p-beta\" v-if=\"modal.body\" _v-a7613460=\"\">{{ modal.body }}</p>\n    <form id=\"sold_out_form\" class=\"newsletter__form newsletter__form--in-modal group\" action=\"https://www.enformed.io/sgttqhhh\" method=\"post\" v-show=\"showForm\" _v-a7613460=\"\">\n      <!-- <label for=\"user-email\" class=\"newsletter__label\">Enter your email</label> -->\n      <div class=\"newsletter__form__inner\" _v-a7613460=\"\">\n        <input v-model=\"modal.userEmail\" id=\"user-email\" name=\"user-email\" class=\"newsletter__email\" type=\"email\" placeholder=\"EMAIL ADDRESS\" autocomplete=\"off\" autocorrect=\"off\" _v-a7613460=\"\">\n        <input v-if=\"modal.productOfInterest\" type=\"hidden\" name=\"product-of-interest\" value=\"{{ modal.productOfInterest }}\" _v-a7613460=\"\">\n        <input type=\"hidden\" name=\"*formname\" value=\"Product Interest Form\" _v-a7613460=\"\">\n        <input type=\"hidden\" name=\"*honeypot\" _v-a7613460=\"\">\n        <button id=\"btn-submit\" class=\"newsletter__form__btn-submit\" type=\"submit\" @click.prevent=\"submitForm\" _v-a7613460=\"\">Submit</button>\n      </div>\n    </form>\n  </div>\n</div>\n";
+	module.exports = "\n\n<div class=\"modal-wrap\" @click=\"closeModal\" _v-1ea3da8a=\"\">\n  <div class=\"modal\" _v-1ea3da8a=\"\">\n    <button @click=\"closeModal\" class=\"btn-close\" _v-1ea3da8a=\"\"></button>\n    <h1 class=\"modal-title gamma\" v-if=\"modal.title\" _v-1ea3da8a=\"\">{{ modal.title }}</h1>\n    <p class=\"modal-body p-beta\" v-if=\"modal.body\" _v-1ea3da8a=\"\">{{ modal.body }}</p>\n    <form id=\"sold_out_form\" class=\"newsletter__form newsletter__form--in-modal group\" action=\"https://www.enformed.io/sgttqhhh\" method=\"post\" v-show=\"showForm\" _v-1ea3da8a=\"\">\n      <!-- <label for=\"user-email\" class=\"newsletter__label\">Enter your email</label> -->\n      <div class=\"newsletter__form__inner\" _v-1ea3da8a=\"\">\n        <input v-model=\"modal.userEmail\" id=\"user-email\" name=\"user-email\" class=\"newsletter__email\" type=\"email\" placeholder=\"EMAIL ADDRESS\" autocomplete=\"off\" autocorrect=\"off\" _v-1ea3da8a=\"\">\n        <input v-if=\"modal.productOfInterest\" type=\"hidden\" name=\"product-of-interest\" value=\"{{ modal.productOfInterest }}\" _v-1ea3da8a=\"\">\n        <input type=\"hidden\" name=\"*formname\" value=\"Product Interest Form\" _v-1ea3da8a=\"\">\n        <input type=\"hidden\" name=\"*honeypot\" _v-1ea3da8a=\"\">\n        <button id=\"btn-submit\" class=\"newsletter__form__btn-submit\" type=\"submit\" @click.prevent=\"submitForm\" _v-1ea3da8a=\"\">Submit</button>\n      </div>\n    </form>\n  </div>\n</div>\n";
 
-/***/ }),
+/***/ },
 /* 150 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
@@ -42401,7 +42380,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-6a3fed21/SiteHeader.vue"
+	  var id = "_v-432f9b16/SiteHeader.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -42409,9 +42388,9 @@
 	  }
 	})()}
 
-/***/ }),
+/***/ },
 /* 151 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
@@ -42425,8 +42404,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6a3fed21&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SiteHeader.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6a3fed21&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SiteHeader.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-432f9b16&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SiteHeader.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-432f9b16&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./SiteHeader.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -42435,23 +42414,23 @@
 		module.hot.dispose(function() { update(); });
 	}
 
-/***/ }),
+/***/ },
 /* 152 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(11)();
 	// imports
 
 
 	// module
-	exports.push([module.id, ".site-header[_v-6a3fed21] {\n  display: block;\n  height: 8rem;\n  left: 0;\n  opacity: 1;\n  position: fixed;\n  right: 0;\n  text-align: center;\n  top: 0;\n  transform: translate3d(0, 0, 0);\n  width: 100%;\n  z-index: 1250; }\n  .site-header.fade-transition[_v-6a3fed21] {\n    transition: opacity 500ms cubic-bezier(0.455, 0.03, 0.515, 0.955), transform 500ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .site-header.fade-enter[_v-6a3fed21], .site-header.fade-leave[_v-6a3fed21] {\n    opacity: 0;\n    transform: translate3d(0, -10%, 0); }\n  .site-header[_v-6a3fed21]:after {\n    background: white;\n    display: block;\n    content: \"\";\n    width: 100%;\n    height: 8rem;\n    position: absolute;\n    z-index: -2; }\n  .shade--dark .site-header[_v-6a3fed21]:after {\n    background: transparent; }\n\n.logo[_v-6a3fed21] {\n  width: 12rem;\n  left: 50%;\n  margin: 0 auto;\n  position: absolute;\n  top: 50%;\n  -ms-transform: translate(-50%, -50%);\n      transform: translate(-50%, -50%); }\n\n.btn-menu[_v-6a3fed21] {\n  height: 1.3rem;\n  width: 1.8rem;\n  border: 0;\n  display: block;\n  position: absolute;\n  right: 3rem;\n  top: 50%;\n  -ms-transform: translateY(-50%);\n      transform: translateY(-50%);\n  transition: border-color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .btn-menu[_v-6a3fed21]:after, .btn-menu[_v-6a3fed21]:before {\n    content: '';\n    display: block;\n    position: absolute;\n    width: 100%;\n    top: 50%; }\n  .btn-menu[_v-6a3fed21]:after {\n    border-bottom: 0.2rem solid #000000;\n    top: 75%; }\n  .btn-menu[_v-6a3fed21]:before {\n    border-top: 0.2rem solid #000000;\n    top: 25%; }\n  .shade--dark .btn-menu[_v-6a3fed21]:after,\n  .shade--dark .btn-menu[_v-6a3fed21]:before {\n    border-color: #ffffff; }\n  .shade--light .btn-menu[_v-6a3fed21]:after,\n  .shade--light .btn-menu[_v-6a3fed21]:before {\n    border-color: #000000; }\n\n.btn-menu--open[_v-6a3fed21]:after, .btn-menu--open[_v-6a3fed21]:before {\n  top: 50%; }\n\n.btn-menu--open[_v-6a3fed21]:after {\n  -ms-transform: rotate(45deg);\n      transform: rotate(45deg); }\n\n.btn-menu--open[_v-6a3fed21]:before {\n  -ms-transform: rotate(-45deg);\n      transform: rotate(-45deg); }\n", ""]);
+	exports.push([module.id, ".site-header[_v-432f9b16] {\n  display: block;\n  height: 8rem;\n  left: 0;\n  opacity: 1;\n  position: fixed;\n  right: 0;\n  text-align: center;\n  top: 0;\n  transform: translate3d(0, 0, 0);\n  width: 100%;\n  z-index: 1250; }\n  .site-header.fade-transition[_v-432f9b16] {\n    transition: opacity 500ms cubic-bezier(0.455, 0.03, 0.515, 0.955), transform 500ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .site-header.fade-enter[_v-432f9b16], .site-header.fade-leave[_v-432f9b16] {\n    opacity: 0;\n    transform: translate3d(0, -10%, 0); }\n  .site-header[_v-432f9b16]:after {\n    background: white;\n    display: block;\n    content: \"\";\n    width: 100%;\n    height: 8rem;\n    position: absolute;\n    z-index: -2; }\n  .shade--dark .site-header[_v-432f9b16]:after {\n    background: transparent; }\n\n.logo[_v-432f9b16] {\n  width: 12rem;\n  left: 50%;\n  margin: 0 auto;\n  position: absolute;\n  top: 50%;\n  -ms-transform: translate(-50%, -50%);\n      transform: translate(-50%, -50%); }\n\n.btn-menu[_v-432f9b16] {\n  height: 1.3rem;\n  width: 1.8rem;\n  border: 0;\n  display: block;\n  position: absolute;\n  right: 3rem;\n  top: 50%;\n  -ms-transform: translateY(-50%);\n      transform: translateY(-50%);\n  transition: border-color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }\n  .btn-menu[_v-432f9b16]:after, .btn-menu[_v-432f9b16]:before {\n    content: '';\n    display: block;\n    position: absolute;\n    width: 100%;\n    top: 50%; }\n  .btn-menu[_v-432f9b16]:after {\n    border-bottom: 0.2rem solid #000000;\n    top: 75%; }\n  .btn-menu[_v-432f9b16]:before {\n    border-top: 0.2rem solid #000000;\n    top: 25%; }\n  .shade--dark .btn-menu[_v-432f9b16]:after,\n  .shade--dark .btn-menu[_v-432f9b16]:before {\n    border-color: #ffffff; }\n  .shade--light .btn-menu[_v-432f9b16]:after,\n  .shade--light .btn-menu[_v-432f9b16]:before {\n    border-color: #000000; }\n\n.btn-menu--open[_v-432f9b16]:after, .btn-menu--open[_v-432f9b16]:before {\n  top: 50%; }\n\n.btn-menu--open[_v-432f9b16]:after {\n  -ms-transform: rotate(45deg);\n      transform: rotate(45deg); }\n\n.btn-menu--open[_v-432f9b16]:before {\n  -ms-transform: rotate(-45deg);\n      transform: rotate(-45deg); }\n", ""]);
 
 	// exports
 
 
-/***/ }),
+/***/ },
 /* 153 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -42559,17 +42538,17 @@
 	  }
 	};
 
-/***/ }),
+/***/ },
 /* 154 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
-	module.exports = "\n<header class=\"site-header\" v-show=\"headerVisible\" transition=\"fade\" _v-6a3fed21=\"\">\n  <!-- Facebook Pixel Code -->\n  <script _v-6a3fed21=\"\">\n    !function(f,b,e,v,n,t,s)\n    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?\n    n.callMethod.apply(n,arguments):n.queue.push(arguments)};\n    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';\n    n.queue=[];t=b.createElement(e);t.async=!0;\n    t.src=v;s=b.getElementsByTagName(e)[0];\n    s.parentNode.insertBefore(t,s)}(window,document,'script',\n    'https://connect.facebook.net/en_US/fbevents.js');\n\n    fbq('init', '200282564039202');\n    fbq('track', 'PageView');\n  </script>\n  <noscript _v-6a3fed21=\"\">\n    <img height=\"1\" width=\"1\"\n  src=\"https://www.facebook.com/tr?id=200282564039202&ev=PageView\n  &noscript=1\"/>\n  </noscript>\n  <!-- End Facebook Pixel Code -->\n  <a href=\"/\" @click.prevent=\"logoClickHandler\" class=\"menu-overlay__nav-list__item\" _v-6a3fed21=\"\">\n    <img v-bind:src=\"logoUrl\" alt=\"CANDER PARIS\" title=\"CANDER PARIS\" class=\"logo\" _v-6a3fed21=\"\">\n  </a>\n  <a href=\"/\" @click.prevent=\"toggleMenu\" class=\"btn-menu btn-menu--{{ toggleState }}\" _v-6a3fed21=\"\"></a>\n</header>\n";
+	module.exports = "\n<header class=\"site-header\" v-show=\"headerVisible\" transition=\"fade\" _v-432f9b16=\"\">\n  <!-- Facebook Pixel Code -->\n  <script _v-432f9b16=\"\">\n    !function(f,b,e,v,n,t,s)\n    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?\n    n.callMethod.apply(n,arguments):n.queue.push(arguments)};\n    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';\n    n.queue=[];t=b.createElement(e);t.async=!0;\n    t.src=v;s=b.getElementsByTagName(e)[0];\n    s.parentNode.insertBefore(t,s)}(window,document,'script',\n    'https://connect.facebook.net/en_US/fbevents.js');\n\n    fbq('init', '200282564039202');\n    fbq('track', 'PageView');\n  </script>\n  <noscript _v-432f9b16=\"\">\n    <img height=\"1\" width=\"1\"\n  src=\"https://www.facebook.com/tr?id=200282564039202&ev=PageView\n  &noscript=1\"/>\n  </noscript>\n  <!-- End Facebook Pixel Code -->\n  <a href=\"/\" @click.prevent=\"logoClickHandler\" class=\"menu-overlay__nav-list__item\" _v-432f9b16=\"\">\n    <img v-bind:src=\"logoUrl\" alt=\"CANDER PARIS\" title=\"CANDER PARIS\" class=\"logo\" _v-432f9b16=\"\">\n  </a>\n  <a href=\"/\" @click.prevent=\"toggleMenu\" class=\"btn-menu btn-menu--{{ toggleState }}\" _v-432f9b16=\"\"></a>\n</header>\n";
 
-/***/ }),
+/***/ },
 /* 155 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"cander-wrapper page--{{ this.$route.name ? this.$route.name : 'default' }}\" id=\"cander-app\">\n  <site-header :dark-mode=\"darkMode\"></site-header>\n  <menu-overlay v-if=\"menuOverlay.visible\" transition=\"fade\"></menu-overlay>\n  <modal v-if=\"modal.visible\" transition=\"fade\"></modal>\n  <main class=\"main-content\">\n    <router-view></router-view>\n  </main>\n</div>\n";
 
-/***/ })
+/***/ }
 /******/ ]);
