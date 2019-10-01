@@ -72,6 +72,15 @@
   transform: translate(0, -3rem);
   user-select: none;
   width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+
+  > img {
+    max-width: unset;
+    height: 100vh;
+    object-fit: cover;
+  }
 }
 
 // SLIDE - SECTION 1: THE CANDLE
