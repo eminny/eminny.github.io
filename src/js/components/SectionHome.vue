@@ -17,7 +17,13 @@
            data-0="opacity: 1;"
            data-50p="opacity: 0;"
       >
-        <img src="/images/home-page-hero-image.jpg">
+        <img src="/images/home-page-hero-image-2x-900w.jpg"
+             srcset="
+               /images/home-page-hero-image-2x-1200w.jpg 2400w,
+               /images/home-page-hero-image-2x-900w.jpg 1800w,
+               /images/home-page-hero-image-2x-640w.jpg 1280w,
+               /images/home-page-hero-image-1x-900w.jpg 900w
+             " >
       </div>
     </div>
 
