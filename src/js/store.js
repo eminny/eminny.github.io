@@ -29,102 +29,61 @@ store.data = {
   language: 'en',
   retailers: [
     {
-      name: 'Kirna Zabête',
+      name: 'Bergdorf Goodman',
       locations: [
-        '477 Broome Street<br>New York, NY 10013<br>USA',
+        '754 5th Ave<br />NY, NY 10019',
+      ],
+      website: 'http://www.bergdorfgoodman.com/',
+    },
+    {
+      name: 'Nordstrom Flagship',
+      locations: [
+        '225 West 57th Street<br />NY, NY 10019',
+      ],
+      website: 'http://nordstrom.com',
+    },
+    {
+      name: 'Granville',
+      locations: [
+        '6809 Phillips Pl Ct.<br />Charlotte, NC 28210',
+      ],
+      website: 'http://granville-charlotte.com',
+    },
+    {
+      name: 'The Paris Market',
+      locations: [
+        '70B Boat House Row<br />Palmetto Bluff, SA 29910',
+      ],
+      website: 'http://theparismarket.com',
+    },
+    {
+      name: 'Illuminated Candle Bar',
+      locations: [
+        '2415 Montevallo Rd<br />Mountain Brook, AL 35223',
+      ],
+      website: 'http://illuminatedbham.com',
+    },
+    {
+      name: 'Ron Robinson at Fred Segal',
+      locations: [
+        '8118 Melrose Ave<br />Los Angeles, CA 90046',
+      ],
+      website: 'https://ronrobinson.com/fred-segal-melrose-store/',
+    },
+    {
+      name: 'Kirna Zabete',
+      locations: [
+        'United States, Storewide',
       ],
       website: 'http://kirnazabete.com',
-      // mapCoords: {
-      //   lat: 40.722699,
-      //   lng: -74.002094
-      // },
-      // mapRevealed: false,
     },
     {
-      name: 'Kirna Zabête',
+      name: 'Harvey Nichols x Pad Lifestyle',
       locations: [
-        'The Royal Poinciana Plaza<br>340 Royal Poinciana Way Suite 305<br>Palm Beach, FL 33480<br>USA'
-      ],
-      website: 'https://theroyalpoincianaplaza.com/business/kirna-zabete/'
-    },
-    {
-      name: 'Luisa Via Roma',
-      locations: [
-        'Via Roma 19/21<br>50123 Florence, Italy'
-      ],
-      website: 'http://www.luisaviaroma.com/'
-    },
-    {
-      name: 'Megusta',
-      locations: [
-        'Lange Jansstraat 15<br>3512 BA Utecht<br>The Netherlands'
-      ],
-      website: 'https://www.megusta.nl/'
-    },
-    {
-      name: 'Chenchun Boutique',
-      locations: [
-        'Tainan, Taiwan'
-      ],
-      website: 'https://www.chen-chun.com/'
-    },
-    {
-      name: 'Beige',
-      locations: [
-        'Kaohsiung, Taiwan'
-      ],
-      website: 'https://www.facebook.com/BEIGEbyC/'
-    },
-    {
-      name: 'Coggles',
-      website: 'https://www.coggles.com/'
-    },
-    {
-      name: 'Pad Lifestyle Harvey Nichols UK',
-      locations: [
+        'United Kingdom Storewide',
       ],
       website: 'https://www.padlifestyle.com/search?q=cander+paris'
     },
-    {
-      name: 'GEE Beauty',
-      locations: [
-        '1845 Purdy Avenue<br>Miami Beach, FL 33139<br>USA'
-      ],
-      website: 'https://www.geebeauty.com/'
-    },
-    {
-      name: 'Mrs. Mandolin',
-      locations: [
-        '4218 NE 2nd Avenue<br>Miami, FL 33137<br>USA'
-      ],
-      website: 'http://www.mrsmandolin.com/'
-    },
-    {
-      name: 'Penelope & The Beauty Bar',
-      locations: [
-        'Fairmont Olympic Hotel<br>411 University Street<br>Seattle, WA 98101<br>USA'
-      ],
-      website: 'https://www.penelopeandthebeautybar.com/'
-    }
-    // {
-    //   name: 'Beam BK',
-    //   locations: [
-    //     '240 Kent Avenue (at N. 1st) <br>Brooklyn, NY 11249<br>USA'
-    //   ],
-    //   website: 'https://beambk.com/'
-    // }
-    // {
-    //   name: 'Barneys New York',
-    //   locations: [
-    //     'Madison Avenue Flagship<br>660 Madison Avenue<br>New York, NY 10065',
-    //   ],
-    //   website: 'http://barneys.com',
-    //   mapCoords: {
-    //     lat: 40.7647180,
-    //     lng: -73.9711280
-    //   },
-    //   mapRevealed: false,
-    // },
   ],
   googleMaps: {
     apiKey: 'AIzaSyDGWEnF8tC8zkdjhfLjEwDAjKVvtTOxORs',
