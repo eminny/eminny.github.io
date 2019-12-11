@@ -16708,13 +16708,28 @@
 	  skrollr: void 0,
 	  language: 'en',
 	  retailers: [{
+	    name: 'Beige',
+	    locations: ['Kaohsiung, Taiwan'],
+	    website: 'https://www.facebook.com/BEIGEbyC/'
+	  }, {
 	    name: 'Bergdorf Goodman',
 	    locations: ['754 5th Ave<br />NY, NY 10019'],
 	    website: 'http://www.bergdorfgoodman.com/'
 	  }, {
+	    name: 'Chenchun Boutique',
+	    locations: ['Tainan, Taiwan'],
+	    website: 'https://www.chen-chun.com/'
+	  }, {
+	    name: 'Coggles',
+	    website: 'https://www.coggles.com/'
+	  }, {
 	    name: 'Nordstrom Flagship',
 	    locations: ['225 West 57th Street<br />NY, NY 10019'],
 	    website: 'http://nordstrom.com'
+	  }, {
+	    name: 'GEE Beauty',
+	    locations: ['1845 Purdy Avenue<br>Miami Beach, FL 33139<br>USA'],
+	    website: 'https://www.geebeauty.com/'
 	  }, {
 	    name: 'Granville',
 	    locations: ['6809 Phillips Pl Ct.<br />Charlotte, NC 28210'],
@@ -16727,6 +16742,22 @@
 	    name: 'Illuminated Candle Bar',
 	    locations: ['2415 Montevallo Rd<br />Mountain Brook, AL 35223'],
 	    website: 'http://illuminatedbham.com'
+	  }, {
+	    name: 'Luisa Via Roma',
+	    locations: ['Via Roma 19/21<br>50123 Florence, Italy'],
+	    website: 'http://www.luisaviaroma.com/'
+	  }, {
+	    name: 'Mrs. Mandolin',
+	    locations: ['4218 NE 2nd Avenue<br>Miami, FL 33137<br>USA'],
+	    website: 'http://www.mrsmandolin.com/'
+	  }, {
+	    name: 'Megusta',
+	    locations: ['Lange Jansstraat 15<br>3512 BA Utecht<br>The Netherlands'],
+	    website: 'https://www.megusta.nl/'
+	  }, {
+	    name: 'Penelope & The Beauty Bar',
+	    locations: ['Fairmont Olympic Hotel<br>411 University Street<br>Seattle, WA 98101<br>USA'],
+	    website: 'https://www.penelopeandthebeautybar.com/'
 	  }, {
 	    name: 'Ron Robinson at Fred Segal',
 	    locations: ['8118 Melrose Ave<br />Los Angeles, CA 90046'],
