@@ -9,8 +9,21 @@
           <div class="section-about__intro__text-wrap__inner" v-show="language === 'en'" transition="fade">
             <h1 class="zeta">by Elizabeth Minett</h1>
             <h2 class="delta"><strong>Can<span style="font-size:0.75em">•</span>dor [ 'kandər ]</strong>, <em>noun</em><br>the quality of being open and honest in expression</h2>
-            <h3 class="p-beta">Cander Paris was founded in 2016 by Elizabeth Minett. Elizabeth was born and raised in a place where candor was the essence of her culture. A childhood filled with the rustic landscapes of harsh winters would forever shape her olfactive tastes. She developed a more refined nose during her years travelling the globe as a bon vivant, especially whilst in France. Cander Paris is inspired not only by her passion for luxury ambiance, but by the intimacy of candid moments, and the quest for genuine expression. She has teamed with world-renowned French perfumer Emmanuel Philip to create her debut collection. Made in France with the excellence and tradition of French perfumery, the candles are exquisitely crafted of the highest quality. Refined, and euphorically indulgent. The fragrances of candid moments.</h3>
-            <h3 class="p-beta">Elizabeth was born and raised near Toronto, Canada of Norwegian and Russian heritage. After a chance encounter in an elevator, she was scouted to work as a fashion model and soon moved to Europe. She was an early adopter of the digital influencer trend, and transitioned from the modelling world to create her successful lifestyle website. An auspicious visit to her friend’s perfume lab set her heart aflame for her next evolution as a scent creator. She is one of the youngest female entrepreneurs to have created her own luxury home scent brand. Elizabeth is regularly featured in online publications like Vogue, Elle, Harper’s Bazaar, and Grazia for her style and influence.</h3>
+
+            <h3 class="p-beta">Cander (like “candor”) embodies the principle that scent is a candid, genuine expression. The beautifully crafted candles of Cander create contemporary ambiance through their signature scents and esthetic. 
+            </h3>
+
+            <h3 class="p-beta">Cander Paris candles are made in France from a vegetable wax blend created by the most renowned candlemakers in the world, House of Trudon, who have been perfecting their craft since the 17th century. 
+            </h3>
+
+            <h3 class="p-beta">Founder Elizabeth Minett created Cander out of her passion for indelible olfactory experiences. The crystal air and still woods of Minett’s native Canada marked the origins of her fragrance palette. After building a career as an international fashion model and social influencer, she understood that in order to build a brand out of authenticity and love, her own would need to be rooted in connection and intuition, not an algorithm.
+            </h3>
+
+            <h3 class="p-beta">Her journey with Cander began in France where she was introduced to French master perfumer Emmanual Philip. The two connected immediately after Philip saw firsthand, Minett’s passion for fragrance, and together over two years, they developed Cander's stable of scented candles. 
+            </h3>
+
+            <h3 class="p-beta">Using only the highest quality materials, Cander's proprietary wax is poured into hand-blown glass for the finest fragrance experience. The Cander mainstay candles elevate beloved elemental scents, like sandalwood and smoke, delivering unexpected pairings to accentuate notes that exude dimension, richness and mystery.
+            </h3>
           </div>
           <div class="section-about__intro__text-wrap__inner" v-show="language === 'fr'" transition="fade">
             <h1 class="zeta">par Elizabeth Minett</h1>
