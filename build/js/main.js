@@ -17401,7 +17401,7 @@
 /* 27 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<footer class=\"site-footer\">\n  <div class=\"site-footer__social-icons-wrapper\">\n    <social-links></social-links>\n  </div>\n  <form id=\"newsletter__form\"\n        class=\"newsletter__form group\"\n        action=\"//hauteappetite.createsend.com/t/i/s/npiud/\"\n        method=\"post\"\n        id=\"subForm\"\n  >\n    <label for=\"fieldEmail\" class=\"newsletter__label\">Sign up and stay updated</label>\n    <div class=\"newsletter__form__inner\">\n      <input id=\"fieldEmail\" name=\"cm-npiud-npiud\" class=\"newsletter__email\" type=\"email\" placeholder=\"EMAIL ADDRESS\" autocomplete=\"off\" autocorrect=\"off\" required>\n      <button class=\"newsletter__form__btn-submit\" type=\"submit\">Submit</button>\n    </div>\n  </form>\n  <p class=\"site-footer__copyright\">&copy; 2019 CANDER PARIS. <a v-link=\"{ name: 'privacy' }\">Privacy</a> / <a v-link=\"{ name: 'terms' }\">Terms.</a></p>\n</footer>\n";
+	module.exports = "\n<footer class=\"site-footer\">\n  <div class=\"site-footer__social-icons-wrapper\">\n    <social-links></social-links>\n  </div>\n  <form id=\"newsletter__form\"\n        class=\"newsletter__form group\"\n        action=\"//hauteappetite.createsend.com/t/i/s/npiud/\"\n        method=\"post\"\n        id=\"subForm\"\n  >\n    <label for=\"fieldEmail\" class=\"newsletter__label\">Sign up and stay updated</label>\n    <div class=\"newsletter__form__inner\">\n      <input id=\"fieldEmail\" name=\"cm-npiud-npiud\" class=\"newsletter__email\" type=\"email\" placeholder=\"EMAIL ADDRESS\" autocomplete=\"off\" autocorrect=\"off\" required>\n      <button class=\"newsletter__form__btn-submit\" type=\"submit\">Submit</button>\n    </div>\n  </form>\n  <p class=\"site-footer__copyright\">&copy; 2020 CANDER PARIS. <a v-link=\"{ name: 'privacy' }\">Privacy</a> / <a v-link=\"{ name: 'terms' }\">Terms.</a></p>\n</footer>\n";
 
 /***/ },
 /* 28 */
@@ -36046,19 +36046,37 @@
 	            throw new Error('Could not initialize: options not found.');
 	          }
 
-	          var flickityInstance = new Flickity('.diary-carousel', {
-	            bgLazyLoad: 4,
-	            cellAlign: 'left',
-	            contain: true,
-	            pageDots: false,
-	            percentPosition: false,
-	            prevNextButtons: false,
-	            slidesWidth: '35rem',
-	            wrapAround: true,
-	            freeScroll: true
-	          });
+	          console.log('is mobile: ' + (0, _helpers.isMobile)());
 
-	          window.flkty = flickityInstance;
+	          if ((0, _helpers.isMobile)()) {
+	            var flickityInstance = new Flickity('.diary-carousel', {
+	              bgLazyLoad: 4,
+	              cellAlign: 'center',
+	              contain: true,
+	              pageDots: false,
+	              percentPosition: false,
+	              prevNextButtons: true,
+	              slidesWidth: '35rem',
+	              wrapAround: true,
+	              freeScroll: true
+	            });
+
+	            window.flkty = flickityInstance;
+	          } else {
+	            var _flickityInstance = new Flickity('.diary-carousel', {
+	              bgLazyLoad: 4,
+	              cellAlign: 'left',
+	              contain: true,
+	              pageDots: false,
+	              percentPosition: false,
+	              prevNextButtons: false,
+	              slidesWidth: '35rem',
+	              wrapAround: true,
+	              freeScroll: true
+	            });
+
+	            window.flkty = _flickityInstance;
+	          }
 	        },
 	        error: function error() {
 	          var msg = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';

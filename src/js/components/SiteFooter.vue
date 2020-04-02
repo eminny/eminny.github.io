@@ -15,7 +15,7 @@
         <button class="newsletter__form__btn-submit" type="submit">Submit</button>
       </div>
     </form>
-    <p class="site-footer__copyright">&copy; 2019 CANDER PARIS. <a v-link="{ name: 'privacy' }">Privacy</a> / <a v-link="{ name: 'terms' }">Terms.</a></p>
+    <p class="site-footer__copyright">&copy; 2020 CANDER PARIS. <a v-link="{ name: 'privacy' }">Privacy</a> / <a v-link="{ name: 'terms' }">Terms.</a></p>
   </footer>
 </template>
 

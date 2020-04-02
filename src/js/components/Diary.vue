@@ -56,7 +56,7 @@
 </style>
 
 <script>
-  import { addClass } from '../helpers'
+  import { addClass, isMobile } from '../helpers'
   const Flickity = require('flickity-bg-lazyload')
   const Instafeed = require("instafeed.js")
 
@@ -82,20 +82,37 @@
               throw new Error('Could not initialize: options not found.');
             }
 
-            let flickityInstance = new Flickity('.diary-carousel', {
-              bgLazyLoad: 4,
-              cellAlign: 'left',
-              contain: true,
-              pageDots: false,
-              percentPosition: false,
-              prevNextButtons: false,
-              slidesWidth: '35rem',
-              wrapAround: true,
-              freeScroll: true,
-            })
+            console.log('is mobile: ' + isMobile())
 
-            window.flkty = flickityInstance
+            if (isMobile()){
+              let flickityInstance = new Flickity('.diary-carousel', {
+                bgLazyLoad: 4,
+                cellAlign: 'center',
+                contain: true,
+                pageDots: false,
+                percentPosition: false,
+                prevNextButtons: true,
+                slidesWidth: '35rem',
+                wrapAround: true,
+                freeScroll: true,
+              })
 
+              window.flkty = flickityInstance
+            } else {
+              let flickityInstance = new Flickity('.diary-carousel', {
+                bgLazyLoad: 4,
+                cellAlign: 'left',
+                contain: true,
+                pageDots: false,
+                percentPosition: false,
+                prevNextButtons: false,
+                slidesWidth: '35rem',
+                wrapAround: true,
+                freeScroll: true,
+              })
+
+              window.flkty = flickityInstance
+            }
           },
           error (msg = '') {
             const numberOfPosts = document.querySelectorAll('.diary-carousel__cell').length
