@@ -1550,7 +1550,7 @@ input[type=number]::-webkit-outer-spin-button {
   opacity: 0;
 }
 .is-mobile .slide__icn-scroll {
-  bottom: 10rem;
+  bottom: 1rem;
   left: calc(50%);
 }
 
@@ -1686,6 +1686,7 @@ input[type=number]::-webkit-outer-spin-button {
 .is-mobile .slide__product-wrapper {
   height: auto;
   width: 100%;
+  margin-top: 80px;
 }
 
 .slide__product-heading {

@@ -11,67 +11,12 @@
       data-400-end="opacity: 0;"
       data-end="opacity: 0;">Scroll Down</span>
 
-    <!-- SECTION 0: INTRO/HERO -->
-    <div class="slide slide--0 slide--intro">
-      <div class="slide--intro__logo"
-           data-0="opacity: 1;"
-           data-50p="opacity: 0;"
-      >
-        <img src="/images/home-page-hero-image-2x-900w.jpg"
-             srcset="
-               /images/home-page-hero-image-2x-1200w.jpg 2400w,
-               /images/home-page-hero-image-2x-900w.jpg 1800w,
-               /images/home-page-hero-image-2x-640w.jpg 1280w
-             " >
-      </div>
-    </div>
-
-    <!-- SECTION 1a: THE FEATURED CANDLE -->
-    <div class="slide slide--1" id="the-fold-a"
-         data-0="transform: translate(0, 100%);"
-         data-100p="transform: translate(0, 0%)"
-    >
-      <!-- Product Images (non-mobile) -->
-      <div class="slide__product-wrapper"
-           data-0="opacity: 0"
-           data-100p="opacity: 1"
-           data-150p="opacity: 1"
-           data-220p="opacity: 0"
-      >
-        <div class="slide__products">
-          <div class="slide__product slide__product__featured" data-product-title="Scent 01">
-            <a href="https://cander-paris-us.myshopify.com/products/fete">
-              <img src="/images/updated-candles/20190930/fete.jpg" v-on:mouseenter="/images/scent01mouseover.jpg" alt="Scent 01" />
-            </a>
-            <div class="slide__product__featured__cta__wrapper">
-              <a href="https://cander-paris-us.myshopify.com/products/fete" class="slide__product__featured__cta__anchor">
-                <div class="slide__product__featured__cta__outer">
-                  <div class="slide__product__featured__cta">
-                    <p class="slide__product__featured__name">FÊTE</p>
-                    <p class="slide__product__featured__desc">Introducing our holiday fragrance featuring pomegranate, citrus & spice.</p>
-                    <p class="slide__product__featured__btn">ADD TO CART</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- SECTION 1b: THE CANDLES -->
-    <div class="slide slide--1" id="the-fold"
-         data-0="transform: translate(0, 100%);"
-         data-150p="transform: translate(0, 100%);"
-         data-250p="transform: translate(0, 0%)"
-    >
+    <div class="slide slide--1" id="the-fold">
       <!-- Product Images (non-mobile) -->
       <div class="slide__product-wrapper"
-           data-0="opacity: 0"
-           data-150p="opacity: 0"
-           data-250p="opacity: 1"
-           data-300p="opacity: 1"
-           data-350p="opacity: 0"
+           data-0="opacity: 1"
+           data-200p="opacity: 0"
       >
         <div class="slide__products">
           <div class="slide__product" data-product-title="Scent 01">
@@ -105,10 +50,10 @@
     <!-- SECTION 2: THE SCENT -->
     <div class="slide slide--2 shade--dark"
          data-0="opacity: 0"
-         data-300p="opacity: 0; transform: translate(0, 100%);"
-         data-350p="opacity: 0; transform: translate(0, 5%);"
-         data-400p="opacity: 1; transform: translate(0, 0%);"
-         data-550p="opacity: 0; transform: translate(0, -2%);"
+         data-100p="opacity: 0; transform: translate(0, 100%);"
+         data-150p="opacity: 0; transform: translate(0, 5%);"
+         data-200p="opacity: 1; transform: translate(0, 0%);"
+         data-350p="opacity: 0; transform: translate(0, -2%);"
     >
       <div class="slide--2__bg is-dark" style="background-image: url('/images/bg-aromatic-santal.jpg');"></div>
       <div class="the-scent">
@@ -119,11 +64,11 @@
     <!-- SECTION 3: DOOR -->
     <div class="slide slide--3"
          data-0="opacity: 0"
-         data-400p="opacity: 0; transform: translate(0, 100%);"
-         data-550p="opacity: 0; transform: translate(0, 30%);"
-         data-600p="opacity: 1; transform: translate(0, 0%);"
-         data-750p="opacity: 1; transform: translate(0, 0%);"
-         data-850p="transform: translate(0, -120%);"
+         data-200p="opacity: 0; transform: translate(0, 100%);"
+         data-350p="opacity: 0; transform: translate(0, 30%);"
+         data-400p="opacity: 1; transform: translate(0, 0%);"
+         data-550p="opacity: 1; transform: translate(0, 0%);"
+         data-650p="transform: translate(0, -120%);"
     >
       <div class="translations-wrapper">
         <ul class="translations-list">
@@ -141,11 +86,11 @@
     <!-- SECTION 4: PRODUCT -->
     <div class="slide slide--4"
         data-0="opacity: 0"
-        data-800p="opacity: 0; transform: translate(0, 100%);"
-        data-825p="opacity: 0; transform: translate(0, 20%);"
-        data-860p="opacity: 0.3; transform: translate(0, 5%);"
-        data-870p="opacity: 1; transform: translate(0, 0%);"
-        data-940p="opacity: 0"
+        data-600p="opacity: 0; transform: translate(0, 100%);"
+        data-625p="opacity: 0; transform: translate(0, 20%);"
+        data-660p="opacity: 0.3; transform: translate(0, 5%);"
+        data-670p="opacity: 1; transform: translate(0, 0%);"
+        data-740p="opacity: 0"
     >
       <div class="slide--4__inner">
         <img src="/images/menu-accent-contact-transparent.png" alt="Front" class="slide--4__product-image">
@@ -156,10 +101,10 @@
     <!-- SECTION 5: DIARY -->
     <div class="slide slide--5"
          data-0="opacity: 0"
-         data-950p="opacity: 0; transform: translate(0, 100%)"
-         data-1000p="opacity: 0.3; transform: translate(0, 30%);"
-         data-1020p="opacity: 1; transform: translate(0, 0%)"
-         data-1070p="transform: translate(0, -10%);"
+         data-750p="opacity: 0; transform: translate(0, 100%)"
+         data-800p="opacity: 0.3; transform: translate(0, 30%);"
+         data-820p="opacity: 1; transform: translate(0, 0%)"
+         data-870p="transform: translate(0, -10%);"
     >
       <div class="diaryfeed">
         <diary></diary>
@@ -169,10 +114,10 @@
     <!-- FOOTER -->
     <div class="slide--footer-wrapper"
          data-0="opacity: 0"
-         data-1040p="opacity: 0; transform: translate(0, 100%);"
-         data-1050p="opacity: 0; transform: translate(0, 20%);"
-         data-1090p="opacity: 0.3; transform: translate(0, 5%);"
-         data-1100p="opacity: 1; transform: translate(0, 0%);"
+         data-840p="opacity: 0; transform: translate(0, 100%);"
+         data-850p="opacity: 0; transform: translate(0, 20%);"
+         data-890p="opacity: 0.3; transform: translate(0, 5%);"
+         data-900p="opacity: 1; transform: translate(0, 0%);"
     >
       <site-footer></site-footer>
     </div>

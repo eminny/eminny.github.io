@@ -67,9 +67,6 @@
         if (this.menuOverlay.visible) {
           return true;
         }
-        if (this.isHomePage && this.scrollPos.top > -window.innerHeight) {
-          return false;
-        }
         return true;
       },
       toggleState () {
