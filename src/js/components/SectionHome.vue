@@ -43,6 +43,12 @@
             </a>
             <a href="https://cander-paris-us.myshopify.com/products/rose" class="slide__product__btn">ROSE</a>
           </div>
+          <div class="slide__product" data-product-title="Fete">
+            <a href="https://cander-paris-us.myshopify.com/products/fete">
+              <img src="/images/updated-candles/20190930/fete.jpg" alt="Fete">
+            </a>
+            <a href="https://cander-paris-us.myshopify.com/products/fete" class="slide__product__btn">Fete</a>
+          </div>
         </div>
       </div>
     </div>
