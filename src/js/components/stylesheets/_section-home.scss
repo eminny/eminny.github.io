@@ -6,7 +6,19 @@
   max-width: none;
 
   .is-mobile & {
+    display: none;
+  }
+}
+
+#hero-video-mobile {
+  display: none;
+  object-fit: fill;
+  width: 100%;
+  max-width: none;
+
+  .is-mobile & {
     width: 200%;
+    display: block;
   }
 }
 
