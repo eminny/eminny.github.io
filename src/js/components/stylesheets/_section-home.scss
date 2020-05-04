@@ -1,5 +1,24 @@
 @import "../../../stylesheets/variables";
 
+#hero-video {
+  object-fit: fill;
+  width: 100%;
+  max-width: none;
+
+  .is-mobile & {
+    width: 200%;
+  }
+}
+
+#hero-audio {
+  position: absolute;
+  top: 125px;
+  height: 20px;
+  width: 23px;
+  right: 15px;
+  z-index: 100;
+}
+
 .the-scent {
   align-items: center;
   display: flex;

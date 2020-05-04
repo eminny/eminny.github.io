@@ -10,13 +10,31 @@
       data-450-end="opacity: 0.5;"
       data-400-end="opacity: 0;"
       data-end="opacity: 0;">Scroll Down</span>
-
+    <!-- SECTION 1a: HERO VIDEO -->
+    <div class="slide slide--0 slide--intro">
+      <div class="slide--intro__logo"
+           data-0="opacity: 1;"
+           data-50p="opacity: 0;">
+        <img src="/images/sound-off.svg" 
+             id="hero-audio"
+             v-on:click="toggleSound">
+        <video playsinline autoplay muted loop 
+               id="hero-video">
+          <source src="/images/hero_video.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
     <!-- SECTION 1b: THE CANDLES -->
-    <div class="slide slide--1" id="the-fold">
+    <div class="slide slide--1" id="the-fold"
+      data-0="transform: translate(0, 100%);"
+      data-100p="transform: translate(0, 0%)"
+    >
       <!-- Product Images (non-mobile) -->
       <div class="slide__product-wrapper"
-           data-0="opacity: 1"
-           data-200p="opacity: 0"
+           data-0="opacity: 0"
+           data-100p="opacity: 1"
+           data-150p="opacity: 1"
+           data-220p="opacity: 0"
       >
         <div class="slide__products">
           <div class="slide__product" data-product-title="Scent 01">
@@ -50,10 +68,10 @@
     <!-- SECTION 2: THE SCENT -->
     <div class="slide slide--2 shade--dark"
          data-0="opacity: 0"
-         data-100p="opacity: 0; transform: translate(0, 100%);"
-         data-150p="opacity: 0; transform: translate(0, 5%);"
-         data-200p="opacity: 1; transform: translate(0, 0%);"
-         data-350p="opacity: 0; transform: translate(0, -2%);"
+         data-200p="opacity: 0; transform: translate(0, 100%);"
+         data-250p="opacity: 0; transform: translate(0, 5%);"
+         data-300p="opacity: 1; transform: translate(0, 0%);"
+         data-450p="opacity: 0; transform: translate(0, -2%);"
     >
       <div class="slide--2__bg is-dark" style="background-image: url('/images/bg-aromatic-santal.jpg');"></div>
       <div class="the-scent">
@@ -64,11 +82,11 @@
     <!-- SECTION 3: DOOR -->
     <div class="slide slide--3"
          data-0="opacity: 0"
-         data-200p="opacity: 0; transform: translate(0, 100%);"
-         data-350p="opacity: 0; transform: translate(0, 30%);"
-         data-400p="opacity: 1; transform: translate(0, 0%);"
-         data-550p="opacity: 1; transform: translate(0, 0%);"
-         data-650p="transform: translate(0, -120%);"
+         data-300p="opacity: 0; transform: translate(0, 100%);"
+         data-450p="opacity: 0; transform: translate(0, 30%);"
+         data-500p="opacity: 1; transform: translate(0, 0%);"
+         data-650p="opacity: 1; transform: translate(0, 0%);"
+         data-750p="transform: translate(0, -120%);"
     >
       <div class="translations-wrapper">
         <ul class="translations-list">
@@ -86,11 +104,11 @@
     <!-- SECTION 4: PRODUCT -->
     <div class="slide slide--4"
         data-0="opacity: 0"
-        data-600p="opacity: 0; transform: translate(0, 100%);"
-        data-625p="opacity: 0; transform: translate(0, 20%);"
-        data-660p="opacity: 0.3; transform: translate(0, 5%);"
-        data-670p="opacity: 1; transform: translate(0, 0%);"
-        data-740p="opacity: 0"
+        data-700p="opacity: 0; transform: translate(0, 100%);"
+        data-725p="opacity: 0; transform: translate(0, 20%);"
+        data-760p="opacity: 0.3; transform: translate(0, 5%);"
+        data-770p="opacity: 1; transform: translate(0, 0%);"
+        data-840p="opacity: 0"
     >
       <div class="slide--4__inner">
         <img src="/images/menu-accent-contact-transparent.png" alt="Front" class="slide--4__product-image">
@@ -101,10 +119,10 @@
     <!-- SECTION 5: DIARY -->
     <div class="slide slide--5"
          data-0="opacity: 0"
-         data-750p="opacity: 0; transform: translate(0, 100%)"
-         data-800p="opacity: 0.3; transform: translate(0, 30%);"
-         data-820p="opacity: 1; transform: translate(0, 0%)"
-         data-870p="transform: translate(0, -10%);"
+         data-850p="opacity: 0; transform: translate(0, 100%)"
+         data-900p="opacity: 0.3; transform: translate(0, 30%);"
+         data-920p="opacity: 1; transform: translate(0, 0%)"
+         data-970p="transform: translate(0, -10%);"
     >
       <div class="diaryfeed">
         <diary></diary>
@@ -114,10 +132,10 @@
     <!-- FOOTER -->
     <div class="slide--footer-wrapper"
          data-0="opacity: 0"
-         data-840p="opacity: 0; transform: translate(0, 100%);"
-         data-850p="opacity: 0; transform: translate(0, 20%);"
-         data-890p="opacity: 0.3; transform: translate(0, 5%);"
-         data-900p="opacity: 1; transform: translate(0, 0%);"
+         data-940p="opacity: 0; transform: translate(0, 100%);"
+         data-950p="opacity: 0; transform: translate(0, 20%);"
+         data-990p="opacity: 0.3; transform: translate(0, 5%);"
+         data-1000p="opacity: 1; transform: translate(0, 0%);"
     >
       <site-footer></site-footer>
     </div>
@@ -169,6 +187,13 @@
     methods: {
       isMobile() {
         return isMobile()
+      },
+      toggleSound() {
+        var video = document.getElementById('hero-video')
+        video.muted = !video.muted
+        
+        var image = document.getElementById('hero-audio')
+        image.src = image.src.indexOf('sound-off') > -1 ? '/images/sound-on.svg' : '/images/sound-off.svg'
       },
       enableDarkMode() {
         let shade = this.shadeLookup[this.currentAromatic]
