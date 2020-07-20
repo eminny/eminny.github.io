@@ -19,7 +19,7 @@
             <h3 class="p-beta">Founder Elizabeth Minett created Cander out of her passion for indelible olfactory experiences. The crystal air and still woods of Minett’s native Canada marked the origins of her fragrance palette. After building a career as an international fashion model and social influencer, she understood that in order to build a brand out of authenticity and love, her own would need to be rooted in connection and intuition, not an algorithm.
             </h3>
 
-            <h3 class="p-beta">Her journey with Cander began in France where she was introduced to French master perfumer Emmanual Philip. The two connected immediately after Philip saw firsthand, Minett’s passion for fragrance, and together over two years, they developed Cander's stable of scented candles. 
+            <h3 class="p-beta">Her journey with Cander began in France where she was introduced to French master perfumer Emmanuel Philip. The two connected immediately after Philip saw firsthand, Minett’s passion for fragrance, and together over two years, they developed Cander's stable of scented candles.
             </h3>
 
             <h3 class="p-beta">Using only the highest quality materials, Cander's proprietary wax is poured into hand-blown glass for the finest fragrance experience. The Cander mainstay candles elevate beloved elemental scents, like sandalwood and smoke, delivering unexpected pairings to accentuate notes that exude dimension, richness and mystery.
