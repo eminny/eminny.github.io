@@ -43,7 +43,7 @@
         <div class="slide__products">
           <div class="slide__product" data-product-title="Scent 01">
             <a href="https://cander-paris-us.myshopify.com/products/scent-01">
-              <img src="/images/updated-candles/20190930/scent-01.jpg" v-on:mouseenter="/images/scent01mouseover.jpg" alt="Scent 01" />
+              <img src="/images/updated-candles/20190930/scent-01.jpg" alt="Scent 01" />
             </a>
             <a href="https://cander-paris-us.myshopify.com/products/scent-01" class="slide__product__btn">SCENT 01</a>
           </div>
