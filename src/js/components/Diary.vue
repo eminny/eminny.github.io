@@ -67,23 +67,12 @@
     data () {
       return {
         flickityInstance: null,
-        instagramLink: 'https://www.instagram.com/canderparis',
         feedOptions: {
-          get: 'user',
-          userId: '2256771534',
-          clientId: '99f35d35ab8c49dc842fadc55787ef9f',
-          accessToken: '2256771534.99f35d3.0317e72770a64d669ecbe9eca95972fd',
+          accessToken: 'IGQVJXa0N1T0pmXzVhVnRJYUp0cWJ2RF9zN21oY2p1Q3VtMU1WSnZAmNTlMOUZAYcTE3YlNlQlR0bWJFUEpVRUl4RnZAwX0tHZAEhYczR1dFJVZAUtSTFF1OGhCX3hUZADVvNmdnTUF1WTBSb19PaERlVGdvdUdUN0gybWZAfV1ZAF',
           limit: 20,
-          resolution: 'standard_resolution',
           target: 'instafeed',
           template: '<a class="diary-carousel__cell" href="{{link}}" target="_blank" data-flickity-bg-lazyload="{{image}}"></a>',
           after () {
-            if (!this.options || typeof this.options.target !== 'string') {
-              throw new Error('Could not initialize: options not found.');
-            }
-
-            console.log('is mobile: ' + isMobile())
-
             if (isMobile()){
               let flickityInstance = new Flickity('.diary-carousel', {
                 bgLazyLoad: 4,

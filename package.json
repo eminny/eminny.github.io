@@ -5,9 +5,9 @@
   "main": "src/js/main.js",
   "dependencies": {
     "flickity": "^2.0.2",
-    "flickity-bg-lazyload": "^1.0.0",
+    "flickity-bg-lazyload": "^1.0.1",
     "google-maps": "^3.2.1",
-    "instafeed.js": "^1.4.1",
+    "instafeed.js": "2.0.0-rc2",
     "lodash": "^4.14.1",
     "minimize": "^2.1.0",
     "scroll": "^2.0.0",
