@@ -36039,7 +36039,7 @@
 	    return {
 	      flickityInstance: null,
 	      feedOptions: {
-	        accessToken: 'IGQVJXa0N1T0pmXzVhVnRJYUp0cWJ2RF9zN21oY2p1Q3VtMU1WSnZAmNTlMOUZAYcTE3YlNlQlR0bWJFUEpVRUl4RnZAwX0tHZAEhYczR1dFJVZAUtSTFF1OGhCX3hUZADVvNmdnTUF1WTBSb19PaERlVGdvdUdUN0gybWZAfV1ZAF',
+	        accessToken: 'IGQVJXSFJVTmF5UU11b3BwYXBqU3E2UDBuVnc5T2VzRG5YR0c5TWJzWUpZAU1lTSGJQNzQtU2tyTEFHQ05mZAl9jQjZAKMi1zVEVvZAnpCd29yWmpDSVdhYWkwdHViemNjMW10T2VfVmVn',
 	        limit: 20,
 	        target: 'instafeed',
 	        template: '<a class="diary-carousel__cell" href="{{link}}" target="_blank" data-flickity-bg-lazyload="{{image}}"></a>',
@@ -36074,9 +36074,10 @@
 	            window.flkty = _flickityInstance;
 	          }
 	        },
-	        error: function error() {
-	          var msg = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+	        error: function error(err) {
+	          var msg = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
 
+	          console.log(err);
 	          var numberOfPosts = document.querySelectorAll('.diary-carousel__cell').length;
 
 	          if (!msg.length) {
