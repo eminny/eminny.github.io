@@ -51,6 +51,7 @@
           @click.prevent="submitForm"
         >
       </form>
+      <a class="phone-link" href="tel:424-653-6264">PHONE: 424-653-6264</a><br/>
     </div>
     <site-footer></site-footer>
   </div>
@@ -68,6 +69,10 @@
     max-width: 80%;
     min-height: 40rem;
     width: $content-width-medium;
+  }
+
+  .phone-link {
+    text-decoration: none;
   }
 
   input.contact-form__input--text {
