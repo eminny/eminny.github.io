@@ -51,7 +51,7 @@
           @click.prevent="submitForm"
         >
       </form>
-      <a class="phone-link" href="tel:424-653-6264">PHONE: 424-653-6264</a><br/>
+      <a class="phone-link" href="tel:+1-424-653-6264">NORTH AMERICAN TEL: +1-424-653-6264</a><br/>
     </div>
     <site-footer></site-footer>
   </div>
