@@ -68,7 +68,7 @@
       return {
         flickityInstance: null,
         feedOptions: {
-          accessToken: 'IGQVJVREJ3R1ZAzdjNGemZAFckJicGFBbmZA4QmRTVUxiUktrbFl6dzVlT3cxVXY5TXUxWkEzakZANRTBWQjlmNXBTX0IwVXJKVEZA2QjI5WXJlOXZAUWV9RWjd5aWtpd09vekdZARThzQzNpZAWtHRkUwdjIyUQZDZD',
+          accessToken: 'IGQVJXeGp3S3FyM2JQMGZAOYWFDY05ZAd2FQaU9wN28xNnVlUGtCNDJOMVhTRTdxbExFM290dko5VGdKenZARb3NYaVBrUzJlZAFluTlVhdFhvNG00dExldzl2VWFxbW1YaVBjanpBb2lUak5aRXNiYUI3VAZDZD',
           limit: 20,
           target: 'instafeed',
           template: '<a class="diary-carousel__cell" href="{{link}}" target="_blank" data-flickity-bg-lazyload="{{image}}"></a>',

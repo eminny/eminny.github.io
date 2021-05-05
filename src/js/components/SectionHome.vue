@@ -20,11 +20,11 @@
              v-on:click="toggleSound">
         <video playsinline autoplay muted loop 
                id="hero-video">
-          <source src="/images/hero_video.mp4" type="video/mp4">
+          <source src="/images/hero-video.mp4" type="video/mp4">
         </video>
         <video playsinline autoplay muted loop 
                id="hero-video-mobile">
-          <source src="/images/hero-mobile-480p.mp4" type="video/mp4">
+          <source src="/images/hero-video.mp4" type="video/mp4">
         </video>
       </div>
     </div>
