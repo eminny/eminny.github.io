@@ -4,9 +4,12 @@
   object-fit: fill;
   width: 100%;
   max-width: none;
+  position: absolute;
+  top: -200px;
 
   .is-mobile & {
     display: none;
+    position: relative;
   }
 }
 
